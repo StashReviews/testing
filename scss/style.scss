@@ -1,0 +1,146 @@
+@import 'variables';
+
+@import 'items';
+
+@import 'layout/navbar';
+@import 'layout/menuMobile';
+@import 'layout/footer';
+
+@import '470px';
+@import '767px';
+@import '980px';
+
+@import 'home';
+
+@import 'modals/login';
+
+@import 'partials/rating';
+@import 'partials/cards';
+@import 'partials/menu';
+
+//@import 'signup/signup';
+//@import 'signup/thanks';
+
+body {
+  position: relative;
+  top: 100px;
+}
+
+.container-fluid {
+  padding: 0 2%;
+  margin: 0;
+}
+
+a {
+  &:active,
+  &:hover,
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $dvHeaderFont;
+  text-transform: uppercase;
+}
+
+h3 {
+  border-bottom: 1px solid $dvGray5;
+  text-align: center;
+  font-size: 30px;
+}
+
+p {
+  font-family: $dvTextFont;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pageTitle {
+  margin-top: 0;
+  border-bottom: 1px solid $dvGray5;
+  text-align: center;
+  font-family: $dvHeaderFont;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.viewOnMap {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+form {
+  font-family: $dvTextFont;
+  font-size: 12px;
+  color: $dvGray;
+  .btn-block {
+    font-family: $dvHeaderFont;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+    padding: 5px 0 0 0;
+    background: $dvGray;
+    &.dispensaryCMS:hover,
+    &.dispensaryCMS:active,
+    &.dispensaryCMS:focus,
+    &.dispensaryCMS:visited {
+      background: $dvRed;
+      color: white;
+    }
+    &.dealCMS:hover,
+    &.dealCMS:active,
+    &.dealCMS:focus,
+    &.dealCMS:visited {
+      background: $dvYellow;
+      color: white;
+    }
+    &.strainCMS:hover,
+    &.strainCMS:active,
+    &.strainCMS:focus,
+    &.strainCMS:visited {
+      background: $dvGreen;
+      color: white;
+    }
+  }
+}
+
+.brandassets {
+  margin-top: -3%;
+  list-style: none;
+  li {
+    margin-bottom: 20px;
+    text-align: center;
+    h4 {
+      font-size: 35px;
+      margin-top: 30px;
+      border-bottom: 3px solid;
+    }
+    &:nth-child(1) {
+      color: $dvGreen;
+    }
+    &:nth-child(2) {
+      color: $dvYellow;
+    }
+    &:nth-child(3) {
+      color: $dvRed;
+    }
+    &:nth-child(4) {
+      color: $dvGray;
+    }
+    a {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+

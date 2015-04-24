@@ -1,0 +1,16 @@
+<tabset>
+	<tab ng-repeat="(itemType, items) in menu" heading="{{ itemType }}" class="col-md-2">
+		<div class="menu">
+			<aside ng-repeat="item in items" class="menuItem">
+				<h1 class="itemName">{{ item.name }} <span class="producerName">{{ item.producer }}</span></h1>
+				<img class="itemImage" src="{{ item.image }}" />
+				<h2 class="cbdPotency"><span>{{ item.cbd }}%</span><br/>CBD</h2>
+				<h2 class="thcPotency"><span>{{ item.thc }}%</span><br/>THC</h2>
+				<div class="itemDescription">{{ item.description }}</div>
+				<ul class="pricing">
+					<li ng-repeat="(amount, price) in item.priceByAmount">$<span class="price">{{ price }}</span><br/><span class="unit">{{ amount }}</span></li>
+				</ul>
+			</aside>
+		</div>
+	</tab>
+</tabset>

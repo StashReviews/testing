@@ -1,0 +1,74 @@
+@media screen and (max-width: 470px) {
+  /*----style.scss.html start----*/
+  body {
+    top: 70px;
+    width: 98%; }
+
+  /*----style.scss.html end----*/
+  /*----home.html start----*/
+  #indexSummary .howItWorks img {
+    width: 30%; }
+  #indexSummary .howItWorks h3 {
+    padding-top: 1%; }
+  #indexSummary .howItWorks p {
+    font-size: 9px;
+    line-height: 12px;
+    width: 50%; }
+
+  /*----home.html end----*/
+  /*----footer.html start----*/
+  #footer input[type='email'] {
+    width: 60%;
+    margin-left: 5%; }
+  #footer .btnfooter {
+    width: 30%;
+    margin-right: 5%; }
+  #footer .btnfooterlrg {
+    margin-right: 0; }
+
+  /*----footer.html end----*/
+  /*----ratings.html start----*/
+  .dispensaryCard .rating,
+  .dealCard .rating,
+  .strainCard .rating {
+    margin-top: 2%; }
+
+  /*----ratings.html end----*/
+  /*----cards.html start----*/
+  .cardWrapper .distanceAway,
+  .cardWrapper .strainType {
+    margin: 30% auto 0 auto; }
+
+  .dvCardList li {
+    width: 68%; }
+
+  .featured-dispensary-true,
+  .featured-deal-true,
+  .featured-strain-true {
+    left: -4.5%; }
+
+  /*----cards.html end----*/
+  /*----signin.html end----*/
+  .close-modal {
+    top: 5px;
+    right: 10px; }
+
+  /*----signin.html end----*/
+  /*----footer start----*/
+  #footer h4 {
+    font-size: 14px; }
+
+  /*----footer end----*/
+  /*----modal start----*/
+  .modal-content .modal-header .modalTitle {
+    font-size: 50px; }
+  .modal-content .modal-header .modalSubtitle {
+    font-size: 20px; }
+  .modal-content .modal-footer p {
+    font-size: 12px; }
+    .modal-content .modal-footer p span {
+      color: white; }
+
+  /*----modal end----*/ }
+
+/*# sourceMappingURL=470px.css.map */

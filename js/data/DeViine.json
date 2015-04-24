@@ -1,0 +1,248 @@
+{
+  "deals": [
+    {
+      "title": "$180 Ounces",
+      "dispensary": {
+        "name": "Sativa Sisters",
+        "location": {
+          "street": "10525 E. Trent Ave.",
+          "city": "Spokane",
+          "state": "WA",
+          "zip": "99206"
+        },
+        "website": "http://www.sativasisters.com/"
+      },
+      "endDate": "2015-11-10"
+    },
+    {
+      "title": "2-for-1 Grams",
+      "dispensary": {
+        "name": "Sativa Sisters",
+        "location": {
+          "street": "10525 E. Trent Ave.",
+          "city": "Spokane",
+          "state": "WA",
+          "zip": "99206"
+        },
+        "website": "http://www.sativasisters.com/"
+      },
+      "endDate": "2015-11-10"
+    }
+  ],
+  "dispensaries": [
+    {
+      "location": {
+        "street": "1421 N. Mullan Rd.",
+        "city": "Spokane Valley",
+        "state": "WA",
+        "zip": "99206"
+      },
+      "name": "Cinder",
+      "website": "http://www.cindersmoke.com/"
+    },
+    {
+      "location": {
+        "street": "1515 S. Lewis St.",
+        "city": "Spokane",
+        "state": "WA",
+        "zip": "99224"
+      },
+      "name": "420 Friendly",
+      "website": "http://www.four-twentyfriendly.com/",
+      "menu": {
+        "indica": [
+          {
+            "name": "Bubba Kush",
+            "image": "",
+            "description": "Bubba Kush is a sweet, earthy indica strain with genetics traced back to the Hindu Kush landrace strains.  Since finding its way to U.S. shores, the lineage of this nearly pure indica strain becomes more foggy.",
+            "priceByAmount": {
+              "1 g": 20.00,
+              "2 g": 35.00,
+              "4 g": 65.00,
+              "10 g": 140.00,
+              "1 oz": 340.00
+            },
+            "chemistry": {
+              "percentageTHC": 12.04,
+              "percentageCBD": 0.01
+            }
+          }
+        ],
+        "sativa": [
+          {
+            "name": "Dragon Crack",
+            "image": "",
+            "description": "Seriously some of the most amazing stuff that I've ever tried.  Let us just say that the name is appropriate.",
+            "priceByAmount": {
+              "1 g": 20.00
+            },
+            "chemistry": {
+              "percentageTHC": 20.15,
+              "percentageCBD": 0.03
+            }
+          },
+          {
+            "name": "Cinex",
+            "image": "",
+            "description": "Actually more of a hybrid, but I needed a tab with multiple entries.",
+            "priceByAmount": {
+              "1 g": 20.00
+            },
+            "chemistry": {
+              "percentageTHC": 17.69,
+              "percentageCBD": 0.13
+            }
+          }
+        ],
+        "edibles": [
+          {
+            "name": "Kronic Tonic (Sativa)",
+            "image": "",
+            "description": "I can't wait to try this.",
+            "priceByAmount": {
+              "95 mg": 45.00
+            },
+            "chemistry": {
+              "percentageTHC": 95.00,
+              "percentageCBD": 2.34
+            }
+          }
+        ]
+      }
+    },
+    {
+      "location": {
+        "city": "Spokane",
+        "state": "WA",
+        "street": "9301 N. Division St.",
+        "zip": "99218"
+      },
+      "name": "Satori",
+      "menu": {
+        "indica": [
+          {
+            "name": "Bubba Kush",
+            "image": "",
+            "description": "Bubba Kush is a sweet, earthy indica strain with genetics traced back to the Hindu Kush landrace strains.  Since finding its way to U.S. shores, the lineage of this nearly pure indica strain becomes more foggy.",
+            "priceByAmount": {
+              "1 g": 20.00,
+              "2 g": 35.00,
+              "4 g": 65.00,
+              "10 g": 140.00,
+              "1 oz": 340.00
+            },
+            "chemistry": {
+              "percentageTHC": 12.04,
+              "percentageCBD": 0.01
+            }
+          }
+        ],
+        "sativa": [
+          {
+            "name": "Dragon Crack",
+            "image": "",
+            "description": "Seriously some of the most amazing stuff that I've ever tried.  Let us just say that the name is appropriate.",
+            "priceByAmount": {
+              "1 g": 20.00
+            },
+            "chemistry": {
+              "percentageTHC": 20.15,
+              "percentageCBD": 0.03
+            }
+          },
+          {
+            "name": "Cinex",
+            "image": "",
+            "description": "Actually more of a hybrid, but I needed a tab with multiple entries.",
+            "priceByAmount": {
+              "1 g": 20.00
+            },
+            "chemistry": {
+              "percentageTHC": 17.69,
+              "percentageCBD": 0.13
+            }
+          }
+        ],
+        "edibles": [
+          {
+            "name": "Kronic Tonic (Sativa)",
+            "image": "",
+            "description": "I can't wait to try this.",
+            "priceByAmount": {
+              "95 mg": 45.00
+            },
+            "chemistry": {
+              "percentageTHC": 95.00,
+              "percentageCBD": 2.34
+            }
+          }
+        ]
+      }
+    },
+    {
+      "location": {
+        "street": "10309 E. Trent Ave.",
+        "city": "Millwood",
+        "state": "WA",
+        "zip": "99206"
+      },
+      "name": "Green Light",
+      "website": "http://www.greenlightspokane.com/"
+    },
+    {
+      "location": {
+        "street": "9107 N. Country Homes Blvd.",
+        "city": "Spokane",
+        "state": "WA",
+        "zip": "99218"
+      },
+      "name": "Spokane Green Leaf",
+      "website": "http://www.spokanegreenleaf.com/"
+    },
+    {
+      "location": {
+        "city": "Spokane",
+        "state": "WA",
+        "street": "7011 N. Division St.",
+        "zip": "99208"
+      },
+      "name": "Cinder",
+      "website": "http://www.cindersmoke.com/"
+    },
+    {
+      "location": {
+        "city": "Spokane",
+        "state": "WA",
+        "street": "10525 E. Trent Ave.",
+        "zip": "99206"
+      },
+      "name": "Sativa Sisters",
+      "website": "http://www.sativasisters.com/"
+    }
+  ],
+  "strains": {
+    "AK-47": {
+      "chemistry": {
+        "percentageIndica": 40,
+        "percentageSativa": 60
+      },
+      "effects": {
+        "creative": 0,
+        "euphoric": 30,
+        "relaxed": 16
+      },
+      "flavors": {
+        "earthy": 80,
+        "pine": 0,
+        "skunk": 10
+      },
+      "name": "AK-47",
+      "negatives": {
+        "cotton mouth": 30,
+        "dizzy": 0,
+        "dry eyes": 30
+      },
+      "producer": "Farmer J"
+    }
+  }
+}

@@ -1,0 +1,150 @@
+/* Card Start */
+.cardWrapper {
+  width: 100%;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+  .cardBg {
+    width: 100%;
+  }
+  .cardInfo {
+    position: absolute;
+    width: 80%;
+    top: 0px;
+    margin: 10% 10% 0 10%;
+    padding: 0;
+  }
+  .dispensaryLogo,
+  .dealImage,
+  .strainImage {
+    border-radius: 20px;
+    margin-bottom: 5%;
+    width: 100%;
+    img {
+      width: 100%;
+      border-radius: 15px
+    }
+  }
+  .dispensaryName,
+  .dealTitle,
+  .strainName {
+    font-family: $dvHeaderFont;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: normal;
+    text-align: center;
+    color: rgb(44,48,52);
+    margin: 0;
+    padding: 0;
+    height: 28px;
+    overflow: hidden;
+  }
+  .dealTitle {
+    height: 48px;
+    line-height: 1.1;
+  }
+  .dispensaryAddress,
+  .businessName,
+  .producedBy {
+    font-family: $dvTextFont;
+    font-weight: 400;
+    font-size: .85em;
+    font-style: normal;
+    text-align: center;
+    color: #BCBEC0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .dispensaryAddress.line2,
+  .businessName.line2,
+  .producedBy.line2 {
+    position: relative;
+    z-index: 3;
+  }
+  .producedBy.line2 {
+    color: $dvGray;
+  }
+  .dispensaryAddress.line1,
+  .producedBy.line1 {
+    height: 18px;
+  }
+  .dispensaryAddress.line2,
+  .producedBy.line2 {
+    height: 26px;
+  }
+  .businessName.line2 {
+    height: 24px;
+  }
+  .distanceAway,
+  .strainType {
+    font-family: $dvTextFont;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 22% auto 0 auto;
+    padding: 0;
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+  }
+}
+.dispensaryCard {
+  .distanceAway {
+    color: $dvRed;
+  }
+}
+.dealCard {
+  .distanceAway {
+    color: $dvYellow;
+  }
+}
+.strainCard {
+  .strainType {
+    color: $dvGreen;
+  }
+}
+
+.featured-dispensary-true,
+.featured-deal-true,
+.featured-strain-true,
+.new-strain-true {
+  position: absolute;
+  top: 10%;
+  left: -5.8%;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+.featured-dispensary-true {
+  background-image: url(../img/banners/featured.png);
+}
+.featured-deal-true {
+  left: -5.9%;
+  background-image: url(../img/banners/dailyDeal.png);
+}
+.featured-strain-true {
+  background-image: url(../img/banners/strainOfTheWeek.png);
+}
+.new-strain-true {
+  top: 11.3%;
+  left: -3.4%;
+  background-image: url(../img/banners/new.png);
+}
+
+
+/* Card End */
+
+.dvCardList {
+  padding-left: 0;
+  list-style-type: none;
+
+  > li {
+    display: inline-block;
+    padding: 1%;
+  }
+}

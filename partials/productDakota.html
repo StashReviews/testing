@@ -1,0 +1,10 @@
+<aside style="border: thin solid black;" class="menuItem">
+	<h1 class="itemName">{{ item.name }} <span class="producerName">{{ item.producer.name }}</span></h1>
+	<div class="itemImage"></div>
+	<h2 class="cbdPotency"><span>{{ item.chemistry.percentageCBD }}%</span><br/>CBD</h2>
+	<h2 class="thcPotency"><span>{{ item.chemistry.percentageTHC }}%</span><br/>THC</h2>
+	<div class="itemDescription">{{ item.description }}</div>
+	<ul class="pricing">
+		<li ng-repeat="(amount, price) in item.priceByAmount">$<span class="price">{{ price }}</span><br/><span class="unit">{{ amount }}</span></li>
+	</ul>
+</aside>

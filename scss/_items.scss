@@ -1,0 +1,268 @@
+.dispensaryLogo,
+.businessLogo,
+.producerLogo {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.dispensaryName,
+.dealTitle,
+.strainName {
+  font-family: $dvHeaderFont;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: normal;
+  color: $dvGray;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+.strainChemistry {
+  font-size: 22px;
+  color: $dvGreen;
+  padding: 0;
+  margin: -8px 0 0 0;
+}
+
+.businessName,
+.strainProducer {
+  font-family: $dvTextFont;
+  font-size: 16px;
+  font-weight: normal;
+  color: $dvGray;
+  margin: 0px 0 10px 0;
+  padding: 0;
+}
+
+.dispensaryAddress,
+.businessAddress,
+.producedBy {
+  font-family: $dvTextFont;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  color: $dvGray20;
+  padding: 0;
+  margin: 0;
+}
+
+.viewOnMap {
+  font-family: $dvTextFont;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 10px;
+  color: $dvGray;
+  cursor: pointer;
+  &:hover {
+    color: $dvRed;
+  }
+}
+
+.contactInfo {
+  position: relative;
+  top: -20px;
+  float: none;
+  clear: left;
+  .dispensaryWebsite a,
+  .dispensaryEmail a,
+  .dispensaryPhone a,
+  .businessWebsite a,
+  .businessEmail a,
+  .businessPhone a {
+    font-family: $dvTextFont;
+    font-size: 14px;
+    font-weight: bold;
+    color: $dvGray20;
+    &:hover {
+      color: $dvGray;
+    }
+  }
+}
+
+.strainDescriptionSubHeader {
+  margin: -6px 0 0 0;
+}
+.strainDescription {
+  font-family: $dvTextFont;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+.dispensaryGallery,
+.dealGallery,
+.strainGallery {
+  width: 100%;
+}
+.strainGalleryMobile {
+  display: none;
+}
+
+.dispensaryHours {
+  background: $dvGray;
+  width: 100%;
+  tr {
+    color: white;
+  }
+  tr.dvGreen {
+    color: $dvGreen;
+  }
+  td {
+    font-family: $dvHeaderFont;
+    text-transform: uppercase;
+    font-size: 26px;
+    padding: 10px 20px 4px 20px;
+    border-bottom: thin solid rgba(255, 255, 255, .1);
+  }
+  td:nth-child(2) {
+    text-align: right;
+  }
+}
+
+.dealDetails {
+  h4 {
+    font-family: $dvHeaderFont;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: $dvGray;
+    margin: 20px 0 0 0;
+  }
+  p {
+    font-family: $dvTextFont;
+    font-size: 12px;
+    line-height: 18px;
+    color: $dvGray;
+  }
+  .redemptionDetails {
+    border-bottom: 1px solid $dvGray20;
+    padding-bottom: 15px;
+    margin: 10px 0 20px 0;
+    div .redeemDeal {
+      background: $dvRed;
+      font-family: $dvHeaderFont;
+      text-transform: uppercase;
+      font-size: 30px;
+      color: white;
+      width: 100%;
+      padding: 10px 20px 5px 20px;
+      &:hover {
+        background: $dvGray;
+      }
+    }
+    div label {
+      font-family: $dvTextFont;
+      font-size: 16px;
+      line-height: 16px;
+      color: $dvGray;
+      float: left;
+    }
+    div .distanceAway,
+    div .daysLeft {
+      color: $dvRed;
+      font-family: $dvTextFont;
+      font-size: 38px;
+      line-height: 10px;
+      text-align: right;
+      padding-right: 2%;
+      float: left;
+      width: 25%;
+    }
+  }
+}
+
+.flavorProfile,
+.positiveEffects,
+.negativeEffects {
+  font-family: $dvHeaderFont;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: $dvGray;
+  text-align: left;
+  li {
+    line-height: 18px;
+    margin-bottom: 10px;
+    &:nth-child(1) {
+      border-bottom: 3px solid $dvGreen;
+    }
+    &:nth-child(2) {
+      border-bottom: 3px solid $dvYellow;
+    }
+    &:nth-child(3) {
+      border-bottom: 3px solid $dvRed;
+    }
+  }
+}
+.strainProfileTitle {
+  font-family: $dvTextFont;
+  text-align: center;
+  color: $dvGray;
+  font-size: 10px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.barChart {
+  margin: 30px 0 0 0;
+  padding: 0;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  li {
+    width: 30%;
+    margin: 0 1.5%;
+    float: left;
+    position: relative;
+    bottom: 0;
+    &:nth-child(1) {
+      background-color: $dvGreen;
+      div {
+        background-color: $dvGreen;
+      }
+    }
+    &:nth-child(2) {
+      background-color: $dvYellow;
+      div {
+        background-color: $dvYellow;
+      }
+    }
+    &:nth-child(3) {
+      background-color: $dvRed;
+      div {
+        background-color: $dvRed;
+      }
+    }
+    div {
+      color: white;
+      font-family: $dvHeaderFont;
+      text-transform: uppercase;
+      font-size: 18px;
+      text-align: center;
+      margin-top: -30px;
+      padding-top: 10%;
+      border-bottom: 1px solid white;
+    }
+  }
+}
+
+.thcPotency,
+.cbdPotency {
+  margin: 0 auto;
+  width: 27%;
+  text-align: center;
+  font-family: $dvHeaderFont;
+  text-transform: uppercase;
+  font-size: 40px;
+  color: $dvGray;
+  label {
+    position: relative;
+    top: -30px;
+    font-size: 20px;
+    color: $dvGray20;
+  }
+}
+
+

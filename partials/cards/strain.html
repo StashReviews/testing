@@ -1,0 +1,16 @@
+<div ui-sref="root.strainDetails({ strainId: strain.$id })" class="cardWrapper strainCard">
+	<img src="img/cards/strainCard.png" class="cardBg"/>
+	<div class="cardInfo">
+		<div class="strainImage">
+			<img src="{{ strain.cardimage }}"/>
+		</div>
+		<div class="topSection">
+			<h1 class="strainName">{{ strain.name }}</h1>
+			<address class="producedBy line1">PRODUCED BY</address>
+			<address class="producedBy line2">{{ strain.producer }}</address>
+		</div>
+		<dv-rating ratings="strain.ratings" class="strainRating"></dv-rating>
+		<h4 class="strainType">{{ strain.chemistry }}</h4>
+	</div>
+	<div class="featured-strain-{{ strain.featured }}"></div>
+</div>

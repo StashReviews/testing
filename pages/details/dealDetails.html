@@ -1,0 +1,85 @@
+<h2 class="pageTitle">Deal</h2>
+<div class="row">
+	<div class="col-md-6">
+		<h2 class="dealTitle">{{ dealDetails.title }}</h2>
+		<div class="row">
+			<div class="col-md-3 col-sm-2 col-xs-4">
+				<img ng-src="{{ dealDetails.logo }}" class="businessLogo"/>
+			</div>
+			<div class="col-md-9">
+				<h2 class="businessName">{{ dealDetails.business }}</h2>
+				<address class="businessAddress">{{ dealDetails.location.street }}<br/>{{ dealDetails.location.city }}, {{ dealDetails.location.state }} {{ dealDetails.location.zip }}</address>
+				<div>
+					<a ng-click="" class="viewOnMap">View On Map</a>
+				</div>
+			</div>
+		</div>
+		<dv-rating ratings="dealDetails.ratings" class="dealRating"></dv-rating>
+		<div class="contactInfo">
+			<div ng-show="dealDetails.website" class="businessWebsite">
+				<img src="img/icons/web.png"/>
+				<a href="{{ dealDetails.website }}">{{ dealDetails.website }}</a>
+			</div>
+			<div ng-show="dealDetails.email" class="businessEmail">
+				<img src="img/icons/email.png"/>
+				<a href="mailto:{{ dealDetails.email }}">{{ dealDetails.email }}</a>
+			</div>
+			<div ng-show="dealDetails.phone" class="businessPhone">
+				<img src="img/icons/phone.png"/>
+				<a href="tel:{{ dealDetails.phone }}">{{ dealDetails.phone }}</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<img src="{{ dealDetails.image }}" class="img-responsive dealGallery"/>
+	</div>
+</div>
+<div class="dealDetails">
+	<div class="col-md-6">
+		<h3>Details</h3>
+		<div class="col-md-12 redemptionDetails">
+			<div class="col-md-8">
+				<h5 class="distanceAway">{{ deal.distance }}</h5><label>MILES<br>AWAY</label>
+				<h5 class="daysLeft">{{ deal.endDate }}</h5><label>DAYS<br>LEFT</label>
+			</div>
+			<div class="col-md-4">
+				<a href="" class="redeemDeal">GET IT!</a>
+			</div>
+		</div>
+		<h4>The Deal</h4>
+		<p>{{ dealDetails.description }}</p>
+		<h4>{{ dealDetails.business }}</h4>
+		<p>{{ dealDetails.bdescription }}</p>
+		<h4>The Fine Print</h4>
+		<p>Expires {{ dealDetails.endDate }}. Only applies to strains included in the deal. Ask staff for more details. Merchant is solely responsible to purchasers for the care and quality of the advertised goods and services.</p>
+		<h4>How to Use</h4>
+		<p>Press the 'Get Deal' button. You may print out a copy or just show it to the budtender from your mobile screen to redeem the deal.</p>
+		<h4>Terms of Use</h4>
+		<p>Deals are valid for a limited time only. DeViine reserves the right to modify or cancel deals at any time. The deal applies only to qualifying items displaying the deal offer on the item detail page. The offer will not be valid until it is applied to the qualifying item. Offer good while supplies last. Void where prohibited. DeViine has no obligation for payment of any tax in conjunction with the distribution or use of any deal. Consumer is required to pay any applicable sales tax related to the use of the deal. Deals are void if restricted or prohibited by law.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<h3>Reviews</h3>
+	    <dir-disqus 
+	      disqus-shortname="deviinelife"
+	      disqus-identifier="{{ strainDetails.name }}, {{ strainDetails.producer }}"
+	      disqus-title="{{ strainDetails.name }}, {{ strainDetails.producer }}">
+	    </dir-disqus>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h3>Other Deals</h3>
+		<ul class="dvCardList">
+			<li ng-repeat="deal in featuredDeals" class="col-md-3 col-sm-3 col-xs-8">
+				<dv-card item-type="deal" item-id="{{ deal.$id }}"></dv-card>
+			</li>
+			<li ng-repeat="deal in otherDeals" class="col-md-3 col-sm-3 col-xs-8">
+				<dv-card item-type="deal" item-id="{{ deal.$id }}"></dv-card>
+			</li>
+		</ul>
+	</div>
+</div>
+
+

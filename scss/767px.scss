@@ -1,0 +1,130 @@
+@media screen and (max-width:767px) {
+  /*----style.scss.html start----*/
+  body {
+    top: 70px;
+    width: 99%;
+  }
+  /*----style.scss.html end----*/
+  /*----home.html start----*/
+  #indexSummary {
+  	.howItWorks {
+  	  padding: 20px 5%;
+  	  height: 100%;
+  	  &:nth-child(1),
+	    &:nth-child(2) {
+  	    border-bottom: 1px solid rgba(44,48,52,.05);
+  	  }
+  	  img {
+  	  	width: 22%;
+  	  	float: left;
+  	  	margin-right: 20px;
+  	  }
+  	  h3 {
+  	  	font-size: 18px;
+  	 	  margin: 0;
+  	 	  padding: 3% 0 0 0;
+  	  	text-align: left;
+  	  }
+  	  p {
+  	  	padding: 0;
+  	  	margin: 0;
+  	  	text-align: left;
+  	  	font-size: 10px;
+  	  	line-height: 14px;
+        width: 62%;
+  	  }
+      .arrowRight {
+        display: inline;
+        margin-left: 20px;
+      }
+  	}
+  }
+  .featuredBanner {
+  	margin-left: 25%;
+  }
+  /*----home.html end----*/
+  /*----footer.html start----*/
+  #footer {
+    margin: 30px auto 0 auto;
+    text-align: center;
+    h4 {
+      text-align: center;
+    }
+  	a {
+  	  font-size: 10px;
+      margin: 0 auto;
+      text-align: center;
+  	}
+  	p {
+  	  font-size: 10px;
+  	}
+  	input[type='email'] {
+  	  width: 45%;
+      margin-left: 15%;
+  	}
+    .btnfooter {
+      width: 25%;
+      margin-top: 0;
+      margin-right: 15%;
+    }
+    .btnfooterlrg {
+      margin-right: 0;
+    }
+  	address {
+  	  padding-top: 6%;
+  	  float: right;
+      text-align: center;
+  	}
+  }
+  /*----footer.html end----*/
+  /*----cards.html start----*/
+  .cardWrapper {
+  	margin: 0 25% !important;
+  }
+  .featured-dispensary-true,
+  .featured-deal-true,
+  .featured-strain-true {
+    left: -4%;
+  }
+  .new-strain-true {
+    left: 21%;
+  }
+  /*----cards.html end----*/
+  /*----ratings.html start----*/
+  .dispensaryCard,
+  .dealCard,
+  .strainCard {
+    .rating {
+      margin-top: -4%;
+    }
+  }  
+  /*----ratings.html end----*/
+
+  /*----cards.html start----*/
+  .dvCardList {
+    li {
+      width: 40%;
+    }
+  }
+  /*----cards.html end----*/
+  /*----items.html start----*/
+  .strainGallery {
+    display: none;
+  }
+  .strainGalleryMobile {
+    display: inline;
+  }
+  /*----items.html end----*/
+}
+@media screen and (max-width:550px) {
+  /*----cards.html start----*/
+  .featured-dispensary-true,
+  .featured-deal-true,
+  .featured-strain-true {
+    left: -5.5%;
+  }
+  /*----cards.html end----*/
+}
+
+
+

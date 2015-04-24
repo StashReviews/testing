@@ -1,0 +1,117 @@
+<h2 class="pageTitle">Let's save green.</h2>
+<div id="indexSummary" class="row">
+	<a ui-sref="" class="col-xs-12 col-sm-4 col-lg-4 howItWorks">
+		<img src="img/dispensariesLogo.png" class="img-responsive dispensariesIcon"/>
+		<h3>Find Dispensaries</h3>
+		<p>Find recreational cannabis dispensaries around you. Every dispensary listed on DeViine has an up-to-date menus with prices. Browse through user reviews, current deals, images, store locations, hours of operation and contact information to find the best dispensary for you. <strong>Coming soon!</strong></p>
+		<div class="arrowRight red"></div>
+		<div class="comingSoon">Coming soon!</div>
+	</a>
+	<a ui-sref="" class="col-xs-12 col-sm-4 col-lg-4 howItWorks">
+		<img src="img/dealsLogo.png" class="img-responsive dealsIcon"/>
+		<h3>Discover Deals</h3>
+		<p>Discover the best deals in your area. We work directly with businesses within the recreational cannabis industry to provide the best deals possible for our users. Find deals on strains, edibles, concentrates, glassware, rolling papers, and other accessories from businesses in your area. <strong>Coming soon!</strong></p>
+		<div class="arrowRight yellow"></div>
+		<div class="comingSoon">Coming soon!</div>
+	</a>
+	<a ui-sref="root.strains" class="col-xs-12 col-sm-4 col-lg-4 howItWorks">
+		<img src="img/strainsLogo.png" class="img-responsive strainsIcon"/>
+		<h3>Explore Strains</h3>
+		<p>Explore the one and only producer-specific recreational cannabis strain database to find the perfect strain for you. All cannabis strains provide different highs, flavor profiles, and effects. We work directly with licensed producers to provide the most comprehensive database possible.</p>
+		<div class="arrowRight green"></div>
+	</a>
+</div>
+
+<!-- THIS IS FOR ALL FEATURING ALLL THREE SECTIONS: DISPENSARIES, DEALS AND STRAINS -->
+<!-- 
+<div class="row indexSection">
+	<div class="col-md-6 col-sm-6 col-xs-12">
+		<h3>Featured Dispensaries</h3>
+		<ul class="dvCardList">
+			<li ng-repeat="featuredDispensary in featuredDispensaries" class="col-md-6 col-sm-6 col-xs-8">
+				<dv-card item-type="dispensary" item-id="{{ featuredDispensary.$id }}"></dv-card>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-6 col-sm-6 col-xs-12">
+		<h3>Daily Deals</h3>
+		<ul class="dvCardList">
+			<li ng-repeat="featuredDeal in featuredDeals" class="col-md-6 col-sm-6 col-xs-8">
+				<dv-card item-type="deal" item-id="{{ featuredDeal.$id }}"></dv-card>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="row indexSection">
+	<div class="col-md-6 col-sm-6 col-xs-12">
+		<h3>Strains of the Week</h3>
+		<ul class="dvCardList">
+			<li ng-repeat="featuredStrain in featuredStrains" class="col-md-6 col-sm-6 col-xs-8">
+				<dv-card item-type="strain" item-id="{{ featuredStrain.$id }}"></dv-card>
+			</li>
+		</ul>
+	</div>
+</div>
+-->
+
+<div class="row indexSection">
+	<div class="col-md-6 col-sm-6 col-xs-12">
+		<h3>Strains of the Week</h3>
+		<ul class="dvCardList">
+			<li ng-repeat="featuredStrain in featuredStrains" class="col-md-6 col-sm-6 col-xs-8">
+				<dv-card item-type="strain" item-id="{{ featuredStrain.$id }}"></dv-card>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-6 col-sm-6 col-xs-12">
+		<h3>New Strains</h3>
+		<ul class="dvCardList">
+			<li ng-repeat="newStrain in newStrains" class="col-md-6 col-sm-6 col-xs-8">
+				<dv-card item-type="strain" item-id="{{ newStrain.$id }}"></dv-card>
+				<div class="new-strain-true"></div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="sponsors">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<h3>Sponsors</h3>
+		<ul class="col-md-12 col-sm-12 col-xs-12">
+			<li class="col-md-2 col-sm-4 col-xs-4">
+				<a target="_blank">
+					<img src="img/sponsors/bublr_logo.jpg" title="Bublr" alt="Bublr"/>
+				</a>
+			</li>
+			<li class="col-md-2 col-sm-4 col-xs-4">
+				<a href="https://www.facebook.com/CGSpokane" target="_blank">
+					<img src="img/sponsors/cannabisandglass_logo.jpg" title="Cannabis and Glass" alt="Cannabis and Glass"/>
+				</a>
+			</li>
+			<li class="col-md-2 col-sm-4 col-xs-4">
+				<a target="_blank">
+					<img src="img/logos/louisw_logo.png" title="Louis W" alt="Louis W"/>
+				</a>
+			</li>
+			<li class="col-md-2 col-sm-4 col-xs-4">
+				<a href="https://www.facebook.com/DoctorWaterpipes" target="_blank">
+					<img src="img/sponsors/doctorwaterpipes_logo.jpg" title="Doctor Waterpipes" alt="Doctor Waterpipes"/>
+				</a>
+			</li>
+			<li class="col-md-2 col-sm-4 col-xs-4">
+				<a href="http://www.farmerjs.com/" target="_blank">
+					<img src="img/logos/farmerjs_logo.png" title="Farmer Js" alt="Farmer Js"/>
+				</a>
+			</li>
+			<li class="col-md-2 col-sm-4 col-xs-4">
+				<a href="http://www.billifersbuds.com/" target="_blank">
+					<img src="img/logos/billifersbuds_logo.png" title="Billifers Buds" alt="Billifers Buds"/>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+

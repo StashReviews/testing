@@ -1,0 +1,139 @@
+.rating {
+  width: 250px;
+  height: 55px;
+  margin: 0 0 70px 0;
+  background: $dvGray5;
+  .ratingBarWrap {
+    position: relative;
+    width: 250px;
+    svg,
+    div.ratingBar {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    svg {
+      pointer-events: none;
+      position: relative;
+      z-index: 2;
+      margin: -1px 0 0 0;
+      padding: 0;
+      width: 252px;
+      pointer-events: none;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    .ratings {
+      display: flex;
+      direction: rtl;
+      .rate {
+        width: 20%;
+        height: 50px;
+        margin: 0;
+        float: left;
+        position: relative;
+        top: -56px;
+        z-index: 1;
+        cursor: pointer;
+        &:hover, &:hover ~ .rate {
+          background: $dvGray;
+        }
+      }
+    }
+    .mobileRatings {
+      display: none;
+      .rate {
+        width: 20%;
+        height: 50px;
+        margin: 0;
+        float: left;
+        position: relative;
+        top: -56px;
+        z-index: 1;
+        cursor: pointer;
+      }
+    }
+    div.ratingBar {
+      width: 250px;
+      padding-top: 50px;
+      margin-top: 1px;
+    }
+  }
+  .ratingDisplay,
+  .userRatingDisplay {
+    font-family: $dvTextFont;
+    font-size: 14px;
+    font-weight: normal;
+    color: $dvGray;
+    height: 0;
+    position: relative;
+    z-index: 3;
+  }
+  .ratingDisplay {
+    top: -75px;
+  }
+  .userRatingDisplay {
+    top: -65px;
+    display: none; 
+  }
+}
+
+.dealCard,
+.dispensaryCard,
+.strainCard {
+  .rating {
+    width: 100%;
+    height: 16%;
+    margin: -6% 0 0 0;
+    position: absolute;
+    .ratingBarWrap {
+      width: 100%;
+      height: 0;
+      svg,
+      div.ratingBar {
+      }
+      svg {
+        width: 101%;
+        margin-left: -1px;
+      }
+      .rate {
+        display: none;
+      }
+      div.ratingBar {
+        width: 100%;
+        height: 0;
+        padding-top: 22%;
+        margin-top: 1px;
+        -webkit-transition: all .7s ease;
+        -moz-transition: all .7s ease;
+        -ms-transition: all .7s ease;
+        -o-transition: all .7s ease;
+        transition: all .7s ease;
+      }
+      .ratings {
+        .rateThis {
+          display: none;
+        }
+      }
+    }
+    .ratingDisplay {
+      display: none;
+    }
+    .userRatingDisplay {
+      display: none;
+    }
+  }
+}
+
+.dispensaryRating .ratingBar {
+  background-color: $dvRed;
+}
+
+.dealRating .ratingBar {
+  background-color: $dvYellow;
+}
+
+.strainRating .ratingBar {
+  background-color: $dvGreen;
+}

@@ -1,0 +1,124 @@
+#indexSummary > .howItWorks {
+  text-align: center;
+  font-family: $dvTextFont;
+  color: $dvGray;
+  font-size: 11px;
+  line-height: 15px;
+  padding-top: 15px;
+  height: 330px;
+  border-color: $dvGray5;
+  &:hover {
+    .comingSoon {
+      opacity: 1;
+    }
+    .dispensariesIcon {
+      background-color: $dvRed;
+    }
+    .dealsIcon {
+      background-color: $dvYellow;
+    }
+    .strainsIcon {
+      background-color: $dvGreen;
+    }
+  }
+  .dispensariesIcon {
+    border: 2px solid $dvRed;
+  }
+  .dealsIcon {
+    border: 2px solid $dvYellow;
+  }
+  .strainsIcon {
+    border: 2px solid $dvGreen;
+  }
+  h3 {
+    border: none;
+    font-family: $dvTextFont;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  p {
+    font-family: $dvTextFont;
+    font-size: 11px;
+    float: left;
+    strong {
+      display: none;
+    }
+  }
+  .arrowRight {
+    display: none;
+    float: left;
+    border-top:20px solid transparent;
+    border-right:0px solid transparent;
+    border-bottom:20px solid transparent;
+    border-left:20px solid transparent;
+    &.red {
+      border-left-color: $dvRed;
+    }
+
+    &.yellow {
+      border-left-color: $dvYellow;
+    }
+
+    &.green {
+      border-left-color: $dvGreen;
+    }
+  }
+  > img {
+    width: 50%;
+    margin: auto auto;
+    border-radius: 50%;
+    background: $dvGray20;
+  }
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    border-right: 1px solid $dvGray5;
+  }
+
+  &:nth-child(1) > h3 {
+    color: $dvRed;
+  }
+
+  &:nth-child(2) > h3 {
+    color: $dvYellow;
+  }
+
+  &:nth-child(3) > h3 {
+    color: $dvGreen;
+  }
+  .comingSoon {
+    font-family: $dvHeaderFont;
+    text-transform: uppercase;
+    font-size: 20px;
+    opacity: 0;
+  }
+  .comingSoonIndexSummary {
+    display: none;
+  }
+}
+
+.sponsors {
+  margin: 0;
+  padding: 0;
+  div {
+    ul {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      list-style: none;
+      li {
+        display: inline;
+        border-right: 10px solid white;
+        overflow: hidden;
+        &:last-child {
+          border: none;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+

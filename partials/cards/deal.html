@@ -1,0 +1,15 @@
+<div ui-sref="root.dealDetails({ dealId: deal.$id })" class="cardWrapper dealCard">
+	<img src="img/cards/dealCard.png" class="cardBg"/>
+	<div class="cardInfo">
+		<div class="dealImage">
+			<img src="{{ deal.image }}"/>
+		</div>
+		<div class="topSection">
+			<h1 class="dealTitle">{{ deal.title }}</h1>
+			<address class="businessName line2">{{ deal.business }}</address>
+		</div>
+		<dv-rating ratings="deal.ratings" class="dealRating"></dv-rating>
+		<h4 class="distanceAway">{{ deal.distance }} MILES AWAY</h4>
+	</div>
+	<div class="featured-deal-{{ deal.featured }}"></div>
+</div>

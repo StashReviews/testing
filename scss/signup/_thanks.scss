@@ -1,0 +1,49 @@
+/**
+ * Dakota's signup thanks page
+ *
+ * @see http://codepen.io/dakotaberg123/pen/emVdWM
+ */
+
+section {
+  margin: 0 auto;
+  padding: 0 0 10% 0;
+  float: left;
+  height: 100%;
+  width: 100%;
+}
+section h1 {
+  font-family: bebas neue;
+  font-size: 80px;
+  line-height: 50px;
+  text-align: center;
+  color: rgb(44,48,52);
+  margin: 0 0 0 0;
+  padding: 10% 0 0 0;
+  position: relative;
+}
+section h2 {
+  font-family: open sans;
+  font-weight: lighter;
+  font-size: 25px;
+  text-align: center;
+  color: rgb(44,48,52);
+  margin: 0;
+  padding: 0;
+}
+section h3 {
+  font-family: open sans;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+  color: rgba(44,48,52,.5);
+  margin: 30px 0 0 0;
+  padding: 0;
+}
+section img {
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(44,48,52);
+}

@@ -1,0 +1,75 @@
+<h2 class="pageTitle">Dispensary</h2>
+<div class="row">
+	<div class="col-md-6 col-sm-6 col-xs-12">
+		<div class="row">
+			<div class="col-md-3 col-sm-2 col-xs-4">
+				<img ng-src="{{ dispensary.logo }}" class="dispensaryLogo"/>
+			</div>
+			<div class="col-md-9">
+				<h2 class="dispensaryName">{{ dispensary.name }}</h2>
+				<address class="dispensaryAddress">{{ dispensary.location.street }}<br/>{{ dispensary.location.city }}, {{ dispensary.location.state }} {{ dispensary.location.zip }}</address>
+				<div>
+					<a ng-click="" class="viewOnMap">View On Map</a>
+				</div>
+			</div>
+		</div>
+		<dv-rating ratings="dispensary.ratings" class="dispensaryRating"></dv-rating>
+		<div class="contactInfo">
+			<div ng-show="dispensary.website" class="dispensaryWebsite">
+				<img src="img/icons/web.png"/>
+				<a href="{{ dispensary.website }}">{{ dispensary.website }}</a>
+			</div>
+			<div ng-show="dispensary.email" class="dispensaryEmail">
+				<img src="img/icons/email.png"/>
+				<a href="mailto:{{ dispensary.email }}">{{ dispensary.email }}</a>
+			</div>
+			<div ng-show="dispensary.phone" class="dispensaryPhone">
+				<img src="img/icons/phone.png"/>
+				<a href="tel:{{ dispensary.phone }}">{{ dispensary.phone }}</a>
+			</div>
+		</div>
+		<h3>Current Menu</h3>
+		<dv-menu dispensary-id="{{ dispensary.$id }}"></dv-menu>
+	</div>
+	<div class="col-md-6 col-sm-6 col-xs-12">
+		<div>
+			<img src="{{ dispensary.image }}" class="dispensaryGallery" />
+		</div>	
+		<h3>Current Deals</h3>
+		<ul class="dvCardList">
+			<li ng-repeat="(dealIndex, deal) in dispensary.deals" class="col-md-6">
+				<dv-card item-type="deal" item-id="{{ dealIndex }}"></dv-card>
+			</li>
+		</ul>
+		<h3>Hours of Operation</h3>
+		<table ng-show="dispensary.hours" class="dispensaryHours">
+			<tr ng-repeat="day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']" ng-class="{'dvGreen': today === day}">
+				<td>{{ day | uppercase }}</td>
+				<td>{{ dispensary['hours'][day].open }} &ndash; {{ dispensary['hours'][day].close }}</td>
+			</tr>
+		</table>
+		<h3>Reviews</h3>
+		<dir-disqus 
+	      disqus-shortname="deviinelife"
+	      disqus-identifier="{{ strainDetails.name }}, {{ strainDetails.producer }}"
+	      disqus-title="{{ strainDetails.name }}, {{ strainDetails.producer }}">
+	    </dir-disqus>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h3>Other Dispensaries</h3>
+		<ul class="dvCardList">
+			<li ng-repeat="dispensary in featuredDispensaries" class="col-md-3 col-sm-3 col-xs-8">
+				<dv-card item-type="dispensary" item-id="{{ dispensary.$id }}"></dv-card>
+			</li>
+			<li ng-repeat="dispensary in otherDispensaries" class="col-md-3 col-sm-3 col-xs-8">
+				<dv-card item-type="dispensary" item-id="{{ dispensary.$id }}"></dv-card>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+

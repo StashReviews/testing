@@ -1,0 +1,16 @@
+<div ui-sref="root.dispensaryDetails({ dispensaryId: dispensary.$id })" class="cardWrapper dispensaryCard">
+	<img src="img/cards/dispensaryCard.png" class="cardBg"/>
+	<div class="cardInfo">
+		<div class="dispensaryLogo">
+			<img src="{{ dispensary.logo }}"/>
+		</div>
+		<div class="topSection">
+			<h1 class="dispensaryName">{{ dispensary.name }}</h1>
+			<address class="dispensaryAddress line1">{{ dispensary.location.street }}</address>
+			<address class="dispensaryAddress line2">{{ dispensary.location.city }}, {{ dispensary.location.state }} {{ dispensary.location.zip }}</address>
+		</div>
+		<dv-rating ratings="dispensary.ratings" class="dispensaryRating"></dv-rating>
+		<h4 class="distanceAway">{{ dispensary.distance }} MILES AWAY</h4>
+	</div>
+	<div class="featured-dispensary-{{ dispensary.featured }}"></div>
+</div>

@@ -1,0 +1,239 @@
+/*  Start Header Bar  */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 2%;
+  background: $dvGray;
+  border: none;
+}
+
+.navbar-header {
+  float: none;
+}
+
+.navbar {
+  .logo {
+    .deviineLogo {
+      width: 90px;
+      padding: 20px 0;
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+}
+
+.navbar-right {
+  margin: 0;
+  padding: 0;
+  .accountInfo {
+    text-align: right;
+    margin: 5px 0 0 0;
+    float: right;
+    .username {
+      font-family: $dvTextFont;
+      color: white;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: lighter;
+      text-transform: uppercase;
+      /*padding: 0;               THIS IS THE STYLING FOR HAVING USERNAME + LOCATION */
+      padding: 10px 0 0 0;
+      margin: 0;
+    }
+    .location {
+      color: $dvYellow;
+      font-family: $dvTextFont;
+      font-size: 12px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .avatarDefault {
+    opacity: .1;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+    border: 2px solid $dvWhite20;
+    cursor: pointer;
+    float: right;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    &:hover {
+      border: 2px solid $dvYellow;
+    }
+  }
+  .navbar-text {
+    margin: 15px 0;
+  }
+  .navbar-text .btn {
+    margin-top: -1%;
+    color: white;
+    span {
+      color: $dvWhite20;
+    }
+    &:hover {
+      color: $dvYellow;
+    }
+  }
+}
+
+/*  End Header Bar  */
+
+/*  Start Left Nav  */
+
+@mixin mainMenuItem($color) {
+  border-left: 3px solid $color;
+  > a:hover {
+    color: $color;
+  }
+}
+
+#mainMenu {
+  list-style-type: none;
+  padding-left: 0;
+  font-family: $dvHeaderFont;
+  text-transform: uppercase;
+  font-size: 30px;
+  position: fixed;
+  top: 100px;
+  > li {
+    padding-left: 10px;
+    padding-top: 8px;
+    margin: 5px 0;
+    &:nth-child(1) {
+      @include mainMenuItem($dvRed);
+    }
+    &:nth-child(2) {
+      @include mainMenuItem($dvYellow);
+    }
+    &:nth-child(3) {
+      @include mainMenuItem($dvGreen);
+    }
+    .disabledNav {
+      color: $dvGray20;
+      &:hover {
+        .comingSoonNavHover {
+          left: -10px;
+        } 
+      }
+      .comingSoonNavHover {
+        font-family: $dvTextFont;
+        font-size: 12px;
+        position: absolute;
+        margin-top: -18px;
+        left: -1000px;
+        -webkit-transition: .3s all;
+        -moz-transition: .3s all;
+        -ms-transition: .3s all;
+        -o-transition: .3s all;
+        transition: .3s all;
+      } 
+    }
+    a {
+      color: $dvGray;
+      &:active,
+      &:focus,
+      &:visited {
+        text-decoration: none;
+      }
+      img {
+        position: relative;
+        left: -62px;
+        -webkit-transition: .3s all;
+        -moz-transition: .3s all;
+        -ms-transition: .3s all;
+        -o-transition: .3s all;
+        transition: .3s all;
+        &:hover {
+          left: -50px;
+        }
+      }
+    }
+  }
+  .adminnav {
+    color: $dvGray20;
+    &:hover {
+      color: $dvGray;
+    }
+  }
+}
+
+/*  End Left Nav  */
+
+/*  Start Right Social Icons  */
+
+#socialIcons {
+  list-style-type: none;
+  position: fixed;
+  top: 100px;
+  right: 2%;
+  h4 {
+    font-family: $dvHeaderFont;
+    font-size: 16px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    color: $dvGray20;
+    border-bottom: 1px solid $dvGray5;
+  }
+  img {
+    width: 35px;
+    margin: 5px 0 0 0;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    &:hover {
+      background: $dvYellow;
+    }
+  }
+}
+
+/*  End Right Social Icons  */
+
+/*  Start Up to Top  */
+
+#top {
+  position: absolute;
+  top: 0;
+}
+.upToTop {
+  position: fixed;
+  right: 2%;
+  bottom: 0;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  &:hover {
+    bottom: 2%;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+}
+
+/*  End Up to Top  */
+
+
+

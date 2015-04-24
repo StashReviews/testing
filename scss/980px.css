@@ -1,0 +1,108 @@
+@media screen and (max-width: 980px) {
+  body {
+    top: 70px;
+    width: 99%; }
+
+  /*----page.html start----*/
+  .navbar {
+    padding: 0 4%;
+    height: 60px; }
+    .navbar .navbar-header .menuMobile-toggler img {
+      width: 30px; }
+    .navbar .navbar-header .logo .deviineLogo {
+      float: left;
+      left: 50px;
+      width: 65px;
+      padding: 15px 0; }
+    .navbar .navbar-header .menuMobile-toggler {
+      display: inline; }
+      .navbar .navbar-header .menuMobile-toggler img {
+        width: 50px;
+        opacity: .2; }
+        .navbar .navbar-header .menuMobile-toggler img:hover {
+          opacity: 1; }
+    .navbar .navbar-header .navbar-right .accountInfo {
+      margin: -4px 0 0 0; }
+      .navbar .navbar-header .navbar-right .accountInfo .username {
+        font-size: 13px; }
+      .navbar .navbar-header .navbar-right .accountInfo .location {
+        font-size: 9px; }
+    .navbar .navbar-header .navbar-right .navbar-text {
+      margin: 10px 0; }
+      .navbar .navbar-header .navbar-right .navbar-text .avatar {
+        width: 40px;
+        height: 40px;
+        border-color: #fcd31c;
+        margin-left: 5px; }
+
+  #mainMenu {
+    display: none;
+    top: inherit;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background: #2c3034;
+    padding: 5px 0; }
+    #mainMenu > li {
+      display: inline;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0;
+      width: 33%;
+      float: left; }
+      #mainMenu > li:nth-child(1), #mainMenu > li:nth-child(2), #mainMenu > li:nth-child(3) {
+        border: none; }
+      #mainMenu > li a {
+        color: white;
+        font-size: 20px; }
+      #mainMenu > li .typeform-share {
+        display: none; }
+      #mainMenu > li .disabledNav {
+        color: rgba(255, 255, 255, 0.2); }
+      #mainMenu > li .adminnav {
+        display: none; }
+
+  #socialIcons {
+    display: none; }
+
+  .upToTop {
+    display: none; }
+
+  /*----page.html end----*/
+  #indexSummary > .howItWorks p strong {
+    display: inline; }
+  #indexSummary > .howItWorks:hover .comingSoon {
+    opacity: 0; }
+
+  /*----footer start----*/
+  #footer {
+    margin: 0; }
+
+  /*----footer end----*/
+  /*----cards.html start----*/
+  .cardWrapper .dispensaryLogo,
+  .cardWrapper .dealImage,
+  .cardWrapper .strainImage {
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    filter: none; }
+
+  /*----cards.html end----*/
+  /*----cards.html start----*/
+  .barChart li div {
+    font-size: 16px; }
+
+  /*----cards.html end----*/
+  /*----rating.html start----*/
+  .rating .ratingBarWrap .ratings {
+    display: none; }
+  .rating .ratingBarWrap .mobileRatings {
+    display: inherit; }
+  .rating .ratingDisplay {
+    top: -60px; }
+
+  /*----rating.html start----*/ }
+
+/*# sourceMappingURL=980px.css.map */

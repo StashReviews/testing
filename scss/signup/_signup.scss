@@ -1,0 +1,159 @@
+/**
+ * Dakota's signup modal
+ *
+ * @see http://codepen.io/dakotaberg123/pen/OPZVgW
+ */
+
+.modal-dialog {
+  background-color: $dvGray;
+  display: none;
+  text-align: center;
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  width: 700px;
+  padding: 40px 20px;
+  border-radius: 40px;
+  border: 3px solid rgb(252,211,28);
+  z-index: 10;
+  box-shadow: 0 0 0 99999px rgba(44, 48, 52, 0.85);
+}
+
+.close-modal {
+  color: rgba(255,255,255,.2);
+  text-decoration: none;
+  font-family: open sans;
+  font-weight: lighter;
+  float: right;
+  position: absolute;
+  padding: 10px;
+  top: 10px;
+  right: 15px;
+}
+.close-modal:hover {
+  color: rgb(252,211,28);
+}
+
+.modal h1 {
+  padding: 0;
+  margin: 0;
+  font-family: bebas neue;
+  font-size: 120px;
+  text-transform: uppercase;
+  color: rgb(252,211,28);
+}
+.modal h2 {
+  padding: 0;
+  margin: -15px 0 10px 0;
+  font-family: bebas neue;
+  font-weight: normal;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+}
+.modal h4 {
+  margin: 10px 20px -15px 0;
+  padding: 0;
+}
+.modal h4 a {
+  font-family: open sans;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(84,88,92);
+  text-decoration: none;
+}
+.modal h4 a:hover,
+.modal h4 a:active,
+.modal h4 a:focus {
+  color: rgb(252,211,28);
+}
+.modal form {
+  margin: 0;
+  padding: 0;
+}
+.modal form input {
+  font-family: open sans;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgb(252,211,28);
+  background: none;
+  width: 60%;
+  height: 45px;
+  margin: 10px 0;
+  padding: 0 0 0 20px;
+  box-shadow: none;
+  border: 3px solid rgb(64,68,72);
+  border-radius: 5px;
+}
+.modal form input:active,
+.modal form input:focus {
+  border: 3px solid rgb(252,211,28);
+}
+.modal ul {
+  margin: 23px 50px;
+  padding: 0;
+}
+.modal ul li {
+  position: relative;
+  display: inline;
+  float: left;
+  width: 190px;
+  height: 56px;
+  color: white;
+  font-family: bebas neue;
+  font-size: 50px;
+  text-decoration: none;
+  padding: 20px 0px 0px 0px;
+  margin: 0 1%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.modal ul li:hover {
+  color: $dvGray;
+}
+.modal ul .smsignin {
+  width: 76px;
+  height: 76px;
+  padding: 0;
+  background: none;
+  border: 3px solid rgb(64,68,72);
+}
+.modal ul .smsignin:hover {
+  border: 3px solid rgb(252,211,28);
+}
+.modal ul .facebook {
+  background: url('http://162.243.153.215/deviine/beta/img/Facebook_Icon.png') center no-repeat;
+  background-size: 50px 50px;
+}
+.modal ul .twitter {
+  background: url('http://162.243.153.215/deviine/beta/img/Twitter_Icon.png') center no-repeat;
+  background-size: 50px 50px;
+}
+.signin {
+  background: none;
+  border: 3px solid rgb(64,68,72);
+  margin: 0 1.25% 0 0;
+}
+.modal ul .signin:hover {
+  color: rgb(252,211,28);
+  border: 3px solid rgb(252,211,28);
+}
+.signup {
+  background: rgb(252,211,28);
+  margin: 0 0 0 1.25%;
+  border: 3px solid rgb(252,211,28);
+}
+.modal p {
+  clear: both;
+  width: 100%;
+  padding-top: 10px;
+  margin: 0 auto;
+  font-family: open sans;
+  font-size: 14px;
+  color: rgb(84,88,92);
+}
+.modal p a {
+  text-decoration: none;
+  color: rgb(252,211,28);
+  font-weight: bold;
+}

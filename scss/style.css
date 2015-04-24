@@ -1,0 +1,1491 @@
+.dispensaryLogo,
+.businessLogo,
+.producerLogo {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+.dispensaryName,
+.dealTitle,
+.strainName {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: normal;
+  color: #2c3034;
+  margin: 5px 0 0 0;
+  padding: 0; }
+
+.strainChemistry {
+  font-size: 22px;
+  color: #3dd861;
+  padding: 0;
+  margin: -8px 0 0 0; }
+
+.businessName,
+.strainProducer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #2c3034;
+  margin: 0px 0 10px 0;
+  padding: 0; }
+
+.dispensaryAddress,
+.businessAddress,
+.producedBy {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  color: rgba(44, 48, 52, 0.2);
+  padding: 0;
+  margin: 0; }
+
+.viewOnMap {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 10px;
+  color: #2c3034;
+  cursor: pointer; }
+  .viewOnMap:hover {
+    color: #f7253e; }
+
+.contactInfo {
+  position: relative;
+  top: -20px;
+  float: none;
+  clear: left; }
+  .contactInfo .dispensaryWebsite a,
+  .contactInfo .dispensaryEmail a,
+  .contactInfo .dispensaryPhone a,
+  .contactInfo .businessWebsite a,
+  .contactInfo .businessEmail a,
+  .contactInfo .businessPhone a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(44, 48, 52, 0.2); }
+    .contactInfo .dispensaryWebsite a:hover,
+    .contactInfo .dispensaryEmail a:hover,
+    .contactInfo .dispensaryPhone a:hover,
+    .contactInfo .businessWebsite a:hover,
+    .contactInfo .businessEmail a:hover,
+    .contactInfo .businessPhone a:hover {
+      color: #2c3034; }
+
+.strainDescriptionSubHeader {
+  margin: -6px 0 0 0; }
+
+.strainDescription {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 10px 0 0 0;
+  padding: 0; }
+
+.dispensaryGallery,
+.dealGallery,
+.strainGallery {
+  width: 100%; }
+
+.strainGalleryMobile {
+  display: none; }
+
+.dispensaryHours {
+  background: #2c3034;
+  width: 100%; }
+  .dispensaryHours tr {
+    color: white; }
+  .dispensaryHours tr.dvGreen {
+    color: #3dd861; }
+  .dispensaryHours td {
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    font-size: 26px;
+    padding: 10px 20px 4px 20px;
+    border-bottom: thin solid rgba(255, 255, 255, 0.1); }
+  .dispensaryHours td:nth-child(2) {
+    text-align: right; }
+
+.dealDetails h4 {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #2c3034;
+  margin: 20px 0 0 0; }
+.dealDetails p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  color: #2c3034; }
+.dealDetails .redemptionDetails {
+  border-bottom: 1px solid rgba(44, 48, 52, 0.2);
+  padding-bottom: 15px;
+  margin: 10px 0 20px 0; }
+  .dealDetails .redemptionDetails div .redeemDeal {
+    background: #f7253e;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: white;
+    width: 100%;
+    padding: 10px 20px 5px 20px; }
+    .dealDetails .redemptionDetails div .redeemDeal:hover {
+      background: #2c3034; }
+  .dealDetails .redemptionDetails div label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2c3034;
+    float: left; }
+  .dealDetails .redemptionDetails div .distanceAway,
+  .dealDetails .redemptionDetails div .daysLeft {
+    color: #f7253e;
+    font-family: "Open Sans", sans-serif;
+    font-size: 38px;
+    line-height: 10px;
+    text-align: right;
+    padding-right: 2%;
+    float: left;
+    width: 25%; }
+
+.flavorProfile,
+.positiveEffects,
+.negativeEffects {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #2c3034;
+  text-align: left; }
+  .flavorProfile li,
+  .positiveEffects li,
+  .negativeEffects li {
+    line-height: 18px;
+    margin-bottom: 10px; }
+    .flavorProfile li:nth-child(1),
+    .positiveEffects li:nth-child(1),
+    .negativeEffects li:nth-child(1) {
+      border-bottom: 3px solid #3dd861; }
+    .flavorProfile li:nth-child(2),
+    .positiveEffects li:nth-child(2),
+    .negativeEffects li:nth-child(2) {
+      border-bottom: 3px solid #fcd31c; }
+    .flavorProfile li:nth-child(3),
+    .positiveEffects li:nth-child(3),
+    .negativeEffects li:nth-child(3) {
+      border-bottom: 3px solid #f7253e; }
+
+.strainProfileTitle {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: #2c3034;
+  font-size: 10px;
+  margin: 0;
+  padding-bottom: 10px; }
+
+.barChart {
+  margin: 30px 0 0 0;
+  padding: 0;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  bottom: 0; }
+  .barChart li {
+    width: 30%;
+    margin: 0 1.5%;
+    float: left;
+    position: relative;
+    bottom: 0; }
+    .barChart li:nth-child(1) {
+      background-color: #3dd861; }
+      .barChart li:nth-child(1) div {
+        background-color: #3dd861; }
+    .barChart li:nth-child(2) {
+      background-color: #fcd31c; }
+      .barChart li:nth-child(2) div {
+        background-color: #fcd31c; }
+    .barChart li:nth-child(3) {
+      background-color: #f7253e; }
+      .barChart li:nth-child(3) div {
+        background-color: #f7253e; }
+    .barChart li div {
+      color: white;
+      font-family: "Bebas Neue", sans-serif;
+      text-transform: uppercase;
+      font-size: 18px;
+      text-align: center;
+      margin-top: -30px;
+      padding-top: 10%;
+      border-bottom: 1px solid white; }
+
+.thcPotency,
+.cbdPotency {
+  margin: 0 auto;
+  width: 27%;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #2c3034; }
+  .thcPotency label,
+  .cbdPotency label {
+    position: relative;
+    top: -30px;
+    font-size: 20px;
+    color: rgba(44, 48, 52, 0.2); }
+
+/*  Start Header Bar  */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 2%;
+  background: #2c3034;
+  border: none; }
+
+.navbar-header {
+  float: none; }
+
+.navbar .logo .deviineLogo {
+  width: 90px;
+  padding: 20px 0;
+  margin: 0 auto;
+  position: relative; }
+
+.navbar-right {
+  margin: 0;
+  padding: 0; }
+  .navbar-right .accountInfo {
+    text-align: right;
+    margin: 5px 0 0 0;
+    float: right; }
+    .navbar-right .accountInfo .username {
+      font-family: "Open Sans", sans-serif;
+      color: white;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: lighter;
+      text-transform: uppercase;
+      /*padding: 0;               THIS IS THE STYLING FOR HAVING USERNAME + LOCATION */
+      padding: 10px 0 0 0;
+      margin: 0; }
+    .navbar-right .accountInfo .location {
+      color: #fcd31c;
+      font-family: "Open Sans", sans-serif;
+      font-size: 12px;
+      padding: 0;
+      margin: 0; }
+  .navbar-right .avatarDefault {
+    opacity: .1;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease; }
+    .navbar-right .avatarDefault:hover {
+      opacity: 1; }
+  .navbar-right .avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    float: right;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease; }
+    .navbar-right .avatar:hover {
+      border: 2px solid #fcd31c; }
+  .navbar-right .navbar-text {
+    margin: 15px 0; }
+  .navbar-right .navbar-text .btn {
+    margin-top: -1%;
+    color: white; }
+    .navbar-right .navbar-text .btn span {
+      color: rgba(255, 255, 255, 0.2); }
+    .navbar-right .navbar-text .btn:hover {
+      color: #fcd31c; }
+
+/*  End Header Bar  */
+/*  Start Left Nav  */
+#mainMenu {
+  list-style-type: none;
+  padding-left: 0;
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  position: fixed;
+  top: 100px; }
+  #mainMenu > li {
+    padding-left: 10px;
+    padding-top: 8px;
+    margin: 5px 0; }
+    #mainMenu > li:nth-child(1) {
+      border-left: 3px solid #f7253e; }
+      #mainMenu > li:nth-child(1) > a:hover {
+        color: #f7253e; }
+    #mainMenu > li:nth-child(2) {
+      border-left: 3px solid #fcd31c; }
+      #mainMenu > li:nth-child(2) > a:hover {
+        color: #fcd31c; }
+    #mainMenu > li:nth-child(3) {
+      border-left: 3px solid #3dd861; }
+      #mainMenu > li:nth-child(3) > a:hover {
+        color: #3dd861; }
+    #mainMenu > li .disabledNav {
+      color: rgba(44, 48, 52, 0.2); }
+      #mainMenu > li .disabledNav:hover .comingSoonNavHover {
+        left: -10px; }
+      #mainMenu > li .disabledNav .comingSoonNavHover {
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+        position: absolute;
+        margin-top: -18px;
+        left: -1000px;
+        -webkit-transition: .3s all;
+        -moz-transition: .3s all;
+        -ms-transition: .3s all;
+        -o-transition: .3s all;
+        transition: .3s all; }
+    #mainMenu > li a {
+      color: #2c3034; }
+      #mainMenu > li a:active, #mainMenu > li a:focus, #mainMenu > li a:visited {
+        text-decoration: none; }
+      #mainMenu > li a img {
+        position: relative;
+        left: -62px;
+        -webkit-transition: .3s all;
+        -moz-transition: .3s all;
+        -ms-transition: .3s all;
+        -o-transition: .3s all;
+        transition: .3s all; }
+        #mainMenu > li a img:hover {
+          left: -50px; }
+  #mainMenu .adminnav {
+    color: rgba(44, 48, 52, 0.2); }
+    #mainMenu .adminnav:hover {
+      color: #2c3034; }
+
+/*  End Left Nav  */
+/*  Start Right Social Icons  */
+#socialIcons {
+  list-style-type: none;
+  position: fixed;
+  top: 100px;
+  right: 2%; }
+  #socialIcons h4 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    color: rgba(44, 48, 52, 0.2);
+    border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
+  #socialIcons img {
+    width: 35px;
+    margin: 5px 0 0 0;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease; }
+    #socialIcons img:hover {
+      background: #fcd31c; }
+
+/*  End Right Social Icons  */
+/*  Start Up to Top  */
+#top {
+  position: absolute;
+  top: 0; }
+
+.upToTop {
+  position: fixed;
+  right: 2%;
+  bottom: 0;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease; }
+  .upToTop:hover {
+    bottom: 2%;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease; }
+
+/*  End Up to Top  */
+.navbar-header .menuMobile-toggler,
+.navbar-header #close-menuMobile {
+  display: none;
+  width: 30px;
+  opacity: .2;
+  margin: 15px 0;
+  position: absolute;
+  left: 4%; }
+  .navbar-header .menuMobile-toggler:hover,
+  .navbar-header #close-menuMobile:hover {
+    opacity: 1; }
+.navbar-header .menuMobile {
+  position: fixed;
+  top: 0;
+  left: -75%;
+  /* CHANGE .menuMobile LEFT:0; TO MAKE MENU SHOW UP */
+  width: 75%;
+  margin: 60px 0 0 0;
+  height: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: #2c3034;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  .navbar-header .menuMobile ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    clear: both;
+    width: 100%;
+    overflow: hidden; }
+    .navbar-header .menuMobile ul li {
+      font-family: "Bebas Neue", sans-serif;
+      text-transform: uppercase;
+      font-size: 25px;
+      color: rgba(255, 255, 255, 0.2);
+      display: block;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      padding: 6px 0 0 25px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      cursor: pointer; }
+      .navbar-header .menuMobile ul li:hover {
+        color: white; }
+      .navbar-header .menuMobile ul li .dispensaryNav {
+        color: #f7253e; }
+      .navbar-header .menuMobile ul li .dealNav {
+        color: #fcd31c; }
+      .navbar-header .menuMobile ul li .strainNav {
+        color: #3dd861; }
+    .navbar-header .menuMobile ul .menuMobile-subHeader {
+      font-family: "Open Sans", sans-serif;
+      font-size: 12px;
+      font-weight: lighter;
+      text-transform: uppercase;
+      text-align: left;
+      color: rgba(255, 255, 255, 0.2);
+      cursor: default;
+      padding-bottom: 5px; }
+      .navbar-header .menuMobile ul .menuMobile-subHeader:hover {
+        color: rgba(255, 255, 255, 0.2); }
+
+#footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #2c3034;
+  color: rgba(255, 255, 255, 0.3); }
+  #footer h4 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #3dd861; }
+  #footer a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: white; }
+    #footer a:hover {
+      color: #3dd861; }
+  #footer input[type='email'] {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 0;
+    border: 2px solid transparent;
+    height: 40px;
+    padding: 10px;
+    margin: 0;
+    float: left;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease; }
+    #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
+      border: 2px solid #3dd861; }
+  #footer input[type='email'] {
+    width: 300px; }
+    #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
+      border-right: none; }
+    #footer input[type='email']:visited, #footer input[type='email']:focus {
+      background-color: rgba(255, 255, 255, 0.2); }
+  #footer .btnfooter {
+    border-radius: 0;
+    background-color: #3dd861;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    height: 40px;
+    margin-top: 0;
+    padding: .5% 5%;
+    border: none;
+    box-shadow: none; }
+    #footer .btnfooter:hover {
+      color: #2c3034; }
+    #footer .btnfooter:active, #footer .btnfooter:focus, #footer .btnfooter:visited {
+      text-decoration: none; }
+  #footer .btnfooterlrg {
+    padding: 10px 5%; }
+  #footer address {
+    font-size: 10px;
+    padding-top: 5%;
+    width: 100%; }
+  #footer .footerlogo {
+    padding-top: 20%; }
+
+@media screen and (max-width: 470px) {
+  /*----style.scss.html start----*/
+  body {
+    top: 70px;
+    width: 98%; }
+
+  /*----style.scss.html end----*/
+  /*----home.html start----*/
+  #indexSummary .howItWorks img {
+    width: 30%; }
+  #indexSummary .howItWorks h3 {
+    padding-top: 1%; }
+  #indexSummary .howItWorks p {
+    font-size: 9px;
+    line-height: 12px;
+    width: 50%; }
+
+  /*----home.html end----*/
+  /*----footer.html start----*/
+  #footer input[type='email'] {
+    width: 60%;
+    margin-left: 5%; }
+  #footer .btnfooter {
+    width: 30%;
+    margin-right: 5%; }
+  #footer .btnfooterlrg {
+    margin-right: 0; }
+
+  /*----footer.html end----*/
+  /*----ratings.html start----*/
+  .dispensaryCard .rating,
+  .dealCard .rating,
+  .strainCard .rating {
+    margin-top: 2%; }
+
+  /*----ratings.html end----*/
+  /*----cards.html start----*/
+  .cardWrapper .distanceAway,
+  .cardWrapper .strainType {
+    margin: 30% auto 0 auto; }
+
+  .dvCardList li {
+    width: 68%; }
+
+  .featured-dispensary-true,
+  .featured-deal-true,
+  .featured-strain-true {
+    left: -4.5%; }
+
+  /*----cards.html end----*/
+  /*----signin.html end----*/
+  .close-modal {
+    top: 5px;
+    right: 10px; }
+
+  /*----signin.html end----*/
+  /*----footer start----*/
+  #footer h4 {
+    font-size: 14px; }
+
+  /*----footer end----*/
+  /*----modal start----*/
+  .modal-content .modal-header .modalTitle {
+    font-size: 50px; }
+  .modal-content .modal-header .modalSubtitle {
+    font-size: 20px; }
+  .modal-content .modal-footer p {
+    font-size: 12px; }
+    .modal-content .modal-footer p span {
+      color: white; }
+
+  /*----modal end----*/ }
+@media screen and (max-width: 767px) {
+  /*----style.scss.html start----*/
+  body {
+    top: 70px;
+    width: 99%; }
+
+  /*----style.scss.html end----*/
+  /*----home.html start----*/
+  #indexSummary .howItWorks {
+    padding: 20px 5%;
+    height: 100%; }
+    #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
+      border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
+    #indexSummary .howItWorks img {
+      width: 22%;
+      float: left;
+      margin-right: 20px; }
+    #indexSummary .howItWorks h3 {
+      font-size: 18px;
+      margin: 0;
+      padding: 3% 0 0 0;
+      text-align: left; }
+    #indexSummary .howItWorks p {
+      padding: 0;
+      margin: 0;
+      text-align: left;
+      font-size: 10px;
+      line-height: 14px;
+      width: 62%; }
+    #indexSummary .howItWorks .arrowRight {
+      display: inline;
+      margin-left: 20px; }
+
+  .featuredBanner {
+    margin-left: 25%; }
+
+  /*----home.html end----*/
+  /*----footer.html start----*/
+  #footer {
+    margin: 30px auto 0 auto;
+    text-align: center; }
+    #footer h4 {
+      text-align: center; }
+    #footer a {
+      font-size: 10px;
+      margin: 0 auto;
+      text-align: center; }
+    #footer p {
+      font-size: 10px; }
+    #footer input[type='email'] {
+      width: 45%;
+      margin-left: 15%; }
+    #footer .btnfooter {
+      width: 25%;
+      margin-top: 0;
+      margin-right: 15%; }
+    #footer .btnfooterlrg {
+      margin-right: 0; }
+    #footer address {
+      padding-top: 6%;
+      float: right;
+      text-align: center; }
+
+  /*----footer.html end----*/
+  /*----cards.html start----*/
+  .cardWrapper {
+    margin: 0 25% !important; }
+
+  .featured-dispensary-true,
+  .featured-deal-true,
+  .featured-strain-true {
+    left: -4%; }
+
+  .new-strain-true {
+    left: 21%; }
+
+  /*----cards.html end----*/
+  /*----ratings.html start----*/
+  .dispensaryCard .rating,
+  .dealCard .rating,
+  .strainCard .rating {
+    margin-top: -4%; }
+
+  /*----ratings.html end----*/
+  /*----cards.html start----*/
+  .dvCardList li {
+    width: 40%; }
+
+  /*----cards.html end----*/
+  /*----items.html start----*/
+  .strainGallery {
+    display: none; }
+
+  .strainGalleryMobile {
+    display: inline; }
+
+  /*----items.html end----*/ }
+@media screen and (max-width: 550px) {
+  /*----cards.html start----*/
+  .featured-dispensary-true,
+  .featured-deal-true,
+  .featured-strain-true {
+    left: -5.5%; }
+
+  /*----cards.html end----*/ }
+@media screen and (max-width: 980px) {
+  body {
+    top: 70px;
+    width: 99%; }
+
+  /*----page.html start----*/
+  .navbar {
+    padding: 0 4%;
+    height: 60px; }
+    .navbar .navbar-header .menuMobile-toggler img {
+      width: 30px; }
+    .navbar .navbar-header .logo .deviineLogo {
+      float: left;
+      left: 50px;
+      width: 65px;
+      padding: 15px 0; }
+    .navbar .navbar-header .menuMobile-toggler {
+      display: inline; }
+      .navbar .navbar-header .menuMobile-toggler img {
+        width: 50px;
+        opacity: .2; }
+        .navbar .navbar-header .menuMobile-toggler img:hover {
+          opacity: 1; }
+    .navbar .navbar-header .navbar-right .accountInfo {
+      margin: -4px 0 0 0; }
+      .navbar .navbar-header .navbar-right .accountInfo .username {
+        font-size: 13px; }
+      .navbar .navbar-header .navbar-right .accountInfo .location {
+        font-size: 9px; }
+    .navbar .navbar-header .navbar-right .navbar-text {
+      margin: 10px 0; }
+      .navbar .navbar-header .navbar-right .navbar-text .avatar {
+        width: 40px;
+        height: 40px;
+        border-color: #fcd31c;
+        margin-left: 5px; }
+
+  #mainMenu {
+    display: none;
+    top: inherit;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background: #2c3034;
+    padding: 5px 0; }
+    #mainMenu > li {
+      display: inline;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0;
+      width: 33%;
+      float: left; }
+      #mainMenu > li:nth-child(1), #mainMenu > li:nth-child(2), #mainMenu > li:nth-child(3) {
+        border: none; }
+      #mainMenu > li a {
+        color: white;
+        font-size: 20px; }
+      #mainMenu > li .typeform-share {
+        display: none; }
+      #mainMenu > li .disabledNav {
+        color: rgba(255, 255, 255, 0.2); }
+      #mainMenu > li .adminnav {
+        display: none; }
+
+  #socialIcons {
+    display: none; }
+
+  .upToTop {
+    display: none; }
+
+  /*----page.html end----*/
+  #indexSummary > .howItWorks p strong {
+    display: inline; }
+  #indexSummary > .howItWorks:hover .comingSoon {
+    opacity: 0; }
+
+  /*----footer start----*/
+  #footer {
+    margin: 0; }
+
+  /*----footer end----*/
+  /*----cards.html start----*/
+  .cardWrapper .dispensaryLogo,
+  .cardWrapper .dealImage,
+  .cardWrapper .strainImage {
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    filter: none; }
+
+  /*----cards.html end----*/
+  /*----cards.html start----*/
+  .barChart li div {
+    font-size: 16px; }
+
+  /*----cards.html end----*/
+  /*----rating.html start----*/
+  .rating .ratingBarWrap .ratings {
+    display: none; }
+  .rating .ratingBarWrap .mobileRatings {
+    display: inherit; }
+  .rating .ratingDisplay {
+    top: -60px; }
+
+  /*----rating.html start----*/ }
+#indexSummary > .howItWorks {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #2c3034;
+  font-size: 11px;
+  line-height: 15px;
+  padding-top: 15px;
+  height: 330px;
+  border-color: rgba(44, 48, 52, 0.05); }
+  #indexSummary > .howItWorks:hover .comingSoon {
+    opacity: 1; }
+  #indexSummary > .howItWorks:hover .dispensariesIcon {
+    background-color: #f7253e; }
+  #indexSummary > .howItWorks:hover .dealsIcon {
+    background-color: #fcd31c; }
+  #indexSummary > .howItWorks:hover .strainsIcon {
+    background-color: #3dd861; }
+  #indexSummary > .howItWorks .dispensariesIcon {
+    border: 2px solid #f7253e; }
+  #indexSummary > .howItWorks .dealsIcon {
+    border: 2px solid #fcd31c; }
+  #indexSummary > .howItWorks .strainsIcon {
+    border: 2px solid #3dd861; }
+  #indexSummary > .howItWorks h3 {
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; }
+  #indexSummary > .howItWorks p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 11px;
+    float: left; }
+    #indexSummary > .howItWorks p strong {
+      display: none; }
+  #indexSummary > .howItWorks .arrowRight {
+    display: none;
+    float: left;
+    border-top: 20px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent; }
+    #indexSummary > .howItWorks .arrowRight.red {
+      border-left-color: #f7253e; }
+    #indexSummary > .howItWorks .arrowRight.yellow {
+      border-left-color: #fcd31c; }
+    #indexSummary > .howItWorks .arrowRight.green {
+      border-left-color: #3dd861; }
+  #indexSummary > .howItWorks > img {
+    width: 50%;
+    margin: auto auto;
+    border-radius: 50%;
+    background: rgba(44, 48, 52, 0.2); }
+  #indexSummary > .howItWorks:nth-child(1), #indexSummary > .howItWorks:nth-child(2) {
+    border-right: 1px solid rgba(44, 48, 52, 0.05); }
+  #indexSummary > .howItWorks:nth-child(1) > h3 {
+    color: #f7253e; }
+  #indexSummary > .howItWorks:nth-child(2) > h3 {
+    color: #fcd31c; }
+  #indexSummary > .howItWorks:nth-child(3) > h3 {
+    color: #3dd861; }
+  #indexSummary > .howItWorks .comingSoon {
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    opacity: 0; }
+  #indexSummary > .howItWorks .comingSoonIndexSummary {
+    display: none; }
+
+.sponsors {
+  margin: 0;
+  padding: 0; }
+  .sponsors div ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style: none; }
+    .sponsors div ul li {
+      display: inline;
+      border-right: 10px solid white;
+      overflow: hidden; }
+      .sponsors div ul li:last-child {
+        border: none; }
+      .sponsors div ul li img {
+        max-width: 100%; }
+
+.modal {
+  padding-top: 8%; }
+
+.modal-content {
+  border: 3px solid #fcd31c;
+  background-color: #2c3034;
+  color: #fcd31c;
+  text-align: center;
+  padding: 2%;
+  border-radius: 30px;
+  box-shadow: 0 0 0 99999px rgba(44, 48, 52, 0.85); }
+  .modal-content .modal-header {
+    border: none;
+    padding: 0; }
+    .modal-content .modal-header .modalTitle {
+      font-family: "Bebas Neue", sans-serif;
+      text-transform: uppercase;
+      font-size: 70px; }
+    .modal-content .modal-header .modalSubtitle {
+      font-family: "Bebas Neue", sans-serif;
+      text-transform: uppercase;
+      font-size: 25px;
+      color: white;
+      margin-top: -20px; }
+    .modal-content .modal-header .close-modal {
+      color: rgba(255, 255, 255, 0.2);
+      text-decoration: none;
+      font-family: "Open Sans", sans-serif;
+      font-size: 20px;
+      font-weight: lighter;
+      float: right;
+      position: absolute;
+      padding: 10px;
+      top: 10px;
+      right: 15px;
+      cursor: pointer; }
+    .modal-content .modal-header .close-modal:hover {
+      color: #fcd31c; }
+  .modal-content .modal-body {
+    padding: 0; }
+    .modal-content .modal-body p {
+      font-family: "Bebas Neue", sans-serif;
+      text-transform: uppercase;
+      font-size: 30px;
+      color: white;
+      margin-top: -20px; }
+    .modal-content .modal-body .btn-group {
+      font-family: "Open Sans", sans-serif;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #fcd31c;
+      width: 60%;
+      margin: 15px auto;
+      box-shadow: none;
+      border-radius: 10px; }
+      .modal-content .modal-body .btn-group .widebtn {
+        width: 50%; }
+      .modal-content .modal-body .btn-group li {
+        width: 33%;
+        display: inline;
+        background: transparent;
+        font-family: "Bebas Neue", sans-serif;
+        text-transform: uppercase;
+        font-size: 35px;
+        padding: 10px 0 2px 0;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px; }
+        .modal-content .modal-body .btn-group li:hover, .modal-content .modal-body .btn-group li:focus, .modal-content .modal-body .btn-group li:active {
+          border-color: #fcd31c;
+          color: #fcd31c; }
+      .modal-content .modal-body .btn-group li.facebook,
+      .modal-content .modal-body .btn-group li.twitter,
+      .modal-content .modal-body .btn-group li.google {
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 35px 0; }
+    .modal-content .modal-body .signUp,
+    .modal-content .modal-body .signIn {
+      color: #fcd31c;
+      text-decoration: none; }
+      .modal-content .modal-body .signUp span,
+      .modal-content .modal-body .signIn span {
+        color: rgba(255, 255, 255, 0.2); }
+  .modal-content .modal-footer {
+    border: none;
+    padding: 0;
+    margin: 20px auto 0 auto; }
+    .modal-content .modal-footer .btn-group-justified {
+      width: 60%;
+      margin: 0 auto; }
+    .modal-content .modal-footer button {
+      background: transparent;
+      font-family: "Bebas Neue", sans-serif;
+      text-transform: uppercase;
+      font-size: 35px;
+      padding: 10px 0 2px 0;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px; }
+      .modal-content .modal-footer button:hover, .modal-content .modal-footer button:focus, .modal-content .modal-footer button:active, .modal-content .modal-footer button:visited {
+        border-color: #fcd31c;
+        color: #fcd31c; }
+    .modal-content .modal-footer p {
+      color: rgba(255, 255, 255, 0.2);
+      text-align: center; }
+      .modal-content .modal-footer p a {
+        color: #fcd31c; }
+
+.rating {
+  width: 250px;
+  height: 55px;
+  margin: 0 0 70px 0;
+  background: rgba(44, 48, 52, 0.05); }
+  .rating .ratingBarWrap {
+    position: relative;
+    width: 250px; }
+    .rating .ratingBarWrap svg,
+    .rating .ratingBarWrap div.ratingBar {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .rating .ratingBarWrap svg {
+      pointer-events: none;
+      position: relative;
+      z-index: 2;
+      margin: -1px 0 0 0;
+      padding: 0;
+      width: 252px;
+      pointer-events: none; }
+    .rating .ratingBarWrap input[type="radio"] {
+      display: none; }
+    .rating .ratingBarWrap .ratings {
+      display: flex;
+      direction: rtl; }
+      .rating .ratingBarWrap .ratings .rate {
+        width: 20%;
+        height: 50px;
+        margin: 0;
+        float: left;
+        position: relative;
+        top: -56px;
+        z-index: 1;
+        cursor: pointer; }
+        .rating .ratingBarWrap .ratings .rate:hover, .rating .ratingBarWrap .ratings .rate:hover ~ .rate {
+          background: #2c3034; }
+    .rating .ratingBarWrap .mobileRatings {
+      display: none; }
+      .rating .ratingBarWrap .mobileRatings .rate {
+        width: 20%;
+        height: 50px;
+        margin: 0;
+        float: left;
+        position: relative;
+        top: -56px;
+        z-index: 1;
+        cursor: pointer; }
+    .rating .ratingBarWrap div.ratingBar {
+      width: 250px;
+      padding-top: 50px;
+      margin-top: 1px; }
+  .rating .ratingDisplay,
+  .rating .userRatingDisplay {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #2c3034;
+    height: 0;
+    position: relative;
+    z-index: 3; }
+  .rating .ratingDisplay {
+    top: -75px; }
+  .rating .userRatingDisplay {
+    top: -65px;
+    display: none; }
+
+.dealCard .rating,
+.dispensaryCard .rating,
+.strainCard .rating {
+  width: 100%;
+  height: 16%;
+  margin: -6% 0 0 0;
+  position: absolute; }
+  .dealCard .rating .ratingBarWrap,
+  .dispensaryCard .rating .ratingBarWrap,
+  .strainCard .rating .ratingBarWrap {
+    width: 100%;
+    height: 0; }
+    .dealCard .rating .ratingBarWrap svg,
+    .dispensaryCard .rating .ratingBarWrap svg,
+    .strainCard .rating .ratingBarWrap svg {
+      width: 101%;
+      margin-left: -1px; }
+    .dealCard .rating .ratingBarWrap .rate,
+    .dispensaryCard .rating .ratingBarWrap .rate,
+    .strainCard .rating .ratingBarWrap .rate {
+      display: none; }
+    .dealCard .rating .ratingBarWrap div.ratingBar,
+    .dispensaryCard .rating .ratingBarWrap div.ratingBar,
+    .strainCard .rating .ratingBarWrap div.ratingBar {
+      width: 100%;
+      height: 0;
+      padding-top: 22%;
+      margin-top: 1px;
+      -webkit-transition: all .7s ease;
+      -moz-transition: all .7s ease;
+      -ms-transition: all .7s ease;
+      -o-transition: all .7s ease;
+      transition: all .7s ease; }
+    .dealCard .rating .ratingBarWrap .ratings .rateThis,
+    .dispensaryCard .rating .ratingBarWrap .ratings .rateThis,
+    .strainCard .rating .ratingBarWrap .ratings .rateThis {
+      display: none; }
+  .dealCard .rating .ratingDisplay,
+  .dispensaryCard .rating .ratingDisplay,
+  .strainCard .rating .ratingDisplay {
+    display: none; }
+  .dealCard .rating .userRatingDisplay,
+  .dispensaryCard .rating .userRatingDisplay,
+  .strainCard .rating .userRatingDisplay {
+    display: none; }
+
+.dispensaryRating .ratingBar {
+  background-color: #f7253e; }
+
+.dealRating .ratingBar {
+  background-color: #fcd31c; }
+
+.strainRating .ratingBar {
+  background-color: #3dd861; }
+
+/* Card Start */
+.cardWrapper {
+  width: 100%;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  cursor: pointer; }
+  .cardWrapper .cardBg {
+    width: 100%; }
+  .cardWrapper .cardInfo {
+    position: absolute;
+    width: 80%;
+    top: 0px;
+    margin: 10% 10% 0 10%;
+    padding: 0; }
+  .cardWrapper .dispensaryLogo,
+  .cardWrapper .dealImage,
+  .cardWrapper .strainImage {
+    border-radius: 20px;
+    margin-bottom: 5%;
+    width: 100%; }
+    .cardWrapper .dispensaryLogo img,
+    .cardWrapper .dealImage img,
+    .cardWrapper .strainImage img {
+      width: 100%;
+      border-radius: 15px; }
+  .cardWrapper .dispensaryName,
+  .cardWrapper .dealTitle,
+  .cardWrapper .strainName {
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: normal;
+    text-align: center;
+    color: #2c3034;
+    margin: 0;
+    padding: 0;
+    height: 28px;
+    overflow: hidden; }
+  .cardWrapper .dealTitle {
+    height: 48px;
+    line-height: 1.1; }
+  .cardWrapper .dispensaryAddress,
+  .cardWrapper .businessName,
+  .cardWrapper .producedBy {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: .85em;
+    font-style: normal;
+    text-align: center;
+    color: #BCBEC0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; }
+  .cardWrapper .dispensaryAddress.line2,
+  .cardWrapper .businessName.line2,
+  .cardWrapper .producedBy.line2 {
+    position: relative;
+    z-index: 3; }
+  .cardWrapper .producedBy.line2 {
+    color: #2c3034; }
+  .cardWrapper .dispensaryAddress.line1,
+  .cardWrapper .producedBy.line1 {
+    height: 18px; }
+  .cardWrapper .dispensaryAddress.line2,
+  .cardWrapper .producedBy.line2 {
+    height: 26px; }
+  .cardWrapper .businessName.line2 {
+    height: 24px; }
+  .cardWrapper .distanceAway,
+  .cardWrapper .strainType {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 22% auto 0 auto;
+    padding: 0;
+    position: absolute;
+    z-index: 3;
+    text-align: center; }
+
+.dispensaryCard .distanceAway {
+  color: #f7253e; }
+
+.dealCard .distanceAway {
+  color: #fcd31c; }
+
+.strainCard .strainType {
+  color: #3dd861; }
+
+.featured-dispensary-true,
+.featured-deal-true,
+.featured-strain-true,
+.new-strain-true {
+  position: absolute;
+  top: 10%;
+  left: -5.8%;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat; }
+
+.featured-dispensary-true {
+  background-image: url(../img/banners/featured.png); }
+
+.featured-deal-true {
+  left: -5.9%;
+  background-image: url(../img/banners/dailyDeal.png); }
+
+.featured-strain-true {
+  background-image: url(../img/banners/strainOfTheWeek.png); }
+
+.new-strain-true {
+  top: 11.3%;
+  left: -3.4%;
+  background-image: url(../img/banners/new.png); }
+
+/* Card End */
+.dvCardList {
+  padding-left: 0;
+  list-style-type: none; }
+  .dvCardList > li {
+    display: inline-block;
+    padding: 1%; }
+
+/**
+ * Dakota's menu style
+ */
+ul.nav.nav-tabs {
+  height: 100%;
+  border: none; }
+  ul.nav.nav-tabs > li {
+    padding: 0;
+    float: left;
+    opacity: .2;
+    border: none;
+    margin: 0 2px 0 0; }
+    ul.nav.nav-tabs > li:last-child {
+      margin: 0; }
+    ul.nav.nav-tabs > li:hover {
+      opacity: 1;
+      border: none; }
+  ul.nav.nav-tabs > li.active {
+    opacity: 1;
+    border: none;
+    border-bottom: 1px solid #2c3034; }
+  ul.nav.nav-tabs > li > a {
+    margin: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: transparent;
+    padding-top: 50%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: none; }
+    ul.nav.nav-tabs > li > a:hover, ul.nav.nav-tabs > li > a:active, ul.nav.nav-tabs > li > a:visited, ul.nav.nav-tabs > li > a:focus {
+      color: transparent;
+      border: none; }
+  ul.nav.nav-tabs > li:nth-child(1) > a {
+    background-image: url("../img/tabs/indica.png"); }
+  ul.nav.nav-tabs > li:nth-child(2) > a {
+    background-image: url("../img/tabs/sativa.png"); }
+  ul.nav.nav-tabs > li:nth-child(3) > a {
+    background-image: url("../img/tabs/hybrid.png"); }
+  ul.nav.nav-tabs > li:nth-child(4) > a {
+    background-image: url("../img/tabs/preroll.png"); }
+  ul.nav.nav-tabs > li:nth-child(5) > a {
+    background-image: url("../img/tabs/edible.png"); }
+  ul.nav.nav-tabs > li:nth-child(6) > a {
+    background-image: url("../img/tabs/other.png"); }
+
+.menu {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 5%;
+  float: left;
+  background: #2c3034 !important; }
+  .menu .menuItem {
+    margin: 5% 5% 0 5%;
+    border-radius: 20px;
+    padding: 4% 4% 0 4%;
+    width: 90%;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    background-color: white;
+    color: #2c3034;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3); }
+    .menu .menuItem .itemName {
+      margin: 0 0 10px 0;
+      border-bottom: thin solid rgba(44, 48, 52, 0.15);
+      padding: 0;
+      width: 100%;
+      float: left;
+      font: normal "Bebas Neue", sans-serif 35px; }
+    .menu .menuItem .producerName {
+      margin: 10px 0 0 0;
+      padding: 0;
+      float: right;
+      font: 22px "Bebas Neue", sans-serif;
+      text-transform: uppercase;
+      color: rgba(44, 48, 52, 0.3); }
+    .menu .menuItem .itemImage {
+      margin-right: 10px;
+      width: 30%;
+      float: left; }
+    .menu .menuItem .thcPotency,
+    .menu .menuItem .cbdPotency {
+      margin: 0px auto 0 auto;
+      width: 27%;
+      text-align: center;
+      font-family: "Bebas Neue", sans-serif;
+      text-transform: uppercase;
+      font-size: 20px;
+      color: rgba(44, 48, 52, 0.3); }
+      .menu .menuItem .thcPotency span,
+      .menu .menuItem .cbdPotency span {
+        font-size: 40px;
+        color: #2c3034; }
+    .menu .menuItem .itemDescription {
+      margin: 1em auto;
+      clear: both;
+      float: left;
+      font-size: 12px; }
+    .menu .menuItem .pricing {
+      margin: 0;
+      border-top: thin solid rgba(44, 48, 52, 0.15);
+      padding: 10px 0 0 0;
+      width: 100%;
+      clear: left; }
+      .menu .menuItem .pricing li {
+        border-right: thin solid rgba(44, 48, 52, 0.15);
+        padding: 10px 0 5px 0;
+        width: 20%;
+        float: left;
+        list-style: none;
+        text-align: center;
+        font: normal 25px/22px "Bebas Neue", sans-serif;
+        text-transform: uppercase;
+        color: rgba(44, 48, 52, 0.2); }
+        .menu .menuItem .pricing li .price {
+          font-size: 28px;
+          color: #2c3034; }
+        .menu .menuItem .pricing li .unit {
+          font-size: 18px;
+          color: #2c3034; }
+        .menu .menuItem .pricing li:last-child {
+          border-right: none; }
+
+body {
+  position: relative;
+  top: 100px; }
+
+.container-fluid {
+  padding: 0 2%;
+  margin: 0; }
+
+a:active, a:hover, a:visited {
+  text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase; }
+
+h3 {
+  border-bottom: 1px solid rgba(44, 48, 52, 0.05);
+  text-align: center;
+  font-size: 30px; }
+
+p {
+  font-family: "Open Sans", sans-serif; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+.pageTitle {
+  margin-top: 0;
+  border-bottom: 1px solid rgba(44, 48, 52, 0.05);
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  font-size: 40px; }
+
+.viewOnMap {
+  text-transform: uppercase;
+  font-weight: bold; }
+
+form {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: #2c3034; }
+  form .btn-block {
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+    padding: 5px 0 0 0;
+    background: #2c3034; }
+    form .btn-block.dispensaryCMS:hover, form .btn-block.dispensaryCMS:active, form .btn-block.dispensaryCMS:focus, form .btn-block.dispensaryCMS:visited {
+      background: #f7253e;
+      color: white; }
+    form .btn-block.dealCMS:hover, form .btn-block.dealCMS:active, form .btn-block.dealCMS:focus, form .btn-block.dealCMS:visited {
+      background: #fcd31c;
+      color: white; }
+    form .btn-block.strainCMS:hover, form .btn-block.strainCMS:active, form .btn-block.strainCMS:focus, form .btn-block.strainCMS:visited {
+      background: #3dd861;
+      color: white; }
+
+.brandassets {
+  margin-top: -3%;
+  list-style: none; }
+  .brandassets li {
+    margin-bottom: 20px;
+    text-align: center; }
+    .brandassets li h4 {
+      font-size: 35px;
+      margin-top: 30px;
+      border-bottom: 3px solid; }
+    .brandassets li:nth-child(1) {
+      color: #3dd861; }
+    .brandassets li:nth-child(2) {
+      color: #fcd31c; }
+    .brandassets li:nth-child(3) {
+      color: #f7253e; }
+    .brandassets li:nth-child(4) {
+      color: #2c3034; }
+    .brandassets li a img {
+      width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

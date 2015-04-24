@@ -1,0 +1,163 @@
+<a id="top"></a>
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="navbar-header">
+		<img src="img/icons/menuIcon.png" class="menuMobile-toggler" id="menuMobile-toggler" alt="Show Menu"/>
+		<img src="img/icons/x.png" class="close-menuMobile" id="close-menuMobile" alt="Close Menu"/>
+		<div class="menuMobile" id="menuMobile">
+		  <ul>
+		  	<li class="menuMobile-subHeader">Pages</li>
+			<li ui-sref="root.home" class="mobileNavLink">Home</li>
+			<li ui-sref="" class="dispensaryNav">Dispensaries</li>
+			<li ui-sref="" class="dealNav">Deals</li>
+			<li ui-sref="root.strains" class="strainNav mobileNavLink">Strains</li>
+			<li class="menuMobile-subHeader">Other</li>
+			<li class="mobileNavLink"><a href="https://deviine.typeform.com/to/pnlr6D" data-mode="1" target="_blank" class="typeform-share" style="color:inherit;">Feedback</a></li>
+			<li ui-sref="root.privacy" class="mobileNavLink">Privacy Policy</li>
+			<li ui-sref="root.terms" class="mobileNavLink">Terms of Use</li>
+			<li ui-sref="root.manageDispensaries" ng-show="isAdmin(currentUser)" class="adminnav mobileNavLink">Edit Dispensaries</li>
+			<li ui-sref="root.manageDeals" ng-show="isAdmin(currentUser)" class="adminnav mobileNavLink">Edit Deals</li>
+			<li ui-sref="root.manageStrains" ng-show="isAdmin(currentUser)" class="adminnav mobileNavLink">Edit Strains</li>
+		  </ul>
+		</div>
+		<a ui-sref="root.home" class="logo">
+			<img src="img/logo.png" alt="DeViine Logo" class="deviineLogo"/>
+		</a>
+		<div class="navbar-right">
+			<div ng-show="currentUser" class="navbar-text">
+				<img ng-click="showLoginModal()" ng-src="{{ currentAvatar }}" class="img-responsive pull-right avatar"/>
+				<div class="accountInfo">
+					<h1 class="pull-right username">{{ currentName }}</h1><br/>
+					<h2 class="pull-right location">{{ currentCity }}</h2>
+				</div>
+			</div>
+			<div ng-click="showLoginModal()" ng-show="!( currentUser )" class="navbar-text">
+				<img src="img/icons/budIconWhite.png" class="img-responsive pull-right avatar"/>
+				<div class="accountInfo">
+					<h1 class="pull-right username btn navbar-btn">Sign In <span>/</span> Sign Up</h1><br/>
+					<h2 class="pull-right location">{{ currentCity }}</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">
+			<ul id="mainMenu">
+				<li>
+					<a ui-sref="" class="disabledNav"><img src="img/banners/comingSoonRed.png" class="comingSoonNavHover"/>Dispensaries</a>
+				</li>
+				<li>
+					<a ui-sref="" class="disabledNav"><img src="img/banners/comingSoonYellow.png" class="comingSoonNavHover"/>Deals</a>
+				</li>
+				<li>
+					<a ui-sref="root.strains">Strains</a>
+				</li>
+				<li>
+					<a class="typeform-share" href="https://deviine.typeform.com/to/pnlr6D" data-mode="1" target="_blank"><img src="img/banners/feedback.png"/></a>
+				</li>
+				<li>
+					<a ui-sref="root.manageDispensaries" ng-show="isAdmin(currentUser)" class="adminnav">Edit Dispensaries</a>
+				</li>
+				<li>
+					<a ui-sref="root.manageDeals" ng-show="isAdmin(currentUser)" class="adminnav">Edit Deals</a>
+				</li>
+				<li>
+					<a ui-sref="root.manageStrains" ng-show="isAdmin(currentUser)" class="adminnav">Edit Strains</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9">
+			<ui-view></ui-view>
+		</div>
+		<div>
+			<ul id="socialIcons">
+				<h4>OUR<br>SOCIAL<br>MEDIA:</h4>
+				<li>
+					<a target="_blank" href="https://www.facebook.com/DeViineLife">
+						<img src="img/icons/social/facebook.png" title="Facebook"/>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://twitter.com/DeViineLife">
+						<img src="img/icons/social/twitter.png" title="Twitter"/>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://instagram.com/DeViineLife">
+						<img src="img/icons/social/instagram.png" title="Instagram"/>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://massroots.com/DeViine">
+						<img src="img/icons/social/massroots.png" title="Massroots"/>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://vine.co/u/1174942024756039680">
+						<img src="img/icons/social/vine.png" title="Vine"/>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="footer" class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+			<h4>Quicklinks</h4>
+			<ul class="list-inline">
+				<li>
+					<a style="color:rgba(255,255,255,.2);">Dispensaries</a>
+				</li>
+				<li>
+					<a style="color:rgba(255,255,255,.2);">Deals</a>
+				</li>
+				<li>
+					<a ui-sref="root.strains">Strains</a>
+				</li>
+				<li>
+					<a ui-sref="root.terms">Terms of Use</a>
+				</li>
+				<li>
+					<a ui-sref="root.privacy">Privacy Policy</a>
+				</li>
+				<li>
+					<a ui-sref="root.brandassets">Brand Assets</a>
+				</li>
+			</ul>
+			<h4>Sign Up for Our Newsletter</h4>
+			<p>Enter your email address to receive website updates, launch dates, exclusive deals and offers, and strain information directly to your inbox.</p>
+			<div id="mc_embed_signup">
+				<form action="//deviine.us9.list-manage.com/subscribe/post?u=13dca9320d4233ffa9d1ed248&amp;id=c91d7fce2b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<div id="mc_embed_signup_scroll">
+						<div>
+							<input type="email" value="" placeholder="Email address" name="EMAIL" class="required email" id="mce-EMAIL">
+							<input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="btnfooter">
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					    <div style="position: absolute; left: -5000px;">
+					    	<input type="text" name="b_13dca9320d4233ffa9d1ed248_c91d7fce2b" tabindex="-1" value="">
+					    </div>
+				    </div>
+				</form>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h4>How can we improve your experience?</h4>
+			<p>This may sound crazy, but we actually listen to your feedback.  Let us know how we can make DeViine better for you.</p><br>
+			<a class="typeform-share btnfooter btnfooterlrg" href="https://deviine.typeform.com/to/pnlr6D" data-mode="1" target="_blank">Get in touch</a>
+		</div>
+		<div class="row col-md-6 col-sm-12 col-xs-12">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<address>&copy; 2015 DeViine LLC | 28 W. 3rd Ave., Ste. B-1 | Spokane, WA 99201</address>
+			</div>
+		</div>
+	</div>
+</div>
+<a href="#" class="top"><img src="img/icons/rocket.png" class="upToTop" alt="Up to top"/></a>
+
+

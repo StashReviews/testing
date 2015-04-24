@@ -1,0 +1,13 @@
+<div ng-repeat="item in items" class="item">
+	<h1 class="itemName">{{ item.name }}</h1>
+	<div class="itemDescription">{{ item.description }}</div>
+	<div class="itemPriceByAmount">
+		<ul>
+			<li ng-repeat="(amount, price) in item.priceByAmount">${{ price }} / {{ amount }}</li>
+		</ul>
+	</div>
+	<div class="itemChemistry">
+		<div>{{ item.chemistry.percentageTHC }}% THC</div>
+		<div>{{ item.chemistry.percentageCBD }}% CBD</div>
+	</div>
+</div>

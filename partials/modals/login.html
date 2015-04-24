@@ -1,0 +1,21 @@
+<div class="modal-header">
+	<h1 class="modalTitle">Welcome!</h1>
+	<h2 class="modalSubtitle">Sign in with one of these accounts.</h2>
+	<a ng-click="close()" class="close-modal">X</a>
+</div>
+<div class="modal-body">
+	<form class="form-horizontal">
+		<div class="form-group">
+			<div class="btn-group btn-group-justified">
+				<ul class="btn-group">
+					<li type="button" ng-click="login('facebook', null)" class="btn facebook" style="background-image: url('img/icons/social/facebook_yellow.png')"></li>
+					<li type="button" ng-click="login('twitter', null)" class="btn twitter" style="background-image: url('img/icons/social/twitter_yellow.png')"></li>
+					<li type="button" ng-click="login('google', null)" class="btn google" style="background-image: url('img/icons/social/google_yellow.png')"></li>
+				</ul>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<p>By visiting DeViine.com, you are agreeing to our <a ui-sref="root.terms">Terms of Use</a> and our <a ui-sref="root.privacy">Privacy Policy</a>.<br/><span>Must be 21 years or older.</span></p>
+</div>

@@ -1,0 +1,226 @@
+<h1 class="pageTitle">Manage Strains</h1>
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="strainId" class="col-md-2 control-label">Select strain:</label>
+		<div class="col-md-8">
+			<select ng-model="strainId" name="strainId" ng-options="id as strain.name for (id, strain) in strains" ng-change="loadStrain(strainId)" class="form-control"></select>
+		</div>
+		<div class="col-md-2">
+			<button ng-click="newStrain()" class="btn btn-block strainCMS">New Strain</button>
+		</div>
+	</div>
+	<div ng-hide="strain.$id" class="form-group">
+		<label for="strainId" class="col-md-2 control-label">Strain ID:</label>
+		<div class="col-md-10">
+			<input ng-model="strainId" type="text" name="strainId" class="form-control"/>
+		</div>
+	</div>
+	<fieldset>
+		<legend>Description</legend>
+		<div class="form-group">
+			<label for="strainName" class="col-md-2 control-label">Name:</label>
+			<div class="col-md-10">
+				<input ng-model="strain.name" type="text" name="strainName" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="strainProducer" class="col-md-2 control-label">Producer:</label>
+			<div class="col-md-10">
+				<input ng-model="strain.producer" type="text" name="strainProducer" class="form-control" required/></div>
+			</div>
+			<div class="form-group">
+				<label for="strainDescription" class="col-md-2 control-label">Description:</label>
+				<div class="col-md-10">
+					<textarea ng-model="strain.description" name="strainDescription" class="form-control"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="strainChemistry" class="col-md-2 control-label">Chemistry:</label>
+				<div class="col-md-10">
+					<select ng-model="strain.chemistry" name="strainChemistry" ng-options="chemistry for chemistry in chemistries" class="form-control" required></select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="strainFlavor1" class="col-md-2 control-label">Flavor profile 1:</label>
+				<div class="col-md-8">
+					<select ng-model="strain.flavor1" name="strainFlavor1" ng-options="flavor for flavor in flavors" class="form-control"></select>
+				</div>
+				<label for="strainFlavor1%" class="col-md-1 control-label">%</label>
+				<div class="col-md-1">
+					<input ng-model="strain.flavor1Percent" type="text" name="strainFlavor1%" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="strainFlavor2" class="col-md-2 control-label">Flavor profile 2:</label>
+				<div class="col-md-8">
+					<select ng-model="strain.flavor2" name="strainFlavor2" ng-options="flavor for flavor in flavors" class="form-control"></select>
+				</div>
+				<label for="strainFlavor2%" class="col-md-1 control-label">%</label>
+				<div class="col-md-1">
+					<input ng-model="strain.flavor2Percent" type="text" name="strainFlavor2%" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="strainFlavor3" class="col-md-2 control-label">Flavor profile 3:</label>
+				<div class="col-md-8">
+					<select ng-model="strain.flavor3" name="strainFlavor3" ng-options="flavor for flavor in flavors" class="form-control"></select>
+				</div>
+				<label for="strainFlavor3%" class="col-md-1 control-label">%</label>
+				<div class="col-md-1">
+					<input ng-model="strain.flavor3Percent" type="text" name="strainFlavor3%" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="strainPositive1" class="col-md-2 control-label">Positive effect 1:</label>
+				<div class="col-md-8">
+					<select ng-model="strain.positive1" name="strainPositive1" ng-options="positiveEffect for positiveEffect in positiveEffects" class="form-control"></select>
+				</div>
+				<label for="strainPositive1" class="col-md-1 control-label">%</label>
+				<div class="col-md-1">
+					<input ng-model="strain.positive1Percent" type="text" name="strainPositive1%" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="strainPositive2" class="col-md-2 control-label">Positive effect 2:</label>
+				<div class="col-md-8">
+					<select ng-model="strain.positive2" name="strainPositive2" ng-options="positiveEffect for positiveEffect in positiveEffects" class="form-control"></select>
+				</div>
+				<label for="strainPositive2%" class="col-md-1 control-label">%</label>
+				<div class="col-md-1">
+					<input ng-model="strain.positive2Percent" type="text" name="strainPositive2%" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="strainPositive3" class="col-md-2 control-label">Positive effect 3:</label>
+				<div class="col-md-8">
+					<select ng-model="strain.positive3" name="strainPositive3" ng-options="positiveEffect for positiveEffect in positiveEffects" class="form-control"></select>
+				</div>
+				<label for="strainPositive3%" class="col-md-1 control-label">%</label>
+				<div class="col-md-1">
+					<input ng-model="strain.positive3Percent" type="text" name="strainPositive3%" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="strainNegative1" class="col-md-2 control-label">Negative effect 1:</label>
+				<div class="col-md-8">
+					<select ng-model="strain.negative1" name="strainNegative1" ng-options="negativeEffect for negativeEffect in negativeEffects" class="form-control"></select>
+				</div>
+				<label for="strainNegative1%" class="col-md-1 control-label">%</label>
+				<div class="col-md-1">
+					<input ng-model="strain.negative1Percent" type="text" name="strainNegative1%" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="strainNegative2" class="col-md-2 control-label">Negative effect 2:</label>
+				<div class="col-md-8">
+					<select ng-model="strain.negative2" name="strainNegative2" ng-options="negativeEffect for negativeEffect in negativeEffects" class="form-control"></select>
+				</div>
+				<label for="strainNegative2%" class="col-md-1 control-label">%</label>
+				<div class="col-md-1">
+					<input ng-model="strain.negative2Percent" type="text" name="strainNegative2%" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="strainNegative3" class="col-md-2 control-label">Negative effect 3:</label>
+				<div class="col-md-8">
+					<select ng-model="strain.negative3" name="strainNegative3" ng-options="negativeEffect for negativeEffect in negativeEffects" class="form-control"></select>
+				</div>
+				<label for="strainNegative3%" class="col-md-1 control-label">%</label>
+				<div class="col-md-1">
+					<input ng-model="strain.negative3Percent" type="text" name="strainNegative3%" class="form-control"/>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Images</legend>
+		<div class="form-group">
+			<label for="producerLogo" class="col-md-2 control-label">Logo:</label>
+			<div class="col-md-10">
+				<input ng-model="strain.logo" name="producerLogo" type="text" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="strainCardImage" class="col-md-2 control-label">Card Image:</label>
+			<div class="col-md-10">
+				<input ng-model="strain.cardimage" name="strainCardImage" type="text" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="strainImage" class="col-md-2 control-label">Full Image:</label>
+			<div class="col-md-10">
+				<input ng-model="strain.image" name="strainImage" type="text" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="strainZoomImage" class="col-md-2 control-label">Zoom Image:</label>
+			<div class="col-md-10">
+				<input ng-model="strain.zoomimage" name="strainZoomImage" type="text" class="form-control" required/>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Last Verified Potency</legend>
+		<div class="form-group">
+			<label for="strainTHC" class="col-md-2 control-label">Total THC:</label>
+			<div class="col-md-4">
+				<input ng-model="strain.thc" type="text" name="strainTHC" class="form-control"/>
+			</div>
+			<label for="strainCBD" class="col-md-2 control-label">Total CBD:</label>
+			<div class="col-md-4">
+				<input ng-model="strain.cbd" type="text" name="strainCBD" class="form-control"/>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Additional Options</legend>
+		<div class="form-group">
+			<label for="strainFeatured" class="col-md-6 control-label">Enter 'true' if featured or enter '0' if not featured:</label>
+			<div class="col-md-6">
+				<input ng-model="strain.featured" name="strainFeatured" type="text" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="strainDisabled" class="col-md-6 control-label" style="color:red;">Enter 'true' if disabled or enter '0' if not disabled:</label>
+			<div class="col-md-6">
+				<input ng-model="strain.disabled" name="strainDisabled" type="text" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="strainNew" class="col-md-6 control-label">Enter 'true' if new or enter '0' if not new:</label>
+			<div class="col-md-6">
+				<input ng-model="strain.new" name="strainNew" type="text" class="form-control" required/>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Set Your Rating</legend>
+		<div class="form-group">
+			<label for="rate" class="col-md-1 control-label">Rate:</label>
+			<label for="rate" class="col-md-1 control-label">1:</label>
+			<div class="col-md-1">
+				<input ng-model="strain.ratings[currentName]" name="rate" type="radio" value="1" class="form-control"/>
+			</div>
+			<label for="rate" class="col-md-1 control-label">2:</label>
+			<div class="col-md-1">
+				<input ng-model="strain.ratings[currentName]" name="rate" type="radio" value="2" class="form-control"/>
+			</div>
+			<label for="rate" class="col-md-1 control-label">3:</label>
+			<div class="col-md-1">
+				<input ng-model="strain.ratings[currentName]" name="rate" type="radio" value="3" class="form-control"/>
+			</div>
+			<label for="rate" class="col-md-1 control-label">4:</label>
+			<div class="col-md-1">
+				<input ng-model="strain.ratings[currentName]" name="rate" type="radio" value="4" class="form-control"/>
+			</div>
+			<label for="rate" class="col-md-1 control-label">5:</label>
+			<div class="col-md-1">
+				<input ng-model="strain.ratings[currentName]" name="rate" type="radio" value="5" class="form-control"/>
+			</div>
+		</div>
+	</fieldset>
+	<button ng-click="saveStrain(strainId, strain)" class="btn btn-block strainCMS">Ahh, push it!</button>
+</form>
+
+
+

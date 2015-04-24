@@ -1,0 +1,158 @@
+/**
+ * Dakota's menu style
+ */
+
+ul.nav.nav-tabs {
+  height: 100%;
+  border: none;
+  > li {
+    padding: 0;
+    float: left;
+    opacity: .2;
+    border: none;
+    margin: 0 2px 0 0;
+    &:last-child {
+      margin: 0;
+    }
+    &:hover {
+      opacity: 1;
+      border: none;
+    }
+  }
+  > li.active {
+    opacity: 1;
+    border: none;
+    border-bottom: 1px solid $dvGray;
+  }
+  > li > a {
+    margin: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: transparent;
+    padding-top: 50%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: none;
+    &:hover,
+    &:active,
+    &:visited,
+    &:focus {
+      color: transparent; 
+      border: none;
+    }
+  }
+
+  // @todo These will have to be applied dynamically, using Angular.  It may require extending Angular UI's tab directive.
+  > li:nth-child(1) > a {
+    background-image: url('../img/tabs/indica.png');
+  }
+
+  > li:nth-child(2) > a {
+    background-image: url('../img/tabs/sativa.png');
+  }
+
+  > li:nth-child(3) > a {
+    background-image: url('../img/tabs/hybrid.png');
+  }
+
+  > li:nth-child(4) > a {
+    background-image: url('../img/tabs/preroll.png');
+  }
+
+  > li:nth-child(5) > a {
+    background-image: url('../img/tabs/edible.png');
+  }
+
+  > li:nth-child(6) > a {
+    background-image: url('../img/tabs/other.png');
+  }
+}
+
+.menu {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 5%;
+  float: left;
+  background: $dvGray !important;
+  .menuItem {
+    margin: 5% 5% 0 5%;
+    border-radius: 20px;
+    padding: 4% 4% 0 4%;
+    width: 90%;
+    float: left;
+    font-family: $dvTextFont;
+    background-color: white;
+    color: $dvGray;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,.3);
+    .itemName {
+      margin: 0 0 10px 0;
+      border-bottom: thin solid rgba($dvGray, 0.15);
+      padding: 0;
+      width: 100%;
+      float: left;
+      font: normal $dvHeaderFont 35px;
+    }
+    .producerName {
+      margin: 10px 0 0 0;
+      padding: 0;
+      float: right;
+      font: 22px $dvHeaderFont;
+      text-transform: uppercase;
+      color: rgba($dvGray, 0.3);
+    }
+    .itemImage {
+      margin-right: 10px;
+      width: 30%;
+      float: left;
+    }
+    .thcPotency,
+    .cbdPotency {
+      margin: 0px auto 0 auto;
+      width: 27%;
+      text-align: center;
+      font-family: $dvHeaderFont;
+      text-transform: uppercase;
+      font-size: 20px;
+      color: rgba($dvGray, 0.3);
+      span {
+        font-size: 40px;
+        color: $dvGray;
+      }
+    }
+    .itemDescription {
+      margin: 1em auto; // @author dsiddy
+      clear: both;
+      float: left;
+      font-size: 12px;
+    }
+    .pricing {
+      margin: 0;
+      border-top: thin solid rgba($dvGray, 0.15);
+      padding: 10px 0 0 0;
+      width: 100%;
+      clear: left;
+      li {
+        border-right: thin solid rgba($dvGray, 0.15);
+        padding: 10px 0 5px 0;
+        width: 20%;
+        float: left;
+        list-style: none;
+        text-align: center;
+        font: normal 25px/22px $dvHeaderFont;
+        text-transform: uppercase;
+        color: $dvGray20;
+        .price {
+          font-size: 28px;
+          color: $dvGray;
+        }
+        .unit {
+          font-size: 18px;
+          color: $dvGray;
+        }
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

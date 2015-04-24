@@ -1,0 +1,266 @@
+<h1 class="pageTitle">Manage Dispensaries</h1>
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="dispensaryId" class="col-md-2 control-label">Dispensary:</label>
+		<div class="col-md-8">
+			<select ng-model="dispensaryId" name="dispensaryId" ng-options="id as dispensary.name for (id, dispensary) in dispensaries" ng-change="loadDispensary(dispensaryId)" class="form-control"></select>
+		</div>
+		<div class="col-md-2">
+			<button ng-click="newDispensary()" class="btn btn-block dispensaryCMS">New Dispensary</button>
+		</div>
+	</div>
+</form>
+<form class="form-horizontal">
+	<div ng-hide="dispensary.$id" class="form-group">
+		<label for="dispensaryId" class="col-md-2 control-label">Dispensary ID:</label>
+		<div class="col-md-10">
+			<input ng-model="dispensaryId" type="text" name="dispensaryId" class="form-control" required/>
+		</div>
+	</div>
+	<fieldset>
+		<legend>Address</legend>
+		<div class="form-group">
+			<label for="dispensaryName" class="col-md-2 control-label">Name:</label>
+			<div class="col-md-10">
+				<input ng-model="dispensary.name" type="text" name="dispensaryName" value="{{ dispensary.name }}" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryStreet" class="col-md-2 control-label">Street address:</label>
+			<div class="col-md-10">
+				<input ng-model="dispensary.location.street" type="text" name="dispensaryStreet" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryCity" class="col-md-2 control-label">City:</label>
+			<div class="col-md-4">
+				<input ng-model="dispensary.location.city" type="text" name="dispensaryCity" class="form-control" required/>
+			</div>
+			<label for="dispensaryState" class="col-md-1 control-label">State:</label>
+			<div class="col-md-2">
+				<input ng-model="dispensary.location.state" type="text" name="dispensaryState" class="form-control" required/>
+			</div>
+			<label for="dispensaryZip" class="col-md-1 control-label">Zip:</label>
+			<div class="col-md-2">
+				<input ng-model="dispensary.location.zip" type="text" name="dispensaryZip" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryX" class="col-md-2 control-label">GPS X:</label>
+			<div class="col-md-4">
+				<input ng-model="dispensary.location.x" type="text" name="dispensaryX" class="form-control"/>
+			</div>
+			<label for="dispensaryY" class="col-md-2 control-label">GPS Y:</label>
+			<div class="col-md-4">
+				<input ng-model="dispensary.location.y" type="text" name="dispensaryY" class="form-control"/>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Contact</legend>
+		<div class="form-group">
+			<label for="dispensaryWebsite" class="col-md-2 control-label">Website:</label>
+			<div class="col-md-10">
+				<input ng-model="dispensary.website" type="text" name="dispensaryWebsite" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryEmail" class="col-md-2 control-label">Email:</label>
+			<div class="col-md-10">
+				<input ng-model="dispensary.email" type="email" name="dispensaryEmail" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryPhone" class="col-md-2 control-label">Phone:</label>
+			<div class="col-md-10">
+				<input ng-model="dispensary.phone" type="text" name="dispensaryPhone" class="form-control"/>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Hours</legend>
+		<div class="form-group">
+			<label for="dispensaryHoursMonday" class="col-md-2 control-label">Open Monday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Monday.open" name="dispensaryHoursMondayOpen" required></timepicker>
+			</div>
+			<label for="dispensaryHoursMonday" class="col-md-2 control-label">Close Monday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Monday.close" name="dispensaryHoursMondayClose" required></timepicker>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryHoursTuesday" class="col-md-2 control-label">Open Tuesday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Tuesday.open" name="dispensaryHoursTuesdayOpen" required></timepicker>
+			</div>
+			<label for="dispensaryHoursTuesday" class="col-md-2 control-label">Close Tuesday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Tuesday.close" name="dispensaryHoursTuesdayClose" required></timepicker>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryHoursWednesday" class="col-md-2 control-label">Open Wednesday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Wednesday.open" name="dispensaryHoursWednesdayOpen" required></timepicker>
+			</div>
+			<label for="dispensaryHoursWednesday" class="col-md-2 control-label">Close Wednesday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Wednesday.close" name="dispensaryHoursWednesdayClose" required></timepicker>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryHoursThursday" class="col-md-2 control-label">Open Thursday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Thursday.open" name="dispensaryHoursThursdayOpen" required></timepicker>
+			</div>
+			<label for="dispensaryHoursThursday" class="col-md-2 control-label">Close Thursday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Thursday.close" name="dispensaryHoursThursdayClose" required></timepicker>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryHoursFriday" class="col-md-2 control-label">Open Friday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Friday.open" name="dispensaryHoursFridayOpen" required></timepicker>
+			</div>
+			<label for="dispensaryHoursFriday" class="col-md-2 control-label">Close Friday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Friday.close" name="dispensaryHoursFridayClose" required></timepicker>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryHoursSaturday" class="col-md-2 control-label">Open Saturday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Saturday.open" name="dispensaryHoursSaturdayOpen" required></timepicker>
+			</div>
+			<label for="dispensaryHoursSaturday" class="col-md-2 control-label">Close Saturday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Saturday.close" name="dispensaryHoursSaturdayClose" required></timepicker>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryHoursSunday" class="col-md-2 control-label">Open Sunday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Sunday.open" name="dispensaryHoursSundayOpen" required></timepicker>
+			</div>
+			<label for="dispensaryHoursSunday" class="col-md-2 control-label">Close Sunday:</label>
+			<div class="col-md-3">
+				<timepicker ng-model="dispensary.hours.Sunday.close" name="dispensaryHoursSundayClose" required></timepicker>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Images</legend>
+		<div class="form-group">
+			<label for="dispensaryLogo" class="col-md-2 control-label">Logo:</label>
+			<div class="col-md-10">
+				<input ng-model="dispensary.logo" name="dispensaryLogo" type="text" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryImage" class="col-md-2 control-label">Image:</label>
+			<div class="col-md-10">
+				<input ng-model="dispensary.image" name="dispensaryImage" type="text" class="form-control"/>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Menu</legend>
+		<table ng-repeat="itemType in dispensary.menu" class="table">
+			<tr ng-repeat="item in itemType">
+				<td>{{ dispensary.menu.item.name }}</td>
+				<td>{{ dispensary.menu.item.type }}</td>
+				<td>{{ dispensary.menu.item.description }}</td>
+			</tr>
+		</table>
+		<div class="form-group">
+			<label for="itemType" class="col-md-2 control-label">Type:</label>
+			<div class="col-md-10">
+				<select ng-model="dispensary.menu.item.type" ng-options="type for type in [&quot;indica&quot;, &quot;sativa&quot;, &quot;hybrid&quot;, &quot;edibles&quot;, &quot;preroll&quot;, &quot;other&quot;]" name="itemType" class="form-control"></select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="itemSelect" class="col-md-2 control-label">Item:</label>
+			<div class="col-md-8">
+				<select ng-model="dispensary.menu.item.select" name="itemSelect" class="form-control"></select>
+			</div>
+			<div class="col-md-2">
+				<button class="btn btn-block dispensaryCMS">New Item</button>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="itemName" class="col-md-2 control-label">Item name:</label>
+			<div class="col-md-10">
+				<input ng-model="dispensary.menu.type.item.name" name="itemName" type="text" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="itemProducer" class="col-md-2 control-label">Producer:</label>
+			<div class="col-md-10">
+				<input ng-model="dispensary.menu.type.item.producer" name="itemProducer" type="text" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="itemDescription" class="col-md-2 control-label">Description:</label>
+			<div class="col-md-10">
+				<textarea ng-model="dispensary.menu.type.item.description" name="itemDescription" class="form-control"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="itemImage" class="col-md-2 control-label">Image:</label>
+			<div class="col-md-4">
+				<input ng-model="dispensary.menu.type.item.image" name="itemImage" type="text" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="itemTHC" class="col-md-2 control-label">THC potency:</label>
+			<div class="col-md-4">
+				<input ng-model="dispensary.menu.type.item.THC" name="itemTHC" type="text" class="form-control"/>
+			</div>
+			<label for="itemCBD" class="col-md-2 control-label">CBD potency:</label>
+			<div class="col-md-4">
+				<input ng-model="dispensary.menu.type.item.CBD" name="itemCBD" type="text" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="itemCBD" class="col-md-2 control-label">Price:</label>
+			<div class="col-md-4">
+				<input ng-model="dispensary.menu.type.item.priceByPrice" name="itemPrice" type="text" class="form-control"/>
+			</div>
+			<label for="itemPrice" class="col-md-2 control-label">Amount:</label>
+			<div class="col-md-3">
+				<input ng-model="dispensary.menu.type.item.priceByAmount" name="itemAmount" type="text" class="form-control"/>
+			</div>
+			<div class="col-md-1">
+				<select ng-model="dispensary.menu.type.item.priceByUnit" class="form-control">
+					<option value="g">g</option>
+					<option value="oz">oz</option>
+					<option value="unit">unit</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="disableItem" class="col-md-2 control-label">Disable item:</label>
+			<div class="col-md-2">
+				<input ng-model="dispensary.menu.item.disable" name="itemDisable" type="checkbox" class="form-control"/>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Additional Options</legend>
+		<div class="form-group">
+			<label for="dispensaryFeatured" class="col-md-6 control-label">Enter 'true' if featured or enter '0' if not featured:</label>
+			<div class="col-md-6">
+				<input ng-model="dispensary.featured" name="dispensaryFeatured" type="text" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="dispensaryDisabled" class="col-md-6 control-label" style="color:red;">Enter 'true' if disabled or enter '0' if not disabled:</label>
+			<div class="col-md-6">
+				<input ng-model="dispensary.disabled" name="dispensaryDisabled" type="text" class="form-control" required/>
+			</div>
+		</div>
+	</fieldset>
+	<button ng-click="saveDispensary(dispensaryId, dispensary)" class="btn btn-block dispensaryCMS">Ahh, push it!</button>
+</form>
