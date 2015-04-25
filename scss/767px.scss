@@ -14,7 +14,9 @@
 	    &:nth-child(2) {
   	    border-bottom: 1px solid rgba(44,48,52,.05);
   	  }
-  	  img {
+      .dispensariesIcon,
+      .dealsIcon,
+      .strainsIcon {
   	  	width: 22%;
   	  	float: left;
   	  	margin-right: 20px;

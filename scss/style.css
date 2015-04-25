@@ -561,7 +561,9 @@
 
   /*----style.scss.html end----*/
   /*----home.html start----*/
-  #indexSummary .howItWorks img {
+  #indexSummary .howItWorks .dispensariesIcon,
+  #indexSummary .howItWorks .dealsIcon,
+  #indexSummary .howItWorks .strainsIcon {
     width: 30%; }
   #indexSummary .howItWorks h3 {
     padding-top: 1%; }
@@ -638,7 +640,9 @@
     height: 100%; }
     #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
       border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-    #indexSummary .howItWorks img {
+    #indexSummary .howItWorks .dispensariesIcon,
+    #indexSummary .howItWorks .dealsIcon,
+    #indexSummary .howItWorks .strainsIcon {
       width: 22%;
       float: left;
       margin-right: 20px; }
@@ -807,6 +811,15 @@
   #indexSummary > .howItWorks:hover .comingSoon {
     opacity: 0; }
 
+  /*----home start----*/
+  #indexSummary > .howItWorks .dispensariesIcon {
+    background-color: #f7253e; }
+  #indexSummary > .howItWorks .dealsIcon {
+    background-color: #fcd31c; }
+  #indexSummary > .howItWorks .strainsIcon {
+    background-color: #3dd861; }
+
+  /*----home end----*/
   /*----footer start----*/
   #footer {
     margin: 0; }
@@ -853,6 +866,13 @@
     background-color: #fcd31c; }
   #indexSummary > .howItWorks:hover .strainsIcon {
     background-color: #3dd861; }
+  #indexSummary > .howItWorks .dispensariesIcon,
+  #indexSummary > .howItWorks .dealsIcon,
+  #indexSummary > .howItWorks .strainsIcon {
+    width: 50%;
+    margin: auto auto;
+    border-radius: 50%;
+    background: rgba(44, 48, 52, 0.2); }
   #indexSummary > .howItWorks .dispensariesIcon {
     border: 2px solid #f7253e; }
   #indexSummary > .howItWorks .dealsIcon {
@@ -884,19 +904,14 @@
       border-left-color: #fcd31c; }
     #indexSummary > .howItWorks .arrowRight.green {
       border-left-color: #3dd861; }
-  #indexSummary > .howItWorks > img {
-    width: 50%;
-    margin: auto auto;
-    border-radius: 50%;
-    background: rgba(44, 48, 52, 0.2); }
   #indexSummary > .howItWorks:nth-child(1), #indexSummary > .howItWorks:nth-child(2) {
     border-right: 1px solid rgba(44, 48, 52, 0.05); }
   #indexSummary > .howItWorks:nth-child(1) > h3 {
-    color: #f7253e; }
+    color: #3dd861; }
   #indexSummary > .howItWorks:nth-child(2) > h3 {
     color: #fcd31c; }
   #indexSummary > .howItWorks:nth-child(3) > h3 {
-    color: #3dd861; }
+    color: #f7253e; }
   #indexSummary > .howItWorks .comingSoon {
     font-family: "Bebas Neue", sans-serif;
     text-transform: uppercase;

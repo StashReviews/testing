@@ -75,6 +75,15 @@
   #indexSummary > .howItWorks:hover .comingSoon {
     opacity: 0; }
 
+  /*----home start----*/
+  #indexSummary > .howItWorks .dispensariesIcon {
+    background-color: #f7253e; }
+  #indexSummary > .howItWorks .dealsIcon {
+    background-color: #fcd31c; }
+  #indexSummary > .howItWorks .strainsIcon {
+    background-color: #3dd861; }
+
+  /*----home end----*/
   /*----footer start----*/
   #footer {
     margin: 0; }

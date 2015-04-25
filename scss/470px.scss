@@ -8,7 +8,9 @@
   /*----home.html start----*/
   #indexSummary {
   	.howItWorks {
-  	  img {
+      .dispensariesIcon,
+      .dealsIcon,
+      .strainsIcon {
   	  	width: 30%;
   	  }
       h3 {

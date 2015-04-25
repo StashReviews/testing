@@ -6,7 +6,9 @@
 
   /*----style.scss.html end----*/
   /*----home.html start----*/
-  #indexSummary .howItWorks img {
+  #indexSummary .howItWorks .dispensariesIcon,
+  #indexSummary .howItWorks .dealsIcon,
+  #indexSummary .howItWorks .strainsIcon {
     width: 30%; }
   #indexSummary .howItWorks h3 {
     padding-top: 1%; }

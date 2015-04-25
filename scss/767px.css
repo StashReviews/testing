@@ -11,7 +11,9 @@
     height: 100%; }
     #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
       border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-    #indexSummary .howItWorks img {
+    #indexSummary .howItWorks .dispensariesIcon,
+    #indexSummary .howItWorks .dealsIcon,
+    #indexSummary .howItWorks .strainsIcon {
       width: 22%;
       float: left;
       margin-right: 20px; }
