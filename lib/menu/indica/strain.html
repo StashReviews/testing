@@ -1,0 +1,29 @@
+<?php
+$path = __DIR__;
+$file = basename($path);         // $file is set to "index.php"
+echo file_get_contents($path . $file);
+?>
+<li class="menuitem">
+  <img src="../img/mars.jpg" id="itemimg">
+  <h1 class="itemname">LA Kush</h1>
+  <h2>Strain Makeup:</h2>
+  <h3>50% Indica - Strain Name</h3>
+  <h3>50% Sativa - Strain Name</h3>
+  <table>
+    <tbody>
+      <tr class="units">
+        <td>1/16 oz</td>
+        <td>1/8 oz</td>
+        <td>1/4 oz</td>
+        <td>1/2 oz</td>
+        <td>1 oz</td>
+      </tr>
+      <tr class="prices">
+<?php echo file_get_contents($path . $file . 'prices'); ?>
+      </tr>
+    </tbody>
+  </table>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco.</p>
+</li>

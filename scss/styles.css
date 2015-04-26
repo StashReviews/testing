@@ -1,0 +1,265 @@
+header {
+  background: #2c3034;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2); }
+  header .logo {
+    height: 50px;
+    padding: 0px;
+    margin: 0 auto;
+    position: relative; }
+
+body {
+  padding: 120px 0 0 0;
+  position: relative;
+  text-align: center;
+  margin: 0 auto; }
+  body div {
+    margin: 20px auto 0 auto;
+    text-align: center;
+    background: #2c3034;
+    float: left; }
+    body div .headerImage {
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+    body div .mobileHeader {
+      display: none; }
+    body div h1 {
+      font-family: bebas neue;
+      font-weight: normal;
+      color: white;
+      font-size: 35px;
+      text-transform: uppercase;
+      margin: 20px 0 10px 0; }
+    body div h2 {
+      font-family: open sans, helvetica, arial, sans-serf;
+      color: #f7253e;
+      font-weight: lighter;
+      margin-top: 0;
+      letter-spacing: 1.5px;
+      font-size: 16px;
+      text-transform: uppercase; }
+    body div h4 {
+      font-family: bebas neue;
+      font-size: 28px;
+      font-weight: normal;
+      text-align: right;
+      color: #fcd31c;
+      margin: 10px 0 0 0;
+      padding: 0; }
+    body div h5 {
+      font-family: open sans, helvetica, arial, sans-serf;
+      text-transform: uppercase;
+      font-size: 15px;
+      line-height: 14px;
+      font-weight: normal;
+      text-align: right;
+      margin: 0;
+      padding: 0; }
+    body div p {
+      font-family: open sans, helvetica, arial, sans-serf;
+      color: white;
+      font-size: 16px;
+      padding-bottom: 20px; }
+    body div .age {
+      margin-right: 5px;
+      width: 18px;
+      height: 18px; }
+    body div label {
+      font-family: open sans, helvetica, arial, sans-serf;
+      font-size: 14px;
+      color: white; }
+    body div .socialicon {
+      margin: 30px 5px; }
+      body div .socialicon img {
+        width: 5%;
+        margin: 10px 0 30px 0;
+        background: white;
+        border-radius: 5px;
+        border: 3px solid rgba(255, 255, 255, 0.15); }
+        body div .socialicon img:hover {
+          border-color: #fcd31c;
+          background: #fcd31c; }
+    body div .betacode,
+    body div .email {
+      padding: 13px 20px;
+      margin: 5px auto 10px auto;
+      width: 50%;
+      color: rgba(44, 48, 52, 0.4);
+      text-align: center;
+      text-transform: uppercase;
+      font-family: open sans;
+      font-size: 24px;
+      font-weight: 300;
+      border: 2px solid rgba(44, 48, 52, 0.2);
+      border-radius: 5px; }
+      body div .betacode:focus,
+      body div .email:focus {
+        color: #2c3034; }
+    body div .button {
+      -webkit-appearance: none;
+      margin: 20px auto 20px auto;
+      background: #f7253e;
+      color: white;
+      font-family: open sans;
+      text-transform: uppercase;
+      font-weight: 300;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 15px 10%;
+      border: none;
+      border-radius: 5px; }
+      body div .button:hover {
+        background: #3dd861;
+        cursor: pointer; }
+    body div .betabtn {
+      -webkit-appearance: none;
+      border-radius: 5px;
+      background: #fcd31c; }
+    body div .testimonials {
+      float: left;
+      list-style: none;
+      margin: 1% 0;
+      padding: 2%; }
+      body div .testimonials .testimonialFull,
+      body div .testimonials .testimonialLeft,
+      body div .testimonials .testimonialRight {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        font-family: open sans, helvetica, arial, sans-serf;
+        font-weight: 300;
+        font-size: 16px;
+        text-align: left;
+        padding: 2.5%;
+        color: white;
+        float: left;
+        position: relative; }
+        body div .testimonials .testimonialFull:hover,
+        body div .testimonials .testimonialLeft:hover,
+        body div .testimonials .testimonialRight:hover {
+          border-color: #fcd31c; }
+        body div .testimonials .testimonialFull a,
+        body div .testimonials .testimonialLeft a,
+        body div .testimonials .testimonialRight a {
+          color: #fcd31c;
+          text-decoration: none; }
+        body div .testimonials .testimonialFull span,
+        body div .testimonials .testimonialLeft span,
+        body div .testimonials .testimonialRight span {
+          margin-top: 10px;
+          width: 100%;
+          float: left;
+          clear: both; }
+          body div .testimonials .testimonialFull span img,
+          body div .testimonials .testimonialLeft span img,
+          body div .testimonials .testimonialRight span img {
+            width: 60px;
+            float: right;
+            border-radius: 30px;
+            margin-left: 15px; }
+      body div .testimonials .testimonialFull {
+        width: 94%; }
+      body div .testimonials .testimonialLeft,
+      body div .testimonials .testimonialRight {
+        width: 43.4%;
+        min-height: 210px; }
+      body div .testimonials .testimonialLeft {
+        margin: 1% 1% 1% 0; }
+      body div .testimonials .testimonialRight {
+        margin: 1% 0 1% 1%; }
+      body div .testimonials .testimonialFull {
+        margin: 1% 0; }
+  body footer {
+    color: #2c3034;
+    font-family: open sans, helvetica, arial, sans-serf;
+    text-align: center;
+    float: left;
+    width: 100%;
+    padding: 20px 0; }
+
+.section100 {
+  width: 100%;
+  margin: 0;
+  padding: 20px 0;
+  border-radius: 0; }
+
+.section50left,
+.section50right {
+  background: none;
+  border: 2px solid rgba(44, 48, 52, 0.2);
+  width: 36.3%;
+  padding: 2%;
+  min-height: 300px;
+  border-radius: 10px; }
+  .section50left h1,
+  .section50right h1 {
+    color: #2c3034; }
+  .section50left p,
+  .section50right p {
+    color: rgba(44, 48, 52, 0.2); }
+
+.section50left {
+  margin: 2% 1% 2% 8%; }
+
+.section50right {
+  margin: 2% 8% 2% 1%; }
+
+@media screen and (max-width: 600px) {
+  body {
+    padding-top: 70px; }
+    body div h1 {
+      font-size: 22px; }
+    body div h2 {
+      font-size: 12px; }
+    body div .button {
+      font-size: 12px;
+      padding: 10px 15px; }
+    body div .desktopHeader {
+      display: none; }
+    body div .mobileHeader {
+      display: inline; }
+    body div .betacode,
+    body div .email {
+      padding: 10px;
+      width: 80%;
+      font-size: 16px; }
+    body div .socialicon img {
+      width: 8%; }
+    body div .testimonials .testimonialFull,
+    body div .testimonials .testimonialLeft,
+    body div .testimonials .testimonialRight {
+      font-size: 12px;
+      width: 92%;
+      margin: 1%;
+      border-radius: 5px; }
+      body div .testimonials .testimonialFull h4,
+      body div .testimonials .testimonialLeft h4,
+      body div .testimonials .testimonialRight h4 {
+        font-size: 20px; }
+      body div .testimonials .testimonialFull h5,
+      body div .testimonials .testimonialLeft h5,
+      body div .testimonials .testimonialRight h5 {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.2); }
+    body div .testimonials .testimonialLeft,
+    body div .testimonials .testimonialRight {
+      min-height: 130px; }
+
+  footer {
+    font-size: 12px; }
+
+  section .section50left,
+  section .section50right {
+    width: 91%;
+    min-height: 150px;
+    margin: 2%; }
+  section .section50left p {
+    font-size: 12px; } }
+
+/*# sourceMappingURL=styles.css.map */

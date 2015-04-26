@@ -8,7 +8,7 @@
 .dispensaryName,
 .dealTitle,
 .strainName {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 35px;
   font-weight: normal;
@@ -102,7 +102,7 @@
   .dispensaryHours tr.dvGreen {
     color: #3dd861; }
   .dispensaryHours td {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 26px;
     padding: 10px 20px 4px 20px;
@@ -111,7 +111,7 @@
     text-align: right; }
 
 .dealDetails h4 {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 22px;
   color: #2c3034;
@@ -127,7 +127,7 @@
   margin: 10px 0 20px 0; }
   .dealDetails .redemptionDetails div .redeemDeal {
     background: #f7253e;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 30px;
     color: white;
@@ -155,7 +155,7 @@
 .flavorProfile,
 .positiveEffects,
 .negativeEffects {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   color: #2c3034;
@@ -213,7 +213,7 @@
         background-color: #f7253e; }
     .barChart li div {
       color: white;
-      font-family: "Bebas Neue", sans-serif;
+      font-family: "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 18px;
       text-align: center;
@@ -226,7 +226,7 @@
   margin: 0 auto;
   width: 27%;
   text-align: center;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 40px;
   color: #2c3034; }
@@ -317,7 +317,7 @@
 #mainMenu {
   list-style-type: none;
   padding-left: 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   position: fixed;
@@ -380,7 +380,7 @@
   top: 100px;
   right: 2%; }
   #socialIcons h4 {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Khand", sans-serif;
     font-size: 16px;
     text-align: right;
     margin: 0;
@@ -457,7 +457,7 @@
     width: 100%;
     overflow: hidden; }
     .navbar-header .menuMobile ul li {
-      font-family: "Bebas Neue", sans-serif;
+      font-family: "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 25px;
       color: rgba(255, 255, 255, 0.2);
@@ -470,12 +470,18 @@
       cursor: pointer; }
       .navbar-header .menuMobile ul li:hover {
         color: white; }
-      .navbar-header .menuMobile ul li .dispensaryNav {
-        color: #f7253e; }
-      .navbar-header .menuMobile ul li .dealNav {
-        color: #fcd31c; }
-      .navbar-header .menuMobile ul li .strainNav {
-        color: #3dd861; }
+    .navbar-header .menuMobile ul .dispensaryNav span {
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      color: #f7253e;
+      margin-left: 10px; }
+    .navbar-header .menuMobile ul .dealNav span {
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      color: #fcd31c;
+      margin-left: 10px; }
+    .navbar-header .menuMobile ul .strainNav {
+      color: #3dd861; }
     .navbar-header .menuMobile ul .menuMobile-subHeader {
       font-family: "Open Sans", sans-serif;
       font-size: 12px;
@@ -530,22 +536,23 @@
       background-color: rgba(255, 255, 255, 0.2); }
   #footer .btnfooter {
     border-radius: 0;
-    background-color: #3dd861;
-    color: white;
+    background-color: transparent;
+    border: 2px solid #3dd861;
+    color: #3dd861;
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     font-size: 16px;
     height: 40px;
     margin-top: 0;
     padding: .5% 5%;
-    border: none;
     box-shadow: none; }
     #footer .btnfooter:hover {
-      color: #2c3034; }
+      color: #2c3034;
+      background: #3dd861; }
     #footer .btnfooter:active, #footer .btnfooter:focus, #footer .btnfooter:visited {
       text-decoration: none; }
   #footer .btnfooterlrg {
-    padding: 10px 5%; }
+    padding: 1.5% 5%; }
   #footer address {
     font-size: 10px;
     padding-top: 5%;
@@ -760,7 +767,8 @@
     .navbar .navbar-header .navbar-right .accountInfo {
       margin: -4px 0 0 0; }
       .navbar .navbar-header .navbar-right .accountInfo .username {
-        font-size: 13px; }
+        font-size: 13px;
+        padding: 15px 0 0 0; }
       .navbar .navbar-header .navbar-right .accountInfo .location {
         font-size: 9px; }
     .navbar .navbar-header .navbar-right .navbar-text {
@@ -812,10 +820,6 @@
     opacity: 0; }
 
   /*----home start----*/
-  #indexSummary > .howItWorks .dispensariesIcon {
-    background-color: #f7253e; }
-  #indexSummary > .howItWorks .dealsIcon {
-    background-color: #fcd31c; }
   #indexSummary > .howItWorks .strainsIcon {
     background-color: #3dd861; }
 
@@ -860,10 +864,6 @@
   border-color: rgba(44, 48, 52, 0.05); }
   #indexSummary > .howItWorks:hover .comingSoon {
     opacity: 1; }
-  #indexSummary > .howItWorks:hover .dispensariesIcon {
-    background-color: #f7253e; }
-  #indexSummary > .howItWorks:hover .dealsIcon {
-    background-color: #fcd31c; }
   #indexSummary > .howItWorks:hover .strainsIcon {
     background-color: #3dd861; }
   #indexSummary > .howItWorks .dispensariesIcon,
@@ -913,7 +913,7 @@
   #indexSummary > .howItWorks:nth-child(3) > h3 {
     color: #f7253e; }
   #indexSummary > .howItWorks .comingSoon {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     opacity: 0; }
@@ -952,11 +952,11 @@
     border: none;
     padding: 0; }
     .modal-content .modal-header .modalTitle {
-      font-family: "Bebas Neue", sans-serif;
+      font-family: "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 70px; }
     .modal-content .modal-header .modalSubtitle {
-      font-family: "Bebas Neue", sans-serif;
+      font-family: "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 25px;
       color: white;
@@ -978,7 +978,7 @@
   .modal-content .modal-body {
     padding: 0; }
     .modal-content .modal-body p {
-      font-family: "Bebas Neue", sans-serif;
+      font-family: "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 30px;
       color: white;
@@ -998,7 +998,7 @@
         width: 33%;
         display: inline;
         background: transparent;
-        font-family: "Bebas Neue", sans-serif;
+        font-family: "Khand", sans-serif;
         text-transform: uppercase;
         font-size: 35px;
         padding: 10px 0 2px 0;
@@ -1030,7 +1030,7 @@
       margin: 0 auto; }
     .modal-content .modal-footer button {
       background: transparent;
-      font-family: "Bebas Neue", sans-serif;
+      font-family: "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 35px;
       padding: 10px 0 2px 0;
@@ -1197,7 +1197,7 @@
   .cardWrapper .dispensaryName,
   .cardWrapper .dealTitle,
   .cardWrapper .strainName {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 1.6em;
     font-weight: normal;
@@ -1227,8 +1227,6 @@
   .cardWrapper .producedBy.line2 {
     position: relative;
     z-index: 3; }
-  .cardWrapper .producedBy.line2 {
-    color: #2c3034; }
   .cardWrapper .dispensaryAddress.line1,
   .cardWrapper .producedBy.line1 {
     height: 18px; }
@@ -1362,12 +1360,12 @@ ul.nav.nav-tabs {
       padding: 0;
       width: 100%;
       float: left;
-      font: normal "Bebas Neue", sans-serif 35px; }
+      font: normal "Khand", sans-serif 35px; }
     .menu .menuItem .producerName {
       margin: 10px 0 0 0;
       padding: 0;
       float: right;
-      font: 22px "Bebas Neue", sans-serif;
+      font: 22px "Khand", sans-serif;
       text-transform: uppercase;
       color: rgba(44, 48, 52, 0.3); }
     .menu .menuItem .itemImage {
@@ -1379,7 +1377,7 @@ ul.nav.nav-tabs {
       margin: 0px auto 0 auto;
       width: 27%;
       text-align: center;
-      font-family: "Bebas Neue", sans-serif;
+      font-family: "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 20px;
       color: rgba(44, 48, 52, 0.3); }
@@ -1405,7 +1403,7 @@ ul.nav.nav-tabs {
         float: left;
         list-style: none;
         text-align: center;
-        font: normal 25px/22px "Bebas Neue", sans-serif;
+        font: normal 25px/22px "Khand", sans-serif;
         text-transform: uppercase;
         color: rgba(44, 48, 52, 0.2); }
         .menu .menuItem .pricing li .price {
@@ -1434,7 +1432,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Khand", sans-serif;
   text-transform: uppercase; }
 
 h3 {
@@ -1453,7 +1451,7 @@ ul {
   margin-top: 0;
   border-bottom: 1px solid rgba(44, 48, 52, 0.05);
   text-align: center;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 40px; }
 
@@ -1466,7 +1464,7 @@ form {
   font-size: 12px;
   color: #2c3034; }
   form .btn-block {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     color: white;

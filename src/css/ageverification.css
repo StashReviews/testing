@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+  font-family: "bebas neue";
+  src: url(http://deviine.com/beta/fonts/bebas_neue/BebasNeue.ttf); }
+body {
+  background: #2c3034;
+  padding-top: 5%; }
+  body div {
+    position: relative;
+    width: 80%;
+    margin: 20px 10% 20px 10%;
+    padding: 40px 0;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    float: left; }
+    body div .logo {
+      width: 200px;
+      padding: 0px 40px;
+      background: #2c3034;
+      margin: -140px auto 0 auto;
+      position: relative; }
+    body div h1 {
+      font-family: bebas neue;
+      font-weight: normal;
+      color: white;
+      font-size: 35px;
+      text-transform: uppercase;
+      margin: 10px 0; }
+    body div h2 {
+      font-family: open sans;
+      color: #f7253e;
+      font-weight: lighter;
+      margin-top: 0;
+      letter-spacing: 1.5px;
+      font-size: 16px;
+      text-transform: uppercase; }
+    body div h4 {
+      font-family: bebas neue;
+      font-size: 28px;
+      font-weight: normal;
+      text-align: right;
+      color: #fcd31c;
+      margin: 10px 0 0 0;
+      padding: 0; }
+    body div h5 {
+      font-family: open sans;
+      text-transform: uppercase;
+      font-size: 15px;
+      line-height: 14px;
+      font-weight: normal;
+      text-align: right;
+      margin: 0;
+      padding: 0; }
+    body div p {
+      font-family: open sans;
+      color: white;
+      font-size: 16px;
+      padding-bottom: 20px; }
+    body div .socialicon {
+      margin: 30px 5px; }
+      body div .socialicon img {
+        margin: 10px 0;
+        background: white;
+        border-radius: 5px;
+        border: 3px solid rgba(255, 255, 255, 0.15); }
+        body div .socialicon img:hover {
+          border-color: #fcd31c;
+          background: #fcd31c; }
+    body div .bday,
+    body div .betacode,
+    body div .email {
+      padding: 13px 10px 5px 10px;
+      margin: 5px 5px 10px 5px;
+      width: 100px;
+      color: rgba(44, 48, 52, 0.4);
+      text-align: center;
+      font-family: bebas neue;
+      font-size: 30px;
+      font-weight: bold; }
+      body div .bday:focus,
+      body div .betacode:focus,
+      body div .email:focus {
+        color: #2c3034; }
+    body div .betacode,
+    body div .email {
+      width: 315px; }
+    body div input[type="submit"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      border-radius: 0px; }
+    body div .betabutton, body div .button, body div #enter {
+      margin: 20px auto 0 auto;
+      background: #f7253e;
+      color: white;
+      font-family: bebas neue;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 40px;
+      padding: 20px 30px 10px 30px;
+      border: none;
+      border-radius: 5px; }
+      body div .betabutton:hover, body div .button:hover, body div #enter:hover {
+        background: #3dd861;
+        cursor: pointer; }
+    body div .betabtn {
+      background: #fcd31c; }
+    body div .testimonials {
+      width: 100%;
+      float: left;
+      list-style: none;
+      margin: 0; }
+      body div .testimonials .testimonial {
+        border: 1px solid #fcd31c;
+        border-radius: 5px;
+        font-family: open sans;
+        font-size: 16px;
+        text-align: left;
+        width: 35%;
+        padding: 2.5%;
+        margin: 0 3%;
+        color: white;
+        float: left;
+        position: relative; }
+        body div .testimonials .testimonial span {
+          margin-top: 10px;
+          width: 100%;
+          float: left;
+          clear: both; }
+          body div .testimonials .testimonial span img {
+            width: 60px;
+            float: right;
+            border-radius: 30px;
+            margin-left: 15px; }
+  body footer {
+    color: white;
+    font-family: open sans;
+    text-align: center;
+    margin-bottom: 30px;
+    float: left;
+    width: 100%; }
+
+/*# sourceMappingURL=ageverification.css.map */

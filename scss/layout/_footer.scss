@@ -54,18 +54,19 @@
   }
   .btnfooter {
     border-radius: 0;
-    background-color: $dvGreen;
-    color: white;
+    background-color: transparent;
+    border: 2px solid $dvGreen;
+    color: $dvGreen;
     font-family: $dvTextFont;
     text-transform: uppercase;
     font-size: 16px;
     height: 40px;
     margin-top: 0;
     padding: .5% 5%;
-    border: none;
     box-shadow: none;
     &:hover {
       color: $dvGray;
+      background: $dvGreen;
     }
     &:active,
     &:focus,
@@ -74,7 +75,7 @@
     }
   }
   .btnfooterlrg {
-    padding: 10px 5%;
+    padding: 1.5% 5%;
   }
 
   address {

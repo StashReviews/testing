@@ -1,0 +1,27 @@
+.cardWrapper.dealCard(ui-sref='root.dealDetails({ dealId: deal.$id })')
+    img.cardBg(src='http://deviine.com/deviine/beta/img/Deal_Card_Blank.png')
+    .cardInfo
+        .dealImage.bw
+        .topSection
+            h1.dealTitle {{ deal.title }}
+            address.businessName.line2 {{ deal.dispensary.name }}
+        dv-rating.dealRating(ratings='deal.ratings')
+        //-
+            .ratingWrap
+                .progress-wrap.progress(data-progress-percent='4')
+                    .progress-bar.progress
+        img.budBox(src='http://deviine.com/deviine/beta/img/BudBox.png')
+        h4.distanceAway 3 MILES AWAY
+//-
+    .dvCard.dealCard
+        a(ui-sref='root.dealDetails({ dealId: deal.$id })'): img.img-responsive.dvCardPicture(src='http://placehold.it/200x200')
+        h3.dealTitle {{ deal.title }}
+        h4.dealDispensary {{ deal.dispensary.name }}
+        address
+            | {{ deal.dispensary.location.street }}#[br]
+            | {{ deal.dispensary.location.city }}, {{ deal.dispensary.location.state }}, {{ deal.dispensary.location.zip }}
+        dv-rating.dealRating(ratings='deal.ratings')
+        .distance
+            //- @todo Pull the distance dynamically.
+                p #[strong#distance {{ getDistanceTo(deal.dispensary.location.coordinates) }}] miles away.
+            p #[strong#distance 0.0] miles away.

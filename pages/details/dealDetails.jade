@@ -1,0 +1,33 @@
+.row
+    .col-md-6
+        h2.dealTitle {{ dealDetails.title }}
+        .row
+            .col-md-3: img.businessLogo(ng-src='{{ dealDetails.dispensary.logo }}')
+            .col-md-9
+                h2.businessName {{ dealDetails.dispensary.name }}
+                address.businessAddress
+                    | #[strong {{ dealDetails.dispensary.name }}]#[br]
+                    | {{ dealDetails.dispensary.location.street }}#[br]
+                    | {{ dealDetails.dispensary.location.city }}, {{ dealDetails.dispensary.location.state }} {{ dealDetails.dispensary.location.zip }}
+                div: a.viewOnMap.dealMap(ng-click='') View On Map
+        dv-rating.dealRating(ratings='dealDetails.ratings')
+        .contactInfo
+            .businessWebsite(ng-show='dealDetails.dispensary.website')
+                img(src='img/icons/web.png')
+                a(href='{{ dealDetails.dispensary.website }}') {{ dealDetails.dispensary.website }}
+            .businessEmail(ng-show='dealDetails.dispensary.email')
+                img(src='img/icons/email.png')
+                a(href='mailto:{{ dealDetails.dispensary.email }}') {{ dealDetails.dispensary.email }}
+            .businessPhone(ng-show='dealDetails.dispensary.phone')
+                img(src='img/icons/phone.png')
+                a(href='tel:{{ dealDetails.dispensary.phone }}') {{ dealDetails.dispensary.phone }}
+    .col-md-6
+        img.img-responsive.dealGallery(src='http://placehold.it/600x400')
+        h3 Reviews
+.row
+    .col-md-12
+        h3 Other Deals
+        //- @todo dv-card-list(item-type='deal', items='otherDeals')
+        ul.dvCardList
+            li.col-md-3(ng-repeat='deal in otherDeals')
+                dv-card(item-type='deal', item-id='{{ deal.$id }}')

@@ -1,0 +1,34 @@
+//- @see http://angular-ui.github.io/bootstrap/#/tabs
+tabset
+    tab(ng-repeat='(productType, products) in menu', heading='{{ productType }}')
+        //- @todo Replace what follows with a dv-product directive.
+        //- dv-product(ng-repeat='product in products')
+        //-
+            .product(ng-repeat='product in products')
+                h1.productName {{ product.name }}
+                .productDescription
+                    | {{ product.description }}
+                .productPriceByAmount
+                    ul: li(ng-repeat='(amount, price) in product.priceByAmount') ${{ price }} / {{ amount }}
+                .productChemistry
+                    div: | {{ product.chemistry.percentageTHC }}% THC
+                    div: | {{ product.chemistry.percentageCBD }}% CBD
+        .menu(style='background: inherit;')
+            aside.menuItem(style='border: thin solid black;', ng-repeat='product in products')
+                h1.itemName {{ product.name }} #[span.producerName {{ product.producer.name }}]
+                .itemImage
+                h2.cbdPotency
+                    span {{ product.chemistry.percentageCBD }}%
+                    br
+                    | CBD
+                h2.thcPotency
+                    span {{ product.chemistry.percentageTHC }}%
+                    br
+                    | THC
+                .itemDescription
+                    | {{ product.description }}
+                ul.pricing
+                    li(ng-repeat='(amount, price) in product.priceByAmount')
+                        | $#[span.price {{ price }}]
+                        br
+                        | #[span.unit {{ amount }}]

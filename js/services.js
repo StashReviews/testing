@@ -25,10 +25,11 @@ angular.module('DeViine.services', [])
           case 'twitter':
           case 'google':
             
-            // MIGHT WORK: Detect chrome mobile and run redirect rather than popup
+            // Detect chrome mobile and run return dvAuth.$authWithOAuthRedirect(service);
+
             if( navigator.userAgent.match('CriOS') ) {
               return dvAuth.$authWithOAuthRedirect(service);
-              location.reload(); 
+              location.reload();
             } else {
               return dvAuth.$authWithOAuthPopup(service);
             }

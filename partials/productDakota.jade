@@ -1,0 +1,18 @@
+aside.menuItem(style='border: thin solid black;')
+    h1.itemName {{ product.name }} #[span.producerName {{ product.producer.name }}]
+    .itemImage
+    h2.cbdPotency
+        span {{ product.chemistry.percentageCBD }}%
+        br
+        | CBD
+    h2.thcPotency
+        span {{ product.chemistry.percentageTHC }}%
+        br
+        | THC
+    .itemDescription
+        | {{ product.description }}
+    ul.pricing
+        li(ng-repeat='(amount, price) in product.priceByAmount')
+            | $#[span.price {{ price }}]
+            br
+            | #[span.unit {{ amount }}]

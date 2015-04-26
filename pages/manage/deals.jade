@@ -1,0 +1,17 @@
+//- img.img-responsive(style='margin: auto auto;', src='img/logo.png')
+h1.pageTitle Manage Deals
+form.form-horizontal
+    .form-group
+        label.col-md-2.control-label(for='dealTitle') Deal title:
+        .col-md-10
+            input.form-control(ng-model='deal.title', name='dealTitle', type='text')
+    //- @todo Add a new producer.
+    .form-group
+        label.col-md-2.control-label(for='dispensaryId') Deal dispensary:
+        .col-md-10
+            select.form-control(ng-model='dispensaryId', name='dealDispensary', ng-options='id as dispensary.name for (id, dispensary) in dispensaries')
+    .form-group
+        label.col-md-2.control-label(for='dealEndDate') End date:
+        .col-md-10
+            input.form-control(ng-model='deal.endDate', name='dealEndDate', type='date')
+button.btn.btn-block(ng-click='saveDeal(deal.title, deal)') Save

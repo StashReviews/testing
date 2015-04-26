@@ -1,0 +1,28 @@
+.cardWrapper.strainCard(ui-sref='root.strainDetails({ strainId: strain.$id })')
+    img.cardBg(src='http://deviine.com/deviine/beta/img/Strain_Card_Blank.png')
+    .cardInfo
+        .strainImage.bw
+        .topSection
+            h1.strainName {{ strain.name }}
+            address.producedBy.line1 PRODUCED BY
+            address.producedBy.line2 {{ strain.producer }}
+        dv-rating.strainRating(ratings='strain.ratings')
+        //-
+            .ratingWrap
+                //- .progress-wrap.progress(data-progress-percent='({{ getAvgRating(strain.ratings) }} * 100) / 5')
+                .progress-wrap.progress(ng-style="{ 'width': ( getAvgRating(strain.ratings) * 100 ) / 5 + '%' }")
+                    .progress-bar.progress
+        img.budBox(src='http://deviine.com/deviine/beta/img/BudBox.png')
+        h4.strainType INDICA
+//-
+    .dvCard.strainCard
+        //- @todo Write strainDetails page.
+        a(ui-sref='root.strainDetails({ strainId: strain.$id })'): img.img-responsive.dvCardPicture(src='http://placehold.it/200x200')
+        h3.strainName {{ strain.name }}
+        h4
+            | #[strong Produced by]#[br]
+            .strainProducer: | {{ strain.producer }}
+        dv-rating.strainRating(ratings='deal.ratings')
+        .row.strainChemistry
+            .col-xs-6: | #[strong {{ strain.chemistry.percentageIndica }}]% indica
+            .col-xs-6: | #[strong {{ strain.chemistry.percentageSativa }}]% sativa

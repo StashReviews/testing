@@ -1,0 +1,1976 @@
+@import "globals";
+
+
+/*---------------------------Globals Start------------------------------*/
+
+/* Body Start */
+body {
+	@include mainbody();
+}
+/* Body End */
+
+
+/* Header Start */
+header {
+	@include nav();
+}
+/* Header End */
+
+
+/* Page Title Start */
+#pagetitle {
+	@include pagetitle();
+}
+/* Page Title End */
+
+
+/* Up To Top Start */
+.uptotop {
+	@include uptotop();
+}
+/* Up To Top End */
+
+
+/* Footer Start */
+footer {
+	@include footer();
+}
+/* Footer End */
+
+
+/*---------------------------Globals End------------------------------*/
+
+
+
+/*---------------------------Index Start------------------------------*/
+/* Alert Start */
+#alertmodal.reveal-modal {
+	height: 550px;
+	position: fixed;
+	font-family: $main-font;
+	background: $darkgray;
+	border-radius: 10px;
+		.close-reveal-modal {
+			position: relative;
+			bottom: 0;
+		}
+		h1 {
+			margin-top: 50px;
+			font-size: 40px;
+			color: $green;
+			line-height: 45px;
+			text-align: center;
+				@media screen and (max-width:830px) {
+					font-size: 20px;
+					line-height: 25px;
+					margin-top: 10px;
+				}
+		}
+		h4 {
+			font-size: 30px;
+			color: white;
+			text-align: center;
+				@media screen and (max-width:830px) {
+					font-size: 15px;
+					line-height: 18px;
+				}
+		}
+		h6 {
+			font-size: 15px;
+			margin-top: 50px;
+			color: white;
+				@media screen and (max-width:630px) {
+					margin-top: 0;
+					font-size: 10px;
+				}
+		}
+		.agebuttons {
+			width: 100%;
+			position: relative;
+		}
+		.over21 {
+			width: 200px;
+			margin: 0 0 0 30%;
+			padding: 3% 0;
+			background: $green;
+			color: $darkgray;
+				@media screen and (max-width:830px) {
+					margin: 0 0 0 10%;
+				}
+				@media screen and (max-width:630px) {
+					margin: 0;
+					width: 100px;
+					font-size: 13px;
+				}
+		}
+		.notover21 {
+			width: 200px;
+			padding: 3% 0;
+			background: $red;
+			color: $darkgray;
+				@media screen and (max-width:630px) {
+					width: 100px;
+					font-size: 13px;
+				}
+		}
+	@media screen and (max-width:630px) {
+		height: 450px;
+	}
+}
+/* Alert End */
+
+
+
+
+/* Slider Start */
+#slider {
+	@include topsection();
+	width: 60%;
+		.sliderbar {
+			@include headerbar();
+			color: $red;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}	
+		.slider {
+			img {
+				margin: 0;
+			}
+		}
+		.orbit-timer,
+		.orbit-slide-number {
+			display: none;
+		}
+		.orbit-bullets {
+			position: absolute;
+			z-index: 4;
+			left: 46%;
+			top: 85%;
+			cursor: pointer;
+				li {
+				background: $red;
+					&.active {
+						background: transparent;
+						border: 2px solid $red;
+					}
+			}
+		}
+	@media screen and (max-width: 600px) {
+		width: 94%;
+			.orbit-bullets {
+				top: 75%;
+			}
+	}
+} 
+/* Slider End */
+
+
+
+
+/* Location Start */
+#location {
+	@include topsection();
+	width: 32%;
+		.locationbar {
+			@include headerbar();
+			color: $green;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.locationbody {
+			@include sectionbody();
+			border: 2px solid $green;
+			border-top: 0;
+				li {
+					list-style: none;
+				}
+				.usamap {
+					height: 25%;
+						#LocationWashington path,
+						#LocationColorado path {
+							fill: $green;
+						}
+						#LocationWashington path:hover,
+						#LocationColorado path:hover {
+							fill: $lightgreen;
+						}
+				}
+		}
+	@media screen and (max-width: 600px) {
+		width: 94%;
+		@include section();
+	}
+} 
+/* Location End */
+
+
+
+/* Daily Deals Start */
+#dailydeals {
+	@include section();
+	width: 94%;
+		.dailydealsbar {
+			@include headerbar();
+			color: $yellow;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.dailydeals {
+			@include sectionbody();
+			border: 2px solid $yellow;
+			border-top: 0;
+			padding: 2% 3%;
+		}		
+		.dealcard {
+			list-style: none;
+			width: 22.5%;
+			margin: 0 1%;
+			padding: 1%;
+			position: relative;
+			display: inline-block;
+			border: 2px dashed $darkgray;
+			border-radius: 5px;
+			img {
+				width: 100%;
+				border-radius: 5px 5px 0 0;
+			}
+			p {
+				font-family: $main-font;
+				font-size: 14px;
+				line-height: 16px;
+				text-align: center;
+				color: $yellow;
+				background: $darkgray;
+				margin: 0;
+				padding: 10px 1% 1% 1%;
+			}
+			h2 {
+				font-family: $main-font;
+				font-size: 10px;
+				font-weight: bold;
+				text-align: center;
+				color: rgba(200,200,200,.5);
+				background: $darkgray;	
+				margin: 0;	
+				padding: 1% 1% 0 1%;		
+				position: relative;
+				top: 0px;
+			}
+			h3 {
+				font-family: $main-font;
+				font-size: 13px;
+				text-align: center;
+				color: $green;
+				background: $darkgray;
+				margin: 0;
+				padding-bottom: 10px;
+				position: relative;
+				top: 0px;
+				border-radius:  0 0 5px 5px;
+			}
+		}
+	@media screen and (max-width: 1000px) {
+		.dealcard {
+			h2 {
+				font-size: 9px;
+			}
+			p {
+				font-size: 10px;
+			}
+		}
+	}
+	@media screen and (max-width: 730px) {
+		.dealcard {
+			margin: 0 .4%;
+			width: 22%;
+		}
+	}
+	@media screen and (max-width: 600px) {
+		width: 94%
+	}
+	@media screen and (max-width: 500px) {
+		.dealcard {
+			width: 43%;
+			margin: 2% 3%;
+		}
+	}
+}
+
+/* Daily Deals End */
+
+
+/* Strains of the Week Start */
+#sotw {
+	@include section();
+	width: 46%;
+		.sotwbar {
+			@include headerbar();
+			color: $red;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.sotw {
+			@include sectionbody();
+			border: 2px solid $red;
+			border-top: 0;
+			padding:4%;
+		}
+		.sotwcard {
+			border: 3px solid $darkgray;
+			border-radius: 5px;
+			list-style: none;
+			width: 46%;
+			margin: 1% 1.5%;
+			position: relative;
+			display: inline-block;
+			img {
+				position: relative;
+				border-radius: 2px 2px 0 0;
+				width: 100%;
+					&:hover {
+						cursor: -webkit-zoom-in;
+						cursor: -moz-zoom-in;
+					}
+			}
+			h1 {
+				font-family: $main-font;
+				font-size: 15px;
+				text-align: center;
+				color: white;
+				background: $red;
+				margin: 0;
+			}
+			h2 {
+				font-family: $main-font;
+				font-size: 10px;
+				font-weight: bold;
+				text-align: center;
+				color: $darkgray;
+				background: $red;	
+				margin: 0;	
+				padding: 0;		
+			}
+			h3 {
+				font-family: $main-font;
+				font-size: 16px;
+				font-weight: bold;
+				line-height: 10px;
+				text-align: center;
+				color: $darkgray;
+				background: $red;
+				margin: 0;
+				padding: 2% 0;
+			}
+			h4 {
+				font-family: $main-font;
+				font-size: 12px;
+				text-align: center;
+				line-height: 14px;
+				color: white;
+				background: $red;
+				border-radius:  0 0 2px 2px;
+				margin: 0;
+				padding: 5.7% 0;
+			}
+		}
+	@media screen and (max-width: 1150px) {
+		.sotwcard {
+
+		}
+	}
+	@media screen and (max-width: 600px) {
+		width: 94%;
+	}
+}
+#sotwmodal.reveal-modal {
+	background: $darkgray;
+	border-radius: 10px;
+	.sotwcard {
+			border: 3px solid $darkgray;
+			border-radius: 5px;
+			list-style: none;
+			width: 46%;
+			margin: 1% 1.5%;
+			position: relative;
+			display: inline-block;
+			img {
+				position: relative;
+				border-radius: 2px 2px 0 0;
+				width: 100%;
+					&:hover {
+						cursor: -webkit-zoom-in;
+						cursor: -moz-zoom-in;
+					}
+			}
+	}
+}
+/* Strains of the Week End */
+
+
+/* Voting Start */
+#voting {
+	@include section();
+	width: 46%;
+		.votingbar {
+			@include headerbar();
+			color: $green;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.voting {
+			@include sectionbody();
+			border: 2px solid $green;
+			border-top: 0;
+			padding: 0 5% 0% 5%;
+		}
+	@media screen and (max-width: 600px) {
+			width: 94%;
+	}
+}
+/* Voting End */
+
+
+/* Featured Dispensaries Start */
+.featureddispensaries {
+	@include section();
+	width: 46%;
+		.headerbar {
+			@include headerbar();
+			color: $green;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+	.featureddispensariesbody {
+		@include sectionbody();
+		border: 2px solid $green;
+		border-top: none;
+			.audcard {
+			    width: 44%;
+			    display: inline-block;
+			    margin: 2.3%;
+			    	h2 {
+						font-size: 13px;
+					    font-family: $main-font;
+						text-align: center;
+						background: $darkgray;
+						color: white;
+						margin: 0;
+						padding: 5px;
+						border-radius: 10px 10px 0 0;
+					}
+					img {
+						width: 100%;
+					    margin: 0;
+					    padding: 0;
+					    border-right: 6px solid $darkgray;
+					    border-left: 6px solid $darkgray;
+					}
+					h3 {
+					    text-align: center;
+					    font-size: 11px;
+					    font-family: $main-font;
+					    background: $darkgray;
+					    color: white;
+					    margin: 0;
+					    padding: 5px;
+					}
+					div {
+					    background: $darkgray;
+					    color: white;
+					    margin: 0;
+					    text-align: center;
+					    color: $green;
+					    font-size: 30px;
+					}
+					p {
+					    background: $darkgray;
+					    color: white;
+					    margin: 0;
+					    padding: 0;
+					    text-align: center;
+					    color: $green;
+					    font-size: 13px;
+					}
+					h4 {
+					    text-align: center;
+					    font-size: 14px;
+					    font-family: $main-font;
+					    background: $darkgray;
+					    color: white;
+					    margin: 0;
+					    padding: 5px 5px 10px 5px;
+					    border-radius: 0 0 10px 10px ;
+					}
+					.rating img {
+						width: 17%;
+						margin: 0;
+						padding: 0;
+					}
+			}
+	}
+	@media screen and (max-width: 600px) {
+		width: 94%;
+		@include section();
+	}
+}
+/* Featured Dispensaries End */
+
+
+/* Jobs Start */
+.featuredjobs {
+	@include section();
+	width: 46%;
+		.headerbar {
+			@include headerbar();
+			color: $red;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+	.featuredjobsbody {
+		@include sectionbody();
+		border: 2px solid $red;
+		border-top: none;
+			.jobcard {
+			    width: 44%;
+			    display: inline-block;
+			    margin: 2.3%;
+					h2 {
+						font-size: 14px;
+					    font-family: $main-font;
+						text-align: center;
+						background: $darkgray;
+						color: white;
+						margin: 0;
+						padding: 5px;
+						border-radius: 10px 10px 0 0;
+					}
+					img {
+						width: 100%;
+					    margin: 0;
+					    padding: 0;
+					    border-right: 6px solid $darkgray;
+					    border-left: 6px solid $darkgray;
+					}
+					h3 {
+					    text-align: center;
+					    font-size: 17px;
+					    font-family: $main-font;
+					    background: $darkgray;
+					    color: white;
+					    margin: 0;
+					    padding: 5px;
+					}
+					div {
+					    background: $darkgray;
+					    color: white;
+					    margin: 0;
+					    text-align: center;
+					}
+					h4 {
+					    text-align: center;
+					    font-size: 14px;
+					    font-family: $main-font;
+					    background: $darkgray;
+					    color: $red;
+					    margin: 0;
+					    padding: 5px 5px 10px 5px;
+					    border-radius: 0 0 10px 10px ;
+					}
+					h5 {
+					    text-align: left;
+					    font-size: 12px;
+					    font-family: $main-font;
+					    background: $darkgray;
+					    color: white;
+					    margin: 0;
+					    padding: 10px;
+					}
+			}
+	}
+	@media screen and (max-width: 600px) {
+		width: 94%;
+		@include section();
+	}
+}
+/* Jobs End */
+
+
+/* Whats In Your Bowl Start */
+#wiyb {
+	@include section();
+	width: 46%;
+		.wiybbar {
+			@include headerbar();
+			color: $yellow;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.wiyb {
+			height: 1700px;
+			@include sectionbody();
+			border: 2px solid $yellow;
+			border-top: 0;
+		}
+	@media screen and (max-width: 600px) {
+		width: 94%;
+		@include section();
+		display: none;
+	}
+}
+/* Whats In Your Bowl End */
+
+
+/* Sponsor Start */
+#sponsor {
+	@include section();
+	width: 94%;
+		.sponsorbar {
+			@include headerbar();
+			color: white;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.sponsorbackground {
+			@include sectionbody();
+			padding: 1%;
+			border: 2px solid #c4c4c4;
+			border-top: 0;
+			list-style: none;
+				li {
+					display: inline;
+				}
+				img {
+					width: 11%;
+					margin: 1.3%;
+				}
+		}
+	@media screen and (max-width: 500px) {
+		.sponsorbackground {
+			padding: 5%;
+				img {
+					width: 28%;
+				}
+		}	
+	}
+}
+/* Sponsor End */
+/*---------------------------Index End------------------------------*/
+
+
+
+
+
+
+/*---------------------------Mainbody Start------------------------------*/
+.container {
+	@include section();
+	width: 94%;
+		.headerbar {
+			@include headerbar();
+			color: $green;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+	.dispensariesbody,
+	.jobsbody,
+	.dealsbody {
+		height: 100%;
+		padding: 0;
+		border: 2px solid $green;
+		border-top: none;
+		position: relative;
+			h1 {
+				font-size: 20px;
+				text-align: center;
+				color: rgba(200,200,200,1);
+				padding: 10px 0 0 0;
+				margin: 0;
+			}
+	}
+}
+/*---------------------------Mainbody End------------------------------*/
+
+
+/*---------------------------Dispensaries Start------------------------------*/
+/* Adult Use Dispensaries Start */
+.dispensariesbody {
+		.audcard {
+		    width: 94%;
+		    background: white;
+		    display: inline-block;
+		    margin: 1% 3%;
+		    padding: 0% 3%;
+		    border: 2px solid $darkgray;
+		    border-radius: 2px;
+		    .info {
+		    	width: 40%;
+		    	padding: 2%;
+		    }
+			    	h2 {
+						font-size: 21px;
+					    font-family: $main-font;
+					    font-weight: bold;
+						color: $red;
+						margin: 0;
+						padding: 5px;
+						border-radius: 10px 10px 0 0;
+							@media screen and (max-width: 830px) {
+								font-size: 17px;
+							}
+					}
+					h3 {
+					    font-size: 17px;
+					    font-family: $main-font;
+					    color: $darkgray;
+					    margin: 0;
+					    padding: 5px;
+					    	@media screen and (max-width: 830px) {
+								font-size: 13px;
+							}
+					}
+					div {
+					    color: $darkgray;
+					    margin: 0;
+					    color: $green;
+					    font-size: 30px;
+					}
+					p {
+					    color: $darkgray;
+					    margin: 0;
+					    padding: 0;
+					    float: left;
+					    font-size: 13px;
+					}
+					h4 {
+					    font-size: 18px;
+					    font-family: $main-font;
+					    font-weight: bold;
+					    color: $red;
+					    clear: left;
+					    margin: 0;
+					    padding: 5px 0;
+					    	@media screen and (max-width: 830px) {
+								font-size: 14px;
+							}
+					}
+					.rating {
+						margin: 0;
+						padding: 0;
+					}
+					.rating img {
+						width: 8%;
+						margin: 0;
+						padding: 0;
+							@media screen and (max-width: 830px) {
+								width: 14%;
+							}
+					}
+				.message {
+					padding-top: 5%;
+					width: 60%;
+					height: 100%;
+					float: left;
+						p {
+							font-size: 11px;
+							font-family: $main-font;
+							line-height: 14px;
+							margin-bottom: 3%;
+						}
+				}
+		}
+
+	@media screen and (max-width: 830px) {
+		.headerbar {
+			@include smallheaderbar();
+		}
+	}
+}
+/* Adult Use Dispensaries End */
+/*---------------------------Dispensaries End------------------------------*/
+
+
+
+
+
+/*---------------------------Dispensary Start------------------------------*/
+/* Information Start */
+.info {
+	@include topsection();
+	width: 55%;	
+		.infobar {
+			@include headerbar();
+			color: $green;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.openorclosed {
+			position: absolute;
+			top: 174px;
+			left: 18px;
+			width: 23%;
+		}
+		.infocontainer {
+			padding: 2% 3%;
+			height: 265px;
+			float: left;
+			width: 100%;
+			margin: 0;
+			border: 2px solid $green;
+			border-top: none;
+				.audinfo {
+					border-left: 2px solid $darkgray;
+					padding: 0 1% 0 3%;
+					float: left;
+					width: 70%;
+						h3 {
+							font-family: $main-font;
+							font-size: 14px;
+							margin: 0 0 10px 0;
+							padding: 0;
+							color: $darkgray;
+						}
+						.map {
+							text-align: center;
+							width: 54px;
+							font-size: 11px;
+							color: white;
+							background: $darkgray;
+							padding: 8px;
+							border-radius: 5px;
+						}
+						.overallrating {
+						    margin: 20px 0 0 0;
+							list-style: none;
+								li {
+									display: inline-block;
+								}
+								.star {
+								  height: 30px;
+					 			  width: 30px;
+								  -webkit-transition: all .5s ease;
+								  -moz-transition: all .5s ease;
+								  -ms-transition: all .5s ease;
+								  -o-transition: all .5s ease;
+								  transition: all .5s ease;
+								}
+								.star1,
+								.star2,
+								.star3,
+								.star4,
+								.star5 {
+									fill: $darkgray;
+									width: 30px;
+									height: 30px;
+								    cursor: pointer;
+								}
+						}
+						.contactinfo {
+							margin: 0px 0 0 0;
+								h4 {
+									font-family: $main-font;
+									font-size: 16px;
+									margin: 0;
+									padding: 0;
+									height: 30px;
+									color: $darkgray;
+										@media screen and (max-width:740px) {
+											font-size: 13px;
+										}
+										img {
+											width: 7%;
+												@media screen and (max-width:740px) {
+													width: 10%;
+												}	
+										}
+										a {
+											color: $red;
+												img {
+													width: 7%;
+													@media screen and (max-width:740px) {
+														width: 10%;
+													}	
+												}
+										}
+
+								}	
+						}
+				}
+				.audlogo {
+					float: left;
+					width: 25%;
+					font-family: $main-font;
+					padding: 0;
+					margin: 0 1% 5% 1%;
+				}
+				h2 {
+					font-family: $main-font;
+					font-size: 32px;
+					padding: 0;
+					height: 20px;
+					color: $darkgray;
+					line-height: 25px;
+					font-weight: 300;
+						@media screen and (max-width:740px) {
+							font-size: 20px;
+						}
+				}
+		}
+	@media screen and (max-width:740px) {
+		width: 94%;
+	}
+}
+/* Information End */
+
+/* Images Start */
+.images {
+	@include topsection();
+	width: 37%;
+	position: relative;
+		.imagesbar {
+			@include headerbar();
+			color: $red;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.orbit-timer,
+		.orbit-slide-number {
+			display: none;
+		}
+		.orbit-bullets {
+			height: 19px;
+			position: relative;
+			z-index: 4;
+			top: 18%;
+			margin: 0 auto;
+			padding: 0;
+			cursor: pointer;
+				li {
+				background: $red;
+					&.active {
+						background: transparent;
+						border: 2px solid $red;
+					}
+			}
+		}
+		.imagesbody {
+			@include sectionbody();
+			list-style: none;
+			padding: 0 ;
+			height: 265px;
+				
+				li {
+					display: inline;
+				}
+				img {
+					margin: 0;
+					width: 100%;
+				}
+		}
+	@media screen and (max-width:740px) {
+		width: 94%;
+		@include section();
+			.imagesbody {
+				height: 100%;
+			}
+	}
+}
+/* Images End */
+
+
+/* Hours Start */
+.hours {
+	@include section();
+	width: 37%;
+		.hoursbar {
+			@include headerbar();
+			color: $yellow;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.hoursbody {
+			@include sectionbody();
+			border: 2px solid $yellow;
+			border-top: none;
+			padding: 6.8%;
+				table {
+					background: none;
+					margin: 0 auto;
+						tr {
+							background: none;
+								td {
+									font-size: 11px;
+									padding: 5px 10px;
+								}
+						}
+				}
+		}
+	@media screen and (max-width:740px) {
+		width: 94%;
+	}
+}
+/* Hours Start */
+
+
+/* Menu Start */
+.menu {
+	@include section();
+	width: 55%;
+	clear: left;
+		.menubar {
+			@include headerbar();
+			color: $red;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.menubody {
+				.tabs {
+					width: 100%;
+						dd {
+							width: 11.11%;
+							height: 100%;
+							padding: 0;
+							border-left: 1px solid white;
+							border-right: 1px solid white;
+							opacity: .4;
+								a {
+									padding: 0;
+									background: none;
+								}
+								&.active {
+									z-index: +50;
+									border: 2px solid $darkgray;
+									opacity: 1;
+								}
+						}
+				}
+				.tabs-content {
+					border: 2px solid $darkgray;
+					background: $darkgray;
+						.content {
+							#menu {
+								width: 91%;
+									.menuitem {
+									    height: 100%;
+									    width: 100%;
+										margin: 2% 1% 4% 1%;
+										padding: 0;
+										border: 2px solid $red;
+										border-radius: 5px;
+										background: url('../img/debut_light.png') repeat white;
+											.itemname {
+											   font-family: $main-font;
+											   font-size: 20px;
+											   font-weight: 300;
+											   padding: 2% 0 0 0;
+											}
+											#itemimg {
+											  padding: 2%;
+											  float: left;
+											  width: 30%;
+											}
+											h2 {
+											   padding: 0 0 .7% 0;
+											   font-family: $main-font;
+											   font-size: 14px;
+											   line-height: 12px;
+											   font-weight: 500;
+											   margin: 0;
+											}
+											h3 {
+												margin: 0 0 0 10px;
+												font-size: 16px;
+												font-family: $main-font;
+											}
+											p {
+												clear: left;
+												font-size: 12px;
+											    font-family: $main-font;
+											    line-height: 14px;
+											    padding: 0 2%;
+											}
+											table {
+												margin: 1% auto 2% auto;
+												border: none;
+												background: none;
+													tbody {
+														tr {
+															td {
+																font-size: 15px;
+																font-family: $main-font;
+																text-align: center;
+															}
+														}
+														.prices {
+															width: 100%;
+																td {
+																	padding: 3px 7px;
+																	border: 2px solid $red;
+																		@media screen and (max-width:436px) {
+																			padding: 2px 3px;
+																		}
+																}
+														}
+														.units {
+															width: 100%;
+																td {
+																	padding: 3px 7px;
+																	font-weight: bold;
+																		@media screen and (max-width:436px) {
+																			padding: 2px 3px;
+																		}
+																}
+														}
+														
+													}	
+											}
+									}
+							}
+						}
+				}
+		}
+	@media screen and (max-width:830px) {
+		width: 94%;
+	}
+}
+/* Menu End */
+
+/* Rating Start */
+#rating {
+	@include section();
+	width: 37%;
+		.ratingbar {
+			@include headerbar();
+			color: $green;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.ratingbody {
+			height: 100%;
+			padding: 3% 3% 3% 8%;
+			border: 2px solid $green;
+			border-top: 0;
+			list-style: none;
+			.rating {
+				margin: 1% 0 0 0;
+				li {
+					display: inline-block;
+				}
+				h2 {
+					font-family: $main-font;
+					font-size: .8em;
+					font-weight: bold;
+					line-height: 1.2em;
+					width: 30px;
+					float: left;
+					margin-right: 30%;
+				}
+				.star {
+					height: 30px;
+					width: 30px;
+				    -webkit-transition: all .5s ease;
+				    -moz-transition: all .5s ease;
+				    -ms-transition: all .5s ease;
+				    -o-transition: all .5s ease;
+				    transition: all .5s ease;
+				}
+				.star1,
+				.star2,
+				.star3,
+				.star4,
+				.star5 {
+					fill: $darkgray;
+					width: 30px;
+					height: 30px;
+				}	
+			}
+		}
+	@media screen and (max-width:830px) {
+		width: 94%;
+	}
+}
+/* Rating End */
+
+/* Reviews Start */
+.reviews {
+	@include section();
+	width: 37%;
+		.reviewsbar {
+			@include headerbar();
+			color: $yellow;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.reviewsbody {
+			height: 100%;
+			padding: 3%;
+			border: 2px solid $yellow;
+			border-top: 0;
+		}
+	@media screen and (max-width:830px) {
+		width: 94%;
+	}
+}
+/* Reviews End */
+/*---------------------------Dispensary End------------------------------*/
+
+
+
+
+
+/*---------------------------Deals Start------------------------------*/
+.dealsbody {
+		.card {
+		    list-style: none;
+		    width: 21.5%;
+		    margin: 1% 0 1% 2.5%;
+		    padding: 1%;
+		    position: relative;
+		    display: inline-block;
+		    border: 2px dashed $darkgray;
+		    border-radius: 5px; 
+		    	img {
+			      width: 100%;
+			      border-radius: 5px 5px 0 0; 
+		  		}
+		  		h1 {
+			      font-family: $main-font;
+			      font-size: 15px;
+			      line-height: 15px;
+			      text-align: center;
+			      color: $yellow;
+			      background: $darkgray;
+			      margin: 0;
+			      padding: 4% 1% 3% 1%;
+			      position: relative;
+			      top: 0px; 
+			  	}
+			  	p {
+			      font-family: $main-font;
+			      font-size: 12px;
+			      line-height: 12px;
+			      text-align: center;
+			      color: white;
+			      background: $darkgray;
+			      margin: 0;
+			      padding: 1%; 
+			 	}
+			 	h2 {
+			      font-family: $main-font;
+			      font-size: 10px;
+			      text-align: center;
+			      color: rgba(200, 200, 200, 0.5);
+			      background: $darkgray;
+			      margin: 0;
+			      padding: 1% 1% 0 1%;
+			      position: relative;
+			      top: 0px;
+			  	}
+			  	h3 {
+			      font-family: $main-font;
+			      font-size: 13px;
+			      text-align: center;
+			      color: $yellow;
+			      background: $darkgray;
+			      margin: 0;
+			      position: relative;
+			      top: 0px;
+			      padding: 0 0 10px 0;
+			      border-radius: 0 0 5px 5px;
+			  	}
+			}
+	@media screen and (max-width:954px) {
+			.card {
+			    width: 20%;
+			    margin: 2%;
+			}
+	}
+	@media screen and (max-width:830px) {
+			.card {
+				width: 28.5%;
+			}
+	}
+	@media screen and (max-width:586px) {
+			.card {
+				width: 44%;
+			}
+	}
+	@media screen and (max-width: 500px) {
+		.headerbar {
+			@include smallheaderbar();
+		}
+	}	
+}
+#dealmodal.reveal-modal {
+	margin-top: -70px;
+	background: $darkgray;
+	border-radius: 10px;
+	font-family: $main-font;
+		img {
+			width: 30%;
+			float: left;
+			clear: right;
+			margin-right: 5%;
+		}
+		h1 {
+			color: $yellow;
+			font-size: 25px;
+		}
+		h3 {
+			font-size: 14px;
+			color: $green;
+		}
+		h2 {
+			color: $red;
+			font-size: 25px;
+			font-weight: bold;
+			clear: left;
+		}
+		h4 {
+			color: $red;
+			font-size: 15px;
+		}
+		h5 {
+			color: $green;
+			font-size: 25px;
+		}
+		h6 {
+			color: $yellow;
+			font-size: 16px;
+		}
+		p {
+			color: white;
+			font-family: $main-font;
+			font-size: 14px;
+			margin: 0;
+			padding: 0;
+		}
+}
+/*---------------------------Deals End------------------------------*/
+
+
+
+
+
+/*---------------------------News Start------------------------------*/
+/* News Start */
+#newswrapper {
+	@include topsection();
+  	width: 98%;
+  		#statenews,
+  		#federalnews,
+  		#generalnews {
+		    float: left;
+		    width: 26.2%;
+  			@include sectionbody();
+  			padding: 0;
+  			margin: 0 2.4% 0 0;
+				img {
+					margin: 3% 0 0 0;
+				}
+				.article {
+					position: relative;
+					display: table;
+				}
+				.caption {
+				  	font-family: $main-font;
+					font-size: 15px;
+					font-weight: 300;
+					background: $darkgray;
+					color: white;
+					text-align: center;
+					width: 100%;
+					padding: 3%;
+					z-index: 20;
+				}
+				.description {
+				  	font-family: $main-font;
+				  	font-size: 14px;
+				  	line-height: 16px;
+				  	position: absolute;
+					cursor: pointer;
+					top: 5px;
+					left: 0;
+					background: rgba(0,0,0,1);
+					color: white;
+					margin: 1% 0 0 0;
+					width: 100%;
+					height: 96%;
+					opacity: 0;
+					padding: 20px;
+					display: table-cell;
+					text-align: left;
+					vertical-align: middle;
+						&:hover {
+							background: rgba(0,0,0,.8);
+							opacity: 1;
+							-webkit-transition: all .4s linear;
+						-moz-transition: all .4s linear;
+						-ms-transition: all .4s linear;
+						-o-transition: all .4s linear;
+						transition: all .4s linear;
+
+						}
+				}
+		}
+		.snbar {
+			@include headerbar();
+		    color: $green;
+		    border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.fnbar {
+			@include headerbar();
+		    color: $red;
+		    border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.gnbar {
+			@include headerbar();
+		    color: $yellow;
+		    border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+	@media screen and (max-width:700px) {
+		#statenews,
+  		#federalnews,
+  		#generalnews {
+  			.caption {
+  				font-size: 11px;
+  			}
+  			.description {
+  				display: none;
+  			}
+  		}
+  	}
+	@media screen and (max-width:500px) {
+		.snbar {
+			@include smallheaderbar();
+		}
+		.fnbar {
+			@include smallheaderbar();
+		}
+		.gnbar {
+			@include smallheaderbar();
+		}
+	}
+}
+#newswrapper {
+			position: relative-absolute;
+				/* Advertising Start */
+					#advertising {
+						@include section();
+						margin: 0;
+						float: left;
+						width: 10%;
+							.adbar {
+								@include headerbar();
+								border-top-right-radius: 2px;
+								border-top-left-radius: 2px;
+								font-size: 15px;
+								background: rgba(200,200,200,1);
+								color: white;
+							}
+							.adbackground {
+								height: 100%;
+									img {
+										display: block;
+										margin: 3% 0 0 0;
+									}
+							}
+						@media screen and (max-width:600px) {
+							.adbar {
+								padding: 3px 1px 3px 1px;
+								font-size: 7px;
+							}
+							.adbackground {
+								img {
+									margin-bottom: 10px;
+								}
+							}
+						}
+					}
+					/* Advertising End */
+}
+/* News End */
+
+
+/*---------------------------News End------------------------------*/
+
+
+
+/*---------------------------News Article Start------------------------------*/
+#mainstory {
+	@include topsection();
+    width: 55.6%;
+	  	.mainstorybar {
+	  		@include headerbar();
+		    color: $green;
+		  	border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.mainstory {
+		  border: 2px solid $green;
+		  border-top: none;
+		  	.newspic {
+			  width: 90%;
+			  margin: 5%;
+			}
+			.newstitle {
+			  font-family: $main-font;
+			  text-transform: uppercase;
+			  font-size: 16px;
+			  font-weight: bold;
+			  margin: 2px 8px 0 5%;
+			  line-height: 16px;
+			}
+			.newsauthor {
+			  font-family: $main-font;
+			  text-transform: uppercase;
+			  font-size: 11px;
+			  color: $darkgray;
+			  margin: 0 5%;
+			}
+			.newssection {
+			  font-size: 14px;
+			  line-height: 19px;
+			  font-weight: bold;
+			}
+			.newsbody {
+			  font-family: $main-font;
+			  font-size: 12px;
+			  line-height: 14px;
+			  padding: 3% 5% 0 5%;
+			}
+			.snreadmore {
+			  background: $green;
+			  padding: 2px 10px;
+			  text-align: right;
+			}
+			.snreadmore a {
+			  color: white;
+			  text-align: right;
+			}
+			#tags {
+				padding: 5%;
+				width: 100%;
+				font-size: 12px;
+			}
+			.tag {
+				background: $darkgray;
+				padding: 4px;
+				margin: 1%;
+				color: white;
+				font-size: 9px;
+				display: inline;
+				line-height: 24px;
+			}
+		}
+	@media screen and (max-width:840px) {
+		#tags {
+			font-size: 10px;
+		}
+		.tag {
+			padding: 4px;
+			font-size: 9px;
+		}
+	}
+	@media screen and (max-width: 500px) {
+		.mainstorybar {
+			@include smallheaderbar();
+		}
+	}
+}
+/* Featured News Start */
+#mainstoryfeaturednews {
+	@include topsection();
+	width: 24.5%;
+	.featuredbar {
+		@include headerbar();
+		color: $red;
+		border-top-right-radius: 2px;
+		border-top-left-radius: 2px;
+	}
+	.featurednews {	
+			img {
+				margin: 3% 0 0 0;
+			}
+			.article {
+				position: relative;
+				display: table;
+			}
+			.caption {
+			  	font-family: $main-font;
+				font-size: 15px;
+				font-weight: lighter;
+				background: $darkgray;
+				color: white;
+				text-align: center;
+				width: 100%;
+				padding: 3%;
+			}
+			.description {
+			  	font-family: $main-font;
+			  	font-size: 14px;
+			  	line-height: 16px;
+			  	position: absolute;
+				cursor: pointer;
+				top: 5px;
+				left: 0;
+				background: rgba(0,0,0,1);
+				color: white;
+				margin: 1% 0 0 0;
+				width: 100%;
+				height: 96%;
+				opacity: 0;
+				padding: 20px;
+				display: table-cell;
+				text-align: left;
+				vertical-align: middle;
+					&:hover {
+						background: rgba(0,0,0,.8);
+						opacity: 1;
+						-webkit-transition: all .4s linear;
+						-moz-transition: all .4s linear;
+						-ms-transition: all .4s linear;
+						-o-transition: all .4s linear;
+						transition: all .4s linear;
+					}
+			}
+	}
+	@media screen and (max-width:700px) {
+		.featurednews {
+  			.caption {
+  				font-size: 11px;
+  			}
+  			.description {
+  				display: none;
+  			}
+  		}
+  	}
+	@media screen and (max-width: 500px) {
+		.featuredbar {
+			@include smallheaderbar();
+		}
+	}
+}
+/* Featured News End */
+/* Advertising Start */
+#advertising {
+	@include topsection();
+	float: left;
+	width: 10%;
+		.adbar {
+			@include headerbar();
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+			font-size: 15px;
+			background: rgba(200,200,200,1);
+			color: white;
+		}
+		.adbackground {
+			height: 100%;
+				img {
+					display: block;
+					margin: 7% 0 0 0;
+				}
+		}
+	@media screen and (max-width:600px) {
+		.adbar {
+			padding: 3px 1px 3px 1px;
+			font-size: 7px;
+		}
+		.adbackground {
+			img {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+/* Advertising End */
+/*---------------------------News Article End------------------------------*/
+
+
+
+
+/*---------------------------Find A Job Start------------------------------*/
+/* Jobs Start */
+.jobsbody {
+	height: 100%;
+	padding: 0;
+	border: 2px solid $red;
+	border-top: none;
+	position: relative;
+		.jobcard {
+		    width: 20%;
+		    display: inline-block;
+		    margin: 2% 2.3% 2.3% 2.3%;
+				h2 {
+					font-size: 14px;
+				    font-family: $main-font;
+					text-align: center;
+					background: $darkgray;
+					color: white;
+					margin: 0;
+					padding: 5px;
+					border-radius: 10px 10px 0 0;
+				}
+				img {
+					width: 100%;
+				    margin: 0;
+				    padding: 0;
+				    border-right: 6px solid $darkgray;
+				    border-left: 6px solid $darkgray;
+				}
+				h3 {
+				    text-align: center;
+				    font-size: 17px;
+				    font-family: $main-font;
+				    background: $darkgray;
+				    color: white;
+				    margin: 0;
+				    padding: 5px;
+				}
+				div {
+				    background: $darkgray;
+				    color: white;
+				    margin: 0;
+				    text-align: center;
+				    color: $green;
+				    font-size: 30px;
+				}
+				h4 {
+				    text-align: center;
+				    font-size: 14px;
+				    font-family: $main-font;
+				    background: $darkgray;
+				    color: $green;
+				    margin: 0;
+				    padding: 5px 5px 10px 5px;
+				    border-radius: 0 0 10px 10px ;
+				}
+				h5 {
+				    text-align: left;
+				    font-size: 12px;
+				    font-family: $main-font;
+				    background: $darkgray;
+				    color: white;
+				    margin: 0;
+				    padding: 10px;
+				}
+		}
+	@media screen and (max-width:954px) {
+		.jobcard {
+		    width: 20%;
+		    margin: 2%;
+		}
+	}
+	@media screen and (max-width:830px) {
+		.jobcard {
+			width: 28.5%;
+		}
+	}
+	@media screen and (max-width:586px) {
+		.jobcard {
+			width: 44%;
+		}
+	}
+	@media screen and (max-width: 500px) {
+		.headerbar {
+			@include smallheaderbar();
+		}
+	}
+}
+#submitjob {
+	position: absolute;
+	right: 5%;
+}
+/* Jobs End */
+/*---------------------------Find A Job End------------------------------*/
+
+
+/*---------------------------Job Information Start------------------------------*/
+/* Information Start */
+#jobinfo {
+	@include topsection();
+	width: 94%;	
+		.jobinfobar {
+			@include headerbar();
+			color: $green;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.jobinfocontainer {
+			padding: 4% 3% 2% 3%;
+			float: left;
+			margin: 0;
+			border: 2px solid $green;
+			border-top: none;
+				.jobinfo {
+					padding: 0 1% 0 3%;
+					margin: 0;
+					float: left;
+					width: 70%;
+						h1 {
+							font-family: $main-font;
+							color: $darkgray;
+							font-size: 32px;
+							margin: 0;
+							padding: 0;
+							line-height: 25px;
+						}
+						h6 {
+							font-size: 23px;
+							color: $red;
+							font-family: $main-font;
+							font-weight: bold;
+							padding: 0;
+							margin-bottom: 5%;
+						}
+						h3 {
+							font-family: $main-font;
+							font-size: 14px;
+							margin: 0 0 10px 0;
+							padding: 0;
+							color: $darkgray;
+						}
+						.map {
+							text-align: center;
+							width: 54px;
+							font-size: 11px;
+							color: white;
+							background: $darkgray;
+							padding: 8px;
+							border-radius: 5px;
+						}
+						.joblogo {
+							float: left;
+							width: 20%;
+							font-family: $main-font;
+							padding: 0;
+							margin: 0 0 5% 0;
+						}
+						h2 {
+							font-family: $main-font;
+							font-size: 22px;
+							padding: 0;
+							height: 20px;
+							color: $darkgray;
+							line-height: 25px;
+							font-weight: 300;
+							clear: left;
+								@media screen and (max-width:740px) {
+									font-size: 20px;
+								}
+						}
+						.jobcontactinfo {
+							margin: 0px 0 0 0;
+								h4 {
+									font-family: $main-font;
+									font-size: 16px;
+									margin: 0;
+									padding: 0;
+									height: 30px;
+									color: $darkgray;
+										@media screen and (max-width:740px) {
+											font-size: 13px;
+										}
+										img {
+											margin: 2% 0;
+											width: 5%;
+												@media screen and (max-width:740px) {
+													width: 8%;
+												}	
+										}
+										a {
+											color: $red;
+												img {
+													margin: 2% 0;
+													width: 5%;
+													@media screen and (max-width:740px) {
+														width: 8%;
+													}	
+												}
+										}
+
+								}	
+						}
+						.jobdescription {
+							p {
+								margin-top: 2%;
+								font-family: $main-font;
+								color: $darkgray;
+								font-size: 13px;
+								line-height: 16px;
+							}
+							h2 {
+								font-size: 29px;
+								color: $red;
+								font-family: $main-font;
+								margin-top: 10%;
+								font-weight: bold;
+							}
+						}
+					@media screen and (max-width:830px) {
+						width: 90%;
+					}
+				}
+		}
+}
+/* Information End */
+/*---------------------------Job Information End------------------------------*/
+
+
+
+
+/*---------------------------Affiliates Start------------------------------*/
+
+
+#affiliates {
+	@include topsection();
+	width: 94%;
+		.affiliatesbar {
+			@include headerbar();
+			color: $green;
+			border-top-right-radius: 2px;
+			border-top-left-radius: 2px;
+		}
+		.affiliates {
+			border: 2px solid $green;
+			border-top: none;
+			height: 800px;
+			a {	
+				background: lightgray;
+				float: left;
+				margin: 1%;
+			}
+			.largeaffiliate {
+				width: 41%;
+			}
+			.mediumaffiliate {
+				width: 31%;
+			}
+			.smallaffiliate {
+				width: 21%;
+			}
+		}
+	@media screen and (max-width:980px) {
+			width: 90%;
+	}
+	@media screen and (max-width: 500px) {
+		.affiliatesbar {
+			@include smallheaderbar();
+		}
+	}
+} 
+
+
+/*---------------------------Affiliates End------------------------------*/
+
+
+
+
+
+
+
+
+

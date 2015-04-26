@@ -48,15 +48,25 @@
         &:hover {
           color: white;
         }
-        .dispensaryNav {
+      }
+      .dispensaryNav {
+        span {
+          font-family: $dvTextFont;
+          font-size: 14px;
           color: $dvRed;
+          margin-left: 10px;
         }
-        .dealNav {
+      }
+      .dealNav {
+        span {
+          font-family: $dvTextFont;
+          font-size: 14px;
           color: $dvYellow;
+          margin-left: 10px;
         }
-        .strainNav {
-          color: $dvGreen;
-        }
+      }
+      .strainNav {
+        color: $dvGreen;
       }
       .menuMobile-subHeader {
         font-family: $dvTextFont;

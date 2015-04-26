@@ -34,6 +34,7 @@
           margin: -4px 0 0 0;
           .username {
             font-size: 13px;
+            padding: 15px 0 0 0;
           }
           .location {
             font-size: 9px;
@@ -108,12 +109,6 @@
   }
   /*----home start----*/
   #indexSummary > .howItWorks {
-    .dispensariesIcon {
-      background-color: #f7253e;
-    }
-    .dealsIcon {
-      background-color: #fcd31c;
-    }
     .strainsIcon {
       background-color: #3dd861;
     }

@@ -1,0 +1,30 @@
+.row
+    .col-md-6
+        .row
+            .col-md-3: img.strainLogo(ng-src='{{ strainDetails.logo }}')
+            .col-md-9
+                h2.strainName {{ strainDetails.name }}
+                h4 Produced by
+                h4 {{ strainDetails.producer }}
+        dv-rating.strainRating(ratings='strainDetails.ratings')
+        h3 Strain Profile
+        .row
+            .col-md-4
+            .col-md-4
+            .col-md-4
+        h3 Find This Near You
+            //- dv-card-list(item-type='dispensary')
+    .col-md-6
+        img.img-responsive.dealGallery(src='http://placehold.it/600x400')
+        h3 Last Verified Potency
+        .row
+            dv-gauge.col-md-6(label='THC percentage', percentage='{{ strainDetails.chemistry.percentageTHC }}')
+            dv-gauge.col-md-6(label='CBD percentage', percentage='{{ strainDetails.chemistry.percentageCBD }}')
+        h3 Reviews
+.row
+    .col-md-12
+        h3 Suggested Strains
+        //- @todo dv-card-list(item-type='deal', items='otherDeals')
+        ul.dvCardList
+            li.col-md-3(ng-repeat='strain in otherStrains')
+                dv-card(item-type='strain', item-id='{{ strain.$id }}')

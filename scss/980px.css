@@ -24,7 +24,8 @@
     .navbar .navbar-header .navbar-right .accountInfo {
       margin: -4px 0 0 0; }
       .navbar .navbar-header .navbar-right .accountInfo .username {
-        font-size: 13px; }
+        font-size: 13px;
+        padding: 15px 0 0 0; }
       .navbar .navbar-header .navbar-right .accountInfo .location {
         font-size: 9px; }
     .navbar .navbar-header .navbar-right .navbar-text {
@@ -76,10 +77,6 @@
     opacity: 0; }
 
   /*----home start----*/
-  #indexSummary > .howItWorks .dispensariesIcon {
-    background-color: #f7253e; }
-  #indexSummary > .howItWorks .dealsIcon {
-    background-color: #fcd31c; }
   #indexSummary > .howItWorks .strainsIcon {
     background-color: #3dd861; }
 

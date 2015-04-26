@@ -24,11 +24,29 @@ window.onload = (function() {
 
 	// Coming Soon Alert Starts Here
 	$(".howItWorksComingSoonDispensaries").click(function(){
-		alert("We're sorry, Dispensaries are not available yet. Try the strains section.");
+		alert("We're sorry, Dispensaries are not available yet. Check back often. For now, explore the Strains section.");
 	});
 	$(".howItWorksComingSoonDeals").click(function(){
-		alert("We're sorry, Deals are not available yet. Try the strains section.");
+		alert("We're sorry, Deals are not available yet. Check back often. For now, explore the Strains section.");
 	});
 	// Coming Soon Alert Ends Here
+
+	// Up To Top Starts Here
+    var offset = 250;
+    var duration = 300;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.upToTop').fadeIn(duration);
+        } else {
+            jQuery('.upToTop').fadeOut(duration);
+        }
+    });
+
+    jQuery('.upToTop').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+	// Up To Top Ends Here
 
 });
