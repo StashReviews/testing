@@ -368,8 +368,10 @@
     padding-top: 20px;
     text-align: center;
     color: $dvGray;
+    position: relative;
+    z-index: 5;
     a {
-      color: $dvYellow;
+      color: $dvGreen;
       cursor: pointer;
     }
   }

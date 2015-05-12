@@ -92,7 +92,7 @@ window.onload = (function() {
       	// Reset review input.
       	$('#reviewInput').hide();
       	$('#submitReview').attr('value', "Your review was successful!").css("background","none");
-      	$('.reviewBanner').text("You will be able to access all of your reviews later.");
+      	$('.reviewBanner').text("You'll be able to see all of your reviews in a later release.");
 
       	// Success alert.
       	alert("Awesome! Thanks for submitting a review. It may take a bit for your review to show up. Later, you'll be able to access all of your reviews to remember your highs!");
