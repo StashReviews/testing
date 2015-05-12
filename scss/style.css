@@ -1,3 +1,4 @@
+/* line 1, _items.scss */
 .dispensaryLogo,
 .businessLogo,
 .producerLogo {
@@ -5,6 +6,7 @@
   margin: 0;
   padding: 0; }
 
+/* line 9, _items.scss */
 .dispensaryName,
 .dealTitle,
 .strainName {
@@ -16,12 +18,14 @@
   margin: 5px 0 0 0;
   padding: 0; }
 
+/* line 21, _items.scss */
 .strainChemistry {
   font-size: 22px;
   color: #3dd861;
   padding: 0;
   margin: -8px 0 0 0; }
 
+/* line 28, _items.scss */
 .businessName,
 .strainProducer {
   font-family: "Open Sans", sans-serif;
@@ -31,6 +35,7 @@
   margin: 0px 0 10px 0;
   padding: 0; }
 
+/* line 38, _items.scss */
 .dispensaryAddress,
 .businessAddress,
 .producedBy {
@@ -42,6 +47,7 @@
   padding: 0;
   margin: 0; }
 
+/* line 50, _items.scss */
 .viewOnMap {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -50,14 +56,17 @@
   padding-top: 10px;
   color: #2c3034;
   cursor: pointer; }
+  /* line 58, _items.scss */
   .viewOnMap:hover {
     color: #f7253e; }
 
+/* line 63, _items.scss */
 .contactInfo {
   position: relative;
   top: -20px;
   float: none;
   clear: left; }
+  /* line 68, _items.scss */
   .contactInfo .dispensaryWebsite a,
   .contactInfo .dispensaryEmail a,
   .contactInfo .dispensaryPhone a,
@@ -68,6 +77,7 @@
     font-size: 14px;
     font-weight: bold;
     color: rgba(44, 48, 52, 0.2); }
+    /* line 78, _items.scss */
     .contactInfo .dispensaryWebsite a:hover,
     .contactInfo .dispensaryEmail a:hover,
     .contactInfo .dispensaryPhone a:hover,
@@ -76,9 +86,11 @@
     .contactInfo .businessPhone a:hover {
       color: #2c3034; }
 
+/* line 84, _items.scss */
 .strainDescriptionSubHeader {
   margin: -6px 0 0 0; }
 
+/* line 87, _items.scss */
 .strainDescription {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
@@ -86,45 +98,56 @@
   margin: 10px 0 0 0;
   padding: 0; }
 
+/* line 95, _items.scss */
 .dispensaryGallery,
 .dealGallery,
 .strainGallery {
   width: 100%; }
 
+/* line 100, _items.scss */
 .strainGalleryMobile {
   display: none; }
 
+/* line 104, _items.scss */
 .dispensaryHours {
   background: #2c3034;
   width: 100%; }
+  /* line 107, _items.scss */
   .dispensaryHours tr {
     color: white; }
+  /* line 110, _items.scss */
   .dispensaryHours tr.dvGreen {
     color: #3dd861; }
+  /* line 113, _items.scss */
   .dispensaryHours td {
     font-family: "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 26px;
     padding: 10px 20px 4px 20px;
     border-bottom: thin solid rgba(255, 255, 255, 0.1); }
+  /* line 120, _items.scss */
   .dispensaryHours td:nth-child(2) {
     text-align: right; }
 
+/* line 126, _items.scss */
 .dealDetails h4 {
   font-family: "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 22px;
   color: #2c3034;
   margin: 20px 0 0 0; }
+/* line 133, _items.scss */
 .dealDetails p {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #2c3034; }
+/* line 139, _items.scss */
 .dealDetails .redemptionDetails {
   border-bottom: 1px solid rgba(44, 48, 52, 0.2);
   padding-bottom: 15px;
   margin: 10px 0 20px 0; }
+  /* line 143, _items.scss */
   .dealDetails .redemptionDetails div .redeemDeal {
     background: #f7253e;
     font-family: "Khand", sans-serif;
@@ -133,14 +156,17 @@
     color: white;
     width: 100%;
     padding: 10px 20px 5px 20px; }
+    /* line 151, _items.scss */
     .dealDetails .redemptionDetails div .redeemDeal:hover {
       background: #2c3034; }
+  /* line 155, _items.scss */
   .dealDetails .redemptionDetails div label {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 16px;
     color: #2c3034;
     float: left; }
+  /* line 162, _items.scss */
   .dealDetails .redemptionDetails div .distanceAway,
   .dealDetails .redemptionDetails div .daysLeft {
     color: #f7253e;
@@ -152,6 +178,7 @@
     float: left;
     width: 25%; }
 
+/* line 176, _items.scss */
 .flavorProfile,
 .positiveEffects,
 .negativeEffects {
@@ -160,24 +187,29 @@
   font-size: 20px;
   color: #2c3034;
   text-align: left; }
+  /* line 184, _items.scss */
   .flavorProfile li,
   .positiveEffects li,
   .negativeEffects li {
     line-height: 18px;
     margin-bottom: 10px; }
+    /* line 187, _items.scss */
     .flavorProfile li:nth-child(1),
     .positiveEffects li:nth-child(1),
     .negativeEffects li:nth-child(1) {
       border-bottom: 3px solid #3dd861; }
+    /* line 190, _items.scss */
     .flavorProfile li:nth-child(2),
     .positiveEffects li:nth-child(2),
     .negativeEffects li:nth-child(2) {
       border-bottom: 3px solid #fcd31c; }
+    /* line 193, _items.scss */
     .flavorProfile li:nth-child(3),
     .positiveEffects li:nth-child(3),
     .negativeEffects li:nth-child(3) {
       border-bottom: 3px solid #f7253e; }
 
+/* line 198, _items.scss */
 .strainProfileTitle {
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -186,6 +218,7 @@
   margin: 0;
   padding-bottom: 10px; }
 
+/* line 207, _items.scss */
 .barChart {
   margin: 30px 0 0 0;
   padding: 0;
@@ -193,24 +226,32 @@
   width: 100%;
   position: relative;
   bottom: 0; }
+  /* line 214, _items.scss */
   .barChart li {
     width: 30%;
     margin: 0 1.5%;
     float: left;
     position: relative;
     bottom: 0; }
+    /* line 220, _items.scss */
     .barChart li:nth-child(1) {
       background-color: #3dd861; }
+      /* line 222, _items.scss */
       .barChart li:nth-child(1) div {
         background-color: #3dd861; }
+    /* line 226, _items.scss */
     .barChart li:nth-child(2) {
       background-color: #fcd31c; }
+      /* line 228, _items.scss */
       .barChart li:nth-child(2) div {
         background-color: #fcd31c; }
+    /* line 232, _items.scss */
     .barChart li:nth-child(3) {
       background-color: #f7253e; }
+      /* line 234, _items.scss */
       .barChart li:nth-child(3) div {
         background-color: #f7253e; }
+    /* line 238, _items.scss */
     .barChart li div {
       color: white;
       font-family: "Khand", sans-serif;
@@ -221,6 +262,7 @@
       padding-top: 10%;
       border-bottom: 1px solid white; }
 
+/* line 251, _items.scss */
 .thcPotency,
 .cbdPotency {
   margin: 0 auto;
@@ -230,6 +272,7 @@
   text-transform: uppercase;
   font-size: 40px;
   color: #2c3034; }
+  /* line 260, _items.scss */
   .thcPotency label,
   .cbdPotency label {
     position: relative;
@@ -237,7 +280,114 @@
     font-size: 20px;
     color: rgba(44, 48, 52, 0.2); }
 
+/* line 269, _items.scss */
+.reviews .leaveReview {
+  padding: 0; }
+  /* line 271, _items.scss */
+  .reviews .leaveReview .avatarWrap {
+    float: left; }
+    /* line 273, _items.scss */
+    .reviews .leaveReview .avatarWrap .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: relative;
+      z-index: 2; }
+    /* line 280, _items.scss */
+    .reviews .leaveReview .avatarWrap h4 {
+      float: left;
+      position: absolute;
+      font-size: 11px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      color: white;
+      padding: 5px 10px;
+      background: #3dd861;
+      top: 0;
+      left: 35px; }
+  /* line 293, _items.scss */
+  .reviews .leaveReview #reviewInput {
+    border: 2px solid rgba(44, 48, 52, 0.2);
+    font-family: "Open Sans", sans-serif;
+    color: #2c3034;
+    padding: 40px 10px 10px 10px;
+    border-radius: 20px 20px 0 0;
+    margin-top: -40px;
+    float: right;
+    height: 100px;
+    width: 100%; }
+    /* line 303, _items.scss */
+    .reviews .leaveReview #reviewInput:hover, .reviews .leaveReview #reviewInput:active, .reviews .leaveReview #reviewInput:focus {
+      border-color: #3dd861; }
+  /* line 309, _items.scss */
+  .reviews .leaveReview #submitReview {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #3dd861;
+    border: 2px solid #3dd861;
+    background: none;
+    margin-top: 5px;
+    margin-left: 50px;
+    padding: 10px;
+    float: right;
+    width: 100%; }
+    /* line 321, _items.scss */
+    .reviews .leaveReview #submitReview:hover {
+      background: #3dd861;
+      color: white; }
+/* line 327, _items.scss */
+.reviews .totalReviews {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-align: center; }
+/* line 332, _items.scss */
+.reviews #reviewsDiv {
+  margin-top: 20px;
+  padding: 0; }
+  /* line 335, _items.scss */
+  .reviews #reviewsDiv h4 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #2c3034;
+    padding: 10px 0 0 0;
+    border-top: 1px solid rgba(44, 48, 52, 0.05); }
+  /* line 344, _items.scss */
+  .reviews #reviewsDiv h6 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: rgba(44, 48, 52, 0.2);
+    margin: 0px 0 3px 0; }
+  /* line 352, _items.scss */
+  .reviews #reviewsDiv p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: #2c3034;
+    margin: 0;
+    padding: 0 0 8px 0; }
+  /* line 359, _items.scss */
+  .reviews #reviewsDiv img {
+    border-radius: 50%;
+    float: left;
+    margin: 10px 20px 10px 0;
+    width: 40px;
+    height: 40px; }
+/* line 367, _items.scss */
+.reviews .pleaseSignIn {
+  padding-top: 20px;
+  text-align: center;
+  color: #2c3034; }
+  /* line 371, _items.scss */
+  .reviews .pleaseSignIn a {
+    color: #fcd31c;
+    cursor: pointer; }
+
 /*  Start Header Bar  */
+/* line 3, layout/_navbar.scss */
 .navbar {
   position: fixed;
   top: 0;
@@ -246,22 +396,27 @@
   background: #2c3034;
   border: none; }
 
+/* line 12, layout/_navbar.scss */
 .navbar-header {
   float: none; }
 
+/* line 18, layout/_navbar.scss */
 .navbar .logo .deviineLogo {
   width: 90px;
   padding: 20px 0;
   margin: 0 auto;
   position: relative; }
 
+/* line 27, layout/_navbar.scss */
 .navbar-right {
   margin: 0;
   padding: 0; }
+  /* line 30, layout/_navbar.scss */
   .navbar-right .accountInfo {
     text-align: right;
     margin: 5px 0 0 0;
     float: right; }
+    /* line 34, layout/_navbar.scss */
     .navbar-right .accountInfo .username {
       font-family: "Open Sans", sans-serif;
       color: white;
@@ -272,12 +427,14 @@
       /*padding: 0;               THIS IS THE STYLING FOR HAVING USERNAME + LOCATION */
       padding: 10px 0 0 0;
       margin: 0; }
+    /* line 45, layout/_navbar.scss */
     .navbar-right .accountInfo .location {
       color: #fcd31c;
       font-family: "Open Sans", sans-serif;
       font-size: 12px;
       padding: 0;
       margin: 0; }
+  /* line 53, layout/_navbar.scss */
   .navbar-right .avatarDefault {
     opacity: .1;
     -webkit-transition: all .2s ease;
@@ -285,8 +442,10 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
+    /* line 60, layout/_navbar.scss */
     .navbar-right .avatarDefault:hover {
       opacity: 1; }
+  /* line 64, layout/_navbar.scss */
   .navbar-right .avatar {
     height: 50px;
     width: 50px;
@@ -300,20 +459,26 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
+    /* line 77, layout/_navbar.scss */
     .navbar-right .avatar:hover {
       border: 2px solid #fcd31c; }
+  /* line 81, layout/_navbar.scss */
   .navbar-right .navbar-text {
     margin: 15px 0; }
+  /* line 84, layout/_navbar.scss */
   .navbar-right .navbar-text .btn {
     margin-top: -1%;
     color: white; }
+    /* line 87, layout/_navbar.scss */
     .navbar-right .navbar-text .btn span {
       color: rgba(255, 255, 255, 0.2); }
+    /* line 90, layout/_navbar.scss */
     .navbar-right .navbar-text .btn:hover {
       color: #fcd31c; }
 
 /*  End Header Bar  */
 /*  Start Left Nav  */
+/* line 107, layout/_navbar.scss */
 #mainMenu {
   list-style-type: none;
   padding-left: 0;
@@ -322,26 +487,36 @@
   font-size: 30px;
   position: fixed;
   top: 100px; }
+  /* line 115, layout/_navbar.scss */
   #mainMenu > li {
     padding-left: 10px;
     padding-top: 8px;
     margin: 5px 0; }
+    /* line 119, layout/_navbar.scss */
     #mainMenu > li:nth-child(1) {
       border-left: 3px solid #f7253e; }
+      /* line 102, layout/_navbar.scss */
       #mainMenu > li:nth-child(1) > a:hover {
         color: #f7253e; }
+    /* line 122, layout/_navbar.scss */
     #mainMenu > li:nth-child(2) {
       border-left: 3px solid #fcd31c; }
+      /* line 102, layout/_navbar.scss */
       #mainMenu > li:nth-child(2) > a:hover {
         color: #fcd31c; }
+    /* line 125, layout/_navbar.scss */
     #mainMenu > li:nth-child(3) {
       border-left: 3px solid #3dd861; }
+      /* line 102, layout/_navbar.scss */
       #mainMenu > li:nth-child(3) > a:hover {
         color: #3dd861; }
+    /* line 128, layout/_navbar.scss */
     #mainMenu > li .disabledNav {
       color: rgba(44, 48, 52, 0.2); }
+      /* line 131, layout/_navbar.scss */
       #mainMenu > li .disabledNav:hover .comingSoonNavHover {
         left: -10px; }
+      /* line 135, layout/_navbar.scss */
       #mainMenu > li .disabledNav .comingSoonNavHover {
         font-family: "Open Sans", sans-serif;
         font-size: 12px;
@@ -353,10 +528,13 @@
         -ms-transition: .3s all;
         -o-transition: .3s all;
         transition: .3s all; }
+    /* line 148, layout/_navbar.scss */
     #mainMenu > li a {
       color: #2c3034; }
+      /* line 150, layout/_navbar.scss */
       #mainMenu > li a:active, #mainMenu > li a:focus, #mainMenu > li a:visited {
         text-decoration: none; }
+      /* line 155, layout/_navbar.scss */
       #mainMenu > li a img {
         position: relative;
         left: -62px;
@@ -365,20 +543,26 @@
         -ms-transition: .3s all;
         -o-transition: .3s all;
         transition: .3s all; }
+        /* line 163, layout/_navbar.scss */
         #mainMenu > li a img:hover {
           left: -50px; }
+  /* line 169, layout/_navbar.scss */
   #mainMenu .adminnav {
     color: rgba(44, 48, 52, 0.2); }
+    /* line 171, layout/_navbar.scss */
     #mainMenu .adminnav:hover {
       color: #2c3034; }
 
 /*  End Left Nav  */
 /*  Start Right Social Icons  */
+/* line 181, layout/_navbar.scss */
 #socialIcons {
+  display: none;
   list-style-type: none;
   position: fixed;
   top: 100px;
   right: 2%; }
+  /* line 188, layout/_navbar.scss */
   #socialIcons h4 {
     font-family: "Khand", sans-serif;
     font-size: 16px;
@@ -387,6 +571,7 @@
     padding: 0;
     color: rgba(44, 48, 52, 0.2);
     border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
+  /* line 197, layout/_navbar.scss */
   #socialIcons img {
     width: 35px;
     margin: 5px 0 0 0;
@@ -395,15 +580,18 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
+    /* line 205, layout/_navbar.scss */
     #socialIcons img:hover {
       background: #fcd31c; }
 
 /*  End Right Social Icons  */
 /*  Start Up to Top  */
+/* line 215, layout/_navbar.scss */
 #top {
   position: absolute;
   top: 0; }
 
+/* line 219, layout/_navbar.scss */
 .upToTop {
   position: fixed;
   right: 2%;
@@ -413,6 +601,7 @@
   -ms-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease; }
+  /* line 228, layout/_navbar.scss */
   .upToTop:hover {
     bottom: 2%;
     -webkit-transition: all .3s ease;
@@ -422,6 +611,7 @@
     transition: all .3s ease; }
 
 /*  End Up to Top  */
+/* line 2, layout/_menuMobile.scss */
 .navbar-header .menuMobile-toggler,
 .navbar-header #close-menuMobile {
   display: none;
@@ -430,9 +620,11 @@
   margin: 15px 0;
   position: absolute;
   left: 4%; }
+  /* line 10, layout/_menuMobile.scss */
   .navbar-header .menuMobile-toggler:hover,
   .navbar-header #close-menuMobile:hover {
     opacity: 1; }
+/* line 14, layout/_menuMobile.scss */
 .navbar-header .menuMobile {
   position: fixed;
   top: 0;
@@ -448,6 +640,7 @@
   -ms-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
+  /* line 28, layout/_menuMobile.scss */
   .navbar-header .menuMobile ul {
     list-style: none;
     margin: 0;
@@ -456,6 +649,7 @@
     clear: both;
     width: 100%;
     overflow: hidden; }
+    /* line 36, layout/_menuMobile.scss */
     .navbar-header .menuMobile ul li {
       font-family: "Khand", sans-serif;
       text-transform: uppercase;
@@ -468,20 +662,25 @@
       padding: 6px 0 0 25px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       cursor: pointer; }
+      /* line 48, layout/_menuMobile.scss */
       .navbar-header .menuMobile ul li:hover {
         color: white; }
+    /* line 53, layout/_menuMobile.scss */
     .navbar-header .menuMobile ul .dispensaryNav span {
       font-family: "Open Sans", sans-serif;
       font-size: 14px;
       color: #f7253e;
       margin-left: 10px; }
+    /* line 61, layout/_menuMobile.scss */
     .navbar-header .menuMobile ul .dealNav span {
       font-family: "Open Sans", sans-serif;
       font-size: 14px;
       color: #fcd31c;
       margin-left: 10px; }
+    /* line 68, layout/_menuMobile.scss */
     .navbar-header .menuMobile ul .strainNav {
       color: #3dd861; }
+    /* line 71, layout/_menuMobile.scss */
     .navbar-header .menuMobile ul .menuMobile-subHeader {
       font-family: "Open Sans", sans-serif;
       font-size: 12px;
@@ -491,25 +690,31 @@
       color: rgba(255, 255, 255, 0.2);
       cursor: default;
       padding-bottom: 5px; }
+      /* line 80, layout/_menuMobile.scss */
       .navbar-header .menuMobile ul .menuMobile-subHeader:hover {
         color: rgba(255, 255, 255, 0.2); }
 
+/* line 1, layout/_footer.scss */
 #footer {
   margin-top: 40px;
   padding: 20px;
   background-color: #2c3034;
   color: rgba(255, 255, 255, 0.3); }
+  /* line 6, layout/_footer.scss */
   #footer h4 {
     font-family: "Open Sans", sans-serif;
     font-weight: lighter;
     text-transform: uppercase;
     color: #3dd861; }
+  /* line 13, layout/_footer.scss */
   #footer a {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     color: white; }
+    /* line 17, layout/_footer.scss */
     #footer a:hover {
       color: #3dd861; }
+  /* line 21, layout/_footer.scss */
   #footer input[type='email'] {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
@@ -526,14 +731,19 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
+    /* line 37, layout/_footer.scss */
     #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
       border: 2px solid #3dd861; }
+  /* line 43, layout/_footer.scss */
   #footer input[type='email'] {
     width: 300px; }
+    /* line 45, layout/_footer.scss */
     #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
       border-right: none; }
+    /* line 50, layout/_footer.scss */
     #footer input[type='email']:visited, #footer input[type='email']:focus {
       background-color: rgba(255, 255, 255, 0.2); }
+  /* line 55, layout/_footer.scss */
   #footer .btnfooter {
     border-radius: 0;
     background-color: transparent;
@@ -546,34 +756,43 @@
     margin-top: 0;
     padding: .5% 5%;
     box-shadow: none; }
+    /* line 67, layout/_footer.scss */
     #footer .btnfooter:hover {
       color: #2c3034;
       background: #3dd861; }
+    /* line 71, layout/_footer.scss */
     #footer .btnfooter:active, #footer .btnfooter:focus, #footer .btnfooter:visited {
       text-decoration: none; }
+  /* line 77, layout/_footer.scss */
   #footer .btnfooterlrg {
     padding: 1.5% 5%; }
+  /* line 81, layout/_footer.scss */
   #footer address {
     font-size: 10px;
     padding-top: 5%;
     width: 100%; }
+  /* line 87, layout/_footer.scss */
   #footer .footerlogo {
     padding-top: 20%; }
 
 @media screen and (max-width: 470px) {
   /*----style.scss.html start----*/
+  /* line 3, 470px.scss */
   body {
     top: 70px;
     width: 98%; }
 
   /*----style.scss.html end----*/
   /*----home.html start----*/
+  /* line 11, 470px.scss */
   #indexSummary .howItWorks .dispensariesIcon,
   #indexSummary .howItWorks .dealsIcon,
   #indexSummary .howItWorks .strainsIcon {
     width: 30%; }
+  /* line 16, 470px.scss */
   #indexSummary .howItWorks h3 {
     padding-top: 1%; }
+  /* line 19, 470px.scss */
   #indexSummary .howItWorks p {
     font-size: 9px;
     line-height: 12px;
@@ -581,17 +800,21 @@
 
   /*----home.html end----*/
   /*----footer.html start----*/
+  /* line 29, 470px.scss */
   #footer input[type='email'] {
     width: 60%;
     margin-left: 5%; }
+  /* line 33, 470px.scss */
   #footer .btnfooter {
     width: 30%;
     margin-right: 5%; }
+  /* line 37, 470px.scss */
   #footer .btnfooterlrg {
     margin-right: 0; }
 
   /*----footer.html end----*/
   /*----ratings.html start----*/
+  /* line 46, 470px.scss */
   .dispensaryCard .rating,
   .dealCard .rating,
   .strainCard .rating {
@@ -599,13 +822,16 @@
 
   /*----ratings.html end----*/
   /*----cards.html start----*/
+  /* line 53, 470px.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType {
     margin: 30% auto 0 auto; }
 
+  /* line 59, 470px.scss */
   .dvCardList li {
     width: 68%; }
 
+  /* line 63, 470px.scss */
   .featured-dispensary-true,
   .featured-deal-true,
   .featured-strain-true {
@@ -613,51 +839,63 @@
 
   /*----cards.html end----*/
   /*----signin.html end----*/
+  /* line 70, 470px.scss */
   .close-modal {
     top: 5px;
     right: 10px; }
 
   /*----signin.html end----*/
   /*----footer start----*/
+  /* line 77, 470px.scss */
   #footer h4 {
     font-size: 14px; }
 
   /*----footer end----*/
   /*----modal start----*/
+  /* line 85, 470px.scss */
   .modal-content .modal-header .modalTitle {
     font-size: 50px; }
+  /* line 88, 470px.scss */
   .modal-content .modal-header .modalSubtitle {
     font-size: 20px; }
+  /* line 93, 470px.scss */
   .modal-content .modal-footer p {
     font-size: 12px; }
+    /* line 95, 470px.scss */
     .modal-content .modal-footer p span {
       color: white; }
 
   /*----modal end----*/ }
 @media screen and (max-width: 767px) {
   /*----style.scss.html start----*/
+  /* line 3, 767px.scss */
   body {
     top: 70px;
     width: 99%; }
 
   /*----style.scss.html end----*/
   /*----home.html start----*/
+  /* line 10, 767px.scss */
   #indexSummary .howItWorks {
     padding: 20px 5%;
     height: 100%; }
+    /* line 13, 767px.scss */
     #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
       border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
+    /* line 17, 767px.scss */
     #indexSummary .howItWorks .dispensariesIcon,
     #indexSummary .howItWorks .dealsIcon,
     #indexSummary .howItWorks .strainsIcon {
       width: 22%;
       float: left;
       margin-right: 20px; }
+    /* line 24, 767px.scss */
     #indexSummary .howItWorks h3 {
       font-size: 18px;
       margin: 0;
       padding: 3% 0 0 0;
       text-align: left; }
+    /* line 30, 767px.scss */
     #indexSummary .howItWorks p {
       padding: 0;
       margin: 0;
@@ -665,35 +903,45 @@
       font-size: 10px;
       line-height: 14px;
       width: 62%; }
+    /* line 38, 767px.scss */
     #indexSummary .howItWorks .arrowRight {
       display: inline;
       margin-left: 20px; }
 
+  /* line 44, 767px.scss */
   .featuredBanner {
     margin-left: 25%; }
 
   /*----home.html end----*/
   /*----footer.html start----*/
+  /* line 49, 767px.scss */
   #footer {
     margin: 30px auto 0 auto;
     text-align: center; }
+    /* line 52, 767px.scss */
     #footer h4 {
       text-align: center; }
+    /* line 55, 767px.scss */
     #footer a {
       font-size: 10px;
       margin: 0 auto;
       text-align: center; }
+    /* line 60, 767px.scss */
     #footer p {
       font-size: 10px; }
+    /* line 63, 767px.scss */
     #footer input[type='email'] {
       width: 45%;
       margin-left: 15%; }
+    /* line 67, 767px.scss */
     #footer .btnfooter {
       width: 25%;
       margin-top: 0;
       margin-right: 15%; }
+    /* line 72, 767px.scss */
     #footer .btnfooterlrg {
       margin-right: 0; }
+    /* line 75, 767px.scss */
     #footer address {
       padding-top: 6%;
       float: right;
@@ -701,19 +949,23 @@
 
   /*----footer.html end----*/
   /*----cards.html start----*/
+  /* line 83, 767px.scss */
   .cardWrapper {
     margin: 0 25% !important; }
 
+  /* line 86, 767px.scss */
   .featured-dispensary-true,
   .featured-deal-true,
   .featured-strain-true {
     left: -4%; }
 
+  /* line 91, 767px.scss */
   .new-strain-true {
     left: 21%; }
 
   /*----cards.html end----*/
   /*----ratings.html start----*/
+  /* line 99, 767px.scss */
   .dispensaryCard .rating,
   .dealCard .rating,
   .strainCard .rating {
@@ -721,20 +973,24 @@
 
   /*----ratings.html end----*/
   /*----cards.html start----*/
+  /* line 107, 767px.scss */
   .dvCardList li {
     width: 40%; }
 
   /*----cards.html end----*/
   /*----items.html start----*/
+  /* line 113, 767px.scss */
   .strainGallery {
     display: none; }
 
+  /* line 116, 767px.scss */
   .strainGalleryMobile {
     display: inline; }
 
   /*----items.html end----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
+  /* line 123, 767px.scss */
   .featured-dispensary-true,
   .featured-deal-true,
   .featured-strain-true {
@@ -742,43 +998,56 @@
 
   /*----cards.html end----*/ }
 @media screen and (max-width: 980px) {
+  /* line 2, 980px.scss */
   body {
     top: 70px;
     width: 99%; }
 
   /*----page.html start----*/
+  /* line 7, 980px.scss */
   .navbar {
     padding: 0 4%;
     height: 60px; }
+    /* line 12, 980px.scss */
     .navbar .navbar-header .menuMobile-toggler img {
       width: 30px; }
+    /* line 16, 980px.scss */
     .navbar .navbar-header .logo .deviineLogo {
       float: left;
       left: 50px;
       width: 65px;
       padding: 15px 0; }
+    /* line 22, 980px.scss */
     .navbar .navbar-header .menuMobile-toggler {
       display: inline; }
+      /* line 24, 980px.scss */
       .navbar .navbar-header .menuMobile-toggler img {
         width: 50px;
         opacity: .2; }
+        /* line 27, 980px.scss */
         .navbar .navbar-header .menuMobile-toggler img:hover {
           opacity: 1; }
+    /* line 33, 980px.scss */
     .navbar .navbar-header .navbar-right .accountInfo {
       margin: -4px 0 0 0; }
+      /* line 35, 980px.scss */
       .navbar .navbar-header .navbar-right .accountInfo .username {
         font-size: 13px;
         padding: 15px 0 0 0; }
+      /* line 39, 980px.scss */
       .navbar .navbar-header .navbar-right .accountInfo .location {
         font-size: 9px; }
+    /* line 43, 980px.scss */
     .navbar .navbar-header .navbar-right .navbar-text {
       margin: 10px 0; }
+      /* line 45, 980px.scss */
       .navbar .navbar-header .navbar-right .navbar-text .avatar {
         width: 40px;
         height: 40px;
         border-color: #fcd31c;
         margin-left: 5px; }
 
+  /* line 55, 980px.scss */
   #mainMenu {
     display: none;
     top: inherit;
@@ -788,6 +1057,7 @@
     z-index: 50;
     background: #2c3034;
     padding: 5px 0; }
+    /* line 64, 980px.scss */
     #mainMenu > li {
       display: inline;
       text-align: center;
@@ -795,41 +1065,57 @@
       padding: 0;
       width: 33%;
       float: left; }
+      /* line 71, 980px.scss */
       #mainMenu > li:nth-child(1), #mainMenu > li:nth-child(2), #mainMenu > li:nth-child(3) {
         border: none; }
+      /* line 76, 980px.scss */
       #mainMenu > li a {
         color: white;
         font-size: 20px; }
+      /* line 80, 980px.scss */
       #mainMenu > li .typeform-share {
         display: none; }
+      /* line 83, 980px.scss */
       #mainMenu > li .disabledNav {
         color: rgba(255, 255, 255, 0.2); }
+      /* line 86, 980px.scss */
       #mainMenu > li .adminnav {
         display: none; }
 
+  /* line 91, 980px.scss */
   #socialIcons {
     display: none; }
 
+  /* line 94, 980px.scss */
   .upToTop {
     display: none; }
 
   /*----page.html end----*/
+  /* line 100, 980px.scss */
   #indexSummary > .howItWorks p strong {
     display: inline; }
+  /* line 105, 980px.scss */
   #indexSummary > .howItWorks:hover .comingSoon {
     opacity: 0; }
 
   /*----home start----*/
+  /* line 112, 980px.scss */
   #indexSummary > .howItWorks .strainsIcon {
     background-color: #3dd861; }
 
+  /* line 118, 980px.scss */
+  .sponsors div ul {
+    opacity: 1; }
+
   /*----home end----*/
   /*----footer start----*/
+  /* line 125, 980px.scss */
   #footer {
     margin: 0; }
 
   /*----footer end----*/
   /*----cards.html start----*/
+  /* line 131, 980px.scss */
   .cardWrapper .dispensaryLogo,
   .cardWrapper .dealImage,
   .cardWrapper .strainImage {
@@ -840,19 +1126,24 @@
 
   /*----cards.html end----*/
   /*----cards.html start----*/
+  /* line 144, 980px.scss */
   .barChart li div {
     font-size: 16px; }
 
   /*----cards.html end----*/
   /*----rating.html start----*/
+  /* line 153, 980px.scss */
   .rating .ratingBarWrap .ratings {
     display: none; }
+  /* line 156, 980px.scss */
   .rating .ratingBarWrap .mobileRatings {
     display: inherit; }
+  /* line 160, 980px.scss */
   .rating .ratingDisplay {
     top: -60px; }
 
   /*----rating.html start----*/ }
+/* line 1, _home.scss */
 #indexSummary > .howItWorks {
   text-align: center;
   font-family: "Open Sans", sans-serif;
@@ -860,12 +1151,14 @@
   font-size: 11px;
   line-height: 15px;
   padding-top: 15px;
-  height: 330px;
   border-color: rgba(44, 48, 52, 0.05); }
+  /* line 10, _home.scss */
   #indexSummary > .howItWorks:hover .comingSoon {
     opacity: 1; }
+  /* line 13, _home.scss */
   #indexSummary > .howItWorks:hover .strainsIcon {
     background-color: #3dd861; }
+  /* line 17, _home.scss */
   #indexSummary > .howItWorks .dispensariesIcon,
   #indexSummary > .howItWorks .dealsIcon,
   #indexSummary > .howItWorks .strainsIcon {
@@ -873,24 +1166,31 @@
     margin: auto auto;
     border-radius: 50%;
     background: rgba(44, 48, 52, 0.2); }
+  /* line 25, _home.scss */
   #indexSummary > .howItWorks .dispensariesIcon {
     border: 2px solid #f7253e; }
+  /* line 28, _home.scss */
   #indexSummary > .howItWorks .dealsIcon {
     border: 2px solid #fcd31c; }
+  /* line 31, _home.scss */
   #indexSummary > .howItWorks .strainsIcon {
     border: 2px solid #3dd861; }
+  /* line 34, _home.scss */
   #indexSummary > .howItWorks h3 {
     border: none;
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-align: center; }
+  /* line 41, _home.scss */
   #indexSummary > .howItWorks p {
     font-family: "Open Sans", sans-serif;
     font-size: 11px;
     float: left; }
+    /* line 45, _home.scss */
     #indexSummary > .howItWorks p strong {
       display: none; }
+  /* line 49, _home.scss */
   #indexSummary > .howItWorks .arrowRight {
     display: none;
     float: left;
@@ -898,48 +1198,68 @@
     border-right: 0px solid transparent;
     border-bottom: 20px solid transparent;
     border-left: 20px solid transparent; }
+    /* line 56, _home.scss */
     #indexSummary > .howItWorks .arrowRight.red {
       border-left-color: #f7253e; }
+    /* line 60, _home.scss */
     #indexSummary > .howItWorks .arrowRight.yellow {
       border-left-color: #fcd31c; }
+    /* line 64, _home.scss */
     #indexSummary > .howItWorks .arrowRight.green {
       border-left-color: #3dd861; }
+  /* line 69, _home.scss */
   #indexSummary > .howItWorks:nth-child(1), #indexSummary > .howItWorks:nth-child(2) {
     border-right: 1px solid rgba(44, 48, 52, 0.05); }
+  /* line 74, _home.scss */
   #indexSummary > .howItWorks:nth-child(1) > h3 {
     color: #3dd861; }
+  /* line 78, _home.scss */
   #indexSummary > .howItWorks:nth-child(2) > h3 {
     color: #fcd31c; }
+  /* line 82, _home.scss */
   #indexSummary > .howItWorks:nth-child(3) > h3 {
     color: #f7253e; }
+  /* line 85, _home.scss */
   #indexSummary > .howItWorks .comingSoon {
     font-family: "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     opacity: 0; }
+  /* line 91, _home.scss */
   #indexSummary > .howItWorks .comingSoonIndexSummary {
     display: none; }
 
+/* line 96, _home.scss */
 .sponsors {
   margin: 0;
   padding: 0; }
+  /* line 100, _home.scss */
   .sponsors div ul {
     margin: 0;
     padding: 0;
     height: 100%;
-    list-style: none; }
+    list-style: none;
+    opacity: .4; }
+    /* line 106, _home.scss */
+    .sponsors div ul:hover {
+      opacity: 1; }
+    /* line 109, _home.scss */
     .sponsors div ul li {
       display: inline;
       border-right: 10px solid white;
       overflow: hidden; }
+      /* line 113, _home.scss */
       .sponsors div ul li:last-child {
         border: none; }
+      /* line 116, _home.scss */
       .sponsors div ul li img {
         max-width: 100%; }
 
+/* line 1, modals/_login.scss */
 .modal {
   padding-top: 8%; }
 
+/* line 4, modals/_login.scss */
 .modal-content {
   border: 3px solid #fcd31c;
   background-color: #2c3034;
@@ -948,19 +1268,23 @@
   padding: 2%;
   border-radius: 30px;
   box-shadow: 0 0 0 99999px rgba(44, 48, 52, 0.85); }
+  /* line 12, modals/_login.scss */
   .modal-content .modal-header {
     border: none;
     padding: 0; }
+    /* line 15, modals/_login.scss */
     .modal-content .modal-header .modalTitle {
       font-family: "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 70px; }
+    /* line 20, modals/_login.scss */
     .modal-content .modal-header .modalSubtitle {
       font-family: "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 25px;
       color: white;
       margin-top: -20px; }
+    /* line 27, modals/_login.scss */
     .modal-content .modal-header .close-modal {
       color: rgba(255, 255, 255, 0.2);
       text-decoration: none;
@@ -973,16 +1297,20 @@
       top: 10px;
       right: 15px;
       cursor: pointer; }
+    /* line 40, modals/_login.scss */
     .modal-content .modal-header .close-modal:hover {
       color: #fcd31c; }
+  /* line 44, modals/_login.scss */
   .modal-content .modal-body {
     padding: 0; }
+    /* line 46, modals/_login.scss */
     .modal-content .modal-body p {
       font-family: "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 30px;
       color: white;
       margin-top: -20px; }
+    /* line 53, modals/_login.scss */
     .modal-content .modal-body .btn-group {
       font-family: "Open Sans", sans-serif;
       font-size: 20px;
@@ -992,8 +1320,10 @@
       margin: 15px auto;
       box-shadow: none;
       border-radius: 10px; }
+      /* line 62, modals/_login.scss */
       .modal-content .modal-body .btn-group .widebtn {
         width: 50%; }
+      /* line 65, modals/_login.scss */
       .modal-content .modal-body .btn-group li {
         width: 33%;
         display: inline;
@@ -1004,9 +1334,11 @@
         padding: 10px 0 2px 0;
         border: 2px solid rgba(255, 255, 255, 0.2);
         border-radius: 10px; }
+        /* line 75, modals/_login.scss */
         .modal-content .modal-body .btn-group li:hover, .modal-content .modal-body .btn-group li:focus, .modal-content .modal-body .btn-group li:active {
           border-color: #fcd31c;
           color: #fcd31c; }
+      /* line 82, modals/_login.scss */
       .modal-content .modal-body .btn-group li.facebook,
       .modal-content .modal-body .btn-group li.twitter,
       .modal-content .modal-body .btn-group li.google {
@@ -1014,20 +1346,25 @@
         background-repeat: no-repeat;
         background-position: center;
         padding: 35px 0; }
+    /* line 91, modals/_login.scss */
     .modal-content .modal-body .signUp,
     .modal-content .modal-body .signIn {
       color: #fcd31c;
       text-decoration: none; }
+      /* line 95, modals/_login.scss */
       .modal-content .modal-body .signUp span,
       .modal-content .modal-body .signIn span {
         color: rgba(255, 255, 255, 0.2); }
+  /* line 100, modals/_login.scss */
   .modal-content .modal-footer {
     border: none;
     padding: 0;
     margin: 20px auto 0 auto; }
+    /* line 104, modals/_login.scss */
     .modal-content .modal-footer .btn-group-justified {
       width: 60%;
       margin: 0 auto; }
+    /* line 108, modals/_login.scss */
     .modal-content .modal-footer button {
       background: transparent;
       font-family: "Khand", sans-serif;
@@ -1036,28 +1373,35 @@
       padding: 10px 0 2px 0;
       border: 2px solid rgba(255, 255, 255, 0.2);
       border-radius: 10px; }
+      /* line 116, modals/_login.scss */
       .modal-content .modal-footer button:hover, .modal-content .modal-footer button:focus, .modal-content .modal-footer button:active, .modal-content .modal-footer button:visited {
         border-color: #fcd31c;
         color: #fcd31c; }
+    /* line 124, modals/_login.scss */
     .modal-content .modal-footer p {
       color: rgba(255, 255, 255, 0.2);
       text-align: center; }
+      /* line 127, modals/_login.scss */
       .modal-content .modal-footer p a {
         color: #fcd31c; }
 
+/* line 1, partials/_rating.scss */
 .rating {
   width: 250px;
   height: 55px;
   margin: 0 0 70px 0;
   background: rgba(44, 48, 52, 0.05); }
+  /* line 6, partials/_rating.scss */
   .rating .ratingBarWrap {
     position: relative;
     width: 250px; }
+    /* line 9, partials/_rating.scss */
     .rating .ratingBarWrap svg,
     .rating .ratingBarWrap div.ratingBar {
       position: absolute;
       top: 0;
       left: 0; }
+    /* line 15, partials/_rating.scss */
     .rating .ratingBarWrap svg {
       pointer-events: none;
       position: relative;
@@ -1066,11 +1410,14 @@
       padding: 0;
       width: 252px;
       pointer-events: none; }
+    /* line 24, partials/_rating.scss */
     .rating .ratingBarWrap input[type="radio"] {
       display: none; }
+    /* line 27, partials/_rating.scss */
     .rating .ratingBarWrap .ratings {
       display: flex;
       direction: rtl; }
+      /* line 30, partials/_rating.scss */
       .rating .ratingBarWrap .ratings .rate {
         width: 20%;
         height: 50px;
@@ -1080,10 +1427,13 @@
         top: -56px;
         z-index: 1;
         cursor: pointer; }
+        /* line 39, partials/_rating.scss */
         .rating .ratingBarWrap .ratings .rate:hover, .rating .ratingBarWrap .ratings .rate:hover ~ .rate {
           background: #2c3034; }
+    /* line 44, partials/_rating.scss */
     .rating .ratingBarWrap .mobileRatings {
       display: none; }
+      /* line 46, partials/_rating.scss */
       .rating .ratingBarWrap .mobileRatings .rate {
         width: 20%;
         height: 50px;
@@ -1093,10 +1443,12 @@
         top: -56px;
         z-index: 1;
         cursor: pointer; }
+    /* line 57, partials/_rating.scss */
     .rating .ratingBarWrap div.ratingBar {
       width: 250px;
       padding-top: 50px;
       margin-top: 1px; }
+  /* line 63, partials/_rating.scss */
   .rating .ratingDisplay,
   .rating .userRatingDisplay {
     font-family: "Open Sans", sans-serif;
@@ -1106,12 +1458,15 @@
     height: 0;
     position: relative;
     z-index: 3; }
+  /* line 73, partials/_rating.scss */
   .rating .ratingDisplay {
     top: -75px; }
+  /* line 76, partials/_rating.scss */
   .rating .userRatingDisplay {
     top: -65px;
     display: none; }
 
+/* line 85, partials/_rating.scss */
 .dealCard .rating,
 .dispensaryCard .rating,
 .strainCard .rating {
@@ -1119,20 +1474,24 @@
   height: 16%;
   margin: -6% 0 0 0;
   position: absolute; }
+  /* line 90, partials/_rating.scss */
   .dealCard .rating .ratingBarWrap,
   .dispensaryCard .rating .ratingBarWrap,
   .strainCard .rating .ratingBarWrap {
     width: 100%;
     height: 0; }
+    /* line 96, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap svg,
     .dispensaryCard .rating .ratingBarWrap svg,
     .strainCard .rating .ratingBarWrap svg {
       width: 101%;
       margin-left: -1px; }
+    /* line 100, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap .rate,
     .dispensaryCard .rating .ratingBarWrap .rate,
     .strainCard .rating .ratingBarWrap .rate {
       display: none; }
+    /* line 103, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap div.ratingBar,
     .dispensaryCard .rating .ratingBarWrap div.ratingBar,
     .strainCard .rating .ratingBarWrap div.ratingBar {
@@ -1145,29 +1504,36 @@
       -ms-transition: all .7s ease;
       -o-transition: all .7s ease;
       transition: all .7s ease; }
+    /* line 115, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap .ratings .rateThis,
     .dispensaryCard .rating .ratingBarWrap .ratings .rateThis,
     .strainCard .rating .ratingBarWrap .ratings .rateThis {
       display: none; }
+  /* line 120, partials/_rating.scss */
   .dealCard .rating .ratingDisplay,
   .dispensaryCard .rating .ratingDisplay,
   .strainCard .rating .ratingDisplay {
     display: none; }
+  /* line 123, partials/_rating.scss */
   .dealCard .rating .userRatingDisplay,
   .dispensaryCard .rating .userRatingDisplay,
   .strainCard .rating .userRatingDisplay {
     display: none; }
 
+/* line 129, partials/_rating.scss */
 .dispensaryRating .ratingBar {
   background-color: #f7253e; }
 
+/* line 133, partials/_rating.scss */
 .dealRating .ratingBar {
   background-color: #fcd31c; }
 
+/* line 137, partials/_rating.scss */
 .strainRating .ratingBar {
   background-color: #3dd861; }
 
 /* Card Start */
+/* line 2, partials/_cards.scss */
 .cardWrapper {
   width: 100%;
   text-decoration: none;
@@ -1175,41 +1541,50 @@
   padding: 0;
   position: relative;
   cursor: pointer; }
+  /* line 9, partials/_cards.scss */
   .cardWrapper .cardBg {
     width: 100%; }
+  /* line 12, partials/_cards.scss */
   .cardWrapper .cardInfo {
     position: absolute;
     width: 80%;
     top: 0px;
     margin: 10% 10% 0 10%;
     padding: 0; }
+  /* line 19, partials/_cards.scss */
   .cardWrapper .dispensaryLogo,
   .cardWrapper .dealImage,
   .cardWrapper .strainImage {
     border-radius: 20px;
     margin-bottom: 5%;
     width: 100%; }
+    /* line 25, partials/_cards.scss */
     .cardWrapper .dispensaryLogo img,
     .cardWrapper .dealImage img,
     .cardWrapper .strainImage img {
       width: 100%;
       border-radius: 15px; }
+  /* line 30, partials/_cards.scss */
   .cardWrapper .dispensaryName,
   .cardWrapper .dealTitle,
   .cardWrapper .strainName {
     font-family: "Khand", sans-serif;
     text-transform: uppercase;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: normal;
     text-align: center;
     color: #2c3034;
     margin: 0;
     padding: 0;
-    height: 28px;
-    overflow: hidden; }
+    height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  /* line 46, partials/_cards.scss */
   .cardWrapper .dealTitle {
     height: 48px;
     line-height: 1.1; }
+  /* line 50, partials/_cards.scss */
   .cardWrapper .dispensaryAddress,
   .cardWrapper .businessName,
   .cardWrapper .producedBy {
@@ -1222,24 +1597,29 @@
     margin: 0;
     padding: 0;
     overflow: hidden; }
+  /* line 63, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .businessName.line2,
   .cardWrapper .producedBy.line2 {
     position: relative;
     z-index: 3; }
+  /* line 69, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line1,
   .cardWrapper .producedBy.line1 {
     height: 18px; }
+  /* line 73, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .producedBy.line2 {
     height: 26px; }
+  /* line 77, partials/_cards.scss */
   .cardWrapper .businessName.line2 {
     height: 24px; }
+  /* line 80, partials/_cards.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
-    font-size: 1em;
+    font-size: .9em;
     text-transform: uppercase;
     width: 100%;
     margin: 22% auto 0 auto;
@@ -1248,46 +1628,60 @@
     z-index: 3;
     text-align: center; }
 
+/* line 95, partials/_cards.scss */
 .dispensaryCard .distanceAway {
   color: #f7253e; }
 
+/* line 100, partials/_cards.scss */
 .dealCard .distanceAway {
   color: #fcd31c; }
 
+/* line 105, partials/_cards.scss */
 .strainCard .strainType {
   color: #3dd861; }
 
+/* line 110, partials/_cards.scss */
 .featured-dispensary-true,
 .featured-deal-true,
 .featured-strain-true,
 .new-strain-true {
   position: absolute;
   top: 10%;
-  left: -5.8%;
+  left: -6.5%;
   pointer-events: none;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat; }
 
+/* line 122, partials/_cards.scss */
 .featured-dispensary-true {
-  background-image: url(../img/banners/featured.png); }
+  background-image: url(../img/banners/featured.png);
+  background-size: 50%; }
 
+/* line 126, partials/_cards.scss */
 .featured-deal-true {
   left: -5.9%;
-  background-image: url(../img/banners/dailyDeal.png); }
+  background-image: url(../img/banners/dailyDeal.png);
+  background-size: 50%; }
 
+/* line 131, partials/_cards.scss */
 .featured-strain-true {
-  background-image: url(../img/banners/strainOfTheWeek.png); }
+  background-image: url(../img/banners/strainOfTheWeek.png);
+  background-size: 50%; }
 
+/* line 135, partials/_cards.scss */
 .new-strain-true {
   top: 11.3%;
-  left: -3.4%;
-  background-image: url(../img/banners/new.png); }
+  left: -4%;
+  background-image: url(../img/banners/new.png);
+  background-size: 50%; }
 
 /* Card End */
+/* line 145, partials/_cards.scss */
 .dvCardList {
   padding-left: 0;
   list-style-type: none; }
+  /* line 149, partials/_cards.scss */
   .dvCardList > li {
     display: inline-block;
     padding: 1%; }
@@ -1295,24 +1689,30 @@
 /**
  * Dakota's menu style
  */
+/* line 5, partials/_menu.scss */
 ul.nav.nav-tabs {
   height: 100%;
   border: none; }
+  /* line 8, partials/_menu.scss */
   ul.nav.nav-tabs > li {
     padding: 0;
     float: left;
     opacity: .2;
     border: none;
     margin: 0 2px 0 0; }
+    /* line 14, partials/_menu.scss */
     ul.nav.nav-tabs > li:last-child {
       margin: 0; }
+    /* line 17, partials/_menu.scss */
     ul.nav.nav-tabs > li:hover {
       opacity: 1;
       border: none; }
+  /* line 22, partials/_menu.scss */
   ul.nav.nav-tabs > li.active {
     opacity: 1;
     border: none;
     border-bottom: 1px solid #2c3034; }
+  /* line 27, partials/_menu.scss */
   ul.nav.nav-tabs > li > a {
     margin: 0;
     background-size: 100%;
@@ -1322,28 +1722,37 @@ ul.nav.nav-tabs {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border: none; }
+    /* line 36, partials/_menu.scss */
     ul.nav.nav-tabs > li > a:hover, ul.nav.nav-tabs > li > a:active, ul.nav.nav-tabs > li > a:visited, ul.nav.nav-tabs > li > a:focus {
       color: transparent;
       border: none; }
+  /* line 46, partials/_menu.scss */
   ul.nav.nav-tabs > li:nth-child(1) > a {
     background-image: url("../img/tabs/indica.png"); }
+  /* line 50, partials/_menu.scss */
   ul.nav.nav-tabs > li:nth-child(2) > a {
     background-image: url("../img/tabs/sativa.png"); }
+  /* line 54, partials/_menu.scss */
   ul.nav.nav-tabs > li:nth-child(3) > a {
     background-image: url("../img/tabs/hybrid.png"); }
+  /* line 58, partials/_menu.scss */
   ul.nav.nav-tabs > li:nth-child(4) > a {
     background-image: url("../img/tabs/preroll.png"); }
+  /* line 62, partials/_menu.scss */
   ul.nav.nav-tabs > li:nth-child(5) > a {
     background-image: url("../img/tabs/edible.png"); }
+  /* line 66, partials/_menu.scss */
   ul.nav.nav-tabs > li:nth-child(6) > a {
     background-image: url("../img/tabs/other.png"); }
 
+/* line 71, partials/_menu.scss */
 .menu {
   height: 100%;
   width: 100%;
   padding-bottom: 5%;
   float: left;
   background: #2c3034 !important; }
+  /* line 77, partials/_menu.scss */
   .menu .menuItem {
     margin: 5% 5% 0 5%;
     border-radius: 20px;
@@ -1354,6 +1763,7 @@ ul.nav.nav-tabs {
     background-color: white;
     color: #2c3034;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3); }
+    /* line 87, partials/_menu.scss */
     .menu .menuItem .itemName {
       margin: 0 0 10px 0;
       border-bottom: thin solid rgba(44, 48, 52, 0.15);
@@ -1361,6 +1771,7 @@ ul.nav.nav-tabs {
       width: 100%;
       float: left;
       font: normal "Khand", sans-serif 35px; }
+    /* line 95, partials/_menu.scss */
     .menu .menuItem .producerName {
       margin: 10px 0 0 0;
       padding: 0;
@@ -1368,10 +1779,12 @@ ul.nav.nav-tabs {
       font: 22px "Khand", sans-serif;
       text-transform: uppercase;
       color: rgba(44, 48, 52, 0.3); }
+    /* line 103, partials/_menu.scss */
     .menu .menuItem .itemImage {
       margin-right: 10px;
       width: 30%;
       float: left; }
+    /* line 108, partials/_menu.scss */
     .menu .menuItem .thcPotency,
     .menu .menuItem .cbdPotency {
       margin: 0px auto 0 auto;
@@ -1381,21 +1794,25 @@ ul.nav.nav-tabs {
       text-transform: uppercase;
       font-size: 20px;
       color: rgba(44, 48, 52, 0.3); }
+      /* line 117, partials/_menu.scss */
       .menu .menuItem .thcPotency span,
       .menu .menuItem .cbdPotency span {
         font-size: 40px;
         color: #2c3034; }
+    /* line 122, partials/_menu.scss */
     .menu .menuItem .itemDescription {
       margin: 1em auto;
       clear: both;
       float: left;
       font-size: 12px; }
+    /* line 128, partials/_menu.scss */
     .menu .menuItem .pricing {
       margin: 0;
       border-top: thin solid rgba(44, 48, 52, 0.15);
       padding: 10px 0 0 0;
       width: 100%;
       clear: left; }
+      /* line 134, partials/_menu.scss */
       .menu .menuItem .pricing li {
         border-right: thin solid rgba(44, 48, 52, 0.15);
         padding: 10px 0 5px 0;
@@ -1406,26 +1823,33 @@ ul.nav.nav-tabs {
         font: normal 25px/22px "Khand", sans-serif;
         text-transform: uppercase;
         color: rgba(44, 48, 52, 0.2); }
+        /* line 144, partials/_menu.scss */
         .menu .menuItem .pricing li .price {
           font-size: 28px;
           color: #2c3034; }
+        /* line 148, partials/_menu.scss */
         .menu .menuItem .pricing li .unit {
           font-size: 18px;
           color: #2c3034; }
+        /* line 152, partials/_menu.scss */
         .menu .menuItem .pricing li:last-child {
           border-right: none; }
 
+/* line 24, style.scss */
 body {
   position: relative;
   top: 100px; }
 
+/* line 29, style.scss */
 .container-fluid {
   padding: 0 2%;
   margin: 0; }
 
+/* line 35, style.scss */
 a:active, a:hover, a:visited {
   text-decoration: none; }
 
+/* line 42, style.scss */
 h1,
 h2,
 h3,
@@ -1435,18 +1859,22 @@ h6 {
   font-family: "Khand", sans-serif;
   text-transform: uppercase; }
 
+/* line 52, style.scss */
 h3 {
   border-bottom: 1px solid rgba(44, 48, 52, 0.05);
   text-align: center;
   font-size: 30px; }
 
+/* line 58, style.scss */
 p {
   font-family: "Open Sans", sans-serif; }
 
+/* line 62, style.scss */
 ul {
   list-style: none;
   padding: 0; }
 
+/* line 67, style.scss */
 .pageTitle {
   margin-top: 0;
   border-bottom: 1px solid rgba(44, 48, 52, 0.05);
@@ -1455,14 +1883,17 @@ ul {
   text-transform: uppercase;
   font-size: 40px; }
 
+/* line 76, style.scss */
 .viewOnMap {
   text-transform: uppercase;
   font-weight: bold; }
 
+/* line 81, style.scss */
 form {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   color: #2c3034; }
+  /* line 85, style.scss */
   form .btn-block {
     font-family: "Khand", sans-serif;
     text-transform: uppercase;
@@ -1470,34 +1901,45 @@ form {
     color: white;
     padding: 5px 0 0 0;
     background: #2c3034; }
+    /* line 92, style.scss */
     form .btn-block.dispensaryCMS:hover, form .btn-block.dispensaryCMS:active, form .btn-block.dispensaryCMS:focus, form .btn-block.dispensaryCMS:visited {
       background: #f7253e;
       color: white; }
+    /* line 99, style.scss */
     form .btn-block.dealCMS:hover, form .btn-block.dealCMS:active, form .btn-block.dealCMS:focus, form .btn-block.dealCMS:visited {
       background: #fcd31c;
       color: white; }
+    /* line 106, style.scss */
     form .btn-block.strainCMS:hover, form .btn-block.strainCMS:active, form .btn-block.strainCMS:focus, form .btn-block.strainCMS:visited {
       background: #3dd861;
       color: white; }
 
+/* line 116, style.scss */
 .brandassets {
   margin-top: -3%;
   list-style: none; }
+  /* line 119, style.scss */
   .brandassets li {
     margin-bottom: 20px;
     text-align: center; }
+    /* line 122, style.scss */
     .brandassets li h4 {
       font-size: 35px;
       margin-top: 30px;
       border-bottom: 3px solid; }
+    /* line 127, style.scss */
     .brandassets li:nth-child(1) {
       color: #3dd861; }
+    /* line 130, style.scss */
     .brandassets li:nth-child(2) {
       color: #fcd31c; }
+    /* line 133, style.scss */
     .brandassets li:nth-child(3) {
       color: #f7253e; }
+    /* line 136, style.scss */
     .brandassets li:nth-child(4) {
       color: #2c3034; }
+    /* line 140, style.scss */
     .brandassets li a img {
       width: 100%; }
 

@@ -238,6 +238,7 @@ angular.module('DeViine.controllers', [])
       'Butter',
       'Cheese',
       'Chestnut',
+      'Cedar',
       'Coffee',
       'Diesel',
       'Flowery',
@@ -319,7 +320,7 @@ angular.module('DeViine.controllers', [])
     };
   }])
 
-  .controller('rateCtrl', ['$scope', '$firebase', 'dvUrl', 'usersService', function($scope, $firebase, dvUrl, usersService) {
+  .controller('rateCtrl', ['$scope', '$firebase', 'dvUrl', 'usersService', 'itemsService', function($scope, $firebase, dvUrl, usersService, itemsService) {
 
     $scope.sendRating = function(divId) {
         var rating = document.getElementById(divId).value;
@@ -341,5 +342,7 @@ angular.module('DeViine.controllers', [])
     };
 
   }])
+
+  .controller('reviewCtrl', ['$scope', '$firebase', 'dvUrl', 'usersService', function($scope, $firebase, dvUrl, usersService) {    }])
 ;
 

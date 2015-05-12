@@ -207,7 +207,7 @@ angular.module('DeViine.services', [])
        */
       // getOther is currently limiting to last 2. 
       getOther: function(itemType) {
-        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).limitToLast(2) ).$asArray();
+        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).limitToLast(4) ).$asArray();
       },
       /**
        * @param {String} itemType
@@ -254,24 +254,14 @@ angular.module('DeViine.services', [])
 
       obj.getUserRating = function(ratings) {
 
-        // Data snapshot???
-        // // Get a reference to our posts
-        // var ref = new Firebase("https://docs-examples.firebaseio.com/web/saving-data/fireblog/posts");
-        // // Attach an asynchronous callback to read the data at our posts reference
-        // ref.on("value", function(snapshot) {
-        //   console.log(snapshot.val());
-        // }, function (errorObject) {
-        //   console.log("The read failed: " + errorObject.code);
-        // });
+          // var userRating = new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/ratings/' + userId);
 
-        // Display if true???
-        // if(! userRating) {
-        //   console.log('User is true.');
-        //   ('.userRatingDisplay').css('display','inline');
-        // } else {
-        //   return 'No user rating';
-        //   console.log('No user rating.');
-        // }
+          // if(! userRating) {
+          //   console.log('Users rating is' + userRating);
+          //   ('.userRatingDisplay').css('display','inline');
+          // } else {
+          //   console.log('No user rating.');
+          // }
       },
 
       /**
@@ -282,6 +272,22 @@ angular.module('DeViine.services', [])
         return ratings == null
           ? 0
           : Object.keys(ratings).length;
+      }
+      //removed return envelope
+      return obj;
+  })
+  .factory('reviewsService', function() {
+    //removed return envelope
+    var obj = {};
+      
+      /**
+       * @param {Object} reviews
+       * @returns {Number} reviewsCount
+       */
+      obj.getReviewsCount = function(reviews) {
+        return reviews == null
+          ? 0
+          : Object.keys(reviews).length;
       }
       //removed return envelope
       return obj;

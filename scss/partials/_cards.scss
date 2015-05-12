@@ -32,14 +32,16 @@
   .strainName {
     font-family: $dvHeaderFont;
     text-transform: uppercase;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: normal;
     text-align: center;
     color: rgb(44,48,52);
     margin: 0;
     padding: 0;
-    height: 28px;
+    height: 24px;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .dealTitle {
     height: 48px;
@@ -79,7 +81,7 @@
   .strainType {
     font-family: $dvTextFont;
     font-weight: bold;
-    font-size: 1em;
+    font-size: .9em;
     text-transform: uppercase;
     width: 100%;
     margin: 22% auto 0 auto;
@@ -111,7 +113,7 @@
 .new-strain-true {
   position: absolute;
   top: 10%;
-  left: -5.8%;
+  left: -6.5%;
   pointer-events: none;
   width: 100%;
   height: 100%;
@@ -119,18 +121,22 @@
 }
 .featured-dispensary-true {
   background-image: url(../img/banners/featured.png);
+  background-size: 50%;
 }
 .featured-deal-true {
   left: -5.9%;
   background-image: url(../img/banners/dailyDeal.png);
+  background-size: 50%;
 }
 .featured-strain-true {
   background-image: url(../img/banners/strainOfTheWeek.png);
+  background-size: 50%;
 }
 .new-strain-true {
   top: 11.3%;
-  left: -3.4%;
+  left: -4%;
   background-image: url(../img/banners/new.png);
+  background-size: 50%;
 }
 
 

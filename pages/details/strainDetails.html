@@ -84,27 +84,35 @@
       </div>
     </div> -->
   </div>
-  <div class="col-md-6 col-sm-6 col-xs-12">
+  <!-- <div class="col-md-6 col-sm-6 col-xs-12">
     <img ng-elevate-zoom ng-src="{{ strainDetails.image }}" zoom-image="{{ strainDetails.zoomimage }}" class="img-responsive strainGallery"/>
-  </div>
+  </div> -->
   <div class="col-md-6 col-sm-6 col-xs-12">
-    <h3>Reviews</h3>
-    <dir-disqus 
-      disqus-shortname="deviine"
-      disqus-identifier="{{ strainDetails.$id }}"
-      disqus-title="{{ strainDetails.$id }}"
-      disqus-url="http://deviine.com/beta/#!/strains/{{ strainDetails.$id }}">
-    </dir-disqus>
+    <h3>{{ getReviewsCount(reviews) }} Reviews</h3>
+    <section class="reviews" ng-reviews data="{{ strainDetails.name }}">
+      <h4 class="pleaseSignIn">Please <a ng-click="showLoginModal()">sign in</a> to submit a review.</h4>
+      <div class="leaveReview col-md-12 col-sm-12 col-xs-12" ng-show="currentUser" ng-controller="reviewCtrl">
+        <div class="avatarWrap">
+          <img class="avatar" ng-src="{{ currentAvatar }}" title="{{ currentAvatar }}"/>
+          <h4 class="reviewBanner">Try this recently? How was your high?</h4>
+        </div>
+        <div class='name' title="{{ currentName }}"></div>
+        <textarea type='text' id='reviewInput' placeholder='Drop a review...'></textarea>
+        <input ng-click="sendReview" type='submit' id='submitReview' value='SUBMIT' class="pull-right">
+      </div>
+      <div class="strainId" title="{{ strainDetails.$id }}"></div>
+      <div id='reviewsDiv' class="col-md-12 col-sm-12 col-xs-12"></div>
+    </section>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
     <h3>Suggested Strains</h3>
     <ul class="dvCardList">
-      <li ng-repeat="strain in featuredStrains" class="col-md-3 col-sm-3 col-xs-8">
+      <li ng-repeat="strain in featuredStrains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8">
         <dv-card item-type="strain" item-id="{{ strain.$id }}"></dv-card>
       </li>
-      <li ng-repeat="strain in otherStrains" class="col-md-3 col-sm-3 col-xs-8">
+      <li ng-repeat="strain in otherStrains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8">
         <dv-card item-type="strain" item-id="{{ strain.$id }}"></dv-card>
       </li>
     </ul>

@@ -1,9 +1,9 @@
 <h2 class="pageTitle">Strains</h2>
 <ul class="dvCardList" id="strainsList">
-	<li ng-repeat="featuredStrain in featuredStrains" class="col-md-3 col-sm-3 col-xs-8">
+	<li ng-repeat="featuredStrain in featuredStrains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8">
 		<dv-card item-type="strain" item-id="{{ featuredStrain.$id }}"></dv-card>
 	</li>
-	<li ng-repeat="strain in strains" class="col-md-3 col-sm-3 col-xs-8">
+	<li ng-repeat="strain in strains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8">
 		<dv-card item-type="strain" item-id="{{ strain.$id }}"></dv-card>
 	</li>
 </ul>

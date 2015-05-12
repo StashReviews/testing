@@ -59,6 +59,8 @@ angular.module('DeViine.directives', [])
         scope.getAvgRating = ratingsService.getAvgRating;
 
         scope.getRatingsCount = ratingsService.getRatingsCount;
+
+        scope.getUserRating = ratingsService.getUserRating;
       }
     };
   })
@@ -101,6 +103,53 @@ angular.module('DeViine.directives', [])
         }
 
         linkElevateZoom();
+
+      }
+    };
+  })
+
+   /** Reviews Refresh */
+  .directive('ngReviews', function() {
+    return {
+      restrict: 'A',
+      link: function(scope, element, attrs) {
+
+        //Will watch for changes on the attribute
+        attrs.$observe('data',function(){
+          linkRefreshReviews();
+        })
+
+        function linkRefreshReviews(){
+          // Hide Please Sign In to Submit Review
+          var name = $('.username').attr('title');
+          if (! name) {
+            $(".pleaseSignIn").show();
+          } else {
+            $(".pleaseSignIn").hide();
+          }
+
+          if (!attrs.data) return;
+            // Show Reviews
+            var userId = $('.username').attr('title');
+            var itemId = $('.strainId').attr('title');
+            var reviewsRef = new Firebase('https://deviineadmin.firebaseio.com/strains/' + itemId + '/reviews');
+            var userReviewsRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/reviews/' + itemId);
+            // Add a callback that is triggered for each chat review.
+            reviewsRef.on('child_added', function (snapshot) {
+              var review = snapshot.val();
+              $('<img class=".reviewAvatar"/>').attr("src", review.avatar).appendTo($('#reviewsDiv'));
+              $('<h4 class=".reviewAuthor"/>').text(review.name).appendTo($('#reviewsDiv'));
+              $('<h6 class=".reviewDate"/>').text(review.date).appendTo($('#reviewsDiv'));
+              $('<p class=".reviewText"/>').text(review.text).appendTo($('#reviewsDiv'));
+              // $('.reviewAuthor').text(review.name).appendTo($('#reviewsDiv'));
+              // $('.reviewText').text(review.text).appendTo($('#reviewsDiv'));
+              // $(".reviewAvatar").attr("src", review.avatar);
+              $('#reviewsDiv')[0].scrollTop = $('#reviewsDiv')[0].scrollHeight;
+
+            });
+        }
+
+        linkRefreshReviews();
 
       }
     };

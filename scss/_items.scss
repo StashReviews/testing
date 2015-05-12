@@ -265,4 +265,118 @@
   }
 }
 
+.reviews {
+  .leaveReview {
+    padding: 0;
+    .avatarWrap {
+      float: left;
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+      }
+      h4 {
+        float: left;
+        position: absolute;
+        font-size: 11px;
+        font-family: $dvTextFont;
+        font-weight: bold;
+        color: white;
+        padding: 5px 10px ;
+        background: $dvGreen;
+        top: 0;
+        left: 35px;
+      }
+    }
+    #reviewInput {
+      border: 2px solid $dvGray20;
+      font-family: $dvTextFont;
+      color: $dvGray;
+      padding: 40px 10px 10px 10px;
+      border-radius: 20px 20px 0 0;
+      margin-top: -40px;
+      float: right;
+      height: 100px;
+      width: 100%;
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: $dvGreen;
+      }
+    }
+    #submitReview {
+      font-family: $dvTextFont;
+      font-size: 14px;
+      text-align: center;
+      color: $dvGreen;
+      border: 2px solid $dvGreen;
+      background: none;
+      margin-top: 5px;
+      margin-left: 50px;
+      padding: 10px;
+      float: right;
+      width: 100%;
+      &:hover {
+        background: $dvGreen;
+        color: white;
+      }
+    }
+  }
+  .totalReviews {
+    font-family: $dvTextFont;
+    font-size: 14px;
+    text-align: center;
+  }
+  #reviewsDiv {
+    margin-top: 20px;
+    padding: 0;
+    h4 {
+      font-family: $dvTextFont;
+      font-size: 15px;
+      text-transform: uppercase;
+      margin: 0;
+      color: $dvGray;
+      padding: 10px 0 0 0;
+      border-top: 1px solid $dvGray5;
+    }
+    h6 {
+      font-family: $dvTextFont;
+      font-size: 10px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      color: $dvGray20;
+      margin: 0px 0 3px 0;
+    }
+    p {
+      font-family: $dvTextFont;
+      font-size: 12px;
+      color: $dvGray;
+      margin: 0;
+      padding: 0 0 8px 0;
+    }
+    img {
+      border-radius: 50%;
+      float: left;
+      margin: 10px 20px 10px 0;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .pleaseSignIn {
+    padding-top: 20px;
+    text-align: center;
+    color: $dvGray;
+    a {
+      color: $dvYellow;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+
 
