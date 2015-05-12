@@ -96,6 +96,8 @@
 .dealGallery,
 .strainGallery {
   width: 100%;
+  position: relative;
+  z-index: -10;
 }
 .strainGalleryMobile {
   display: none;
@@ -275,19 +277,33 @@
         height: 40px;
         border-radius: 50%;
         position: relative;
-        z-index: 2;
+        z-index: 3;
+        cursor: pointer;
+        transition: 1s;
+        -webkit-transition: 1s;
       }
-      h4 {
+      .reviewBanner {
         float: left;
         position: absolute;
+        z-index: 2;
         font-size: 11px;
         font-family: $dvTextFont;
         font-weight: bold;
         color: white;
-        padding: 5px 10px ;
+        padding: 5px 5px 5px 40px;
         background: $dvGreen;
         top: 0;
-        left: 35px;
+        left: 10px;
+        .closeReviewBanner {
+          color: white;
+          text-decoration: none;
+          opacity: .5;
+          cursor: pointer;
+          margin-left: 5px;
+          &:hover {
+            opacity: 1;
+          }
+        }
       }
     }
     #reviewInput {

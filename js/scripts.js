@@ -93,6 +93,8 @@ window.onload = (function() {
       	$('#reviewInput').hide();
       	$('#submitReview').attr('value', "Your review was successful!").css("background","none");
       	$('.reviewBanner').text("You'll be able to see all of your reviews in a later release.");
+      	$('.avatarWrap .avatar').css({"margin-left":"0px"});
+      	$('.reviewBanner').show();
 
       	// Success alert.
       	alert("Awesome! Thanks for submitting a review. It may take a bit for your review to show up. Later, you'll be able to access all of your reviews to remember your highs!");
@@ -115,5 +117,18 @@ window.onload = (function() {
 	var itemId = $('.strainId').attr('title');
     var reviewsRef = new Firebase('https://deviineadmin.firebaseio.com/strains/' + itemId + '/reviews');
     var userReviewsRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/reviews/' + itemId);
+
+
+
+    $('.closeReviewBanner').on( "click", function() {
+    	$('.reviewBanner').hide();
+    	$('.avatarWrap .avatar').css({"margin-left":"-20px"});
+    	$('#reviewInput').css({"padding-top":"10px","padding-left":"25px"});
+    });
+    $('.avatarWrap .avatar').on( "click", function() {
+    	$('.reviewBanner').show();
+    	$('.avatarWrap .avatar').css({"margin-left":"0px"});
+    	$('#reviewInput').css({"padding-top":"40px","padding-left":"10px"});
+    });
 
 });
