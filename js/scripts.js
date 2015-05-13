@@ -119,16 +119,4 @@ window.onload = (function() {
     var userReviewsRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/reviews/' + itemId);
 
 
-
-    $('.closeReviewBanner').on( "click", function() {
-    	$('.reviewBanner').hide();
-    	$('.avatarWrap .avatar').css({"margin-left":"-20px"});
-    	$('#reviewInput').css({"padding-top":"10px","padding-left":"25px"});
-    });
-    $('.avatarWrap .avatar').on( "click", function() {
-    	$('.reviewBanner').show();
-    	$('.avatarWrap .avatar').css({"margin-left":"0px"});
-    	$('#reviewInput').css({"padding-top":"40px","padding-left":"10px"});
-    });
-
 });
