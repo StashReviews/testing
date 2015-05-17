@@ -68,13 +68,26 @@ angular.module('DeViine.controllers', [])
       $modalInstance.dismiss();
     };
   }])
-  .controller('homeCtrl', ['$scope', 'itemsService', function($scope, itemsService) {
+  .controller('homeCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
     $scope.featuredDispensaries = itemsService.getFeatured('dispensaries');
 
     $scope.featuredDeals = itemsService.getFeatured('deals');
 
     $scope.featuredStrains = itemsService.getFeatured('strains');
     $scope.newStrains = itemsService.getNew('strains');
+
+    $q.all([itemsService.getNew('strains'), itemsService.getFeatured('strains')])
+    .then(function(strainData) {
+      strainData.forEach(function(strains) {
+        strains.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+        });
+      });
+
+      $scope.newStrains = strainData[0];
+      $scope.featuredStrains = strainData[1];
+    });
+
   }])
   .controller('dispensariesCtrl', ['$scope', 'itemsService', function($scope, itemsService) {
     // @todo Order dispensaries by geographic proximity.
@@ -210,17 +223,39 @@ angular.module('DeViine.controllers', [])
         : $firebase( new Firebase(dvUrl + '/deals') ).$update(dealId, deal);
     };
   }])
-  .controller('strainsCtrl', ['$scope', 'itemsService', function($scope, itemsService) {
-    $scope.strains = itemsService.getAll('strains');
-    $scope.featuredStrains = itemsService.getFeatured('strains');
-    //$scope.strains = itemsService.getHighestRated('strains');
+  .controller('strainsCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
+    // Wait for both our strains and our featured strains to load.
+    // @todo Might we need to remove duplicate entries?
+    $q.all([itemsService.getAll('strains'), itemsService.getFeatured('strains')])
+      .then(function(strainData) {
+        strainData.forEach(function(strains) {
+          strains.sort(function(a, b) {
+            return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+          });
+        });
+
+        $scope.strains = strainData[0];
+        $scope.featuredStrains = strainData[1];
+      });
   }])
-  .controller('strainDetailsCtrl', ['$scope', '$stateParams', 'itemsService', function($scope, $stateParams, itemsService) {
+  .controller('strainDetailsCtrl', ['$scope', '$q', '$stateParams', 'itemsService', 'ratingsService', function($scope, $q, $stateParams, itemsService, ratingsService) {
     $scope.strainDetails = itemsService.get('strains', $stateParams.strainId);
-    // @todo Exclude the current strain from the results of itemsService.getFeatured().
-    $scope.featuredStrains = itemsService.getFeatured('strains');
-    // @todo Exclude the current strain from the results of itemsService.getOther().
-    $scope.otherStrains = itemsService.getOther('strains');
+    // // @todo Exclude the current strain from the results of itemsService.getFeatured().
+    // $scope.featuredStrains = itemsService.getFeatured('strains');
+    // // @todo Exclude the current strain from the results of itemsService.getOther().
+    // $scope.otherStrains = itemsService.getOther('strains');
+
+      $q.all([itemsService.getOther('strains'), itemsService.getFeatured('strains')])
+      .then(function(strainData) {
+        strainData.forEach(function(strains) {
+          strains.sort(function(a, b) {
+            return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+          });
+        });
+
+        $scope.otherStrains = strainData[0];
+        $scope.featuredStrains = strainData[1];
+      });
 
   }])
   .controller('strainsManageCtrl', ['$scope', '$firebase', 'dvUrl', function($scope, $firebase, dvUrl) {
@@ -324,17 +359,18 @@ angular.module('DeViine.controllers', [])
 
     $scope.sendRating = function(divId) {
         var rating = document.getElementById(divId).value;
-
-        userId = usersService.getName(usersService.getCurrentUser())
         itemType = 'strains';
-        itemId = $scope.$parent.$parent.strainDetails.$id;
+        userId = $('.username').attr('title');
+        itemId = $('.strainId').attr('title');
         
         if(! userId) {
           console.log('No User');
-          // TODO: Launch login modal
-          alert ("Please sign in to submit a rating.");
+          // showLoginModal(); TODO - LAUNCH LOGIN MODAL
+          alert("Please sign in to submit a rating.");
+        } else if (! userRating) {
+          alert("No User Rating Exists");
         } else {
-          console.log('Rating Sent');
+          alert('Rating Sent');
           $firebase( new Firebase(dvUrl + '/users/' + userId + '/ratings/' + itemType + '/' + itemId) ).$set(rating);
           $firebase( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/ratings/' + userId) ).$set(rating);
         };

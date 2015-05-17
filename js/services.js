@@ -182,7 +182,7 @@ angular.module('DeViine.services', [])
        * @returns {FirebaseArray}
        */
       getAll: function(itemType) {
-        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("0") ).$asArray();
+        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("0") ).$asArray().$loaded();
       },
       /**
        * @param {String} itemType
@@ -191,7 +191,7 @@ angular.module('DeViine.services', [])
       // getFeatured is currently limiting to first 2.
       // Should limit to the first 2 that have .featured = true.
       getFeatured: function(itemType) {
-        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("true").limitToFirst(2) ).$asArray();
+        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("true").limitToFirst(2) ).$asArray().$loaded();
       },
       /**
        * @param {String} itemType
@@ -199,7 +199,7 @@ angular.module('DeViine.services', [])
        */
       // getNew is limiting to last 2.
       getNew: function(itemType) {
-        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('new').equalTo("true").limitToLast(2) ).$asArray();
+        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('new').equalTo("true").limitToLast(2) ).$asArray().$loaded();
       },
       /**
        * @param {String} itemType
@@ -207,7 +207,7 @@ angular.module('DeViine.services', [])
        */
       // getOther is currently limiting to last 2. 
       getOther: function(itemType) {
-        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).limitToLast(4) ).$asArray();
+        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).limitToLast(4) ).$asArray().$loaded();
       },
       /**
        * @param {String} itemType
@@ -225,7 +225,7 @@ angular.module('DeViine.services', [])
     };
   }])
   // (Copied wholesale from the mobile app.)
-  .factory('ratingsService', function() {
+  .factory('ratingsService', ['dvUrl', function(dvUrl) {
     //removed return envelope
     var obj = {};
       
@@ -252,16 +252,26 @@ angular.module('DeViine.services', [])
         }
       },
 
-      obj.getUserRating = function(ratings) {
+      obj.getUserRating = function() {
 
-          // var userRating = new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/ratings/' + userId);
+          // userId = $('.username').attr('title');
+          // itemId = $('.strainId').attr('title');
+          // itemType = 'strains';
+          // userRating = new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/ratings/' + userId);
 
           // if(! userRating) {
-          //   console.log('Users rating is' + userRating);
-          //   ('.userRatingDisplay').css('display','inline');
-          // } else {
           //   console.log('No user rating.');
-          // }
+          // } else {
+          //   console.log('Users rating is ' + userRating);
+          // } 
+
+          // userRating.on("value", function(snapshot) {
+          //   var changedRating = snapshot.val();
+          //   console.log("The updated post title is " + changedRating.value);
+          // });
+
+          // return changedRating.value;
+
       },
 
       /**
@@ -275,7 +285,7 @@ angular.module('DeViine.services', [])
       }
       //removed return envelope
       return obj;
-  })
+  }])
   .factory('reviewsService', function() {
     //removed return envelope
     var obj = {};
@@ -284,7 +294,7 @@ angular.module('DeViine.services', [])
        * @param {Object} reviews
        * @returns {Number} reviewsCount
        */
-      obj.getReviewsCount = function(reviews) {
+      obj.getReviewsCount = function() {
         return reviews == null
           ? 0
           : Object.keys(reviews).length;

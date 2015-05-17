@@ -81,6 +81,18 @@
   }
 }
 
+.userRatingDisplay {
+  font-family: $dvTextFont;
+  font-size: 14px;
+  font-weight: normal;
+  color: $dvGray;
+  height: 0;
+  position: relative;
+  z-index: 3;
+  top: -45px;
+}
+
+
 .strainDescriptionSubHeader {
   margin: -6px 0 0 0;
 }
@@ -101,6 +113,9 @@
 }
 .strainGalleryMobile {
   display: none;
+}
+.zoomContainer {
+  top: 60px !important;
 }
 
 .dispensaryHours {

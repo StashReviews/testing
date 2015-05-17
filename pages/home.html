@@ -56,7 +56,7 @@
 	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
 		<h3>Strains of the Week</h3>
 		<ul class="dvCardList">
-			<li ng-repeat="featuredStrain in featuredStrains" class="col-md-6 col-sm-6 col-xs-8">
+			<li ng-repeat="featuredStrain in featuredStrains" class="col-md-6 col-sm-6 col-xs-8 {{ strain.disabled }}">
 				<dv-card item-type="strain" item-id="{{ featuredStrain.$id }}"></dv-card>
 			</li>
 		</ul>
@@ -64,7 +64,7 @@
 	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
 		<h3>New Strains</h3>
 		<ul class="dvCardList">
-			<li ng-repeat="newStrain in newStrains" class="col-md-6 col-sm-6 col-xs-8">
+			<li ng-repeat="newStrain in newStrains" class="col-md-6 col-sm-6 col-xs-8 {{ strain.disabled }}">
 				<dv-card item-type="strain" item-id="{{ newStrain.$id }}"></dv-card>
 				<div class="new-strain-true"></div>
 			</li>

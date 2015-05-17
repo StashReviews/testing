@@ -13,6 +13,7 @@
       </div>
     </div>
     <dv-rating ratings="strainDetails.ratings" class="strainRating"></dv-rating>
+    <p ng-show="strainDetails.ratings[currentName]" class="userRatingDisplay">You rated this strain a <strong id="userRating">{{ strainDetails.ratings[currentName] }}</strong>.</p>
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <h3 class="strainDescriptionSubHeader">Strain Description</h3>
@@ -98,7 +99,7 @@
         </div>
         <div class='name' title="{{ currentName }}"></div>
         <textarea type='text' id='reviewInput' placeholder='Drop a review...'></textarea>
-        <input ng-click="sendReview" type='submit' id='submitReview' value='SUBMIT' class="pull-right">
+        <input ng-click="sendReview" type='submit' id='submitReview' value='DROP IT LIKE IT&rsquo;S HOT' class="pull-right">
       </div>
       <div class="strainId" title="{{ strainDetails.$id }}"></div>
       <div id='reviewsDiv' class="col-md-12 col-sm-12 col-xs-12"></div>
@@ -107,12 +108,12 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <h3>Suggested Strains</h3>
+    <h3>More Strains</h3>
     <ul class="dvCardList">
-      <li ng-repeat="strain in featuredStrains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8">
+      <li ng-repeat="strain in featuredStrains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ strain.disabled }}">
         <dv-card item-type="strain" item-id="{{ strain.$id }}"></dv-card>
       </li>
-      <li ng-repeat="strain in otherStrains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8">
+      <li ng-repeat="strain in otherStrains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ strain.disabled }}">
         <dv-card item-type="strain" item-id="{{ strain.$id }}"></dv-card>
       </li>
     </ul>

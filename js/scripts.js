@@ -58,14 +58,20 @@ window.onload = (function() {
     
 
 
+    // When the user clicks on a rating bud, check to see if they have rated this strain already.
+
+
+
+
+
+
     // When the user clicks on submit review input, write the review to firebase.
     $('#submitReview').on( "click", function() {
 
       var avatar = $('.avatar').attr('src');
-      var name = $('.name').attr('title');
       var text = $('#reviewInput').val();
 
-	  var today = new Date();
+	    var today = new Date();
       var dd = today.getDate();
       var mm = today.getMonth();
 
@@ -73,13 +79,6 @@ window.onload = (function() {
       var month = monthNames[mm];
 
       var yyyy = today.getFullYear();
-
-      if(dd<10){
-        dd='0'+dd
-      } 
-      if(mm<10){
-        mm='0'+mm
-      } 
       var today = month+' '+dd+', '+yyyy;
       
       if (! text) {
@@ -87,8 +86,8 @@ window.onload = (function() {
       	alert("Sorry, you can't submit a blank review.");
       } else {
       	// If a review was typed, push the avatar, name, date and review to firebase.
-      	reviewsRef.push({avatar:avatar, name:name, text:text, date:today});
-      	userReviewsRef.push({avatar:avatar, name:name, text:text, date:today});
+      	reviewsRef.push({avatar:avatar, name:userId, text:text, date:today});
+      	userReviewsRef.push({avatar:avatar, name:userId, text:text, date:today});
       	// Reset review input.
       	$('#reviewInput').hide();
       	$('#submitReview').attr('value', "Your review was successful!").css("background","none");
@@ -102,21 +101,10 @@ window.onload = (function() {
 
     });
 
-	//   // Add a callback that is triggered for each chat review.
-	//   reviewsRef.on('child_added', function (snapshot) {
-	//     var review = snapshot.val();
-	//     $('<p/>').text(review.text).prepend($('<h6/>').text(review.date)).prepend($('<h4/>').text(review.name)).appendTo($('#reviewsDiv'));
-	//     $('#reviewsDiv')[0].scrollTop = $('#reviewsDiv')[0].scrollHeight;
-	//   });
-	// // Reviews Ends Here
-
-    // Hide Please Sign In to Submit Review
-    var name = $('.username').attr('title');
-	// Show Reviews
-	var userId = $('.username').attr('title');
-	var itemId = $('.strainId').attr('title');
-    var reviewsRef = new Firebase('https://deviineadmin.firebaseio.com/strains/' + itemId + '/reviews');
-    var userReviewsRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/reviews/' + itemId);
+  	userId = $('.username').attr('title');
+  	itemId = $('.strainId').attr('title');
+    reviewsRef = new Firebase('https://deviineadmin.firebaseio.com/strains/' + itemId + '/reviews');
+    userReviewsRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/reviews/' + itemId);
 
 
 });

@@ -87,10 +87,21 @@
       color: #2c3034; }
 
 /* line 84, _items.scss */
+.userRatingDisplay {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #2c3034;
+  height: 0;
+  position: relative;
+  z-index: 3;
+  top: -45px; }
+
+/* line 96, _items.scss */
 .strainDescriptionSubHeader {
   margin: -6px 0 0 0; }
 
-/* line 87, _items.scss */
+/* line 99, _items.scss */
 .strainDescription {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
@@ -98,7 +109,7 @@
   margin: 10px 0 0 0;
   padding: 0; }
 
-/* line 95, _items.scss */
+/* line 107, _items.scss */
 .dispensaryGallery,
 .dealGallery,
 .strainGallery {
@@ -106,50 +117,54 @@
   position: relative;
   z-index: -10; }
 
-/* line 102, _items.scss */
+/* line 114, _items.scss */
 .strainGalleryMobile {
   display: none; }
 
-/* line 106, _items.scss */
+/* line 117, _items.scss */
+.zoomContainer {
+  top: 60px !important; }
+
+/* line 121, _items.scss */
 .dispensaryHours {
   background: #2c3034;
   width: 100%; }
-  /* line 109, _items.scss */
+  /* line 124, _items.scss */
   .dispensaryHours tr {
     color: white; }
-  /* line 112, _items.scss */
+  /* line 127, _items.scss */
   .dispensaryHours tr.dvGreen {
     color: #3dd861; }
-  /* line 115, _items.scss */
+  /* line 130, _items.scss */
   .dispensaryHours td {
     font-family: "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 26px;
     padding: 10px 20px 4px 20px;
     border-bottom: thin solid rgba(255, 255, 255, 0.1); }
-  /* line 122, _items.scss */
+  /* line 137, _items.scss */
   .dispensaryHours td:nth-child(2) {
     text-align: right; }
 
-/* line 128, _items.scss */
+/* line 143, _items.scss */
 .dealDetails h4 {
   font-family: "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 22px;
   color: #2c3034;
   margin: 20px 0 0 0; }
-/* line 135, _items.scss */
+/* line 150, _items.scss */
 .dealDetails p {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #2c3034; }
-/* line 141, _items.scss */
+/* line 156, _items.scss */
 .dealDetails .redemptionDetails {
   border-bottom: 1px solid rgba(44, 48, 52, 0.2);
   padding-bottom: 15px;
   margin: 10px 0 20px 0; }
-  /* line 145, _items.scss */
+  /* line 160, _items.scss */
   .dealDetails .redemptionDetails div .redeemDeal {
     background: #f7253e;
     font-family: "Khand", sans-serif;
@@ -158,17 +173,17 @@
     color: white;
     width: 100%;
     padding: 10px 20px 5px 20px; }
-    /* line 153, _items.scss */
+    /* line 168, _items.scss */
     .dealDetails .redemptionDetails div .redeemDeal:hover {
       background: #2c3034; }
-  /* line 157, _items.scss */
+  /* line 172, _items.scss */
   .dealDetails .redemptionDetails div label {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 16px;
     color: #2c3034;
     float: left; }
-  /* line 164, _items.scss */
+  /* line 179, _items.scss */
   .dealDetails .redemptionDetails div .distanceAway,
   .dealDetails .redemptionDetails div .daysLeft {
     color: #f7253e;
@@ -180,7 +195,7 @@
     float: left;
     width: 25%; }
 
-/* line 178, _items.scss */
+/* line 193, _items.scss */
 .flavorProfile,
 .positiveEffects,
 .negativeEffects {
@@ -189,29 +204,29 @@
   font-size: 20px;
   color: #2c3034;
   text-align: left; }
-  /* line 186, _items.scss */
+  /* line 201, _items.scss */
   .flavorProfile li,
   .positiveEffects li,
   .negativeEffects li {
     line-height: 18px;
     margin-bottom: 10px; }
-    /* line 189, _items.scss */
+    /* line 204, _items.scss */
     .flavorProfile li:nth-child(1),
     .positiveEffects li:nth-child(1),
     .negativeEffects li:nth-child(1) {
       border-bottom: 3px solid #3dd861; }
-    /* line 192, _items.scss */
+    /* line 207, _items.scss */
     .flavorProfile li:nth-child(2),
     .positiveEffects li:nth-child(2),
     .negativeEffects li:nth-child(2) {
       border-bottom: 3px solid #fcd31c; }
-    /* line 195, _items.scss */
+    /* line 210, _items.scss */
     .flavorProfile li:nth-child(3),
     .positiveEffects li:nth-child(3),
     .negativeEffects li:nth-child(3) {
       border-bottom: 3px solid #f7253e; }
 
-/* line 200, _items.scss */
+/* line 215, _items.scss */
 .strainProfileTitle {
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -220,7 +235,7 @@
   margin: 0;
   padding-bottom: 10px; }
 
-/* line 209, _items.scss */
+/* line 224, _items.scss */
 .barChart {
   margin: 30px 0 0 0;
   padding: 0;
@@ -228,32 +243,32 @@
   width: 100%;
   position: relative;
   bottom: 0; }
-  /* line 216, _items.scss */
+  /* line 231, _items.scss */
   .barChart li {
     width: 30%;
     margin: 0 1.5%;
     float: left;
     position: relative;
     bottom: 0; }
-    /* line 222, _items.scss */
+    /* line 237, _items.scss */
     .barChart li:nth-child(1) {
       background-color: #3dd861; }
-      /* line 224, _items.scss */
+      /* line 239, _items.scss */
       .barChart li:nth-child(1) div {
         background-color: #3dd861; }
-    /* line 228, _items.scss */
+    /* line 243, _items.scss */
     .barChart li:nth-child(2) {
       background-color: #fcd31c; }
-      /* line 230, _items.scss */
+      /* line 245, _items.scss */
       .barChart li:nth-child(2) div {
         background-color: #fcd31c; }
-    /* line 234, _items.scss */
+    /* line 249, _items.scss */
     .barChart li:nth-child(3) {
       background-color: #f7253e; }
-      /* line 236, _items.scss */
+      /* line 251, _items.scss */
       .barChart li:nth-child(3) div {
         background-color: #f7253e; }
-    /* line 240, _items.scss */
+    /* line 255, _items.scss */
     .barChart li div {
       color: white;
       font-family: "Khand", sans-serif;
@@ -264,7 +279,7 @@
       padding-top: 10%;
       border-bottom: 1px solid white; }
 
-/* line 253, _items.scss */
+/* line 268, _items.scss */
 .thcPotency,
 .cbdPotency {
   margin: 0 auto;
@@ -274,7 +289,7 @@
   text-transform: uppercase;
   font-size: 40px;
   color: #2c3034; }
-  /* line 262, _items.scss */
+  /* line 277, _items.scss */
   .thcPotency label,
   .cbdPotency label {
     position: relative;
@@ -282,13 +297,13 @@
     font-size: 20px;
     color: rgba(44, 48, 52, 0.2); }
 
-/* line 271, _items.scss */
+/* line 286, _items.scss */
 .reviews .leaveReview {
   padding: 0; }
-  /* line 273, _items.scss */
+  /* line 288, _items.scss */
   .reviews .leaveReview .avatarWrap {
     float: left; }
-    /* line 275, _items.scss */
+    /* line 290, _items.scss */
     .reviews .leaveReview .avatarWrap .avatar {
       width: 40px;
       height: 40px;
@@ -300,7 +315,7 @@
       -webkit-transition: .5s;
       -moz-transition: .5s;
       -o-transition: .5s; }
-    /* line 287, _items.scss */
+    /* line 302, _items.scss */
     .reviews .leaveReview .avatarWrap .reviewBanner {
       float: left;
       position: absolute;
@@ -313,17 +328,17 @@
       background: #3dd861;
       top: 0;
       left: 10px; }
-      /* line 299, _items.scss */
+      /* line 314, _items.scss */
       .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner {
         color: white;
         text-decoration: none;
         opacity: .5;
         cursor: pointer;
         margin-left: 5px; }
-        /* line 305, _items.scss */
+        /* line 320, _items.scss */
         .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner:hover {
           opacity: 1; }
-  /* line 311, _items.scss */
+  /* line 326, _items.scss */
   .reviews .leaveReview #reviewInput {
     border: 2px solid rgba(44, 48, 52, 0.2);
     font-family: "Open Sans", sans-serif;
@@ -334,10 +349,10 @@
     float: right;
     height: 100px;
     width: 100%; }
-    /* line 321, _items.scss */
+    /* line 336, _items.scss */
     .reviews .leaveReview #reviewInput:hover, .reviews .leaveReview #reviewInput:active, .reviews .leaveReview #reviewInput:focus {
       border-color: #3dd861; }
-  /* line 327, _items.scss */
+  /* line 342, _items.scss */
   .reviews .leaveReview #submitReview {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
@@ -350,20 +365,20 @@
     padding: 10px;
     float: right;
     width: 100%; }
-    /* line 339, _items.scss */
+    /* line 354, _items.scss */
     .reviews .leaveReview #submitReview:hover {
       background: #3dd861;
       color: white; }
-/* line 345, _items.scss */
+/* line 360, _items.scss */
 .reviews .totalReviews {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   text-align: center; }
-/* line 350, _items.scss */
+/* line 365, _items.scss */
 .reviews #reviewsDiv {
   margin-top: 20px;
   padding: 0; }
-  /* line 353, _items.scss */
+  /* line 368, _items.scss */
   .reviews #reviewsDiv h4 {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
@@ -372,7 +387,7 @@
     color: #2c3034;
     padding: 10px 0 0 0;
     border-top: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 362, _items.scss */
+  /* line 377, _items.scss */
   .reviews #reviewsDiv h6 {
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
@@ -380,28 +395,28 @@
     font-weight: bold;
     color: #3dd861;
     margin: 0px 0 3px 0; }
-  /* line 370, _items.scss */
+  /* line 385, _items.scss */
   .reviews #reviewsDiv p {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     color: #2c3034;
     margin: 0;
     padding: 0 0 8px 60px; }
-  /* line 377, _items.scss */
+  /* line 392, _items.scss */
   .reviews #reviewsDiv img {
     border-radius: 50%;
     float: left;
     margin: 10px 20px 10px 0;
     width: 40px;
     height: 40px; }
-/* line 385, _items.scss */
+/* line 400, _items.scss */
 .reviews .pleaseSignIn {
   padding-top: 20px;
   text-align: center;
   color: #2c3034;
   position: relative;
   z-index: 5; }
-  /* line 391, _items.scss */
+  /* line 406, _items.scss */
   .reviews .pleaseSignIn a {
     color: #3dd861;
     cursor: pointer; }
@@ -1469,24 +1484,17 @@
       padding-top: 50px;
       margin-top: 1px; }
   /* line 63, partials/_rating.scss */
-  .rating .ratingDisplay,
-  .rating .userRatingDisplay {
+  .rating .ratingDisplay {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     font-weight: normal;
     color: #2c3034;
     height: 0;
     position: relative;
-    z-index: 3; }
-  /* line 73, partials/_rating.scss */
-  .rating .ratingDisplay {
+    z-index: 3;
     top: -75px; }
-  /* line 76, partials/_rating.scss */
-  .rating .userRatingDisplay {
-    top: -65px;
-    display: none; }
 
-/* line 85, partials/_rating.scss */
+/* line 78, partials/_rating.scss */
 .dealCard .rating,
 .dispensaryCard .rating,
 .strainCard .rating {
@@ -1494,24 +1502,24 @@
   height: 16%;
   margin: -6% 0 0 0;
   position: absolute; }
-  /* line 90, partials/_rating.scss */
+  /* line 83, partials/_rating.scss */
   .dealCard .rating .ratingBarWrap,
   .dispensaryCard .rating .ratingBarWrap,
   .strainCard .rating .ratingBarWrap {
     width: 100%;
     height: 0; }
-    /* line 96, partials/_rating.scss */
+    /* line 89, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap svg,
     .dispensaryCard .rating .ratingBarWrap svg,
     .strainCard .rating .ratingBarWrap svg {
       width: 101%;
       margin-left: -1px; }
-    /* line 100, partials/_rating.scss */
+    /* line 93, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap .rate,
     .dispensaryCard .rating .ratingBarWrap .rate,
     .strainCard .rating .ratingBarWrap .rate {
       display: none; }
-    /* line 103, partials/_rating.scss */
+    /* line 96, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap div.ratingBar,
     .dispensaryCard .rating .ratingBarWrap div.ratingBar,
     .strainCard .rating .ratingBarWrap div.ratingBar {
@@ -1524,36 +1532,40 @@
       -ms-transition: all .7s ease;
       -o-transition: all .7s ease;
       transition: all .7s ease; }
-    /* line 115, partials/_rating.scss */
+    /* line 108, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap .ratings .rateThis,
     .dispensaryCard .rating .ratingBarWrap .ratings .rateThis,
     .strainCard .rating .ratingBarWrap .ratings .rateThis {
       display: none; }
-  /* line 120, partials/_rating.scss */
+  /* line 113, partials/_rating.scss */
   .dealCard .rating .ratingDisplay,
   .dispensaryCard .rating .ratingDisplay,
   .strainCard .rating .ratingDisplay {
     display: none; }
-  /* line 123, partials/_rating.scss */
+  /* line 116, partials/_rating.scss */
   .dealCard .rating .userRatingDisplay,
   .dispensaryCard .rating .userRatingDisplay,
   .strainCard .rating .userRatingDisplay {
     display: none; }
 
-/* line 129, partials/_rating.scss */
+/* line 122, partials/_rating.scss */
 .dispensaryRating .ratingBar {
   background-color: #f7253e; }
 
-/* line 133, partials/_rating.scss */
+/* line 126, partials/_rating.scss */
 .dealRating .ratingBar {
   background-color: #fcd31c; }
 
-/* line 137, partials/_rating.scss */
+/* line 130, partials/_rating.scss */
 .strainRating .ratingBar {
   background-color: #3dd861; }
 
 /* Card Start */
 /* line 2, partials/_cards.scss */
+.dvCardList .disabled {
+  display: none; }
+
+/* line 6, partials/_cards.scss */
 .cardWrapper {
   width: 100%;
   text-decoration: none;
@@ -1561,30 +1573,30 @@
   padding: 0;
   position: relative;
   cursor: pointer; }
-  /* line 9, partials/_cards.scss */
+  /* line 13, partials/_cards.scss */
   .cardWrapper .cardBg {
     width: 100%; }
-  /* line 12, partials/_cards.scss */
+  /* line 16, partials/_cards.scss */
   .cardWrapper .cardInfo {
     position: absolute;
     width: 80%;
     top: 0px;
     margin: 10% 10% 0 10%;
     padding: 0; }
-  /* line 19, partials/_cards.scss */
+  /* line 23, partials/_cards.scss */
   .cardWrapper .dispensaryLogo,
   .cardWrapper .dealImage,
   .cardWrapper .strainImage {
     border-radius: 20px;
     margin-bottom: 5%;
     width: 100%; }
-    /* line 25, partials/_cards.scss */
+    /* line 29, partials/_cards.scss */
     .cardWrapper .dispensaryLogo img,
     .cardWrapper .dealImage img,
     .cardWrapper .strainImage img {
       width: 100%;
       border-radius: 15px; }
-  /* line 30, partials/_cards.scss */
+  /* line 34, partials/_cards.scss */
   .cardWrapper .dispensaryName,
   .cardWrapper .dealTitle,
   .cardWrapper .strainName {
@@ -1600,11 +1612,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
-  /* line 46, partials/_cards.scss */
+  /* line 50, partials/_cards.scss */
   .cardWrapper .dealTitle {
     height: 48px;
     line-height: 1.1; }
-  /* line 50, partials/_cards.scss */
+  /* line 54, partials/_cards.scss */
   .cardWrapper .dispensaryAddress,
   .cardWrapper .businessName,
   .cardWrapper .producedBy {
@@ -1617,24 +1629,24 @@
     margin: 0;
     padding: 0;
     overflow: hidden; }
-  /* line 63, partials/_cards.scss */
+  /* line 67, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .businessName.line2,
   .cardWrapper .producedBy.line2 {
     position: relative;
     z-index: 3; }
-  /* line 69, partials/_cards.scss */
+  /* line 73, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line1,
   .cardWrapper .producedBy.line1 {
     height: 18px; }
-  /* line 73, partials/_cards.scss */
+  /* line 77, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .producedBy.line2 {
     height: 26px; }
-  /* line 77, partials/_cards.scss */
+  /* line 81, partials/_cards.scss */
   .cardWrapper .businessName.line2 {
     height: 24px; }
-  /* line 80, partials/_cards.scss */
+  /* line 84, partials/_cards.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType {
     font-family: "Open Sans", sans-serif;
@@ -1648,19 +1660,19 @@
     z-index: 3;
     text-align: center; }
 
-/* line 95, partials/_cards.scss */
+/* line 99, partials/_cards.scss */
 .dispensaryCard .distanceAway {
   color: #f7253e; }
 
-/* line 100, partials/_cards.scss */
+/* line 104, partials/_cards.scss */
 .dealCard .distanceAway {
   color: #fcd31c; }
 
-/* line 105, partials/_cards.scss */
+/* line 109, partials/_cards.scss */
 .strainCard .strainType {
   color: #3dd861; }
 
-/* line 110, partials/_cards.scss */
+/* line 114, partials/_cards.scss */
 .featured-dispensary-true,
 .featured-deal-true,
 .featured-strain-true,
@@ -1673,23 +1685,23 @@
   height: 100%;
   background-repeat: no-repeat; }
 
-/* line 122, partials/_cards.scss */
+/* line 126, partials/_cards.scss */
 .featured-dispensary-true {
   background-image: url(../img/banners/featured.png);
   background-size: 50%; }
 
-/* line 126, partials/_cards.scss */
+/* line 130, partials/_cards.scss */
 .featured-deal-true {
   left: -5.9%;
   background-image: url(../img/banners/dailyDeal.png);
   background-size: 50%; }
 
-/* line 131, partials/_cards.scss */
+/* line 135, partials/_cards.scss */
 .featured-strain-true {
   background-image: url(../img/banners/strainOfTheWeek.png);
   background-size: 50%; }
 
-/* line 135, partials/_cards.scss */
+/* line 139, partials/_cards.scss */
 .new-strain-true {
   top: 11.3%;
   left: -4%;
@@ -1697,11 +1709,11 @@
   background-size: 50%; }
 
 /* Card End */
-/* line 145, partials/_cards.scss */
+/* line 149, partials/_cards.scss */
 .dvCardList {
   padding-left: 0;
   list-style-type: none; }
-  /* line 149, partials/_cards.scss */
+  /* line 153, partials/_cards.scss */
   .dvCardList > li {
     display: inline-block;
     padding: 1%; }
