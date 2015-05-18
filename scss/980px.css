@@ -79,6 +79,10 @@
   /*----home start----*/
   #indexSummary > .howItWorks .strainsIcon {
     background-color: #3dd861; }
+  #indexSummary > .howItWorks .dealsIcon {
+    background-color: #FCD31C; }
+  #indexSummary > .howItWorks .dispensariesIcon {
+    background-color: #F7253E; }
 
   .sponsors div ul {
     opacity: 1; }

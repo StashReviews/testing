@@ -7,11 +7,14 @@
   padding-top: 15px;
   border-color: $dvGray5;
   &:hover {
-    .comingSoon {
-      opacity: 1;
-    }
     .strainsIcon {
       background-color: $dvGreen;
+    }
+    .dealsIcon {
+      background-color: $dvYellow;
+    }
+    .dispensariesIcon {
+      background-color: $dvRed;
     }
   }
   .dispensariesIcon,
@@ -81,15 +84,6 @@
 
   &:nth-child(3) > h3 {
     color: $dvRed;
-  }
-  .comingSoon {
-    font-family: $dvHeaderFont;
-    text-transform: uppercase;
-    font-size: 20px;
-    opacity: 0;
-  }
-  .comingSoonIndexSummary {
-    display: none;
   }
 }
 
