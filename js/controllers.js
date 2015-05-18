@@ -68,6 +68,13 @@ angular.module('DeViine.controllers', [])
       $modalInstance.dismiss();
     };
   }])
+  .controller('ratingChangeModalCtrl', ['$scope', '$state', '$modalInstance', 'usersService', function($scope, $state, $modalInstance, usersService) {
+
+
+    $scope.close = function() {
+      $modalInstance.dismiss();
+    };
+  }])
   .controller('homeCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
     $scope.featuredDispensaries = itemsService.getFeatured('dispensaries');
 
@@ -245,17 +252,32 @@ angular.module('DeViine.controllers', [])
     // // @todo Exclude the current strain from the results of itemsService.getOther().
     // $scope.otherStrains = itemsService.getOther('strains');
 
-      $q.all([itemsService.getOther('strains'), itemsService.getFeatured('strains')])
-      .then(function(strainData) {
-        strainData.forEach(function(strains) {
-          strains.sort(function(a, b) {
-            return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
-          });
+    $q.all([itemsService.getOther('strains'), itemsService.getFeatured('strains')])
+    .then(function(strainData) {
+      strainData.forEach(function(strains) {
+        strains.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
         });
-
-        $scope.otherStrains = strainData[0];
-        $scope.featuredStrains = strainData[1];
       });
+
+      $scope.otherStrains = strainData[0];
+      $scope.featuredStrains = strainData[1];
+    });
+
+
+    $scope.showRatingChangeModal = function() {
+      var ratingChangeModalInstance = $modal.open({
+        size: 'md',
+        templateUrl: 'partials/modals/ratingChange.html',
+        controller: 'ratingChangeModalCtrl'
+      });
+
+      ratingChangeModalInstance.result
+        .then(function(currentUser) {
+          $scope.currentUser = currentUser;
+          usersService.setCurrentUser(currentUser);
+        });
+    };
 
   }])
   .controller('strainsManageCtrl', ['$scope', '$firebase', 'dvUrl', function($scope, $firebase, dvUrl) {
@@ -365,10 +387,11 @@ angular.module('DeViine.controllers', [])
         
         if(! userId) {
           console.log('No User');
-          // showLoginModal(); TODO - LAUNCH LOGIN MODAL
+          $showLoginModal(); //TODO - LAUNCH LOGIN MODAL
           alert("Please sign in to submit a rating.");
         } else if (! userRating) {
           alert("No User Rating Exists");
+          $showRatingChangeModal();// TODO - LAUNCH RATING CHANGE MODAL
         } else {
           alert('Rating Sent');
           $firebase( new Firebase(dvUrl + '/users/' + userId + '/ratings/' + itemType + '/' + itemId) ).$set(rating);

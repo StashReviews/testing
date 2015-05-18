@@ -438,21 +438,22 @@
 
 /* line 18, layout/_navbar.scss */
 .navbar .logo .deviineLogo {
+  float: left;
   width: 90px;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   margin: 0 auto;
   position: relative; }
 
-/* line 27, layout/_navbar.scss */
+/* line 28, layout/_navbar.scss */
 .navbar-right {
   margin: 0;
   padding: 0; }
-  /* line 30, layout/_navbar.scss */
+  /* line 31, layout/_navbar.scss */
   .navbar-right .accountInfo {
     text-align: right;
     margin: 5px 0 0 0;
     float: right; }
-    /* line 34, layout/_navbar.scss */
+    /* line 35, layout/_navbar.scss */
     .navbar-right .accountInfo .username {
       font-family: "Open Sans", sans-serif;
       color: white;
@@ -463,14 +464,14 @@
       /*padding: 0;               THIS IS THE STYLING FOR HAVING USERNAME + LOCATION */
       padding: 10px 0 0 0;
       margin: 0; }
-    /* line 45, layout/_navbar.scss */
+    /* line 46, layout/_navbar.scss */
     .navbar-right .accountInfo .location {
       color: #fcd31c;
       font-family: "Open Sans", sans-serif;
       font-size: 12px;
       padding: 0;
       margin: 0; }
-  /* line 53, layout/_navbar.scss */
+  /* line 54, layout/_navbar.scss */
   .navbar-right .avatarDefault {
     opacity: .1;
     -webkit-transition: all .2s ease;
@@ -478,10 +479,10 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
-    /* line 60, layout/_navbar.scss */
+    /* line 61, layout/_navbar.scss */
     .navbar-right .avatarDefault:hover {
       opacity: 1; }
-  /* line 64, layout/_navbar.scss */
+  /* line 65, layout/_navbar.scss */
   .navbar-right .avatar {
     height: 50px;
     width: 50px;
@@ -495,26 +496,26 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
-    /* line 77, layout/_navbar.scss */
+    /* line 78, layout/_navbar.scss */
     .navbar-right .avatar:hover {
       border: 2px solid #fcd31c; }
-  /* line 81, layout/_navbar.scss */
+  /* line 82, layout/_navbar.scss */
   .navbar-right .navbar-text {
     margin: 15px 0; }
-  /* line 84, layout/_navbar.scss */
+  /* line 85, layout/_navbar.scss */
   .navbar-right .navbar-text .btn {
     margin-top: -1%;
     color: white; }
-    /* line 87, layout/_navbar.scss */
+    /* line 88, layout/_navbar.scss */
     .navbar-right .navbar-text .btn span {
       color: rgba(255, 255, 255, 0.2); }
-    /* line 90, layout/_navbar.scss */
+    /* line 91, layout/_navbar.scss */
     .navbar-right .navbar-text .btn:hover {
       color: #fcd31c; }
 
 /*  End Header Bar  */
 /*  Start Left Nav  */
-/* line 107, layout/_navbar.scss */
+/* line 108, layout/_navbar.scss */
 #mainMenu {
   list-style-type: none;
   padding-left: 0;
@@ -523,36 +524,36 @@
   font-size: 30px;
   position: fixed;
   top: 100px; }
-  /* line 115, layout/_navbar.scss */
+  /* line 116, layout/_navbar.scss */
   #mainMenu > li {
     padding-left: 10px;
     padding-top: 8px;
     margin: 5px 0; }
-    /* line 119, layout/_navbar.scss */
+    /* line 120, layout/_navbar.scss */
     #mainMenu > li:nth-child(1) {
       border-left: 3px solid #f7253e; }
-      /* line 102, layout/_navbar.scss */
+      /* line 103, layout/_navbar.scss */
       #mainMenu > li:nth-child(1) > a:hover {
         color: #f7253e; }
-    /* line 122, layout/_navbar.scss */
+    /* line 123, layout/_navbar.scss */
     #mainMenu > li:nth-child(2) {
       border-left: 3px solid #fcd31c; }
-      /* line 102, layout/_navbar.scss */
+      /* line 103, layout/_navbar.scss */
       #mainMenu > li:nth-child(2) > a:hover {
         color: #fcd31c; }
-    /* line 125, layout/_navbar.scss */
+    /* line 126, layout/_navbar.scss */
     #mainMenu > li:nth-child(3) {
       border-left: 3px solid #3dd861; }
-      /* line 102, layout/_navbar.scss */
+      /* line 103, layout/_navbar.scss */
       #mainMenu > li:nth-child(3) > a:hover {
         color: #3dd861; }
-    /* line 128, layout/_navbar.scss */
+    /* line 129, layout/_navbar.scss */
     #mainMenu > li .disabledNav {
       color: rgba(44, 48, 52, 0.2); }
-      /* line 131, layout/_navbar.scss */
+      /* line 132, layout/_navbar.scss */
       #mainMenu > li .disabledNav:hover .comingSoonNavHover {
         left: -10px; }
-      /* line 135, layout/_navbar.scss */
+      /* line 136, layout/_navbar.scss */
       #mainMenu > li .disabledNav .comingSoonNavHover {
         font-family: "Open Sans", sans-serif;
         font-size: 12px;
@@ -564,13 +565,13 @@
         -ms-transition: .3s all;
         -o-transition: .3s all;
         transition: .3s all; }
-    /* line 148, layout/_navbar.scss */
+    /* line 149, layout/_navbar.scss */
     #mainMenu > li a {
       color: #2c3034; }
-      /* line 150, layout/_navbar.scss */
+      /* line 151, layout/_navbar.scss */
       #mainMenu > li a:active, #mainMenu > li a:focus, #mainMenu > li a:visited {
         text-decoration: none; }
-      /* line 155, layout/_navbar.scss */
+      /* line 156, layout/_navbar.scss */
       #mainMenu > li a img {
         position: relative;
         left: -62px;
@@ -579,26 +580,26 @@
         -ms-transition: .3s all;
         -o-transition: .3s all;
         transition: .3s all; }
-        /* line 163, layout/_navbar.scss */
+        /* line 164, layout/_navbar.scss */
         #mainMenu > li a img:hover {
           left: -50px; }
-  /* line 169, layout/_navbar.scss */
+  /* line 170, layout/_navbar.scss */
   #mainMenu .adminnav {
     color: rgba(44, 48, 52, 0.2); }
-    /* line 171, layout/_navbar.scss */
+    /* line 172, layout/_navbar.scss */
     #mainMenu .adminnav:hover {
       color: #2c3034; }
 
 /*  End Left Nav  */
 /*  Start Right Social Icons  */
-/* line 181, layout/_navbar.scss */
+/* line 182, layout/_navbar.scss */
 #socialIcons {
   display: none;
   list-style-type: none;
   position: fixed;
   top: 100px;
   right: 2%; }
-  /* line 188, layout/_navbar.scss */
+  /* line 189, layout/_navbar.scss */
   #socialIcons h4 {
     font-family: "Khand", sans-serif;
     font-size: 16px;
@@ -607,7 +608,7 @@
     padding: 0;
     color: rgba(44, 48, 52, 0.2);
     border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 197, layout/_navbar.scss */
+  /* line 198, layout/_navbar.scss */
   #socialIcons img {
     width: 35px;
     margin: 5px 0 0 0;
@@ -616,18 +617,18 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
-    /* line 205, layout/_navbar.scss */
+    /* line 206, layout/_navbar.scss */
     #socialIcons img:hover {
       background: #fcd31c; }
 
 /*  End Right Social Icons  */
 /*  Start Up to Top  */
-/* line 215, layout/_navbar.scss */
+/* line 216, layout/_navbar.scss */
 #top {
   position: absolute;
   top: 0; }
 
-/* line 219, layout/_navbar.scss */
+/* line 220, layout/_navbar.scss */
 .upToTop {
   position: fixed;
   right: 2%;
@@ -637,7 +638,7 @@
   -ms-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease; }
-  /* line 228, layout/_navbar.scss */
+  /* line 229, layout/_navbar.scss */
   .upToTop:hover {
     bottom: 2%;
     -webkit-transition: all .3s ease;
@@ -1051,8 +1052,8 @@
     .navbar .navbar-header .logo .deviineLogo {
       float: left;
       left: 50px;
-      width: 65px;
-      padding: 15px 0; }
+      width: 70px;
+      padding: 13px 0; }
     /* line 22, 980px.scss */
     .navbar .navbar-header .menuMobile-toggler {
       display: inline; }
@@ -1282,12 +1283,11 @@
     /* line 109, _home.scss */
     .sponsors div ul li {
       display: inline;
-      border-right: 10px solid white;
       overflow: hidden; }
-      /* line 113, _home.scss */
+      /* line 112, _home.scss */
       .sponsors div ul li:last-child {
         border: none; }
-      /* line 116, _home.scss */
+      /* line 115, _home.scss */
       .sponsors div ul li img {
         max-width: 100%; }
 
