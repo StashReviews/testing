@@ -1659,15 +1659,16 @@
   /* line 73, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line1,
   .cardWrapper .producedBy.line1 {
-    height: 18px; }
-  /* line 77, partials/_cards.scss */
+    height: 18px;
+    display: none; }
+  /* line 78, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .producedBy.line2 {
     height: 26px; }
-  /* line 81, partials/_cards.scss */
+  /* line 82, partials/_cards.scss */
   .cardWrapper .businessName.line2 {
     height: 24px; }
-  /* line 84, partials/_cards.scss */
+  /* line 85, partials/_cards.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType {
     font-family: "Open Sans", sans-serif;
@@ -1681,19 +1682,19 @@
     z-index: 3;
     text-align: center; }
 
-/* line 99, partials/_cards.scss */
+/* line 100, partials/_cards.scss */
 .dispensaryCard .distanceAway {
   color: #f7253e; }
 
-/* line 104, partials/_cards.scss */
+/* line 105, partials/_cards.scss */
 .dealCard .distanceAway {
   color: #fcd31c; }
 
-/* line 109, partials/_cards.scss */
+/* line 110, partials/_cards.scss */
 .strainCard .strainType {
   color: #3dd861; }
 
-/* line 114, partials/_cards.scss */
+/* line 115, partials/_cards.scss */
 .featured-dispensary-true,
 .featured-deal-true,
 .featured-strain-true,
@@ -1703,38 +1704,35 @@
   left: -6.5%;
   pointer-events: none;
   width: 100%;
-  height: 100%;
-  background-repeat: no-repeat; }
+  height: 20%;
+  background-repeat: no-repeat;
+  background-size: contain; }
 
-/* line 126, partials/_cards.scss */
+/* line 128, partials/_cards.scss */
 .featured-dispensary-true {
-  background-image: url(../img/banners/featured.png);
-  background-size: 50%; }
+  background-image: url(../img/banners/featured.png); }
 
-/* line 130, partials/_cards.scss */
+/* line 131, partials/_cards.scss */
 .featured-deal-true {
   left: -5.9%;
-  background-image: url(../img/banners/dailyDeal.png);
-  background-size: 50%; }
+  background-image: url(../img/banners/dailyDeal.png); }
 
 /* line 135, partials/_cards.scss */
 .featured-strain-true {
-  background-image: url(../img/banners/strainOfTheWeek.png);
-  background-size: 50%; }
+  background-image: url(../img/banners/strainOfTheWeek.png); }
 
-/* line 139, partials/_cards.scss */
+/* line 138, partials/_cards.scss */
 .new-strain-true {
   top: 11.3%;
   left: -4%;
-  background-image: url(../img/banners/new.png);
-  background-size: 50%; }
+  background-image: url(../img/banners/new.png); }
 
 /* Card End */
-/* line 149, partials/_cards.scss */
+/* line 147, partials/_cards.scss */
 .dvCardList {
   padding-left: 0;
   list-style-type: none; }
-  /* line 153, partials/_cards.scss */
+  /* line 151, partials/_cards.scss */
   .dvCardList > li {
     display: inline-block;
     padding: 1%; }

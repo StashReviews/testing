@@ -6,8 +6,7 @@
 		</div>
 		<div class="topSection">
 			<h1 class="dispensaryName">{{ dispensary.name }}</h1>
-			<address class="dispensaryAddress line1">{{ dispensary.location.street }}</address>
-			<address class="dispensaryAddress line2">{{ dispensary.location.city }}, {{ dispensary.location.state }} {{ dispensary.location.zip }}</address>
+			<address class="dispensaryAddress line2">{{ dispensary.location.city }}, {{ dispensary.location.state }}</address>
 		</div>
 		<dv-rating ratings="dispensary.ratings" class="dispensaryRating"></dv-rating>
 		<h4 class="distanceAway">{{ dispensary.distance }} MILES AWAY</h4>
