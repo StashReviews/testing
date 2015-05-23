@@ -1,4 +1,5 @@
-<h2 class="pageTitle">Dispensary</h2>
+<h2 class="pageTitle" title="dispensaries">Dispensary</h2>
+<div class="pageId" title="{{ dispensary.$id }}"></div>
 <div class="row">
 	<div class="col-md-6 col-sm-6 col-xs-12">
 		<div class="row">
@@ -14,6 +15,7 @@
 			</div>
 		</div>
 		<dv-rating ratings="dispensary.ratings" class="dispensaryRating"></dv-rating>
+		<p ng-show="dispensary.ratings[currentName]" class="userRatingDisplay">You rated this dispensary a <strong id="userRating">{{ dispensary.ratings[currentName] }}</strong>.</p>
 		<div class="contactInfo">
 			<div ng-show="dispensary.website" class="dispensaryWebsite">
 				<img src="img/icons/web.png"/>
@@ -48,26 +50,36 @@
 				<td>{{ dispensary['hours'][day].open }} &ndash; {{ dispensary['hours'][day].close }}</td>
 			</tr>
 		</table>
-		<h3>Reviews</h3>
-		<dir-disqus 
-	      disqus-shortname="deviinelife"
-	      disqus-identifier="{{ strainDetails.name }}, {{ strainDetails.producer }}"
-	      disqus-title="{{ strainDetails.name }}, {{ strainDetails.producer }}">
-	    </dir-disqus>
+	</div>
+	<div class="col-md-6 col-sm-6 col-xs-12">
+	    <h3>{{ getReviewsCount(reviews) }} Reviews</h3>
+	    <section class="reviews" ng-reviews data="{{ dispensary.name }}">
+	      <h4 class="pleaseSignIn">Please <a ng-click="showLoginModal()">sign in</a> to drop a review.</h4>
+	      <div class="leaveReview col-md-12 col-sm-12 col-xs-12" ng-show="currentUser" ng-controller="reviewCtrl">
+	        <div class="avatarWrap">
+	          <img class="avatar" ng-src="{{ currentAvatar }}" title="{{ currentAvatar }}"/>
+	          <h4 class="reviewBanner">Try this dispensary lately? <a class="closeReviewBanner"> X </a></h4>
+	        </div>
+	        <div class='name' title="{{ currentName }}"></div>
+	        <textarea type='text' id='reviewInput' placeholder='Drop a review...'></textarea>
+	        <input ng-click="sendReview" type='submit' id='submitReview' value='DROP IT LIKE IT&rsquo;S HOT' class="pull-right">
+	      </div>
+	      <div id='reviewsDiv' class="col-md-12 col-sm-12 col-xs-12"></div>
+	    </section>
 	</div>
 </div>
 <div class="row">
-	<div class="col-md-12">
-		<h3>Other Dispensaries</h3>
-		<ul class="dvCardList">
-			<li ng-repeat="dispensary in featuredDispensaries" class="col-md-3 col-sm-3 col-xs-8">
-				<dv-card item-type="dispensary" item-id="{{ dispensary.$id }}"></dv-card>
-			</li>
-			<li ng-repeat="dispensary in otherDispensaries" class="col-md-3 col-sm-3 col-xs-8">
-				<dv-card item-type="dispensary" item-id="{{ dispensary.$id }}"></dv-card>
-			</li>
-		</ul>
-	</div>
+  <div class="col-md-12">
+    <h3>More Dispensaries</h3>
+    <ul class="dvCardList">
+      <li ng-repeat="dispensary in featuredDispensaries" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ dispensary.disabled }}">
+        <dv-card item-type="dispensary" item-id="{{ dispensary.$id }}"></dv-card>
+      </li>
+      <li ng-repeat="dispensary in otherDispensaries" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ dispensary.disabled }}">
+        <dv-card item-type="dispensary" item-id="{{ dispensary.$id }}"></dv-card>
+      </li>
+    </ul>
+  </div>
 </div>
 
 

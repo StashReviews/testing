@@ -132,10 +132,11 @@ angular.module('DeViine.directives', [])
 
           if (!attrs.data) return;
             // Show Reviews
+            var itemType = $('.pageTitle').attr('title');
             var userId = $('.username').attr('title');
-            var itemId = $('.strainId').attr('title');
-            var reviewsRef = new Firebase('https://deviineadmin.firebaseio.com/strains/' + itemId + '/reviews');
-            var userReviewsRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/reviews/' + itemId);
+            var itemId = $('.pageId').attr('title');
+            var reviewsRef = new Firebase('https://deviineadmin.firebaseio.com/' + itemType + '/' + itemId + '/reviews');
+            var userReviewsRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/reviews/' + itemType + '/'+ itemId);
             // Add a callback that is triggered for each chat review.
             reviewsRef.on('child_added', function (snapshot) {
               var review = snapshot.val();
@@ -184,10 +185,11 @@ angular.module('DeViine.directives', [])
             var yyyy = today.getFullYear();
             var today = month+' '+dd+', '+yyyy;
 
+            var itemType = $('.pageTitle').attr('title');
             var userId = $('.username').attr('title');
-            var itemId = $('.strainId').attr('title');
-            var reviewsRef = new Firebase('https://deviineadmin.firebaseio.com/strains/' + itemId + '/reviews');
-            var userReviewsRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/reviews/' + itemId);
+            var itemId = $('.pageId').attr('title');
+            var reviewsRef = new Firebase('https://deviineadmin.firebaseio.com/' + itemType + '/' + itemId + '/reviews');
+            var userReviewsRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/reviews/' + itemType + '/' + itemId);
 
             
             if (! text) {
@@ -199,13 +201,13 @@ angular.module('DeViine.directives', [])
               userReviewsRef.push({avatar:avatar, name:name, text:text, date:today});
               // Reset review input.
               $('#reviewInput').hide();
-              $('#submitReview').attr('value', "Your review was successful!").css("background","none");
+              $('#submitReview').hide();
               $('.reviewBanner').text("You'll be able to see all of your reviews in a later release.");
               $('.avatarWrap .avatar').css({"margin-left":"0px"});
               $('.reviewBanner').show();
 
               // Success alert.
-              alert("Awesome! Thanks for submitting a review. It may take a bit for your review to show up. Later, you'll be able to access all of your reviews to remember your highs!");
+              alert("Awesome! Thanks for submitting a review. It may take a bit for your review to show up. Later, you'll be able to access all of your reviews to remember your experiences!");
             }
 
           });

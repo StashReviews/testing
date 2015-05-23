@@ -31,18 +31,18 @@
 			z"/>
 		</svg>
 		<div class="ratings form-group" ng-controller="rateCtrl">
-		  	<input id="rate5" ng-click="sendRating('rate5')" ng-model="strain.ratings[currentName]" value="5" class="rate rate5 form-control" title="5" type="radio" name="rate"/><label class="rate" for="rate5"></label>
-		  	<input id="rate4" ng-click="sendRating('rate4')" ng-model="strain.ratings[currentName]" value="4" class="rate rate4 form-control" title="4" type="radio" name="rate"/><label class="rate" for="rate4"></label>
-		  	<input id="rate3" ng-click="sendRating('rate3')" ng-model="strain.ratings[currentName]" value="3" class="rate rate3 form-control" title="3" type="radio" name="rate"/><label class="rate" for="rate3"></label>
-		  	<input id="rate2" ng-click="sendRating('rate2')" ng-model="strain.ratings[currentName]" value="2" class="rate rate2 form-control" title="2" type="radio" name="rate"/><label class="rate" for="rate2"></label>
-  			<input id="rate1" ng-click="sendRating('rate1')" ng-model="strain.ratings[currentName]" value="1" class="rate rate1 form-control" title="1" type="radio" name="rate"/><label class="rate" for="rate1"></label>
+		  	<input id="rate5" ng-click="sendRating('rate5')" value="5" class="rate rate5 form-control" title="5" type="radio" name="rate"/><label class="rate" for="rate5"></label>
+		  	<input id="rate4" ng-click="sendRating('rate4')" value="4" class="rate rate4 form-control" title="4" type="radio" name="rate"/><label class="rate" for="rate4"></label>
+		  	<input id="rate3" ng-click="sendRating('rate3')" value="3" class="rate rate3 form-control" title="3" type="radio" name="rate"/><label class="rate" for="rate3"></label>
+		  	<input id="rate2" ng-click="sendRating('rate2')" value="2" class="rate rate2 form-control" title="2" type="radio" name="rate"/><label class="rate" for="rate2"></label>
+  			<input id="rate1" ng-click="sendRating('rate1')" value="1" class="rate rate1 form-control" title="1" type="radio" name="rate"/><label class="rate" for="rate1"></label>
   		</div>
   		<div class="mobileRatings form-group" ng-controller="rateCtrl">
-		  	<input id="rate1" ng-click="sendRating('rate1')" ng-model="strain.ratings[currentName]" value="1" class="rate rate1 form-control" title="1" type="radio" name="rate"/><label class="rate" for="rate1"></label>	
-		  	<input id="rate2" ng-click="sendRating('rate2')" ng-model="strain.ratings[currentName]" value="2" class="rate rate2 form-control" title="2" type="radio" name="rate"/><label class="rate" for="rate2"></label>
-		  	<input id="rate3" ng-click="sendRating('rate3')" ng-model="strain.ratings[currentName]" value="3" class="rate rate3 form-control" title="3" type="radio" name="rate"/><label class="rate" for="rate3"></label>
-		  	<input id="rate4" ng-click="sendRating('rate4')" ng-model="strain.ratings[currentName]" value="4" class="rate rate4 form-control" title="4" type="radio" name="rate"/><label class="rate" for="rate4"></label>
-  			<input id="rate5" ng-click="sendRating('rate5')" ng-model="strain.ratings[currentName]" value="5" class="rate rate5 form-control" title="5" type="radio" name="rate"/><label class="rate" for="rate5"></label>
+		  	<input id="rate1" ng-click="sendRating('rate1')" value="1" class="rate rate1 form-control" title="1" type="radio" name="rate"/><label class="rate" for="rate1"></label>	
+		  	<input id="rate2" ng-click="sendRating('rate2')" value="2" class="rate rate2 form-control" title="2" type="radio" name="rate"/><label class="rate" for="rate2"></label>
+		  	<input id="rate3" ng-click="sendRating('rate3')" value="3" class="rate rate3 form-control" title="3" type="radio" name="rate"/><label class="rate" for="rate3"></label>
+		  	<input id="rate4" ng-click="sendRating('rate4')" value="4" class="rate rate4 form-control" title="4" type="radio" name="rate"/><label class="rate" for="rate4"></label>
+  			<input id="rate5" ng-click="sendRating('rate5')" value="5" class="rate rate5 form-control" title="5" type="radio" name="rate"/><label class="rate" for="rate5"></label>
   		</div>
 		<div ng-style="{ 'width': ( getAvgRating(ratings) / 5 ) * 100 + '%' }" class="ratingBar"></div>
 	</div>

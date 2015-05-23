@@ -1,4 +1,5 @@
-<h2 class="pageTitle">Strain</h2>
+<h2 class="pageTitle" title="strains">Strain</h2>
+<div class="pageId" title="{{ strainDetails.$id }}"></div>
 <div class="row">
   <div class="col-md-6 col-sm-6 col-xs-12">
     <div class="row">
@@ -101,7 +102,6 @@
         <textarea type='text' id='reviewInput' placeholder='Drop a review...'></textarea>
         <input ng-click="sendReview" type='submit' id='submitReview' value='DROP IT LIKE IT&rsquo;S HOT' class="pull-right">
       </div>
-      <div class="strainId" title="{{ strainDetails.$id }}"></div>
       <div id='reviewsDiv' class="col-md-12 col-sm-12 col-xs-12"></div>
     </section>
   </div>

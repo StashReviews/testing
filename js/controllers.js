@@ -96,22 +96,42 @@ angular.module('DeViine.controllers', [])
     });
 
   }])
-  .controller('dispensariesCtrl', ['$scope', 'itemsService', function($scope, itemsService) {
-    // @todo Order dispensaries by geographic proximity.
-    $scope.dispensaries = itemsService.getAll('dispensaries');
+  .controller('dispensariesCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
+    // Wait for both our dispensaries and our featured dispensaries to load.
+    // @todo Might we need to remove duplicate entries?
+    $q.all([itemsService.getAll('dispensaries'), itemsService.getFeatured('dispensaries')])
+      .then(function(dispensaryData) {
+        dispensaryData.forEach(function(dispensaries) {
+          dispensaries.sort(function(a, b) {
+            return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+          });
+        });
+
+        $scope.dispensaries = dispensaryData[0];
+        $scope.featuredDispensaries = dispensaryData[1];
+      });
   }])
-  .controller('dispensaryDetailsCtrl', ['$scope', '$filter', '$stateParams', 'itemsService',  function($scope, $filter, $stateParams, itemsService) {
+  .controller('dispensaryDetailsCtrl', ['$scope', '$q', '$filter', '$stateParams', 'itemsService', 'ratingsService', function($scope, $q, $filter, $stateParams, itemsService, ratingsService) {
+    
     $scope.today = $filter('date')(new Date(), 'EEEE');
 
     $scope.dispensary = itemsService.get('dispensaries', $stateParams.dispensaryId);
+    // // @todo Exclude the current dispensary from the results of itemsService.getFeatured().
+    // $scope.featureddispensaries = itemsService.getFeatured('dispensaries');
+    // // @todo Exclude the current dispensary from the results of itemsService.getOther().
+    // $scope.otherdispensaries = itemsService.getOther('dispensaries');
 
-    // @todo Exclude the current dispensary from the results of itemsService.getFeatured().
-    $scope.featuredDispensaries = itemsService.getFeatured('dispensaries');
-    // @todo Exclude the current dispensary from the results of itemsService.getOther().
-    $scope.otherDispensaries = itemsService.getOther('dispensaries');
+    $q.all([itemsService.getOther('dispensaries'), itemsService.getFeatured('dispensaries')])
+    .then(function(dispensaryData) {
+      dispensaryData.forEach(function(dispensaries) {
+        dispensaries.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+        });
+      });
 
-
-    // $scope.rate = ratingsService.rate('dispensaries');
+      $scope.otherDispensaries = dispensaryData[0];
+      $scope.featuredDispensaries = dispensaryData[1];
+    });
   }])
   .controller('dispensariesManageCtrl', ['$scope', '$filter', '$firebase', 'dvUrl', function($scope, $filter, $firebase, dvUrl) {
     $firebase( new Firebase(dvUrl + '/dispensaries') ).$asObject().$loaded()
@@ -381,18 +401,20 @@ angular.module('DeViine.controllers', [])
 
     $scope.sendRating = function(divId) {
         var rating = document.getElementById(divId).value;
-        itemType = 'strains';
+        itemType = $('.pageTitle').attr('title');
         userId = $('.username').attr('title');
-        itemId = $('.strainId').attr('title');
+        itemId = $('.pageId').attr('title');
         
         if(! userId) {
           console.log('No User');
           $showLoginModal(); //TODO - LAUNCH LOGIN MODAL
           alert("Please sign in to submit a rating.");
-        } else if (! userRating) {
-          alert("No User Rating Exists");
-          $showRatingChangeModal();// TODO - LAUNCH RATING CHANGE MODAL
-        } else {
+        } 
+        // else if (! userRating) {
+        //   alert("No User Rating Exists");
+        //   $showRatingChangeModal();// TODO - LAUNCH RATING CHANGE MODAL
+        // }
+         else {
           alert('Rating Sent');
           $firebase( new Firebase(dvUrl + '/users/' + userId + '/ratings/' + itemType + '/' + itemId) ).$set(rating);
           $firebase( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/ratings/' + userId) ).$set(rating);
