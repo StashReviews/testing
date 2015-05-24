@@ -726,22 +726,28 @@
       /* line 48, layout/_menuMobile.scss */
       .navbar-header .menuMobile ul li:hover {
         color: white; }
-    /* line 53, layout/_menuMobile.scss */
-    .navbar-header .menuMobile ul .dispensaryNav span {
-      font-family: "Open Sans", sans-serif;
-      font-size: 14px;
-      color: #f7253e;
-      margin-left: 10px; }
+    /* line 52, layout/_menuMobile.scss */
+    .navbar-header .menuMobile ul .dispensaryNav {
+      color: #f7253e; }
+      /* line 54, layout/_menuMobile.scss */
+      .navbar-header .menuMobile ul .dispensaryNav span {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        color: #f7253e;
+        margin-left: 10px; }
     /* line 61, layout/_menuMobile.scss */
-    .navbar-header .menuMobile ul .dealNav span {
-      font-family: "Open Sans", sans-serif;
-      font-size: 14px;
-      color: #fcd31c;
-      margin-left: 10px; }
-    /* line 68, layout/_menuMobile.scss */
+    .navbar-header .menuMobile ul .dealNav {
+      color: #fcd31c; }
+      /* line 63, layout/_menuMobile.scss */
+      .navbar-header .menuMobile ul .dealNav span {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        color: #fcd31c;
+        margin-left: 10px; }
+    /* line 70, layout/_menuMobile.scss */
     .navbar-header .menuMobile ul .strainNav {
       color: #3dd861; }
-    /* line 71, layout/_menuMobile.scss */
+    /* line 73, layout/_menuMobile.scss */
     .navbar-header .menuMobile ul .menuMobile-subHeader {
       font-family: "Open Sans", sans-serif;
       font-size: 12px;
@@ -751,7 +757,7 @@
       color: rgba(255, 255, 255, 0.2);
       cursor: default;
       padding-bottom: 5px; }
-      /* line 80, layout/_menuMobile.scss */
+      /* line 82, layout/_menuMobile.scss */
       .navbar-header .menuMobile ul .menuMobile-subHeader:hover {
         color: rgba(255, 255, 255, 0.2); }
 
