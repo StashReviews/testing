@@ -15,6 +15,7 @@
 			</div>
 		</div>
 		<dv-rating ratings="dispensary.ratings" class="dispensaryRating"></dv-rating>
+		<dv-distance distance="dispensary.distance" class="dispensaryDistance"></dv-distance>
 		<p ng-show="dispensary.ratings[currentName]" class="userRatingDisplay">You rated this dispensary a <strong id="userRating">{{ dispensary.ratings[currentName] }}</strong>.</p>
 		<div class="contactInfo">
 			<div ng-show="dispensary.website" class="dispensaryWebsite">
@@ -37,12 +38,16 @@
 		<div>
 			<img src="{{ dispensary.image }}" class="dispensaryGallery" />
 		</div>	
+	</div>
+	<div class="currentDeals col-md-6 col-sm-6 col-xs-12">
 		<h3>Current Deals</h3>
 		<ul class="dvCardList">
 			<li ng-repeat="(dealIndex, deal) in dispensary.deals" class="col-md-6">
 				<dv-card item-type="deal" item-id="{{ dealIndex }}"></dv-card>
 			</li>
 		</ul>
+	</div>
+	<div class="currentHours col-md-6 col-sm-6 col-xs-12">
 		<h3>Hours of Operation</h3>
 		<table ng-show="dispensary.hours" class="dispensaryHours">
 			<tr ng-repeat="day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']" ng-class="{'dvGreen': today === day}">
@@ -53,9 +58,9 @@
 	</div>
 	<div class="col-md-6 col-sm-6 col-xs-12">
 	    <h3>{{ getReviewsCount(reviews) }} Reviews</h3>
-	    <section class="reviews" ng-reviews data="{{ dispensary.name }}">
+	    <section class="reviews" ng-reviews data="{{ dispensary.name }}" ng-controller="reviewsCtrl">
 	      <h4 class="pleaseSignIn">Please <a ng-click="showLoginModal()">sign in</a> to drop a review.</h4>
-	      <div class="leaveReview col-md-12 col-sm-12 col-xs-12" ng-show="currentUser" ng-controller="reviewCtrl">
+	      <div class="leaveReview col-md-12 col-sm-12 col-xs-12" ng-show="currentUser">
 	        <div class="avatarWrap">
 	          <img class="avatar" ng-src="{{ currentAvatar }}" title="{{ currentAvatar }}"/>
 	          <h4 class="reviewBanner">Try this dispensary lately? <a class="closeReviewBanner"> X </a></h4>

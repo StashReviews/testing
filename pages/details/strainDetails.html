@@ -91,9 +91,9 @@
   </div>
   <div class="col-md-6 col-sm-6 col-xs-12">
     <h3>{{ getReviewsCount(reviews) }} Reviews</h3>
-    <section class="reviews" ng-reviews data="{{ strainDetails.name }}">
+    <section class="reviews" ng-reviews data="{{ strainDetails.name }}" ng-controller="reviewsCtrl">
       <h4 class="pleaseSignIn">Please <a ng-click="showLoginModal()">sign in</a> to drop a review.</h4>
-      <div class="leaveReview col-md-12 col-sm-12 col-xs-12" ng-show="currentUser" ng-controller="reviewCtrl">
+      <div class="leaveReview col-md-12 col-sm-12 col-xs-12" ng-show="currentUser">
         <div class="avatarWrap">
           <img class="avatar" ng-src="{{ currentAvatar }}" title="{{ currentAvatar }}"/>
           <h4 class="reviewBanner">Try this strain lately? <a class="closeReviewBanner"> X </a></h4>
@@ -102,7 +102,23 @@
         <textarea type='text' id='reviewInput' placeholder='Drop a review...'></textarea>
         <input ng-click="sendReview" type='submit' id='submitReview' value='DROP IT LIKE IT&rsquo;S HOT' class="pull-right">
       </div>
-      <div id='reviewsDiv' class="col-md-12 col-sm-12 col-xs-12"></div>
+      <div id='reviewsDiv' class="col-md-12 col-sm-12 col-xs-12">
+        
+        <!-- <ul>
+          <li ng-repeat="review in reviews">
+            <dv-review item-type="review" item-id="{{ strain.review.$id }}"></dv-review>
+          </li>
+        </ul> -->
+
+        <!-- <ul>
+          <li ng-repeat="review in reviews">
+            <img class=".reviewAvatar" ng-src="{{ review.avatar }}"/>
+            <h4 class=".reviewAuthor">{{ review.author }}</h4>
+            <h6 class=".reviewDate">{{ review.date }}</h6>
+            <p class=".reviewText">{{ review.text }}</p>
+          </li>
+        <ul> -->
+      </div>
     </section>
   </div>
 </div>

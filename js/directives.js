@@ -67,6 +67,17 @@ angular.module('DeViine.directives', [])
     };
   })
 
+  /** <dv-distance distance='' /> */
+  .directive('dvDistance', function(distanceService) {
+    return {
+
+      link: function(scope, element, attrs) {
+
+        scope.getUserDistance = ratingsService.getUserDistance;
+      }
+    };
+  })
+
   /** <dv-menu dispensaryId='' /> */
   .directive('dvMenu', ['$firebase', 'dvUrl', function($firebase, dvUrl) {
     return {
@@ -109,6 +120,24 @@ angular.module('DeViine.directives', [])
       }
     };
   })
+
+
+
+  // .directive('dvReview', ['$firebase', 'dvUrl', function($firebase, dvUrl) {
+  //   return {
+  //     restrict: 'E',
+  //     templateUrl: function(element, attr) {
+  //       return 'partials/review.html';
+  //     }
+  //     /*
+  //       scope: {
+  //         itemType: '@',
+  //         itemId: '='
+  //       },
+  //     */
+  //   };
+  // }])
+
 
    /** Reviews Refresh */
   .directive('ngReviews', function() {

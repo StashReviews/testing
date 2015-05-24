@@ -111,7 +111,7 @@ angular.module('DeViine.controllers', [])
         $scope.featuredDispensaries = dispensaryData[1];
       });
   }])
-  .controller('dispensaryDetailsCtrl', ['$scope', '$q', '$filter', '$stateParams', 'itemsService', 'ratingsService', function($scope, $q, $filter, $stateParams, itemsService, ratingsService) {
+  .controller('dispensaryDetailsCtrl', ['$scope', '$q', '$filter', '$stateParams', 'itemsService', 'ratingsService', 'reviewsService', function($scope, $q, $filter, $stateParams, itemsService, ratingsService, reviewsService) {
     
     $scope.today = $filter('date')(new Date(), 'EEEE');
 
@@ -132,6 +132,8 @@ angular.module('DeViine.controllers', [])
       $scope.otherDispensaries = dispensaryData[0];
       $scope.featuredDispensaries = dispensaryData[1];
     });
+
+
   }])
   .controller('dispensariesManageCtrl', ['$scope', '$filter', '$firebase', 'dvUrl', function($scope, $filter, $firebase, dvUrl) {
     $firebase( new Firebase(dvUrl + '/dispensaries') ).$asObject().$loaded()
@@ -265,7 +267,7 @@ angular.module('DeViine.controllers', [])
         $scope.featuredStrains = strainData[1];
       });
   }])
-  .controller('strainDetailsCtrl', ['$scope', '$q', '$stateParams', 'itemsService', 'ratingsService', function($scope, $q, $stateParams, itemsService, ratingsService) {
+  .controller('strainDetailsCtrl', ['$scope', '$q', '$stateParams', 'itemsService', 'ratingsService', 'reviewsService', function($scope, $q, $stateParams, itemsService, ratingsService, reviewsService) {
     $scope.strainDetails = itemsService.get('strains', $stateParams.strainId);
     // // @todo Exclude the current strain from the results of itemsService.getFeatured().
     // $scope.featuredStrains = itemsService.getFeatured('strains');
@@ -298,6 +300,10 @@ angular.module('DeViine.controllers', [])
           usersService.setCurrentUser(currentUser);
         });
     };
+
+    // $q.all([itemsService.reviews('reviews')]);
+
+    // $scope.reviews = itemsService.reviews('reviews');
 
   }])
   .controller('strainsManageCtrl', ['$scope', '$firebase', 'dvUrl', function($scope, $firebase, dvUrl) {
@@ -424,6 +430,34 @@ angular.module('DeViine.controllers', [])
 
   }])
 
-  .controller('reviewCtrl', ['$scope', '$firebase', 'dvUrl', 'usersService', function($scope, $firebase, dvUrl, usersService) {    }])
+  .controller('reviewsCtrl', ['$scope', '$firebase', 'dvUrl', 'reviewsService',  function($scope, $firebase, dvUrl, reviewsService) {   
+  // .controller('reviewsCtrl', ['$scope', 'reviewsService', function($scope, reviewsService) {   
+
+    // $scope.reviews = [ 
+    //   { 
+    //     author: 'The Book of Trees', 
+    //     text: 19, 
+    //     date: new Date('2014', '03', '08'), 
+    //     avatar: 'img/the-book-of-trees.jpg' 
+    //   }, 
+    //   { 
+    //     author: 'Program or be Programmed', 
+    //     text: 8, 
+    //     date: new Date('2013', '08', '01'), 
+    //     avatar: 'img/program-or-be-programmed.jpg' 
+    //   } 
+    // ];
+
+    // var itemType = $('.pageTitle').attr('title');
+    // var itemId = $('.pageId').attr('title');
+
+    // $scope.reviews = function (itemType, itemId) {
+    //   return $firebase( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/reviews') ).$asArray();
+    // };
+
+    // $scope.reviews = reviewsService.getReviews('reviews');
+
+
+  }])
 ;
 
