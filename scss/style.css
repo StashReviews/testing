@@ -30,7 +30,7 @@
 .dispensaryName,
 .dealTitle,
 .strainName {
-  font-family: "Khand", sans-serif;
+  font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 35px;
   font-weight: normal;
@@ -162,7 +162,7 @@
     color: #3dd861; }
   /* line 156, _items.scss */
   .dispensaryHours td {
-    font-family: "Khand", sans-serif;
+    font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 26px;
     padding: 10px 20px 4px 20px;
@@ -173,7 +173,7 @@
 
 /* line 169, _items.scss */
 .dealDetails h4 {
-  font-family: "Khand", sans-serif;
+  font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 22px;
   color: #2c3034;
@@ -192,7 +192,7 @@
   /* line 186, _items.scss */
   .dealDetails .redemptionDetails div .redeemDeal {
     background: #f7253e;
-    font-family: "Khand", sans-serif;
+    font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 30px;
     color: white;
@@ -224,7 +224,7 @@
 .flavorProfile,
 .positiveEffects,
 .negativeEffects {
-  font-family: "Khand", sans-serif;
+  font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   color: #2c3034;
@@ -296,7 +296,7 @@
     /* line 281, _items.scss */
     .barChart li div {
       color: white;
-      font-family: "Khand", sans-serif;
+      font-family: "Bebas Neue", "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 18px;
       text-align: center;
@@ -310,7 +310,7 @@
   margin: 0 auto;
   width: 27%;
   text-align: center;
-  font-family: "Khand", sans-serif;
+  font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 40px;
   color: #2c3034; }
@@ -543,7 +543,7 @@
 #mainMenu {
   list-style-type: none;
   padding-left: 0;
-  font-family: "Khand", sans-serif;
+  font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   position: fixed;
@@ -625,7 +625,7 @@
   right: 2%; }
   /* line 189, layout/_navbar.scss */
   #socialIcons h4 {
-    font-family: "Khand", sans-serif;
+    font-family: "Bebas Neue", "Khand", sans-serif;
     font-size: 16px;
     text-align: right;
     margin: 0;
@@ -712,7 +712,7 @@
     overflow: hidden; }
     /* line 36, layout/_menuMobile.scss */
     .navbar-header .menuMobile ul li {
-      font-family: "Khand", sans-serif;
+      font-family: "Bebas Neue", "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 25px;
       color: rgba(255, 255, 255, 0.2);
@@ -1334,12 +1334,12 @@
     padding: 0; }
     /* line 15, modals/_login.scss */
     .modal-content .modal-header .modalTitle {
-      font-family: "Khand", sans-serif;
+      font-family: "Bebas Neue", "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 70px; }
     /* line 20, modals/_login.scss */
     .modal-content .modal-header .modalSubtitle {
-      font-family: "Khand", sans-serif;
+      font-family: "Bebas Neue", "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 25px;
       color: white;
@@ -1365,7 +1365,7 @@
     padding: 0; }
     /* line 46, modals/_login.scss */
     .modal-content .modal-body p {
-      font-family: "Khand", sans-serif;
+      font-family: "Bebas Neue", "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 30px;
       color: white;
@@ -1388,7 +1388,7 @@
         width: 33%;
         display: inline;
         background: transparent;
-        font-family: "Khand", sans-serif;
+        font-family: "Bebas Neue", "Khand", sans-serif;
         text-transform: uppercase;
         font-size: 35px;
         padding: 10px 0 2px 0;
@@ -1427,7 +1427,7 @@
     /* line 108, modals/_login.scss */
     .modal-content .modal-footer button {
       background: transparent;
-      font-family: "Khand", sans-serif;
+      font-family: "Bebas Neue", "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 35px;
       padding: 10px 0 2px 0;
@@ -1625,7 +1625,7 @@
   .cardWrapper .dispensaryName,
   .cardWrapper .dealTitle,
   .cardWrapper .strainName {
-    font-family: "Khand", sans-serif;
+    font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 1.4em;
     font-weight: normal;
@@ -1825,13 +1825,13 @@ ul.nav.nav-tabs {
       padding: 0;
       width: 100%;
       float: left;
-      font: normal "Khand", sans-serif 35px; }
+      font: normal "Bebas Neue", "Khand", sans-serif 35px; }
     /* line 95, partials/_menu.scss */
     .menu .menuItem .producerName {
       margin: 10px 0 0 0;
       padding: 0;
       float: right;
-      font: 22px "Khand", sans-serif;
+      font: 22px "Bebas Neue", "Khand", sans-serif;
       text-transform: uppercase;
       color: rgba(44, 48, 52, 0.3); }
     /* line 103, partials/_menu.scss */
@@ -1845,7 +1845,7 @@ ul.nav.nav-tabs {
       margin: 0px auto 0 auto;
       width: 27%;
       text-align: center;
-      font-family: "Khand", sans-serif;
+      font-family: "Bebas Neue", "Khand", sans-serif;
       text-transform: uppercase;
       font-size: 20px;
       color: rgba(44, 48, 52, 0.3); }
@@ -1875,7 +1875,7 @@ ul.nav.nav-tabs {
         float: left;
         list-style: none;
         text-align: center;
-        font: normal 25px/22px "Khand", sans-serif;
+        font: normal 25px/22px "Bebas Neue", "Khand", sans-serif;
         text-transform: uppercase;
         color: rgba(44, 48, 52, 0.2); }
         /* line 144, partials/_menu.scss */
@@ -1911,7 +1911,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Khand", sans-serif;
+  font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase; }
 
 /* line 52, style.scss */
@@ -1934,7 +1934,7 @@ ul {
   margin-top: 0;
   border-bottom: 1px solid rgba(44, 48, 52, 0.05);
   text-align: center;
-  font-family: "Khand", sans-serif;
+  font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 40px; }
 
@@ -1950,7 +1950,7 @@ form {
   color: #2c3034; }
   /* line 85, style.scss */
   form .btn-block {
-    font-family: "Khand", sans-serif;
+    font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     color: white;
