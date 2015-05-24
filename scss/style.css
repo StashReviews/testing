@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("../fonts/bebas_neue/bebasneue_regular-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/bebas_neue/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebas_neue/bebasneue_regular-webfont.woff") format("woff"), url("../fonts/bebas_neue/bebasneue_regular-webfont.ttf") format("truetype"), url("../fonts/bebas_neue/bebasneue_regular-webfont.svg") format("svg");
+  /* Legacy iOS */ }
 /* line 1, _items.scss */
 .dvCardList {
   min-height: 400px; }
@@ -1896,21 +1902,21 @@ ul.nav.nav-tabs {
         .menu .menuItem .pricing li:last-child {
           border-right: none; }
 
-/* line 24, style.scss */
+/* line 33, style.scss */
 body {
   position: relative;
   top: 100px; }
 
-/* line 29, style.scss */
+/* line 38, style.scss */
 .container-fluid {
   padding: 0 2%;
   margin: 0; }
 
-/* line 35, style.scss */
+/* line 44, style.scss */
 a:active, a:hover, a:visited {
   text-decoration: none; }
 
-/* line 42, style.scss */
+/* line 51, style.scss */
 h1,
 h2,
 h3,
@@ -1920,22 +1926,22 @@ h6 {
   font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase; }
 
-/* line 52, style.scss */
+/* line 61, style.scss */
 h3 {
   border-bottom: 1px solid rgba(44, 48, 52, 0.05);
   text-align: center;
   font-size: 30px; }
 
-/* line 58, style.scss */
+/* line 67, style.scss */
 p {
   font-family: "Open Sans", sans-serif; }
 
-/* line 62, style.scss */
+/* line 71, style.scss */
 ul {
   list-style: none;
   padding: 0; }
 
-/* line 67, style.scss */
+/* line 76, style.scss */
 .pageTitle {
   margin-top: 0;
   border-bottom: 1px solid rgba(44, 48, 52, 0.05);
@@ -1944,17 +1950,17 @@ ul {
   text-transform: uppercase;
   font-size: 40px; }
 
-/* line 76, style.scss */
+/* line 85, style.scss */
 .viewOnMap {
   text-transform: uppercase;
   font-weight: bold; }
 
-/* line 81, style.scss */
+/* line 90, style.scss */
 form {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   color: #2c3034; }
-  /* line 85, style.scss */
+  /* line 94, style.scss */
   form .btn-block {
     font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
@@ -1962,45 +1968,45 @@ form {
     color: white;
     padding: 5px 0 0 0;
     background: #2c3034; }
-    /* line 92, style.scss */
+    /* line 101, style.scss */
     form .btn-block.dispensaryCMS:hover, form .btn-block.dispensaryCMS:active, form .btn-block.dispensaryCMS:focus, form .btn-block.dispensaryCMS:visited {
       background: #f7253e;
       color: white; }
-    /* line 99, style.scss */
+    /* line 108, style.scss */
     form .btn-block.dealCMS:hover, form .btn-block.dealCMS:active, form .btn-block.dealCMS:focus, form .btn-block.dealCMS:visited {
       background: #fcd31c;
       color: white; }
-    /* line 106, style.scss */
+    /* line 115, style.scss */
     form .btn-block.strainCMS:hover, form .btn-block.strainCMS:active, form .btn-block.strainCMS:focus, form .btn-block.strainCMS:visited {
       background: #3dd861;
       color: white; }
 
-/* line 116, style.scss */
+/* line 125, style.scss */
 .brandassets {
   margin-top: -3%;
   list-style: none; }
-  /* line 119, style.scss */
+  /* line 128, style.scss */
   .brandassets li {
     margin-bottom: 20px;
     text-align: center; }
-    /* line 122, style.scss */
+    /* line 131, style.scss */
     .brandassets li h4 {
       font-size: 35px;
       margin-top: 30px;
       border-bottom: 3px solid; }
-    /* line 127, style.scss */
+    /* line 136, style.scss */
     .brandassets li:nth-child(1) {
       color: #3dd861; }
-    /* line 130, style.scss */
+    /* line 139, style.scss */
     .brandassets li:nth-child(2) {
       color: #fcd31c; }
-    /* line 133, style.scss */
+    /* line 142, style.scss */
     .brandassets li:nth-child(3) {
       color: #f7253e; }
-    /* line 136, style.scss */
+    /* line 145, style.scss */
     .brandassets li:nth-child(4) {
       color: #2c3034; }
-    /* line 140, style.scss */
+    /* line 149, style.scss */
     .brandassets li a img {
       width: 100%; }
 
