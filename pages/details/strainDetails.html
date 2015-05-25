@@ -3,10 +3,13 @@
 <div class="row">
   <div class="col-md-6 col-sm-6 col-xs-12">
     <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-4">
+      <div class="col-md-6 col-sm-6 col-xs-12 strainGalleryWrap">
+        <img src="{{ strainDetails.image }}" class="img-responsive strainGalleryMobile"/>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-4 producerLogoWrap">
         <img ng-src="{{ strainDetails.logo }}" class="producerLogo"/>
       </div>
-      <div class="col-md-9 col-sm-12 col-xs-12 info">
+      <div class="col-md-9 col-sm-9 col-xs-8 info">
         <h2 class="strainName" id="{{ strainDetails.name }}">{{ strainDetails.name }}</h2>
         <h4 class="strainChemistry">{{ strainDetails.chemistry }}</h4>
         <h4 class="producedBy">Produced by</h4>
@@ -20,9 +23,6 @@
         <h3 class="strainDescriptionSubHeader">Strain Description</h3>
         <p class="strainDescription">{{ strainDetails.description }}</p>
       </div>
-    </div>
-    <div class="col-md-6 col-sm-6 col-xs-12 strainGalleryWrap">
-      <img src="{{ strainDetails.image }}" class="img-responsive strainGalleryMobile"/>
     </div>
     <h3>Strain Profile</h3>
     <div class="row">
@@ -87,9 +87,9 @@
     </div> -->
   </div>
   <div class="strainGalleryWrap col-md-6 col-sm-6 col-xs-12">
-    <!-- <img ng-elevate-zoom ng-src="{{ strainDetails.image }}" zoom-image="{{ strainDetails.zoomimage }}" class="img-responsive strainGallery"/> -->
-    <img id="strainGallery" ng-strain-zoom ng-src="{{ strainDetails.image }}" zoom-image="{{ strainDetails.zoomimage }}" class="img-responsive strainGallery"/>
-    <div id="zoom" style="background-image:{{ strainDetails.zoomimage }}"></div>
+    <img ng-elevate-zoom ng-src="{{ strainDetails.image }}" zoom-image="{{ strainDetails.zoomimage }}" class="img-responsive strainGallery"/>
+    <!-- <img id="strainGallery" ng-strain-zoom ng-src="{{ strainDetails.image }}" zoom-image="{{ strainDetails.zoomimage }}" class="img-responsive strainGallery"/>
+    <div id="zoom" style="background-image:{{ strainDetails.zoomimage }}"></div> -->
   </div>
   <div class="col-md-6 col-sm-6 col-xs-12">
     <h3>{{ getReviewsCount(reviews) }} Reviews</h3>

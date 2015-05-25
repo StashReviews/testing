@@ -18,12 +18,19 @@
   }
 }
 
+.dispensaryLogoWrap,
+.producerLogoWrap {
+  float: left;
+  clear: left;
+} 
 .dispensaryLogo,
 .businessLogo,
 .producerLogo {
   width: 100%;
   margin: 0;
   padding: 0;
+  float: left;
+  clear: left;
 }
 
 .dispensaryName,
@@ -162,7 +169,8 @@
   }
 }
 /* Strain Zoom End */
-.strainGalleryMobile {
+.strainGalleryMobile,
+.dispensaryGalleryMobile {
   display: none;
 }
 .zoomContainer {

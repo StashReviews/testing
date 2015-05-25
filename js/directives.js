@@ -92,142 +92,142 @@ angular.module('DeViine.directives', [])
     }
   }])
 
-  // /** Elevate Zoom (Strains) */
-  // .directive('ngElevateZoom', function() {
-  //   return {
-  //     restrict: 'A',
-  //     link: function(scope, element, attrs) {
-
-  //       //Will watch for changes on the attribute
-  //       attrs.$observe('zoomImage',function(){
-  //         linkElevateZoom();
-  //       })
-
-  //       function linkElevateZoom(){
-  //         //Check if its not empty
-  //         if (!attrs.zoomImage) return;
-  //         element.attr('data-zoom-image',attrs.zoomImage);
-  //         $(element).elevateZoom({
-  //           zoomType:"lens",
-  //           lensShape : "round",
-  //           lensSize : 250
-  //         });
-          
-  //       }
-
-  //       linkElevateZoom();
-
-  //     }
-  //   };
-  // })
-
-  /** Custom Strain Zoom */
-  .directive('ngStrainZoom', function() {
+  /** Elevate Zoom (Strains) */
+  .directive('ngElevateZoom', function() {
     return {
       restrict: 'A',
       link: function(scope, element, attrs) {
 
-        function linkStrainZoom(){
-          var zoom = document.getElementById('zoom'),
-              Zw = zoom.offsetWidth,
-              Zh = zoom.offsetHeight,
-              strainGallery = document.getElementById('strainGallery');
-              
-          var timeout, ratio, Ix, Iy;
-
-          function activate () {
-            document.body.classList.add('active');
-          }
-          
-          function deactivate() {
-            document.body.classList.remove('active');
-          }
-          
-          function updateMagnifier( x, y ) {
-            zoom.style.top = ( y ) + 'px';
-            zoom.style.left = ( x ) + 'px';
-            zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw / 2 ) + 'px ' + (( Iy - y ) * ratio + Zh / 2 ) + 'px';
-          }
-          
-          function onLoad () {
-            ratio = strainGallery.naturalWidth / strainGallery.width;
-            Ix = strainGallery.offsetLeft;
-            Iy = strainGallery.offsetTop;
-          }
-          
-          function onMousemove( e ) {
-            clearTimeout( timeout );
-            activate();
-            updateMagnifier( e.x, e.y );
-            timeout = setTimeout( deactivate, 2500 );
-          }
-          
-          function onMouseleave () {
-            deactivate();
-          }
-
-          strainGallery.addEventListener( 'load', onLoad );
-          strainGallery.addEventListener( 'mousemove', onMousemove );
-          strainGallery.addEventListener( 'mouseleave', onMouseleave );
-
-        }
-
         //Will watch for changes on the attribute
         attrs.$observe('zoomImage',function(){
-          linkStrainZoom();
+          linkElevateZoom();
         })
 
-        // function linkStrainZoom(){
-        //   //Check if its not empty
-        //   var zoom = document.getElementById('zoom'),
-        //         Zw = zoom.offsetWidth,
-        //         Zh = zoom.offsetHeight,
-        //         strainGallery = document.getElementById('strainGallery');
-                
-        //     var timeout, ratio, Ix, Iy;
-
-        //     function activate () {
-        //       document.body.classList.add('active');
-        //     }
-            
-        //     function deactivate() {
-        //       document.body.classList.remove('active');
-        //     }
-            
-        //     function updateMagnifier( x, y ) {
-        //       zoom.style.top = ( y ) + 'px';
-        //       zoom.style.left = ( x ) + 'px';
-        //       zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw / 2 ) + 'px ' + (( Iy - y ) * ratio + Zh / 2 ) + 'px';
-        //     }
-            
-        //     function onLoad () {
-        //       ratio = strainGallery.naturalWidth / strainGallery.width;
-        //       Ix = strainGallery.offsetLeft;
-        //       Iy = strainGallery.offsetTop;
-        //     }
-            
-        //     function onMousemove( e ) {
-        //       clearTimeout( timeout );
-        //       activate();
-        //       updateMagnifier( e.x, e.y );
-        //       timeout = setTimeout( deactivate, 2500 );
-        //     }
-            
-        //     function onMouseleave () {
-        //       deactivate();
-        //     }
-
-        //     strainGallery.addEventListener( 'load', onLoad );
-        //     strainGallery.addEventListener( 'mousemove', onMousemove );
-        //     strainGallery.addEventListener( 'mouseleave', onMouseleave );
+        function linkElevateZoom(){
+          //Check if its not empty
+          if (!attrs.zoomImage) return;
+          element.attr('data-zoom-image',attrs.zoomImage);
+          $(element).elevateZoom({
+            zoomType:"lens",
+            lensShape : "round",
+            lensSize : 250
+          });
           
-        // }
+        }
 
-        // linkStrainZoom();
+        linkElevateZoom();
 
       }
     };
   })
+
+  // /** Custom Strain Zoom */
+  // .directive('ngStrainZoom', function() {
+  //   return {
+  //     restrict: 'A',
+  //     link: function(scope, element, attrs) {
+
+  //       function linkStrainZoom(){
+  //         var zoom = document.getElementById('zoom'),
+  //             Zw = zoom.offsetWidth,
+  //             Zh = zoom.offsetHeight,
+  //             strainGallery = document.getElementById('strainGallery');
+              
+  //         var timeout, ratio, Ix, Iy;
+
+  //         function activate () {
+  //           document.body.classList.add('active');
+  //         }
+          
+  //         function deactivate() {
+  //           document.body.classList.remove('active');
+  //         }
+          
+  //         function updateMagnifier( x, y ) {
+  //           zoom.style.top = ( y ) + 'px';
+  //           zoom.style.left = ( x ) + 'px';
+  //           zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw / 2 ) + 'px ' + (( Iy - y ) * ratio + Zh / 2 ) + 'px';
+  //         }
+          
+  //         function onLoad () {
+  //           ratio = strainGallery.naturalWidth / strainGallery.width;
+  //           Ix = strainGallery.offsetLeft;
+  //           Iy = strainGallery.offsetTop;
+  //         }
+          
+  //         function onMousemove( e ) {
+  //           clearTimeout( timeout );
+  //           activate();
+  //           updateMagnifier( e.x, e.y );
+  //           timeout = setTimeout( deactivate, 2500 );
+  //         }
+          
+  //         function onMouseleave () {
+  //           deactivate();
+  //         }
+
+  //         strainGallery.addEventListener( 'load', onLoad );
+  //         strainGallery.addEventListener( 'mousemove', onMousemove );
+  //         strainGallery.addEventListener( 'mouseleave', onMouseleave );
+
+  //       }
+
+  //       //Will watch for changes on the attribute
+  //       attrs.$observe('zoomImage',function(){
+  //         linkStrainZoom();
+  //       })
+
+  //       // function linkStrainZoom(){
+  //       //   //Check if its not empty
+  //       //   var zoom = document.getElementById('zoom'),
+  //       //         Zw = zoom.offsetWidth,
+  //       //         Zh = zoom.offsetHeight,
+  //       //         strainGallery = document.getElementById('strainGallery');
+                
+  //       //     var timeout, ratio, Ix, Iy;
+
+  //       //     function activate () {
+  //       //       document.body.classList.add('active');
+  //       //     }
+            
+  //       //     function deactivate() {
+  //       //       document.body.classList.remove('active');
+  //       //     }
+            
+  //       //     function updateMagnifier( x, y ) {
+  //       //       zoom.style.top = ( y ) + 'px';
+  //       //       zoom.style.left = ( x ) + 'px';
+  //       //       zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw / 2 ) + 'px ' + (( Iy - y ) * ratio + Zh / 2 ) + 'px';
+  //       //     }
+            
+  //       //     function onLoad () {
+  //       //       ratio = strainGallery.naturalWidth / strainGallery.width;
+  //       //       Ix = strainGallery.offsetLeft;
+  //       //       Iy = strainGallery.offsetTop;
+  //       //     }
+            
+  //       //     function onMousemove( e ) {
+  //       //       clearTimeout( timeout );
+  //       //       activate();
+  //       //       updateMagnifier( e.x, e.y );
+  //       //       timeout = setTimeout( deactivate, 2500 );
+  //       //     }
+            
+  //       //     function onMouseleave () {
+  //       //       deactivate();
+  //       //     }
+
+  //       //     strainGallery.addEventListener( 'load', onLoad );
+  //       //     strainGallery.addEventListener( 'mousemove', onMousemove );
+  //       //     strainGallery.addEventListener( 'mouseleave', onMouseleave );
+          
+  //       // }
+
+  //       // linkStrainZoom();
+
+  //     }
+  //   };
+  // })
 
 
   // .directive('dvReview', ['$firebase', 'dvUrl', function($firebase, dvUrl) {

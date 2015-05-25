@@ -3,7 +3,10 @@
 <div class="row">
 	<div class="col-md-6 col-sm-6 col-xs-12">
 		<div class="row">
-			<div class="col-md-3 col-sm-2 col-xs-4">
+			<div class="col-md-6 col-sm-6 col-xs-12 dispensaryGalleryWrap">
+		      <img src="{{ dispensary.image }}" class="img-responsive dispensaryGalleryMobile"/>
+		    </div>
+			<div class="col-md-3 col-sm-2 col-xs-4 dispensaryLogoWrap">
 				<img ng-src="{{ dispensary.logo }}" class="dispensaryLogo"/>
 			</div>
 			<div class="col-md-9">
@@ -31,6 +34,7 @@
 				<a href="tel:{{ dispensary.phone }}">{{ dispensary.phone }}</a>
 			</div>
 		</div>
+
 		<h3>Current Menu</h3>
 		<dv-menu dispensary-id="{{ dispensary.$id }}"></dv-menu>
 	</div>

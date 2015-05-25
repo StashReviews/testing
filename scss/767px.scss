@@ -110,11 +110,14 @@
   }
   /*----cards.html end----*/
   /*----items.html start----*/
-  .strainGallery {
+  .strainGallery,
+  .dispensaryGallery {
     display: none;
   }
-  .strainGalleryMobile {
+  .strainGalleryMobile,
+  .dispensaryGalleryMobile {
     display: inline;
+    margin-bottom: 20px;
   }
   /*----items.html end----*/
 }
