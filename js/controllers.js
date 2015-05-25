@@ -413,7 +413,7 @@ angular.module('DeViine.controllers', [])
         
         if(! userId) {
           console.log('No User');
-          $showLoginModal(); //TODO - LAUNCH LOGIN MODAL
+          // $showLoginModal(); //TODO - LAUNCH LOGIN MODAL
           alert("Please sign in to submit a rating.");
         } 
         // else if (! userRating) {
