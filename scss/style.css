@@ -143,59 +143,87 @@
   position: relative;
   z-index: -10; }
 
-/* line 134, _items.scss */
+/* Strain Zoom Start */
+/* line 136, _items.scss */
+.strainGalleryWrap .strainGallery {
+  -webkit-transition: -webkit-filter 500ms; }
+/* line 139, _items.scss */
+.strainGalleryWrap.active .strainGallery {
+  -webkit-filter: grayscale(1); }
+/* line 142, _items.scss */
+.strainGalleryWrap #zoom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  margin: -125px 0 0 -125px;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0 2px white, 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -webkit-transition: opacity 500ms, -webkit-transform 500ms;
+  pointer-events: none; }
+/* line 159, _items.scss */
+.strainGalleryWrap.active #zoom {
+  opacity: 1;
+  -webkit-transform: scale(1); }
+
+/* Strain Zoom End */
+/* line 165, _items.scss */
 .strainGalleryMobile {
   display: none; }
 
-/* line 137, _items.scss */
+/* line 168, _items.scss */
 .zoomContainer {
   top: 60px !important;
   cursor: none; }
 
-/* line 142, _items.scss */
+/* line 173, _items.scss */
 .currentDeals {
   display: none; }
 
-/* line 147, _items.scss */
+/* line 178, _items.scss */
 .dispensaryHours {
   background: #2c3034;
   width: 100%; }
-  /* line 150, _items.scss */
+  /* line 181, _items.scss */
   .dispensaryHours tr {
     color: white; }
-  /* line 153, _items.scss */
+  /* line 184, _items.scss */
   .dispensaryHours tr.dvGreen {
     color: #3dd861; }
-  /* line 156, _items.scss */
+  /* line 187, _items.scss */
   .dispensaryHours td {
     font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 26px;
     padding: 10px 20px 4px 20px;
     border-bottom: thin solid rgba(255, 255, 255, 0.1); }
-  /* line 163, _items.scss */
+  /* line 194, _items.scss */
   .dispensaryHours td:nth-child(2) {
     text-align: right; }
 
-/* line 169, _items.scss */
+/* line 200, _items.scss */
 .dealDetails h4 {
   font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 22px;
   color: #2c3034;
   margin: 20px 0 0 0; }
-/* line 176, _items.scss */
+/* line 207, _items.scss */
 .dealDetails p {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #2c3034; }
-/* line 182, _items.scss */
+/* line 213, _items.scss */
 .dealDetails .redemptionDetails {
   border-bottom: 1px solid rgba(44, 48, 52, 0.2);
   padding-bottom: 15px;
   margin: 10px 0 20px 0; }
-  /* line 186, _items.scss */
+  /* line 217, _items.scss */
   .dealDetails .redemptionDetails div .redeemDeal {
     background: #f7253e;
     font-family: "Bebas Neue", "Khand", sans-serif;
@@ -204,17 +232,17 @@
     color: white;
     width: 100%;
     padding: 10px 20px 5px 20px; }
-    /* line 194, _items.scss */
+    /* line 225, _items.scss */
     .dealDetails .redemptionDetails div .redeemDeal:hover {
       background: #2c3034; }
-  /* line 198, _items.scss */
+  /* line 229, _items.scss */
   .dealDetails .redemptionDetails div label {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 16px;
     color: #2c3034;
     float: left; }
-  /* line 205, _items.scss */
+  /* line 236, _items.scss */
   .dealDetails .redemptionDetails div .distanceAway,
   .dealDetails .redemptionDetails div .daysLeft {
     color: #f7253e;
@@ -226,7 +254,7 @@
     float: left;
     width: 25%; }
 
-/* line 219, _items.scss */
+/* line 250, _items.scss */
 .flavorProfile,
 .positiveEffects,
 .negativeEffects {
@@ -235,29 +263,29 @@
   font-size: 20px;
   color: #2c3034;
   text-align: left; }
-  /* line 227, _items.scss */
+  /* line 258, _items.scss */
   .flavorProfile li,
   .positiveEffects li,
   .negativeEffects li {
     line-height: 18px;
     margin-bottom: 10px; }
-    /* line 230, _items.scss */
+    /* line 261, _items.scss */
     .flavorProfile li:nth-child(1),
     .positiveEffects li:nth-child(1),
     .negativeEffects li:nth-child(1) {
       border-bottom: 3px solid #3dd861; }
-    /* line 233, _items.scss */
+    /* line 264, _items.scss */
     .flavorProfile li:nth-child(2),
     .positiveEffects li:nth-child(2),
     .negativeEffects li:nth-child(2) {
       border-bottom: 3px solid #fcd31c; }
-    /* line 236, _items.scss */
+    /* line 267, _items.scss */
     .flavorProfile li:nth-child(3),
     .positiveEffects li:nth-child(3),
     .negativeEffects li:nth-child(3) {
       border-bottom: 3px solid #f7253e; }
 
-/* line 241, _items.scss */
+/* line 272, _items.scss */
 .strainProfileTitle {
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -266,7 +294,7 @@
   margin: 0;
   padding-bottom: 10px; }
 
-/* line 250, _items.scss */
+/* line 281, _items.scss */
 .barChart {
   margin: 30px 0 0 0;
   padding: 0;
@@ -274,32 +302,32 @@
   width: 100%;
   position: relative;
   bottom: 0; }
-  /* line 257, _items.scss */
+  /* line 288, _items.scss */
   .barChart li {
     width: 30%;
     margin: 0 1.5%;
     float: left;
     position: relative;
     bottom: 0; }
-    /* line 263, _items.scss */
+    /* line 294, _items.scss */
     .barChart li:nth-child(1) {
       background-color: #3dd861; }
-      /* line 265, _items.scss */
+      /* line 296, _items.scss */
       .barChart li:nth-child(1) div {
         background-color: #3dd861; }
-    /* line 269, _items.scss */
+    /* line 300, _items.scss */
     .barChart li:nth-child(2) {
       background-color: #fcd31c; }
-      /* line 271, _items.scss */
+      /* line 302, _items.scss */
       .barChart li:nth-child(2) div {
         background-color: #fcd31c; }
-    /* line 275, _items.scss */
+    /* line 306, _items.scss */
     .barChart li:nth-child(3) {
       background-color: #f7253e; }
-      /* line 277, _items.scss */
+      /* line 308, _items.scss */
       .barChart li:nth-child(3) div {
         background-color: #f7253e; }
-    /* line 281, _items.scss */
+    /* line 312, _items.scss */
     .barChart li div {
       color: white;
       font-family: "Bebas Neue", "Khand", sans-serif;
@@ -310,7 +338,7 @@
       padding-top: 10%;
       border-bottom: 1px solid white; }
 
-/* line 294, _items.scss */
+/* line 325, _items.scss */
 .thcPotency,
 .cbdPotency {
   margin: 0 auto;
@@ -320,7 +348,7 @@
   text-transform: uppercase;
   font-size: 40px;
   color: #2c3034; }
-  /* line 303, _items.scss */
+  /* line 334, _items.scss */
   .thcPotency label,
   .cbdPotency label {
     position: relative;
@@ -328,13 +356,13 @@
     font-size: 20px;
     color: rgba(44, 48, 52, 0.2); }
 
-/* line 312, _items.scss */
+/* line 343, _items.scss */
 .reviews .leaveReview {
   padding: 0; }
-  /* line 314, _items.scss */
+  /* line 345, _items.scss */
   .reviews .leaveReview .avatarWrap {
     float: left; }
-    /* line 316, _items.scss */
+    /* line 347, _items.scss */
     .reviews .leaveReview .avatarWrap .avatar {
       width: 40px;
       height: 40px;
@@ -346,7 +374,7 @@
       -webkit-transition: .5s;
       -moz-transition: .5s;
       -o-transition: .5s; }
-    /* line 328, _items.scss */
+    /* line 359, _items.scss */
     .reviews .leaveReview .avatarWrap .reviewBanner {
       float: left;
       position: absolute;
@@ -359,17 +387,17 @@
       background: #3dd861;
       top: 0;
       left: 10px; }
-      /* line 340, _items.scss */
+      /* line 371, _items.scss */
       .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner {
         color: white;
         text-decoration: none;
         opacity: .5;
         cursor: pointer;
         margin-left: 5px; }
-        /* line 346, _items.scss */
+        /* line 377, _items.scss */
         .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner:hover {
           opacity: 1; }
-  /* line 352, _items.scss */
+  /* line 383, _items.scss */
   .reviews .leaveReview #reviewInput {
     border: 2px solid rgba(44, 48, 52, 0.2);
     font-family: "Open Sans", sans-serif;
@@ -380,10 +408,10 @@
     float: right;
     height: 100px;
     width: 100%; }
-    /* line 362, _items.scss */
+    /* line 393, _items.scss */
     .reviews .leaveReview #reviewInput:hover, .reviews .leaveReview #reviewInput:active, .reviews .leaveReview #reviewInput:focus {
       border-color: #3dd861; }
-  /* line 368, _items.scss */
+  /* line 399, _items.scss */
   .reviews .leaveReview #submitReview {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
@@ -396,20 +424,20 @@
     padding: 10px;
     float: right;
     width: 100%; }
-    /* line 380, _items.scss */
+    /* line 411, _items.scss */
     .reviews .leaveReview #submitReview:hover {
       background: #3dd861;
       color: white; }
-/* line 386, _items.scss */
+/* line 417, _items.scss */
 .reviews .totalReviews {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   text-align: center; }
-/* line 391, _items.scss */
+/* line 422, _items.scss */
 .reviews #reviewsDiv {
   margin-top: 20px;
   padding: 0; }
-  /* line 394, _items.scss */
+  /* line 425, _items.scss */
   .reviews #reviewsDiv h4 {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
@@ -418,7 +446,7 @@
     color: #2c3034;
     padding: 10px 0 0 0;
     border-top: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 403, _items.scss */
+  /* line 434, _items.scss */
   .reviews #reviewsDiv h6 {
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
@@ -426,28 +454,28 @@
     font-weight: bold;
     color: #3dd861;
     margin: 0px 0 3px 0; }
-  /* line 411, _items.scss */
+  /* line 442, _items.scss */
   .reviews #reviewsDiv p {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     color: #2c3034;
     margin: 0;
     padding: 0 0 8px 60px; }
-  /* line 418, _items.scss */
+  /* line 449, _items.scss */
   .reviews #reviewsDiv img {
     border-radius: 50%;
     float: left;
     margin: 10px 20px 10px 0;
     width: 40px;
     height: 40px; }
-/* line 426, _items.scss */
+/* line 457, _items.scss */
 .reviews .pleaseSignIn {
   padding-top: 20px;
   text-align: center;
   color: #2c3034;
   position: relative;
   z-index: 5; }
-  /* line 432, _items.scss */
+  /* line 463, _items.scss */
   .reviews .pleaseSignIn a {
     color: #3dd861;
     cursor: pointer; }
