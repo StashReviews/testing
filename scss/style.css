@@ -1787,7 +1787,32 @@
 /* line 5, partials/_menu.scss */
 ul.nav.nav-tabs {
   height: 100%;
-  border: none; }
+  border: none;
+  /*  // @todo These will have to be applied dynamically, using Angular.  It may require extending Angular UI's tab directive.
+    > li:nth-child(1) > a {
+      background-image: url('../img/tabs/indica.png');
+    }
+  
+    > li:nth-child(2) > a {
+      background-image: url('../img/tabs/sativa.png');
+    }
+  
+    > li:nth-child(3) > a {
+      background-image: url('../img/tabs/hybrid.png');
+    }
+  
+    > li:nth-child(4) > a {
+      background-image: url('../img/tabs/preroll.png');
+    }
+  
+    > li:nth-child(5) > a {
+      background-image: url('../img/tabs/edible.png');
+    }
+  
+    > li:nth-child(6) > a {
+      background-image: url('../img/tabs/other.png');
+    }
+  */ }
   /* line 8, partials/_menu.scss */
   ul.nav.nav-tabs > li {
     padding: 0;
@@ -1821,33 +1846,18 @@ ul.nav.nav-tabs {
     ul.nav.nav-tabs > li > a:hover, ul.nav.nav-tabs > li > a:active, ul.nav.nav-tabs > li > a:visited, ul.nav.nav-tabs > li > a:focus {
       color: transparent;
       border: none; }
-  /* line 46, partials/_menu.scss */
-  ul.nav.nav-tabs > li:nth-child(1) > a {
-    background-image: url("../img/tabs/indica.png"); }
-  /* line 50, partials/_menu.scss */
-  ul.nav.nav-tabs > li:nth-child(2) > a {
-    background-image: url("../img/tabs/sativa.png"); }
-  /* line 54, partials/_menu.scss */
-  ul.nav.nav-tabs > li:nth-child(3) > a {
-    background-image: url("../img/tabs/hybrid.png"); }
-  /* line 58, partials/_menu.scss */
-  ul.nav.nav-tabs > li:nth-child(4) > a {
-    background-image: url("../img/tabs/preroll.png"); }
-  /* line 62, partials/_menu.scss */
-  ul.nav.nav-tabs > li:nth-child(5) > a {
-    background-image: url("../img/tabs/edible.png"); }
-  /* line 66, partials/_menu.scss */
-  ul.nav.nav-tabs > li:nth-child(6) > a {
-    background-image: url("../img/tabs/other.png"); }
+  /* line 72, partials/_menu.scss */
+  ul.nav.nav-tabs > li > a {
+    background-image: inherit; }
 
-/* line 71, partials/_menu.scss */
+/* line 77, partials/_menu.scss */
 .menu {
   height: 100%;
   width: 100%;
   padding-bottom: 5%;
   float: left;
   background: #2c3034 !important; }
-  /* line 77, partials/_menu.scss */
+  /* line 83, partials/_menu.scss */
   .menu .menuItem {
     margin: 5% 5% 0 5%;
     border-radius: 20px;
@@ -1858,7 +1868,7 @@ ul.nav.nav-tabs {
     background-color: white;
     color: #2c3034;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3); }
-    /* line 87, partials/_menu.scss */
+    /* line 93, partials/_menu.scss */
     .menu .menuItem .itemName {
       margin: 0 0 10px 0;
       border-bottom: thin solid rgba(44, 48, 52, 0.15);
@@ -1866,7 +1876,7 @@ ul.nav.nav-tabs {
       width: 100%;
       float: left;
       font: normal "Bebas Neue", "Khand", sans-serif 35px; }
-    /* line 95, partials/_menu.scss */
+    /* line 101, partials/_menu.scss */
     .menu .menuItem .producerName {
       margin: 10px 0 0 0;
       padding: 0;
@@ -1874,12 +1884,12 @@ ul.nav.nav-tabs {
       font: 22px "Bebas Neue", "Khand", sans-serif;
       text-transform: uppercase;
       color: rgba(44, 48, 52, 0.3); }
-    /* line 103, partials/_menu.scss */
+    /* line 109, partials/_menu.scss */
     .menu .menuItem .itemImage {
       margin-right: 10px;
       width: 30%;
       float: left; }
-    /* line 108, partials/_menu.scss */
+    /* line 114, partials/_menu.scss */
     .menu .menuItem .thcPotency,
     .menu .menuItem .cbdPotency {
       margin: 0px auto 0 auto;
@@ -1889,25 +1899,25 @@ ul.nav.nav-tabs {
       text-transform: uppercase;
       font-size: 20px;
       color: rgba(44, 48, 52, 0.3); }
-      /* line 117, partials/_menu.scss */
+      /* line 123, partials/_menu.scss */
       .menu .menuItem .thcPotency span,
       .menu .menuItem .cbdPotency span {
         font-size: 40px;
         color: #2c3034; }
-    /* line 122, partials/_menu.scss */
+    /* line 128, partials/_menu.scss */
     .menu .menuItem .itemDescription {
       margin: 1em auto;
       clear: both;
       float: left;
       font-size: 12px; }
-    /* line 128, partials/_menu.scss */
+    /* line 134, partials/_menu.scss */
     .menu .menuItem .pricing {
       margin: 0;
       border-top: thin solid rgba(44, 48, 52, 0.15);
       padding: 10px 0 0 0;
       width: 100%;
       clear: left; }
-      /* line 134, partials/_menu.scss */
+      /* line 140, partials/_menu.scss */
       .menu .menuItem .pricing li {
         border-right: thin solid rgba(44, 48, 52, 0.15);
         padding: 10px 0 5px 0;
@@ -1918,15 +1928,15 @@ ul.nav.nav-tabs {
         font: normal 25px/22px "Bebas Neue", "Khand", sans-serif;
         text-transform: uppercase;
         color: rgba(44, 48, 52, 0.2); }
-        /* line 144, partials/_menu.scss */
+        /* line 150, partials/_menu.scss */
         .menu .menuItem .pricing li .price {
           font-size: 28px;
           color: #2c3034; }
-        /* line 148, partials/_menu.scss */
+        /* line 154, partials/_menu.scss */
         .menu .menuItem .pricing li .unit {
           font-size: 18px;
           color: #2c3034; }
-        /* line 152, partials/_menu.scss */
+        /* line 158, partials/_menu.scss */
         .menu .menuItem .pricing li:last-child {
           border-right: none; }
 

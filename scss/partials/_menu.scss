@@ -42,7 +42,7 @@ ul.nav.nav-tabs {
     }
   }
 
-  // @todo These will have to be applied dynamically, using Angular.  It may require extending Angular UI's tab directive.
+/*  // @todo These will have to be applied dynamically, using Angular.  It may require extending Angular UI's tab directive.
   > li:nth-child(1) > a {
     background-image: url('../img/tabs/indica.png');
   }
@@ -65,6 +65,12 @@ ul.nav.nav-tabs {
 
   > li:nth-child(6) > a {
     background-image: url('../img/tabs/other.png');
+  }
+*/
+
+    // @todo These will have to be applied dynamically, using Angular.  It may require extending Angular UI's tab directive.
+  > li > a {
+    background-image: inherit;
   }
 }
 
