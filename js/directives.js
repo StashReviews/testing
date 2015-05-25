@@ -110,8 +110,7 @@ angular.module('DeViine.directives', [])
           $(element).elevateZoom({
             zoomType:"lens",
             lensShape : "round",
-            lensSize : 250,
-            scrollZoom : true
+            lensSize : 250
           });
           
         }
