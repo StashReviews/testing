@@ -1681,6 +1681,7 @@
   .cardWrapper .dispensaryName,
   .cardWrapper .dealTitle,
   .cardWrapper .strainName {
+    clear: both;
     font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 1.4em;
@@ -1693,14 +1694,15 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
-  /* line 50, partials/_cards.scss */
+  /* line 51, partials/_cards.scss */
   .cardWrapper .dealTitle {
     height: 48px;
     line-height: 1.1; }
-  /* line 54, partials/_cards.scss */
+  /* line 55, partials/_cards.scss */
   .cardWrapper .dispensaryAddress,
   .cardWrapper .businessName,
   .cardWrapper .producedBy {
+    clear: both;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: .85em;
@@ -1710,25 +1712,25 @@
     margin: 0;
     padding: 0;
     overflow: hidden; }
-  /* line 67, partials/_cards.scss */
+  /* line 69, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .businessName.line2,
   .cardWrapper .producedBy.line2 {
     position: relative;
     z-index: 3; }
-  /* line 73, partials/_cards.scss */
+  /* line 75, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line1,
   .cardWrapper .producedBy.line1 {
     height: 18px;
     display: none; }
-  /* line 78, partials/_cards.scss */
+  /* line 80, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .producedBy.line2 {
     height: 26px; }
-  /* line 82, partials/_cards.scss */
+  /* line 84, partials/_cards.scss */
   .cardWrapper .businessName.line2 {
     height: 24px; }
-  /* line 85, partials/_cards.scss */
+  /* line 87, partials/_cards.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType {
     font-family: "Open Sans", sans-serif;
@@ -1742,19 +1744,19 @@
     z-index: 3;
     text-align: center; }
 
-/* line 100, partials/_cards.scss */
+/* line 102, partials/_cards.scss */
 .dispensaryCard .distanceAway {
   color: #f7253e; }
 
-/* line 105, partials/_cards.scss */
+/* line 107, partials/_cards.scss */
 .dealCard .distanceAway {
   color: #fcd31c; }
 
-/* line 110, partials/_cards.scss */
+/* line 112, partials/_cards.scss */
 .strainCard .strainType {
   color: #3dd861; }
 
-/* line 115, partials/_cards.scss */
+/* line 117, partials/_cards.scss */
 .featured-dispensary-true,
 .featured-deal-true,
 .featured-strain-true,
@@ -1768,31 +1770,31 @@
   background-repeat: no-repeat;
   background-size: contain; }
 
-/* line 128, partials/_cards.scss */
+/* line 130, partials/_cards.scss */
 .featured-dispensary-true {
   background-image: url(../img/banners/featured.png); }
 
-/* line 131, partials/_cards.scss */
+/* line 133, partials/_cards.scss */
 .featured-deal-true {
   left: -5.9%;
   background-image: url(../img/banners/dailyDeal.png); }
 
-/* line 135, partials/_cards.scss */
+/* line 137, partials/_cards.scss */
 .featured-strain-true {
   background-image: url(../img/banners/strainOfTheWeek.png); }
 
-/* line 138, partials/_cards.scss */
+/* line 140, partials/_cards.scss */
 .new-strain-true {
   top: 11.3%;
   left: -4%;
   background-image: url(../img/banners/new.png); }
 
 /* Card End */
-/* line 147, partials/_cards.scss */
+/* line 149, partials/_cards.scss */
 .dvCardList {
   padding-left: 0;
   list-style-type: none; }
-  /* line 151, partials/_cards.scss */
+  /* line 153, partials/_cards.scss */
   .dvCardList > li {
     display: inline-block;
     padding: 1%; }
