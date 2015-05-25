@@ -528,8 +528,8 @@
       line-height: 22px;
       font-weight: lighter;
       text-transform: uppercase;
-      /*padding: 0;               THIS IS THE STYLING FOR HAVING USERNAME + LOCATION */
-      padding: 10px 0 0 0;
+      padding: 0;
+      /*padding: 10px 0 0 0; THIS IS THE STYLING FOR NO LOCATION */
       margin: 0; }
     /* line 46, layout/_navbar.scss */
     .navbar-right .accountInfo .location {
@@ -1150,7 +1150,7 @@
       /* line 35, 980px.scss */
       .navbar .navbar-header .navbar-right .accountInfo .username {
         font-size: 13px;
-        padding: 15px 0 0 0; }
+        padding: 5px 0 0 0; }
       /* line 39, 980px.scss */
       .navbar .navbar-header .navbar-right .accountInfo .location {
         font-size: 9px; }
@@ -1837,20 +1837,21 @@ ul.nav.nav-tabs {
     float: left;
     opacity: .2;
     border: none;
+    border-radius: 10px 10px 0 0;
     margin: 0 2px 0 0; }
-    /* line 14, partials/_menu.scss */
+    /* line 15, partials/_menu.scss */
     ul.nav.nav-tabs > li:last-child {
       margin: 0; }
-    /* line 17, partials/_menu.scss */
+    /* line 18, partials/_menu.scss */
     ul.nav.nav-tabs > li:hover {
       opacity: 1;
       border: none; }
-  /* line 22, partials/_menu.scss */
+  /* line 23, partials/_menu.scss */
   ul.nav.nav-tabs > li.active {
     opacity: 1;
     border: none;
     border-bottom: 1px solid #2c3034; }
-  /* line 27, partials/_menu.scss */
+  /* line 28, partials/_menu.scss */
   ul.nav.nav-tabs > li > a {
     margin: 0;
     background-size: 100%;
@@ -1860,22 +1861,22 @@ ul.nav.nav-tabs {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border: none; }
-    /* line 36, partials/_menu.scss */
+    /* line 37, partials/_menu.scss */
     ul.nav.nav-tabs > li > a:hover, ul.nav.nav-tabs > li > a:active, ul.nav.nav-tabs > li > a:visited, ul.nav.nav-tabs > li > a:focus {
       color: transparent;
       border: none; }
-  /* line 72, partials/_menu.scss */
+  /* line 73, partials/_menu.scss */
   ul.nav.nav-tabs > li > a {
     background-image: inherit; }
 
-/* line 77, partials/_menu.scss */
+/* line 78, partials/_menu.scss */
 .menu {
   height: 100%;
   width: 100%;
   padding-bottom: 5%;
   float: left;
   background: #2c3034 !important; }
-  /* line 83, partials/_menu.scss */
+  /* line 84, partials/_menu.scss */
   .menu .menuItem {
     margin: 5% 5% 0 5%;
     border-radius: 20px;
@@ -1886,7 +1887,7 @@ ul.nav.nav-tabs {
     background-color: white;
     color: #2c3034;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3); }
-    /* line 93, partials/_menu.scss */
+    /* line 94, partials/_menu.scss */
     .menu .menuItem .itemName {
       margin: 0 0 10px 0;
       border-bottom: thin solid rgba(44, 48, 52, 0.15);
@@ -1894,7 +1895,7 @@ ul.nav.nav-tabs {
       width: 100%;
       float: left;
       font: normal "Bebas Neue", "Khand", sans-serif 35px; }
-    /* line 101, partials/_menu.scss */
+    /* line 102, partials/_menu.scss */
     .menu .menuItem .producerName {
       margin: 10px 0 0 0;
       padding: 0;
@@ -1902,12 +1903,12 @@ ul.nav.nav-tabs {
       font: 22px "Bebas Neue", "Khand", sans-serif;
       text-transform: uppercase;
       color: rgba(44, 48, 52, 0.3); }
-    /* line 109, partials/_menu.scss */
+    /* line 110, partials/_menu.scss */
     .menu .menuItem .itemImage {
       margin-right: 10px;
       width: 30%;
       float: left; }
-    /* line 114, partials/_menu.scss */
+    /* line 115, partials/_menu.scss */
     .menu .menuItem .thcPotency,
     .menu .menuItem .cbdPotency {
       margin: 0px auto 0 auto;
@@ -1915,27 +1916,27 @@ ul.nav.nav-tabs {
       text-align: center;
       font-family: "Bebas Neue", "Khand", sans-serif;
       text-transform: uppercase;
-      font-size: 20px;
+      font-size: 16px;
       color: rgba(44, 48, 52, 0.3); }
-      /* line 123, partials/_menu.scss */
+      /* line 124, partials/_menu.scss */
       .menu .menuItem .thcPotency span,
       .menu .menuItem .cbdPotency span {
-        font-size: 40px;
+        font-size: 30px;
         color: #2c3034; }
-    /* line 128, partials/_menu.scss */
+    /* line 129, partials/_menu.scss */
     .menu .menuItem .itemDescription {
       margin: 1em auto;
       clear: both;
       float: left;
       font-size: 12px; }
-    /* line 134, partials/_menu.scss */
+    /* line 135, partials/_menu.scss */
     .menu .menuItem .pricing {
       margin: 0;
       border-top: thin solid rgba(44, 48, 52, 0.15);
       padding: 10px 0 0 0;
       width: 100%;
       clear: left; }
-      /* line 140, partials/_menu.scss */
+      /* line 141, partials/_menu.scss */
       .menu .menuItem .pricing li {
         border-right: thin solid rgba(44, 48, 52, 0.15);
         padding: 10px 0 5px 0;
@@ -1946,15 +1947,15 @@ ul.nav.nav-tabs {
         font: normal 25px/22px "Bebas Neue", "Khand", sans-serif;
         text-transform: uppercase;
         color: rgba(44, 48, 52, 0.2); }
-        /* line 150, partials/_menu.scss */
+        /* line 151, partials/_menu.scss */
         .menu .menuItem .pricing li .price {
-          font-size: 28px;
+          font-size: 24px;
           color: #2c3034; }
-        /* line 154, partials/_menu.scss */
+        /* line 155, partials/_menu.scss */
         .menu .menuItem .pricing li .unit {
-          font-size: 18px;
+          font-size: 16px;
           color: #2c3034; }
-        /* line 158, partials/_menu.scss */
+        /* line 159, partials/_menu.scss */
         .menu .menuItem .pricing li:last-child {
           border-right: none; }
 

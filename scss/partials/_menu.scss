@@ -10,6 +10,7 @@ ul.nav.nav-tabs {
     float: left;
     opacity: .2;
     border: none;
+    border-radius: 10px 10px 0 0;
     margin: 0 2px 0 0;
     &:last-child {
       margin: 0;
@@ -118,10 +119,10 @@ ul.nav.nav-tabs {
       text-align: center;
       font-family: $dvHeaderFont;
       text-transform: uppercase;
-      font-size: 20px;
+      font-size: 16px;
       color: rgba($dvGray, 0.3);
       span {
-        font-size: 40px;
+        font-size: 30px;
         color: $dvGray;
       }
     }
@@ -148,11 +149,11 @@ ul.nav.nav-tabs {
         text-transform: uppercase;
         color: $dvGray20;
         .price {
-          font-size: 28px;
+          font-size: 24px;
           color: $dvGray;
         }
         .unit {
-          font-size: 18px;
+          font-size: 16px;
           color: $dvGray;
         }
         &:last-child {

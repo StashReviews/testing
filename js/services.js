@@ -301,7 +301,50 @@ angular.module('DeViine.services', [])
     return {
       // @todo Import this function from the mobile app.
       getCurrentCity: function() {
-        return '';
+
+        function showLocation(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            alert("Latitude : " + latitude + " Longitude: " + longitude);
+         }
+
+         function errorHandler(err) {
+            if(err.code == 1) {
+               alert("Error: Access is denied!");
+            }else if( err.code == 2) {
+               alert("Error: Position is unavailable!");
+            }
+         }
+      
+         function getLocation(){
+
+            if(navigator.geolocation){
+               // timeout at 60000 milliseconds (60 seconds)
+               var options = {timeout:60000};
+               navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+            }else{
+               alert("Sorry, browser does not support geolocation!");
+            }
+         }
+
+
+        // function requestCurrentPosition(){
+        // if (navigator.geolocation)
+        //   {
+        //     navigator.geolocation.getCurrentPosition(useGeoData);
+        //   }
+        // }
+
+        // function useGeoData(position){
+        //   geoX = position.coords.longitude;
+        //   geoY = position.coords.latitude;
+        //   /*do stuff with long and lat here.*/
+        //   return geoX + ',' + geoY;
+        //   console.log(geoX + ',' + geoY);
+        // }
+
+        // return geoX + ',' + geoY;
+
       }
     };
   })
