@@ -41,4 +41,12 @@ window.onload = (function() {
 	// Up To Top Ends Here
 
 
+
+	document.addEventListener('touchmove', function(e) {
+	    e.preventDefault();
+	    var touch = e.touches[0];
+	    alert(touch.pageX + " - " + touch.pageY);
+	}, false);
+
+
 });
