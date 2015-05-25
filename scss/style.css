@@ -1100,10 +1100,14 @@
     display: inline;
     margin-bottom: 20px; }
 
+  /* line 122, 767px.scss */
+  .zoomContainer {
+    display: none; }
+
   /*----items.html end----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
-  /* line 126, 767px.scss */
+  /* line 129, 767px.scss */
   .featured-dispensary-true,
   .featured-deal-true,
   .featured-strain-true {
