@@ -108,7 +108,7 @@ angular.module('DeViine.directives', [])
           if (!attrs.zoomImage) return;
           element.attr('data-zoom-image',attrs.zoomImage);
           $(element).elevateZoom({
-            zoomType:"lens",
+            zoomType:"inner",
             lensShape : "round",
             lensSize : 250
           });
