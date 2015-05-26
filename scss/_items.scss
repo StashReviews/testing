@@ -140,10 +140,10 @@
 }
 /* Strain Zoom Start */ 
 .strainGalleryWrap {
-  .strainGallery {
+  #strainGallery {
      -webkit-transition: -webkit-filter 500ms;
   }
-  &.active .strainGallery {
+  &.active #strainGallery {
     -webkit-filter: grayscale(1);
   }
   #zoom {

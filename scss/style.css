@@ -153,10 +153,10 @@
 
 /* Strain Zoom Start */
 /* line 143, _items.scss */
-.strainGalleryWrap .strainGallery {
+.strainGalleryWrap #strainGallery {
   -webkit-transition: -webkit-filter 500ms; }
 /* line 146, _items.scss */
-.strainGalleryWrap.active .strainGallery {
+.strainGalleryWrap.active #strainGallery {
   -webkit-filter: grayscale(1); }
 /* line 149, _items.scss */
 .strainGalleryWrap #zoom {
