@@ -140,7 +140,7 @@ angular.module('DeViine.controllers', [])
 
 
   }])
-  .controller('dispensariesManageCtrl', ['$scope', '$filter', '$firebaseObject', 'dvUrl', function($scope, $filter, $firebaseObject, dvUrl) {
+  .controller('dispensariesManageCtrl', ['$scope', '$http', '$filter', '$firebaseObject', 'dvUrl', function($scope, $http, $filter, $firebaseObject, dvUrl) {
     $firebaseObject( new Firebase(dvUrl + '/dispensaries') ).$loaded()
       .then(function(dispensaries) {
         $scope.dispensaries = dispensaries;
@@ -196,7 +196,26 @@ angular.module('DeViine.controllers', [])
         }
       */
 
-      ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId) ).set(dispensary);
+      if(!(dispensary.geoX && dispensary.geoY)) {
+        var dispensaryAddress = dispensary.location.street + ', ' + dispensary.location.city + ', ' + dispensary.location.state + ' ' + dispensary.location.zip;
+
+        $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + dispensaryAddress)
+          .success(function(data) {
+            var coords = data.results[0].geometry.location;
+            var dispensaryLatLng = new google.maps.LatLng(coords.lat, coords.lng);
+
+            dispensary.geoX = dispensaryLatLng.lat();
+            dispensary.geoY = dispensaryLatLng.lng();
+
+            //dispensary.$save();
+            ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId) ).set(dispensary);
+          })
+          .error(function(error) {
+            console.log(error);
+          });
+      } else {
+        ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId) ).set(dispensary);
+      }
     };
 
 
