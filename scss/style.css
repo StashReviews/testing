@@ -156,7 +156,7 @@
 .strainGalleryWrap #strainGallery {
   -webkit-transition: -webkit-filter 500ms; }
 /* line 146, _items.scss */
-.strainGalleryWrap.active #strainGallery {
+.strainGalleryWrap #strainGallery.active {
   -webkit-filter: grayscale(1); }
 /* line 149, _items.scss */
 .strainGalleryWrap #zoom {
@@ -174,7 +174,7 @@
   -webkit-transition: opacity 500ms, -webkit-transform 500ms;
   pointer-events: none; }
 /* line 166, _items.scss */
-.strainGalleryWrap.active #zoom {
+.strainGalleryWrap #zoom.active {
   opacity: 1;
   -webkit-transform: scale(1); }
 

@@ -111,7 +111,6 @@ geoFire = new GeoFire(ref);
       endLat = new Firebase('https://deviineadmin.firebaseio.com/users/' + itemType + '/' + itemId + '/geoX'); // Put dispensary geoX here
       endLon = new Firebase('https://deviineadmin.firebaseio.com/users/' + itemType + '/' + itemId + '/geoY'); // Put dispensary geoY here
 
-
       function getDistanceFromLatLonInKm(userLat,userLon,endLat,endLon) {
         var R = 6371; // Radius of the earth in km
         var dLat = deg2rad(endLat-userLat);  // deg2rad below

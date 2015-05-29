@@ -41,6 +41,38 @@ window.onload = (function() {
 	// Up To Top Ends Here
 
 
-	
+
+
+	// Strain Zoom Starts Here
+	zoom = document.getElementById('zoom'),
+	Zw = zoom.offsetWidth,
+    Zh = zoom.offsetHeight,
+    strainGalleryWrap = document.getElementById('strainGalleryWrap');
+
+    var timeout, ratio, Ix, Iy;
+
+	$('.strainGalleryWrap').hover(function(){
+		$('#strainGallery').toggleClass('active');
+		$('#zoom').toggleClass('active');
+	});
+	$('.strainGalleryWrap').mousemove(function(event){
+		updateMagnifier();
+	});
+
+	function updateMagnifier(x,y) {
+	    zoom.style.top = (y) + 'px';
+	    zoom.style.left = (x) + 'px';
+	    zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw / 2 ) + 'px ' + (( Iy - y ) * ratio + Zh / 2 ) + 'px';
+	}
+
+	function onLoad() {
+	    ratio = strainGalleryWrap.naturalWidth / strainGalleryWrap.width;
+	    Ix = strainGalleryWrap.offsetLeft;
+	    Iy = strainGalleryWrap.offsetTop;
+	}
+
+	strainGalleryWrap.addEventListener('load',onLoad);
+	// Strain Zoom Ends Here
+
 
 });

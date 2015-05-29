@@ -143,7 +143,7 @@
   #strainGallery {
      -webkit-transition: -webkit-filter 500ms;
   }
-  &.active #strainGallery {
+  #strainGallery.active {
     -webkit-filter: grayscale(1);
   }
   #zoom {
@@ -163,7 +163,7 @@
     pointer-events: none;
   }
 
-  &.active #zoom {
+  #zoom.active {
     opacity: 1;
     -webkit-transform: scale(1);
   }

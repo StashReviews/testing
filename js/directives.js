@@ -92,34 +92,34 @@ angular.module('DeViine.directives', [])
     }
   }])
 
-  /** Elevate Zoom (Strains) */
-  .directive('ngElevateZoom', function() {
-    return {
-      restrict: 'A',
-      link: function(scope, element, attrs) {
+  // /** Elevate Zoom (Strains) */
+  // .directive('ngElevateZoom', function() {
+  //   return {
+  //     restrict: 'A',
+  //     link: function(scope, element, attrs) {
 
-        //Will watch for changes on the attribute
-        attrs.$observe('zoomImage',function(){
-          linkElevateZoom();
-        })
+  //       //Will watch for changes on the attribute
+  //       attrs.$observe('zoomImage',function(){
+  //         linkElevateZoom();
+  //       })
 
-        function linkElevateZoom(){
-          //Check if its not empty
-          if (!attrs.zoomImage) return;
-          element.attr('data-zoom-image',attrs.zoomImage);
-          $(element).elevateZoom({
-            zoomType:"lens",
-            lensShape : "round",
-            lensSize : 250
-          });
+  //       function linkElevateZoom(){
+  //         //Check if its not empty
+  //         if (!attrs.zoomImage) return;
+  //         element.attr('data-zoom-image',attrs.zoomImage);
+  //         $(element).elevateZoom({
+  //           zoomType:"lens",
+  //           lensShape : "round",
+  //           lensSize : 250
+  //         });
           
-        }
+  //       }
 
-        linkElevateZoom();
+  //       linkElevateZoom();
 
-      }
-    };
-  })
+  //     }
+  //   };
+  // })
 
   /** Custom Strain Zoom */
   .directive('ngStrainZoom', function() {
@@ -143,7 +143,7 @@ angular.module('DeViine.directives', [])
               
           var timeout, ratio, Ix, Iy;
 
-          function activate () {
+          function activate() {
             document.body.classList.add('active');
           }
           
@@ -157,7 +157,7 @@ angular.module('DeViine.directives', [])
             zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw / 2 ) + 'px ' + (( Iy - y ) * ratio + Zh / 2 ) + 'px';
           }
           
-          function onLoad () {
+          function onLoad() {
             ratio = strainGallery.naturalWidth / strainGallery.width;
             Ix = strainGallery.offsetLeft;
             Iy = strainGallery.offsetTop;
@@ -170,13 +170,13 @@ angular.module('DeViine.directives', [])
             timeout = setTimeout( deactivate, 2500 );
           }
           
-          function onMouseleave () {
+          function onMouseleave() {
             deactivate();
           }
 
-          strainGallery.addEventListener( 'load', onLoad );
-          strainGallery.addEventListener( 'mousemove', onMousemove );
-          strainGallery.addEventListener( 'mouseleave', onMouseleave );
+          strainGallery.addEventListener('load',onLoad);
+          strainGallery.addEventListener('mousemove',onMousemove);
+          strainGallery.addEventListener('mouseleave',onMouseleave);
 
         }
 
