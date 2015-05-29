@@ -1,7 +1,7 @@
 angular.module('DeViine.directives', [])
 
   /** <dv-card item-type='' item-id='' /> */
-  .directive('dvCard', ['$firebase', 'dvUrl', function($firebase, dvUrl) {
+  .directive('dvCard', ['$firebaseObject', 'dvUrl', function($firebaseObject, dvUrl) {
     return {
       restrict: 'E',
       templateUrl: function(element, attr) {
@@ -15,7 +15,7 @@ angular.module('DeViine.directives', [])
       */
       link: function(scope, element, attrs) {
         // @todo Pluralize programmatically.
-        scope[attrs.itemType] = $firebase( new Firebase(dvUrl + '/' + ( attrs.itemType === 'dispensary' ? 'dispensaries' : ( attrs.itemType + 's' ) ) + '/' + attrs.itemId) ).$asObject();
+        scope[attrs.itemType] = $firebaseObject( new Firebase(dvUrl + '/' + ( attrs.itemType === 'dispensary' ? 'dispensaries' : ( attrs.itemType + 's' ) ) + '/' + attrs.itemId) );
       }
     };
   }])
@@ -79,12 +79,12 @@ angular.module('DeViine.directives', [])
   })
 
   /** <dv-menu dispensaryId='' /> */
-  .directive('dvMenu', ['$firebase', 'dvUrl', function($firebase, dvUrl) {
+  .directive('dvMenu', ['$firebaseObject', 'dvUrl', function($firebaseObject, dvUrl) {
     return {
       restrict: 'E',
       templateUrl: 'partials/menu.html',
       link: function(scope, element, attrs) {
-        $firebase( new Firebase(dvUrl + '/dispensaries/' + attrs.dispensaryId + '/menu') ).$asObject().$loaded()
+        $firebaseObject( new Firebase(dvUrl + '/dispensaries/' + attrs.dispensaryId + '/menu') ).$loaded()
           .then(function(menu) {
             scope.menu = menu;
           });
@@ -189,7 +189,7 @@ angular.module('DeViine.directives', [])
   })
 
 
-  // .directive('dvReview', ['$firebase', 'dvUrl', function($firebase, dvUrl) {
+  // .directive('dvReview', ['$firebaseObject', 'dvUrl', function($firebaseObject, dvUrl) {
   //   return {
   //     restrict: 'E',
   //     templateUrl: function(element, attr) {

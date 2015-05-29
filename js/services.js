@@ -3,7 +3,7 @@
 
 angular.module('DeViine.services', [])
 
-  .factory('usersService', ['$firebaseAuth', '$firebase', 'dvUrl', function($firebaseAuth, $firebase, dvUrl) {
+  .factory('usersService', ['$firebaseAuth', '$firebaseObject', 'dvUrl', function($firebaseAuth, $firebaseObject, dvUrl) {
     var dvRef = new Firebase(dvUrl);
     var dvAuth = $firebaseAuth(dvRef);
     var currentUser = null;
@@ -66,14 +66,14 @@ angular.module('DeViine.services', [])
        * @param {String} userId
        */
       getProfile: function(userId) {
-        $firebase( new Firebase(dvUrl + '/users/' + userId + '/profile') );
+        $firebaseObject( new Firebase(dvUrl + '/users/' + userId + '/profile') );
       },
       /**
        * @param {Object} userId
        * @param {Object} profile
        */
       saveProfile: function(userId, profile) {
-        $firebase( new Firebase(dvRef + '/users/' + userId) ).$update('profile', profile);
+        ( new Firebase(dvRef + '/users/' + userId + '/profile') ).set(profile);
       },
       /**
        * @param {String} email
@@ -90,6 +90,7 @@ angular.module('DeViine.services', [])
        */
       isAdmin: function(user) {
         var adminIdList = [
+          'twitter:2199988411', // Dan Siddoway
           'simplelogin:1',
           'twitter:318556297',
           'twitter:dberg15',
@@ -168,21 +169,21 @@ angular.module('DeViine.services', [])
       }
     };
   }])
-  .factory('itemsService', ['$firebase', 'dvUrl', function($firebase, dvUrl) {
+  .factory('itemsService', ['$firebaseObject', '$firebaseArray', 'dvUrl', function($firebaseObject, $firebaseArray, dvUrl) {
     return {
       /**
        * @param {String} itemType
        * @param {String} itemId
        */
       get: function(itemType, itemId) {
-        return $firebase( new Firebase(dvUrl + '/' + itemType + '/' + itemId) ).$asObject();
+        return $firebaseObject( new Firebase(dvUrl + '/' + itemType + '/' + itemId) );
       },
       /**
        * @param {String} itemType
        * @returns {FirebaseArray}
        */
       getAll: function(itemType) {
-        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("0") ).$asArray().$loaded();
+        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("0") ).$loaded();
       },
       /**
        * @param {String} itemType
@@ -191,7 +192,7 @@ angular.module('DeViine.services', [])
       // getFeatured is currently limiting to first 2.
       // Should limit to the first 2 that have .featured = true.
       getFeatured: function(itemType) {
-        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("true").limitToFirst(2) ).$asArray().$loaded();
+        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("true").limitToFirst(2) ).$loaded();
       },
       /**
        * @param {String} itemType
@@ -199,7 +200,7 @@ angular.module('DeViine.services', [])
        */
       // getNew is limiting to last 2.
       getNew: function(itemType) {
-        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('new').equalTo("true").limitToLast(2) ).$asArray().$loaded();
+        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('new').equalTo("true").limitToLast(2) ).$loaded();
       },
       /**
        * @param {String} itemType
@@ -207,7 +208,7 @@ angular.module('DeViine.services', [])
        */
       // getOther is currently limiting to last 2. 
       getOther: function(itemType) {
-        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).limitToLast(4) ).$asArray().$loaded();
+        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).limitToLast(4) ).$loaded();
       },
       /**
        * @param {String} itemType
@@ -220,12 +221,12 @@ angular.module('DeViine.services', [])
         // @todo Filter out all but the highest-rated items.
         // return items;
 
-        return $firebase( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('rating') ).$asArray();
+        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('rating') );
       }
       // ,
       // reviews: function (itemType, itemId) {
-      //   // return $firebase( ( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/reviews') ) ).$asArray();
-      //   return $firebase( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/reviews') ).$asArray();
+      //   // return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/reviews') ) );
+      //   return $firebaseArray( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/reviews') );
       // }
     };
   }])
@@ -273,7 +274,7 @@ angular.module('DeViine.services', [])
       //removed return envelope
       return obj;
   }])
-  .factory('reviewsService', ['$firebase', 'dvUrl', function($firebase, dvUrl) {
+  .factory('reviewsService', ['$firebaseArray', 'dvUrl', function($firebaseArray, dvUrl) {
     //removed return envelope
 
     // var itemType = $('.pageTitle').attr('title');
@@ -281,7 +282,7 @@ angular.module('DeViine.services', [])
 
     // return {
     //   getReviews: function (itemType, itemId) {
-    //     return $firebase( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/reviews') ).$asArray();
+    //     return $firebaseArray( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/reviews') );
     //   }
     // };
       /**

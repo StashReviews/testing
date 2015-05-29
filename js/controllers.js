@@ -135,8 +135,8 @@ angular.module('DeViine.controllers', [])
 
 
   }])
-  .controller('dispensariesManageCtrl', ['$scope', '$filter', '$firebase', 'dvUrl', function($scope, $filter, $firebase, dvUrl) {
-    $firebase( new Firebase(dvUrl + '/dispensaries') ).$asObject().$loaded()
+  .controller('dispensariesManageCtrl', ['$scope', '$filter', '$firebaseObject', 'dvUrl', function($scope, $filter, $firebaseObject, dvUrl) {
+    $firebaseObject( new Firebase(dvUrl + '/dispensaries') ).$loaded()
       .then(function(dispensaries) {
         $scope.dispensaries = dispensaries;
 
@@ -153,18 +153,22 @@ angular.module('DeViine.controllers', [])
     $scope.loadDispensary = function(dispensaryId) {
       $scope.dispensary = $scope.dispensaries[dispensaryId];
 
-      /*
-        for(var day in $scope.dispensary['hours']) {
-          if( $scope.dispensary['hours'].hasOwnProperty(day) ) {
-            $scope.dispensary['hours'][day].open = new Date( $filter('date')($scope.dispensary['hours'][day].open, 'shortTime') );
-            $scope.dispensary['hours'][day].close = new Date( $filter('date')($scope.dispensary['hours'][day].close, 'shortTime') );
-          }
+      // @todo Get dispensary hours loading correctly.
+
+      /*for(var day in $scope.dispensary['hours']) {
+        if( $scope.dispensary['hours'].hasOwnProperty(day) ) {
+          $scope.dispensary['hours'][day].open = new Date( $filter('date')($scope.dispensary['hours'][day].open, 'shortTime') );
+          $scope.dispensary['hours'][day].close = new Date( $filter('date')($scope.dispensary['hours'][day].close, 'shortTime') );
         }
-      */
+      }*/
     };
 
     // @todo Don't forget to save the dispensary's coordinates to '/locations/<id>'.
     $scope.saveDispensary = function(dispensaryId, dispensary) {
+      if( !( dispensaryId ) ) {
+        dispensaryId = 'test';
+      }
+
       for(var day in dispensary['hours']) {
         if( dispensary['hours'].hasOwnProperty(day) ) {
           dispensary['hours'][day].open = $filter('date')(dispensary['hours'][day].open, 'shortTime');
@@ -172,20 +176,27 @@ angular.module('DeViine.controllers', [])
         }
       }
 
-      dispensary.$id
-        ? $firebase( new Firebase(dvUrl + '/dispensaries/' + dispensary.$id) ).$update(dispensary)
-        // @todo Assign an ID to each new dispensary.
-        : $firebase( new Firebase(dvUrl + '/dispensaries/') ).$update(dispensaryId, dispensary);
+      /*
+        This is equivalent to the code that follows.  (Strictly for educational purposes.)
+
+        if(dispensary.$id) {
+          ( new Firebase(dvUrl + '/dispensaries/' + dispensary.$id) ).set(dispensary);
+        } else {
+          ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId) ).set(dispensary);
+        }
+      */
+
+      var id = dispensary.$id ? dispensary.$id : dispensaryId;
+
+      ( new Firebase(dvUrl + '/dispensaries/' + id) ).set(dispensary);
     };
 
 
 
 
 
-    $scope.saveMenu = function(dispensaryId, deal) {
-      dispensary.$id
-        ? $firebase( new Firebase(dvUrl + '/dispensaries/' + dispensary.$id) ).$update(dispensary)
-        : $firebase( new Firebase(dvUrl + '/dispensaries') ).$update(dispensaryId, dispensary);
+    $scope.saveMenu = function(dispensaryId, menu) {
+      ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId + '/menu') ).set(menu);
     };
 
 
@@ -194,7 +205,7 @@ angular.module('DeViine.controllers', [])
 
 
   }])
-  .controller('dealsCtrl', ['$scope', '$firebase', 'dvUrl', 'itemsService', function($scope, $firebase, dvUrl, itemsService) {
+  .controller('dealsCtrl', ['$scope', '$firebaseObject', 'dvUrl', 'itemsService', function($scope, $firebaseObject, dvUrl, itemsService) {
     /**
      * @param {Date} endDate
      * @returns {Boolean} hasExpired
@@ -210,7 +221,7 @@ angular.module('DeViine.controllers', [])
      * @returns {Boolean} dealExpired
      */
     $scope.dealExpired = function(dealId) {
-      $firebase( new Firebase(dvUrl + '/deals/' + dealId + '/endDate') ).$asObject.$loaded()
+      $firebaseObject( new Firebase(dvUrl + '/deals/' + dealId + '/endDate') ).$loaded()
         .then(function(dealEndDate) {
           return hasExpired( new Date(dealEndDate) );
         });
@@ -227,8 +238,8 @@ angular.module('DeViine.controllers', [])
     // @todo Exclude the current deal from the results of itemsService.getFeatured().    
     $scope.otherDeals = itemsService.getOther('deals');
   }])
-  .controller('dealsManageCtrl', ['$scope', '$firebase', 'dvUrl', function($scope, $firebase, dvUrl) {
-    $firebase( new Firebase(dvUrl + '/deals') ).$asObject().$loaded()
+  .controller('dealsManageCtrl', ['$scope', '$firebaseObject', 'dvUrl', function($scope, $firebaseObject, dvUrl) {
+    $firebaseObject( new Firebase(dvUrl + '/deals') ).$loaded()
       .then(function(deals) {
         $scope.deals = deals;
         // @todo Initialize 'deal' to the first available deal.
@@ -246,10 +257,7 @@ angular.module('DeViine.controllers', [])
 
     // @todo Implement saveDeal() method.  Look up the dispensary by ID, add it to the 'deal' object, then push the deal to Firebase under '/deals' and '/dispensaries/<id>/deals'.
     $scope.saveDeal = function(dealId, deal) {
-      deal.$id
-        ? $firebase( new Firebase(dvUrl + '/deals/' + deal.$id) ).$update(deal)
-        // @todo Assign an ID to each new deal.
-        : $firebase( new Firebase(dvUrl + '/deals') ).$update(dealId, deal);
+      ( new Firebase(dvUrl + '/deals/' + dealId) ).set(deal);
     };
   }])
   .controller('strainsCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
@@ -306,8 +314,8 @@ angular.module('DeViine.controllers', [])
     // $scope.reviews = itemsService.reviews('reviews');
 
   }])
-  .controller('strainsManageCtrl', ['$scope', '$firebase', 'dvUrl', function($scope, $firebase, dvUrl) {
-    $firebase( new Firebase(dvUrl + '/strains') ).$asObject().$loaded()
+  .controller('strainsManageCtrl', ['$scope', '$firebaseObject', 'dvUrl', function($scope, $firebaseObject, dvUrl) {
+    $firebaseObject( new Firebase(dvUrl + '/strains') ).$loaded()
       .then(function(strains) {
         $scope.strains = strains;
         // @todo Initialize 'strain' to the first available strain.
@@ -396,14 +404,11 @@ angular.module('DeViine.controllers', [])
     };
 
     $scope.saveStrain = function(strainId, strain) {
-      strain.$id
-        ? $firebase( new Firebase(dvUrl + '/strains/' + strain.$id) ).$update(strain)
-        // @todo Assign an ID to each new strain.
-        : $firebase( new Firebase(dvUrl + '/strains') ).$update(strainId, strain);
+      ( new Firebase(dvUrl + '/strains/' + strainId) ).set(strain);
     };
   }])
 
-  .controller('rateCtrl', ['$scope', '$firebase', 'dvUrl', 'usersService', 'itemsService', function($scope, $firebase, dvUrl, usersService, itemsService) {
+  .controller('rateCtrl', ['$scope', 'dvUrl', 'usersService', 'itemsService', function($scope, dvUrl, usersService, itemsService) {
 
     $scope.sendRating = function(divId) {
         var rating = document.getElementById(divId).value;
@@ -422,15 +427,15 @@ angular.module('DeViine.controllers', [])
         // }
          else {
           alert('Rating Sent');
-          $firebase( new Firebase(dvUrl + '/users/' + userId + '/ratings/' + itemType + '/' + itemId) ).$set(rating);
-          $firebase( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/ratings/' + userId) ).$set(rating);
+          ( new Firebase(dvUrl + '/users/' + userId + '/ratings/' + itemType + '/' + itemId) ).set(rating);
+          ( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/ratings/' + userId) ).set(rating);
         };
         
     };
 
   }])
 
-  .controller('reviewsCtrl', ['$scope', '$firebase', 'dvUrl', 'reviewsService',  function($scope, $firebase, dvUrl, reviewsService) {   
+  .controller('reviewsCtrl', ['$scope', '$firebaseArray', 'dvUrl', 'reviewsService',  function($scope, $firebaseArray, dvUrl, reviewsService) {
   // .controller('reviewsCtrl', ['$scope', 'reviewsService', function($scope, reviewsService) {   
 
     // $scope.reviews = [ 
@@ -452,7 +457,7 @@ angular.module('DeViine.controllers', [])
     // var itemId = $('.pageId').attr('title');
 
     // $scope.reviews = function (itemType, itemId) {
-    //   return $firebase( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/reviews') ).$asArray();
+    //   return $firebaseArray( new Firebase(dvUrl + '/' + itemType + '/' + itemId + '/reviews') );
     // };
 
     // $scope.reviews = reviewsService.getReviews('reviews');
