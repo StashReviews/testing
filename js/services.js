@@ -330,6 +330,12 @@ angular.module('DeViine.services', [])
           console.log('Your browser does not support the HTML5 Geolocation API, so this demo will not work.')
         }
       },
+      /**
+       * Note that this requires that the dispensary have coordinates associated with it.  This shouldn't be a problem, though, as our saveDispensary function geocodes provided addresses automatically.
+       *
+       * @param {String} dispensaryId
+       * @returns {Promise}
+       */
       getDistanceToDispensary: function(dispensaryId) {
         var deferred = $q.defer();
 
@@ -342,24 +348,6 @@ angular.module('DeViine.services', [])
 
             $firebaseObject(new Firebase(dvUrl + '/dispensaries/' + dispensaryId)).$loaded()
               .then(function(dispensary) {
-                if(!(dispensary.geoX && dispensary.geoY)) {
-                  var dispensaryAddress = dispensary.location.street + ', ' + dispensary.location.city + ', ' + dispensary.location.state + ' ' + dispensary.location.zip;
-
-                  $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + dispensaryAddress)
-                    .success(function(data) {
-                      var coords = data.results[0].geometry.location;
-                      var dispensaryLatLng = new google.maps.LatLng(coords.lat, coords.lng);
-
-                      dispensary.geoX = dispensaryLatLng.lat();
-                      dispensary.geoY = dispensaryLatLng.lng();
-
-                      dispensary.$save();
-                    })
-                    .error(function(error) {
-                      console.log(error);
-                    });
-                }
-
                 var distance = google.maps.geometry.spherical.computeDistanceBetween(currentLocation, new google.maps.LatLng(dispensary.geoX, dispensary.geoY));
 
                 distance
