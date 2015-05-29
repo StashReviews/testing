@@ -1,9 +1,0 @@
-.product(ng-repeat='product in products')
-    h1.productName {{ product.name }}
-    .productDescription
-        | {{ product.description }}
-    .productPriceByAmount
-        ul: li(ng-repeat='(amount, price) in product.priceByAmount') ${{ price }} / {{ amount }}
-    .productChemistry
-        div: | {{ product.chemistry.percentageTHC }}% THC
-        div: | {{ product.chemistry.percentageCBD }}% CBD
