@@ -2,19 +2,6 @@
 ref = new Firebase("https://deviineadmin.firebaseio.com");
 geoFire = new GeoFire(ref);
 
-
-// ref.child("locations").on("child_added", function(snapshot) {
-//   var locationId = snapshot.key();
-//   var location = snapshot.val();
-
-//   geoFire.set("<location_id>", [location.latitude, location.longitude]).then(function() {
-//     console.log(locationId + " has been added to GeoFire");
-//   }).catch(function(error) {
-//     console.log("Error adding " + locationId + " to GeoFire: " + error);
-//   });
-// });
-
-// getUserLocation() is your own code somewhere
   /* Uses the HTML5 geolocation API to get the current user's location */
   var getUserLocation = function() {
     if (typeof navigator !== "undefined" && typeof navigator.geolocation !== "undefined") {
@@ -35,9 +22,10 @@ geoFire = new GeoFire(ref);
     geoFire = new GeoFire(ref);
     geocoder = new google.maps.Geocoder();
     userLocationRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/currentLocation');
-    guestLocationRef = new Firebase('https://deviineadmin.firebaseio.com/users/Guests/currentLocation');
+    guestLocationRef = new Firebase('https://deviineadmin.firebaseio.com/users/guests/' + generateRandomString(10) + '/currentLocation');
     latlng = new google.maps.LatLng(latitude, longitude);
-    
+  
+
     console.log("Retrieved user's location: [" + latitude + ", " + longitude + "]");
 
     // Get City + State from Coordinates Using Geocoder from Google
@@ -71,6 +59,7 @@ geoFire = new GeoFire(ref);
       if (! latitude && ! longitude) {
         console.log("No location found.");
       } else if (! userId) {
+        // userId = generateRandomString(10);
         guestLocationRef.push({geoX:latitude, geoY:longitude, currentLocation:currentLocation});
         console.log("Guest location added to Firebase.");
       } else {
@@ -78,26 +67,56 @@ geoFire = new GeoFire(ref);
         console.log(userId + "s location was added to Firebase");
       }
 
+      
+
     });
     
+    userLocationRef.onDisconnect().remove();
+    guestLocationRef.onDisconnect().remove();
 
-    // geoFire.set(username, [latitude, longitude]).then(function() {
-    //   console.log("Current " + username + "'s location has been added to GeoFire");
+    // ref.child("dispensaries").on("child_added", function(snapshot) {
+    //   var dispensaryId = snapshot.key();
+    //   var dispensary = snapshot.val();
 
-    //   // When the user disconnects from Firebase (e.g. closes the app, exits the browser),
-    //   // remove their GeoFire entry
-    //   firebaseRef.child(username).onDisconnect().remove();
-
-    //   console.log("Added handler to remove user " + username + " from GeoFire when you leave this page.");
-    //   console.log("You can use the link above to verify that " + username + " was removed from GeoFire after you close this page.");
-    // }).catch(function(error) {
-    //   console.log("Error adding user " + username + "'s location to GeoFire");
+    //   geoFire.set("<dispensary_id>", [dispensary.latitude, dispensary.longitude]).then(function() {
+    //     console.log(dispensaryId + " has been added to GeoFire");
+    //   }).catch(function(error) {
+    //     console.log("Error adding " + dispensaryId + " to GeoFire: " + error);
+    //   });
     // });
+
+    // var geoQuery = geoFire.query({
+    //   center: [userLocation.latitude, userLocation.longitude],
+    //   radius: 5
+    // });
+
+    // var onKeyEnteredRegistration = geoQuery.on("key_entered", function(key, location, distance) {
+    //   console.log(key + " entered query at " + location + " (" + distance + " km from center)");
+    // });
+
+    // // users's location is now store in newLocation
+    // geoQuery.updateCriteria({
+    //   center: [newLocation.latitude, newLocation.longitude]
+    // });
+
   }
+
+  
+
+  function generateRandomString(length) {
+      var text = "";
+      var validChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      for(var i = 0; i < length; i++) {
+          text += validChars.charAt(Math.floor(Math.random() * validChars.length));
+      }
+      return text;
+  }
+
 
   /* Handles any errors from trying to get the user's current location */
   var errorHandler = function(error) {
     if (error.code == 1) {
+      alert("Some features on this website may not work without your location. Please enable location so you can get the whole DeViine experience. Your location will be deleted once you exit.");
       console.log("Error: PERMISSION_DENIED: User denied access to their location");
     } else if (error.code === 2) {
       console.log("Error: POSITION_UNAVAILABLE: Network is down or positioning satellites cannot be reached");
@@ -110,20 +129,20 @@ geoFire = new GeoFire(ref);
 
   var userLocation = getUserLocation();
 
-  var geoQuery = geoFire.query({
-    center: [userLocation.latitude, userLocation.longitude],
-    radius: 5
-  });
+  // var geoQuery = geoFire.query({
+  //   center: [userLocation.latitude, userLocation.longitude],
+  //   radius: 5
+  // });
 
-  // We want to get notified whenever a location enters our query, so let's add a listener for that:
-  var onKeyEnteredRegistration = geoQuery.on("key_entered", function(key, location, distance) {
-    console.log(key + " entered query at " + location + " (" + distance + " km from center)");
-  });
+  // // We want to get notified whenever a location enters our query, so let's add a listener for that:
+  // var onKeyEnteredRegistration = geoQuery.on("key_entered", function(key, location, distance) {
+  //   console.log(key + " entered query at " + location + " (" + distance + " km from center)");
+  // });
 
-  // users's location is now store in newLocation
-  geoQuery.updateCriteria({
-    center: [newLocation.latitude, newLocation.longitude]
-  });
+  // // users's location is now store in newLocation
+  // geoQuery.updateCriteria({
+  //   center: [newLocation.latitude, newLocation.longitude]
+  // });
 
 })();
   //removed return envelope
