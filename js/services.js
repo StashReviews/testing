@@ -230,7 +230,6 @@ angular.module('DeViine.services', [])
       // }
     };
   }])
-  // (Copied wholesale from the mobile app.)
   .factory('ratingsService', ['dvUrl', function(dvUrl) {
     //removed return envelope
     var obj = {};
@@ -298,16 +297,89 @@ angular.module('DeViine.services', [])
       //removed return envelope
       return obj;
   }])
-  .factory('locationService', function() {
+  .factory('locationService', ['$http', '$q', 'dvUrl', '$firebaseObject', function($http, $q, dvUrl, $firebaseObject) {
     return {
-      // @todo Import this function from the mobile app.
+      /**
+       * @param {String} address
+       * @returns {google.maps.LatLng} coordinates
+       */
+      getCoordinatesFromAddress: function(address) {
+        $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + address)
+          .then(function(data) {
+            var coords = data.results[0].geometry.location;
+
+            return new google.maps.LatLng(coords.lat, coords.lng);
+          });
+      },
       getCurrentCity: function() {
-
         return '';
+      },
+      /**
+       * @returns {google.maps.LatLng|null} coords
+       */
+      getCurrentLocation: function() {
+        if(typeof navigator !== 'undefined' && typeof navigator.geolocation !== 'undefined') {
+          navigator.geolocation.getCurrentPosition(function(location) {
+            var coords = location.coords;
 
+            return new google.maps.LatLng(coords.lat, coords.lng);
+          }, function(error) {
+            console.log(error);
+          });
+        } else {
+          console.log('Your browser does not support the HTML5 Geolocation API, so this demo will not work.')
+        }
+      },
+      getDistanceToDispensary: function(dispensaryId) {
+        var deferred = $q.defer();
+
+        setTimeout(function() {
+          // @todo Re-add browser check for geolocation.
+          navigator.geolocation.getCurrentPosition(function(location) {
+            // @todo Log positions, so that we know where folks are using our service.  (If logged in as a user, log locations under the user's Firebase record.)
+            var coords = location.coords;
+            var currentLocation = new google.maps.LatLng(coords.latitude, coords.longitude);
+
+            $firebaseObject(new Firebase(dvUrl + '/dispensaries/' + dispensaryId)).$loaded()
+              .then(function(dispensary) {
+                if(!(dispensary.geoX && dispensary.geoY)) {
+                  var dispensaryAddress = dispensary.location.street + ', ' + dispensary.location.city + ', ' + dispensary.location.state + ' ' + dispensary.location.zip;
+
+                  $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + dispensaryAddress)
+                    .success(function(data) {
+                      var coords = data.results[0].geometry.location;
+                      var dispensaryLatLng = new google.maps.LatLng(coords.lat, coords.lng);
+
+                      dispensary.geoX = dispensaryLatLng.lat();
+                      dispensary.geoY = dispensaryLatLng.lng();
+
+                      dispensary.$save();
+                    })
+                    .error(function(error) {
+                      console.log(error);
+                    });
+                }
+
+                var distance = google.maps.geometry.spherical.computeDistanceBetween(currentLocation, new google.maps.LatLng(dispensary.geoX, dispensary.geoY));
+
+                distance
+                  ? deferred.resolve( (distance / 1609.34).toFixed(2) ) // convert meters to miles
+                  : deferred.reject('Could not compute distance to dispensary.');
+              })
+              .catch(function(error) {
+                deferred.reject('Could not compute distance to dispensary.');
+                console.log(error);
+              });
+          }, function(error) {
+            deferred.reject('Could not compute distance to dispensary.');
+            console.log(error);
+          });
+        }, 1000);
+
+        return deferred.promise;
       }
-    };
-  })
+    }
+  }])
   // .factory('distanceService', function() {
   //   //removed return envelope
   //   // var obj = {};

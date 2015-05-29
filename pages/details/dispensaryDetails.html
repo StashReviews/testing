@@ -18,7 +18,8 @@
 			</div>
 		</div>
 		<dv-rating ratings="dispensary.ratings" class="dispensaryRating"></dv-rating>
-		<dv-distance distance="dispensary.distance" class="dispensaryDistance"></dv-distance>
+		<!-- <dv-distance distance="dispensary.distance" class="dispensaryDistance"></dv-distance> -->
+		<p><strong>{{ distanceToDispensary }}</strong> miles away.</p>
 		<p ng-show="dispensary.ratings[currentName]" class="userRatingDisplay">You rated this dispensary a <strong id="userRating">{{ dispensary.ratings[currentName] }}</strong>.</p>
 		<div class="contactInfo">
 			<div ng-show="dispensary.website" class="dispensaryWebsite">

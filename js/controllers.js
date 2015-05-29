@@ -111,7 +111,7 @@ angular.module('DeViine.controllers', [])
         $scope.featuredDispensaries = dispensaryData[1];
       });
   }])
-  .controller('dispensaryDetailsCtrl', ['$scope', '$q', '$filter', '$stateParams', 'itemsService', 'ratingsService', 'reviewsService', function($scope, $q, $filter, $stateParams, itemsService, ratingsService, reviewsService) {
+  .controller('dispensaryDetailsCtrl', ['$scope', '$q', '$filter', '$stateParams', 'itemsService', 'ratingsService', 'reviewsService', 'locationService', function($scope, $q, $filter, $stateParams, itemsService, ratingsService, reviewsService, locationService) {
     
     $scope.today = $filter('date')(new Date(), 'EEEE');
 
@@ -120,6 +120,11 @@ angular.module('DeViine.controllers', [])
     // $scope.featureddispensaries = itemsService.getFeatured('dispensaries');
     // // @todo Exclude the current dispensary from the results of itemsService.getOther().
     // $scope.otherdispensaries = itemsService.getOther('dispensaries');
+
+    locationService.getDistanceToDispensary($stateParams.dispensaryId)
+      .then(function(distance) {
+        $scope.distanceToDispensary = distance;
+      });
 
     $q.all([itemsService.getOther('dispensaries'), itemsService.getFeatured('dispensaries')])
     .then(function(dispensaryData) {
@@ -165,6 +170,11 @@ angular.module('DeViine.controllers', [])
 
     // @todo Don't forget to save the dispensary's coordinates to '/locations/<id>'.
     $scope.saveDispensary = function(dispensaryId, dispensary) {
+      // @see http://stackoverflow.com/a/23656919
+      // (Seems like a pretty hack-ish way to remove the '$$hashKey' key.)
+      dispensary = JSON.parse( angular.toJson(dispensary) );
+
+      // @todo Remove this check once we're confident that everything works correctly.
       if( !( dispensaryId ) ) {
         dispensaryId = 'test';
       }
@@ -186,9 +196,7 @@ angular.module('DeViine.controllers', [])
         }
       */
 
-      var id = dispensary.$id ? dispensary.$id : dispensaryId;
-
-      ( new Firebase(dvUrl + '/dispensaries/' + id) ).set(dispensary);
+      ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId) ).set(dispensary);
     };
 
 
