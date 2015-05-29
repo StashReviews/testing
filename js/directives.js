@@ -1,21 +1,24 @@
 angular.module('DeViine.directives', [])
 
   /** <dv-card item-type='' item-id='' /> */
-  .directive('dvCard', ['$firebaseObject', 'dvUrl', function($firebaseObject, dvUrl) {
+  .directive('dvCard', ['$firebaseObject', 'dvUrl', 'locationService', function($firebaseObject, dvUrl, locationService) {
     return {
       restrict: 'E',
       templateUrl: function(element, attr) {
         return 'partials/cards/' + attr.itemType + '.html';
       },
-      /*
-        scope: {
-          itemType: '@',
-          itemId: '='
-        },
-      */
+      /*scope: {
+        itemType: '@',
+        itemId: '='
+      },*/
       link: function(scope, element, attrs) {
         // @todo Pluralize programmatically.
         scope[attrs.itemType] = $firebaseObject( new Firebase(dvUrl + '/' + ( attrs.itemType === 'dispensary' ? 'dispensaries' : ( attrs.itemType + 's' ) ) + '/' + attrs.itemId) );
+
+        locationService.getDistanceToDispensary(attrs.itemId)
+          .then(function(distance) {
+            scope.distance = distance;
+          });
       }
     };
   }])
