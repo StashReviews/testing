@@ -167,11 +167,11 @@
 	</fieldset>
 	<fieldset>
 		<legend>Menu</legend>
-		<table ng-repeat="itemType in dispensary.menu" class="table">
-			<tr ng-repeat="item in itemType">
-				<td>{{ dispensary.menu.item.name }}</td>
-				<td>{{ dispensary.menu.item.type }}</td>
-				<td>{{ dispensary.menu.item.description }}</td>
+		<table ng-repeat="(itemType, items) in dispensary.menu" class="table">
+			<tr ng-repeat="item in items">
+				<td>{{ item.name }}</td>
+				<td>{{ itemType }}</td>
+				<td>{{ item.description }}</td>
 			</tr>
 		</table>
 		<div class="form-group">
