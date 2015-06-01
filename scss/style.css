@@ -160,11 +160,12 @@
   -webkit-filter: grayscale(1); }
 /* line 149, _items.scss */
 .strainGalleryWrap #zoom {
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   margin: -125px 0 0 -125px;
   background-repeat: no-repeat;
   box-shadow: 0 0 0 2px white, 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
@@ -173,66 +174,66 @@
   -webkit-transform: scale(0);
   -webkit-transition: opacity 500ms, -webkit-transform 500ms;
   pointer-events: none; }
-/* line 166, _items.scss */
+/* line 167, _items.scss */
 .strainGalleryWrap #zoom.active {
   opacity: 1;
   -webkit-transform: scale(1); }
 
 /* Strain Zoom End */
-/* line 172, _items.scss */
+/* line 173, _items.scss */
 .strainGalleryMobile,
 .dispensaryGalleryMobile {
   display: none; }
 
-/* line 176, _items.scss */
+/* line 177, _items.scss */
 .zoomContainer {
   top: 60px !important;
   cursor: none; }
 
-/* line 181, _items.scss */
+/* line 182, _items.scss */
 .currentDeals {
   display: none; }
 
-/* line 186, _items.scss */
+/* line 187, _items.scss */
 .dispensaryHours {
   background: #2c3034;
   width: 100%; }
-  /* line 189, _items.scss */
+  /* line 190, _items.scss */
   .dispensaryHours tr {
     color: white; }
-  /* line 192, _items.scss */
+  /* line 193, _items.scss */
   .dispensaryHours tr.dvGreen {
     color: #3dd861; }
-  /* line 195, _items.scss */
+  /* line 196, _items.scss */
   .dispensaryHours td {
     font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 26px;
     padding: 10px 20px 4px 20px;
     border-bottom: thin solid rgba(255, 255, 255, 0.1); }
-  /* line 202, _items.scss */
+  /* line 203, _items.scss */
   .dispensaryHours td:nth-child(2) {
     text-align: right; }
 
-/* line 208, _items.scss */
+/* line 209, _items.scss */
 .dealDetails h4 {
   font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 22px;
   color: #2c3034;
   margin: 20px 0 0 0; }
-/* line 215, _items.scss */
+/* line 216, _items.scss */
 .dealDetails p {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #2c3034; }
-/* line 221, _items.scss */
+/* line 222, _items.scss */
 .dealDetails .redemptionDetails {
   border-bottom: 1px solid rgba(44, 48, 52, 0.2);
   padding-bottom: 15px;
   margin: 10px 0 20px 0; }
-  /* line 225, _items.scss */
+  /* line 226, _items.scss */
   .dealDetails .redemptionDetails div .redeemDeal {
     background: #f7253e;
     font-family: "Bebas Neue", "Khand", sans-serif;
@@ -241,17 +242,17 @@
     color: white;
     width: 100%;
     padding: 10px 20px 5px 20px; }
-    /* line 233, _items.scss */
+    /* line 234, _items.scss */
     .dealDetails .redemptionDetails div .redeemDeal:hover {
       background: #2c3034; }
-  /* line 237, _items.scss */
+  /* line 238, _items.scss */
   .dealDetails .redemptionDetails div label {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 16px;
     color: #2c3034;
     float: left; }
-  /* line 244, _items.scss */
+  /* line 245, _items.scss */
   .dealDetails .redemptionDetails div .distanceAway,
   .dealDetails .redemptionDetails div .daysLeft {
     color: #f7253e;
@@ -263,7 +264,7 @@
     float: left;
     width: 25%; }
 
-/* line 258, _items.scss */
+/* line 259, _items.scss */
 .flavorProfile,
 .positiveEffects,
 .negativeEffects {
@@ -272,29 +273,29 @@
   font-size: 20px;
   color: #2c3034;
   text-align: left; }
-  /* line 266, _items.scss */
+  /* line 267, _items.scss */
   .flavorProfile li,
   .positiveEffects li,
   .negativeEffects li {
     line-height: 18px;
     margin-bottom: 10px; }
-    /* line 269, _items.scss */
+    /* line 270, _items.scss */
     .flavorProfile li:nth-child(1),
     .positiveEffects li:nth-child(1),
     .negativeEffects li:nth-child(1) {
       border-bottom: 3px solid #3dd861; }
-    /* line 272, _items.scss */
+    /* line 273, _items.scss */
     .flavorProfile li:nth-child(2),
     .positiveEffects li:nth-child(2),
     .negativeEffects li:nth-child(2) {
       border-bottom: 3px solid #fcd31c; }
-    /* line 275, _items.scss */
+    /* line 276, _items.scss */
     .flavorProfile li:nth-child(3),
     .positiveEffects li:nth-child(3),
     .negativeEffects li:nth-child(3) {
       border-bottom: 3px solid #f7253e; }
 
-/* line 280, _items.scss */
+/* line 281, _items.scss */
 .strainProfileTitle {
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -303,7 +304,7 @@
   margin: 0;
   padding-bottom: 10px; }
 
-/* line 289, _items.scss */
+/* line 290, _items.scss */
 .barChart {
   margin: 30px 0 0 0;
   padding: 0;
@@ -311,32 +312,32 @@
   width: 100%;
   position: relative;
   bottom: 0; }
-  /* line 296, _items.scss */
+  /* line 297, _items.scss */
   .barChart li {
     width: 30%;
     margin: 0 1.5%;
     float: left;
     position: relative;
     bottom: 0; }
-    /* line 302, _items.scss */
+    /* line 303, _items.scss */
     .barChart li:nth-child(1) {
       background-color: #3dd861; }
-      /* line 304, _items.scss */
+      /* line 305, _items.scss */
       .barChart li:nth-child(1) div {
         background-color: #3dd861; }
-    /* line 308, _items.scss */
+    /* line 309, _items.scss */
     .barChart li:nth-child(2) {
       background-color: #fcd31c; }
-      /* line 310, _items.scss */
+      /* line 311, _items.scss */
       .barChart li:nth-child(2) div {
         background-color: #fcd31c; }
-    /* line 314, _items.scss */
+    /* line 315, _items.scss */
     .barChart li:nth-child(3) {
       background-color: #f7253e; }
-      /* line 316, _items.scss */
+      /* line 317, _items.scss */
       .barChart li:nth-child(3) div {
         background-color: #f7253e; }
-    /* line 320, _items.scss */
+    /* line 321, _items.scss */
     .barChart li div {
       color: white;
       font-family: "Bebas Neue", "Khand", sans-serif;
@@ -347,7 +348,7 @@
       padding-top: 10%;
       border-bottom: 1px solid white; }
 
-/* line 333, _items.scss */
+/* line 334, _items.scss */
 .thcPotency,
 .cbdPotency {
   margin: 0 auto;
@@ -357,7 +358,7 @@
   text-transform: uppercase;
   font-size: 40px;
   color: #2c3034; }
-  /* line 342, _items.scss */
+  /* line 343, _items.scss */
   .thcPotency label,
   .cbdPotency label {
     position: relative;
@@ -365,13 +366,13 @@
     font-size: 20px;
     color: rgba(44, 48, 52, 0.2); }
 
-/* line 351, _items.scss */
+/* line 352, _items.scss */
 .reviews .leaveReview {
   padding: 0; }
-  /* line 353, _items.scss */
+  /* line 354, _items.scss */
   .reviews .leaveReview .avatarWrap {
     float: left; }
-    /* line 355, _items.scss */
+    /* line 356, _items.scss */
     .reviews .leaveReview .avatarWrap .avatar {
       width: 40px;
       height: 40px;
@@ -383,7 +384,7 @@
       -webkit-transition: .5s;
       -moz-transition: .5s;
       -o-transition: .5s; }
-    /* line 367, _items.scss */
+    /* line 368, _items.scss */
     .reviews .leaveReview .avatarWrap .reviewBanner {
       float: left;
       position: absolute;
@@ -396,17 +397,17 @@
       background: #3dd861;
       top: 0;
       left: 10px; }
-      /* line 379, _items.scss */
+      /* line 380, _items.scss */
       .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner {
         color: white;
         text-decoration: none;
         opacity: .5;
         cursor: pointer;
         margin-left: 5px; }
-        /* line 385, _items.scss */
+        /* line 386, _items.scss */
         .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner:hover {
           opacity: 1; }
-  /* line 391, _items.scss */
+  /* line 392, _items.scss */
   .reviews .leaveReview #reviewInput {
     border: 2px solid rgba(44, 48, 52, 0.2);
     font-family: "Open Sans", sans-serif;
@@ -417,10 +418,10 @@
     float: right;
     height: 100px;
     width: 100%; }
-    /* line 401, _items.scss */
+    /* line 402, _items.scss */
     .reviews .leaveReview #reviewInput:hover, .reviews .leaveReview #reviewInput:active, .reviews .leaveReview #reviewInput:focus {
       border-color: #3dd861; }
-  /* line 407, _items.scss */
+  /* line 408, _items.scss */
   .reviews .leaveReview #submitReview {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
@@ -433,20 +434,20 @@
     padding: 10px;
     float: right;
     width: 100%; }
-    /* line 419, _items.scss */
+    /* line 420, _items.scss */
     .reviews .leaveReview #submitReview:hover {
       background: #3dd861;
       color: white; }
-/* line 425, _items.scss */
+/* line 426, _items.scss */
 .reviews .totalReviews {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   text-align: center; }
-/* line 430, _items.scss */
+/* line 431, _items.scss */
 .reviews #reviewsDiv {
   margin-top: 20px;
   padding: 0; }
-  /* line 433, _items.scss */
+  /* line 434, _items.scss */
   .reviews #reviewsDiv h4 {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
@@ -455,7 +456,7 @@
     color: #2c3034;
     padding: 10px 0 0 0;
     border-top: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 442, _items.scss */
+  /* line 443, _items.scss */
   .reviews #reviewsDiv h6 {
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
@@ -463,28 +464,28 @@
     font-weight: bold;
     color: #3dd861;
     margin: 0px 0 3px 0; }
-  /* line 450, _items.scss */
+  /* line 451, _items.scss */
   .reviews #reviewsDiv p {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     color: #2c3034;
     margin: 0;
     padding: 0 0 8px 60px; }
-  /* line 457, _items.scss */
+  /* line 458, _items.scss */
   .reviews #reviewsDiv img {
     border-radius: 50%;
     float: left;
     margin: 10px 20px 10px 0;
     width: 40px;
     height: 40px; }
-/* line 465, _items.scss */
+/* line 466, _items.scss */
 .reviews .pleaseSignIn {
   padding-top: 20px;
   text-align: center;
   color: #2c3034;
   position: relative;
   z-index: 5; }
-  /* line 471, _items.scss */
+  /* line 472, _items.scss */
   .reviews .pleaseSignIn a {
     color: #3dd861;
     cursor: pointer; }

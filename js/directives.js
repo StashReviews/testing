@@ -131,32 +131,36 @@ angular.module('DeViine.directives', [])
       link: function(scope, element, attrs) {
 
         //Will watch for changes on the attribute
-        attrs.$observe('zoomImage',function(){
+        attrs.$observe('data',function(){
           linkStrainZoom();
-          console.log('Link Strain Zoom');
+          console.log('New Strain Image Found');
         })
 
         function linkStrainZoom(){
-          if (!attrs.zoomImage) return;
-          element.attr('data-zoom-image',attrs.zoomImage);
-          var zoom = document.getElementById('zoom'),
-              Zw = zoom.offsetWidth,
-              Zh = zoom.offsetHeight,
-              strainGallery = document.getElementById('strainGallery');
+          if (!attrs.data) return;
+          element.attr('data-zoom-image',attrs.data);
+          var zoom = document.getElementById('zoom');
+          var Zw = zoom.offsetWidth;
+          var Zh = zoom.offsetHeight;
+          var strainGallery = document.getElementById('strainGallery');
               
           var timeout, ratio, Ix, Iy;
 
           function activate() {
-            document.body.classList.add('active');
+            strainGallery.className = strainGallery.className + " active";  
+            zoom.className = zoom.className + " active";  
+            // document.body.classList.add('active');
           }
           
           function deactivate() {
-            document.body.classList.remove('active');
+            strainGallery.className = strainGallery.className - " active";  
+            zoom.className = zoom.className - " active";  
+            // document.body.classList.remove('active');
           }
           
-          function updateMagnifier( x, y ) {
-            zoom.style.top = ( y ) + 'px';
-            zoom.style.left = ( x ) + 'px';
+          function updateMagnifier(x,y) {
+            zoom.style.top = (y) + 'px';
+            zoom.style.left = (x) + 'px';
             zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw / 2 ) + 'px ' + (( Iy - y ) * ratio + Zh / 2 ) + 'px';
           }
           
@@ -166,11 +170,11 @@ angular.module('DeViine.directives', [])
             Iy = strainGallery.offsetTop;
           }
           
-          function onMousemove( e ) {
+          function onMousemove(e) {
             clearTimeout( timeout );
             activate();
-            updateMagnifier( e.x, e.y );
-            timeout = setTimeout( deactivate, 2500 );
+            updateMagnifier(e.x,e.y);
+            timeout = setTimeout(deactivate,2500);
           }
           
           function onMouseleave() {
