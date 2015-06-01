@@ -583,21 +583,6 @@ angular.module('DeViine.controllers', [])
   .controller('reviewsCtrl', ['$scope', '$firebaseArray', 'dvUrl', 'reviewsService',  function($scope, $firebaseArray, dvUrl, reviewsService) {
   // .controller('reviewsCtrl', ['$scope', 'reviewsService', function($scope, reviewsService) {   
 
-    // $scope.reviews = [ 
-    //   { 
-    //     author: 'The Book of Trees', 
-    //     text: 19, 
-    //     date: new Date('2014', '03', '08'), 
-    //     avatar: 'img/the-book-of-trees.jpg' 
-    //   }, 
-    //   { 
-    //     author: 'Program or be Programmed', 
-    //     text: 8, 
-    //     date: new Date('2013', '08', '01'), 
-    //     avatar: 'img/program-or-be-programmed.jpg' 
-    //   } 
-    // ];
-
     // var itemType = $('.pageTitle').attr('title');
     // var itemId = $('.pageId').attr('title');
 
@@ -606,7 +591,6 @@ angular.module('DeViine.controllers', [])
     // };
 
     // $scope.reviews = reviewsService.getReviews('reviews');
-
 
   }])
 ;

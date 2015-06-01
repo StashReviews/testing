@@ -351,7 +351,7 @@ angular.module('DeViine.services', [])
                 var distance = google.maps.geometry.spherical.computeDistanceBetween(currentLocation, new google.maps.LatLng(dispensary.geoX, dispensary.geoY));
 
                 distance
-                  ? deferred.resolve( (distance / 1609.34).toFixed(2) ) // convert meters to miles
+                  ? deferred.resolve( (distance / 1609.34).toFixed(1) ) // convert meters to miles
                   : deferred.reject('Could not compute distance to dispensary.');
               })
               .catch(function(error) {
