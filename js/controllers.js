@@ -237,6 +237,9 @@ angular.module('DeViine.controllers', [])
       '4:45 AM',
     ];
 
+    $scope.itemType = '';
+    $scope.item = {};
+
     $firebaseObject( new Firebase(dvUrl + '/dispensaries') ).$loaded()
       .then(function(dispensaries) {
         $scope.dispensaries = dispensaries;
@@ -253,6 +256,8 @@ angular.module('DeViine.controllers', [])
 
     $scope.loadDispensary = function(dispensaryId) {
       $scope.dispensary = $scope.dispensaries[dispensaryId];
+
+      $scope.newItem();
 
       // @todo Get dispensary hours loading correctly.
 
@@ -316,7 +321,24 @@ angular.module('DeViine.controllers', [])
 
 
 
+    $scope.newItem = function() {
+      $scope.itemType = '';
+      $scope.item = {};
+    };
 
+    $scope.loadItem = function(dispensaryId, itemType, itemId) {
+      $scope.itemType = itemType;
+
+      ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId + '/menu/' + itemType + '/' + itemId) ).once('value', function(item) {
+        $scope.item = item.val();
+      });
+    };
+
+    $scope.saveItem = function(dispensaryId, itemType, item) {
+      item = JSON.parse( angular.toJson(item) );
+
+      ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId + '/menu/' + itemType) ).push(item);
+    };
 
     $scope.saveMenu = function(dispensaryId, menu) {
       ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId + '/menu') ).set(menu);
