@@ -9,7 +9,7 @@
 			<address class="dispensaryAddress line2">{{ dispensary.location.city }}, {{ dispensary.location.state }}</address>
 		</div>
 		<dv-rating ratings="dispensary.ratings" class="dispensaryRating"></dv-rating>
-		<h4 class="distanceAway">{{ distance }} MILES AWAY</h4>
+		<h4 class="distanceAway" ng-show="distance">{{ distance }} MILES AWAY</h4>
 	</div>
 	<div class="featured-dispensary-{{ dispensary.featured }}"></div>
 </div>
