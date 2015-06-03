@@ -313,51 +313,56 @@
   margin: 0;
   padding-bottom: 10px; }
 
-/* line 297, _items.scss */
-.barChart {
+/*.barChart {
   margin: 30px 0 0 0;
   padding: 0;
   height: 100px;
   width: 100%;
   position: relative;
-  bottom: 0; }
-  /* line 304, _items.scss */
-  .barChart li {
+  bottom: 0;
+  li {
     width: 30%;
     margin: 0 1.5%;
     float: left;
     position: relative;
-    bottom: 0; }
-    /* line 310, _items.scss */
-    .barChart li:nth-child(1) {
-      background-color: #3dd861; }
-      /* line 312, _items.scss */
-      .barChart li:nth-child(1) div {
-        background-color: #3dd861; }
-    /* line 316, _items.scss */
-    .barChart li:nth-child(2) {
-      background-color: #fcd31c; }
-      /* line 318, _items.scss */
-      .barChart li:nth-child(2) div {
-        background-color: #fcd31c; }
-    /* line 322, _items.scss */
-    .barChart li:nth-child(3) {
-      background-color: #f7253e; }
-      /* line 324, _items.scss */
-      .barChart li:nth-child(3) div {
-        background-color: #f7253e; }
-    /* line 328, _items.scss */
-    .barChart li div {
+    bottom: 0;
+    &:nth-child(1) {
+      background-color: $dvGreen;
+      div {
+        background-color: $dvGreen;
+      }
+    }
+    &:nth-child(2) {
+      background-color: $dvYellow;
+      div {
+        background-color: $dvYellow;
+      }
+    }
+    &:nth-child(3) {
+      background-color: $dvRed;
+      div {
+        background-color: $dvRed;
+      }
+    }
+    div {
       color: white;
-      font-family: "Bebas Neue", "Khand", sans-serif;
+      font-family: $dvHeaderFont;
       text-transform: uppercase;
       font-size: 18px;
       text-align: center;
       margin-top: -30px;
       padding-top: 10%;
-      border-bottom: 1px solid white; }
-
+      border-bottom: 1px solid white;
+    }
+  }
+}*/
 /* line 341, _items.scss */
+.donut-chart {
+  width: 100%;
+  height: 100%;
+  float: left; }
+
+/* line 343, _items.scss */
 .thcPotency,
 .cbdPotency {
   margin: 0 auto;
@@ -367,7 +372,7 @@
   text-transform: uppercase;
   font-size: 40px;
   color: #2c3034; }
-  /* line 350, _items.scss */
+  /* line 352, _items.scss */
   .thcPotency label,
   .cbdPotency label {
     position: relative;
@@ -375,13 +380,13 @@
     font-size: 20px;
     color: rgba(44, 48, 52, 0.2); }
 
-/* line 359, _items.scss */
+/* line 361, _items.scss */
 .reviews .leaveReview {
   padding: 0; }
-  /* line 361, _items.scss */
+  /* line 363, _items.scss */
   .reviews .leaveReview .avatarWrap {
     float: left; }
-    /* line 363, _items.scss */
+    /* line 365, _items.scss */
     .reviews .leaveReview .avatarWrap .avatar {
       width: 40px;
       height: 40px;
@@ -393,7 +398,7 @@
       -webkit-transition: .5s;
       -moz-transition: .5s;
       -o-transition: .5s; }
-    /* line 375, _items.scss */
+    /* line 377, _items.scss */
     .reviews .leaveReview .avatarWrap .reviewBanner {
       float: left;
       position: absolute;
@@ -406,17 +411,17 @@
       background: #3dd861;
       top: 0;
       left: 10px; }
-      /* line 387, _items.scss */
+      /* line 389, _items.scss */
       .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner {
         color: white;
         text-decoration: none;
         opacity: .5;
         cursor: pointer;
         margin-left: 5px; }
-        /* line 393, _items.scss */
+        /* line 395, _items.scss */
         .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner:hover {
           opacity: 1; }
-  /* line 399, _items.scss */
+  /* line 401, _items.scss */
   .reviews .leaveReview #reviewInput {
     border: 2px solid rgba(44, 48, 52, 0.2);
     font-family: "Open Sans", sans-serif;
@@ -427,10 +432,10 @@
     float: right;
     height: 100px;
     width: 100%; }
-    /* line 409, _items.scss */
+    /* line 411, _items.scss */
     .reviews .leaveReview #reviewInput:hover, .reviews .leaveReview #reviewInput:active, .reviews .leaveReview #reviewInput:focus {
       border-color: #3dd861; }
-  /* line 415, _items.scss */
+  /* line 417, _items.scss */
   .reviews .leaveReview #submitReview {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
@@ -443,20 +448,20 @@
     padding: 10px;
     float: right;
     width: 100%; }
-    /* line 427, _items.scss */
+    /* line 429, _items.scss */
     .reviews .leaveReview #submitReview:hover {
       background: #3dd861;
       color: white; }
-/* line 433, _items.scss */
+/* line 435, _items.scss */
 .reviews .totalReviews {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   text-align: center; }
-/* line 438, _items.scss */
+/* line 440, _items.scss */
 .reviews #reviewsDiv {
   margin-top: 20px;
   padding: 0; }
-  /* line 441, _items.scss */
+  /* line 443, _items.scss */
   .reviews #reviewsDiv h4 {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
@@ -465,7 +470,7 @@
     color: #2c3034;
     padding: 10px 0 0 0;
     border-top: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 450, _items.scss */
+  /* line 452, _items.scss */
   .reviews #reviewsDiv h6 {
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
@@ -473,28 +478,28 @@
     font-weight: bold;
     color: #3dd861;
     margin: 0px 0 3px 0; }
-  /* line 458, _items.scss */
+  /* line 460, _items.scss */
   .reviews #reviewsDiv p {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     color: #2c3034;
     margin: 0;
     padding: 0 0 8px 60px; }
-  /* line 465, _items.scss */
+  /* line 467, _items.scss */
   .reviews #reviewsDiv img {
     border-radius: 50%;
     float: left;
     margin: 10px 20px 10px 0;
     width: 40px;
     height: 40px; }
-/* line 473, _items.scss */
+/* line 475, _items.scss */
 .reviews .pleaseSignIn {
   padding-top: 20px;
   text-align: center;
   color: #2c3034;
   position: relative;
   z-index: 5; }
-  /* line 479, _items.scss */
+  /* line 481, _items.scss */
   .reviews .pleaseSignIn a {
     color: #3dd861;
     cursor: pointer; }
