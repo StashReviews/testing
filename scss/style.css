@@ -177,14 +177,15 @@
   /*Multiple box shadows to achieve the glass effect*/
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.85), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
   /*hide the glass by default*/
-  display: none; }
+  display: none;
+  cursor: none; }
 
 /*To solve overlap bug at the edges during magnification*/
-/* line 173, _items.scss */
+/* line 174, _items.scss */
 #strainGallery {
   display: block; }
 
-/* line 174, _items.scss */
+/* line 175, _items.scss */
 #strainGallery:hover {
   -webkit-transition: .3s;
   -moz-transition: .3s;
@@ -193,55 +194,55 @@
   transition: .3s; }
 
 /* Strain Zoom End */
-/* line 184, _items.scss */
+/* line 185, _items.scss */
 .strainGalleryMobile,
 .dispensaryGalleryMobile {
   display: none; }
 
-/* line 188, _items.scss */
+/* line 189, _items.scss */
 .currentDeals {
   display: none; }
 
-/* line 193, _items.scss */
+/* line 194, _items.scss */
 .dispensaryHours {
   background: #2c3034;
   width: 100%; }
-  /* line 196, _items.scss */
+  /* line 197, _items.scss */
   .dispensaryHours tr {
     color: white; }
-  /* line 199, _items.scss */
+  /* line 200, _items.scss */
   .dispensaryHours tr.dvGreen {
     color: #3dd861; }
-  /* line 202, _items.scss */
+  /* line 203, _items.scss */
   .dispensaryHours td {
     font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 26px;
     padding: 10px 20px 4px 20px;
     border-bottom: thin solid rgba(255, 255, 255, 0.1); }
-  /* line 209, _items.scss */
+  /* line 210, _items.scss */
   .dispensaryHours td:nth-child(2) {
     text-align: right; }
 
-/* line 215, _items.scss */
+/* line 216, _items.scss */
 .dealDetails h4 {
   font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 22px;
   color: #2c3034;
   margin: 20px 0 0 0; }
-/* line 222, _items.scss */
+/* line 223, _items.scss */
 .dealDetails p {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #2c3034; }
-/* line 228, _items.scss */
+/* line 229, _items.scss */
 .dealDetails .redemptionDetails {
   border-bottom: 1px solid rgba(44, 48, 52, 0.2);
   padding-bottom: 15px;
   margin: 10px 0 20px 0; }
-  /* line 232, _items.scss */
+  /* line 233, _items.scss */
   .dealDetails .redemptionDetails div .redeemDeal {
     background: #f7253e;
     font-family: "Bebas Neue", "Khand", sans-serif;
@@ -250,17 +251,17 @@
     color: white;
     width: 100%;
     padding: 10px 20px 5px 20px; }
-    /* line 240, _items.scss */
+    /* line 241, _items.scss */
     .dealDetails .redemptionDetails div .redeemDeal:hover {
       background: #2c3034; }
-  /* line 244, _items.scss */
+  /* line 245, _items.scss */
   .dealDetails .redemptionDetails div label {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 16px;
     color: #2c3034;
     float: left; }
-  /* line 251, _items.scss */
+  /* line 252, _items.scss */
   .dealDetails .redemptionDetails div .distanceAway,
   .dealDetails .redemptionDetails div .daysLeft {
     color: #f7253e;
@@ -272,7 +273,7 @@
     float: left;
     width: 25%; }
 
-/* line 265, _items.scss */
+/* line 266, _items.scss */
 .flavorProfile,
 .positiveEffects,
 .negativeEffects {
@@ -281,29 +282,29 @@
   font-size: 20px;
   color: #2c3034;
   text-align: left; }
-  /* line 273, _items.scss */
+  /* line 274, _items.scss */
   .flavorProfile li,
   .positiveEffects li,
   .negativeEffects li {
     line-height: 18px;
     margin-bottom: 10px; }
-    /* line 276, _items.scss */
+    /* line 277, _items.scss */
     .flavorProfile li:nth-child(1),
     .positiveEffects li:nth-child(1),
     .negativeEffects li:nth-child(1) {
       border-bottom: 3px solid #3dd861; }
-    /* line 279, _items.scss */
+    /* line 280, _items.scss */
     .flavorProfile li:nth-child(2),
     .positiveEffects li:nth-child(2),
     .negativeEffects li:nth-child(2) {
       border-bottom: 3px solid #fcd31c; }
-    /* line 282, _items.scss */
+    /* line 283, _items.scss */
     .flavorProfile li:nth-child(3),
     .positiveEffects li:nth-child(3),
     .negativeEffects li:nth-child(3) {
       border-bottom: 3px solid #f7253e; }
 
-/* line 287, _items.scss */
+/* line 288, _items.scss */
 .strainProfileTitle {
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -312,7 +313,7 @@
   margin: 0;
   padding-bottom: 10px; }
 
-/* line 296, _items.scss */
+/* line 297, _items.scss */
 .barChart {
   margin: 30px 0 0 0;
   padding: 0;
@@ -320,32 +321,32 @@
   width: 100%;
   position: relative;
   bottom: 0; }
-  /* line 303, _items.scss */
+  /* line 304, _items.scss */
   .barChart li {
     width: 30%;
     margin: 0 1.5%;
     float: left;
     position: relative;
     bottom: 0; }
-    /* line 309, _items.scss */
+    /* line 310, _items.scss */
     .barChart li:nth-child(1) {
       background-color: #3dd861; }
-      /* line 311, _items.scss */
+      /* line 312, _items.scss */
       .barChart li:nth-child(1) div {
         background-color: #3dd861; }
-    /* line 315, _items.scss */
+    /* line 316, _items.scss */
     .barChart li:nth-child(2) {
       background-color: #fcd31c; }
-      /* line 317, _items.scss */
+      /* line 318, _items.scss */
       .barChart li:nth-child(2) div {
         background-color: #fcd31c; }
-    /* line 321, _items.scss */
+    /* line 322, _items.scss */
     .barChart li:nth-child(3) {
       background-color: #f7253e; }
-      /* line 323, _items.scss */
+      /* line 324, _items.scss */
       .barChart li:nth-child(3) div {
         background-color: #f7253e; }
-    /* line 327, _items.scss */
+    /* line 328, _items.scss */
     .barChart li div {
       color: white;
       font-family: "Bebas Neue", "Khand", sans-serif;
@@ -356,7 +357,7 @@
       padding-top: 10%;
       border-bottom: 1px solid white; }
 
-/* line 340, _items.scss */
+/* line 341, _items.scss */
 .thcPotency,
 .cbdPotency {
   margin: 0 auto;
@@ -366,7 +367,7 @@
   text-transform: uppercase;
   font-size: 40px;
   color: #2c3034; }
-  /* line 349, _items.scss */
+  /* line 350, _items.scss */
   .thcPotency label,
   .cbdPotency label {
     position: relative;
@@ -374,13 +375,13 @@
     font-size: 20px;
     color: rgba(44, 48, 52, 0.2); }
 
-/* line 358, _items.scss */
+/* line 359, _items.scss */
 .reviews .leaveReview {
   padding: 0; }
-  /* line 360, _items.scss */
+  /* line 361, _items.scss */
   .reviews .leaveReview .avatarWrap {
     float: left; }
-    /* line 362, _items.scss */
+    /* line 363, _items.scss */
     .reviews .leaveReview .avatarWrap .avatar {
       width: 40px;
       height: 40px;
@@ -392,7 +393,7 @@
       -webkit-transition: .5s;
       -moz-transition: .5s;
       -o-transition: .5s; }
-    /* line 374, _items.scss */
+    /* line 375, _items.scss */
     .reviews .leaveReview .avatarWrap .reviewBanner {
       float: left;
       position: absolute;
@@ -405,17 +406,17 @@
       background: #3dd861;
       top: 0;
       left: 10px; }
-      /* line 386, _items.scss */
+      /* line 387, _items.scss */
       .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner {
         color: white;
         text-decoration: none;
         opacity: .5;
         cursor: pointer;
         margin-left: 5px; }
-        /* line 392, _items.scss */
+        /* line 393, _items.scss */
         .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner:hover {
           opacity: 1; }
-  /* line 398, _items.scss */
+  /* line 399, _items.scss */
   .reviews .leaveReview #reviewInput {
     border: 2px solid rgba(44, 48, 52, 0.2);
     font-family: "Open Sans", sans-serif;
@@ -426,10 +427,10 @@
     float: right;
     height: 100px;
     width: 100%; }
-    /* line 408, _items.scss */
+    /* line 409, _items.scss */
     .reviews .leaveReview #reviewInput:hover, .reviews .leaveReview #reviewInput:active, .reviews .leaveReview #reviewInput:focus {
       border-color: #3dd861; }
-  /* line 414, _items.scss */
+  /* line 415, _items.scss */
   .reviews .leaveReview #submitReview {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
@@ -442,20 +443,20 @@
     padding: 10px;
     float: right;
     width: 100%; }
-    /* line 426, _items.scss */
+    /* line 427, _items.scss */
     .reviews .leaveReview #submitReview:hover {
       background: #3dd861;
       color: white; }
-/* line 432, _items.scss */
+/* line 433, _items.scss */
 .reviews .totalReviews {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   text-align: center; }
-/* line 437, _items.scss */
+/* line 438, _items.scss */
 .reviews #reviewsDiv {
   margin-top: 20px;
   padding: 0; }
-  /* line 440, _items.scss */
+  /* line 441, _items.scss */
   .reviews #reviewsDiv h4 {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
@@ -464,7 +465,7 @@
     color: #2c3034;
     padding: 10px 0 0 0;
     border-top: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 449, _items.scss */
+  /* line 450, _items.scss */
   .reviews #reviewsDiv h6 {
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
@@ -472,28 +473,28 @@
     font-weight: bold;
     color: #3dd861;
     margin: 0px 0 3px 0; }
-  /* line 457, _items.scss */
+  /* line 458, _items.scss */
   .reviews #reviewsDiv p {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     color: #2c3034;
     margin: 0;
     padding: 0 0 8px 60px; }
-  /* line 464, _items.scss */
+  /* line 465, _items.scss */
   .reviews #reviewsDiv img {
     border-radius: 50%;
     float: left;
     margin: 10px 20px 10px 0;
     width: 40px;
     height: 40px; }
-/* line 472, _items.scss */
+/* line 473, _items.scss */
 .reviews .pleaseSignIn {
   padding-top: 20px;
   text-align: center;
   color: #2c3034;
   position: relative;
   z-index: 5; }
-  /* line 478, _items.scss */
+  /* line 479, _items.scss */
   .reviews .pleaseSignIn a {
     color: #3dd861;
     cursor: pointer; }
