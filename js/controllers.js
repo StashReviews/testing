@@ -141,214 +141,136 @@ angular.module('DeViine.controllers', [])
 
   }])
   .controller('dispensariesManageCtrl', ['$scope', '$http', '$filter', '$firebaseObject', 'dvUrl', function($scope, $http, $filter, $firebaseObject, dvUrl) {
-    
-    $scope.times = [
-      '5:00 AM',
-      '5:15 AM',
-      '5:30 AM',
-      '5:45 AM',
-      '6:00 AM',
-      '6:15 AM',
-      '6:30 AM',
-      '6:45 AM',
-      '7:00 AM',
-      '7:15 AM',
-      '7:30 AM',
-      '7:45 AM',
-      '8:00 AM',
-      '8:15 AM',
-      '8:30 AM',
-      '8:45 AM',
-      '9:00 AM',
-      '9:15 AM',
-      '9:30 AM',
-      '9:45 AM',
-      '10:00 AM',
-      '10:15 AM',
-      '10:30 AM',
-      '10:45 AM',
-      '11:00 AM',
-      '11:15 AM',
-      '11:30 AM',
-      '11:45 AM',
-      '12:00 PM',
-      '12:15 PM',
-      '12:30 PM',
-      '12:45 PM',
-      '1:00 PM',
-      '1:15 PM',
-      '1:30 PM',
-      '1:45 PM',
-      '2:00 PM',
-      '2:15 PM',
-      '2:30 PM',
-      '2:45 PM',
-      '3:00 PM',
-      '3:15 PM',
-      '3:30 PM',
-      '3:45 PM',
-      '4:00 PM',
-      '4:15 PM',
-      '4:30 PM',
-      '4:45 PM',
-      '5:00 PM',
-      '5:15 PM',
-      '5:30 PM',
-      '5:45 PM',
-      '6:00 PM',
-      '6:15 PM',
-      '6:30 PM',
-      '6:45 PM',
-      '7:00 PM',
-      '7:15 PM',
-      '7:30 PM',
-      '7:45 PM',
-      '8:00 PM',
-      '8:15 PM',
-      '8:30 PM',
-      '9:45 PM',
-      '10:00 PM',
-      '10:15 PM',
-      '10:30 PM',
-      '10:45 PM',
-      '11:00 PM',
-      '11:15 PM',
-      '11:30 PM',
-      '11:45 PM',
-      '12:00 AM',
-      '12:15 AM',
-      '12:30 AM',
-      '12:45 AM',
-      '1:00 AM',
-      '1:15 AM',
-      '1:30 AM',
-      '1:45 AM',
-      '2:00 AM',
-      '2:15 AM',
-      '2:30 AM',
-      '2:45 AM',
-      '3:00 AM',
-      '3:15 AM',
-      '3:30 AM',
-      '3:45 AM',
-      '4:00 AM',
-      '4:15 AM',
-      '4:30 AM',
-      '4:45 AM',
-    ];
+    $scope.times = [];
 
+    // split the day into 15-minute blocks
+    for(var h = 0; h <= 23; h++) {
+      for(var m = 0; m <= 3; m++) {
+        var hour = (h % 12 == 0) ? '12' : (h % 12);
+        var minute = (m == 0) ? '00' : (m * 15);
+        var period = (h < 12) ? 'AM' : 'PM';
+
+        $scope.times.push( hour + ':' + minute + ' ' + period );
+      }
+    }
+
+    $scope.activeDispensaryId = ''; // look up an existing dispensary
+    $scope.dispensary = {}; // add a new dispensary
+
+    // add a new item
+    $scope.activeItemId = '';
     $scope.itemType = '';
     $scope.item = {};
 
+    // load dispensaries
+    // @todo Add a Firebase listener that re-loads the dispensary menu table whenever we add or edit a menu item.
     $firebaseObject( new Firebase(dvUrl + '/dispensaries') ).$loaded()
       .then(function(dispensaries) {
         $scope.dispensaries = dispensaries;
-
-        // @todo Initialize 'dispensaryId' and 'dispensary' to the first available dispensary.
-        $scope.dispensaryId = '';
-        $scope.dispensary = dispensaries[''];
       });
 
     $scope.newDispensary = function() {
-      $scope.dispensaryId = '';
-      $scope.dispensary = {};
+      $scope.activeDispensaryId = '';
+      $scope.dispensary = {}; // clear the dispensary form
     };
 
     $scope.loadDispensary = function(dispensaryId) {
+      $scope.activeDispensaryId = dispensaryId;
       $scope.dispensary = $scope.dispensaries[dispensaryId];
 
       $scope.newItem();
-
-      // @todo Get dispensary hours loading correctly.
-
-      /*for(var day in $scope.dispensary['hours']) {
-        if( $scope.dispensary['hours'].hasOwnProperty(day) ) {
-          $scope.dispensary['hours'][day].open = new Date( $filter('date')($scope.dispensary['hours'][day].open, 'shortTime') );
-          $scope.dispensary['hours'][day].close = new Date( $filter('date')($scope.dispensary['hours'][day].close, 'shortTime') );
-        }
-      }*/
     };
 
-    // @todo Don't forget to save the dispensary's coordinates to '/locations/<id>'.
+    // @todo Consider saving the dispensary's coordinates to '/locations/<dispensaryId>'.
     $scope.saveDispensary = function(dispensaryId, dispensary) {
-      // @see http://stackoverflow.com/a/23656919
-      // (Seems like a pretty hack-ish way to remove the '$$hashKey' key.)
+      /*
+        Removes the '$$hashKey' key from the 'dispensary' object, making the latter acceptable to Firebase.
+        @see http://stackoverflow.com/a/23656919
+       */
       dispensary = JSON.parse( angular.toJson(dispensary) );
 
-      // @todo Remove this check once we're confident that everything works correctly.
-      if( !( dispensaryId ) ) {
-        dispensaryId = 'test';
-      }
+      /*
+        Use a short-circuit operator to re-assign the dispensary ID variable if we're dealing with an existing dispensary.
+        (Note that this is only necessary because we specify dispensary IDs manually (via a text input).  Were this not the case, this part of the function would look more like what we have in saveItem(), below, where we automatically generate IDs.  Foor for thought.
+       */
+      dispensaryId = $scope.activeDispensaryId || dispensaryId;
 
-      for(var day in dispensary['hours']) {
-        if( dispensary['hours'].hasOwnProperty(day) ) {
-          dispensary['hours'][day].open = $filter('date')(dispensary['hours'][day].open, 'shortTime');
-          dispensary['hours'][day].close = $filter('date')(dispensary['hours'][day].close, 'shortTime');
-        }
+      // Return an error if not given a dispensary ID.
+      if( !( dispensaryId ) ) {
+        console.log('saveDispensary: No dispensary ID provided.');
+
+        return;
       }
 
       /*
-        This is equivalent to the code that follows.  (Strictly for educational purposes.)
-
-        if(dispensary.$id) {
-          ( new Firebase(dvUrl + '/dispensaries/' + dispensary.$id) ).set(dispensary);
-        } else {
-          ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId) ).set(dispensary);
-        }
-      */
-
-      if(!(dispensary.geoX && dispensary.geoY)) {
+        Ensure that we geocode dispensary addresses.
+        @todo Check for an address update, in which case we need to geocode the new address.
+       */
+      if( !( dispensary.geoX && dispensary.geoY ) ) {
         var dispensaryAddress = dispensary.location.street + ', ' + dispensary.location.city + ', ' + dispensary.location.state + ' ' + dispensary.location.zip;
 
         $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + dispensaryAddress)
           .success(function(data) {
             var coords = data.results[0].geometry.location;
-            var dispensaryLatLng = new google.maps.LatLng(coords.lat, coords.lng);
 
-            dispensary.geoX = dispensaryLatLng.lat();
-            dispensary.geoY = dispensaryLatLng.lng();
+            dispensary.geoX = coords.lat;
+            dispensary.geoY = coords.lng;
 
-            //dispensary.$save();
             ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId) ).set(dispensary);
           })
           .error(function(error) {
-            console.log(error);
+            console.log('saveDispensary: Error when attempting to geocode dispensary address: '+ error);
           });
       } else {
         ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId) ).set(dispensary);
       }
     };
 
-
-
     $scope.newItem = function() {
+      $scope.activeItemId = '';
       $scope.itemType = '';
-      $scope.item = {};
+      $scope.item = {}; // clear the item form
     };
 
-    $scope.loadItem = function(dispensaryId, itemType, itemId) {
+    $scope.loadItem = function(itemType, itemId) {
+      // If we haven't loaded a dispensary, return an error.
+      if( !( $scope.activeDispensaryId ) ) {
+        console.log('loadItem: Please specify a dispensary, so we know whose menu to update.');
+
+        return;
+      }
+
+      $scope.activeItemId = itemId;
       $scope.itemType = itemType;
 
-      ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId + '/menu/' + itemType + '/' + itemId) ).once('value', function(item) {
+      ( new Firebase(dvUrl + '/dispensaries/' + $scope.activeDispensaryId + '/menu/' + itemType + '/' + itemId) ).once('value', function(item) {
         $scope.item = item.val();
       });
     };
 
-    $scope.saveItem = function(dispensaryId, itemType, item) {
+    $scope.saveItem = function(itemType, item) {
+      // If we haven't loaded a dispensary, return an error.
+      if( !( $scope.activeDispensaryId ) ) {
+        console.log('loadItem: Please specify a dispensary, so we know whose menu to update.');
+
+        return;
+      }
+
       item = JSON.parse( angular.toJson(item) );
 
-      ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId + '/menu/' + itemType) ).push(item);
+      if($scope.activeItemId) {
+        ( new Firebase(dvUrl + '/dispensaries/' + $scope.activeDispensaryId + '/menu/' + itemType + '/' + $scope.activeItemId) ).set(item);
+      } else {
+        ( new Firebase(dvUrl + '/dispensaries/' + $scope.activeDispensaryId + '/menu/' + itemType) ).push(item);
+      }
     };
 
-    $scope.saveMenu = function(dispensaryId, menu) {
-      ( new Firebase(dvUrl + '/dispensaries/' + dispensaryId + '/menu') ).set(menu);
+    $scope.addPriceField = function() {
+      var priceField = jQuery('.priceField');
+
+      // @todo Fix this, as it also copies any values entered into the inputs.
+      priceField.parent().append(priceField.clone()[0]);
     };
-
-
-
-
-
-
   }])
   .controller('dealsCtrl', ['$scope', '$firebaseObject', 'dvUrl', 'itemsService', function($scope, $firebaseObject, dvUrl, itemsService) {
     /**

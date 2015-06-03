@@ -1,9 +1,9 @@
 <h1 class="pageTitle">Manage Dispensaries</h1>
 <form class="form-horizontal">
 	<div class="form-group">
-		<label for="dispensaryId" class="col-md-2 control-label">Dispensary:</label>
+		<label for="activeDispensaryId" class="col-md-2 control-label">Dispensary:</label>
 		<div class="col-md-8">
-			<select ng-model="dispensaryId" name="dispensaryId" ng-options="id as dispensary.name for (id, dispensary) in dispensaries" ng-change="loadDispensary(dispensaryId)" class="form-control"></select>
+			<select ng-model="activeDispensaryId" name="dispensaryId" ng-options="id as dispensary.name for (id, dispensary) in dispensaries" ng-change="loadDispensary(activeDispensaryId)" class="form-control"></select>
 		</div>
 		<div class="col-md-2">
 			<button ng-click="newDispensary()" class="btn btn-block dispensaryCMS">New Dispensary</button>
@@ -11,10 +11,10 @@
 	</div>
 </form>
 <form class="form-horizontal">
-	<div ng-hide="dispensary.$id" class="form-group">
-		<label for="dispensaryId" class="col-md-2 control-label">Dispensary ID:</label>
+	<div class="form-group">
+		<label for="activeDispensaryId" class="col-md-2 control-label">Dispensary ID:</label>
 		<div class="col-md-10">
-			<input ng-model="dispensaryId" type="text" name="dispensaryId" class="form-control" required/>
+			<input ng-model="activeDispensaryId" type="text" name="dispensaryId" class="form-control" required/>
 		</div>
 	</div>
 	<fieldset>
@@ -182,8 +182,11 @@
 	</fieldset>
 	<fieldset>
 		<legend>Menu</legend>
+		<!--
+			@todo This should update in real-time whenever an item is added or edited.  Probably most easily accomplished with a Firebase event listener.
+		-->
 		<table ng-repeat="(itemType, items) in dispensary.menu" class="table">
-			<tr ng-repeat="(itemId, item) in items" ng-click="loadItem(dispensaryId, itemType, itemId)">
+			<tr ng-repeat="(itemId, item) in items" ng-click="loadItem(itemType, itemId)">
 				<td>{{ item.name }}</td>
 				<td>{{ itemType }}</td>
 				<td>{{ item.description }}</td>
@@ -198,7 +201,7 @@
 	<!-- <div class="form-group">
 		<label for="itemSelect" class="col-md-2 control-label">Item:</label>
 		<div class="col-md-8">
-			<select ng-model="itemId" name="itemSelect" ng-options="id as item.name for (id, item) in dispensary.menu[itemType]" ng-change="loadItem(dispensaryId, itemType, itemId)" class="form-control"></select>
+			<select ng-model="itemId" name="itemSelect" ng-options="id as item.name for (id, item) in dispensary.menu[itemType]" ng-change="loadItem(itemType, itemId)" class="form-control"></select>
 		</div>
 	</div> -->
 	<div class="form-group">
@@ -251,6 +254,10 @@
 	<fieldset>
 		<legend>Prices</legend>
 		<div class="form-group">
+			<button type="button" class="btn btn-block dispensaryCMS" ng-click="addPriceField()">Add Price</button>
+		</div>
+		<!-- @todo Start storing prices in an array, then use 'ng-repeat="price in item.prices"'. -->
+		<div class="form-group priceField">
 			<label for="itemCBD" class="col-md-2 control-label">Price:</label>
 			<div class="col-md-4">
 				<input ng-model="item.priceByPrice" name="itemPrice" type="text" class="form-control"/>
@@ -274,5 +281,5 @@
 			<input ng-model="item.disable" name="itemDisable" type="checkbox" class="form-control"/>
 		</div>
 	</div>
-	<button ng-click="saveItem(dispensaryId, itemType, item)" class="btn btn-block dispensaryCMS">Save Item</button>
+	<button ng-click="saveItem(itemType, item)" class="btn btn-block dispensaryCMS">Save Item</button>
 </form>
