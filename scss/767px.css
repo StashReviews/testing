@@ -92,7 +92,7 @@
   /*----items.html start----*/
   .strainGallery,
   .dispensaryGallery {
-    display: none; }
+    /*display: none;*/ }
 
   .strainGalleryMobile,
   .dispensaryGalleryMobile {

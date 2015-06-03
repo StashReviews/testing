@@ -1089,7 +1089,7 @@
   /* line 113, 767px.scss */
   .strainGallery,
   .dispensaryGallery {
-    display: none; }
+    /*display: none;*/ }
 
   /* line 117, 767px.scss */
   .strainGalleryMobile,
