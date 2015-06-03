@@ -110,17 +110,14 @@
   }
   /*----cards.html end----*/
   /*----items.html start----*/
-  .strainGallery,
+  #strainGallery,
   .dispensaryGallery {
-    /*display: none;*/
+    display: none;
   }
   .strainGalleryMobile,
   .dispensaryGalleryMobile {
     display: inline;
     margin-bottom: 20px;
-  }
-  .zoomContainer {
-    display: none;
   }
   /*----items.html end----*/
 }

@@ -143,6 +143,16 @@
 /*Some CSS*/
 
 #strainGalleryWrap { margin: auto; position: relative;}
+#strainGalleryWrap:hover {
+  #strainGallery { 
+    -webkit-filter: grayscale(1); 
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    transition: .3s;
+  }
+}
 
 /*Lets create the magnifying glass*/
 #zoom {
@@ -161,6 +171,13 @@
 
 /*To solve overlap bug at the edges during magnification*/
 #strainGallery { display: block; }
+#strainGallery:hover {
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  -ms-transition: .3s;
+  transition: .3s;
+}
 /* Strain Zoom End */
 
 
@@ -168,11 +185,6 @@
 .dispensaryGalleryMobile {
   display: none;
 }
-.zoomContainer {
-  top: 60px !important;
-  cursor: none;
-}
-
 .currentDeals {
   display: none;
 }
