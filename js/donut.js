@@ -4,7 +4,7 @@ $(window).load(function(){
   drawDonut("#graph2");
   drawDonut("#graph3");
   /* 
-  	TODO:
+    TODO:
     add an addtional data attr called "data-backup" which will hold the src
     image backup for ie8...or maybe use: https://github.com/mhemesath/r2d3/
   */
@@ -27,7 +27,7 @@ $(window).load(function(){
         .attr("height", height)
         .append("g")
         .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
-  	
+    
     var arc = d3.svg.arc()
         .innerRadius(radius - thickness)
         .outerRadius(radius);
@@ -38,7 +38,7 @@ $(window).load(function(){
       .append("path")
       .style("fill", function(d, i) { return fills[i]; })
       .attr("d", arc)
-    	.transition()
+      .transition()
       .delay(delay)
       .duration(duration)
       .call(arcTween);

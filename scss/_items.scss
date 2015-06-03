@@ -142,7 +142,11 @@
 /* Strain Zoom Start */ 
 /*Some CSS*/
 
-#strainGalleryWrap { margin: auto; position: relative;}
+#strainGalleryWrap { 
+  margin: auto; 
+  position: relative;
+  overflow: hidden;
+}
 #strainGalleryWrap:hover {
   #strainGallery { 
     -webkit-filter: grayscale(1); 
@@ -338,7 +342,7 @@
   }
 }*/
 
-.donut-chart { width: 100%; height: 100%; float: left; }
+.donut-chart { width: 100%; height: 100%; margin-bottom: 10px; float: left; }
 
 .thcPotency,
 .cbdPotency {
