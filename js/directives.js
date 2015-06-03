@@ -131,65 +131,78 @@ angular.module('DeViine.directives', [])
       link: function(scope, element, attrs) {
 
         //Will watch for changes on the attribute
-        attrs.$observe('data',function(){
+        attrs.$observe('zoomImage',function(){
           linkStrainZoom();
           console.log('New Strain Image Found');
         })
 
-        function linkStrainZoom(){
-          if (!attrs.data) return;
-          element.attr('data-zoom-image',attrs.data);
-          var zoom = document.getElementById('zoom');
-          var Zw = zoom.offsetWidth;
-          var Zh = zoom.offsetHeight;
-          var strainGallery = document.getElementById('strainGallery');
+        function linkStrainZoom() {
+          var native_width = 0;
+          var native_height = 0;
+
+          //Now the mousemove function
+          $("#strainGalleryWrap").mousemove(function(e){
+            //When the user hovers on the image, the script will first calculate
+            //the native dimensions if they don't exist. Only after the native dimensions
+            //are available, the script will show the zoomed version.
+            if(!native_width && !native_height)
+            {
+              //This will create a new image object with the same image as that in #strainGallery
+              //We cannot directly get the dimensions from #strainGallery because of the 
+              //width specified to 200px in the html. To get the actual dimensions we have
+              //created this image object.
+              var image_object = new Image();
+              image_object.src = $("#strainGallery").attr("src");
               
-          var timeout, ratio, Ix, Iy;
-
-          function activate() {
-            strainGallery.className = strainGallery.className + " active";  
-            zoom.className = zoom.className + " active";  
-            // document.body.classList.add('active');
-          }
-          
-          function deactivate() {
-            strainGallery.className = strainGallery.className - " active";  
-            zoom.className = zoom.className - " active";  
-            // document.body.classList.remove('active');
-          }
-          
-          function updateMagnifier(x,y) {
-            zoom.style.top = (y) + 'px';
-            zoom.style.left = (x) + 'px';
-            zoom.style.backgroundPosition = (( Ix - x ) * ratio + Zw / 2 ) + 'px ' + (( Iy - y ) * ratio + Zh / 2 ) + 'px';
-          }
-          
-          function onLoad() {
-            ratio = strainGallery.naturalWidth / strainGallery.width;
-            Ix = strainGallery.offsetLeft;
-            Iy = strainGallery.offsetTop;
-          }
-          
-          function onMousemove(e) {
-            clearTimeout( timeout );
-            activate();
-            updateMagnifier(e.x,e.y);
-            timeout = setTimeout(deactivate,2500);
-          }
-          
-          function onMouseleave() {
-            deactivate();
-          }
-
-          strainGallery.addEventListener('load',onLoad);
-          strainGallery.addEventListener('mousemove',onMousemove);
-          strainGallery.addEventListener('mouseleave',onMouseleave);
-
+              //This code is wrapped in the .load function which is important.
+              //width and height of the object would return 0 if accessed before 
+              //the image gets loaded.
+              native_width = image_object.width;
+              native_height = image_object.height;
+            }
+            else
+            {
+              //x/y coordinates of the mouse
+              //This is the position of .magnify with respect to the document.
+              var magnify_offset = $(this).offset();
+              //We will deduct the positions of .magnify from the mouse positions with
+              //respect to the document to get the mouse positions with respect to the 
+              //container(.magnify)
+              var mx = e.pageX - magnify_offset.left;
+              var my = e.pageY - magnify_offset.top;
+              
+              //Finally the code to fade out the glass if the mouse is outside the container
+              if(mx < $(this).width() && my < $(this).height() && mx > 0 && my > 0)
+              {
+                $("#zoom").fadeIn(100);
+              }
+              else
+              {
+                $("#zoom").fadeOut(100);
+              }
+              if($("#zoom").is(":visible"))
+              {
+                //The background position of #zoom will be changed according to the position
+                //of the mouse over the #strainGallery image. So we will get the ratio of the pixel
+                //under the mouse pointer with respect to the image and use that to position the 
+                //large image inside the magnifying glass
+                var rx = Math.round(mx/$("#strainGallery").width()*native_width - $("#zoom").width()/2)*-1;
+                var ry = Math.round(my/$("#strainGallery").height()*native_height - $("#zoom").height()/2)*-1;
+                var bgp = rx + "px " + ry + "px";
+                
+                //Time to move the magnifying glass with the mouse
+                var px = mx - $("#zoom").width()/2;
+                var py = my - $("#zoom").height()/2;
+                //Now the glass moves with the mouse
+                //The logic is to deduct half of the glass's width and height from the 
+                //mouse coordinates to place it with its center at the mouse coordinates
+                
+                //If you hover on the image now, you should see the magnifying glass in action
+                $("#zoom").css({left: px, top: py, backgroundPosition: bgp});
+              }
+            }
+          })
         }
-
-        linkStrainZoom();
-
-        
 
       }
     };
