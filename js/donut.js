@@ -1,8 +1,29 @@
-window.onload = function(){
+window.onresize = function(){
 
-  drawDonut("#graph1");
-  drawDonut("#graph2");
-  drawDonut("#graph3");
+  var graph1 = $('#graph1').children();
+  var graph2 = $('#graph2').children();
+  var graph3 = $('#graph3').children();
+  var graphs = graph1, graph2, graph3;
+  // @todo = If donuts already exist, replace them.
+  if (! graphs) {
+    console.log('var of graphs does not exist. drawing donuts.');
+    drawDonut("#graph1");
+    drawDonut("#graph2");
+    drawDonut("#graph3");
+  } else {
+    console.log('var of graphs does exist. replacing donuts.');
+    graph1.remove();
+    graph2.remove();
+    graph3.remove();
+    drawDonut("#graph1");
+    drawDonut("#graph2");
+    drawDonut("#graph3");
+  }
+
+
+  // drawDonut("#graph1");
+  // drawDonut("#graph2");
+  // drawDonut("#graph3");
   /* 
     TODO:
     add an addtional data attr called "data-backup" which will hold the src

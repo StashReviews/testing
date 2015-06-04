@@ -33,9 +33,9 @@
           data-fills="#3dd861,#fcd31c,#f7253e">
         </div>
         <ul class="flavorProfile">
-          <li class="flavor1">{{ strainDetails.flavor1 }}</li>
-          <li class="flavor2">{{ strainDetails.flavor2 }}</li>
-          <li class="flavor3">{{ strainDetails.flavor3 }}</li>
+          <li ng-show="strainDetails.flavor1" class="flavor1">{{ strainDetails.flavor1 }}</li>
+          <li ng-show="strainDetails.flavor2" class="flavor2">{{ strainDetails.flavor2 }}</li>
+          <li ng-show="strainDetails.flavor3" class="flavor3">{{ strainDetails.flavor3 }}</li>
         </ul>
       </div>
       <div class="positives col-md-4 col-sm-4 col-xs-4">
@@ -45,9 +45,9 @@
           data-fills="#3dd861,#fcd31c,#f7253e">
         </div>
         <ul class="positiveEffects">
-          <li class="positive1">{{ strainDetails.positive1 }}</li>
-          <li class="positive2">{{ strainDetails.positive2 }}</li>
-          <li class="positive3">{{ strainDetails.positive3 }}</li>
+          <li ng-show="strainDetails.positive1" class="positive1">{{ strainDetails.positive1 }}</li>
+          <li ng-show="strainDetails.positive2" class="positive2">{{ strainDetails.positive2 }}</li>
+          <li ng-show="strainDetails.positive3" class="positive3">{{ strainDetails.positive3 }}</li>
         </ul>
       </div>
       <div class="negatives col-md-4 col-sm-4 col-xs-4">
@@ -57,9 +57,9 @@
           data-fills="#3dd861,#fcd31c,#f7253e" data="{{ strainDetails.negative1Percent }}">
         </div>
         <ul class="negativeEffects">
-          <li class="negative1">{{ strainDetails.negative1 }}</li>
-          <li class="negative2">{{ strainDetails.negative2 }}</li>
-          <li class="negative3">{{ strainDetails.negative3 }}</li>
+          <li ng-show="strainDetails.negative1" class="negative1">{{ strainDetails.negative1 }}</li>
+          <li ng-show="strainDetails.negative2" class="negative2">{{ strainDetails.negative2 }}</li>
+          <li ng-show="strainDetails.negative3" class="negative3">{{ strainDetails.negative3 }}</li>
         </ul>
       </div>
     </div>

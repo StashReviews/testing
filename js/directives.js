@@ -261,7 +261,7 @@ angular.module('DeViine.directives', [])
             var node = document.querySelector(elem);
             var width = height = $('.flavors').width();
             // var width = height = node.getAttribute("data-size") || 100;
-            var thickness = node.getAttribute("data-thickness") || 30;
+            var thickness = node.getAttribute("data-thickness") || 25;
             var duration = node.getAttribute('data-duration') || 850;
             var delay = node.getAttribute('data-delay') || 0;
             // @todo = amounts needs to load in after data loads.
