@@ -29,7 +29,7 @@
       <div class="flavors col-md-4 col-sm-4 col-xs-4">
         <h4 class="strainProfileTitle">FLAVOR PROFILE</h4>
         <div ng-donut id="graph1" class="donut-chart" data="{{ strainDetails.flavor1Percent }}"
-          data-amounts="{{ strainDetails.flavor1Percent }},{{ strainDetails.flavor2Percent }},{{ strainDetails.flavor3Percent }}"
+          data-amounts="1,2,3"
           data-fills="#3dd861,#fcd31c,#f7253e">
         </div>
         <ul class="flavorProfile">
@@ -40,8 +40,8 @@
       </div>
       <div class="positives col-md-4 col-sm-4 col-xs-4">
         <h4 class="strainProfileTitle">POSITIVE EFFECTS</h4>
-        <div ng-donut id="graph2" class="donut-chart" 
-          data-amounts="{{ strainDetails.positive1Percent }},{{ strainDetails.positive2Percent }},{{ strainDetails.positive3Percent }}"
+        <div ng-donut id="graph2" class="donut-chart" data="{{ strainDetails.positive1Percent }}" 
+          data-amounts="3,2,1"
           data-fills="#3dd861,#fcd31c,#f7253e">
         </div>
         <ul class="positiveEffects">
@@ -52,8 +52,8 @@
       </div>
       <div class="negatives col-md-4 col-sm-4 col-xs-4">
         <h4 class="strainProfileTitle">NEGATIVE EFFECTS</h4>
-        <div ng-donut id="graph3" class="donut-chart" 
-          data-amounts="{{ strainDetails.negative1Percent }},{{ strainDetails.negative2Percent }},{{ strainDetails.negative3Percent }}"
+        <div ng-donut id="graph3" class="donut-chart" data="{{ strainDetails.negative1Percent }}"
+          data-amounts="2,2"
           data-fills="#3dd861,#fcd31c,#f7253e">
         </div>
         <ul class="negativeEffects">
