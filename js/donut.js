@@ -1,4 +1,4 @@
-$(window).load(function(){
+window.onload = function(){
 
   drawDonut("#graph1");
   drawDonut("#graph2");
@@ -53,4 +53,4 @@ $(window).load(function(){
       });
     }
   }
-});
+};
