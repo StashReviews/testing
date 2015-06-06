@@ -260,11 +260,11 @@ angular.module('DeViine.directives', [])
           function drawDonut(elem){
             var node = document.querySelector(elem);
             var width = height = $('.flavors').width();
-            // var width = height = node.getAttribute("data-size") || 100;
+            // @TODO = Calculate donut thickness from width of window?
+            // @THEN = Update donut.js with same changes, to account for window resizing. 
             var thickness = node.getAttribute("data-thickness") || 25;
             var duration = node.getAttribute('data-duration') || 850;
             var delay = node.getAttribute('data-delay') || 0;
-            // @todo = amounts needs to load in after data loads.
             var amounts = node.getAttribute("data-amounts").split(",");
             var fills = node.getAttribute("data-fills").split(",");
             
