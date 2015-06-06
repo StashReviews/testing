@@ -256,18 +256,18 @@
 		<div class="form-group">
 			<button type="button" class="btn btn-block dispensaryCMS" ng-click="addPriceField()">Add Price</button>
 		</div>
-		<!-- @todo Start storing prices in an array, then use 'ng-repeat="price in item.prices"'. -->
+		<!-- @todo Start storing prices in an array, then add 'ng-repeat="(index, price) in item.prices"' to the following element. -->
 		<div class="form-group priceField">
 			<label for="itemCBD" class="col-md-2 control-label">Price:</label>
 			<div class="col-md-4">
-				<input ng-model="item.priceByPrice" name="itemPrice" type="text" class="form-control"/>
+				<input ng-model="item.prices[index].priceByPrice" name="itemPrice" type="text" class="form-control"/>
 			</div>
 			<label for="itemPrice" class="col-md-2 control-label">Amount:</label>
 			<div class="col-md-3">
-				<input ng-model="item.priceByAmount" name="itemAmount" type="text" class="form-control"/>
+				<input ng-model="item.prices[index].priceByAmount" name="itemAmount" type="text" class="form-control"/>
 			</div>
 			<div class="col-md-1">
-				<select ng-model="item.priceByUnit" class="form-control">
+				<select ng-model="item.prices[index].priceByUnit" class="form-control">
 					<option value="g">g</option>
 					<option value="oz">oz</option>
 					<option value="unit">unit</option>

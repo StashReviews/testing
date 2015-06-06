@@ -267,9 +267,10 @@ angular.module('DeViine.controllers', [])
 
     $scope.addPriceField = function() {
       var priceField = jQuery('.priceField');
+      var priceFieldCopy = priceField.clone()[0];
 
       // @todo Fix this, as it also copies any values entered into the inputs.
-      priceField.parent().append(priceField.clone()[0]);
+      priceField.parent().append(priceFieldCopy);
     };
   }])
   .controller('dealsCtrl', ['$scope', '$firebaseObject', 'dvUrl', 'itemsService', function($scope, $firebaseObject, dvUrl, itemsService) {
