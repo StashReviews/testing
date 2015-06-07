@@ -207,7 +207,7 @@
   td {
     font-family: $dvHeaderFont;
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 20px;
     padding: 10px 20px 4px 20px;
     border-bottom: thin solid rgba(255, 255, 255, .1);
   }
@@ -298,51 +298,12 @@
   padding-bottom: 10px;
 }
 
-/*.barChart {
-  margin: 30px 0 0 0;
-  padding: 0;
-  height: 100px;
+.donut-chart { 
   width: 100%;
-  position: relative;
-  bottom: 0;
-  li {
-    width: 30%;
-    margin: 0 1.5%;
-    float: left;
-    position: relative;
-    bottom: 0;
-    &:nth-child(1) {
-      background-color: $dvGreen;
-      div {
-        background-color: $dvGreen;
-      }
-    }
-    &:nth-child(2) {
-      background-color: $dvYellow;
-      div {
-        background-color: $dvYellow;
-      }
-    }
-    &:nth-child(3) {
-      background-color: $dvRed;
-      div {
-        background-color: $dvRed;
-      }
-    }
-    div {
-      color: white;
-      font-family: $dvHeaderFont;
-      text-transform: uppercase;
-      font-size: 18px;
-      text-align: center;
-      margin-top: -30px;
-      padding-top: 10%;
-      border-bottom: 1px solid white;
-    }
-  }
-}*/
-
-.donut-chart { width: 100%; height: 100%; margin-bottom: 10px; float: left; }
+  height: 100%;
+  margin-bottom: 10px;
+  float: left;
+}
 
 .thcPotency,
 .cbdPotency {
@@ -468,12 +429,15 @@
       margin: 0;
       padding: 0 0 8px 60px;
     }
-    img {
+    div {
       border-radius: 50%;
       float: left;
       margin: 10px 20px 10px 0;
       width: 40px;
       height: 40px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
   .pleaseSignIn {

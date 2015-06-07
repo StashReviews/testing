@@ -62,11 +62,17 @@
 		</ul>
 	</div>
 	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-		<h3>New Strains</h3>
+<!-- 		<h3>New Strains</h3>
 		<ul class="dvCardList">
 			<li ng-repeat="newStrain in newStrains" class="col-md-6 col-sm-6 col-xs-8 {{ strain.disabled }}">
 				<dv-card item-type="strain" item-id="{{ newStrain.$id }}"></dv-card>
 				<div class="new-strain-true"></div>
+			</li>
+		</ul> -->
+		<h3>Featured Dispensaries</h3>
+		<ul class="dvCardList">
+			<li ng-repeat="featuredDispensary in featuredDispensaries" class="col-md-6 col-sm-6 col-xs-8 {{ dispensary.disabled }}">
+				<dv-card item-type="dispensary" item-id="{{ featuredDispensary.$id }}"></dv-card>
 			</li>
 		</ul>
 	</div>

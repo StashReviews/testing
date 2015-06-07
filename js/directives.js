@@ -356,7 +356,7 @@ angular.module('DeViine.directives', [])
             // Add a callback that is triggered for each chat review.
             reviewsRef.on('child_added', function (snapshot) {
               var review = snapshot.val();
-              $('<img class=".reviewAvatar"/>').attr("src", review.avatar).appendTo($('#reviewsDiv'));
+              $('<div class=".userAvatar"/>').attr("style", "background-image:url('" + review.avatar + "');").appendTo($('#reviewsDiv'));
               $('<h4 class=".reviewAuthor"/>').text(review.name).appendTo($('#reviewsDiv'));
               $('<h6 class=".reviewDate"/>').text(review.date).appendTo($('#reviewsDiv'));
               $('<p class=".reviewText"/>').text(review.text).appendTo($('#reviewsDiv'));

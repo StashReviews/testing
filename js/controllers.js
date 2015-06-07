@@ -76,12 +76,12 @@ angular.module('DeViine.controllers', [])
     };
   }])
   .controller('homeCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
-    $scope.featuredDispensaries = itemsService.getFeatured('dispensaries');
+    // $scope.featuredDispensaries = itemsService.getFeatured('dispensaries');
 
-    $scope.featuredDeals = itemsService.getFeatured('deals');
+    // $scope.featuredDeals = itemsService.getFeatured('deals');
 
-    $scope.featuredStrains = itemsService.getFeatured('strains');
-    $scope.newStrains = itemsService.getNew('strains');
+    // $scope.featuredStrains = itemsService.getFeatured('strains');
+    // $scope.newStrains = itemsService.getNew('strains');
 
     $q.all([itemsService.getNew('strains'), itemsService.getFeatured('strains')])
     .then(function(strainData) {
@@ -94,6 +94,18 @@ angular.module('DeViine.controllers', [])
       $scope.newStrains = strainData[0];
       $scope.featuredStrains = strainData[1];
     });
+
+    $q.all([itemsService.getAll('dispensaries'), itemsService.getFeatured('dispensaries')])
+      .then(function(dispensaryData) {
+        dispensaryData.forEach(function(dispensaries) {
+          dispensaries.sort(function(a, b) {
+            return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+          });
+        });
+
+        $scope.dispensaries = dispensaryData[0];
+        $scope.featuredDispensaries = dispensaryData[1];
+      });
 
   }])
   .controller('dispensariesCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
@@ -329,8 +341,23 @@ angular.module('DeViine.controllers', [])
     };
   }])
   .controller('strainsCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
+    
+     // $scope.strainDetails = itemsService.get('strains', $stateParams.strainId);
+     // $scope.featuredStrains = itemsService.getFeatured('strains', $stateParams.strainId);
     // Wait for both our strains and our featured strains to load.
     // @todo Might we need to remove duplicate entries?
+    // $q.all([itemsService.getAll('strains'), itemsService.getFeatured('strains')])
+    //   .then(function(strainData) {
+    //     strainData.forEach(function(strains) {
+    //       strains.sort(function(a, b) {
+    //         return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+    //       });
+    //     });
+
+    //     $scope.strains = strainData[0];
+    //     $scope.featuredStrains = strainData[1];
+    //   });
+
     $q.all([itemsService.getAll('strains'), itemsService.getFeatured('strains')])
       .then(function(strainData) {
         strainData.forEach(function(strains) {
@@ -342,6 +369,8 @@ angular.module('DeViine.controllers', [])
         $scope.strains = strainData[0];
         $scope.featuredStrains = strainData[1];
       });
+
+
   }])
   .controller('strainDetailsCtrl', ['$scope', '$q', '$stateParams', 'itemsService', 'ratingsService', 'reviewsService', function($scope, $q, $stateParams, itemsService, ratingsService, reviewsService) {
     $scope.strainDetails = itemsService.get('strains', $stateParams.strainId);
