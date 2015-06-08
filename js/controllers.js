@@ -83,7 +83,7 @@ angular.module('DeViine.controllers', [])
     // $scope.featuredStrains = itemsService.getFeatured('strains');
     // $scope.newStrains = itemsService.getNew('strains');
 
-    $q.all([itemsService.getNew('strains'), itemsService.getFeatured('strains')])
+    $q.all([itemsService.getFeatured('strains')])
     .then(function(strainData) {
       strainData.forEach(function(strains) {
         strains.sort(function(a, b) {
@@ -91,11 +91,10 @@ angular.module('DeViine.controllers', [])
         });
       });
 
-      $scope.newStrains = strainData[0];
       $scope.featuredStrains = strainData[1];
     });
 
-    $q.all([itemsService.getAll('dispensaries'), itemsService.getFeatured('dispensaries')])
+    $q.all([itemsService.getFeatured('dispensaries')])
       .then(function(dispensaryData) {
         dispensaryData.forEach(function(dispensaries) {
           dispensaries.sort(function(a, b) {
@@ -103,7 +102,6 @@ angular.module('DeViine.controllers', [])
           });
         });
 
-        $scope.dispensaries = dispensaryData[0];
         $scope.featuredDispensaries = dispensaryData[1];
       });
 
@@ -342,7 +340,7 @@ angular.module('DeViine.controllers', [])
   }])
   .controller('strainsCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
     
-     // $scope.strainDetails = itemsService.get('strains', $stateParams.strainId);
+     // $scope.strainDetails = itemsService.getAll('strains', $stateParams.strainId);
      // $scope.featuredStrains = itemsService.getFeatured('strains', $stateParams.strainId);
     // Wait for both our strains and our featured strains to load.
     // @todo Might we need to remove duplicate entries?
@@ -358,18 +356,29 @@ angular.module('DeViine.controllers', [])
     //     $scope.featuredStrains = strainData[1];
     //   });
 
-    $q.all([itemsService.getAll('strains'), itemsService.getFeatured('strains')])
-      .then(function(strainData) {
-        strainData.forEach(function(strains) {
-          strains.sort(function(a, b) {
-            return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
-          });
+    $q.all([itemsService.getOther('strains'), itemsService.getFeatured('strains')])
+    .then(function(strainData) {
+      strainData.forEach(function(strains) {
+        strains.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
         });
-
-        $scope.strains = strainData[0];
-        $scope.featuredStrains = strainData[1];
       });
 
+      $scope.otherStrains = strainData[0];
+      $scope.featuredStrains = strainData[1];
+    });
+
+    $q.all([itemsService.getAll('strains'), itemsService.getFeatured('strains')])
+    .then(function(strainData) {
+      strainData.forEach(function(strains) {
+        strains.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+        });
+      });
+
+      $scope.strains = strainData[0];
+      $scope.featuredStrains = strainData[1];
+    });
 
   }])
   .controller('strainDetailsCtrl', ['$scope', '$q', '$stateParams', 'itemsService', 'ratingsService', 'reviewsService', function($scope, $q, $stateParams, itemsService, ratingsService, reviewsService) {
@@ -429,7 +438,7 @@ angular.module('DeViine.controllers', [])
       'Cedar',
       'Coffee',
       'Diesel',
-      'Flowery',
+      'Floral',
       'Fruity',
       'Grape',
       'Grapefruit',
@@ -438,14 +447,15 @@ angular.module('DeViine.controllers', [])
       'Lemon',
       'Lime',
       'Mango',
+      'Maple',
       'Menthol',
       'Mint',
       'Orange',
       'Peach',
       'Pear',
       'Pepper',
-      'Pine',
       'Plum',
+      'Pine',
       'Pineapple',
       'Rose',
       'Sage',
@@ -481,6 +491,7 @@ angular.module('DeViine.controllers', [])
       'Dry Mouth',
       'Headache',
       'Paranoid',
+      'Red Eyes',
       'Sleepy',
       'Talkative'
     ];
