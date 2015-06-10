@@ -83,7 +83,30 @@ angular.module('DeViine.controllers', [])
     // $scope.featuredStrains = itemsService.getFeatured('strains');
     // $scope.newStrains = itemsService.getNew('strains');
 
-    $q.all([itemsService.getFeatured('strains')])
+    // $q.all(itemsService.getFeatured('strains'))
+    // .then(function(strainData) {
+    //   strainData.forEach(function(strains) {
+    //     strains.sort(function(a, b) {
+    //       return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+    //     });
+    //   });
+
+    //   $scope.featuredStrains = strainData[1];
+    // });
+
+    // $q.all(itemsService.getFeatured('dispensaries'))
+    //   .then(function(dispensaryData) {
+    //     dispensaryData.forEach(function(dispensaries) {
+    //       dispensaries.sort(function(a, b) {
+    //         return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+    //       });
+    //     });
+
+    //     $scope.featuredDispensaries = dispensaryData[1];
+    //   });
+
+
+    $q.all([itemsService.getOther('strains'), itemsService.getFeatured('strains')])
     .then(function(strainData) {
       strainData.forEach(function(strains) {
         strains.sort(function(a, b) {
@@ -94,16 +117,17 @@ angular.module('DeViine.controllers', [])
       $scope.featuredStrains = strainData[1];
     });
 
-    $q.all([itemsService.getFeatured('dispensaries')])
-      .then(function(dispensaryData) {
-        dispensaryData.forEach(function(dispensaries) {
-          dispensaries.sort(function(a, b) {
-            return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
-          });
+    $q.all([itemsService.getAll('dispensaries'), itemsService.getFeatured('dispensaries')])
+    .then(function(dispensaryData) {
+      dispensaryData.forEach(function(dispensaries) {
+        dispensaries.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
         });
-
-        $scope.featuredDispensaries = dispensaryData[1];
       });
+
+      $scope.featuredDispensaries = dispensaryData[1];
+    });
+
 
   }])
   .controller('dispensariesCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {

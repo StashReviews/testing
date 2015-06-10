@@ -102,7 +102,10 @@ angular.module('DeViine.services', [])
           'twitter:justinvinge',
           'simplelogin:4',
           'google:108704110120989212163',
-          'google:justinvinge'          
+          'google:justinvinge',
+          'simplelogin:5',
+          'google:116170903932314080577',
+          'google:nikosalinas'        
         ];
 
         return ( user && user.uid )
