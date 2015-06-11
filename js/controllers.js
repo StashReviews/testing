@@ -392,7 +392,7 @@ angular.module('DeViine.controllers', [])
       $scope.featuredStrains = strainData[1];
     });
 
-    $q.all([itemsService.getAll('strains'), itemsService.getFeatured('strains')])
+    $q.all([itemsService.getOther('strains'), itemsService.getAll('strains')])
     .then(function(strainData) {
       strainData.forEach(function(strains) {
         strains.sort(function(a, b) {
@@ -400,8 +400,8 @@ angular.module('DeViine.controllers', [])
         });
       });
 
-      $scope.strains = strainData[0];
-      $scope.featuredStrains = strainData[1];
+      $scope.otherStrains = strainData[0];
+      $scope.strains = strainData[1];
     });
 
   }])

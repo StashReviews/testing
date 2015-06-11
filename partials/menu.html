@@ -1,5 +1,5 @@
 <tabset>
-	<tab ng-repeat="(itemType, items) in menu" heading="{{ itemType }}" class="col-md-2" style="background-image: url('../testing/img/tabs/{{ itemType }}.png');">
+	<tab ng-repeat="(itemType, items) in menu" heading="{{ itemType }}" class="col-lg-1 col-md-2 col-sm-2 col-xs-2" style="background-image: url('../testing/img/tabs/{{ itemType }}.png');">
 		<div class="menu">
 			<aside ng-repeat="item in items" class="menuItem">
 				<h1 class="itemName">{{ item.name }} <span class="producerName" ng-show="item.producer">{{ item.producer }}</span></h1>
