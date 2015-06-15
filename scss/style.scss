@@ -152,4 +152,30 @@ form {
     }
   }
 }
+ 
+.iHeartCannabisPageHeader {
+  margin-bottom: 20px;
+  h3 {
+    border-bottom: none;
+    font-family: $dvTextFont;
+    text-transform: none;
+  }
+  img {
 
+  }
+}
+.iHeartCannabis {
+  li {
+    img {
+      width: 100%;
+    }
+    label {
+      font-family: $dvHeaderFont;
+      color: $dvGray;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+}

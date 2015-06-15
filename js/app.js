@@ -127,6 +127,10 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
       .state('root.brandassets', {
         url: '/brandassets',
         templateUrl: 'pages/static/brandassets.html'
+      })
+      .state('root.iheartcannabis', {
+        url: '/i(heart)cannabis',
+        templateUrl: 'pages/static/i(heart)cannabis.html'
       });
 
     $urlRouterProvider.otherwise('/');

@@ -2040,4 +2040,25 @@ form {
     .brandassets li a img {
       width: 100%; }
 
+/* line 156, style.scss */
+.iHeartCannabisPageHeader {
+  margin-bottom: 20px; }
+  /* line 158, style.scss */
+  .iHeartCannabisPageHeader h3 {
+    border-bottom: none;
+    font-family: "Open Sans", sans-serif;
+    text-transform: none; }
+
+/* line 169, style.scss */
+.iHeartCannabis li img {
+  width: 100%; }
+/* line 172, style.scss */
+.iHeartCannabis li label {
+  font-family: "Bebas Neue", "Khand", sans-serif;
+  color: #2c3034;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 15px;
+  width: 100%; }
+
 /*# sourceMappingURL=style.css.map */
