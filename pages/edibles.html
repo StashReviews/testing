@@ -1,0 +1,9 @@
+<h2 class="pageTitle">Edibles</h2>
+<ul class="dvCardList" id="ediblesList">
+	<li ng-repeat="featuredEdible in featuredEdibles" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ edible.disabled }}">
+		<dv-card item-type="edible" item-id="{{ featuredEdible.$id }}"></dv-card>
+	</li>
+	<li ng-repeat="edible in edibles" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ edible.disabled }}">
+		<dv-card item-type="edible" item-id="{{ edible.$id }}"></dv-card>
+	</li>
+</ul>

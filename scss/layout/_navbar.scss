@@ -177,40 +177,6 @@
 
 /*  End Left Nav  */
 
-/*  Start Right Social Icons  */
-
-#socialIcons {
-  display: none;
-
-  list-style-type: none;
-  position: fixed;
-  top: 100px;
-  right: 2%;
-  h4 {
-    font-family: $dvHeaderFont;
-    font-size: 16px;
-    text-align: right;
-    margin: 0;
-    padding: 0;
-    color: $dvGray20;
-    border-bottom: 1px solid $dvGray5;
-  }
-  img {
-    width: 35px;
-    margin: 5px 0 0 0;
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transition: all .2s ease;
-    &:hover {
-      background: $dvYellow;
-    }
-  }
-}
-
-/*  End Right Social Icons  */
-
 /*  Start Up to Top  */
 
 #top {

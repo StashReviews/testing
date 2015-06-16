@@ -74,7 +74,8 @@
 
 .dealCard,
 .dispensaryCard,
-.strainCard {
+.strainCard,
+.edibleCard {
   .rating {
     width: 100%;
     height: 16%;
@@ -129,4 +130,8 @@
 
 .strainRating .ratingBar {
   background-color: $dvGreen;
+}
+
+.edibleRating .ratingBar {
+  background-color: $dvYellow;
 }

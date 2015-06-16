@@ -19,13 +19,15 @@
 }
 
 .dispensaryLogoWrap,
-.producerLogoWrap {
+.producerLogoWrap,
+.processorLogoWrap {
   float: left;
   clear: left;
 } 
 .dispensaryLogo,
 .businessLogo,
-.producerLogo {
+.producerLogo,
+.processorLogo {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -35,7 +37,8 @@
 
 .dispensaryName,
 .dealTitle,
-.strainName {
+.strainName,
+.edibleName {
   font-family: $dvHeaderFont;
   text-transform: uppercase;
   font-size: 35px;
@@ -53,7 +56,8 @@
 }
 
 .businessName,
-.strainProducer {
+.strainProducer,
+.edibleProcessor {
   font-family: $dvTextFont;
   font-size: 16px;
   font-weight: normal;
@@ -123,7 +127,8 @@
 .strainDescriptionSubHeader {
   margin: -6px 0 0 0;
 }
-.strainDescription {
+.strainDescription,
+.edibleDescription {
   font-family: $dvTextFont;
   font-size: 12px;
   line-height: 18px;
@@ -133,7 +138,8 @@
 
 .dispensaryGallery,
 .dealGallery,
-.strainGallery {
+.strainGallery,
+.edibleGallery {
   width: 100%;
   position: relative;
   z-index: -10;
@@ -187,7 +193,8 @@
 
 
 .strainGalleryMobile,
-.dispensaryGalleryMobile {
+.dispensaryGalleryMobile,
+.edibleGalleryMobile {
   display: none;
 }
 .currentDeals {

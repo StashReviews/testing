@@ -539,7 +539,108 @@ angular.module('DeViine.controllers', [])
       ( new Firebase(dvUrl + '/strains/' + strainId) ).set(strain);
     };
   }])
+  .controller('ediblesCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
+    
+     // $scope.edibleDetails = itemsService.getAll('edibles', $stateParams.edibleId);
+     // $scope.featuredEdibles = itemsService.getFeatured('edibles', $stateParams.edibleId);
+    // Wait for both our edibles and our featured edibles to load.
+    // @todo Might we need to remove duplicate entries?
+    // $q.all([itemsService.getAll('edibles'), itemsService.getFeatured('edibles')])
+    //   .then(function(edibleData) {
+    //     edibleData.forEach(function(edibles) {
+    //       edibles.sort(function(a, b) {
+    //         return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+    //       });
+    //     });
 
+    //     $scope.edibles = edibleData[0];
+    //     $scope.featuredEdibles = edibleData[1];
+    //   });
+
+    $q.all([itemsService.getOther('edibles'), itemsService.getFeatured('edibles')])
+    .then(function(edibleData) {
+      edibleData.forEach(function(edibles) {
+        edibles.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+        });
+      });
+
+      $scope.otherEdibles = edibleData[0];
+      $scope.featuredEdibles = edibleData[1];
+    });
+
+    $q.all([itemsService.getOther('edibles'), itemsService.getAll('edibles')])
+    .then(function(edibleData) {
+      edibleData.forEach(function(edibles) {
+        edibles.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+        });
+      });
+
+      $scope.otherEdibles = edibleData[0];
+      $scope.edibles = edibleData[1];
+    });
+
+  }])
+  .controller('edibleDetailsCtrl', ['$scope', '$q', '$stateParams', 'itemsService', 'ratingsService', 'reviewsService', function($scope, $q, $stateParams, itemsService, ratingsService, reviewsService) {
+    $scope.edibleDetails = itemsService.get('edibles', $stateParams.edibleId);
+    // // @todo Exclude the current edible from the results of itemsService.getFeatured().
+    // $scope.featuredEdibles = itemsService.getFeatured('edibles');
+    // // @todo Exclude the current edible from the results of itemsService.getOther().
+    // $scope.otherEdibles = itemsService.getOther('edibles');
+
+    $q.all([itemsService.getOther('edibles'), itemsService.getFeatured('edibles')])
+    .then(function(edibleData) {
+      edibleData.forEach(function(edibles) {
+        edibles.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+        });
+      });
+
+      $scope.otherEdibles = edibleData[0];
+      $scope.featuredEdibles = edibleData[1];
+    });
+
+
+    $scope.showRatingChangeModal = function() {
+      var ratingChangeModalInstance = $modal.open({
+        size: 'md',
+        templateUrl: 'partials/modals/ratingChange.html',
+        controller: 'ratingChangeModalCtrl'
+      });
+
+      ratingChangeModalInstance.result
+        .then(function(currentUser) {
+          $scope.currentUser = currentUser;
+          usersService.setCurrentUser(currentUser);
+        });
+    };
+
+    // $q.all([itemsService.reviews('reviews')]);
+
+    // $scope.reviews = itemsService.reviews('reviews');
+
+  }])
+  .controller('ediblesManageCtrl', ['$scope', '$firebaseObject', 'dvUrl', function($scope, $firebaseObject, dvUrl) {
+    $firebaseObject( new Firebase(dvUrl + '/edibles') ).$loaded()
+      .then(function(edibles) {
+        $scope.edibles = edibles;
+        // @todo Initialize 'edible' to the first available edible.
+      });
+
+    $scope.newEdible = function() {
+      $scope.edibleId = '';
+      $scope.edible = {};
+    };
+
+    $scope.loadEdible = function(edibleId) {
+      $scope.edible = $scope.edibles[edibleId];
+    };
+
+    $scope.saveEdible = function(edibleId, edible) {
+      ( new Firebase(dvUrl + '/edibles/' + edibleId) ).set(edible);
+    };
+  }])
   .controller('rateCtrl', ['$scope', 'dvUrl', 'usersService', 'itemsService', function($scope, dvUrl, usersService, itemsService) {
 
     $scope.sendRating = function(divId) {

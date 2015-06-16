@@ -1,0 +1,99 @@
+<h2 class="pageTitle" title="edibles">Edible</h2>
+<div class="pageId" title="{{ edibleDetails.$id }}"></div>
+<div class="row">
+  <div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12 edibleGalleryWrap">
+        <img src="{{ edibleDetails.image }}" class="img-responsive edibleGalleryMobile"/>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-4 producerLogoWrap">
+        <img ng-src="{{ edibleDetails.logo }}" class="producerLogo"/>
+      </div>
+      <div class="col-md-9 col-sm-9 col-xs-8 info">
+        <h2 class="edibleName" id="{{ edibleDetails.name }}">{{ edibleDetails.name }}</h2>
+        <h4 class="edibleChemistry">{{ edibleDetails.chemistry }}</h4>
+        <h4 class="producedBy">Processed by</h4>
+        <h4 class="edibleProcessor">{{ edibleDetails.processor }}</h4>
+      </div>
+    </div>
+    <dv-rating ratings="edibleDetails.ratings" class="edibleRating"></dv-rating>
+    <p ng-show="edibleDetails.ratings[currentName]" class="userRatingDisplay">You rated this edible a <strong id="userRating">{{ edibleDetails.ratings[currentName] }}</strong>.</p>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h3 class="edibleDescriptionSubHeader">Edible Description</h3>
+        <p class="edibleDescription">{{ edibleDetails.description }}</p>
+      </div>
+    </div>
+    <h3>Edible Potency</h3>
+    <div class="row">
+      
+    </div>
+<!--     <h3>Last Verified Potency</h3>
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <ul>
+          <li class="thcPotency">{{ strainDetails.thc }}%<label for="thcPotency">THC</label></li>
+          
+          Possible guage
+          <dv-gauge label="THC percentage" percentage="{{ strainDetails.thc }}" class="col-md-6"></dv-gauge>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <ul>
+          <li class="cbdPotency">{{ strainDetails.cbd }}%<label for="cbdPotency">CBD</label></li>
+           
+          Possible guage
+          <dv-gauge label="CBD percentage" percentage="{{ strainDetails.cbd }}" class="col-md-6"></dv-gauge>
+        </ul>
+      </div>
+    </div> -->
+  </div>
+  <div id="edibleGalleryWrap" class="edibleGalleryWrap col-md-6 col-sm-6 col-xs-12">
+    <img src="{{ edibleDetails.image }}" id="edibleGallery" class="img-responsive edibleGallery"/>
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-12">
+    <h3>{{ getReviewsCount(reviews) }} Reviews</h3>
+    <section class="reviews" ng-reviews data="{{ edibleDetails.name }}" ng-controller="reviewsCtrl">
+      <h4 class="pleaseSignIn">Please <a ng-click="showLoginModal()">sign in</a> to drop a review.</h4>
+      <div class="leaveReview col-md-12 col-sm-12 col-xs-12" ng-show="currentUser">
+        <div class="avatarWrap">
+          <img class="avatar" ng-src="{{ currentAvatar }}" title="{{ currentAvatar }}"/>
+          <h4 class="reviewBanner">Try this edible lately? <a class="closeReviewBanner"> X </a></h4>
+        </div>
+        <div class='name' title="{{ currentName }}"></div>
+        <textarea type='text' id='reviewInput' placeholder='Drop a review...'></textarea>
+        <input ng-click="sendReview" type='submit' id='submitReview' value='DROP IT LIKE IT&rsquo;S HOT' class="pull-right">
+      </div>
+      <div id='reviewsDiv' class="col-md-12 col-sm-12 col-xs-12">
+        
+        <!-- <ul>
+          <li ng-repeat="review in reviews">
+            <dv-review item-type="review" item-id="{{ edible.review.$id }}"></dv-review>
+          </li>
+        </ul> -->
+
+        <!-- <ul>
+          <li ng-repeat="review in reviews">
+            <img class=".reviewAvatar" ng-src="{{ review.avatar }}"/>
+            <h4 class=".reviewAuthor">{{ review.author }}</h4>
+            <h6 class=".reviewDate">{{ review.date }}</h6>
+            <p class=".reviewText">{{ review.text }}</p>
+          </li>
+        <ul> -->
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h3>More Edibles</h3>
+    <ul class="dvCardList">
+      <li ng-repeat="edible in featuredEdible" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ edible.disabled }}">
+        <dv-card item-type="edible" item-id="{{ edible.$id }}"></dv-card>
+      </li>
+      <li ng-repeat="edible in otherEdibles" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ edible.disabled }}">
+        <dv-card item-type="edible" item-id="{{ edible.$id }}"></dv-card>
+      </li>
+    </ul>
+  </div>
+</div>

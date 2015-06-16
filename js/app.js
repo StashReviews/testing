@@ -115,6 +115,26 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
           }]
         }
       })
+      .state('root.edibles', {
+        url: '/edibles',
+        templateUrl: 'pages/edibles.html',
+        controller: 'ediblesCtrl'
+      })
+      .state('root.edibleDetails', {
+        url: '/edibles/:edibleId',
+        templateUrl: 'pages/details/edibleDetails.html',
+        controller: 'edibleDetailsCtrl'
+      })
+      .state('root.manageEdibles', {
+        url: '/manage/edibles',
+        templateUrl: 'pages/manage/edibles.html',
+        controller: 'ediblesManageCtrl',
+        resolve: {
+          currentUser: ['$firebaseAuth', 'dvUrl', function($firebaseAuth, dvUrl) {
+            return $firebaseAuth( new Firebase(dvUrl) ).$requireAuth();
+          }]
+        }
+      })
       // static pages
       .state('root.terms', {
         url: '/terms',
@@ -128,9 +148,9 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
         url: '/brandassets',
         templateUrl: 'pages/static/brandassets.html'
       })
-      .state('root.iheartcannabis', {
-        url: '/i(heart)cannabis',
-        templateUrl: 'pages/static/i(heart)cannabis.html'
+      .state('root.stateyourlove', {
+        url: '/stateyourlove',
+        templateUrl: 'pages/static/stateyourlove.html'
       });
 
     $urlRouterProvider.otherwise('/');

@@ -22,7 +22,8 @@
   }
   .dispensaryLogo,
   .dealImage,
-  .strainImage {
+  .strainImage,
+  .edibleImage {
     border-radius: 20px;
     margin-bottom: 5%;
     width: 100%;
@@ -33,7 +34,8 @@
   }
   .dispensaryName,
   .dealTitle,
-  .strainName {
+  .strainName,
+  .edibleName {
     clear: both;
     font-family: $dvHeaderFont;
     text-transform: uppercase;
@@ -85,7 +87,8 @@
     height: 24px;
   }
   .distanceAway,
-  .strainType {
+  .strainType,
+  .edibleType {
     font-family: $dvTextFont;
     font-weight: bold;
     font-size: .9em;
@@ -113,10 +116,16 @@
     color: $dvGreen;
   }
 }
+.edibleCard {
+  .edibleType {
+    color: $dvYellow;
+  }
+}
 
 .featured-dispensary-true,
 .featured-deal-true,
 .featured-strain-true,
+.featured-edible-true,
 .new-strain-true {
   position: absolute;
   top: 10%;
