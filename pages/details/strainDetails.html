@@ -87,7 +87,7 @@
     <img id="strainGallery" ng-strain-zoom ng-src="{{ strainDetails.zoomimage }}" zoom-image="{{ strainDetails.zoomimage }}" class="img-responsive strainGallery"/>
     <div id="zoom" style="background-image:url('{{ strainDetails.zoomimage }}');"></div>
   </div>
-  <div class="col-md-6 col-sm-6 col-xs-12">
+  <div class="col-md-6 col-sm-6 col-xs-12 pull-right">
     <h3>{{ getReviewsCount(reviews) }} Reviews</h3>
     <section class="reviews" ng-reviews data="{{ strainDetails.name }}" ng-controller="reviewsCtrl">
       <h4 class="pleaseSignIn">Please <a ng-click="showLoginModal()">sign in</a> to drop a review.</h4>
@@ -124,10 +124,10 @@
   <div class="col-md-12">
     <h3>More Strains</h3>
     <ul class="dvCardList">
-      <li ng-repeat="strain in featuredStrains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ strain.disabled }}">
+      <li ng-repeat="strain in featuredStrains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ strain.disabled }}" id="{{ strain.$id }}" ng-hide-cards>
         <dv-card item-type="strain" item-id="{{ strain.$id }}"></dv-card>
       </li>
-      <li ng-repeat="strain in otherStrains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ strain.disabled }}">
+      <li ng-repeat="strain in otherStrains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ strain.disabled }}" id="{{ strain.$id }}" ng-hide-cards>
         <dv-card item-type="strain" item-id="{{ strain.$id }}"></dv-card>
       </li>
     </ul>

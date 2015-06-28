@@ -1,0 +1,9 @@
+<h2 class="pageTitle">Concentrates</h2>
+<ul class="dvCardList" id="concentratesList">
+	<li ng-repeat="featuredConcentrate in featuredConcentrates" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ concentrate.disabled }}">
+		<dv-card item-type="concentrate" item-id="{{ featuredConcentrate.$id }}"></dv-card>
+	</li>
+	<li ng-repeat="concentrate in concentrates" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ concentrate.disabled }}">
+		<dv-card item-type="concentrate" item-id="{{ concentrate.$id }}"></dv-card>
+	</li>
+</ul>

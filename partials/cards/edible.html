@@ -1,15 +1,15 @@
 <div ui-sref="root.edibleDetails({ edibleId: edible.$id })" class="cardWrapper edibleCard">
-	<img src="img/cards/edibleCard.png" class="cardBg"/>
+	<img src="img/cards/redCard.png" class="cardBg"/>
 	<div class="cardInfo">
 		<div class="edibleImage">
 			<img src="{{ edible.cardimage }}"/>
 		</div>
 		<div class="topSection">
 			<h1 class="edibleName">{{ edible.name }}</h1>
-			<address class="processedBy line2">{{ edible.processed }}</address>
+			<address class="processedBy line2">{{ edible.processor }}</address>
 		</div>
 		<dv-rating ratings="edible.ratings" class="edibleRating"></dv-rating>
-		<h4 class="edibleType">{{ edible.chemistry }}</h4>
+		<h4 class="edibleType">{{ edible.type }}</h4>
 	</div>
 	<div class="featured-edible-{{ edible.featured }}"></div>
 </div>

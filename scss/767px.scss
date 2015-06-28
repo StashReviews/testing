@@ -15,7 +15,8 @@
         border-bottom: 1px solid rgba(44,48,52,.05);
       }
       .dispensariesIcon,
-      .dealsIcon,
+      .concentratesIcon,
+      .ediblesIcon,
       .strainsIcon {
         width: 22%;
         float: left;
@@ -105,17 +106,19 @@
   /*----cards.html start----*/
   .dvCardList {
     li {
-      width: 40%;
+      width: 29%;
     }
   }
   /*----cards.html end----*/
   /*----items.html start----*/
   #strainGallery,
+  #edibleGallery,
   .dispensaryGallery {
     display: none;
   }
   .strainGalleryMobile,
-  .dispensaryGalleryMobile {
+  .dispensaryGalleryMobile,
+  .edibleGalleryMobile {
     display: inline;
     margin-bottom: 20px;
   }

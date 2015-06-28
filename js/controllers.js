@@ -106,6 +106,30 @@ angular.module('DeViine.controllers', [])
     //   });
 
 
+    $q.all([itemsService.getOther('edibles'), itemsService.getFeatured('edibles')])
+    .then(function(edibleData) {
+      edibleData.forEach(function(edibles) {
+        edibles.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+        });
+      });
+
+      $scope.otherEdibles = edibleData[0];
+      $scope.featuredEdibles = edibleData[1];
+    });
+
+    $q.all([itemsService.getOther('concentrates'), itemsService.getFeatured('concentrates')])
+    .then(function(concentrateData) {
+      concentrateData.forEach(function(concentrates) {
+        concentrates.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+        });
+      });
+
+      $scope.otherConcentrates = concentrateData[0];
+      $scope.featuredConcentrates = concentrateData[1];
+    });
+
     $q.all([itemsService.getOther('strains'), itemsService.getFeatured('strains')])
     .then(function(strainData) {
       strainData.forEach(function(strains) {
@@ -128,6 +152,15 @@ angular.module('DeViine.controllers', [])
       $scope.featuredDispensaries = dispensaryData[1];
     });
 
+
+  }])
+  .controller('usersCtrl', ['$scope', 'usersService', 'ratingsService', function($scope, usersService, ratingsService) {
+
+
+  }])
+  .controller('userProfileCtrl', ['$scope', '$filter', '$stateParams', 'usersService', 'ratingsService', 'reviewsService', 'locationService', function($scope, $filter, $stateParams, usersService, ratingsService, reviewsService, locationService) {
+    
+    $scope.user = usersService.getProfile('users', $stateParams.userId);
 
   }])
   .controller('dispensariesCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
@@ -425,19 +458,19 @@ angular.module('DeViine.controllers', [])
     });
 
 
-    $scope.showRatingChangeModal = function() {
-      var ratingChangeModalInstance = $modal.open({
-        size: 'md',
-        templateUrl: 'partials/modals/ratingChange.html',
-        controller: 'ratingChangeModalCtrl'
-      });
+    // $scope.showRatingChangeModal = function() {
+    //   var ratingChangeModalInstance = $modal.open({
+    //     size: 'md',
+    //     templateUrl: 'partials/modals/ratingChange.html',
+    //     controller: 'ratingChangeModalCtrl'
+    //   });
 
-      ratingChangeModalInstance.result
-        .then(function(currentUser) {
-          $scope.currentUser = currentUser;
-          usersService.setCurrentUser(currentUser);
-        });
-    };
+    //   ratingChangeModalInstance.result
+    //     .then(function(currentUser) {
+    //       $scope.currentUser = currentUser;
+    //       usersService.setCurrentUser(currentUser);
+    //     });
+    // };
 
     // $q.all([itemsService.reviews('reviews')]);
 
@@ -450,75 +483,6 @@ angular.module('DeViine.controllers', [])
         $scope.strains = strains;
         // @todo Initialize 'strain' to the first available strain.
       });
-
-    $scope.flavors = [
-      'Apple',
-      'Apricot',
-      'Blueberry',
-      'Blue Cheese',
-      'Butter',
-      'Cheese',
-      'Chestnut',
-      'Cedar',
-      'Coffee',
-      'Diesel',
-      'Floral',
-      'Fruity',
-      'Grape',
-      'Grapefruit',
-      'Honey',
-      'Lavender',
-      'Lemon',
-      'Lime',
-      'Mango',
-      'Maple',
-      'Menthol',
-      'Mint',
-      'Orange',
-      'Peach',
-      'Pear',
-      'Pepper',
-      'Plum',
-      'Pine',
-      'Pineapple',
-      'Rose',
-      'Sage',
-      'Sour',
-      'Skunk',
-      'Strawberry',
-      'Sweet',
-      'Tea',
-      'Tobacco',
-      'Vanilla',
-      'Violet'
-    ];
-
-    $scope.positiveEffects = [
-      'Aroused',
-      'Creative',
-      'Energetic',
-      'Euphoric',
-      'Focused',
-      'Giggly',
-      'Happy',
-      'Hungry',
-      'Relaxed',
-      'Sleepy',
-      'Tingly',
-      'Uplifted'
-    ];
-
-    $scope.negativeEffects = [
-      'Anxious',
-      'Dizzy',
-      'Dry Eyes',
-      'Dry Mouth',
-      'Headache',
-      'Paranoid',
-      'Red Eyes',
-      'Sleepy',
-      'Talkative'
-    ];
 
     $scope.chemistries = [
       'Indica',
@@ -537,6 +501,116 @@ angular.module('DeViine.controllers', [])
 
     $scope.saveStrain = function(strainId, strain) {
       ( new Firebase(dvUrl + '/strains/' + strainId) ).set(strain);
+    };
+  }])
+  .controller('concentratesCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
+    
+     // $scope.concentrateDetails = itemsService.getAll('concentrates', $stateParams.concentrateId);
+     // $scope.featuredconcentrates = itemsService.getFeatured('concentrates', $stateParams.concentrateId);
+    // Wait for both our concentrates and our featured concentrates to load.
+    // @todo Might we need to remove duplicate entries?
+    // $q.all([itemsService.getAll('concentrates'), itemsService.getFeatured('concentrates')])
+    //   .then(function(concentrateData) {
+    //     concentrateData.forEach(function(concentrates) {
+    //       concentrates.sort(function(a, b) {
+    //         return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+    //       });
+    //     });
+
+    //     $scope.concentrates = concentrateData[0];
+    //     $scope.featuredconcentrates = concentrateData[1];
+    //   });
+
+    $q.all([itemsService.getOther('concentrates'), itemsService.getFeatured('concentrates')])
+    .then(function(concentrateData) {
+      concentrateData.forEach(function(concentrates) {
+        concentrates.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+        });
+      });
+
+      $scope.otherConcentrates = concentrateData[0];
+      $scope.featuredConcentrates = concentrateData[1];
+    });
+
+    $q.all([itemsService.getOther('concentrates'), itemsService.getAll('concentrates')])
+    .then(function(concentrateData) {
+      concentrateData.forEach(function(concentrates) {
+        concentrates.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+        });
+      });
+
+      $scope.otherConcentrates = concentrateData[0];
+      $scope.concentrates = concentrateData[1];
+    });
+
+  }])
+  .controller('concentrateDetailsCtrl', ['$scope', '$q', '$stateParams', 'itemsService', 'ratingsService', 'reviewsService', function($scope, $q, $stateParams, itemsService, ratingsService, reviewsService) {
+    $scope.concentrateDetails = itemsService.get('concentrates', $stateParams.concentrateId);
+    // // @todo Exclude the current concentrate from the results of itemsService.getFeatured().
+    // $scope.featuredconcentrates = itemsService.getFeatured('concentrates');
+    // // @todo Exclude the current concentrate from the results of itemsService.getOther().
+    // $scope.otherconcentrates = itemsService.getOther('concentrates');
+
+    $q.all([itemsService.getOther('concentrates'), itemsService.getFeatured('concentrates')])
+    .then(function(concentrateData) {
+      concentrateData.forEach(function(concentrates) {
+        concentrates.sort(function(a, b) {
+          return ratingsService.getAvgRating(b.ratings) - ratingsService.getAvgRating(a.ratings);
+        });
+      });
+
+      $scope.otherConcentrates = concentrateData[0];
+      $scope.featuredConcentrates = concentrateData[1];
+    });
+
+    // $scope.showRatingChangeModal = function() {
+    //   var ratingChangeModalInstance = $modal.open({
+    //     size: 'md',
+    //     templateUrl: 'partials/modals/ratingChange.html',
+    //     controller: 'ratingChangeModalCtrl'
+    //   });
+
+    //   ratingChangeModalInstance.result
+    //     .then(function(currentUser) {
+    //       $scope.currentUser = currentUser;
+    //       usersService.setCurrentUser(currentUser);
+    //     });
+    // };
+
+    // $q.all([itemsService.reviews('reviews')]);
+
+    // $scope.reviews = itemsService.reviews('reviews');
+
+  }])
+  .controller('concentratesManageCtrl', ['$scope', '$firebaseObject', 'dvUrl', function($scope, $firebaseObject, dvUrl) {
+    $firebaseObject( new Firebase(dvUrl + '/concentrates') ).$loaded()
+      .then(function(concentrates) {
+        $scope.concentrates = concentrates;
+        // @todo Initialize 'concentrate' to the first available concentrate.
+      });
+
+    $scope.types = [
+      'Kief',
+      'Oil',
+      'Shatter',
+      'Wax',
+      'Other'
+    ];  
+
+    $scope.newConcentrate = function() {
+      $scope.concentrateId = '';
+      $scope.concentrate = {};
+    };
+
+    $scope.loadConcentrate = function(concentrateId) {
+      $scope.concentrate = $scope.concentrates[concentrateId];
+    };
+
+    $scope.saveConcentrate = function(concentrateId, concentrate) {
+      concentrate = JSON.parse( angular.toJson(concentrate));
+      ( new Firebase(dvUrl + '/concentrates/' + concentrateId) ).set(concentrate);
     };
   }])
   .controller('ediblesCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
@@ -602,19 +676,20 @@ angular.module('DeViine.controllers', [])
     });
 
 
-    $scope.showRatingChangeModal = function() {
-      var ratingChangeModalInstance = $modal.open({
-        size: 'md',
-        templateUrl: 'partials/modals/ratingChange.html',
-        controller: 'ratingChangeModalCtrl'
-      });
 
-      ratingChangeModalInstance.result
-        .then(function(currentUser) {
-          $scope.currentUser = currentUser;
-          usersService.setCurrentUser(currentUser);
-        });
-    };
+    // $scope.showRatingChangeModal = function() {
+    //   var ratingChangeModalInstance = $modal.open({
+    //     size: 'md',
+    //     templateUrl: 'partials/modals/ratingChange.html',
+    //     controller: 'ratingChangeModalCtrl'
+    //   });
+
+    //   ratingChangeModalInstance.result
+    //     .then(function(currentUser) {
+    //       $scope.currentUser = currentUser;
+    //       usersService.setCurrentUser(currentUser);
+    //     });
+    // };
 
     // $q.all([itemsService.reviews('reviews')]);
 
@@ -628,6 +703,19 @@ angular.module('DeViine.controllers', [])
         // @todo Initialize 'edible' to the first available edible.
       });
 
+    $scope.types = [
+      'Beverage',
+      'Brownie',
+      'Candy',
+      'Chocolate',
+      'Cookie',
+      'Drops',
+      'Mints',
+      'Mixer',
+      'Snack Bar',
+      'Other'
+    ];  
+
     $scope.newEdible = function() {
       $scope.edibleId = '';
       $scope.edible = {};
@@ -638,9 +726,12 @@ angular.module('DeViine.controllers', [])
     };
 
     $scope.saveEdible = function(edibleId, edible) {
+      edible = JSON.parse( angular.toJson(edible));
       ( new Firebase(dvUrl + '/edibles/' + edibleId) ).set(edible);
     };
   }])
+
+  /* Ratings */
   .controller('rateCtrl', ['$scope', 'dvUrl', 'usersService', 'itemsService', function($scope, dvUrl, usersService, itemsService) {
 
     $scope.sendRating = function(divId) {
@@ -667,7 +758,7 @@ angular.module('DeViine.controllers', [])
     };
 
   }])
-
+  /* Reviews */
   .controller('reviewsCtrl', ['$scope', '$firebaseArray', 'dvUrl', 'reviewsService',  function($scope, $firebaseArray, dvUrl, reviewsService) {
   // .controller('reviewsCtrl', ['$scope', 'reviewsService', function($scope, reviewsService) {   
 

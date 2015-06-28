@@ -52,7 +52,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="currentHours col-md-6 col-sm-6 col-xs-12">
+	<div class="currentHours col-md-6 col-sm-6 col-xs-12 pull-right">
 		<h3>Hours of Operation</h3>
 		<table ng-show="dispensary.hours" class="dispensaryHours">
 			<tr ng-repeat="day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']" ng-class="{'dvGreen': today === day}">
@@ -61,7 +61,7 @@
 			</tr>
 		</table>
 	</div>
-	<div class="col-md-6 col-sm-6 col-xs-12">
+	<div class="col-md-6 col-sm-6 col-xs-12 pull-right">
 	    <h3>{{ getReviewsCount(reviews) }} Reviews</h3>
 	    <section class="reviews" ng-reviews data="{{ dispensary.name }}" ng-controller="reviewsCtrl">
 	      <h4 class="pleaseSignIn">Please <a ng-click="showLoginModal()">sign in</a> to drop a review.</h4>
@@ -82,10 +82,10 @@
   <div class="col-md-12">
     <h3>More Dispensaries</h3>
     <ul class="dvCardList">
-      <li ng-repeat="dispensary in featuredDispensaries" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ dispensary.disabled }}">
+      <li ng-repeat="dispensary in featuredDispensaries" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ dispensary.disabled }}" id="{{ dispensary.$id }}" ng-hide-cards>
         <dv-card item-type="dispensary" item-id="{{ dispensary.$id }}"></dv-card>
       </li>
-      <li ng-repeat="dispensary in otherDispensaries" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ dispensary.disabled }}">
+      <li ng-repeat="dispensary in otherDispensaries" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ dispensary.disabled }}" id="{{ dispensary.$id }}" ng-hide-cards>
         <dv-card item-type="dispensary" item-id="{{ dispensary.$id }}"></dv-card>
       </li>
     </ul>

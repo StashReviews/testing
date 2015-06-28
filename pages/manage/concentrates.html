@@ -1,0 +1,224 @@
+<h1 class="pageTitle">Manage Concentrates</h1>
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="concentrateId" class="col-md-2 control-label">Select concentrate:</label>
+		<div class="col-md-8">
+			<select ng-model="concentrateId" name="concentrateId" ng-options="id as concentrate.name for (id, concentrate) in concentrates" ng-change="loadConcentrate(concentrateId)" class="form-control"></select>
+		</div>
+		<div class="col-md-2">
+			<button ng-click="newConcentrate()" class="btn btn-block concentrateCMS">New Concentrate</button>
+		</div>
+	</div>
+	<div ng-hide="concentrate.$id" class="form-group">
+		<label for="concentrateId" class="col-md-2 control-label">Concentrate ID:</label>
+		<div class="col-md-10">
+			<input ng-model="concentrateId" type="text" name="concentrateId" class="form-control"/>
+		</div>
+	</div>
+	<fieldset>
+		<legend>Description</legend>
+		<div class="form-group">
+			<label for="concentrateName" class="col-md-2 control-label">Name:</label>
+			<div class="col-md-10">
+				<input ng-model="concentrate.name" type="text" name="concentrateName" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="concentrateProcessor" class="col-md-2 control-label">Processor:</label>
+			<div class="col-md-10">
+				<input ng-model="concentrate.processor" type="text" name="concentrateProcessor" class="form-control" required/></div>
+			</div>
+			<div class="form-group">
+				<label for="concentrateDescription" class="col-md-2 control-label">Description:</label>
+				<div class="col-md-10">
+					<textarea ng-model="concentrate.description" name="concentrateDescription" class="form-control"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="concentrateType" class="col-md-2 control-label">Type:</label>
+				<div class="col-md-10">
+					<select ng-model="concentrate.type" name="concentrateType" class="form-control" ng-options="type for type in types"></select>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Potency</legend>
+		<div class="form-group">
+			<label for="concentrateTHCamountPerPiece" class="col-md-2 control-label">Amount Per Piece:</label>
+			<div class="col-md-9">
+				<input ng-model="concentrate.concentrateTHC.amountPerPiece" name="concentrateTHCamountPerPiece" type="text" class="form-control"/>
+			</div>
+			<div class="col-md-1">
+				<select ng-model="concentrate.concentrateTHC.unitPerPiece" class="form-control">
+					<option value="mg">mg</option>
+				</select>
+			</div>
+			<label for="concentrateTHCamountPerServing" class="col-md-2 control-label">Amount Per Serving:</label>
+			<div class="col-md-9">
+				<input ng-model="concentrate.concentrateTHC.amountPerServing" name="concentrateTHCamountPerServing" type="text" class="form-control"/>
+			</div>
+			<div class="col-md-1">
+				<select ng-model="concentrate.concentrateTHC.unitPerServing" class="form-control">
+					<option value="mg">mg</option>
+				</select>
+			</div>
+			<label for="concentrateTHCamountPerPackage" class="col-md-2 control-label">Amount Per Package:</label>
+			<div class="col-md-9">
+				<input ng-model="concentrate.concentrateTHC.amountPerPackage" name="concentrateTHCamountPerPackage" type="text" class="form-control"/>
+			</div>
+			<div class="col-md-1">
+				<select ng-model="concentrate.concentrateTHC.unitPerPackage" class="form-control">
+					<option value="mg">mg</option>
+				</select>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Profile</legend>
+		<div class="form-group">
+			<label for="concentrateFlavor1" class="col-md-2 control-label">Flavor profile 1:</label>
+			<div class="col-md-8">
+				<input ng-model="concentrate.flavor1" name="concentrateFlavor1" class="form-control"></input>
+			</div>
+			<label for="concentrateFlavor1%" class="col-md-1 control-label">%</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.flavor1Percent" type="text" name="concentrateFlavor1%" class="form-control"/>
+			</div>
+			<label for="concentrateFlavor2" class="col-md-2 control-label">Flavor profile 2:</label>
+			<div class="col-md-8">
+				<input ng-model="concentrate.flavor2" name="concentrateFlavor2" class="form-control"></input>
+			</div>
+			<label for="concentrateFlavor2%" class="col-md-1 control-label">%</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.flavor2Percent" type="text" name="concentrateFlavor2%" class="form-control"/>
+			</div>
+			<label for="concentrateFlavor3" class="col-md-2 control-label">Flavor profile 3:</label>
+			<div class="col-md-8">
+				<input ng-model="concentrate.flavor3" name="concentrateFlavor3" class="form-control"></input>
+			</div>
+			<label for="concentrateFlavor3%" class="col-md-1 control-label">%</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.flavor3Percent" type="text" name="concentrateFlavor3%" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="concentratePositive1" class="col-md-2 control-label">Positive effect 1:</label>
+			<div class="col-md-8">
+				<input ng-model="concentrate.positive1" name="concentratePositive1" class="form-control"></input>
+			</div>
+			<label for="concentratePositive1" class="col-md-1 control-label">%</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.positive1Percent" type="text" name="concentratePositive1%" class="form-control"/>
+			</div>
+			<label for="concentratePositive2" class="col-md-2 control-label">Positive effect 2:</label>
+			<div class="col-md-8">
+				<input ng-model="concentrate.positive2" name="concentratePositive2" class="form-control"></input>
+			</div>
+			<label for="concentratePositive2%" class="col-md-1 control-label">%</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.positive2Percent" type="text" name="concentratePositive2%" class="form-control"/>
+			</div>
+			<label for="concentratePositive3" class="col-md-2 control-label">Positive effect 3:</label>
+			<div class="col-md-8">
+				<input ng-model="concentrate.positive3" name="concentratePositive3" class="form-control"></input>
+			</div>
+			<label for="concentratePositive3%" class="col-md-1 control-label">%</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.positive3Percent" type="text" name="concentratePositive3%" class="form-control"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="concentrateNegative1" class="col-md-2 control-label">Negative effect 1:</label>
+			<div class="col-md-8">
+				<input ng-model="concentrate.negative1" name="concentrateNegative1" class="form-control"></input>
+			</div>
+			<label for="concentrateNegative1%" class="col-md-1 control-label">%</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.negative1Percent" type="text" name="concentrateNegative1%" class="form-control"/>
+			</div>
+			<label for="concentrateNegative2" class="col-md-2 control-label">Negative effect 2:</label>
+			<div class="col-md-8">
+				<input ng-model="concentrate.negative2" name="concentrateNegative2" class="form-control"></input>
+			</div>
+			<label for="concentrateNegative2%" class="col-md-1 control-label">%</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.negative2Percent" type="text" name="concentrateNegative2%" class="form-control"/>
+			</div>
+			<label for="concentrateNegative3" class="col-md-2 control-label">Negative effect 3:</label>
+			<div class="col-md-8">
+				<input ng-model="concentrate.negative3" name="concentrateNegative3" class="form-control"></input>
+			</div>
+			<label for="concentrateNegative3%" class="col-md-1 control-label">%</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.negative3Percent" type="text" name="concentrateNegative3%" class="form-control"/>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Images</legend>
+		<div class="form-group">
+			<label for="producerLogo" class="col-md-2 control-label">Logo:</label>
+			<div class="col-md-10">
+				<input ng-model="concentrate.logo" name="producerLogo" type="text" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="concentrateCardImage" class="col-md-2 control-label">Card Image:</label>
+			<div class="col-md-10">
+				<input ng-model="concentrate.cardimage" name="concentrateCardImage" type="text" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="concentrateImage" class="col-md-2 control-label">Full Image:</label>
+			<div class="col-md-10">
+				<input ng-model="concentrate.image" name="concentrateImage" type="text" class="form-control" required/>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Additional Options</legend>
+		<div class="form-group">
+			<label for="concentrateFeatured" class="col-md-6 control-label">Enter 'true' if featured or enter '0' if not featured:</label>
+			<div class="col-md-6">
+				<input ng-model="concentrate.featured" name="concentrateFeatured" type="text" class="form-control" required/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="concentrateDisabled" class="col-md-6 control-label" style="color:red;">Enter 'disabled' if disabled or enter '0' if not disabled:</label>
+			<div class="col-md-6">
+				<input ng-model="concentrate.disabled" name="concentrateDisabled" type="text" class="form-control" required/>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Set Your Rating</legend>
+		<div class="form-group">
+			<label for="rate" class="col-md-1 control-label">Rate:</label>
+			<label for="rate" class="col-md-1 control-label">1:</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.ratings[currentName]" name="rate" type="radio" value="1" class="form-control"/>
+			</div>
+			<label for="rate" class="col-md-1 control-label">2:</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.ratings[currentName]" name="rate" type="radio" value="2" class="form-control"/>
+			</div>
+			<label for="rate" class="col-md-1 control-label">3:</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.ratings[currentName]" name="rate" type="radio" value="3" class="form-control"/>
+			</div>
+			<label for="rate" class="col-md-1 control-label">4:</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.ratings[currentName]" name="rate" type="radio" value="4" class="form-control"/>
+			</div>
+			<label for="rate" class="col-md-1 control-label">5:</label>
+			<div class="col-md-1">
+				<input ng-model="concentrate.ratings[currentName]" name="rate" type="radio" value="5" class="form-control"/>
+			</div>
+		</div>
+	</fieldset>
+	<button ng-click="saveConcentrate(concentrateId, concentrate)" class="btn btn-block concentrateCMS">Ahh, push it!</button>
+</form>
+
+
+

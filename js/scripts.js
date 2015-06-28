@@ -32,12 +32,14 @@ window.onload = (function() {
             jQuery('.upToTop').fadeOut(duration);
         }
     });
-
     jQuery('.upToTop').click(function(event) {
         event.preventDefault();
         jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
-    })
+    });
 	// Up To Top Ends Here
 
+
+
 });
+

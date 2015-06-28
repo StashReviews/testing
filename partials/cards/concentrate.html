@@ -1,0 +1,15 @@
+<div ui-sref="root.concentrateDetails({ concentrateId: concentrate.$id })" class="cardWrapper concentrateCard">
+	<img src="img/cards/yellowCard.png" class="cardBg"/>
+	<div class="cardInfo">
+		<div class="concentrateImage">
+			<img src="{{ concentrate.cardimage }}"/>
+		</div>
+		<div class="topSection">
+			<h1 class="concentrateName">{{ concentrate.name }}</h1>
+			<address class="producedBy line2">{{ concentrate.processor }}</address>
+		</div>
+		<dv-rating ratings="concentrate.ratings" class="concentrateRating"></dv-rating>
+		<h4 class="concentrateType">{{ concentrate.type }}</h4>
+	</div>
+	<div class="featured-concentrate-{{ concentrate.featured }}"></div>
+</div>

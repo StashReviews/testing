@@ -76,10 +76,12 @@
   /*----home start----*/
   #indexSummary > .howItWorks .strainsIcon {
     background-color: #3dd861; }
-  #indexSummary > .howItWorks .dealsIcon {
+  #indexSummary > .howItWorks .concentratesIcon {
     background-color: #FCD31C; }
-  #indexSummary > .howItWorks .dispensariesIcon {
+  #indexSummary > .howItWorks .ediblesIcon {
     background-color: #F7253E; }
+  #indexSummary > .howItWorks .dispensariesIcon {
+    background-color: #2c3034; }
 
   .sponsors div ul {
     opacity: 1; }

@@ -35,6 +35,13 @@ body {
   top: 100px;
 }
 
+#strainsList,
+#concentratesList,
+#ediblesList,
+#dispensariesList {
+  min-height: 400px;
+}
+
 .container-fluid {
   padding: 0 2%;
   margin: 0;

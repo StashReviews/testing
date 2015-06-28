@@ -40,8 +40,10 @@
       font-weight: lighter;
       text-transform: uppercase;
       padding: 0;               
-      /*padding: 10px 0 0 0; THIS IS THE STYLING FOR NO LOCATION */
       margin: 0;
+      &:hover {
+        color: $dvYellow;
+      }
     }
     .location {
       color: $dvYellow;
@@ -118,33 +120,16 @@
     padding-top: 8px;
     margin: 5px 0;
     &:nth-child(1) {
-      @include mainMenuItem($dvRed);
+      @include mainMenuItem($dvGreen);
     }
     &:nth-child(2) {
       @include mainMenuItem($dvYellow);
     }
     &:nth-child(3) {
-      @include mainMenuItem($dvGreen);
+      @include mainMenuItem($dvRed);
     }
-    .disabledNav {
-      color: $dvGray20;
-      &:hover {
-        .comingSoonNavHover {
-          left: -10px;
-        } 
-      }
-      .comingSoonNavHover {
-        font-family: $dvTextFont;
-        font-size: 12px;
-        position: absolute;
-        margin-top: -18px;
-        left: -1000px;
-        -webkit-transition: .3s all;
-        -moz-transition: .3s all;
-        -ms-transition: .3s all;
-        -o-transition: .3s all;
-        transition: .3s all;
-      } 
+    &:nth-child(4) {
+      @include mainMenuItem($dvGray20);
     }
     a {
       color: $dvGray;

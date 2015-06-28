@@ -12,7 +12,8 @@
     #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
       border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
     #indexSummary .howItWorks .dispensariesIcon,
-    #indexSummary .howItWorks .dealsIcon,
+    #indexSummary .howItWorks .concentratesIcon,
+    #indexSummary .howItWorks .ediblesIcon,
     #indexSummary .howItWorks .strainsIcon {
       width: 22%;
       float: left;
@@ -86,16 +87,18 @@
   /*----ratings.html end----*/
   /*----cards.html start----*/
   .dvCardList li {
-    width: 40%; }
+    width: 29%; }
 
   /*----cards.html end----*/
   /*----items.html start----*/
   #strainGallery,
+  #edibleGallery,
   .dispensaryGallery {
     display: none; }
 
   .strainGalleryMobile,
-  .dispensaryGalleryMobile {
+  .dispensaryGalleryMobile,
+  .edibleGalleryMobile {
     display: inline;
     margin-bottom: 20px; }
 

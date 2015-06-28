@@ -8,16 +8,13 @@
 		  	<li class="menuMobile-subHeader">Pages</li>
 			<li ui-sref="root.home" class="mobileNavLink">Home</li>
 			<li ui-sref="root.strains" class="strainNav mobileNavLink">Strains</li>
+			<li ui-sref="root.concentrates" class="concentrateNav mobileNavLink">Concentrates</li>
 			<li ui-sref="root.edibles" class="edibleNav mobileNavLink">Edibles</li>
-			<li ui-sref="root.deals" class="dealNav mobileNavLink">Deals</li>
 			<li ui-sref="root.dispensaries" class="dispensaryNav mobileNavLink">Dispensaries</li>
 			<li class="menuMobile-subHeader">Other</li>
 			<li class="mobileNavLink"><a href="https://deviine.typeform.com/to/pnlr6D" data-mode="1" target="_blank" class="typeform-share" style="color:inherit;">Feedback</a></li>
 			<li ui-sref="root.privacy" class="mobileNavLink">Privacy Policy</li>
 			<li ui-sref="root.terms" class="mobileNavLink">Terms of Use</li>
-			<li ui-sref="root.manageDispensaries" ng-show="isAdmin(currentUser)" class="adminnav mobileNavLink">Edit Dispensaries</li>
-			<li ui-sref="root.manageDeals" ng-show="isAdmin(currentUser)" class="adminnav mobileNavLink">Edit Deals</li>
-			<li ui-sref="root.manageStrains" ng-show="isAdmin(currentUser)" class="adminnav mobileNavLink">Edit Strains</li>
 		  </ul>
 		</div>
 		<a ui-sref="root.home" class="logo">
@@ -27,7 +24,7 @@
 			<div ng-show="currentUser" class="navbar-text">
 				<img ng-click="showLoginModal()" ng-src="{{ currentAvatar }}" class="img-responsive pull-right avatar"/>
 				<div class="accountInfo">
-					<h1 class="pull-right username" title="{{ currentName }}" ng-click="showLoginModal()" >{{ currentName }}</h1><br/>
+					<a ui-sref="root.userProfile({ userId: user.$id })"><h1 class="pull-right username" title="{{ currentName }}">{{ currentName }}</h1></a><br/>
 					<h2 class="pull-right location">No Location Found</h2>
 				</div>
 			</div>
@@ -46,16 +43,16 @@
 		<div class="col-md-2">
 			<ul id="mainMenu">
 				<li>
-					<a ui-sref="root.dispensaries">Dispensaries</a>
-				</li>
-				<li>
-					<a ui-sref="root.deals">Deals</a>
-				</li>
-				<li>
 					<a ui-sref="root.strains">Strains</a>
 				</li>
 				<li>
+					<a ui-sref="root.concentrates">Concentrates</a>
+				</li>
+				<li>
 					<a ui-sref="root.edibles">Edibles</a>
+				</li>
+				<li>
+					<a ui-sref="root.dispensaries">Dispensaries</a>
 				</li>
 				<li>
 					<a class="typeform-share" href="https://deviine.typeform.com/to/pnlr6D" data-mode="1" target="_blank"><img src="img/banners/feedback.png"/></a>
@@ -73,28 +70,35 @@
 			<h4>Quicklinks</h4>
 			<ul class="list-inline">
 				<li>
-					<a ui-sref="root.dispensaries">Dispensaries</a>
-				</li>
-				<li>
-					<a ui-sref="root.deals">Deals</a>
-				</li>
-				<li>
 					<a ui-sref="root.strains">Strains</a>
 				</li>
-				<br>
 				<li>
-					<a ui-sref="root.manageDispensaries" ng-show="isAdmin(currentUser)">Edit Dispensaries</a>
+					<a ui-sref="root.concentrates">Concentrates</a>
 				</li>
 				<li>
-					<a ui-sref="root.manageDeals" ng-show="isAdmin(currentUser)">Edit Deals</a>
+					<a ui-sref="root.edibles">Edibles</a>
 				</li>
+				<li>
+					<a ui-sref="root.dispensaries">Dispensaries</a>
+				</li>
+
+				<br ng-show="isAdmin(currentUser)">
+				
 				<li>
 					<a ui-sref="root.manageStrains" ng-show="isAdmin(currentUser)">Edit Strains</a>
 				</li>
 				<li>
+					<a ui-sref="root.manageConcentrates" ng-show="isAdmin(currentUser)">Edit Concentrates</a>
+				</li>
+				<li>
 					<a ui-sref="root.manageEdibles" ng-show="isAdmin(currentUser)">Edit Edibles</a>
 				</li>
+				<li>
+					<a ui-sref="root.manageDispensaries" ng-show="isAdmin(currentUser)">Edit Dispensaries</a>
+				</li>
+
 				<br>
+				
 				<li>
 					<a ui-sref="root.terms">Terms of Use</a>
 				</li>

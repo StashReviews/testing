@@ -7,7 +7,8 @@
   /*----style.scss.html end----*/
   /*----home.html start----*/
   #indexSummary .howItWorks .dispensariesIcon,
-  #indexSummary .howItWorks .dealsIcon,
+  #indexSummary .howItWorks .concentratesIcon,
+  #indexSummary .howItWorks .ediblesIcon,
   #indexSummary .howItWorks .strainsIcon {
     width: 30%; }
   #indexSummary .howItWorks h3 {

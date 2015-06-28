@@ -95,34 +95,28 @@ angular.module('DeViine.directives', [])
     }
   }])
 
-  // /** Elevate Zoom (Strains) */
-  // .directive('ngElevateZoom', function() {
-  //   return {
-  //     restrict: 'A',
-  //     link: function(scope, element, attrs) {
 
-  //       //Will watch for changes on the attribute
-  //       attrs.$observe('zoomImage',function(){
-  //         linkElevateZoom();
-  //       })
+  /** Hide Duplicate Cards */
+  .directive('ngHideCards', function() {
+    return {
+      restrict: 'A',
+      link: function(scope, element, attrs) {
 
-  //       function linkElevateZoom(){
-  //         //Check if its not empty
-  //         if (!attrs.zoomImage) return;
-  //         element.attr('data-zoom-image',attrs.zoomImage);
-  //         $(element).elevateZoom({
-  //           zoomType:"lens",
-  //           lensShape : "round",
-  //           lensSize : 250
-  //         });
-          
-  //       }
+        //Will watch for changes on the attribute
+        attrs.$observe('id',function(){
+          hideDuplicateCards();
+          console.log('New Page Id Found');
+        })
 
-  //       linkElevateZoom();
+        function hideDuplicateCards() {
+          currentItem = $('.pageId').attr('title');
+          currentItemCard = document.getElementById(currentItem);
+          $(currentItemCard).css("display","none");
+        }
 
-  //     }
-  //   };
-  // })
+      }
+    };
+  })
 
   /** Custom Strain Zoom */
   .directive('ngStrainZoom', function() {

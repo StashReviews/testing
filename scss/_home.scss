@@ -10,26 +10,33 @@
     .strainsIcon {
       background-color: $dvGreen;
     }
-    .dealsIcon {
+    .concentratesIcon {
       background-color: $dvYellow;
     }
-    .dispensariesIcon {
+    .ediblesIcon {
       background-color: $dvRed;
+    }
+    .dispensariesIcon {
+      background-color: $dvGray;
     }
   }
   .dispensariesIcon,
-  .dealsIcon,
+  .ediblesIcon,
+  .concentratesIcon,
   .strainsIcon {
-    width: 50%;
+    width: 75%;
     margin: auto auto;
     border-radius: 50%;
     background: $dvGray20;
   }
   .dispensariesIcon {
-    border: 2px solid $dvRed;
+    border: 2px solid $dvGray50;
   }
-  .dealsIcon {
+  .concentratesIcon {
     border: 2px solid $dvYellow;
+  }
+  .ediblesIcon {
+    border: 2px solid $dvRed;
   }
   .strainsIcon {
     border: 2px solid $dvGreen;
@@ -59,13 +66,14 @@
     &.red {
       border-left-color: $dvRed;
     }
-
     &.yellow {
       border-left-color: $dvYellow;
     }
-
     &.green {
       border-left-color: $dvGreen;
+    }
+    &.gray {
+      border-left-color: $dvGray;
     }
   }
 

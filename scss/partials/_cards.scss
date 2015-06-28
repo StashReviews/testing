@@ -21,8 +21,8 @@
     padding: 0;
   }
   .dispensaryLogo,
-  .dealImage,
   .strainImage,
+  .concentrateImage,
   .edibleImage {
     border-radius: 20px;
     margin-bottom: 5%;
@@ -33,8 +33,8 @@
     }
   }
   .dispensaryName,
-  .dealTitle,
   .strainName,
+  .concentrateName,
   .edibleName {
     clear: both;
     font-family: $dvHeaderFont;
@@ -50,13 +50,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .dealTitle {
-    height: 48px;
-    line-height: 1.1;
-  }
   .dispensaryAddress,
   .businessName,
-  .producedBy {
+  .producedBy,
+  .processedBy {
     clear: both;
     font-family: $dvTextFont;
     font-weight: 400;
@@ -70,17 +67,20 @@
   }
   .dispensaryAddress.line2,
   .businessName.line2,
-  .producedBy.line2 {
+  .producedBy.line2,
+  .processedBy.line2 {
     position: relative;
     z-index: 3;
   }
   .dispensaryAddress.line1,
-  .producedBy.line1 {
+  .producedBy.line1,
+  .processedBy.line1 {
     height: 18px;
     display: none;
   }
   .dispensaryAddress.line2,
-  .producedBy.line2 {
+  .producedBy.line2,
+  .processedBy.line2 {
     height: 26px;
   }
   .businessName.line2 {
@@ -88,6 +88,7 @@
   }
   .distanceAway,
   .strainType,
+  .concentrateType,
   .edibleType {
     font-family: $dvTextFont;
     font-weight: bold;
@@ -103,12 +104,7 @@
 }
 .dispensaryCard {
   .distanceAway {
-    color: $dvRed;
-  }
-}
-.dealCard {
-  .distanceAway {
-    color: $dvYellow;
+    color: $dvGray;
   }
 }
 .strainCard {
@@ -116,15 +112,20 @@
     color: $dvGreen;
   }
 }
+.concentrateCard {
+  .concentrateType {
+    color: $dvYellow;
+  }
+}
 .edibleCard {
   .edibleType {
-    color: $dvYellow;
+    color: $dvRed;
   }
 }
 
 .featured-dispensary-true,
-.featured-deal-true,
 .featured-strain-true,
+.featured-concentrate-true,
 .featured-edible-true,
 .new-strain-true {
   position: absolute;
@@ -137,19 +138,16 @@
   background-size: contain;
 }
 .featured-dispensary-true {
-  background-image: url(../img/banners/featured.png);
-}
-.featured-deal-true {
-  left: -5.9%;
-  background-image: url(../img/banners/dailyDeal.png);
+  background-image: url(../img/banners/featuredGray.png);
 }
 .featured-strain-true {
-  background-image: url(../img/banners/strainOfTheWeek.png);
+  background-image: url(../img/banners/featuredGreen.png);
 }
-.new-strain-true {
-  top: 11.3%;
-  left: -4%;
-  background-image: url(../img/banners/new.png);
+.featured-concentrate-true {
+  background-image: url(../img/banners/featuredYellow.png);
+}
+.featured-edible-true {
+  background-image: url(../img/banners/featuredRed.png);
 }
 
 

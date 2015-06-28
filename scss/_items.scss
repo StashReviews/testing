@@ -1,5 +1,4 @@
 .dvCardList {
-  min-height: 400px;
   h4 {
     margin-top: 100px;
     text-align: center;
@@ -38,6 +37,7 @@
 .dispensaryName,
 .dealTitle,
 .strainName,
+.concentrateName,
 .edibleName {
   font-family: $dvHeaderFont;
   text-transform: uppercase;
@@ -48,16 +48,27 @@
   padding: 0;
 }
 
-.strainChemistry {
+.strainChemistry,
+.concentrateType,
+.edibleType {
   font-size: 22px;
-  color: $dvGreen;
   padding: 0;
   margin: -8px 0 0 0;
+}
+.strainChemistry {
+  color: $dvGreen;
+}
+.concentrateType {
+  color: $dvYellow;
+}
+.edibleType {
+  color: $dvRed;
 }
 
 .businessName,
 .strainProducer,
-.edibleProcessor {
+.edibleProcessor,
+.concentrateProcessor {
   font-family: $dvTextFont;
   font-size: 16px;
   font-weight: normal;
@@ -139,6 +150,7 @@
 .dispensaryGallery,
 .dealGallery,
 .strainGallery,
+.concentrateGallery,
 .edibleGallery {
   width: 100%;
   position: relative;
@@ -194,6 +206,7 @@
 
 .strainGalleryMobile,
 .dispensaryGalleryMobile,
+.concentrateGalleryMobile,
 .edibleGalleryMobile {
   display: none;
 }
@@ -296,7 +309,9 @@
     }
   }
 }
-.strainProfileTitle {
+.strainProfileTitle,
+.concentrateProfileTitle,
+.edibleProfileTitle {
   font-family: $dvTextFont;
   text-align: center;
   color: $dvGray;
@@ -328,6 +343,34 @@
     color: $dvGray20;
   }
 }
+.ediblePotency {
+  li:nth-child(1) {
+    background: $dvGreen;
+  }
+  li:nth-child(2) {
+    background: $dvYellow;
+  }
+  li:nth-child(3) {
+    background: $dvRed;
+  }
+  li {
+    font-size: 40px;
+    font-family: $dvHeaderFont;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 14px;
+    padding-top: 15px;
+    padding: 20px 0 5px 0;
+    span {
+      font-size: 24px;
+    }
+    .total {
+      color: $dvGray50;
+      font-size: 16px;
+    }
+  }
+}
 
 .reviews {
   .leaveReview {
@@ -355,7 +398,7 @@
         font-weight: bold;
         color: white;
         padding: 5px 5px 5px 40px;
-        background: $dvGreen;
+        background: $dvGray;
         top: 0;
         left: 10px;
         .closeReviewBanner {
@@ -383,15 +426,15 @@
       &:hover,
       &:active,
       &:focus {
-        border-color: $dvGreen;
+        border-color: $dvGray;
       }
     }
     #submitReview {
       font-family: $dvTextFont;
       font-size: 14px;
       text-align: center;
-      color: $dvGreen;
-      border: 2px solid $dvGreen;
+      color: $dvGray;
+      border: 2px solid $dvGray;
       background: none;
       margin-top: 5px;
       margin-left: 50px;
@@ -399,7 +442,7 @@
       float: right;
       width: 100%;
       &:hover {
-        background: $dvGreen;
+        background: $dvGray;
         color: white;
       }
     }

@@ -1,0 +1,127 @@
+<h2 class="pageTitle" title="concentrates">Concentrate</h2>
+<div class="pageId" title="{{ concentrateDetails.$id }}"></div>
+<div class="row">
+  <div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12 concentrateGalleryWrap">
+        <img src="{{ concentrateDetails.image }}" class="img-responsive concentrateGalleryMobile"/>
+      </div>
+      <div class="col-md-3 col-sm-3 col-xs-4 producerLogoWrap">
+        <img ng-src="{{ concentrateDetails.logo }}" class="producerLogo"/>
+      </div>
+      <div class="col-md-9 col-sm-9 col-xs-8 info">
+        <h2 class="concentrateName" id="{{ concentrateDetails.name }}">{{ concentrateDetails.name }}</h2>
+        <h4 class="concentrateType">{{ concentrateDetails.type }}</h4>
+        <h4 class="producedBy">Processed by</h4>
+        <h4 class="concentrateProcessor">{{ concentrateDetails.processor }}</h4>
+      </div>
+    </div>
+    <dv-rating ratings="concentrateDetails.ratings" class="concentrateRating"></dv-rating>
+    <p ng-show="concentrateDetails.ratings[currentName]" class="userRatingDisplay">You rated this a <strong id="userRating">{{ concentrateDetails.ratings[currentName] }}</strong>.</p>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h3 class="concentrateDescriptionSubHeader">Description</h3>
+        <p class="concentrateDescription">{{ concentrateDetails.description }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h3 ng-show="concentrateDetails.concentrateTHC">Potency</h3>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <ul class="row concentratePotency" ng-show="concentrateDetails.concentrateTHC">
+            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4" ng-show="concentrateDetails.concentrateTHC.amountPerPiece">{{ concentrateDetails.concentrateTHC.amountPerPiece }}<span>{{ concentrateDetails.concentrateTHC.unitPerPiece }}</span><br><span class="total">/ PIECE</span></li>
+            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4" ng-show="concentrateDetails.concentrateTHC.amountPerServing">{{ concentrateDetails.concentrateTHC.amountPerServing }}<span>{{ concentrateDetails.concentrateTHC.unitPerServing }}</span><br><span class="total">/ SERVING}</span></li>
+            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4" ng-show="concentrateDetails.concentrateTHC.amountPerPackage">{{ concentrateDetails.concentrateTHC.amountPerPackage }}<span>{{ concentrateDetails.concentrateTHC.unitPerPackage }}</span><br><span class="total">/ PACKAGE</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h3>Concentrate Profile</h3>
+    <div class="row">
+      <div class="flavors col-md-4 col-sm-4 col-xs-4">
+        <h4 class="concentrateProfileTitle">FLAVOR PROFILE</h4>
+        <div ng-donut id="graph1" class="donut-chart"
+          data-amounts="{{ concentrateDetails.flavor1Percent }},{{ concentrateDetails.flavor2Percent }},{{ concentrateDetails.flavor3Percent }}"
+          data-fills="#3dd861,#fcd31c,#f7253e">
+        </div>
+        <ul class="flavorProfile">
+          <li ng-show="concentrateDetails.flavor1" class="flavor1">{{ concentrateDetails.flavor1 }}</li>
+          <li ng-show="concentrateDetails.flavor2" class="flavor2">{{ concentrateDetails.flavor2 }}</li>
+          <li ng-show="concentrateDetails.flavor3" class="flavor3">{{ concentrateDetails.flavor3 }}</li>
+        </ul>
+      </div>
+      <div class="positives col-md-4 col-sm-4 col-xs-4">
+        <h4 class="concentrateProfileTitle">POSITIVE EFFECTS</h4>
+        <div ng-donut id="graph2" class="donut-chart" 
+          data-amounts="{{ concentrateDetails.positive1Percent }},{{ concentrateDetails.positive2Percent }},{{ concentrateDetails.positive3Percent }}"
+          data-fills="#3dd861,#fcd31c,#f7253e">
+        </div>
+        <ul class="positiveEffects">
+          <li ng-show="concentrateDetails.positive1" class="positive1">{{ concentrateDetails.positive1 }}</li>
+          <li ng-show="concentrateDetails.positive2" class="positive2">{{ concentrateDetails.positive2 }}</li>
+          <li ng-show="concentrateDetails.positive3" class="positive3">{{ concentrateDetails.positive3 }}</li>
+        </ul>
+      </div>
+      <div class="negatives col-md-4 col-sm-4 col-xs-4">
+        <h4 class="concentrateProfileTitle">NEGATIVE EFFECTS</h4>
+        <div ng-donut id="graph3" class="donut-chart" 
+          data-amounts="{{ concentrateDetails.negative1Percent }},{{ concentrateDetails.negative2Percent }},{{ concentrateDetails.negative3Percent }}"
+          data-fills="#3dd861,#fcd31c,#f7253e" data="{{ concentrateDetails.negative1Percent }}">
+        </div>
+        <ul class="negativeEffects">
+          <li ng-show="concentrateDetails.negative1" class="negative1">{{ concentrateDetails.negative1 }}</li>
+          <li ng-show="concentrateDetails.negative2" class="negative2">{{ concentrateDetails.negative2 }}</li>
+          <li ng-show="concentrateDetails.negative3" class="negative3">{{ concentrateDetails.negative3 }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="concentrateGalleryWrap" class="concentrateGalleryWrap col-md-6 col-sm-6 col-xs-12">
+    <img src="{{ concentrateDetails.image }}" id="concentrateGallery" class="img-responsive concentrateGallery"/>
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-12 pull-right">
+    <h3>{{ getReviewsCount(reviews) }} Reviews</h3>
+    <section class="reviews" ng-reviews data="{{ concentrateDetails.name }}" ng-controller="reviewsCtrl">
+      <h4 class="pleaseSignIn">Please <a ng-click="showLoginModal()">sign in</a> to drop a review.</h4>
+      <div class="leaveReview col-md-12 col-sm-12 col-xs-12" ng-show="currentUser">
+        <div class="avatarWrap">
+          <img class="avatar" ng-src="{{ currentAvatar }}" title="{{ currentAvatar }}"/>
+          <h4 class="reviewBanner">Try this concentrate lately? <a class="closeReviewBanner"> X </a></h4>
+        </div>
+        <div class='name' title="{{ currentName }}"></div>
+        <textarea type='text' id='reviewInput' placeholder='Drop a review...'></textarea>
+        <input ng-click="sendReview" type='submit' id='submitReview' value='DROP IT LIKE IT&rsquo;S HOT' class="pull-right">
+      </div>
+      <div id='reviewsDiv' class="col-md-12 col-sm-12 col-xs-12">
+        
+        <!-- <ul>
+          <li ng-repeat="review in reviews">
+            <dv-review item-type="review" item-id="{{ concentrate.review.$id }}"></dv-review>
+          </li>
+        </ul> -->
+
+        <!-- <ul>
+          <li ng-repeat="review in reviews">
+            <img class=".reviewAvatar" ng-src="{{ review.avatar }}"/>
+            <h4 class=".reviewAuthor">{{ review.author }}</h4>
+            <h6 class=".reviewDate">{{ review.date }}</h6>
+            <p class=".reviewText">{{ review.text }}</p>
+          </li>
+        <ul> -->
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h3>More Concentrates</h3>
+    <ul class="dvCardList">
+      <li ng-repeat="concentrate in featuredConcentrates" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ concentrate.disabled }}" id="{{ concentrate.$id }}" ng-hide-cards>
+        <dv-card item-type="concentrate" item-id="{{ concentrate.$id }}"></dv-card>
+      </li>
+      <li ng-repeat="concentrate in otherConcentrates" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ concentrate.disabled }}" id="{{ concentrate.$id }}" ng-hide-cards>
+        <dv-card item-type="concentrate" item-id="{{ concentrate.$id }}"></dv-card>
+      </li>
+    </ul>
+  </div>
+</div>

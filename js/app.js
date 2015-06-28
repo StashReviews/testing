@@ -7,6 +7,11 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
       }
     });
   }])
+  .run(["$rootScope", "$anchorScroll" , function ($rootScope, $anchorScroll) {
+    $rootScope.$on("$locationChangeSuccess", function() {
+                $anchorScroll();
+    });
+  }])
   .config(function($stateProvider, $urlRouterProvider) {
     // $locationProvider
     //   .html5Mode(false)
@@ -55,6 +60,18 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
         templateUrl: 'pages/home.html',
         controller: 'homeCtrl'
       })
+      // user pages
+      // .state('root.users', {
+      //   url: '/users',
+      //   templateUrl: 'pages/users.html',
+      //   controller: 'usersCtrl'
+      // })
+      .state('root.userProfile', {
+        url: '/users/:userId',
+        templateUrl: 'pages/users/userProfile.html',
+        controller: 'userProfileCtrl'
+      })
+      // dispensaries
       .state('root.dispensaries', {
         url: '/dispensaries',
         templateUrl: 'pages/dispensaries.html',
@@ -75,6 +92,7 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
           }]
         }
       })
+      // deals
       .state('root.deals', {
         url: '/deals',
         templateUrl: 'pages/deals.html',
@@ -95,6 +113,7 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
           }]
         }
       })
+      // strains
       .state('root.strains', {
         url: '/strains',
         templateUrl: 'pages/strains.html',
@@ -115,6 +134,28 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
           }]
         }
       })
+      // concentrates
+      .state('root.concentrates', {
+        url: '/concentrates',
+        templateUrl: 'pages/concentrates.html',
+        controller: 'concentratesCtrl'
+      })
+      .state('root.concentrateDetails', {
+        url: '/concentrates/:concentrateId',
+        templateUrl: 'pages/details/concentrateDetails.html',
+        controller: 'concentrateDetailsCtrl'
+      })
+      .state('root.manageConcentrates', {
+        url: '/manage/concentrates',
+        templateUrl: 'pages/manage/concentrates.html',
+        controller: 'concentratesManageCtrl',
+        resolve: {
+          currentUser: ['$firebaseAuth', 'dvUrl', function($firebaseAuth, dvUrl) {
+            return $firebaseAuth( new Firebase(dvUrl) ).$requireAuth();
+          }]
+        }
+      })
+      // edibles
       .state('root.edibles', {
         url: '/edibles',
         templateUrl: 'pages/edibles.html',
