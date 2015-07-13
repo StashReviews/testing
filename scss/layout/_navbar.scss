@@ -38,9 +38,9 @@
       font-size: 18px;
       line-height: 22px;
       font-weight: lighter;
-      text-transform: uppercase;
       padding: 0;               
       margin: 0;
+      text-transform: none;
       &:hover {
         color: $dvYellow;
       }
@@ -52,6 +52,51 @@
       padding: 0;
       margin: 0;
     }
+  }
+  .userDropdown {
+    position: absolute;
+    right: 0;
+    background: $dvGray;
+    top: 80px;
+    width: 100%;
+    padding: 0 12px;
+    display: none;
+    li {
+      font-family: $dvTextFont;
+      font-size: 16px;
+      font-weight: lighter;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: white;
+      cursor: pointer;
+      padding: 12px 0;
+      border-bottom: 1px solid $dvWhite20;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        color: $dvYellow;
+      }
+    }
+    .dropdownLogout {
+      color: $dvWhite20;
+    }
+  }
+  .userDropdown:after, .userDropdown:before {
+    bottom: 100%;
+    right: 15px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  .userDropdown:after {
+    border-bottom-color: $dvGray;
+    border-width: 10px;
+    margin-left: -10px;
   }
   .avatarDefault {
     opacity: .1;

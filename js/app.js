@@ -61,11 +61,11 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
         controller: 'homeCtrl'
       })
       // user pages
-      // .state('root.users', {
-      //   url: '/users',
-      //   templateUrl: 'pages/users.html',
-      //   controller: 'usersCtrl'
-      // })
+      .state('root.users', {
+        url: '/users',
+        templateUrl: 'pages/users.html',
+        controller: 'usersCtrl'
+      })
       .state('root.userProfile', {
         url: '/users/:userId',
         templateUrl: 'pages/users/userProfile.html',
@@ -192,6 +192,10 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
       .state('root.stateyourlove', {
         url: '/stateyourlove',
         templateUrl: 'pages/static/stateyourlove.html'
+      })
+      .state('root.faq', {
+        url: '/faq',
+        templateUrl: 'pages/static/faq.html'
       });
 
     $urlRouterProvider.otherwise('/');

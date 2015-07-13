@@ -22,6 +22,15 @@ window.onload = (function() {
 	});
 	// Mobile Menu Drawer Open / Close Ends Here
 
+	// User Dropdown Starts Here
+    $(".avatar").click(function(){
+		$('.userDropdown').toggle();
+	});
+	$(".userDropdown li").click(function(){
+		$('.userDropdown').toggle();
+	});
+	// User Dropdown Ends Here
+
 	// Up To Top Starts Here
     var offset = 250;
     var duration = 300;

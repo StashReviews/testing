@@ -68,12 +68,16 @@
     display: none; }
 
   /*----page.html end----*/
+  /*----userProfile.html start----*/
+  .userInfoLeft .buddyBtn {
+    font-size: 11px; }
+
+  /*----userProfile.html end----*/
+  /*----home start----*/
   #indexSummary > .howItWorks p strong {
     display: inline; }
   #indexSummary > .howItWorks:hover .comingSoon {
     opacity: 0; }
-
-  /*----home start----*/
   #indexSummary > .howItWorks .strainsIcon {
     background-color: #3dd861; }
   #indexSummary > .howItWorks .concentratesIcon {

@@ -92,7 +92,15 @@
     display: none;
   }
   /*----page.html end----*/
-  #indexSummary > .howItWorks { 
+  /*----userProfile.html start----*/
+  .userInfoLeft {
+    .buddyBtn {
+      font-size: 11px;
+    }
+  }
+  /*----userProfile.html end----*/
+  /*----home start----*/
+  #indexSummary > .howItWorks {
     p {
       strong {
         display: inline;
@@ -103,9 +111,6 @@
         opacity: 0;
       }
     }
-  }
-  /*----home start----*/
-  #indexSummary > .howItWorks {
     .strainsIcon {
       background-color: #3dd861;
     }

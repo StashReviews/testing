@@ -49,26 +49,17 @@
           color: white;
         }
       }
-      .dispensaryNav {
-        color: $dvRed;
-        span {
-          font-family: $dvTextFont;
-          font-size: 14px;
-          color: $dvRed;
-          margin-left: 10px;
-        }
-      }
-      .dealNav {
-        color: $dvYellow;
-        span {
-          font-family: $dvTextFont;
-          font-size: 14px;
-          color: $dvYellow;
-          margin-left: 10px;
-        }
-      }
       .strainNav {
         color: $dvGreen;
+      }
+      .concentrateNav {
+        color: $dvYellow;
+      }
+      .edibleNav {
+        color: $dvRed;
+      }
+      .dispensaryNav {
+        color: White;
       }
       .menuMobile-subHeader {
         font-family: $dvTextFont;

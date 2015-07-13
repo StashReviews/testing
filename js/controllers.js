@@ -10,7 +10,7 @@ angular.module('DeViine.controllers', [])
     $scope.itemDetails = itemsService.get(itemType, $stateParams.itemId);
   }])
   */
-  .controller('DeViineCtrl', ['$scope', '$modal', 'dvUrl', 'currentUser', 'usersService', 'locationService', function($scope, $modal, dvUrl, currentUser, usersService, locationService) {
+  .controller('DeViineCtrl', ['$scope', '$state', '$modal', 'dvUrl', 'currentUser', 'usersService', 'locationService', function($scope, $state, $modal, dvUrl, currentUser, usersService, locationService) {
     $scope.isAdmin = usersService.isAdmin;
 
     $scope.getEmailHash = usersService.getEmailHash;
@@ -38,6 +38,16 @@ angular.module('DeViine.controllers', [])
           $scope.currentUser = currentUser;
           usersService.setCurrentUser(currentUser);
         });
+    };
+
+    $scope.logout = function() {
+      usersService.logout();
+
+      $state.go('root.home');
+
+      location.reload();
+
+      $('.userDropdown').toggle();
     };
 
   }])
@@ -158,7 +168,7 @@ angular.module('DeViine.controllers', [])
 
 
   }])
-  .controller('userProfileCtrl', ['$scope', '$filter', '$stateParams', 'usersService', 'ratingsService', 'reviewsService', 'locationService', function($scope, $filter, $stateParams, usersService, ratingsService, reviewsService, locationService) {
+  .controller('userProfileCtrl', ['$scope', '$stateParams', 'usersService', function($scope, $stateParams, usersService) {
     
     $scope.user = usersService.getProfile('users', $stateParams.userId);
 

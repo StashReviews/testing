@@ -15,6 +15,13 @@
         <h4 class="producedBy">Processed by</h4>
         <h4 class="edibleProcessor">{{ edibleDetails.processor }}</h4>
       </div>
+      <div class="info">
+        <img class="col-md-3" ng-src="{{ edibleDetails.producerLogo }}" class="producerLogo"/>
+        <div class="col-md-9">
+          <h4 class="producedBy">Produced by</h4>
+          <h4 class="edibleProcessor">{{ edibleDetails.producer }}</h4>
+        </div>
+      </div>
     </div>
     <dv-rating ratings="edibleDetails.ratings" class="edibleRating"></dv-rating>
     <p ng-show="edibleDetails.ratings[currentName]" class="userRatingDisplay">You rated this a <strong id="userRating">{{ edibleDetails.ratings[currentName] }}</strong>.</p>

@@ -66,7 +66,7 @@ angular.module('DeViine.services', [])
        * @param {String} userId
        */
       getProfile: function(userId) {
-        $firebaseObject( new Firebase(dvUrl + '/users/' + userId + '/profile') );
+        return $firebaseObject( new Firebase(dvUrl + '/users/' + userId + '/profile') );
       },
       /**
        * @param {Object} userId

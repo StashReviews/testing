@@ -1,21 +1,22 @@
-<tabset>
-	<tab ng-repeat="(itemType, items) in menu" heading="{{ itemType }}" class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="background-image: url('../testing/img/tabs/{{ itemType }}.png');">
-		<div class="menu">
-			<aside ng-repeat="item in items" class="menuItem">
-				<h1 class="itemName">{{ item.name }} <span class="producerName" ng-show="item.producer">{{ item.producer }}</span></h1>
-				<img class="itemImage" src="{{ item.image }}" ng-show="item.image" />
-				<h2 class="cbdPotency" ng-show="item.cbd"><span>{{ item.cbd }}%</span><br/>CBD</h2>
-				<h2 class="thcPotency" ng-show="item.thc"><span>{{ item.thc }}%</span><br/>THC</h2>
-				<div class="itemDescription" ng-show="item.description">{{ item.description }}</div>
-				<ul class="pricing">
-					<li ng-show="item.prices[0].priceByPrice">$<span class="price">{{ item.prices[0].priceByPrice }}</span><br/><span class="unit">{{ item.prices[0].priceByAmount }}{{ item.prices[0].priceByUnit }}</span></li>
-					<li ng-show="item.prices[1].priceByPrice">$<span class="price">{{ item.prices[1].priceByPrice }}</span><br/><span class="unit">{{ item.prices[1].priceByAmount }}{{ item.prices[1].priceByUnit }}</span></li>
-					<li ng-show="item.prices[2].priceByPrice">$<span class="price">{{ item.prices[2].priceByPrice }}</span><br/><span class="unit">{{ item.prices[2].priceByAmount }}{{ item.prices[2].priceByUnit }}</span></li>
-					<li ng-show="item.prices[3].priceByPrice">$<span class="price">{{ item.prices[3].priceByPrice }}</span><br/><span class="unit">{{ item.prices[3].priceByAmount }}{{ item.prices[3].priceByUnit }}</span></li>
-					<li ng-show="item.prices[4].priceByPrice">$<span class="price">{{ item.prices[4].priceByPrice }}</span><br/><span class="unit">{{ item.prices[4].priceByAmount }}{{ item.prices[4].priceByUnit }}</span></li>
-				</ul>
-			</aside>
-		</div>
-	</tab>
-</tabset>
-
+<div class="menu">
+	<tabset>
+		<tab ng-repeat="(itemType, items) in menu" heading="{{ itemType }}" class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="background-image: url('../testing/img/tabs/{{ itemType }}.png');">
+			<div class="menu">
+				<aside ng-repeat="item in items" class="menuItem">
+					<h1 class="itemName">{{ item.name }} <span class="producerName" ng-show="item.producer">{{ item.producer }}</span></h1>
+					<img class="itemImage" src="{{ item.image }}" ng-show="item.image" />
+					<h2 class="cbdPotency" ng-show="item.cbd"><span>{{ item.cbd }}%</span><br/>CBD</h2>
+					<h2 class="thcPotency" ng-show="item.thc"><span>{{ item.thc }}%</span><br/>THC</h2>
+					<div class="itemDescription" ng-show="item.description">{{ item.description }}</div>
+					<ul class="pricing">
+						<li ng-show="item.prices[0].priceByPrice">$<span class="price">{{ item.prices[0].priceByPrice }}</span><br/><span class="unit">{{ item.prices[0].priceByAmount }}{{ item.prices[0].priceByUnit }}</span></li>
+						<li ng-show="item.prices[1].priceByPrice">$<span class="price">{{ item.prices[1].priceByPrice }}</span><br/><span class="unit">{{ item.prices[1].priceByAmount }}{{ item.prices[1].priceByUnit }}</span></li>
+						<li ng-show="item.prices[2].priceByPrice">$<span class="price">{{ item.prices[2].priceByPrice }}</span><br/><span class="unit">{{ item.prices[2].priceByAmount }}{{ item.prices[2].priceByUnit }}</span></li>
+						<li ng-show="item.prices[3].priceByPrice">$<span class="price">{{ item.prices[3].priceByPrice }}</span><br/><span class="unit">{{ item.prices[3].priceByAmount }}{{ item.prices[3].priceByUnit }}</span></li>
+						<li ng-show="item.prices[4].priceByPrice">$<span class="price">{{ item.prices[4].priceByPrice }}</span><br/><span class="unit">{{ item.prices[4].priceByAmount }}{{ item.prices[4].priceByUnit }}</span></li>
+					</ul>
+				</aside>
+			</div>
+		</tab>
+	</tabset>
+</div>

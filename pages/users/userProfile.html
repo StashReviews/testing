@@ -1,5 +1,82 @@
 <h2 class="pageTitle" title="user">User Profile</h2>
 <div class="pageId" title="{{ user.$id }}"></div>
-<div class="row">
-  
+<div class="row ">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 coverImageWrap">
+    <img src="img/cover_photo.png" class="coverImage"/>
+    <div class="coverOverlay"></div>
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 userInfoLeft">
+	<img src="https://scontent.fsnc1-1.fna.fbcdn.net/hprofile-xta1/v/t1.0-1/p160x160/11329937_10153309738079655_4717332562950568931_n.jpg?oh=8e8d5cb5c69ce6347ab8a15721abaaf6&oe=562A4EEC" class="userAvatar"/>
+	<a href="" class="buddyBtn">ADD BUDDY</a>
+  </div>
+  <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 userInfoMiddle">
+	<h1 class="username">Dakota</h1>
+	<h2 class="userJoined">Joined: <span>1/1/2015</span></h4>
+    <h2 class="userLocation">Location: <span>Spokane, WA</span></h2>
+    <h2 class="userAccountType">Account Type: <span>Admin</span></h2>
+    <h3 class="userHeadline">Founder and CEO of DeViine LLC</h3> 
+    <p class="userDescription">Proud Cannaisseur, Entrepreneur, Graphic Designer, Student and Golfer. Proud Cannaisseur, Entrepreneur, Graphic Designer, Student and Golfer. Proud Cannaisseur, Entrepreneur, Graphic Designer, Student and Golfer. Proud Cannaisseur, Entrepreneur, Graphic Designer, Student and Golfer.</p>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 userInfoRight pull-right">
+  	<ul>
+  		<li class="col-lg-4 col-md-4 col-sm-4 col-xs-2"><img src="img/icons/buddyIcon.png"/>23<br>Buddies</li>
+  		<li class="col-lg-4 col-md-4 col-sm-4 col-xs-2"><img src="img/icons/budCoinIcon.png"/>7<br>Bud Coins</li>
+  		<li class="col-lg-4 col-md-4 col-sm-4 col-xs-2"><img src="img/icons/settingsIcon.png"/>Account<br>Settings</li>
+  	</ul>
+  </div>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 achievements">
+	  <h3>ACHIEVEMENTS</h3>
+	  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 progressWrap">
+	  	<div class="progressBackground"></div>
+	  	<div class="progressBar"></div>
+	  	<h4>75% Completed</h4>
+	  </div>
+	  <ul class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/buddyIcon.png"/></li>
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/budCoinIcon.png"/></li>
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/settingsIcon.png"/></li>
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/buddyIcon.png"/></li>
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/budCoinIcon.png"/></li>
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/settingsIcon.png"/></li>
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/buddyIcon.png"/></li>
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/budCoinIcon.png"/></li>
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/settingsIcon.png"/></li>
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/buddyIcon.png"/></li>
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/budCoinIcon.png"/></li>
+	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/settingsIcon.png"/></li>
+	  </ul>
+  </div>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  	<h3>FAVORITES</h3>
+  	<tabset class="userFavorites">
+		<tab heading="strains" style="background-image: url('../testing/img/icons/strainsIcon.png');">
+			<ul class="dvCardList">
+				<div><li ng-repeat="strain in strains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ strain.disabled }}">
+					<dv-card item-type="strain" item-id="{{ strain.$id }}"></dv-card>
+				</li></div>
+			</ul>
+		</tab>
+		<tab heading="concentrates" style="background-image: url('../testing/img/icons/concentratesIcon.png');">
+			<ul class="dvCardList">
+				<div><li ng-repeat="concentrate in concentrates" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ concentrate.disabled }}">
+					<dv-card item-type="concentrate" item-id="{{ concentrate.$id }}"></dv-card>
+				</li></div>
+			</ul>
+		</tab>
+		<tab heading="edibles" style="background-image: url('../testing/img/icons/ediblesIcon.png');">
+			<ul class="dvCardList">
+				<div><li ng-repeat="edible in edibles" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ edible.disabled }}">
+					<dv-card item-type="edible" item-id="{{ edible.$id }}"></dv-card>
+				</li></div>
+			</ul>
+		</tab>
+		<tab heading="dispensaries" style="background-image: url('../testing/img/icons/dispensariesIcon.png');">
+			<ul class="dvCardList">
+				<div><li ng-repeat="dispensary in dispensaries" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ dispensary.disabled }}">
+					<dv-card item-type="dispensary" item-id="{{ dispensary.$id }}"></dv-card>
+				</li></div>
+			</ul>
+		</tab>
+	</tabset>
+  </div>
 </div>

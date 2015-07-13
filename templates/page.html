@@ -5,7 +5,7 @@
 		<img src="img/icons/x.png" class="close-menuMobile" id="close-menuMobile" alt="Close Menu"/>
 		<div class="menuMobile" id="menuMobile">
 		  <ul>
-		  	<li class="menuMobile-subHeader">Pages</li>
+		  	<li class="menuMobile-subHeader">Main</li>
 			<li ui-sref="root.home" class="mobileNavLink">Home</li>
 			<li ui-sref="root.strains" class="strainNav mobileNavLink">Strains</li>
 			<li ui-sref="root.concentrates" class="concentrateNav mobileNavLink">Concentrates</li>
@@ -15,23 +15,32 @@
 			<li class="mobileNavLink"><a href="https://deviine.typeform.com/to/pnlr6D" data-mode="1" target="_blank" class="typeform-share" style="color:inherit;">Feedback</a></li>
 			<li ui-sref="root.privacy" class="mobileNavLink">Privacy Policy</li>
 			<li ui-sref="root.terms" class="mobileNavLink">Terms of Use</li>
+			<li ui-sref="root.stateyourlove" class="mobileNavLink">State Your Love!</li>
 		  </ul>
 		</div>
 		<a ui-sref="root.home" class="logo">
 			<img src="img/logo_beta_transparent.png" alt="DeViine Logo" class="deviineLogo"/>
 		</a>
 		<div class="navbar-right">
-			<div ng-show="currentUser" class="navbar-text">
-				<img ng-click="showLoginModal()" ng-src="{{ currentAvatar }}" class="img-responsive pull-right avatar"/>
+			<div ng-show="currentUser" class="navbar-text dropdown">
+				<img ng-src="{{ currentAvatar }}" class="img-responsive pull-right avatar dropdown-toggle" type="button"/>
+				<ul class="userDropdown">
+					<li type="button" ui-sref="root.userProfile({ userId: user.$id })">Profile</li>
+					<li class="dropdownLogout" type="button" ng-click="showLoginModal()">Logout</li>
+				</ul>
 				<div class="accountInfo">
 					<a ui-sref="root.userProfile({ userId: user.$id })"><h1 class="pull-right username" title="{{ currentName }}">{{ currentName }}</h1></a><br/>
 					<h2 class="pull-right location">No Location Found</h2>
 				</div>
 			</div>
-			<div ng-show="!( currentUser )" class="navbar-text">
-				<img src="img/icons/budIconWhite.png" class="img-responsive pull-right avatar" ng-click="showLoginModal()" />
+			<div ng-show="!( currentUser )" class="navbar-text dropdown">
+				<img src="img/icons/budIconWhite.png" class="img-responsive pull-right avatar dropdown-toggle" type="button"/>
+				<ul class="userDropdown">
+					<li type="button" ng-click="showLoginModal()">Sign In</li>
+					<li type="button" ng-click="showLoginModal()">Sign Up</li>
+				</ul>
 				<div class="accountInfo">
-					<h1 class="pull-right username btn navbar-btn" ng-click="showLoginModal()" >Sign In <span>/</span> Sign Up</h1><br/>
+					<h1 class="pull-right username btn navbar-btn" ng-click="showLoginModal()" >High, Guest!</h1><br/>
 					<h2 class="pull-right location">No Location Found</h2>
 				</div>
 			</div>

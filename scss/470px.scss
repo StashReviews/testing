@@ -5,6 +5,36 @@
     width: 98%;
   }
   /*----style.scss.html end----*/
+  /*----userProfile.html start----*/
+  .userInfoLeft {
+    .userAvatar {
+      width: 30%;
+      margin: -70px 35% 0 35%;
+    }
+    .buddyBtn {
+      width: 30%;
+      margin: 10px 35% 0 35%;
+      line-height: 30px;
+    }
+  }
+  .userInfoMiddle {
+    margin-top: 20px;
+  }
+  .achievements {
+    .progressWrap {
+      margin-top: 0;
+    }
+  }
+  .userFavorites {
+    ul {
+      li {
+        a {
+          padding-top: 55%;
+        }
+      }
+    }
+  }
+  /*----userProfile.html end----*/
   /*----home.html start----*/
   #indexSummary {
     .howItWorks {

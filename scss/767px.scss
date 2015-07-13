@@ -5,6 +5,41 @@
     width: 99%;
   }
   /*----style.scss.html end----*/
+  /*----userProfile.html start----*/
+  .userInfoLeft {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    .userAvatar {
+      width: 20%;
+      margin: -70px 40% 0 40%;
+    }
+    .buddyBtn {
+      width: 20%;
+      margin: 10px 40% 0 40%;
+      line-height: 30px;
+    }
+  }
+  .userInfoMiddle {
+    .username {
+      color: rgb(44,48,52);
+    }
+  }
+  .achievements {
+    .progressWrap {
+      margin-top: 10%;
+    }
+  }
+  .userFavorites {
+    ul {
+      li {
+        a {
+          padding-top: 68%;
+        }
+      }
+    }
+  }
+  /*----userProfile.html end----*/
   /*----home.html start----*/
   #indexSummary {
     .howItWorks {
@@ -85,17 +120,16 @@
     margin: 0 25% !important;
   }
   .featured-dispensary-true,
-  .featured-deal-true,
+  .featured-edible-true,
+  .featured-concentrate-true,
   .featured-strain-true {
     left: -4%;
-  }
-  .new-strain-true {
-    left: 21%;
   }
   /*----cards.html end----*/
   /*----ratings.html start----*/
   .dispensaryCard,
-  .dealCard,
+  .edibleCard,
+  .concentrateCard,
   .strainCard {
     .rating {
       margin-top: -4%;
@@ -113,12 +147,14 @@
   /*----items.html start----*/
   #strainGallery,
   #edibleGallery,
+  #concentrateGallery,
   .dispensaryGallery {
     display: none;
   }
   .strainGalleryMobile,
   .dispensaryGalleryMobile,
-  .edibleGalleryMobile {
+  .edibleGalleryMobile,
+  .concentrateGalleryMobile {
     display: inline;
     margin-bottom: 20px;
   }
@@ -127,7 +163,8 @@
 @media screen and (max-width:550px) {
   /*----cards.html start----*/
   .featured-dispensary-true,
-  .featured-deal-true,
+  .featured-concentrate-true,
+  .featured-edible-true,
   .featured-strain-true {
     left: -5.5%;
   }
