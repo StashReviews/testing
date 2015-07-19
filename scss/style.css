@@ -1127,25 +1127,24 @@
     height: 40px;
     padding: 10px;
     margin: 0;
-    float: left;
     -webkit-transition: all .2s ease;
     -moz-transition: all .2s ease;
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
-    /* line 38, layout/_footer.scss */
+    /* line 37, layout/_footer.scss */
     #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
       border: 2px solid #3dd861; }
-  /* line 44, layout/_footer.scss */
+  /* line 43, layout/_footer.scss */
   #footer input[type='email'] {
     width: 300px; }
-    /* line 46, layout/_footer.scss */
+    /* line 45, layout/_footer.scss */
     #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
       border-right: none; }
-    /* line 51, layout/_footer.scss */
+    /* line 50, layout/_footer.scss */
     #footer input[type='email']:visited, #footer input[type='email']:focus {
       background-color: rgba(255, 255, 255, 0.2); }
-  /* line 56, layout/_footer.scss */
+  /* line 55, layout/_footer.scss */
   #footer .btnfooter {
     border-radius: 0;
     background-color: transparent;
@@ -1158,39 +1157,39 @@
     margin-top: 0;
     padding: .5% 5%;
     box-shadow: none; }
-    /* line 68, layout/_footer.scss */
+    /* line 67, layout/_footer.scss */
     #footer .btnfooter:hover {
       color: #2c3034;
       background: #3dd861; }
-    /* line 72, layout/_footer.scss */
+    /* line 71, layout/_footer.scss */
     #footer .btnfooter:active, #footer .btnfooter:focus, #footer .btnfooter:visited {
       text-decoration: none; }
-  /* line 78, layout/_footer.scss */
+  /* line 77, layout/_footer.scss */
   #footer .btnfooterlrg {
     padding: 1.5% 5%;
     margin: 0 auto; }
-  /* line 82, layout/_footer.scss */
+  /* line 81, layout/_footer.scss */
   #footer .footerFeedback {
     text-align: center; }
-  /* line 85, layout/_footer.scss */
+  /* line 84, layout/_footer.scss */
   #footer address {
     font-size: 10px;
     padding-top: 5%;
     width: 100%;
     text-align: center; }
-  /* line 92, layout/_footer.scss */
+  /* line 91, layout/_footer.scss */
   #footer .footerlogo {
     padding-top: 20%; }
-  /* line 96, layout/_footer.scss */
+  /* line 95, layout/_footer.scss */
   #footer #socialIcons {
     list-style-type: none;
     margin: 0;
     padding: 0;
     text-align: center; }
-    /* line 101, layout/_footer.scss */
+    /* line 100, layout/_footer.scss */
     #footer #socialIcons li {
       display: inline; }
-    /* line 104, layout/_footer.scss */
+    /* line 103, layout/_footer.scss */
     #footer #socialIcons img {
       width: 40px;
       margin: 20px 0 0 5px;
@@ -1202,7 +1201,7 @@
       -ms-transition: all .2s ease;
       -o-transition: all .2s ease;
       transition: all .2s ease; }
-      /* line 115, layout/_footer.scss */
+      /* line 114, layout/_footer.scss */
       #footer #socialIcons img:hover {
         background: #3dd861;
         border-color: #3dd861; }
@@ -1366,9 +1365,9 @@
     padding: 20px 5%;
     height: 100%; }
     /* line 48, 767px.scss */
-    #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
+    #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2), #indexSummary .howItWorks:nth-child(3) {
       border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-    /* line 52, 767px.scss */
+    /* line 53, 767px.scss */
     #indexSummary .howItWorks .dispensariesIcon,
     #indexSummary .howItWorks .concentratesIcon,
     #indexSummary .howItWorks .ediblesIcon,
@@ -1376,13 +1375,13 @@
       width: 22%;
       float: left;
       margin-right: 20px; }
-    /* line 60, 767px.scss */
+    /* line 61, 767px.scss */
     #indexSummary .howItWorks h3 {
       font-size: 18px;
       margin: 0;
       padding: 3% 0 0 0;
       text-align: left; }
-    /* line 66, 767px.scss */
+    /* line 67, 767px.scss */
     #indexSummary .howItWorks p {
       padding: 0;
       margin: 0;
@@ -1390,45 +1389,45 @@
       font-size: 10px;
       line-height: 14px;
       width: 62%; }
-    /* line 74, 767px.scss */
+    /* line 75, 767px.scss */
     #indexSummary .howItWorks .arrowRight {
       display: inline;
       margin-left: 20px; }
 
-  /* line 80, 767px.scss */
+  /* line 81, 767px.scss */
   .featuredBanner {
     margin-left: 25%; }
 
   /*----home.html end----*/
   /*----footer.html start----*/
-  /* line 85, 767px.scss */
+  /* line 86, 767px.scss */
   #footer {
     margin: 30px auto 0 auto;
     text-align: center; }
-    /* line 88, 767px.scss */
+    /* line 89, 767px.scss */
     #footer h4 {
       text-align: center; }
-    /* line 91, 767px.scss */
+    /* line 92, 767px.scss */
     #footer a {
       font-size: 10px;
       margin: 0 auto;
       text-align: center; }
-    /* line 96, 767px.scss */
+    /* line 97, 767px.scss */
     #footer p {
       font-size: 10px; }
-    /* line 99, 767px.scss */
+    /* line 100, 767px.scss */
     #footer input[type='email'] {
       width: 45%;
       margin-left: 15%; }
-    /* line 103, 767px.scss */
+    /* line 104, 767px.scss */
     #footer .btnfooter {
       width: 25%;
       margin-top: 0;
       margin-right: 15%; }
-    /* line 108, 767px.scss */
+    /* line 109, 767px.scss */
     #footer .btnfooterlrg {
       margin-right: 0; }
-    /* line 111, 767px.scss */
+    /* line 112, 767px.scss */
     #footer address {
       padding-top: 6%;
       float: right;
@@ -1436,11 +1435,11 @@
 
   /*----footer.html end----*/
   /*----cards.html start----*/
-  /* line 119, 767px.scss */
+  /* line 120, 767px.scss */
   .cardWrapper {
     margin: 0 25% !important; }
 
-  /* line 122, 767px.scss */
+  /* line 123, 767px.scss */
   .featured-dispensary-true,
   .featured-edible-true,
   .featured-concentrate-true,
@@ -1449,7 +1448,7 @@
 
   /*----cards.html end----*/
   /*----ratings.html start----*/
-  /* line 134, 767px.scss */
+  /* line 135, 767px.scss */
   .dispensaryCard .rating,
   .edibleCard .rating,
   .concentrateCard .rating,
@@ -1458,20 +1457,20 @@
 
   /*----ratings.html end----*/
   /*----cards.html start----*/
-  /* line 142, 767px.scss */
+  /* line 143, 767px.scss */
   .dvCardList li {
     width: 29%; }
 
   /*----cards.html end----*/
   /*----items.html start----*/
-  /* line 148, 767px.scss */
+  /* line 149, 767px.scss */
   #strainGallery,
   #edibleGallery,
   #concentrateGallery,
   .dispensaryGallery {
     display: none; }
 
-  /* line 154, 767px.scss */
+  /* line 155, 767px.scss */
   .strainGalleryMobile,
   .dispensaryGalleryMobile,
   .edibleGalleryMobile,
@@ -1482,7 +1481,7 @@
   /*----items.html end----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
-  /* line 165, 767px.scss */
+  /* line 166, 767px.scss */
   .featured-dispensary-true,
   .featured-concentrate-true,
   .featured-edible-true,
@@ -1724,40 +1723,43 @@
     #indexSummary > .howItWorks .arrowRight.gray {
       border-left-color: #2c3034; }
   /* line 80, _home.scss */
-  #indexSummary > .howItWorks:nth-child(1), #indexSummary > .howItWorks:nth-child(2) {
+  #indexSummary > .howItWorks:nth-child(1), #indexSummary > .howItWorks:nth-child(2), #indexSummary > .howItWorks:nth-child(3) {
     border-right: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 85, _home.scss */
+  /* line 86, _home.scss */
   #indexSummary > .howItWorks:nth-child(1) > h3 {
     color: #3dd861; }
-  /* line 89, _home.scss */
+  /* line 90, _home.scss */
   #indexSummary > .howItWorks:nth-child(2) > h3 {
     color: #fcd31c; }
-  /* line 93, _home.scss */
+  /* line 94, _home.scss */
   #indexSummary > .howItWorks:nth-child(3) > h3 {
     color: #f7253e; }
+  /* line 98, _home.scss */
+  #indexSummary > .howItWorks:nth-child(4) > h3 {
+    color: #2c3034; }
 
-/* line 98, _home.scss */
+/* line 103, _home.scss */
 .sponsors {
   margin: 0;
   padding: 0; }
-  /* line 102, _home.scss */
+  /* line 107, _home.scss */
   .sponsors div ul {
     margin: 0;
     padding: 0;
     height: 100%;
     list-style: none;
     opacity: .4; }
-    /* line 108, _home.scss */
+    /* line 113, _home.scss */
     .sponsors div ul:hover {
       opacity: 1; }
-    /* line 111, _home.scss */
+    /* line 116, _home.scss */
     .sponsors div ul li {
       display: inline;
       overflow: hidden; }
-      /* line 114, _home.scss */
+      /* line 119, _home.scss */
       .sponsors div ul li:last-child {
         border: none; }
-      /* line 117, _home.scss */
+      /* line 122, _home.scss */
       .sponsors div ul li img {
         max-width: 100%; }
 
@@ -2412,16 +2414,26 @@ h3 {
   text-align: center;
   font-size: 30px; }
 
-/* line 74, style.scss */
-p {
-  font-family: "Open Sans", sans-serif; }
+/* line 73, style.scss */
+h4 {
+  font-size: 24px;
+  margin-bottom: 0; }
 
 /* line 78, style.scss */
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px; }
+  /* line 81, style.scss */
+  p a {
+    font-weight: bold;
+    color: #3dd861; }
+
+/* line 87, style.scss */
 ul {
   list-style: none;
   padding: 0; }
 
-/* line 83, style.scss */
+/* line 92, style.scss */
 .pageTitle {
   margin-top: 0;
   border-bottom: 1px solid rgba(44, 48, 52, 0.05);
@@ -2430,17 +2442,17 @@ ul {
   text-transform: uppercase;
   font-size: 40px; }
 
-/* line 92, style.scss */
+/* line 101, style.scss */
 .viewOnMap {
   text-transform: uppercase;
   font-weight: bold; }
 
-/* line 97, style.scss */
+/* line 106, style.scss */
 form {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   color: #2c3034; }
-  /* line 101, style.scss */
+  /* line 110, style.scss */
   form .btn-block {
     font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
@@ -2448,61 +2460,73 @@ form {
     color: white;
     padding: 5px 0 0 0;
     background: #2c3034; }
-    /* line 108, style.scss */
+    /* line 117, style.scss */
     form .btn-block.dispensaryCMS:hover, form .btn-block.dispensaryCMS:active, form .btn-block.dispensaryCMS:focus, form .btn-block.dispensaryCMS:visited {
       background: #f7253e;
       color: white; }
-    /* line 115, style.scss */
+    /* line 124, style.scss */
     form .btn-block.dealCMS:hover, form .btn-block.dealCMS:active, form .btn-block.dealCMS:focus, form .btn-block.dealCMS:visited {
       background: #fcd31c;
       color: white; }
-    /* line 122, style.scss */
+    /* line 131, style.scss */
     form .btn-block.strainCMS:hover, form .btn-block.strainCMS:active, form .btn-block.strainCMS:focus, form .btn-block.strainCMS:visited {
       background: #3dd861;
       color: white; }
 
-/* line 132, style.scss */
+/* line 141, style.scss */
+.faqQuestion {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #2c3034;
+  margin: 20px 0 5px 0; }
+  /* line 148, style.scss */
+  .faqQuestion a {
+    color: #3dd861; }
+
+/* line 153, style.scss */
 .brandassets {
   margin-top: -3%;
   list-style: none; }
-  /* line 135, style.scss */
+  /* line 156, style.scss */
   .brandassets li {
     margin-bottom: 20px;
     text-align: center; }
-    /* line 138, style.scss */
+    /* line 159, style.scss */
     .brandassets li h4 {
       font-size: 35px;
       margin-top: 30px;
       border-bottom: 3px solid; }
-    /* line 143, style.scss */
+    /* line 164, style.scss */
     .brandassets li:nth-child(1) {
       color: #3dd861; }
-    /* line 146, style.scss */
+    /* line 167, style.scss */
     .brandassets li:nth-child(2) {
       color: #fcd31c; }
-    /* line 149, style.scss */
+    /* line 170, style.scss */
     .brandassets li:nth-child(3) {
       color: #f7253e; }
-    /* line 152, style.scss */
+    /* line 173, style.scss */
     .brandassets li:nth-child(4) {
       color: #2c3034; }
-    /* line 156, style.scss */
+    /* line 177, style.scss */
     .brandassets li a img {
       width: 100%; }
 
-/* line 163, style.scss */
+/* line 184, style.scss */
 .stateYourLovePageHeader {
   margin-bottom: 20px; }
-  /* line 165, style.scss */
+  /* line 186, style.scss */
   .stateYourLovePageHeader h3 {
     border-bottom: none;
     font-family: "Open Sans", sans-serif;
     text-transform: none; }
 
-/* line 176, style.scss */
+/* line 197, style.scss */
 .stateYourLove li img {
   width: 100%; }
-/* line 179, style.scss */
+/* line 200, style.scss */
 .stateYourLove li label {
   font-family: "Bebas Neue", "Khand", sans-serif;
   color: #2c3034;

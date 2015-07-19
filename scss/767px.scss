@@ -46,7 +46,8 @@
       padding: 20px 5%;
       height: 100%;
       &:nth-child(1),
-      &:nth-child(2) {
+      &:nth-child(2),
+      &:nth-child(3) {
         border-bottom: 1px solid rgba(44,48,52,.05);
       }
       .dispensariesIcon,
