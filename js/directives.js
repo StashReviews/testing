@@ -384,6 +384,7 @@ angular.module('DeViine.directives', [])
             var avatar = $('.avatar').attr('src');
             var name = $('.name').attr('title');
             var text = $('#reviewInput').val();
+            var privateReview = $('#privateReview:checked').val();
 
             var today = new Date();
             var dd = today.getDate();
@@ -405,19 +406,33 @@ angular.module('DeViine.directives', [])
             if (! text) {
               // If nothing was typed into review input, alert.
               alert("Sorry, you can't submit a blank review.");
-            } else {
-              // If a review was typed, push the avatar, name, date and review to firebase.
+            } else if (! privateReview) {
+              // If a review was typed but the user did not check privateReview, push the avatar, name, date and review to firebase to both the page and the user.
               reviewsRef.push({avatar:avatar, name:name, text:text, date:today});
               userReviewsRef.push({avatar:avatar, name:name, text:text, date:today});
               // Reset review input.
               $('#reviewInput').hide();
+              $('.reviewType').hide();
               $('#submitReview').hide();
-              $('.reviewBanner').text("You'll be able to see all of your reviews in a later release.");
+              $('.reviewBanner').text("Check out all of your reviews on your profile!");
               $('.avatarWrap .avatar').css({"margin-left":"0px"});
               $('.reviewBanner').show();
 
               // Success alert.
-              alert("Awesome! Thanks for submitting a review. It may take a bit for your review to show up. Later, you'll be able to access all of your reviews to remember your experiences!");
+              alert("Awesome! Thanks for submitting a public review. Your review will also be accessible from your profile page.");
+            } else {
+              // If a review was typed and the user checked privateReview, push the avatar, name, date and review to firebase to only the user.
+              userReviewsRef.push({avatar:avatar, name:name, text:text, date:today});
+              // Reset review input.
+              $('#reviewInput').hide();
+              $('.reviewType').hide();
+              $('#submitReview').hide();
+              $('.reviewBanner').text("Check out all of your reviews on your profile!");
+              $('.avatarWrap .avatar').css({"margin-left":"0px"});
+              $('.reviewBanner').show();
+
+              // Success alert.
+              alert("Sweet! Thanks for submitting a private review. Your review will be accessible from your profile page and only your buddies can see it.");
             }
 
           });

@@ -90,6 +90,7 @@
         </div>
         <div class='name' title="{{ currentName }}"></div>
         <textarea type='text' id='reviewInput' placeholder='Drop a review...'></textarea>
+        <label class="reviewType"><input type="checkbox" id='privateReview' value="privateReview">Would you like this review to be private?<a href="#"> What's this?</a></label>
         <input ng-click="sendReview" type='submit' id='submitReview' value='DROP IT LIKE IT&rsquo;S HOT' class="pull-right">
       </div>
       <div id='reviewsDiv' class="col-md-12 col-sm-12 col-xs-12">

@@ -71,6 +71,11 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
         templateUrl: 'pages/users/userProfile.html',
         controller: 'userProfileCtrl'
       })
+      .state('root.userBuddies', {
+        url: '/users/:userId/buddies',
+        templateUrl: 'pages/users/userBuddies.html',
+        controller: 'userBuddyCtrl'
+      })
       // dispensaries
       .state('root.dispensaries', {
         url: '/dispensaries',

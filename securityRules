@@ -1,0 +1,58 @@
+{
+  /*
+    Useful links:
+    
+    https://www.firebase.com/docs/security/quickstart.html
+    https://www.firebase.com/docs/security/guide/securing-data.html
+    https://www.firebase.com/docs/security/guide/user-security.html
+    https://www.firebase.com/docs/security/api/
+    http://stackoverflow.com/questions/18005984/how-to-prevent-other-access-to-my-firebase/18007760#18007760
+  */
+  "rules": {
+    ".read": true,
+    "dispensaries": {
+      ".indexOn": ["featured", "distance"],
+      "$dispensary": {
+        ".write": "auth !== null" // @todo Dispensary owners and DeViine administrators.
+        // Dispensary owners: "root.child('dispensaries').child( data.parent().child('dispensary').val() ).child('owners').hasChild(auth.uid) )" (or some such)  
+        // DeViine administrators: "root.child('users').child(auth.uid).child('isAdmin').val() == true" (or some such)
+        // (alternative for DeViine administrators): "root.child('administrators').hasChild(auth.uid)"
+      }
+    },
+    "strains": {
+      ".indexOn": ["featured", "rating"],
+      "$strain": {
+        ".write": "auth !== null" // @todo Producer owners and DeViine administrators.
+        // Producer owners: "root.child('producers').child( data.parent().child('producer').val() ).child('owners').hasChild(auth.uid) )" (or some such)  
+        // DeViine administrators: "root.child('users').child(auth.uid).child('isAdmin').val() == true" (or some such)
+        // (alternative for DeViine administrators): "root.child('administrators').hasChild(auth.uid)"
+      }
+    },
+    "concentrates": {
+      ".indexOn": ["featured", "rating"],
+      "$concentrate": {
+        ".write": "auth !== null" // @todo Processor owners and DeViine administrators.
+        // Processor owners: "root.child('processors').child( data.parent().child('processor').val() ).child('owners').hasChild(auth.uid) )" (or some such)  
+        // DeViine administrators: "root.child('users').child(auth.uid).child('isAdmin').val() == true" (or some such)
+        // (alternative for DeViine administrators): "root.child('administrators').hasChild(auth.uid)"
+      }
+    },
+    "edibles": {
+      ".indexOn": ["featured", "rating"],
+      "$edible": {
+        ".write": "auth !== null" // @todo Processor owners and DeViine administrators.
+        // Processor owners: "root.child('processors').child( data.parent().child('processor').val() ).child('owners').hasChild(auth.uid) )" (or some such)  
+        // DeViine administrators: "root.child('users').child(auth.uid).child('isAdmin').val() == true" (or some such)
+        // (alternative for DeViine administrators): "root.child('administrators').hasChild(auth.uid)"
+      }
+    },
+    "users": {
+      "$user": {
+        ".write": "auth !== null" // @todo The current user (i.e., auth.uid === $user, once we start indexing by Firebase-generated UIDs) and, perhaps, DeViine administrators.  Probably best for our privacy policy if we lock ourselves out of users' accounts.
+      },
+      "guests": {
+        ".write": true
+      }
+    }
+  }
+}

@@ -432,7 +432,17 @@
         /* line 412, _items.scss */
         .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner:hover {
           opacity: 1; }
-  /* line 418, _items.scss */
+    /* line 417, _items.scss */
+    .reviews .leaveReview .avatarWrap .reviewBanner:after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: -11px;
+      border: 11px solid #2c3034;
+      border-right-color: transparent;
+      z-index: -1; }
+  /* line 428, _items.scss */
   .reviews .leaveReview #reviewInput {
     border: 2px solid rgba(44, 48, 52, 0.2);
     font-family: "Open Sans", sans-serif;
@@ -443,10 +453,26 @@
     float: right;
     height: 100px;
     width: 100%; }
-    /* line 428, _items.scss */
+    /* line 438, _items.scss */
     .reviews .leaveReview #reviewInput:hover, .reviews .leaveReview #reviewInput:active, .reviews .leaveReview #reviewInput:focus {
       border-color: #2c3034; }
-  /* line 434, _items.scss */
+  /* line 444, _items.scss */
+  .reviews .leaveReview .reviewType {
+    float: left;
+    width: 100%;
+    padding: 10px auto;
+    margin-top: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 11px; }
+    /* line 451, _items.scss */
+    .reviews .leaveReview .reviewType #privateReview {
+      margin-right: 5px; }
+    /* line 454, _items.scss */
+    .reviews .leaveReview .reviewType a {
+      color: #3dd861;
+      font-size: 9px;
+      text-transform: uppercase; }
+  /* line 460, _items.scss */
   .reviews .leaveReview #submitReview {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
@@ -459,20 +485,20 @@
     padding: 10px;
     float: right;
     width: 100%; }
-    /* line 446, _items.scss */
+    /* line 472, _items.scss */
     .reviews .leaveReview #submitReview:hover {
       background: #2c3034;
       color: white; }
-/* line 452, _items.scss */
+/* line 478, _items.scss */
 .reviews .totalReviews {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   text-align: center; }
-/* line 457, _items.scss */
+/* line 483, _items.scss */
 .reviews #reviewsDiv {
   margin-top: 20px;
   padding: 0; }
-  /* line 460, _items.scss */
+  /* line 486, _items.scss */
   .reviews #reviewsDiv h4 {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
@@ -481,7 +507,7 @@
     color: #2c3034;
     padding: 10px 0 0 0;
     border-top: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 469, _items.scss */
+  /* line 495, _items.scss */
   .reviews #reviewsDiv h6 {
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
@@ -489,14 +515,14 @@
     font-weight: bold;
     color: #3dd861;
     margin: 0px 0 3px 0; }
-  /* line 477, _items.scss */
+  /* line 503, _items.scss */
   .reviews #reviewsDiv p {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     color: #2c3034;
     margin: 0;
     padding: 0 0 8px 60px; }
-  /* line 484, _items.scss */
+  /* line 510, _items.scss */
   .reviews #reviewsDiv div {
     border-radius: 50%;
     float: left;
@@ -506,23 +532,23 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; }
-/* line 495, _items.scss */
+/* line 521, _items.scss */
 .reviews .pleaseSignIn {
   padding-top: 20px;
   text-align: center;
   color: #2c3034;
   position: relative;
   z-index: 5; }
-  /* line 501, _items.scss */
+  /* line 527, _items.scss */
   .reviews .pleaseSignIn a {
     color: #3dd861;
     cursor: pointer; }
 
 /* User Information */
-/* line 510, _items.scss */
+/* line 536, _items.scss */
 .coverImageWrap img {
   width: 100%; }
-/* line 513, _items.scss */
+/* line 539, _items.scss */
 .coverImageWrap .coverOverlay {
   background: url("../img/coverPhotoFade.png") bottom left repeat-x;
   position: absolute;
@@ -533,17 +559,17 @@
   margin: 0 15px;
   opacity: .5; }
 
-/* line 524, _items.scss */
+/* line 550, _items.scss */
 .userInfoLeft {
   margin-top: -75px; }
-  /* line 526, _items.scss */
+  /* line 552, _items.scss */
   .userInfoLeft .userAvatar {
     width: 100%;
     border-radius: 50%;
     border: 3px solid white;
     margin: 0 15px;
     float: left; }
-  /* line 533, _items.scss */
+  /* line 559, _items.scss */
   .userInfoLeft .buddyBtn {
     float: left;
     clear: left;
@@ -560,18 +586,18 @@
     margin: 10px 20px 0 20px;
     padding: .5% 0;
     box-shadow: none; }
-    /* line 549, _items.scss */
+    /* line 575, _items.scss */
     .userInfoLeft .buddyBtn:hover {
       color: white;
       background: #3dd861; }
-    /* line 553, _items.scss */
+    /* line 579, _items.scss */
     .userInfoLeft .buddyBtn:active, .userInfoLeft .buddyBtn:focus, .userInfoLeft .buddyBtn:visited {
       text-decoration: none; }
 
-/* line 560, _items.scss */
+/* line 586, _items.scss */
 .userInfoMiddle {
   margin-top: -25px; }
-  /* line 562, _items.scss */
+  /* line 588, _items.scss */
   .userInfoMiddle h1 {
     font-family: "Bebas Neue", "Khand", sans-serif;
     font-size: 40px;
@@ -579,7 +605,7 @@
     border: none;
     padding: 0;
     margin: -7px 0 0 0; }
-  /* line 570, _items.scss */
+  /* line 596, _items.scss */
   .userInfoMiddle h2 {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
@@ -588,10 +614,10 @@
     letter-spacing: 1px;
     padding: 0;
     margin: 0; }
-    /* line 578, _items.scss */
+    /* line 604, _items.scss */
     .userInfoMiddle h2 span {
       color: #2c3034; }
-  /* line 582, _items.scss */
+  /* line 608, _items.scss */
   .userInfoMiddle h3 {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
@@ -604,7 +630,7 @@
     border-top: 1px solid rgba(44, 48, 52, 0.05);
     padding: 5px 0 0 0;
     margin: 5px 0 0 0; }
-  /* line 595, _items.scss */
+  /* line 621, _items.scss */
   .userInfoMiddle p {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
@@ -612,17 +638,17 @@
     padding: 0;
     margin: 0; }
 
-/* line 604, _items.scss */
+/* line 630, _items.scss */
 .userInfoRight ul {
   margin: 15px 0; }
-  /* line 606, _items.scss */
+  /* line 632, _items.scss */
   .userInfoRight ul li {
     display: inline;
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
     padding: 0;
     text-align: center; }
-    /* line 612, _items.scss */
+    /* line 638, _items.scss */
     .userInfoRight ul li img {
       width: 80%;
       margin: 0 10% 5px 10%;
@@ -631,56 +657,56 @@
       position: relative;
       clear: right;
       cursor: pointer; }
-    /* line 622, _items.scss */
+    /* line 648, _items.scss */
     .userInfoRight ul li:nth-child(1) img {
       border: 2px solid #3dd861; }
-      /* line 624, _items.scss */
+      /* line 650, _items.scss */
       .userInfoRight ul li:nth-child(1) img:hover {
         background: #3dd861; }
-    /* line 630, _items.scss */
+    /* line 656, _items.scss */
     .userInfoRight ul li:nth-child(2) img {
       border: 2px solid #fcd31c; }
-      /* line 632, _items.scss */
+      /* line 658, _items.scss */
       .userInfoRight ul li:nth-child(2) img:hover {
         background: #fcd31c; }
-    /* line 638, _items.scss */
+    /* line 664, _items.scss */
     .userInfoRight ul li:nth-child(3) img {
       border: 2px solid #f7253e; }
-      /* line 640, _items.scss */
+      /* line 666, _items.scss */
       .userInfoRight ul li:nth-child(3) img:hover {
         background: #f7253e; }
 
-/* line 649, _items.scss */
+/* line 675, _items.scss */
 .achievements .progressWrap {
   margin-top: 20px; }
-  /* line 651, _items.scss */
+  /* line 677, _items.scss */
   .achievements .progressWrap .progressBackground {
     border: 2px solid rgba(44, 48, 52, 0.2);
     width: 100%;
     height: 30px; }
-  /* line 656, _items.scss */
+  /* line 682, _items.scss */
   .achievements .progressWrap .progressBar {
     background: #3dd861;
     width: 75%;
     height: 27px;
     margin: -28px 0 0 2px; }
-  /* line 662, _items.scss */
+  /* line 688, _items.scss */
   .achievements .progressWrap h4 {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     color: #2c3034;
     text-align: center; }
-/* line 669, _items.scss */
+/* line 695, _items.scss */
 .achievements ul {
   margin: 15px 0; }
-  /* line 671, _items.scss */
+  /* line 697, _items.scss */
   .achievements ul li {
     display: inline;
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
     padding: 0;
     text-align: center; }
-    /* line 677, _items.scss */
+    /* line 703, _items.scss */
     .achievements ul li img {
       width: 80%;
       margin: 10px 10%;
@@ -690,42 +716,42 @@
       position: relative;
       clear: right; }
 
-/* line 689, _items.scss */
+/* line 715, _items.scss */
 .userStats {
   padding: 0; }
-  /* line 691, _items.scss */
+  /* line 717, _items.scss */
   .userStats li {
     display: inline;
     width: 15%;
     margin-right: 10px;
     float: left; }
-    /* line 696, _items.scss */
+    /* line 722, _items.scss */
     .userStats li img {
       width: 100%;
       border-radius: 50%;
       padding: 2px;
       background: rgba(44, 48, 52, 0.2); }
-  /* line 704, _items.scss */
+  /* line 730, _items.scss */
   .userStats li.active:nth-child(1) img {
     background: #3dd861; }
-  /* line 709, _items.scss */
+  /* line 735, _items.scss */
   .userStats li.active:nth-child(2) img {
     background: #fcd31c; }
-  /* line 714, _items.scss */
+  /* line 740, _items.scss */
   .userStats li.active:nth-child(3) img {
     background: #f7253e; }
-  /* line 719, _items.scss */
+  /* line 745, _items.scss */
   .userStats li.active:nth-child(4) img {
     background: #2c3034; }
 
 /* User Favorites */
-/* line 727, _items.scss */
+/* line 753, _items.scss */
 .userFavorites ul {
   height: 100%; }
-  /* line 729, _items.scss */
+  /* line 755, _items.scss */
   .userFavorites ul div {
     border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 732, _items.scss */
+  /* line 758, _items.scss */
   .userFavorites ul li {
     background: rgba(44, 48, 52, 0.2);
     background-size: 100%;
@@ -736,7 +762,7 @@
     width: 20%;
     margin: 2.5%;
     position: relative; }
-    /* line 742, _items.scss */
+    /* line 768, _items.scss */
     .userFavorites ul li a {
       background-size: 100%;
       background-repeat: no-repeat;
@@ -744,42 +770,42 @@
       padding-top: 80%;
       border: none;
       text-align: center; }
-      /* line 749, _items.scss */
+      /* line 775, _items.scss */
       .userFavorites ul li a:active {
         color: #2c3034; }
-      /* line 752, _items.scss */
+      /* line 778, _items.scss */
       .userFavorites ul li a:hover {
         background: none;
         border: none; }
-/* line 759, _items.scss */
+/* line 785, _items.scss */
 .userFavorites li.active > a,
 .userFavorites li.active > a:hover,
 .userFavorites li.active > a:focus,
 .userFavorites li.active > a:active {
   background: none;
   border: none; }
-/* line 766, _items.scss */
+/* line 792, _items.scss */
 .userFavorites li:nth-child(1) {
   border-color: #3dd861; }
-  /* line 768, _items.scss */
+  /* line 794, _items.scss */
   .userFavorites li:nth-child(1):hover, .userFavorites li:nth-child(1).active {
     background-color: #3dd861; }
-/* line 773, _items.scss */
+/* line 799, _items.scss */
 .userFavorites li:nth-child(2) {
   border-color: #fcd31c; }
-  /* line 775, _items.scss */
+  /* line 801, _items.scss */
   .userFavorites li:nth-child(2):hover, .userFavorites li:nth-child(2).active {
     background-color: #fcd31c; }
-/* line 780, _items.scss */
+/* line 806, _items.scss */
 .userFavorites li:nth-child(3) {
   border-color: #f7253e; }
-  /* line 782, _items.scss */
+  /* line 808, _items.scss */
   .userFavorites li:nth-child(3):hover, .userFavorites li:nth-child(3).active {
     background-color: #f7253e; }
-/* line 787, _items.scss */
+/* line 813, _items.scss */
 .userFavorites li:nth-child(4) {
   border-color: #2c3034; }
-  /* line 789, _items.scss */
+  /* line 815, _items.scss */
   .userFavorites li:nth-child(4):hover, .userFavorites li:nth-child(4).active {
     background-color: #2c3034; }
 

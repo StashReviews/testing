@@ -59,7 +59,7 @@ angular.module('DeViine.controllers', [])
         .then(function(currentUser) {
           location.reload();
           $modalInstance.close(currentUser);
-
+          ( new Firebase(dvRef + '/users/' + userId + '/profile') ).set(profile);
           $state.go('root.home');
         }, function(error) {
           console.log(error);
@@ -166,11 +166,13 @@ angular.module('DeViine.controllers', [])
   }])
   .controller('usersCtrl', ['$scope', 'usersService', 'ratingsService', function($scope, usersService, ratingsService) {
 
-
   }])
   .controller('userProfileCtrl', ['$scope', '$stateParams', 'usersService', function($scope, $stateParams, usersService) {
     
     $scope.user = usersService.getProfile('users', $stateParams.userId);
+
+  }])
+  .controller('userBuddyCtrl', ['$scope', 'usersService', function($scope, usersService) {
 
   }])
   .controller('dispensariesCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {

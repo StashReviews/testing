@@ -1,0 +1,21 @@
+<div class="modal-header">
+	<h1 class="modalTitle">Your review</h1>
+	<h2 class="modalSubtitle">Would you like this to be a public or private review?</h2>
+	<ul>
+		<li>PUBLIC: Anybody can see your review on either the page you left it and on your user profile.</li>
+		<li>PRIVATE: Only you and your buddies can see your review on your user profile.</li>
+	</ul>
+	<a ng-click="close()" class="close-modal">X</a>
+</div>
+<div class="modal-body">
+	<form class="form-horizontal">
+		<div class="form-group">
+			<div class="btn-group btn-group-justified">
+				<ul class="btn-group">
+					<li type="button" ng-click="public()" class="btn widebtn">Public</li>
+					<li type="button" ng-click="private()" class="btn widebtn">Private</li>
+				</ul>
+			</div>
+		</div>
+	</form>
+</div>

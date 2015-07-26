@@ -414,6 +414,16 @@
           }
         }
       }
+      .reviewBanner:after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        right: -11px;
+        border: 11px solid $dvGray;
+        border-right-color: transparent;
+        z-index: -1;
+      }
     }
     #reviewInput {
       border: 2px solid $dvGray20;
@@ -430,6 +440,22 @@
       &:focus {
         border-color: $dvGray;
       }
+    }
+    .reviewType {
+      float: left;
+      width: 100%;
+      padding: 10px auto;
+      margin-top: 5px;
+      font-family: $dvTextFont;
+      font-size: 11px;
+        #privateReview {
+          margin-right: 5px;
+        }
+        a {
+          color: $dvGreen;
+          font-size: 9px;
+          text-transform: uppercase;
+        }
     }
     #submitReview {
       font-family: $dvTextFont;

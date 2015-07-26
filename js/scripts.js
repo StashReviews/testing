@@ -23,7 +23,7 @@ window.onload = (function() {
 	// Mobile Menu Drawer Open / Close Ends Here
 
 	// User Dropdown Starts Here
-    $(".avatar").click(function(){
+    $(".dropdown .avatar").click(function(){
 		$('.userDropdown').toggle();
 	});
 	$(".userDropdown li").click(function(){
