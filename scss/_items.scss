@@ -48,6 +48,29 @@
   padding: 0;
 }
 
+.favorite {
+  width: 40px;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  cursor: pointer;
+  z-index: 2;
+  &:hover {
+    .favoriteIcon {
+      background: $dvRed;
+    }
+  }
+  .favoriteIcon {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid $dvRed;
+    background: $dvGray20;
+    &:hover {
+      background: $dvRed;
+    }
+  }
+}
+
 .strainChemistry,
 .concentrateType,
 .edibleType {

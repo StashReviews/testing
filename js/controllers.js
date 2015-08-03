@@ -59,7 +59,6 @@ angular.module('DeViine.controllers', [])
         .then(function(currentUser) {
           location.reload();
           $modalInstance.close(currentUser);
-          ( new Firebase(dvRef + '/users/' + userId + '/profile') ).set(profile);
           $state.go('root.home');
         }, function(error) {
           console.log(error);

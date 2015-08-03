@@ -59,6 +59,20 @@
       padding-top: 50px;
       margin-top: 1px;
     }
+    .favorite {
+      width: 50px;
+      float: right;
+      .favoriteIcon {
+        width: 100%;
+        border-radius: 50%;
+        border: 2px solid $dvGray20;
+        background: $dvGray20;
+        &:hover {
+          background: $dvRed;
+          border-color: $dvRed;
+        }
+      }
+    }
   }
   .ratingDisplay {
     font-family: $dvTextFont;

@@ -54,6 +54,27 @@
   padding: 0; }
 
 /* line 51, _items.scss */
+.favorite {
+  width: 40px;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  cursor: pointer;
+  z-index: 2; }
+  /* line 59, _items.scss */
+  .favorite:hover .favoriteIcon {
+    background: #f7253e; }
+  /* line 63, _items.scss */
+  .favorite .favoriteIcon {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid #f7253e;
+    background: rgba(44, 48, 52, 0.2); }
+    /* line 68, _items.scss */
+    .favorite .favoriteIcon:hover {
+      background: #f7253e; }
+
+/* line 74, _items.scss */
 .strainChemistry,
 .concentrateType,
 .edibleType {
@@ -61,19 +82,19 @@
   padding: 0;
   margin: -8px 0 0 0; }
 
-/* line 58, _items.scss */
+/* line 81, _items.scss */
 .strainChemistry {
   color: #3dd861; }
 
-/* line 61, _items.scss */
+/* line 84, _items.scss */
 .concentrateType {
   color: #fcd31c; }
 
-/* line 64, _items.scss */
+/* line 87, _items.scss */
 .edibleType {
   color: #f7253e; }
 
-/* line 68, _items.scss */
+/* line 91, _items.scss */
 .businessName,
 .strainProducer,
 .edibleProcessor,
@@ -85,7 +106,7 @@
   margin: 0px 0 10px 0;
   padding: 0; }
 
-/* line 80, _items.scss */
+/* line 103, _items.scss */
 .dispensaryAddress,
 .businessAddress,
 .producedBy {
@@ -97,7 +118,7 @@
   padding: 0;
   margin: 0; }
 
-/* line 92, _items.scss */
+/* line 115, _items.scss */
 .viewOnMap {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -106,17 +127,17 @@
   padding-top: 10px;
   color: #2c3034;
   cursor: pointer; }
-  /* line 100, _items.scss */
+  /* line 123, _items.scss */
   .viewOnMap:hover {
     color: #f7253e; }
 
-/* line 105, _items.scss */
+/* line 128, _items.scss */
 .contactInfo {
   position: relative;
   top: -20px;
   float: none;
   clear: left; }
-  /* line 110, _items.scss */
+  /* line 133, _items.scss */
   .contactInfo .dispensaryWebsite a,
   .contactInfo .dispensaryEmail a,
   .contactInfo .dispensaryPhone a,
@@ -127,7 +148,7 @@
     font-size: 14px;
     font-weight: bold;
     color: rgba(44, 48, 52, 0.2); }
-    /* line 120, _items.scss */
+    /* line 143, _items.scss */
     .contactInfo .dispensaryWebsite a:hover,
     .contactInfo .dispensaryEmail a:hover,
     .contactInfo .dispensaryPhone a:hover,
@@ -136,7 +157,7 @@
     .contactInfo .businessPhone a:hover {
       color: #2c3034; }
 
-/* line 126, _items.scss */
+/* line 149, _items.scss */
 .userRatingDisplay {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -147,11 +168,11 @@
   z-index: 3;
   top: -45px; }
 
-/* line 138, _items.scss */
+/* line 161, _items.scss */
 .strainDescriptionSubHeader {
   margin: -6px 0 0 0; }
 
-/* line 141, _items.scss */
+/* line 164, _items.scss */
 .strainDescription,
 .edibleDescription {
   font-family: "Open Sans", sans-serif;
@@ -160,7 +181,7 @@
   margin: 10px 0 0 0;
   padding: 0; }
 
-/* line 150, _items.scss */
+/* line 173, _items.scss */
 .dispensaryGallery,
 .dealGallery,
 .strainGallery,
@@ -172,13 +193,13 @@
 
 /* Strain Zoom Start */
 /*Some CSS*/
-/* line 163, _items.scss */
+/* line 186, _items.scss */
 #strainGalleryWrap {
   margin: auto;
   position: relative;
   overflow: hidden; }
 
-/* line 169, _items.scss */
+/* line 192, _items.scss */
 #strainGalleryWrap:hover #strainGallery {
   -webkit-filter: grayscale(1);
   -webkit-transition: .3s;
@@ -188,7 +209,7 @@
   transition: .3s; }
 
 /*Lets create the magnifying glass*/
-/* line 180, _items.scss */
+/* line 203, _items.scss */
 #zoom {
   width: 275px;
   height: 275px;
@@ -201,11 +222,11 @@
   cursor: none; }
 
 /*To solve overlap bug at the edges during magnification*/
-/* line 196, _items.scss */
+/* line 219, _items.scss */
 #strainGallery {
   display: block; }
 
-/* line 197, _items.scss */
+/* line 220, _items.scss */
 #strainGallery:hover {
   -webkit-transition: .3s;
   -moz-transition: .3s;
@@ -214,57 +235,57 @@
   transition: .3s; }
 
 /* Strain Zoom End */
-/* line 207, _items.scss */
+/* line 230, _items.scss */
 .strainGalleryMobile,
 .dispensaryGalleryMobile,
 .concentrateGalleryMobile,
 .edibleGalleryMobile {
   display: none; }
 
-/* line 213, _items.scss */
+/* line 236, _items.scss */
 .currentDeals {
   display: none; }
 
-/* line 218, _items.scss */
+/* line 241, _items.scss */
 .dispensaryHours {
   background: #2c3034;
   width: 100%; }
-  /* line 221, _items.scss */
+  /* line 244, _items.scss */
   .dispensaryHours tr {
     color: white; }
-  /* line 224, _items.scss */
+  /* line 247, _items.scss */
   .dispensaryHours tr.dvGreen {
     color: #3dd861; }
-  /* line 227, _items.scss */
+  /* line 250, _items.scss */
   .dispensaryHours td {
     font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     padding: 10px 20px 4px 20px;
     border-bottom: thin solid rgba(255, 255, 255, 0.1); }
-  /* line 234, _items.scss */
+  /* line 257, _items.scss */
   .dispensaryHours td:nth-child(2) {
     text-align: right; }
 
-/* line 240, _items.scss */
+/* line 263, _items.scss */
 .dealDetails h4 {
   font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase;
   font-size: 22px;
   color: #2c3034;
   margin: 20px 0 0 0; }
-/* line 247, _items.scss */
+/* line 270, _items.scss */
 .dealDetails p {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #2c3034; }
-/* line 253, _items.scss */
+/* line 276, _items.scss */
 .dealDetails .redemptionDetails {
   border-bottom: 1px solid rgba(44, 48, 52, 0.2);
   padding-bottom: 15px;
   margin: 10px 0 20px 0; }
-  /* line 257, _items.scss */
+  /* line 280, _items.scss */
   .dealDetails .redemptionDetails div .redeemDeal {
     background: #f7253e;
     font-family: "Bebas Neue", "Khand", sans-serif;
@@ -273,17 +294,17 @@
     color: white;
     width: 100%;
     padding: 10px 20px 5px 20px; }
-    /* line 265, _items.scss */
+    /* line 288, _items.scss */
     .dealDetails .redemptionDetails div .redeemDeal:hover {
       background: #2c3034; }
-  /* line 269, _items.scss */
+  /* line 292, _items.scss */
   .dealDetails .redemptionDetails div label {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 16px;
     color: #2c3034;
     float: left; }
-  /* line 276, _items.scss */
+  /* line 299, _items.scss */
   .dealDetails .redemptionDetails div .distanceAway,
   .dealDetails .redemptionDetails div .daysLeft {
     color: #f7253e;
@@ -295,7 +316,7 @@
     float: left;
     width: 25%; }
 
-/* line 290, _items.scss */
+/* line 313, _items.scss */
 .flavorProfile,
 .positiveEffects,
 .negativeEffects {
@@ -304,29 +325,29 @@
   font-size: 20px;
   color: #2c3034;
   text-align: left; }
-  /* line 298, _items.scss */
+  /* line 321, _items.scss */
   .flavorProfile li,
   .positiveEffects li,
   .negativeEffects li {
     line-height: 18px;
     margin-bottom: 10px; }
-    /* line 301, _items.scss */
+    /* line 324, _items.scss */
     .flavorProfile li:nth-child(1),
     .positiveEffects li:nth-child(1),
     .negativeEffects li:nth-child(1) {
       border-bottom: 3px solid #3dd861; }
-    /* line 304, _items.scss */
+    /* line 327, _items.scss */
     .flavorProfile li:nth-child(2),
     .positiveEffects li:nth-child(2),
     .negativeEffects li:nth-child(2) {
       border-bottom: 3px solid #fcd31c; }
-    /* line 307, _items.scss */
+    /* line 330, _items.scss */
     .flavorProfile li:nth-child(3),
     .positiveEffects li:nth-child(3),
     .negativeEffects li:nth-child(3) {
       border-bottom: 3px solid #f7253e; }
 
-/* line 312, _items.scss */
+/* line 335, _items.scss */
 .strainProfileTitle,
 .concentrateProfileTitle,
 .edibleProfileTitle {
@@ -337,7 +358,7 @@
   margin: 0;
   padding-bottom: 10px; }
 
-/* line 323, _items.scss */
+/* line 346, _items.scss */
 .donut-chart {
   width: 100%;
   height: 100%;
@@ -345,7 +366,7 @@
   float: left; }
 
 /* Potency */
-/* line 331, _items.scss */
+/* line 354, _items.scss */
 .thcPotency,
 .cbdPotency {
   margin: 0 auto;
@@ -355,7 +376,7 @@
   text-transform: uppercase;
   font-size: 40px;
   color: #2c3034; }
-  /* line 340, _items.scss */
+  /* line 363, _items.scss */
   .thcPotency label,
   .cbdPotency label {
     position: relative;
@@ -363,16 +384,16 @@
     font-size: 20px;
     color: rgba(44, 48, 52, 0.2); }
 
-/* line 348, _items.scss */
+/* line 371, _items.scss */
 .ediblePotency li:nth-child(1) {
   background: #3dd861; }
-/* line 351, _items.scss */
+/* line 374, _items.scss */
 .ediblePotency li:nth-child(2) {
   background: #fcd31c; }
-/* line 354, _items.scss */
+/* line 377, _items.scss */
 .ediblePotency li:nth-child(3) {
   background: #f7253e; }
-/* line 357, _items.scss */
+/* line 380, _items.scss */
 .ediblePotency li {
   font-size: 40px;
   font-family: "Bebas Neue", "Khand", sans-serif;
@@ -382,22 +403,22 @@
   line-height: 14px;
   padding-top: 15px;
   padding: 20px 0 5px 0; }
-  /* line 366, _items.scss */
+  /* line 389, _items.scss */
   .ediblePotency li span {
     font-size: 24px; }
-  /* line 369, _items.scss */
+  /* line 392, _items.scss */
   .ediblePotency li .total {
     color: rgba(44, 48, 52, 0.5);
     font-size: 16px; }
 
 /* Reviews */
-/* line 378, _items.scss */
+/* line 401, _items.scss */
 .reviews .leaveReview {
   padding: 0; }
-  /* line 380, _items.scss */
+  /* line 403, _items.scss */
   .reviews .leaveReview .avatarWrap {
     float: left; }
-    /* line 382, _items.scss */
+    /* line 405, _items.scss */
     .reviews .leaveReview .avatarWrap .avatar {
       width: 40px;
       height: 40px;
@@ -409,7 +430,7 @@
       -webkit-transition: .5s;
       -moz-transition: .5s;
       -o-transition: .5s; }
-    /* line 394, _items.scss */
+    /* line 417, _items.scss */
     .reviews .leaveReview .avatarWrap .reviewBanner {
       float: left;
       position: absolute;
@@ -422,17 +443,17 @@
       background: #2c3034;
       top: 0;
       left: 10px; }
-      /* line 406, _items.scss */
+      /* line 429, _items.scss */
       .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner {
         color: white;
         text-decoration: none;
         opacity: .5;
         cursor: pointer;
         margin-left: 5px; }
-        /* line 412, _items.scss */
+        /* line 435, _items.scss */
         .reviews .leaveReview .avatarWrap .reviewBanner .closeReviewBanner:hover {
           opacity: 1; }
-    /* line 417, _items.scss */
+    /* line 440, _items.scss */
     .reviews .leaveReview .avatarWrap .reviewBanner:after {
       content: "";
       position: absolute;
@@ -442,7 +463,7 @@
       border: 11px solid #2c3034;
       border-right-color: transparent;
       z-index: -1; }
-  /* line 428, _items.scss */
+  /* line 451, _items.scss */
   .reviews .leaveReview #reviewInput {
     border: 2px solid rgba(44, 48, 52, 0.2);
     font-family: "Open Sans", sans-serif;
@@ -453,10 +474,10 @@
     float: right;
     height: 100px;
     width: 100%; }
-    /* line 438, _items.scss */
+    /* line 461, _items.scss */
     .reviews .leaveReview #reviewInput:hover, .reviews .leaveReview #reviewInput:active, .reviews .leaveReview #reviewInput:focus {
       border-color: #2c3034; }
-  /* line 444, _items.scss */
+  /* line 467, _items.scss */
   .reviews .leaveReview .reviewType {
     float: left;
     width: 100%;
@@ -464,15 +485,15 @@
     margin-top: 5px;
     font-family: "Open Sans", sans-serif;
     font-size: 11px; }
-    /* line 451, _items.scss */
+    /* line 474, _items.scss */
     .reviews .leaveReview .reviewType #privateReview {
       margin-right: 5px; }
-    /* line 454, _items.scss */
+    /* line 477, _items.scss */
     .reviews .leaveReview .reviewType a {
       color: #3dd861;
       font-size: 9px;
       text-transform: uppercase; }
-  /* line 460, _items.scss */
+  /* line 483, _items.scss */
   .reviews .leaveReview #submitReview {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
@@ -485,20 +506,20 @@
     padding: 10px;
     float: right;
     width: 100%; }
-    /* line 472, _items.scss */
+    /* line 495, _items.scss */
     .reviews .leaveReview #submitReview:hover {
       background: #2c3034;
       color: white; }
-/* line 478, _items.scss */
+/* line 501, _items.scss */
 .reviews .totalReviews {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   text-align: center; }
-/* line 483, _items.scss */
+/* line 506, _items.scss */
 .reviews #reviewsDiv {
   margin-top: 20px;
   padding: 0; }
-  /* line 486, _items.scss */
+  /* line 509, _items.scss */
   .reviews #reviewsDiv h4 {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
@@ -507,7 +528,7 @@
     color: #2c3034;
     padding: 10px 0 0 0;
     border-top: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 495, _items.scss */
+  /* line 518, _items.scss */
   .reviews #reviewsDiv h6 {
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
@@ -515,14 +536,14 @@
     font-weight: bold;
     color: #3dd861;
     margin: 0px 0 3px 0; }
-  /* line 503, _items.scss */
+  /* line 526, _items.scss */
   .reviews #reviewsDiv p {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     color: #2c3034;
     margin: 0;
     padding: 0 0 8px 60px; }
-  /* line 510, _items.scss */
+  /* line 533, _items.scss */
   .reviews #reviewsDiv div {
     border-radius: 50%;
     float: left;
@@ -532,23 +553,23 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; }
-/* line 521, _items.scss */
+/* line 544, _items.scss */
 .reviews .pleaseSignIn {
   padding-top: 20px;
   text-align: center;
   color: #2c3034;
   position: relative;
   z-index: 5; }
-  /* line 527, _items.scss */
+  /* line 550, _items.scss */
   .reviews .pleaseSignIn a {
     color: #3dd861;
     cursor: pointer; }
 
 /* User Information */
-/* line 536, _items.scss */
+/* line 559, _items.scss */
 .coverImageWrap img {
   width: 100%; }
-/* line 539, _items.scss */
+/* line 562, _items.scss */
 .coverImageWrap .coverOverlay {
   background: url("../img/coverPhotoFade.png") bottom left repeat-x;
   position: absolute;
@@ -559,17 +580,17 @@
   margin: 0 15px;
   opacity: .5; }
 
-/* line 550, _items.scss */
+/* line 573, _items.scss */
 .userInfoLeft {
   margin-top: -75px; }
-  /* line 552, _items.scss */
+  /* line 575, _items.scss */
   .userInfoLeft .userAvatar {
     width: 100%;
     border-radius: 50%;
     border: 3px solid white;
     margin: 0 15px;
     float: left; }
-  /* line 559, _items.scss */
+  /* line 582, _items.scss */
   .userInfoLeft .buddyBtn {
     float: left;
     clear: left;
@@ -586,18 +607,18 @@
     margin: 10px 20px 0 20px;
     padding: .5% 0;
     box-shadow: none; }
-    /* line 575, _items.scss */
+    /* line 598, _items.scss */
     .userInfoLeft .buddyBtn:hover {
       color: white;
       background: #3dd861; }
-    /* line 579, _items.scss */
+    /* line 602, _items.scss */
     .userInfoLeft .buddyBtn:active, .userInfoLeft .buddyBtn:focus, .userInfoLeft .buddyBtn:visited {
       text-decoration: none; }
 
-/* line 586, _items.scss */
+/* line 609, _items.scss */
 .userInfoMiddle {
   margin-top: -25px; }
-  /* line 588, _items.scss */
+  /* line 611, _items.scss */
   .userInfoMiddle h1 {
     font-family: "Bebas Neue", "Khand", sans-serif;
     font-size: 40px;
@@ -605,7 +626,7 @@
     border: none;
     padding: 0;
     margin: -7px 0 0 0; }
-  /* line 596, _items.scss */
+  /* line 619, _items.scss */
   .userInfoMiddle h2 {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
@@ -614,10 +635,10 @@
     letter-spacing: 1px;
     padding: 0;
     margin: 0; }
-    /* line 604, _items.scss */
+    /* line 627, _items.scss */
     .userInfoMiddle h2 span {
       color: #2c3034; }
-  /* line 608, _items.scss */
+  /* line 631, _items.scss */
   .userInfoMiddle h3 {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
@@ -630,7 +651,7 @@
     border-top: 1px solid rgba(44, 48, 52, 0.05);
     padding: 5px 0 0 0;
     margin: 5px 0 0 0; }
-  /* line 621, _items.scss */
+  /* line 644, _items.scss */
   .userInfoMiddle p {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
@@ -638,17 +659,17 @@
     padding: 0;
     margin: 0; }
 
-/* line 630, _items.scss */
+/* line 653, _items.scss */
 .userInfoRight ul {
   margin: 15px 0; }
-  /* line 632, _items.scss */
+  /* line 655, _items.scss */
   .userInfoRight ul li {
     display: inline;
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
     padding: 0;
     text-align: center; }
-    /* line 638, _items.scss */
+    /* line 661, _items.scss */
     .userInfoRight ul li img {
       width: 80%;
       margin: 0 10% 5px 10%;
@@ -657,56 +678,56 @@
       position: relative;
       clear: right;
       cursor: pointer; }
-    /* line 648, _items.scss */
+    /* line 671, _items.scss */
     .userInfoRight ul li:nth-child(1) img {
       border: 2px solid #3dd861; }
-      /* line 650, _items.scss */
+      /* line 673, _items.scss */
       .userInfoRight ul li:nth-child(1) img:hover {
         background: #3dd861; }
-    /* line 656, _items.scss */
+    /* line 679, _items.scss */
     .userInfoRight ul li:nth-child(2) img {
       border: 2px solid #fcd31c; }
-      /* line 658, _items.scss */
+      /* line 681, _items.scss */
       .userInfoRight ul li:nth-child(2) img:hover {
         background: #fcd31c; }
-    /* line 664, _items.scss */
+    /* line 687, _items.scss */
     .userInfoRight ul li:nth-child(3) img {
       border: 2px solid #f7253e; }
-      /* line 666, _items.scss */
+      /* line 689, _items.scss */
       .userInfoRight ul li:nth-child(3) img:hover {
         background: #f7253e; }
 
-/* line 675, _items.scss */
+/* line 698, _items.scss */
 .achievements .progressWrap {
   margin-top: 20px; }
-  /* line 677, _items.scss */
+  /* line 700, _items.scss */
   .achievements .progressWrap .progressBackground {
     border: 2px solid rgba(44, 48, 52, 0.2);
     width: 100%;
     height: 30px; }
-  /* line 682, _items.scss */
+  /* line 705, _items.scss */
   .achievements .progressWrap .progressBar {
     background: #3dd861;
     width: 75%;
     height: 27px;
     margin: -28px 0 0 2px; }
-  /* line 688, _items.scss */
+  /* line 711, _items.scss */
   .achievements .progressWrap h4 {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     color: #2c3034;
     text-align: center; }
-/* line 695, _items.scss */
+/* line 718, _items.scss */
 .achievements ul {
   margin: 15px 0; }
-  /* line 697, _items.scss */
+  /* line 720, _items.scss */
   .achievements ul li {
     display: inline;
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
     padding: 0;
     text-align: center; }
-    /* line 703, _items.scss */
+    /* line 726, _items.scss */
     .achievements ul li img {
       width: 80%;
       margin: 10px 10%;
@@ -716,42 +737,42 @@
       position: relative;
       clear: right; }
 
-/* line 715, _items.scss */
+/* line 738, _items.scss */
 .userStats {
   padding: 0; }
-  /* line 717, _items.scss */
+  /* line 740, _items.scss */
   .userStats li {
     display: inline;
     width: 15%;
     margin-right: 10px;
     float: left; }
-    /* line 722, _items.scss */
+    /* line 745, _items.scss */
     .userStats li img {
       width: 100%;
       border-radius: 50%;
       padding: 2px;
       background: rgba(44, 48, 52, 0.2); }
-  /* line 730, _items.scss */
+  /* line 753, _items.scss */
   .userStats li.active:nth-child(1) img {
     background: #3dd861; }
-  /* line 735, _items.scss */
+  /* line 758, _items.scss */
   .userStats li.active:nth-child(2) img {
     background: #fcd31c; }
-  /* line 740, _items.scss */
+  /* line 763, _items.scss */
   .userStats li.active:nth-child(3) img {
     background: #f7253e; }
-  /* line 745, _items.scss */
+  /* line 768, _items.scss */
   .userStats li.active:nth-child(4) img {
     background: #2c3034; }
 
 /* User Favorites */
-/* line 753, _items.scss */
+/* line 776, _items.scss */
 .userFavorites ul {
   height: 100%; }
-  /* line 755, _items.scss */
+  /* line 778, _items.scss */
   .userFavorites ul div {
     border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 758, _items.scss */
+  /* line 781, _items.scss */
   .userFavorites ul li {
     background: rgba(44, 48, 52, 0.2);
     background-size: 100%;
@@ -762,7 +783,7 @@
     width: 20%;
     margin: 2.5%;
     position: relative; }
-    /* line 768, _items.scss */
+    /* line 791, _items.scss */
     .userFavorites ul li a {
       background-size: 100%;
       background-repeat: no-repeat;
@@ -770,42 +791,42 @@
       padding-top: 80%;
       border: none;
       text-align: center; }
-      /* line 775, _items.scss */
+      /* line 798, _items.scss */
       .userFavorites ul li a:active {
         color: #2c3034; }
-      /* line 778, _items.scss */
+      /* line 801, _items.scss */
       .userFavorites ul li a:hover {
         background: none;
         border: none; }
-/* line 785, _items.scss */
+/* line 808, _items.scss */
 .userFavorites li.active > a,
 .userFavorites li.active > a:hover,
 .userFavorites li.active > a:focus,
 .userFavorites li.active > a:active {
   background: none;
   border: none; }
-/* line 792, _items.scss */
+/* line 815, _items.scss */
 .userFavorites li:nth-child(1) {
   border-color: #3dd861; }
-  /* line 794, _items.scss */
+  /* line 817, _items.scss */
   .userFavorites li:nth-child(1):hover, .userFavorites li:nth-child(1).active {
     background-color: #3dd861; }
-/* line 799, _items.scss */
+/* line 822, _items.scss */
 .userFavorites li:nth-child(2) {
   border-color: #fcd31c; }
-  /* line 801, _items.scss */
+  /* line 824, _items.scss */
   .userFavorites li:nth-child(2):hover, .userFavorites li:nth-child(2).active {
     background-color: #fcd31c; }
-/* line 806, _items.scss */
+/* line 829, _items.scss */
 .userFavorites li:nth-child(3) {
   border-color: #f7253e; }
-  /* line 808, _items.scss */
+  /* line 831, _items.scss */
   .userFavorites li:nth-child(3):hover, .userFavorites li:nth-child(3).active {
     background-color: #f7253e; }
-/* line 813, _items.scss */
+/* line 836, _items.scss */
 .userFavorites li:nth-child(4) {
   border-color: #2c3034; }
-  /* line 815, _items.scss */
+  /* line 838, _items.scss */
   .userFavorites li:nth-child(4):hover, .userFavorites li:nth-child(4).active {
     background-color: #2c3034; }
 
@@ -1982,7 +2003,21 @@
       width: 250px;
       padding-top: 50px;
       margin-top: 1px; }
-  /* line 63, partials/_rating.scss */
+    /* line 62, partials/_rating.scss */
+    .rating .ratingBarWrap .favorite {
+      width: 50px;
+      float: right; }
+      /* line 65, partials/_rating.scss */
+      .rating .ratingBarWrap .favorite .favoriteIcon {
+        width: 100%;
+        border-radius: 50%;
+        border: 2px solid rgba(44, 48, 52, 0.2);
+        background: rgba(44, 48, 52, 0.2); }
+        /* line 70, partials/_rating.scss */
+        .rating .ratingBarWrap .favorite .favoriteIcon:hover {
+          background: #f7253e;
+          border-color: #f7253e; }
+  /* line 77, partials/_rating.scss */
   .rating .ratingDisplay {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
@@ -1993,7 +2028,7 @@
     z-index: 3;
     top: -75px; }
 
-/* line 80, partials/_rating.scss */
+/* line 94, partials/_rating.scss */
 .dealCard .rating,
 .dispensaryCard .rating,
 .strainCard .rating,
@@ -2003,7 +2038,7 @@
   height: 16%;
   margin: -6% 0 0 0;
   position: absolute; }
-  /* line 85, partials/_rating.scss */
+  /* line 99, partials/_rating.scss */
   .dealCard .rating .ratingBarWrap,
   .dispensaryCard .rating .ratingBarWrap,
   .strainCard .rating .ratingBarWrap,
@@ -2011,7 +2046,7 @@
   .edibleCard .rating .ratingBarWrap {
     width: 100%;
     height: 0; }
-    /* line 91, partials/_rating.scss */
+    /* line 105, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap svg,
     .dispensaryCard .rating .ratingBarWrap svg,
     .strainCard .rating .ratingBarWrap svg,
@@ -2019,14 +2054,14 @@
     .edibleCard .rating .ratingBarWrap svg {
       width: 101%;
       margin-left: -1px; }
-    /* line 95, partials/_rating.scss */
+    /* line 109, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap .rate,
     .dispensaryCard .rating .ratingBarWrap .rate,
     .strainCard .rating .ratingBarWrap .rate,
     .concentrateCard .rating .ratingBarWrap .rate,
     .edibleCard .rating .ratingBarWrap .rate {
       display: none; }
-    /* line 98, partials/_rating.scss */
+    /* line 112, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap div.ratingBar,
     .dispensaryCard .rating .ratingBarWrap div.ratingBar,
     .strainCard .rating .ratingBarWrap div.ratingBar,
@@ -2041,21 +2076,21 @@
       -ms-transition: all .7s ease;
       -o-transition: all .7s ease;
       transition: all .7s ease; }
-    /* line 110, partials/_rating.scss */
+    /* line 124, partials/_rating.scss */
     .dealCard .rating .ratingBarWrap .ratings .rateThis,
     .dispensaryCard .rating .ratingBarWrap .ratings .rateThis,
     .strainCard .rating .ratingBarWrap .ratings .rateThis,
     .concentrateCard .rating .ratingBarWrap .ratings .rateThis,
     .edibleCard .rating .ratingBarWrap .ratings .rateThis {
       display: none; }
-  /* line 115, partials/_rating.scss */
+  /* line 129, partials/_rating.scss */
   .dealCard .rating .ratingDisplay,
   .dispensaryCard .rating .ratingDisplay,
   .strainCard .rating .ratingDisplay,
   .concentrateCard .rating .ratingDisplay,
   .edibleCard .rating .ratingDisplay {
     display: none; }
-  /* line 118, partials/_rating.scss */
+  /* line 132, partials/_rating.scss */
   .dealCard .rating .userRatingDisplay,
   .dispensaryCard .rating .userRatingDisplay,
   .strainCard .rating .userRatingDisplay,
@@ -2063,19 +2098,19 @@
   .edibleCard .rating .userRatingDisplay {
     display: none; }
 
-/* line 124, partials/_rating.scss */
+/* line 138, partials/_rating.scss */
 .dispensaryRating .ratingBar {
   background-color: #2c3034; }
 
-/* line 127, partials/_rating.scss */
+/* line 141, partials/_rating.scss */
 .strainRating .ratingBar {
   background-color: #3dd861; }
 
-/* line 130, partials/_rating.scss */
+/* line 144, partials/_rating.scss */
 .concentrateRating .ratingBar {
   background-color: #fcd31c; }
 
-/* line 133, partials/_rating.scss */
+/* line 147, partials/_rating.scss */
 .edibleRating .ratingBar {
   background-color: #f7253e; }
 

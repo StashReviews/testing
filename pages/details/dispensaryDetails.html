@@ -11,6 +11,9 @@
 			</div>
 			<div class="col-md-9">
 				<h2 class="dispensaryName">{{ dispensary.name }}</h2>
+				<div class="favorite">
+		          <img class="favoriteIcon" src="img/icons/favoriteIcon.png">
+		        </div>
 				<address class="dispensaryAddress">{{ dispensary.location.street }}<br/>{{ dispensary.location.city }}, {{ dispensary.location.state }} {{ dispensary.location.zip }}</address>
 				<div ng-show="dispensary.geoX && dispensary.geoY">
 					<a href="https://www.google.com/maps/?q={{ dispensary.geoX }},{{ dispensary.geoY }}" target="_blank" class="viewOnMap">View On Map</a> <p ng-show="distanceToDispensary"><strong>{{ distanceToDispensary }}</strong> miles away.</p>
