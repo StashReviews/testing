@@ -36,9 +36,14 @@
   }
   /*----userProfile.html end----*/
   /*----home.html start----*/
+  .pageHeader {
+    display: none;
+  }
+  .pageMobileHeader {
+    display: inherit;
+  }
   #indexSummary {
     .howItWorks {
-      .dispensariesIcon,
       .concentratesIcon,
       .ediblesIcon,
       .strainsIcon {
@@ -91,8 +96,8 @@
       width: 68%;
     }
   }
-  .featured-dispensary-true,
-  .featured-deal-true,
+  .featured-concentrate-true,
+  .featured-edible-true,
   .featured-strain-true {
     left: -4.5%;
   }

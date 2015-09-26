@@ -1,6 +1,6 @@
 // @todo Add error handling.
 
-angular.module('DeViine.controllers', [])
+angular.module('Stash.controllers', [])
   /*
   .controller('pageCtrl', ['$scope', 'itemType', 'itemsService', function($scope, itemType, itemsService) {
     $scope.items = itemsService.getAll(itemType);
@@ -10,7 +10,7 @@ angular.module('DeViine.controllers', [])
     $scope.itemDetails = itemsService.get(itemType, $stateParams.itemId);
   }])
   */
-  .controller('DeViineCtrl', ['$scope', '$state', '$modal', 'dvUrl', 'currentUser', 'usersService', 'locationService', function($scope, $state, $modal, dvUrl, currentUser, usersService, locationService) {
+  .controller('StashCtrl', ['$scope', '$state', '$modal', 'dvUrl', 'currentUser', 'usersService', 'locationService', function($scope, $state, $modal, dvUrl, currentUser, usersService, locationService) {
     $scope.isAdmin = usersService.isAdmin;
 
     $scope.getEmailHash = usersService.getEmailHash;

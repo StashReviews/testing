@@ -1,4 +1,4 @@
-angular.module('DeViine.directives', [])
+angular.module('Stash.directives', [])
 
   /** <dv-card item-type='' item-id='' /> */
   .directive('dvCard', ['$firebaseObject', 'dvUrl', 'locationService', function($firebaseObject, dvUrl, locationService) {

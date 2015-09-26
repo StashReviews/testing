@@ -1,3 +1,11 @@
+.pageHeader {
+  width: 100%;
+}
+.pageMobileHeader {
+  display: none;
+  width: 100%;
+}
+
 #indexSummary > .howItWorks {
   text-align: center;
   font-family: $dvTextFont;
@@ -16,21 +24,14 @@
     .ediblesIcon {
       background-color: $dvRed;
     }
-    .dispensariesIcon {
-      background-color: $dvGray;
-    }
   }
-  .dispensariesIcon,
   .ediblesIcon,
   .concentratesIcon,
   .strainsIcon {
-    width: 75%;
+    width: 60%;
     margin: auto auto;
     border-radius: 50%;
     background: $dvGray20;
-  }
-  .dispensariesIcon {
-    border: 2px solid $dvGray50;
   }
   .concentratesIcon {
     border: 2px solid $dvYellow;
@@ -44,14 +45,15 @@
   h3 {
     border: none;
     font-family: $dvTextFont;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 300;
     text-align: center;
   }
   p {
     font-family: $dvTextFont;
     font-size: 11px;
     float: left;
+    padding: 0 10%;
     strong {
       display: none;
     }
@@ -72,31 +74,20 @@
     &.green {
       border-left-color: $dvGreen;
     }
-    &.gray {
-      border-left-color: $dvGray;
-    }
   }
 
   &:nth-child(1),
-  &:nth-child(2),
-  &:nth-child(3) {
+  &:nth-child(2) {
     border-right: 1px solid $dvGray5;
   }
-
   &:nth-child(1) > h3 {
     color: $dvGreen;
   }
-
   &:nth-child(2) > h3 {
     color: $dvYellow;
   }
-
   &:nth-child(3) > h3 {
     color: $dvRed;
-  }
-
-  &:nth-child(4) > h3 {
-    color: $dvGray;
   }
 }
 

@@ -1,93 +1,49 @@
-<h2 class="pageTitle">Let's save green.</h2>
+<img src="img/stash_header.jpg" class="pageHeader"/>
+<img src="img/stash_mobileHeader.jpg" class="pageMobileHeader"/>
+<h2 class="pageTitle"></h2>
 <div id="indexSummary" class="row">
-	<a ui-sref="root.strains" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 howItWorks">
+	<a ui-sref="root.strains" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 howItWorks">
 		<img src="img/icons/strainsIcon.png" class="img-responsive strainsIcon"/>
 		<h3>Strains</h3>
 		<p>Home to the one and only producer-specific recreational cannabis strain database. All cannabis strains provide different highs, flavor profiles, and effects. We work directly with licensed producers to help you find the perfect cannabis experience for you.</p>
 		<div class="arrowRight green"></div>
 	</a>
-	<a ui-sref="root.concentrates" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 howItWorks">
+	<a ui-sref="root.concentrates" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 howItWorks">
 		<img src="img/icons/concentratesIcon.png" class="img-responsive concentratesIcon"/>
 		<h3>Concentrates</h3>
 		<p>Find various forms of cannabis concentrates and extracts from your favorite strains. Forms of concentrates include oil, wax, shatter and kief. Remember, concentrates are much more potent than flowers, so be aware of your tolerance and start slow.</p>
 		<div class="arrowRight yellow"></div>
 	</a>
-	<a ui-sref="root.edibles" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 howItWorks">
+	<a ui-sref="root.edibles" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 howItWorks">
 		<img src="img/icons/ediblesIcon.png" class="img-responsive ediblesIcon"/>
 		<h3>Edibles</h3>
 		<p>Explore our infused product and edible database to find the tastiest treats around. Choose from cannabis-infused chocolates, snack bars and beverages along with many other options. Remember, edibles can take longer to kick in, start with low doses and be patient.</p>
 		<div class="arrowRight red"></div>
 	</a>
-	<a ui-sref="root.dispensaries" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 howItWorks">
-		<img src="img/icons/dispensariesIcon.png" class="img-responsive dispensariesIcon"/>
-		<h3>Dispensaries</h3>
-		<p>Discover recreational cannabis dispensaries around you. Every dispensary listed on DeViine has an up-to-date menus with prices. Browse through user reviews, menu items, images, store locations, hours of operation and contact information to find the best dispensary for you.</p>
-		<div class="arrowRight gray"></div>
-	</a>
 </div>
 
-<!-- THIS IS FOR ALL FEATURING ALLL THREE SECTIONS: DISPENSARIES, DEALS AND STRAINS -->
-<!-- 
 <div class="row indexSection">
-	<div class="col-md-6 col-sm-6 col-xs-12">
-		<h3>Featured Dispensaries</h3>
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+		<h3>Featured Strains</h3>
 		<ul class="dvCardList">
-			<li ng-repeat="featuredDispensary in featuredDispensaries" class="col-md-6 col-sm-6 col-xs-8">
-				<dv-card item-type="dispensary" item-id="{{ featuredDispensary.$id }}"></dv-card>
-			</li>
-		</ul>
-	</div>
-	<div class="col-md-6 col-sm-6 col-xs-12">
-		<h3>Daily Deals</h3>
-		<ul class="dvCardList">
-			<li ng-repeat="featuredDeal in featuredDeals" class="col-md-6 col-sm-6 col-xs-8">
-				<dv-card item-type="deal" item-id="{{ featuredDeal.$id }}"></dv-card>
-			</li>
-		</ul>
-	</div>
-</div>
-<div class="row indexSection">
-	<div class="col-md-6 col-sm-6 col-xs-12">
-		<h3>Strains of the Week</h3>
-		<ul class="dvCardList">
-			<li ng-repeat="featuredStrain in featuredStrains" class="col-md-6 col-sm-6 col-xs-8">
+			<li ng-repeat="featuredStrain in featuredStrains" class="col-lg-6 col-md-6 col-sm-6 col-xs-8 {{ strain.disabled }}">
 				<dv-card item-type="strain" item-id="{{ featuredStrain.$id }}"></dv-card>
 			</li>
 		</ul>
 	</div>
-</div>
--->
-
-<div class="row indexSection">
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-		<h3>Strains of the Week</h3>
-		<ul class="dvCardList">
-			<li ng-repeat="featuredStrain in featuredStrains" class="col-lg-4 col-md-4 col-sm-4 col-xs-8 {{ strain.disabled }}">
-				<dv-card item-type="strain" item-id="{{ featuredStrain.$id }}"></dv-card>
-			</li>
-		</ul>
-	</div>
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 		<h3>Featured Concentrates</h3>
 		<ul class="dvCardList">
-			<li ng-repeat="featuredConcentrate in featuredConcentrates" class="col-lg-4 col-md-4 col-sm-4 col-xs-8 {{ concentrate.disabled }}">
+			<li ng-repeat="featuredConcentrate in featuredConcentrates" class="col-lg-6 col-md-6 col-sm-6 col-xs-8 {{ concentrate.disabled }}">
 				<dv-card item-type="concentrate" item-id="{{ featuredConcentrate.$id }}"></dv-card>
 			</li>
 		</ul>
 	</div>
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 		<h3>Featured Edibles</h3>
 		<ul class="dvCardList">
-			<li ng-repeat="featuredEdible in featuredEdibles" class="col-lg-4 col-md-4 col-sm-4 col-xs-8 {{ edible.disabled }}">
+			<li ng-repeat="featuredEdible in featuredEdibles" class="col-lg-6 col-md-6 col-sm-6 col-xs-8 {{ edible.disabled }}">
 				<dv-card item-type="edible" item-id="{{ featuredEdible.$id }}"></dv-card>
-			</li>
-		</ul>
-	</div>
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-		<h3>Featured Dispensaries</h3>
-		<ul class="dvCardList">
-			<li ng-repeat="featuredDispensary in featuredDispensaries" class="col-lg-4 col-md-4 col-sm-4 col-xs-8 {{ dispensary.disabled }}">
-				<dv-card item-type="dispensary" item-id="{{ featuredDispensary.$id }}"></dv-card>
 			</li>
 		</ul>
 	</div>

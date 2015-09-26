@@ -25,7 +25,12 @@
 
   /*----userProfile.html end----*/
   /*----home.html start----*/
-  #indexSummary .howItWorks .dispensariesIcon,
+  .pageHeader {
+    display: none; }
+
+  .pageMobileHeader {
+    display: inherit; }
+
   #indexSummary .howItWorks .concentratesIcon,
   #indexSummary .howItWorks .ediblesIcon,
   #indexSummary .howItWorks .strainsIcon {
@@ -64,8 +69,8 @@
   .dvCardList li {
     width: 68%; }
 
-  .featured-dispensary-true,
-  .featured-deal-true,
+  .featured-concentrate-true,
+  .featured-edible-true,
   .featured-strain-true {
     left: -4.5%; }
 

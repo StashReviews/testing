@@ -13,7 +13,7 @@
           width: 30px;
         }
       }
-      .logo .deviineLogo {
+      .logo .stashLogo {
         float: left;
         left: 50px;
         width: 70px;
@@ -120,9 +120,6 @@
     .ediblesIcon {
       background-color: #F7253E;
     }
-    .dispensariesIcon {
-      background-color: rgb(44,48,52);
-    }
   }
   .sponsors {
     div {
@@ -139,8 +136,8 @@
   /*----footer end----*/
   /*----cards.html start----*/
   .cardWrapper {
-    .dispensaryLogo,
-    .dealImage,
+    .concentrateImage,
+    .edibleImage,
     .strainImage {
       -webkit-filter: none;
       -moz-filter: none;

@@ -1,4 +1,4 @@
-angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.controllers', 'DeViine.directives', 'ui.router', 'ui.bootstrap', 'firebase'])
+angular.module('Stash', ['Stash.config', 'Stash.services', 'Stash.controllers', 'Stash.directives', 'ui.router', 'ui.bootstrap', 'firebase'])
   .run(['$rootScope', '$state', function($rootScope, $state) {
     // @see https://www.firebase.com/docs/web/libraries/angular/guide.html#section-routes
     $rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {
@@ -22,7 +22,7 @@ angular.module('DeViine', ['DeViine.config', 'DeViine.services', 'DeViine.contro
         url: '',
         abstract: true,
         templateUrl: 'templates/page.html',
-        controller: 'DeViineCtrl',
+        controller: 'StashCtrl',
         resolve: {
           currentUser: ['$firebaseAuth', 'dvUrl', function($firebaseAuth, dvUrl) {
             return $firebaseAuth( new Firebase(dvUrl) ).$waitForAuth();

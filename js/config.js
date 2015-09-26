@@ -1,2 +1,2 @@
-angular.module('DeViine.config', [])
+angular.module('Stash.config', [])
   .value('dvUrl', 'https://deviineadmin.firebaseio.com');

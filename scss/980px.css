@@ -9,7 +9,7 @@
     height: 60px; }
     .navbar .navbar-header .menuMobile-toggler img {
       width: 30px; }
-    .navbar .navbar-header .logo .deviineLogo {
+    .navbar .navbar-header .logo .stashLogo {
       float: left;
       left: 50px;
       width: 70px;
@@ -84,8 +84,6 @@
     background-color: #FCD31C; }
   #indexSummary > .howItWorks .ediblesIcon {
     background-color: #F7253E; }
-  #indexSummary > .howItWorks .dispensariesIcon {
-    background-color: #2c3034; }
 
   .sponsors div ul {
     opacity: 1; }
@@ -97,8 +95,8 @@
 
   /*----footer end----*/
   /*----cards.html start----*/
-  .cardWrapper .dispensaryLogo,
-  .cardWrapper .dealImage,
+  .cardWrapper .concentrateImage,
+  .cardWrapper .edibleImage,
   .cardWrapper .strainImage {
     -webkit-filter: none;
     -moz-filter: none;

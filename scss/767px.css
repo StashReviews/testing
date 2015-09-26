@@ -34,7 +34,6 @@
     height: 100%; }
     #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
       border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-    #indexSummary .howItWorks .dispensariesIcon,
     #indexSummary .howItWorks .concentratesIcon,
     #indexSummary .howItWorks .ediblesIcon,
     #indexSummary .howItWorks .strainsIcon {
@@ -92,7 +91,6 @@
   .cardWrapper {
     margin: 0 25% !important; }
 
-  .featured-dispensary-true,
   .featured-edible-true,
   .featured-concentrate-true,
   .featured-strain-true {
@@ -100,7 +98,6 @@
 
   /*----cards.html end----*/
   /*----ratings.html start----*/
-  .dispensaryCard .rating,
   .edibleCard .rating,
   .concentrateCard .rating,
   .strainCard .rating {
@@ -115,12 +112,10 @@
   /*----items.html start----*/
   #strainGallery,
   #edibleGallery,
-  #concentrateGallery,
-  .dispensaryGallery {
+  #concentrateGallery {
     display: none; }
 
   .strainGalleryMobile,
-  .dispensaryGalleryMobile,
   .edibleGalleryMobile,
   .concentrateGalleryMobile {
     display: inline;
@@ -129,7 +124,6 @@
   /*----items.html end----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
-  .featured-dispensary-true,
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {

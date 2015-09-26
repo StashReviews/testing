@@ -1,7 +1,7 @@
 // @todo Add error handling.
 // @todo Look into caching the results of the itemsService methods.
 
-angular.module('DeViine.services', [])
+angular.module('Stash.services', [])
 
   .factory('usersService', ['$firebaseAuth', '$firebaseObject', 'dvUrl', function($firebaseAuth, $firebaseObject, dvUrl) {
     var dvRef = new Firebase(dvUrl);
@@ -192,7 +192,7 @@ angular.module('DeViine.services', [])
       // getFeatured is currently limiting to first 2.
       // Should limit to the first 2 that have .featured = true.
       getFeatured: function(itemType) {
-        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("true").limitToFirst(3) ).$loaded();
+        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("true").limitToFirst(2) ).$loaded();
       },
       /**
        * @param {String} itemType
@@ -200,7 +200,7 @@ angular.module('DeViine.services', [])
        */
       // getNew is limiting to last 2.
       getNew: function(itemType) {
-        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('new').equalTo("true").limitToLast(3) ).$loaded();
+        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('new').equalTo("true").limitToLast(2) ).$loaded();
       },
       /**
        * @param {String} itemType
@@ -208,7 +208,7 @@ angular.module('DeViine.services', [])
        */
       // getOther is currently limiting to last 2. 
       getOther: function(itemType) {
-        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("0").limitToLast(3) ).$loaded();
+        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("0").limitToLast(2) ).$loaded();
       },
       /**
        * @param {String} itemType
