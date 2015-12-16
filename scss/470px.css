@@ -66,13 +66,15 @@
   .cardWrapper .strainType {
     margin: 30% auto 0 auto; }
 
-  .dvCardList li {
-    width: 68%; }
-
+  /*.dvCardList {
+    li {
+      width: 68%;
+    }
+  }*/
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
-    left: -4.5%; }
+    left: -6.5%; }
 
   /*----cards.html end----*/
   /*----signin.html end----*/
@@ -97,5 +99,3 @@
       color: white; }
 
   /*----modal end----*/ }
-
-/*# sourceMappingURL=470px.css.map */

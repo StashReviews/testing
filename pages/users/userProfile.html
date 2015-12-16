@@ -1,10 +1,10 @@
 <h2 class="pageTitle" title="user">User Profile</h2>
 <div class="pageId" title="{{ user.$id }}"></div>
 <div class="row ">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 coverImageWrap">
+  <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 coverImageWrap">
     <img src="img/cover_photo.png" class="coverImage"/>
     <div class="coverOverlay"></div>
-  </div>
+  </div> -->
   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 userInfoLeft">
 	<img src="https://scontent.fsnc1-1.fna.fbcdn.net/hprofile-xta1/v/t1.0-1/p160x160/11329937_10153309738079655_4717332562950568931_n.jpg?oh=8e8d5cb5c69ce6347ab8a15721abaaf6&oe=562A4EEC" class="userAvatar"/>
 	<a href="" class="buddyBtn">ADD BUDDY</a>
@@ -67,13 +67,6 @@
 			<ul class="dvCardList">
 				<div><li ng-repeat="edible in edibles" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ edible.disabled }}">
 					<dv-card item-type="edible" item-id="{{ edible.$id }}"></dv-card>
-				</li></div>
-			</ul>
-		</tab>
-		<tab heading="dispensaries" style="background-image: url('../testing/img/icons/dispensariesIcon.png');">
-			<ul class="dvCardList">
-				<div><li ng-repeat="dispensary in dispensaries" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ dispensary.disabled }}">
-					<dv-card item-type="dispensary" item-id="{{ dispensary.$id }}"></dv-card>
 				</li></div>
 			</ul>
 		</tab>

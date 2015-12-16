@@ -555,7 +555,7 @@
 }
 
 /* User Information */
-.coverImageWrap {
+/*.coverImageWrap {
   img {
     width: 100%;
   }
@@ -569,9 +569,9 @@
     margin: 0 15px;
     opacity: .5;
   }
-}
+}*/
 .userInfoLeft {
-  margin-top: -75px;
+  /*margin-top: -75px;*/
   .userAvatar {
     width: 100%;
     border-radius: 50%;
@@ -607,20 +607,22 @@
   }
 }
 .userInfoMiddle {
-  margin-top: -25px;
+ /* margin-top: -25px;*/
   h1 {
     font-family: $dvHeaderFont;
     font-size: 40px;
-    color: white;
+    /*color: white;*/
+    color: $dvGray;
     border: none;
     padding: 0;
-    margin: -7px 0 0 0;
+    margin: 0;
+    /*margin: -7px 0 0 0;*/
   } 
   h2 {
     font-family: $dvTextFont;
     font-size: 12px;
     line-height: 16px;
-    color: $dvGray20;
+    color: $dvGray50;
     letter-spacing: 1px;
     padding: 0;
     margin: 0;
@@ -630,9 +632,9 @@
   }
   h3 {
     font-family: $dvTextFont;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 18px;
     text-align: left;
     text-transform: none;
     color: $dvGray;
@@ -647,6 +649,7 @@
     text-align: left;
     padding: 0;
     margin: 0;
+    color: $dvGray50;
   }
 }
 .userInfoRight {
@@ -764,11 +767,6 @@
       background: $dvRed;
     }
   }
-  li.active:nth-child(4) {
-    img {
-      background: $dvGray;
-    }
-  }
 }
 
 /* User Favorites */
@@ -785,7 +783,8 @@
       background-position: center;
       border-radius: 50%;
       border: 3px solid;
-      width: 20%;
+      width: 150px;
+      height: 150px;
       margin: 2.5%;
       position: relative;
       a {
@@ -831,13 +830,6 @@
     &:hover,
     &.active {
       background-color: $dvRed;
-    }
-  }
-  li:nth-child(4) {
-    border-color: $dvGray;
-    &:hover,
-    &.active {
-      background-color: $dvGray;
     }
   }
 }

@@ -1,5 +1,5 @@
 (function() {
-ref = new Firebase("https://deviineadmin.firebaseio.com");
+ref = new Firebase("https://stashreviews.firebaseio.com");
 geoFire = new GeoFire(ref);
 
   /* Uses the HTML5 geolocation API to get the current user's location */
@@ -21,8 +21,8 @@ geoFire = new GeoFire(ref);
     userId = $('.username').attr('title');
     geoFire = new GeoFire(ref);
     geocoder = new google.maps.Geocoder();
-    userLocationRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/currentLocation');
-    guestLocationRef = new Firebase('https://deviineadmin.firebaseio.com/users/guests/' + generateRandomString(10) + '/currentLocation');
+    userLocationRef = new Firebase('https://stashreviews.firebaseio.com/users/' + userId + '/currentLocation');
+    guestLocationRef = new Firebase('https://stashreviews.firebaseio.com/users/guests/' + generateRandomString(10) + '/currentLocation');
     latlng = new google.maps.LatLng(latitude, longitude);
   
 
@@ -108,8 +108,8 @@ geoFire = new GeoFire(ref);
 
       userLat = location.coords.latitude;
       userLon = location.coords.longitude;
-      endLat = new Firebase('https://deviineadmin.firebaseio.com/users/' + itemType + '/' + itemId + '/geoX'); // Put dispensary geoX here
-      endLon = new Firebase('https://deviineadmin.firebaseio.com/users/' + itemType + '/' + itemId + '/geoY'); // Put dispensary geoY here
+      endLat = new Firebase('https://stashreviews.firebaseio.com/users/' + itemType + '/' + itemId + '/geoX'); // Put dispensary geoX here
+      endLon = new Firebase('https://stashreviews.firebaseio.com/users/' + itemType + '/' + itemId + '/geoY'); // Put dispensary geoY here
 
       function getDistanceFromLatLonInKm(userLat,userLon,endLat,endLon) {
         var R = 6371; // Radius of the earth in km

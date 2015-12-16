@@ -88,9 +88,9 @@
 
   /*----footer.html end----*/
   /*----cards.html start----*/
-  .cardWrapper {
-    margin: 0 25% !important; }
-
+  /*  .cardWrapper {
+      margin: 0 25% !important;
+    }*/
   .featured-edible-true,
   .featured-concentrate-true,
   .featured-strain-true {
@@ -105,9 +105,11 @@
 
   /*----ratings.html end----*/
   /*----cards.html start----*/
-  .dvCardList li {
-    width: 29%; }
-
+  /*  .dvCardList {
+      li {
+        width: 29%;
+      }
+    }*/
   /*----cards.html end----*/
   /*----items.html start----*/
   #strainGallery,
@@ -130,5 +132,3 @@
     left: -5.5%; }
 
   /*----cards.html end----*/ }
-
-/*# sourceMappingURL=767px.css.map */

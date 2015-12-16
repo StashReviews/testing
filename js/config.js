@@ -1,2 +1,2 @@
 angular.module('Stash.config', [])
-  .value('dvUrl', 'https://deviineadmin.firebaseio.com');
+  .value('dvUrl', 'https://stashreviews.firebaseio.com');

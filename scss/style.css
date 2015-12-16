@@ -4,6 +4,7 @@
   /* IE9 Compat Modes */
   src: url("../fonts/bebas_neue/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebas_neue/bebasneue_regular-webfont.woff") format("woff"), url("../fonts/bebas_neue/bebasneue_regular-webfont.ttf") format("truetype"), url("../fonts/bebas_neue/bebasneue_regular-webfont.svg") format("svg");
   /* Legacy iOS */ }
+
 /* line 2, _items.scss */
 .dvCardList h4 {
   margin-top: 100px;
@@ -21,14 +22,14 @@
     color: #3dd861;
     font-weight: bold; }
 
-/* line 20, _items.scss */
+/* line 22, _items.scss */
 .dispensaryLogoWrap,
 .producerLogoWrap,
 .processorLogoWrap {
   float: left;
   clear: left; }
 
-/* line 26, _items.scss */
+/* line 29, _items.scss */
 .dispensaryLogo,
 .businessLogo,
 .producerLogo,
@@ -39,7 +40,7 @@
   float: left;
   clear: left; }
 
-/* line 37, _items.scss */
+/* line 41, _items.scss */
 .dispensaryName,
 .dealTitle,
 .strainName,
@@ -74,7 +75,7 @@
     .favorite .favoriteIcon:hover {
       background: #f7253e; }
 
-/* line 74, _items.scss */
+/* line 76, _items.scss */
 .strainChemistry,
 .concentrateType,
 .edibleType {
@@ -94,7 +95,7 @@
 .edibleType {
   color: #f7253e; }
 
-/* line 91, _items.scss */
+/* line 94, _items.scss */
 .businessName,
 .strainProducer,
 .edibleProcessor,
@@ -106,7 +107,7 @@
   margin: 0px 0 10px 0;
   padding: 0; }
 
-/* line 103, _items.scss */
+/* line 105, _items.scss */
 .dispensaryAddress,
 .businessAddress,
 .producedBy {
@@ -137,7 +138,7 @@
   top: -20px;
   float: none;
   clear: left; }
-  /* line 133, _items.scss */
+  /* line 138, _items.scss */
   .contactInfo .dispensaryWebsite a,
   .contactInfo .dispensaryEmail a,
   .contactInfo .dispensaryPhone a,
@@ -172,7 +173,7 @@
 .strainDescriptionSubHeader {
   margin: -6px 0 0 0; }
 
-/* line 164, _items.scss */
+/* line 165, _items.scss */
 .strainDescription,
 .edibleDescription {
   font-family: "Open Sans", sans-serif;
@@ -181,7 +182,7 @@
   margin: 10px 0 0 0;
   padding: 0; }
 
-/* line 173, _items.scss */
+/* line 177, _items.scss */
 .dispensaryGallery,
 .dealGallery,
 .strainGallery,
@@ -235,7 +236,7 @@
   transition: .3s; }
 
 /* Strain Zoom End */
-/* line 230, _items.scss */
+/* line 233, _items.scss */
 .strainGalleryMobile,
 .dispensaryGalleryMobile,
 .concentrateGalleryMobile,
@@ -304,7 +305,7 @@
     line-height: 16px;
     color: #2c3034;
     float: left; }
-  /* line 299, _items.scss */
+  /* line 300, _items.scss */
   .dealDetails .redemptionDetails div .distanceAway,
   .dealDetails .redemptionDetails div .daysLeft {
     color: #f7253e;
@@ -316,7 +317,7 @@
     float: left;
     width: 25%; }
 
-/* line 313, _items.scss */
+/* line 315, _items.scss */
 .flavorProfile,
 .positiveEffects,
 .negativeEffects {
@@ -347,7 +348,7 @@
     .negativeEffects li:nth-child(3) {
       border-bottom: 3px solid #f7253e; }
 
-/* line 335, _items.scss */
+/* line 337, _items.scss */
 .strainProfileTitle,
 .concentrateProfileTitle,
 .edibleProfileTitle {
@@ -366,7 +367,7 @@
   float: left; }
 
 /* Potency */
-/* line 354, _items.scss */
+/* line 355, _items.scss */
 .thcPotency,
 .cbdPotency {
   margin: 0 auto;
@@ -474,7 +475,7 @@
     float: right;
     height: 100px;
     width: 100%; }
-    /* line 461, _items.scss */
+    /* line 463, _items.scss */
     .reviews .leaveReview #reviewInput:hover, .reviews .leaveReview #reviewInput:active, .reviews .leaveReview #reviewInput:focus {
       border-color: #2c3034; }
   /* line 467, _items.scss */
@@ -566,23 +567,24 @@
     cursor: pointer; }
 
 /* User Information */
-/* line 559, _items.scss */
-.coverImageWrap img {
-  width: 100%; }
-/* line 562, _items.scss */
-.coverImageWrap .coverOverlay {
-  background: url("../img/coverPhotoFade.png") bottom left repeat-x;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 15px;
-  opacity: .5; }
-
+/*.coverImageWrap {
+  img {
+    width: 100%;
+  }
+  .coverOverlay {
+    background: url('../img/coverPhotoFade.png') bottom left repeat-x;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 15px;
+    opacity: .5;
+  }
+}*/
 /* line 573, _items.scss */
 .userInfoLeft {
-  margin-top: -75px; }
+  /*margin-top: -75px;*/ }
   /* line 575, _items.scss */
   .userInfoLeft .userAvatar {
     width: 100%;
@@ -611,39 +613,41 @@
     .userInfoLeft .buddyBtn:hover {
       color: white;
       background: #3dd861; }
-    /* line 602, _items.scss */
+    /* line 604, _items.scss */
     .userInfoLeft .buddyBtn:active, .userInfoLeft .buddyBtn:focus, .userInfoLeft .buddyBtn:visited {
       text-decoration: none; }
 
 /* line 609, _items.scss */
 .userInfoMiddle {
-  margin-top: -25px; }
+  /* margin-top: -25px;*/ }
   /* line 611, _items.scss */
   .userInfoMiddle h1 {
     font-family: "Bebas Neue", "Khand", sans-serif;
     font-size: 40px;
-    color: white;
+    /*color: white;*/
+    color: #2c3034;
     border: none;
     padding: 0;
-    margin: -7px 0 0 0; }
-  /* line 619, _items.scss */
+    margin: 0;
+    /*margin: -7px 0 0 0;*/ }
+  /* line 621, _items.scss */
   .userInfoMiddle h2 {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     line-height: 16px;
-    color: rgba(44, 48, 52, 0.2);
+    color: rgba(44, 48, 52, 0.5);
     letter-spacing: 1px;
     padding: 0;
     margin: 0; }
-    /* line 627, _items.scss */
+    /* line 629, _items.scss */
     .userInfoMiddle h2 span {
       color: #2c3034; }
-  /* line 631, _items.scss */
+  /* line 633, _items.scss */
   .userInfoMiddle h3 {
     font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 18px;
     text-align: left;
     text-transform: none;
     color: #2c3034;
@@ -651,25 +655,26 @@
     border-top: 1px solid rgba(44, 48, 52, 0.05);
     padding: 5px 0 0 0;
     margin: 5px 0 0 0; }
-  /* line 644, _items.scss */
+  /* line 646, _items.scss */
   .userInfoMiddle p {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     text-align: left;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    color: rgba(44, 48, 52, 0.5); }
 
-/* line 653, _items.scss */
+/* line 656, _items.scss */
 .userInfoRight ul {
   margin: 15px 0; }
-  /* line 655, _items.scss */
+  /* line 658, _items.scss */
   .userInfoRight ul li {
     display: inline;
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
     padding: 0;
     text-align: center; }
-    /* line 661, _items.scss */
+    /* line 664, _items.scss */
     .userInfoRight ul li img {
       width: 80%;
       margin: 0 10% 5px 10%;
@@ -678,56 +683,56 @@
       position: relative;
       clear: right;
       cursor: pointer; }
-    /* line 671, _items.scss */
+    /* line 674, _items.scss */
     .userInfoRight ul li:nth-child(1) img {
       border: 2px solid #3dd861; }
-      /* line 673, _items.scss */
+      /* line 676, _items.scss */
       .userInfoRight ul li:nth-child(1) img:hover {
         background: #3dd861; }
-    /* line 679, _items.scss */
+    /* line 682, _items.scss */
     .userInfoRight ul li:nth-child(2) img {
       border: 2px solid #fcd31c; }
-      /* line 681, _items.scss */
+      /* line 684, _items.scss */
       .userInfoRight ul li:nth-child(2) img:hover {
         background: #fcd31c; }
-    /* line 687, _items.scss */
+    /* line 690, _items.scss */
     .userInfoRight ul li:nth-child(3) img {
       border: 2px solid #f7253e; }
-      /* line 689, _items.scss */
+      /* line 692, _items.scss */
       .userInfoRight ul li:nth-child(3) img:hover {
         background: #f7253e; }
 
-/* line 698, _items.scss */
+/* line 701, _items.scss */
 .achievements .progressWrap {
   margin-top: 20px; }
-  /* line 700, _items.scss */
+  /* line 703, _items.scss */
   .achievements .progressWrap .progressBackground {
     border: 2px solid rgba(44, 48, 52, 0.2);
     width: 100%;
     height: 30px; }
-  /* line 705, _items.scss */
+  /* line 708, _items.scss */
   .achievements .progressWrap .progressBar {
     background: #3dd861;
     width: 75%;
     height: 27px;
     margin: -28px 0 0 2px; }
-  /* line 711, _items.scss */
+  /* line 714, _items.scss */
   .achievements .progressWrap h4 {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     color: #2c3034;
     text-align: center; }
-/* line 718, _items.scss */
+/* line 721, _items.scss */
 .achievements ul {
   margin: 15px 0; }
-  /* line 720, _items.scss */
+  /* line 723, _items.scss */
   .achievements ul li {
     display: inline;
     font-family: "Open Sans", sans-serif;
     font-size: 10px;
     padding: 0;
     text-align: center; }
-    /* line 726, _items.scss */
+    /* line 729, _items.scss */
     .achievements ul li img {
       width: 80%;
       margin: 10px 10%;
@@ -737,42 +742,39 @@
       position: relative;
       clear: right; }
 
-/* line 738, _items.scss */
+/* line 741, _items.scss */
 .userStats {
   padding: 0; }
-  /* line 740, _items.scss */
+  /* line 743, _items.scss */
   .userStats li {
     display: inline;
     width: 15%;
     margin-right: 10px;
     float: left; }
-    /* line 745, _items.scss */
+    /* line 748, _items.scss */
     .userStats li img {
       width: 100%;
       border-radius: 50%;
       padding: 2px;
       background: rgba(44, 48, 52, 0.2); }
-  /* line 753, _items.scss */
+  /* line 756, _items.scss */
   .userStats li.active:nth-child(1) img {
     background: #3dd861; }
-  /* line 758, _items.scss */
+  /* line 761, _items.scss */
   .userStats li.active:nth-child(2) img {
     background: #fcd31c; }
-  /* line 763, _items.scss */
+  /* line 766, _items.scss */
   .userStats li.active:nth-child(3) img {
     background: #f7253e; }
-  /* line 768, _items.scss */
-  .userStats li.active:nth-child(4) img {
-    background: #2c3034; }
 
 /* User Favorites */
-/* line 776, _items.scss */
+/* line 774, _items.scss */
 .userFavorites ul {
   height: 100%; }
-  /* line 778, _items.scss */
+  /* line 776, _items.scss */
   .userFavorites ul div {
     border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 781, _items.scss */
+  /* line 779, _items.scss */
   .userFavorites ul li {
     background: rgba(44, 48, 52, 0.2);
     background-size: 100%;
@@ -780,10 +782,11 @@
     background-position: center;
     border-radius: 50%;
     border: 3px solid;
-    width: 20%;
+    width: 150px;
+    height: 150px;
     margin: 2.5%;
     position: relative; }
-    /* line 791, _items.scss */
+    /* line 790, _items.scss */
     .userFavorites ul li a {
       background-size: 100%;
       background-repeat: no-repeat;
@@ -791,44 +794,38 @@
       padding-top: 80%;
       border: none;
       text-align: center; }
-      /* line 798, _items.scss */
+      /* line 797, _items.scss */
       .userFavorites ul li a:active {
         color: #2c3034; }
-      /* line 801, _items.scss */
+      /* line 800, _items.scss */
       .userFavorites ul li a:hover {
         background: none;
         border: none; }
-/* line 808, _items.scss */
+/* line 810, _items.scss */
 .userFavorites li.active > a,
 .userFavorites li.active > a:hover,
 .userFavorites li.active > a:focus,
 .userFavorites li.active > a:active {
   background: none;
   border: none; }
-/* line 815, _items.scss */
+/* line 814, _items.scss */
 .userFavorites li:nth-child(1) {
   border-color: #3dd861; }
   /* line 817, _items.scss */
   .userFavorites li:nth-child(1):hover, .userFavorites li:nth-child(1).active {
     background-color: #3dd861; }
-/* line 822, _items.scss */
+/* line 821, _items.scss */
 .userFavorites li:nth-child(2) {
   border-color: #fcd31c; }
   /* line 824, _items.scss */
   .userFavorites li:nth-child(2):hover, .userFavorites li:nth-child(2).active {
     background-color: #fcd31c; }
-/* line 829, _items.scss */
+/* line 828, _items.scss */
 .userFavorites li:nth-child(3) {
   border-color: #f7253e; }
   /* line 831, _items.scss */
   .userFavorites li:nth-child(3):hover, .userFavorites li:nth-child(3).active {
     background-color: #f7253e; }
-/* line 836, _items.scss */
-.userFavorites li:nth-child(4) {
-  border-color: #2c3034; }
-  /* line 838, _items.scss */
-  .userFavorites li:nth-child(4):hover, .userFavorites li:nth-child(4).active {
-    background-color: #2c3034; }
 
 /*  Start Header Bar  */
 /* line 3, layout/_navbar.scss */
@@ -1005,7 +1002,7 @@
     /* line 176, layout/_navbar.scss */
     #mainMenu > li a {
       color: #2c3034; }
-      /* line 178, layout/_navbar.scss */
+      /* line 180, layout/_navbar.scss */
       #mainMenu > li a:active, #mainMenu > li a:focus, #mainMenu > li a:visited {
         text-decoration: none; }
       /* line 183, layout/_navbar.scss */
@@ -1054,7 +1051,7 @@
     transition: all .3s ease; }
 
 /*  End Up to Top  */
-/* line 2, layout/_menuMobile.scss */
+/* line 3, layout/_menuMobile.scss */
 .navbar-header .menuMobile-toggler,
 .navbar-header #close-menuMobile {
   display: none;
@@ -1174,16 +1171,16 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
-    /* line 38, layout/_footer.scss */
+    /* line 40, layout/_footer.scss */
     #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
       border: 2px solid #3dd861; }
   /* line 44, layout/_footer.scss */
   #footer input[type='email'] {
     width: 300px; }
-    /* line 46, layout/_footer.scss */
+    /* line 48, layout/_footer.scss */
     #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
       border-right: none; }
-    /* line 51, layout/_footer.scss */
+    /* line 52, layout/_footer.scss */
     #footer input[type='email']:visited, #footer input[type='email']:focus {
       background-color: rgba(255, 255, 255, 0.2); }
   /* line 56, layout/_footer.scss */
@@ -1203,7 +1200,7 @@
     #footer .btnfooter:hover {
       color: #2c3034;
       background: #3dd861; }
-    /* line 72, layout/_footer.scss */
+    /* line 74, layout/_footer.scss */
     #footer .btnfooter:active, #footer .btnfooter:focus, #footer .btnfooter:visited {
       text-decoration: none; }
   /* line 78, layout/_footer.scss */
@@ -1289,7 +1286,7 @@
   .pageMobileHeader {
     display: inherit; }
 
-  /* line 47, 470px.scss */
+  /* line 49, 470px.scss */
   #indexSummary .howItWorks .concentratesIcon,
   #indexSummary .howItWorks .ediblesIcon,
   #indexSummary .howItWorks .strainsIcon {
@@ -1327,20 +1324,21 @@
 
   /*----ratings.html end----*/
   /*----cards.html start----*/
-  /* line 89, 470px.scss */
+  /* line 90, 470px.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType {
     margin: 30% auto 0 auto; }
 
-  /* line 95, 470px.scss */
-  .dvCardList li {
-    width: 68%; }
-
-  /* line 99, 470px.scss */
+  /*.dvCardList {
+    li {
+      width: 68%;
+    }
+  }*/
+  /* line 101, 470px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
-    left: -4.5%; }
+    left: -6.5%; }
 
   /*----cards.html end----*/
   /*----signin.html end----*/
@@ -1413,10 +1411,10 @@
   #indexSummary .howItWorks {
     padding: 20px 5%;
     height: 100%; }
-    /* line 48, 767px.scss */
+    /* line 49, 767px.scss */
     #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
       border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-    /* line 52, 767px.scss */
+    /* line 54, 767px.scss */
     #indexSummary .howItWorks .concentratesIcon,
     #indexSummary .howItWorks .ediblesIcon,
     #indexSummary .howItWorks .strainsIcon {
@@ -1483,11 +1481,10 @@
 
   /*----footer.html end----*/
   /*----cards.html start----*/
-  /* line 118, 767px.scss */
-  .cardWrapper {
-    margin: 0 25% !important; }
-
-  /* line 121, 767px.scss */
+  /*  .cardWrapper {
+      margin: 0 25% !important;
+    }*/
+  /* line 123, 767px.scss */
   .featured-edible-true,
   .featured-concentrate-true,
   .featured-strain-true {
@@ -1503,19 +1500,20 @@
 
   /*----ratings.html end----*/
   /*----cards.html start----*/
-  /* line 139, 767px.scss */
-  .dvCardList li {
-    width: 29%; }
-
+  /*  .dvCardList {
+      li {
+        width: 29%;
+      }
+    }*/
   /*----cards.html end----*/
   /*----items.html start----*/
-  /* line 145, 767px.scss */
+  /* line 147, 767px.scss */
   #strainGallery,
   #edibleGallery,
   #concentrateGallery {
     display: none; }
 
-  /* line 150, 767px.scss */
+  /* line 152, 767px.scss */
   .strainGalleryMobile,
   .edibleGalleryMobile,
   .concentrateGalleryMobile {
@@ -1525,7 +1523,7 @@
   /*----items.html end----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
-  /* line 160, 767px.scss */
+  /* line 162, 767px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
@@ -1600,7 +1598,7 @@
       padding: 0;
       width: 33%;
       float: left; }
-      /* line 71, 980px.scss */
+      /* line 73, 980px.scss */
       #mainMenu > li:nth-child(1), #mainMenu > li:nth-child(2), #mainMenu > li:nth-child(3) {
         border: none; }
       /* line 76, 980px.scss */
@@ -1657,7 +1655,7 @@
 
   /*----footer end----*/
   /*----cards.html start----*/
-  /* line 139, 980px.scss */
+  /* line 141, 980px.scss */
   .cardWrapper .concentrateImage,
   .cardWrapper .edibleImage,
   .cardWrapper .strainImage {
@@ -1687,14 +1685,15 @@
   /*----rating.html start----*/ }
 /* line 1, _home.scss */
 .pageHeader {
+  display: none;
   width: 100%; }
 
-/* line 4, _home.scss */
+/* line 5, _home.scss */
 .pageMobileHeader {
   display: none;
   width: 100%; }
 
-/* line 9, _home.scss */
+/* line 10, _home.scss */
 #indexSummary > .howItWorks {
   text-align: center;
   font-family: "Open Sans", sans-serif;
@@ -1703,16 +1702,16 @@
   line-height: 15px;
   padding-top: 15px;
   border-color: rgba(44, 48, 52, 0.05); }
-  /* line 18, _home.scss */
+  /* line 19, _home.scss */
   #indexSummary > .howItWorks:hover .strainsIcon {
     background-color: #3dd861; }
-  /* line 21, _home.scss */
+  /* line 22, _home.scss */
   #indexSummary > .howItWorks:hover .concentratesIcon {
     background-color: #fcd31c; }
-  /* line 24, _home.scss */
+  /* line 25, _home.scss */
   #indexSummary > .howItWorks:hover .ediblesIcon {
     background-color: #f7253e; }
-  /* line 28, _home.scss */
+  /* line 31, _home.scss */
   #indexSummary > .howItWorks .ediblesIcon,
   #indexSummary > .howItWorks .concentratesIcon,
   #indexSummary > .howItWorks .strainsIcon {
@@ -1720,32 +1719,32 @@
     margin: auto auto;
     border-radius: 50%;
     background: rgba(44, 48, 52, 0.2); }
-  /* line 36, _home.scss */
+  /* line 37, _home.scss */
   #indexSummary > .howItWorks .concentratesIcon {
     border: 2px solid #fcd31c; }
-  /* line 39, _home.scss */
+  /* line 40, _home.scss */
   #indexSummary > .howItWorks .ediblesIcon {
     border: 2px solid #f7253e; }
-  /* line 42, _home.scss */
+  /* line 43, _home.scss */
   #indexSummary > .howItWorks .strainsIcon {
     border: 2px solid #3dd861; }
-  /* line 45, _home.scss */
+  /* line 46, _home.scss */
   #indexSummary > .howItWorks h3 {
     border: none;
     font-family: "Open Sans", sans-serif;
     font-size: 24px;
     font-weight: 300;
     text-align: center; }
-  /* line 52, _home.scss */
+  /* line 53, _home.scss */
   #indexSummary > .howItWorks p {
     font-family: "Open Sans", sans-serif;
     font-size: 11px;
     float: left;
     padding: 0 10%; }
-    /* line 57, _home.scss */
+    /* line 58, _home.scss */
     #indexSummary > .howItWorks p strong {
       display: none; }
-  /* line 61, _home.scss */
+  /* line 62, _home.scss */
   #indexSummary > .howItWorks .arrowRight {
     display: none;
     float: left;
@@ -1753,50 +1752,50 @@
     border-right: 0px solid transparent;
     border-bottom: 20px solid transparent;
     border-left: 20px solid transparent; }
-    /* line 68, _home.scss */
+    /* line 69, _home.scss */
     #indexSummary > .howItWorks .arrowRight.red {
       border-left-color: #f7253e; }
-    /* line 71, _home.scss */
+    /* line 72, _home.scss */
     #indexSummary > .howItWorks .arrowRight.yellow {
       border-left-color: #fcd31c; }
-    /* line 74, _home.scss */
+    /* line 75, _home.scss */
     #indexSummary > .howItWorks .arrowRight.green {
       border-left-color: #3dd861; }
-  /* line 79, _home.scss */
+  /* line 81, _home.scss */
   #indexSummary > .howItWorks:nth-child(1), #indexSummary > .howItWorks:nth-child(2) {
     border-right: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 83, _home.scss */
+  /* line 84, _home.scss */
   #indexSummary > .howItWorks:nth-child(1) > h3 {
     color: #3dd861; }
-  /* line 86, _home.scss */
+  /* line 87, _home.scss */
   #indexSummary > .howItWorks:nth-child(2) > h3 {
     color: #fcd31c; }
-  /* line 89, _home.scss */
+  /* line 90, _home.scss */
   #indexSummary > .howItWorks:nth-child(3) > h3 {
     color: #f7253e; }
 
-/* line 94, _home.scss */
+/* line 95, _home.scss */
 .sponsors {
   margin: 0;
   padding: 0; }
-  /* line 98, _home.scss */
+  /* line 99, _home.scss */
   .sponsors div ul {
     margin: 0;
     padding: 0;
     height: 100%;
     list-style: none;
     opacity: .4; }
-    /* line 104, _home.scss */
+    /* line 105, _home.scss */
     .sponsors div ul:hover {
       opacity: 1; }
-    /* line 107, _home.scss */
+    /* line 108, _home.scss */
     .sponsors div ul li {
       display: inline;
       overflow: hidden; }
-      /* line 110, _home.scss */
+      /* line 111, _home.scss */
       .sponsors div ul li:last-child {
         border: none; }
-      /* line 113, _home.scss */
+      /* line 114, _home.scss */
       .sponsors div ul li img {
         max-width: 100%; }
 
@@ -1879,11 +1878,11 @@
         padding: 10px 0 2px 0;
         border: 2px solid rgba(255, 255, 255, 0.2);
         border-radius: 10px; }
-        /* line 75, modals/_login.scss */
+        /* line 77, modals/_login.scss */
         .modal-content .modal-body .btn-group li:hover, .modal-content .modal-body .btn-group li:focus, .modal-content .modal-body .btn-group li:active {
           border-color: #fcd31c;
           color: #fcd31c; }
-      /* line 82, modals/_login.scss */
+      /* line 84, modals/_login.scss */
       .modal-content .modal-body .btn-group li.facebook,
       .modal-content .modal-body .btn-group li.twitter,
       .modal-content .modal-body .btn-group li.google {
@@ -1891,7 +1890,7 @@
         background-repeat: no-repeat;
         background-position: center;
         padding: 35px 0; }
-    /* line 91, modals/_login.scss */
+    /* line 92, modals/_login.scss */
     .modal-content .modal-body .signUp,
     .modal-content .modal-body .signIn {
       color: #fcd31c;
@@ -1918,7 +1917,7 @@
       padding: 10px 0 2px 0;
       border: 2px solid rgba(255, 255, 255, 0.2);
       border-radius: 10px; }
-      /* line 116, modals/_login.scss */
+      /* line 119, modals/_login.scss */
       .modal-content .modal-footer button:hover, .modal-content .modal-footer button:focus, .modal-content .modal-footer button:active, .modal-content .modal-footer button:visited {
         border-color: #fcd31c;
         color: #fcd31c; }
@@ -1940,7 +1939,7 @@
   .rating .ratingBarWrap {
     position: relative;
     width: 250px; }
-    /* line 9, partials/_rating.scss */
+    /* line 10, partials/_rating.scss */
     .rating .ratingBarWrap svg,
     .rating .ratingBarWrap div.ratingBar {
       position: absolute;
@@ -2127,7 +2126,7 @@
     top: 0px;
     margin: 10% 10% 0 10%;
     padding: 0; }
-  /* line 23, partials/_cards.scss */
+  /* line 26, partials/_cards.scss */
   .cardWrapper .dispensaryLogo,
   .cardWrapper .strainImage,
   .cardWrapper .concentrateImage,
@@ -2142,7 +2141,7 @@
     .cardWrapper .edibleImage img {
       width: 100%;
       border-radius: 15px; }
-  /* line 35, partials/_cards.scss */
+  /* line 38, partials/_cards.scss */
   .cardWrapper .dispensaryName,
   .cardWrapper .strainName,
   .cardWrapper .concentrateName,
@@ -2160,7 +2159,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
-  /* line 53, partials/_cards.scss */
+  /* line 56, partials/_cards.scss */
   .cardWrapper .dispensaryAddress,
   .cardWrapper .businessName,
   .cardWrapper .producedBy,
@@ -2175,20 +2174,20 @@
     margin: 0;
     padding: 0;
     overflow: hidden; }
-  /* line 68, partials/_cards.scss */
+  /* line 71, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .businessName.line2,
   .cardWrapper .producedBy.line2,
   .cardWrapper .processedBy.line2 {
     position: relative;
     z-index: 3; }
-  /* line 75, partials/_cards.scss */
+  /* line 77, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line1,
   .cardWrapper .producedBy.line1,
   .cardWrapper .processedBy.line1 {
     height: 18px;
     display: none; }
-  /* line 81, partials/_cards.scss */
+  /* line 83, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .producedBy.line2,
   .cardWrapper .processedBy.line2 {
@@ -2196,7 +2195,7 @@
   /* line 86, partials/_cards.scss */
   .cardWrapper .businessName.line2 {
     height: 24px; }
-  /* line 89, partials/_cards.scss */
+  /* line 92, partials/_cards.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType,
   .cardWrapper .concentrateType,
@@ -2228,7 +2227,7 @@
 .edibleCard .edibleType {
   color: #f7253e; }
 
-/* line 126, partials/_cards.scss */
+/* line 130, partials/_cards.scss */
 .featured-dispensary-true,
 .featured-strain-true,
 .featured-concentrate-true,
@@ -2331,7 +2330,7 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border: none; }
-    /* line 38, partials/_menu.scss */
+    /* line 41, partials/_menu.scss */
     .menu ul.nav.nav-tabs > li > a:hover, .menu ul.nav.nav-tabs > li > a:active, .menu ul.nav.nav-tabs > li > a:visited, .menu ul.nav.nav-tabs > li > a:focus {
       color: transparent;
       border: none; }
@@ -2377,7 +2376,7 @@
       margin-right: 10px;
       width: 30%;
       float: left; }
-    /* line 116, partials/_menu.scss */
+    /* line 117, partials/_menu.scss */
     .menu .menu .menuItem .thcPotency,
     .menu .menu .menuItem .cbdPotency {
       margin: 0px auto 0 auto;
@@ -2433,7 +2432,7 @@ body {
   position: relative;
   top: 100px; }
 
-/* line 38, style.scss */
+/* line 41, style.scss */
 #strainsList,
 #concentratesList,
 #ediblesList,
@@ -2445,11 +2444,11 @@ body {
   padding: 0 2%;
   margin: 0; }
 
-/* line 51, style.scss */
+/* line 53, style.scss */
 a:active, a:hover, a:visited {
   text-decoration: none; }
 
-/* line 58, style.scss */
+/* line 63, style.scss */
 h1,
 h2,
 h3,
@@ -2511,15 +2510,15 @@ form {
     color: white;
     padding: 5px 0 0 0;
     background: #2c3034; }
-    /* line 117, style.scss */
+    /* line 120, style.scss */
     form .btn-block.dispensaryCMS:hover, form .btn-block.dispensaryCMS:active, form .btn-block.dispensaryCMS:focus, form .btn-block.dispensaryCMS:visited {
       background: #f7253e;
       color: white; }
-    /* line 124, style.scss */
+    /* line 127, style.scss */
     form .btn-block.dealCMS:hover, form .btn-block.dealCMS:active, form .btn-block.dealCMS:focus, form .btn-block.dealCMS:visited {
       background: #fcd31c;
       color: white; }
-    /* line 131, style.scss */
+    /* line 134, style.scss */
     form .btn-block.strainCMS:hover, form .btn-block.strainCMS:active, form .btn-block.strainCMS:focus, form .btn-block.strainCMS:visited {
       background: #3dd861;
       color: white; }
@@ -2585,5 +2584,3 @@ form {
   text-align: center;
   margin-bottom: 15px;
   width: 100%; }
-
-/*# sourceMappingURL=style.css.map */

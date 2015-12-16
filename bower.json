@@ -1,10 +1,9 @@
 {
   "name": "Stash",
   "version": "0.0.1",
-  "homepage": "http://deviine.com",
-  "authors": [
-    "Dakota Berg <dakota@deviine.com>",
-    "Justin Vinge <justin@deviine.com>"
+  "homepage": "http://www.stash.reviews",
+  "author": [
+    "Dakota Berg <support@stash.reviews>"
   ],
   "description": "Cannabis strain and product reviews",
   "license": "All rights reserved.",

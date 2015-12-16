@@ -76,48 +76,6 @@ angular.module('Stash', ['Stash.config', 'Stash.services', 'Stash.controllers', 
         templateUrl: 'pages/users/userBuddies.html',
         controller: 'userBuddyCtrl'
       })
-      // dispensaries
-      .state('root.dispensaries', {
-        url: '/dispensaries',
-        templateUrl: 'pages/dispensaries.html',
-        controller: 'dispensariesCtrl'
-      })
-      .state('root.dispensaryDetails', {
-        url: '/dispensaries/:dispensaryId',
-        templateUrl: 'pages/details/dispensaryDetails.html',
-        controller: 'dispensaryDetailsCtrl'
-      })
-      .state('root.manageDispensaries', {
-        url: '/manage/dispensaries',
-        templateUrl: 'pages/manage/dispensaries.html',
-        controller: 'dispensariesManageCtrl',
-        resolve: {
-          currentUser: ['$firebaseAuth', 'dvUrl', function($firebaseAuth, dvUrl) {
-            return $firebaseAuth( new Firebase(dvUrl) ).$requireAuth();
-          }]
-        }
-      })
-      // deals
-      .state('root.deals', {
-        url: '/deals',
-        templateUrl: 'pages/deals.html',
-        controller: 'dealsCtrl'
-      })
-      .state('root.dealDetails', {
-        url: '/deals/:dealId',
-        templateUrl: 'pages/details/dealDetails.html',
-        controller: 'dealDetailsCtrl'
-      })
-      .state('root.manageDeals', {
-        url: '/manage/deals',
-        templateUrl: 'pages/manage/deals.html',
-        controller: 'dealsManageCtrl',
-        resolve: {
-          currentUser: ['$firebaseAuth', 'dvUrl', function($firebaseAuth, dvUrl) {
-            return $firebaseAuth( new Firebase(dvUrl) ).$requireAuth();
-          }]
-        }
-      })
       // strains
       .state('root.strains', {
         url: '/strains',

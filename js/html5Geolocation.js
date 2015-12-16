@@ -1,5 +1,5 @@
 $( document ).ready (function() {
-  var firebaseUrl = "https://deviineadmin.firebaseio.com/GeoLocation";  // Generate a Firebase location
+  var firebaseUrl = "https://stashreviews.firebaseio.com/GeoLocation";  // Generate a Firebase location
   var firebaseRef = new Firebase(firebaseUrl);
 
   // Create a new GeoFire instance at the random Firebase location

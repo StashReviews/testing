@@ -11,7 +11,7 @@
 			<li ui-sref="root.concentrates" class="concentrateNav mobileNavLink">Concentrates</li>
 			<li ui-sref="root.edibles" class="edibleNav mobileNavLink">Edibles</li>
 			<li class="menuMobile-subHeader">Other</li>
-			<li class="mobileNavLink"><a href="https://deviine.typeform.com/to/pnlr6D" data-mode="1" target="_blank" class="typeform-share" style="color:inherit;">Feedback</a></li>
+			<li class="mobileNavLink"><a href="https://stash.typeform.com/to/pnlr6D" data-mode="1" target="_blank" class="typeform-share" style="color:inherit;">Feedback</a></li>
 			<li ui-sref="root.privacy" class="mobileNavLink">Privacy Policy</li>
 			<li ui-sref="root.terms" class="mobileNavLink">Terms of Use</li>
 			<li ui-sref="root.stateyourlove" class="mobileNavLink">State Your Love!</li>
@@ -29,7 +29,7 @@
 				</ul>
 				<div class="accountInfo">
 					<a ui-sref="root.userProfile({ userId: user.$id })"><h1 class="pull-right username" title="{{ currentName }}">{{ currentName }}</h1></a><br/>
-					<h2 class="pull-right location">No Location Found</h2>
+					<a ui-sref="root.userProfile({ userId: user.$id })"><h2 class="pull-right location">My reviews</h2></a>
 				</div>
 			</div>
 			<div ng-show="!( currentUser )" class="navbar-text dropdown">
@@ -40,7 +40,7 @@
 				</ul>
 				<div class="accountInfo">
 					<h1 class="pull-right username btn navbar-btn" ng-click="showLoginModal()" >High, Guest!</h1><br/>
-					<h2 class="pull-right location">No Location Found</h2>
+					<a ui-sref="root.userProfile({ userId: user.$id })"><h2 class="pull-right location">My reviews</h2></a>
 				</div>
 			</div>
 		</div>
@@ -60,7 +60,7 @@
 					<a ui-sref="root.edibles">Edibles</a>
 				</li>
 				<li>
-					<a class="typeform-share" href="https://deviine.typeform.com/to/pnlr6D" data-mode="1" target="_blank"><img src="img/banners/feedback.png"/></a>
+					<a class="typeform-share" href="https://stash.typeform.com/to/pnlr6D" data-mode="1" target="_blank"><img src="img/banners/feedback.png"/></a>
 				</li>
 			</ul>
 		</div>
@@ -125,7 +125,7 @@
 			<h4>Sign Up for Our Newsletter</h4>
 			<p>Enter your email address for occasional behind-the-scenes information and Stash updates!</p>
 			<div id="mc_embed_signup">
-				<form action="//deviine.us9.list-manage.com/subscribe/post?u=13dca9320d4233ffa9d1ed248&amp;id=c91d7fce2b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<form action="//stashreviews.us9.list-manage.com/subscribe/post?u=13dca9320d4233ffa9d1ed248&amp;id=c91d7fce2b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div>
 							<input type="email" value="" placeholder="Email address" name="EMAIL" class="required email" id="mce-EMAIL">
@@ -145,7 +145,7 @@
 		<div class="col-md-6 footerFeedback">
 			<h4>How can we improve your experience?</h4>
 			<p>This may sound crazy, but we actually listen to your feedback.  Let us know how we can make Stash better for you.</p><br>
-			<a class="typeform-share btnfooter btnfooterlrg" href="https://deviine.typeform.com/to/pnlr6D" data-mode="1" target="_blank">Give Feedback</a>
+			<a class="typeform-share btnfooter btnfooterlrg" href="https://stash.typeform.com/to/pnlr6D" data-mode="1" target="_blank">Give Feedback</a>
 		</div>
 		<ul id="socialIcons">
 				<li>
