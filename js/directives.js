@@ -345,8 +345,8 @@ angular.module('Stash.directives', [])
             var itemType = $('.pageTitle').attr('title');
             var userId = $('.username').attr('title');
             var itemId = $('.pageId').attr('title');
-            var reviewsRef = new Firebase('https://deviineadmin.firebaseio.com/' + itemType + '/' + itemId + '/reviews');
-            var userReviewsRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/reviews/' + itemType + '/'+ itemId);
+            var reviewsRef = new Firebase('https://stashreviews.firebaseio.com/' + itemType + '/' + itemId + '/reviews');
+            var userReviewsRef = new Firebase('https://stashreviews.firebaseio.com/users/' + userId + '/reviews/' + itemType + '/'+ itemId);
             // Add a callback that is triggered for each chat review.
             reviewsRef.on('child_added', function (snapshot) {
               var review = snapshot.val();
@@ -399,8 +399,8 @@ angular.module('Stash.directives', [])
             var itemType = $('.pageTitle').attr('title');
             var userId = $('.username').attr('title');
             var itemId = $('.pageId').attr('title');
-            var reviewsRef = new Firebase('https://deviineadmin.firebaseio.com/' + itemType + '/' + itemId + '/reviews');
-            var userReviewsRef = new Firebase('https://deviineadmin.firebaseio.com/users/' + userId + '/reviews/' + itemType + '/' + itemId);
+            var reviewsRef = new Firebase('https://stashreviews.firebaseio.com/' + itemType + '/' + itemId + '/reviews');
+            var userReviewsRef = new Firebase('https://stashreviews.firebaseio.com/users/' + userId + '/reviews/' + itemType + '/' + itemId);
 
             
             if (! text) {

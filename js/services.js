@@ -169,6 +169,144 @@ angular.module('Stash.services', [])
       }
     };
   }])
+  .factory('businessesService', ['$firebaseAuth', '$firebaseObject', 'dvUrl', function($firebaseAuth, $firebaseObject, dvUrl) {
+    var dvRef = new Firebase(dvUrl);
+    var dvAuth = $firebaseAuth(dvRef);
+    var currentUser = null;
+
+    return {
+      setCurrentBusiness: function(business) {
+          this.currentUser = business;
+      },
+      getCurrentBusiness: function() {
+        return this.currentBusiness;
+      },
+      /**
+       * @param {String} service
+       * @param {Object} credentials
+       */
+      login: function(service, credentials) {
+        switch(service) {
+
+          case 'password':
+            return dvAuth.$authWithPassword({
+              email: credentials.email,
+              password: credentials.password
+            });
+          location.reload();
+          break;
+
+        }
+      },
+      logout: function() {
+        dvAuth.$unauth();
+      },
+      /**
+       * @param {Object} credentials
+       * @param {Object} profile
+       */
+      add: function(credentials, profile) {
+        dvAuth.$createBusiness({
+          email: credentials.email,
+          password: credentials.password
+        })
+          .then(function(business) {
+            this.saveProfile(business.uid, profile);
+          });
+      },
+      // remove: function(businessId) {}
+      /**
+       * @param {String} businessId
+       */
+      getProfile: function(businessId) {
+        return $firebaseObject( new Firebase(dvUrl + '/businesses/' + businessId + '/profile') );
+      },
+      /**
+       * @param {Object} businessId
+       * @param {Object} profile
+       */
+      saveProfile: function(businessId, profile) {
+        ( new Firebase(dvRef + '/businesses/' + businessId + '/profile') ).set(profile);
+      },
+      /**
+       * @param {String} email
+       * @returns {String} md5sum
+       */
+      getEmailHash: function(email) {
+        return email
+          ? md5( email.trim().toLowerCase() )
+          : '';
+      },
+      /**
+       * @param {Object} business
+       * @returns {boolean} isAdmin
+       */
+      isAdmin: function(business) {
+        var adminIdList = [
+          'twitter:2199988411', // Dan Siddoway
+          'simplelogin:1',
+          'twitter:318556297',
+          'twitter:dberg15',
+          'simplelogin:2',
+          'google:103075984866184444011',
+          'google:dakotaberg',
+          'simplelogin:3',
+          'twitter:154732114',
+          'twitter:justinvinge',
+          'simplelogin:4',
+          'google:108704110120989212163',
+          'google:justinvinge'      
+        ];
+
+        return ( business && business.uid )
+          // adminList.includes(business.uid)
+          // @todo Note that -1 (the return value for 'not found') also happens to be the index of the last item in the array.  Error-prone.
+          ? ( adminIdList.indexOf(business.uid) !== -1 )
+          : false;
+      },
+      /**
+       * @param {Object} business
+       * @returns {String} name
+       */
+      getName: function(business) {
+        if(business) {
+          var name = '';
+
+          switch(business.provider) {
+
+            case 'password':
+              name = 'email';
+              // @todo Use username rather than email for 'name'
+            break;
+          }
+
+          return business[business.provider][name];
+        } else {
+          return '';
+        }
+      },
+      /**
+       * @param {Object} business
+       * @returns {string} avatarUrl
+       */
+      getAvatarUrl: function(business) {
+        if(business) {
+          var url = '';
+
+          switch(business.provider) {
+
+            case 'password':
+              url = 'https://www.gravatar.com/avatar/' + this.getEmailHash(business[business.provider].email);
+            break;
+          }
+
+          return url;
+        } else {
+          return '';
+        }
+      }
+    };
+  }])
   .factory('itemsService', ['$firebaseObject', '$firebaseArray', 'dvUrl', function($firebaseObject, $firebaseArray, dvUrl) {
     return {
       /**

@@ -76,6 +76,27 @@ angular.module('Stash', ['Stash.config', 'Stash.services', 'Stash.controllers', 
         templateUrl: 'pages/users/userBuddies.html',
         controller: 'userBuddyCtrl'
       })
+      // business pages
+      .state('root.businesses', {
+        url: '/businesses',
+        templateUrl: 'pages/businesses.html',
+        controller: 'businessesCtrl'
+      })
+      .state('root.businessProfile', {
+        url: '/businesses/:businessId',
+        templateUrl: 'pages/businesses/businessProfile.html',
+        controller: 'businessProfileCtrl'
+      })
+      .state('root.managebusiness', {
+        url: '/manage/business',
+        templateUrl: 'pages/manage/business.html',
+        controller: 'businessManageCtrl',
+        resolve: {
+          currentUser: ['$firebaseAuth', 'dvUrl', function($firebaseAuth, dvUrl) {
+            return $firebaseAuth( new Firebase(dvUrl) ).$requireAuth();
+          }]
+        }
+      })
       // strains
       .state('root.strains', {
         url: '/strains',

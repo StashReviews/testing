@@ -4,7 +4,6 @@
   /* IE9 Compat Modes */
   src: url("../fonts/bebas_neue/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebas_neue/bebasneue_regular-webfont.woff") format("woff"), url("../fonts/bebas_neue/bebasneue_regular-webfont.ttf") format("truetype"), url("../fonts/bebas_neue/bebasneue_regular-webfont.svg") format("svg");
   /* Legacy iOS */ }
-
 /* line 2, _items.scss */
 .dvCardList h4 {
   margin-top: 100px;
@@ -22,14 +21,14 @@
     color: #3dd861;
     font-weight: bold; }
 
-/* line 22, _items.scss */
+/* line 20, _items.scss */
 .dispensaryLogoWrap,
 .producerLogoWrap,
 .processorLogoWrap {
   float: left;
   clear: left; }
 
-/* line 29, _items.scss */
+/* line 26, _items.scss */
 .dispensaryLogo,
 .businessLogo,
 .producerLogo,
@@ -40,7 +39,7 @@
   float: left;
   clear: left; }
 
-/* line 41, _items.scss */
+/* line 37, _items.scss */
 .dispensaryName,
 .dealTitle,
 .strainName,
@@ -75,7 +74,7 @@
     .favorite .favoriteIcon:hover {
       background: #f7253e; }
 
-/* line 76, _items.scss */
+/* line 74, _items.scss */
 .strainChemistry,
 .concentrateType,
 .edibleType {
@@ -95,7 +94,7 @@
 .edibleType {
   color: #f7253e; }
 
-/* line 94, _items.scss */
+/* line 91, _items.scss */
 .businessName,
 .strainProducer,
 .edibleProcessor,
@@ -107,7 +106,7 @@
   margin: 0px 0 10px 0;
   padding: 0; }
 
-/* line 105, _items.scss */
+/* line 103, _items.scss */
 .dispensaryAddress,
 .businessAddress,
 .producedBy {
@@ -138,7 +137,7 @@
   top: -20px;
   float: none;
   clear: left; }
-  /* line 138, _items.scss */
+  /* line 133, _items.scss */
   .contactInfo .dispensaryWebsite a,
   .contactInfo .dispensaryEmail a,
   .contactInfo .dispensaryPhone a,
@@ -173,7 +172,7 @@
 .strainDescriptionSubHeader {
   margin: -6px 0 0 0; }
 
-/* line 165, _items.scss */
+/* line 164, _items.scss */
 .strainDescription,
 .edibleDescription {
   font-family: "Open Sans", sans-serif;
@@ -182,7 +181,7 @@
   margin: 10px 0 0 0;
   padding: 0; }
 
-/* line 177, _items.scss */
+/* line 173, _items.scss */
 .dispensaryGallery,
 .dealGallery,
 .strainGallery,
@@ -236,7 +235,7 @@
   transition: .3s; }
 
 /* Strain Zoom End */
-/* line 233, _items.scss */
+/* line 230, _items.scss */
 .strainGalleryMobile,
 .dispensaryGalleryMobile,
 .concentrateGalleryMobile,
@@ -305,7 +304,7 @@
     line-height: 16px;
     color: #2c3034;
     float: left; }
-  /* line 300, _items.scss */
+  /* line 299, _items.scss */
   .dealDetails .redemptionDetails div .distanceAway,
   .dealDetails .redemptionDetails div .daysLeft {
     color: #f7253e;
@@ -317,7 +316,7 @@
     float: left;
     width: 25%; }
 
-/* line 315, _items.scss */
+/* line 313, _items.scss */
 .flavorProfile,
 .positiveEffects,
 .negativeEffects {
@@ -348,7 +347,7 @@
     .negativeEffects li:nth-child(3) {
       border-bottom: 3px solid #f7253e; }
 
-/* line 337, _items.scss */
+/* line 335, _items.scss */
 .strainProfileTitle,
 .concentrateProfileTitle,
 .edibleProfileTitle {
@@ -367,7 +366,7 @@
   float: left; }
 
 /* Potency */
-/* line 355, _items.scss */
+/* line 354, _items.scss */
 .thcPotency,
 .cbdPotency {
   margin: 0 auto;
@@ -475,7 +474,7 @@
     float: right;
     height: 100px;
     width: 100%; }
-    /* line 463, _items.scss */
+    /* line 461, _items.scss */
     .reviews .leaveReview #reviewInput:hover, .reviews .leaveReview #reviewInput:active, .reviews .leaveReview #reviewInput:focus {
       border-color: #2c3034; }
   /* line 467, _items.scss */
@@ -613,7 +612,7 @@
     .userInfoLeft .buddyBtn:hover {
       color: white;
       background: #3dd861; }
-    /* line 604, _items.scss */
+    /* line 602, _items.scss */
     .userInfoLeft .buddyBtn:active, .userInfoLeft .buddyBtn:focus, .userInfoLeft .buddyBtn:visited {
       text-decoration: none; }
 
@@ -801,7 +800,7 @@
       .userFavorites ul li a:hover {
         background: none;
         border: none; }
-/* line 810, _items.scss */
+/* line 807, _items.scss */
 .userFavorites li.active > a,
 .userFavorites li.active > a:hover,
 .userFavorites li.active > a:focus,
@@ -811,19 +810,19 @@
 /* line 814, _items.scss */
 .userFavorites li:nth-child(1) {
   border-color: #3dd861; }
-  /* line 817, _items.scss */
+  /* line 816, _items.scss */
   .userFavorites li:nth-child(1):hover, .userFavorites li:nth-child(1).active {
     background-color: #3dd861; }
 /* line 821, _items.scss */
 .userFavorites li:nth-child(2) {
   border-color: #fcd31c; }
-  /* line 824, _items.scss */
+  /* line 823, _items.scss */
   .userFavorites li:nth-child(2):hover, .userFavorites li:nth-child(2).active {
     background-color: #fcd31c; }
 /* line 828, _items.scss */
 .userFavorites li:nth-child(3) {
   border-color: #f7253e; }
-  /* line 831, _items.scss */
+  /* line 830, _items.scss */
   .userFavorites li:nth-child(3):hover, .userFavorites li:nth-child(3).active {
     background-color: #f7253e; }
 
@@ -1002,7 +1001,7 @@
     /* line 176, layout/_navbar.scss */
     #mainMenu > li a {
       color: #2c3034; }
-      /* line 180, layout/_navbar.scss */
+      /* line 178, layout/_navbar.scss */
       #mainMenu > li a:active, #mainMenu > li a:focus, #mainMenu > li a:visited {
         text-decoration: none; }
       /* line 183, layout/_navbar.scss */
@@ -1051,7 +1050,7 @@
     transition: all .3s ease; }
 
 /*  End Up to Top  */
-/* line 3, layout/_menuMobile.scss */
+/* line 2, layout/_menuMobile.scss */
 .navbar-header .menuMobile-toggler,
 .navbar-header #close-menuMobile {
   display: none;
@@ -1171,16 +1170,16 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
-    /* line 40, layout/_footer.scss */
+    /* line 38, layout/_footer.scss */
     #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
       border: 2px solid #3dd861; }
   /* line 44, layout/_footer.scss */
   #footer input[type='email'] {
     width: 300px; }
-    /* line 48, layout/_footer.scss */
+    /* line 46, layout/_footer.scss */
     #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
       border-right: none; }
-    /* line 52, layout/_footer.scss */
+    /* line 51, layout/_footer.scss */
     #footer input[type='email']:visited, #footer input[type='email']:focus {
       background-color: rgba(255, 255, 255, 0.2); }
   /* line 56, layout/_footer.scss */
@@ -1200,7 +1199,7 @@
     #footer .btnfooter:hover {
       color: #2c3034;
       background: #3dd861; }
-    /* line 74, layout/_footer.scss */
+    /* line 72, layout/_footer.scss */
     #footer .btnfooter:active, #footer .btnfooter:focus, #footer .btnfooter:visited {
       text-decoration: none; }
   /* line 78, layout/_footer.scss */
@@ -1286,7 +1285,7 @@
   .pageMobileHeader {
     display: inherit; }
 
-  /* line 49, 470px.scss */
+  /* line 47, 470px.scss */
   #indexSummary .howItWorks .concentratesIcon,
   #indexSummary .howItWorks .ediblesIcon,
   #indexSummary .howItWorks .strainsIcon {
@@ -1324,7 +1323,7 @@
 
   /*----ratings.html end----*/
   /*----cards.html start----*/
-  /* line 90, 470px.scss */
+  /* line 89, 470px.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType {
     margin: 30% auto 0 auto; }
@@ -1334,7 +1333,7 @@
       width: 68%;
     }
   }*/
-  /* line 101, 470px.scss */
+  /* line 99, 470px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
@@ -1411,10 +1410,10 @@
   #indexSummary .howItWorks {
     padding: 20px 5%;
     height: 100%; }
-    /* line 49, 767px.scss */
+    /* line 48, 767px.scss */
     #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
       border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-    /* line 54, 767px.scss */
+    /* line 52, 767px.scss */
     #indexSummary .howItWorks .concentratesIcon,
     #indexSummary .howItWorks .ediblesIcon,
     #indexSummary .howItWorks .strainsIcon {
@@ -1484,7 +1483,7 @@
   /*  .cardWrapper {
       margin: 0 25% !important;
     }*/
-  /* line 123, 767px.scss */
+  /* line 121, 767px.scss */
   .featured-edible-true,
   .featured-concentrate-true,
   .featured-strain-true {
@@ -1507,13 +1506,13 @@
     }*/
   /*----cards.html end----*/
   /*----items.html start----*/
-  /* line 147, 767px.scss */
+  /* line 145, 767px.scss */
   #strainGallery,
   #edibleGallery,
   #concentrateGallery {
     display: none; }
 
-  /* line 152, 767px.scss */
+  /* line 150, 767px.scss */
   .strainGalleryMobile,
   .edibleGalleryMobile,
   .concentrateGalleryMobile {
@@ -1523,7 +1522,7 @@
   /*----items.html end----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
-  /* line 162, 767px.scss */
+  /* line 160, 767px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
@@ -1598,7 +1597,7 @@
       padding: 0;
       width: 33%;
       float: left; }
-      /* line 73, 980px.scss */
+      /* line 71, 980px.scss */
       #mainMenu > li:nth-child(1), #mainMenu > li:nth-child(2), #mainMenu > li:nth-child(3) {
         border: none; }
       /* line 76, 980px.scss */
@@ -1655,7 +1654,7 @@
 
   /*----footer end----*/
   /*----cards.html start----*/
-  /* line 141, 980px.scss */
+  /* line 139, 980px.scss */
   .cardWrapper .concentrateImage,
   .cardWrapper .edibleImage,
   .cardWrapper .strainImage {
@@ -1711,7 +1710,7 @@
   /* line 25, _home.scss */
   #indexSummary > .howItWorks:hover .ediblesIcon {
     background-color: #f7253e; }
-  /* line 31, _home.scss */
+  /* line 29, _home.scss */
   #indexSummary > .howItWorks .ediblesIcon,
   #indexSummary > .howItWorks .concentratesIcon,
   #indexSummary > .howItWorks .strainsIcon {
@@ -1761,7 +1760,7 @@
     /* line 75, _home.scss */
     #indexSummary > .howItWorks .arrowRight.green {
       border-left-color: #3dd861; }
-  /* line 81, _home.scss */
+  /* line 80, _home.scss */
   #indexSummary > .howItWorks:nth-child(1), #indexSummary > .howItWorks:nth-child(2) {
     border-right: 1px solid rgba(44, 48, 52, 0.05); }
   /* line 84, _home.scss */
@@ -1878,11 +1877,11 @@
         padding: 10px 0 2px 0;
         border: 2px solid rgba(255, 255, 255, 0.2);
         border-radius: 10px; }
-        /* line 77, modals/_login.scss */
+        /* line 75, modals/_login.scss */
         .modal-content .modal-body .btn-group li:hover, .modal-content .modal-body .btn-group li:focus, .modal-content .modal-body .btn-group li:active {
           border-color: #fcd31c;
           color: #fcd31c; }
-      /* line 84, modals/_login.scss */
+      /* line 82, modals/_login.scss */
       .modal-content .modal-body .btn-group li.facebook,
       .modal-content .modal-body .btn-group li.twitter,
       .modal-content .modal-body .btn-group li.google {
@@ -1890,7 +1889,7 @@
         background-repeat: no-repeat;
         background-position: center;
         padding: 35px 0; }
-    /* line 92, modals/_login.scss */
+    /* line 91, modals/_login.scss */
     .modal-content .modal-body .signUp,
     .modal-content .modal-body .signIn {
       color: #fcd31c;
@@ -1917,7 +1916,7 @@
       padding: 10px 0 2px 0;
       border: 2px solid rgba(255, 255, 255, 0.2);
       border-radius: 10px; }
-      /* line 119, modals/_login.scss */
+      /* line 116, modals/_login.scss */
       .modal-content .modal-footer button:hover, .modal-content .modal-footer button:focus, .modal-content .modal-footer button:active, .modal-content .modal-footer button:visited {
         border-color: #fcd31c;
         color: #fcd31c; }
@@ -1939,7 +1938,7 @@
   .rating .ratingBarWrap {
     position: relative;
     width: 250px; }
-    /* line 10, partials/_rating.scss */
+    /* line 9, partials/_rating.scss */
     .rating .ratingBarWrap svg,
     .rating .ratingBarWrap div.ratingBar {
       position: absolute;
@@ -2126,7 +2125,7 @@
     top: 0px;
     margin: 10% 10% 0 10%;
     padding: 0; }
-  /* line 26, partials/_cards.scss */
+  /* line 23, partials/_cards.scss */
   .cardWrapper .dispensaryLogo,
   .cardWrapper .strainImage,
   .cardWrapper .concentrateImage,
@@ -2141,7 +2140,7 @@
     .cardWrapper .edibleImage img {
       width: 100%;
       border-radius: 15px; }
-  /* line 38, partials/_cards.scss */
+  /* line 35, partials/_cards.scss */
   .cardWrapper .dispensaryName,
   .cardWrapper .strainName,
   .cardWrapper .concentrateName,
@@ -2159,7 +2158,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
-  /* line 56, partials/_cards.scss */
+  /* line 53, partials/_cards.scss */
   .cardWrapper .dispensaryAddress,
   .cardWrapper .businessName,
   .cardWrapper .producedBy,
@@ -2174,20 +2173,20 @@
     margin: 0;
     padding: 0;
     overflow: hidden; }
-  /* line 71, partials/_cards.scss */
+  /* line 68, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .businessName.line2,
   .cardWrapper .producedBy.line2,
   .cardWrapper .processedBy.line2 {
     position: relative;
     z-index: 3; }
-  /* line 77, partials/_cards.scss */
+  /* line 75, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line1,
   .cardWrapper .producedBy.line1,
   .cardWrapper .processedBy.line1 {
     height: 18px;
     display: none; }
-  /* line 83, partials/_cards.scss */
+  /* line 81, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .producedBy.line2,
   .cardWrapper .processedBy.line2 {
@@ -2195,7 +2194,7 @@
   /* line 86, partials/_cards.scss */
   .cardWrapper .businessName.line2 {
     height: 24px; }
-  /* line 92, partials/_cards.scss */
+  /* line 89, partials/_cards.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType,
   .cardWrapper .concentrateType,
@@ -2227,7 +2226,7 @@
 .edibleCard .edibleType {
   color: #f7253e; }
 
-/* line 130, partials/_cards.scss */
+/* line 126, partials/_cards.scss */
 .featured-dispensary-true,
 .featured-strain-true,
 .featured-concentrate-true,
@@ -2330,7 +2329,7 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border: none; }
-    /* line 41, partials/_menu.scss */
+    /* line 38, partials/_menu.scss */
     .menu ul.nav.nav-tabs > li > a:hover, .menu ul.nav.nav-tabs > li > a:active, .menu ul.nav.nav-tabs > li > a:visited, .menu ul.nav.nav-tabs > li > a:focus {
       color: transparent;
       border: none; }
@@ -2376,7 +2375,7 @@
       margin-right: 10px;
       width: 30%;
       float: left; }
-    /* line 117, partials/_menu.scss */
+    /* line 116, partials/_menu.scss */
     .menu .menu .menuItem .thcPotency,
     .menu .menu .menuItem .cbdPotency {
       margin: 0px auto 0 auto;
@@ -2432,7 +2431,7 @@ body {
   position: relative;
   top: 100px; }
 
-/* line 41, style.scss */
+/* line 38, style.scss */
 #strainsList,
 #concentratesList,
 #ediblesList,
@@ -2444,11 +2443,11 @@ body {
   padding: 0 2%;
   margin: 0; }
 
-/* line 53, style.scss */
+/* line 51, style.scss */
 a:active, a:hover, a:visited {
   text-decoration: none; }
 
-/* line 63, style.scss */
+/* line 58, style.scss */
 h1,
 h2,
 h3,
@@ -2510,20 +2509,36 @@ form {
     color: white;
     padding: 5px 0 0 0;
     background: #2c3034; }
-    /* line 120, style.scss */
+    /* line 117, style.scss */
     form .btn-block.dispensaryCMS:hover, form .btn-block.dispensaryCMS:active, form .btn-block.dispensaryCMS:focus, form .btn-block.dispensaryCMS:visited {
       background: #f7253e;
       color: white; }
-    /* line 127, style.scss */
+    /* line 124, style.scss */
     form .btn-block.dealCMS:hover, form .btn-block.dealCMS:active, form .btn-block.dealCMS:focus, form .btn-block.dealCMS:visited {
       background: #fcd31c;
       color: white; }
-    /* line 134, style.scss */
+    /* line 131, style.scss */
     form .btn-block.strainCMS:hover, form .btn-block.strainCMS:active, form .btn-block.strainCMS:focus, form .btn-block.strainCMS:visited {
       background: #3dd861;
       color: white; }
+  /* line 139, style.scss */
+  form .button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    border: 3px solid #fcd31c;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background: none; }
+    /* line 149, style.scss */
+    form .button:hover {
+      background: #fcd31c;
+      color: white;
+      cursor: pointer; }
 
-/* line 141, style.scss */
+/* line 157, style.scss */
 .faqQuestion {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -2531,52 +2546,52 @@ form {
   letter-spacing: 1px;
   color: #2c3034;
   margin: 20px 0 5px 0; }
-  /* line 148, style.scss */
+  /* line 164, style.scss */
   .faqQuestion a {
     color: #3dd861; }
 
-/* line 153, style.scss */
+/* line 169, style.scss */
 .brandassets {
   margin-top: -3%;
   list-style: none; }
-  /* line 156, style.scss */
+  /* line 172, style.scss */
   .brandassets li {
     margin-bottom: 20px;
     text-align: center; }
-    /* line 159, style.scss */
+    /* line 175, style.scss */
     .brandassets li h4 {
       font-size: 35px;
       margin-top: 30px;
       border-bottom: 3px solid; }
-    /* line 164, style.scss */
+    /* line 180, style.scss */
     .brandassets li:nth-child(1) {
       color: #3dd861; }
-    /* line 167, style.scss */
+    /* line 183, style.scss */
     .brandassets li:nth-child(2) {
       color: #fcd31c; }
-    /* line 170, style.scss */
+    /* line 186, style.scss */
     .brandassets li:nth-child(3) {
       color: #f7253e; }
-    /* line 173, style.scss */
+    /* line 189, style.scss */
     .brandassets li:nth-child(4) {
       color: #2c3034; }
-    /* line 177, style.scss */
+    /* line 193, style.scss */
     .brandassets li a img {
       width: 100%; }
 
-/* line 184, style.scss */
+/* line 200, style.scss */
 .stateYourLovePageHeader {
   margin-bottom: 20px; }
-  /* line 186, style.scss */
+  /* line 202, style.scss */
   .stateYourLovePageHeader h3 {
     border-bottom: none;
     font-family: "Open Sans", sans-serif;
     text-transform: none; }
 
-/* line 197, style.scss */
+/* line 213, style.scss */
 .stateYourLove li img {
   width: 100%; }
-/* line 200, style.scss */
+/* line 216, style.scss */
 .stateYourLove li label {
   font-family: "Bebas Neue", "Khand", sans-serif;
   color: #2c3034;
@@ -2584,3 +2599,5 @@ form {
   text-align: center;
   margin-bottom: 15px;
   width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

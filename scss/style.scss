@@ -136,6 +136,22 @@ form {
       color: white;
     }
   }
+  .button {
+    font-family: $dvTextFont;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    border: 3px solid $dvYellow;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background: none;
+    &:hover {
+      background: $dvYellow;
+      color: white;
+      cursor: pointer;
+    }
+  }
 }
 
 .faqQuestion {

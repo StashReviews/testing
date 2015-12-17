@@ -174,6 +174,25 @@ angular.module('Stash.controllers', [])
   .controller('userBuddyCtrl', ['$scope', 'usersService', function($scope, usersService) {
 
   }])
+  .controller('businessManageCtrl', ['$scope', '$firebaseObject', 'dvUrl', function($scope, $firebaseObject, dvUrl) {
+    $firebaseObject( new Firebase(dvUrl + '/businesses') ).$loaded()
+      .then(function(businesses) {
+        $scope.businesses = businesses;
+      });
+
+    $scope.newBusiness = function() {
+      $scope.businessId = '';
+      $scope.business = {};
+    };
+
+    $scope.loadBusiness = function(businessId) {
+      $scope.business = $scope.businesses[businessId];
+    };
+
+    $scope.saveBusiness = function(businessId, business) {
+      ( new Firebase(dvUrl + '/businesses/' + businessId) ).set(business);
+    };
+  }])
   .controller('dispensariesCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
     // Wait for both our dispensaries and our featured dispensaries to load.
     // @todo Might we need to remove duplicate entries?
