@@ -4,6 +4,7 @@
   /* IE9 Compat Modes */
   src: url("../fonts/bebas_neue/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebas_neue/bebasneue_regular-webfont.woff") format("woff"), url("../fonts/bebas_neue/bebasneue_regular-webfont.ttf") format("truetype"), url("../fonts/bebas_neue/bebasneue_regular-webfont.svg") format("svg");
   /* Legacy iOS */ }
+
 /* line 2, _items.scss */
 .dvCardList h4 {
   margin-top: 100px;
@@ -11,7 +12,7 @@
   font-size: 26px; }
 /* line 7, _items.scss */
 .dvCardList h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-family: 14px;
   text-align: center;
   text-transform: none;
@@ -21,14 +22,14 @@
     color: #3dd861;
     font-weight: bold; }
 
-/* line 20, _items.scss */
+/* line 22, _items.scss */
 .dispensaryLogoWrap,
 .producerLogoWrap,
 .processorLogoWrap {
   float: left;
   clear: left; }
 
-/* line 26, _items.scss */
+/* line 29, _items.scss */
 .dispensaryLogo,
 .businessLogo,
 .producerLogo,
@@ -39,7 +40,7 @@
   float: left;
   clear: left; }
 
-/* line 37, _items.scss */
+/* line 41, _items.scss */
 .dispensaryName,
 .dealTitle,
 .strainName,
@@ -74,7 +75,7 @@
     .favorite .favoriteIcon:hover {
       background: #f7253e; }
 
-/* line 74, _items.scss */
+/* line 76, _items.scss */
 .strainChemistry,
 .concentrateType,
 .edibleType {
@@ -94,23 +95,23 @@
 .edibleType {
   color: #f7253e; }
 
-/* line 91, _items.scss */
+/* line 94, _items.scss */
 .businessName,
 .strainProducer,
 .edibleProcessor,
 .concentrateProcessor {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 16px;
   font-weight: normal;
   color: #2c3034;
   margin: 0px 0 10px 0;
   padding: 0; }
 
-/* line 103, _items.scss */
+/* line 105, _items.scss */
 .dispensaryAddress,
 .businessAddress,
 .producedBy {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;
@@ -120,7 +121,7 @@
 
 /* line 115, _items.scss */
 .viewOnMap {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
@@ -137,14 +138,14 @@
   top: -20px;
   float: none;
   clear: left; }
-  /* line 133, _items.scss */
+  /* line 138, _items.scss */
   .contactInfo .dispensaryWebsite a,
   .contactInfo .dispensaryEmail a,
   .contactInfo .dispensaryPhone a,
   .contactInfo .businessWebsite a,
   .contactInfo .businessEmail a,
   .contactInfo .businessPhone a {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 14px;
     font-weight: bold;
     color: rgba(44, 48, 52, 0.2); }
@@ -159,7 +160,7 @@
 
 /* line 149, _items.scss */
 .userRatingDisplay {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 14px;
   font-weight: normal;
   color: #2c3034;
@@ -172,16 +173,16 @@
 .strainDescriptionSubHeader {
   margin: -6px 0 0 0; }
 
-/* line 164, _items.scss */
+/* line 165, _items.scss */
 .strainDescription,
 .edibleDescription {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 18px;
   margin: 10px 0 0 0;
   padding: 0; }
 
-/* line 173, _items.scss */
+/* line 177, _items.scss */
 .dispensaryGallery,
 .dealGallery,
 .strainGallery,
@@ -235,7 +236,7 @@
   transition: .3s; }
 
 /* Strain Zoom End */
-/* line 230, _items.scss */
+/* line 233, _items.scss */
 .strainGalleryMobile,
 .dispensaryGalleryMobile,
 .concentrateGalleryMobile,
@@ -276,7 +277,7 @@
   margin: 20px 0 0 0; }
 /* line 270, _items.scss */
 .dealDetails p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #2c3034; }
@@ -299,16 +300,16 @@
       background: #2c3034; }
   /* line 292, _items.scss */
   .dealDetails .redemptionDetails div label {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 16px;
     line-height: 16px;
     color: #2c3034;
     float: left; }
-  /* line 299, _items.scss */
+  /* line 300, _items.scss */
   .dealDetails .redemptionDetails div .distanceAway,
   .dealDetails .redemptionDetails div .daysLeft {
     color: #f7253e;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 38px;
     line-height: 10px;
     text-align: right;
@@ -316,7 +317,7 @@
     float: left;
     width: 25%; }
 
-/* line 313, _items.scss */
+/* line 315, _items.scss */
 .flavorProfile,
 .positiveEffects,
 .negativeEffects {
@@ -347,11 +348,11 @@
     .negativeEffects li:nth-child(3) {
       border-bottom: 3px solid #f7253e; }
 
-/* line 335, _items.scss */
+/* line 337, _items.scss */
 .strainProfileTitle,
 .concentrateProfileTitle,
 .edibleProfileTitle {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   text-align: center;
   color: #2c3034;
   font-size: 10px;
@@ -366,7 +367,7 @@
   float: left; }
 
 /* Potency */
-/* line 354, _items.scss */
+/* line 355, _items.scss */
 .thcPotency,
 .cbdPotency {
   margin: 0 auto;
@@ -436,7 +437,7 @@
       position: absolute;
       z-index: 2;
       font-size: 11px;
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans", "Helvetica", sans-serif;
       font-weight: bold;
       color: white;
       padding: 5px 5px 5px 40px;
@@ -466,7 +467,7 @@
   /* line 451, _items.scss */
   .reviews .leaveReview #reviewInput {
     border: 2px solid rgba(44, 48, 52, 0.2);
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     color: #2c3034;
     padding: 40px 10px 10px 10px;
     border-radius: 20px 20px 0 0;
@@ -474,7 +475,7 @@
     float: right;
     height: 100px;
     width: 100%; }
-    /* line 461, _items.scss */
+    /* line 463, _items.scss */
     .reviews .leaveReview #reviewInput:hover, .reviews .leaveReview #reviewInput:active, .reviews .leaveReview #reviewInput:focus {
       border-color: #2c3034; }
   /* line 467, _items.scss */
@@ -483,7 +484,7 @@
     width: 100%;
     padding: 10px auto;
     margin-top: 5px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 11px; }
     /* line 474, _items.scss */
     .reviews .leaveReview .reviewType #privateReview {
@@ -495,7 +496,7 @@
       text-transform: uppercase; }
   /* line 483, _items.scss */
   .reviews .leaveReview #submitReview {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 14px;
     text-align: center;
     color: #2c3034;
@@ -512,7 +513,7 @@
       color: white; }
 /* line 501, _items.scss */
 .reviews .totalReviews {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 14px;
   text-align: center; }
 /* line 506, _items.scss */
@@ -521,7 +522,7 @@
   padding: 0; }
   /* line 509, _items.scss */
   .reviews #reviewsDiv h4 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 15px;
     text-transform: uppercase;
     margin: 0;
@@ -530,7 +531,7 @@
     border-top: 1px solid rgba(44, 48, 52, 0.05); }
   /* line 518, _items.scss */
   .reviews #reviewsDiv h6 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 10px;
     letter-spacing: 1px;
     font-weight: bold;
@@ -538,7 +539,7 @@
     margin: 0px 0 3px 0; }
   /* line 526, _items.scss */
   .reviews #reviewsDiv p {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 12px;
     color: #2c3034;
     margin: 0;
@@ -598,7 +599,7 @@
     background-color: transparent;
     border: 2px solid #3dd861;
     color: #3dd861;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     text-transform: uppercase;
     font-size: 16px;
     line-height: 35px;
@@ -612,7 +613,7 @@
     .userInfoLeft .buddyBtn:hover {
       color: white;
       background: #3dd861; }
-    /* line 602, _items.scss */
+    /* line 604, _items.scss */
     .userInfoLeft .buddyBtn:active, .userInfoLeft .buddyBtn:focus, .userInfoLeft .buddyBtn:visited {
       text-decoration: none; }
 
@@ -631,7 +632,7 @@
     /*margin: -7px 0 0 0;*/ }
   /* line 621, _items.scss */
   .userInfoMiddle h2 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 12px;
     line-height: 16px;
     color: rgba(44, 48, 52, 0.5);
@@ -643,7 +644,7 @@
       color: #2c3034; }
   /* line 633, _items.scss */
   .userInfoMiddle h3 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-weight: lighter;
     font-size: 16px;
     line-height: 18px;
@@ -656,7 +657,7 @@
     margin: 5px 0 0 0; }
   /* line 646, _items.scss */
   .userInfoMiddle p {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 12px;
     text-align: left;
     padding: 0;
@@ -669,7 +670,7 @@
   /* line 658, _items.scss */
   .userInfoRight ul li {
     display: inline;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 10px;
     padding: 0;
     text-align: center; }
@@ -717,7 +718,7 @@
     margin: -28px 0 0 2px; }
   /* line 714, _items.scss */
   .achievements .progressWrap h4 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 12px;
     color: #2c3034;
     text-align: center; }
@@ -727,7 +728,7 @@
   /* line 723, _items.scss */
   .achievements ul li {
     display: inline;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 10px;
     padding: 0;
     text-align: center; }
@@ -800,7 +801,7 @@
       .userFavorites ul li a:hover {
         background: none;
         border: none; }
-/* line 807, _items.scss */
+/* line 810, _items.scss */
 .userFavorites li.active > a,
 .userFavorites li.active > a:hover,
 .userFavorites li.active > a:focus,
@@ -810,19 +811,19 @@
 /* line 814, _items.scss */
 .userFavorites li:nth-child(1) {
   border-color: #3dd861; }
-  /* line 816, _items.scss */
+  /* line 817, _items.scss */
   .userFavorites li:nth-child(1):hover, .userFavorites li:nth-child(1).active {
     background-color: #3dd861; }
 /* line 821, _items.scss */
 .userFavorites li:nth-child(2) {
   border-color: #fcd31c; }
-  /* line 823, _items.scss */
+  /* line 824, _items.scss */
   .userFavorites li:nth-child(2):hover, .userFavorites li:nth-child(2).active {
     background-color: #fcd31c; }
 /* line 828, _items.scss */
 .userFavorites li:nth-child(3) {
   border-color: #f7253e; }
-  /* line 830, _items.scss */
+  /* line 831, _items.scss */
   .userFavorites li:nth-child(3):hover, .userFavorites li:nth-child(3).active {
     background-color: #f7253e; }
 
@@ -853,13 +854,45 @@
   margin: 0;
   padding: 0; }
   /* line 31, layout/_navbar.scss */
+  .navbar-right .authenticateButtons {
+    float: left; }
+    /* line 33, layout/_navbar.scss */
+    .navbar-right .authenticateButtons .button {
+      font-size: 12px;
+      text-transform: uppercase;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border: none;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0;
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -ms-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease; }
+      /* line 46, layout/_navbar.scss */
+      .navbar-right .authenticateButtons .button:hover {
+        background: none;
+        color: #fcd31c; }
+    /* line 51, layout/_navbar.scss */
+    .navbar-right .authenticateButtons .loginButton {
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -ms-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease; }
+    /* line 59, layout/_navbar.scss */
+    .navbar-right .authenticateButtons .signupButton {
+      margin-right: 25px; }
+  /* line 63, layout/_navbar.scss */
   .navbar-right .accountInfo {
     text-align: right;
     margin: 5px 0 0 0;
     float: right; }
-    /* line 35, layout/_navbar.scss */
+    /* line 67, layout/_navbar.scss */
     .navbar-right .accountInfo .username {
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans", "Helvetica", sans-serif;
       color: white;
       font-size: 18px;
       line-height: 22px;
@@ -867,17 +900,17 @@
       padding: 0;
       margin: 0;
       text-transform: none; }
-      /* line 44, layout/_navbar.scss */
+      /* line 76, layout/_navbar.scss */
       .navbar-right .accountInfo .username:hover {
         color: #fcd31c; }
-    /* line 48, layout/_navbar.scss */
+    /* line 80, layout/_navbar.scss */
     .navbar-right .accountInfo .location {
       color: #fcd31c;
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans", "Helvetica", sans-serif;
       font-size: 12px;
       padding: 0;
       margin: 0; }
-  /* line 56, layout/_navbar.scss */
+  /* line 88, layout/_navbar.scss */
   .navbar-right .userDropdown {
     position: absolute;
     right: 0;
@@ -886,9 +919,9 @@
     width: 100%;
     padding: 0 12px;
     display: none; }
-    /* line 64, layout/_navbar.scss */
+    /* line 96, layout/_navbar.scss */
     .navbar-right .userDropdown li {
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans", "Helvetica", sans-serif;
       font-size: 16px;
       font-weight: lighter;
       text-align: center;
@@ -898,16 +931,16 @@
       cursor: pointer;
       padding: 12px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-      /* line 75, layout/_navbar.scss */
+      /* line 107, layout/_navbar.scss */
       .navbar-right .userDropdown li:last-child {
         border-bottom: none; }
-      /* line 78, layout/_navbar.scss */
+      /* line 110, layout/_navbar.scss */
       .navbar-right .userDropdown li:hover {
         color: #fcd31c; }
-    /* line 82, layout/_navbar.scss */
+    /* line 114, layout/_navbar.scss */
     .navbar-right .userDropdown .dropdownLogout {
       color: rgba(255, 255, 255, 0.2); }
-  /* line 86, layout/_navbar.scss */
+  /* line 118, layout/_navbar.scss */
   .navbar-right .userDropdown:after, .navbar-right .userDropdown:before {
     bottom: 100%;
     right: 15px;
@@ -917,12 +950,12 @@
     width: 0;
     position: absolute;
     pointer-events: none; }
-  /* line 96, layout/_navbar.scss */
+  /* line 128, layout/_navbar.scss */
   .navbar-right .userDropdown:after {
     border-bottom-color: #2c3034;
     border-width: 10px;
     margin-left: -10px; }
-  /* line 101, layout/_navbar.scss */
+  /* line 133, layout/_navbar.scss */
   .navbar-right .avatarDefault {
     opacity: .1;
     -webkit-transition: all .2s ease;
@@ -930,10 +963,10 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
-    /* line 108, layout/_navbar.scss */
+    /* line 140, layout/_navbar.scss */
     .navbar-right .avatarDefault:hover {
       opacity: 1; }
-  /* line 112, layout/_navbar.scss */
+  /* line 144, layout/_navbar.scss */
   .navbar-right .avatar {
     height: 50px;
     width: 50px;
@@ -947,26 +980,26 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
-    /* line 125, layout/_navbar.scss */
+    /* line 157, layout/_navbar.scss */
     .navbar-right .avatar:hover {
       border: 2px solid #fcd31c; }
-  /* line 129, layout/_navbar.scss */
+  /* line 161, layout/_navbar.scss */
   .navbar-right .navbar-text {
     margin: 15px 0; }
-  /* line 132, layout/_navbar.scss */
+  /* line 164, layout/_navbar.scss */
   .navbar-right .navbar-text .btn {
     margin-top: -1%;
     color: white; }
-    /* line 135, layout/_navbar.scss */
+    /* line 167, layout/_navbar.scss */
     .navbar-right .navbar-text .btn span {
       color: rgba(255, 255, 255, 0.2); }
-    /* line 138, layout/_navbar.scss */
+    /* line 170, layout/_navbar.scss */
     .navbar-right .navbar-text .btn:hover {
       color: #fcd31c; }
 
 /*  End Header Bar  */
 /*  Start Left Nav  */
-/* line 155, layout/_navbar.scss */
+/* line 187, layout/_navbar.scss */
 #mainMenu {
   list-style-type: none;
   padding-left: 0;
@@ -975,36 +1008,36 @@
   font-size: 30px;
   position: fixed;
   top: 100px; }
-  /* line 163, layout/_navbar.scss */
+  /* line 195, layout/_navbar.scss */
   #mainMenu > li {
     padding-left: 10px;
     padding-top: 8px;
     margin: 5px 0; }
-    /* line 167, layout/_navbar.scss */
+    /* line 199, layout/_navbar.scss */
     #mainMenu > li:nth-child(1) {
       border-left: 3px solid #3dd861; }
-      /* line 150, layout/_navbar.scss */
+      /* line 182, layout/_navbar.scss */
       #mainMenu > li:nth-child(1) > a:hover {
         color: #3dd861; }
-    /* line 170, layout/_navbar.scss */
+    /* line 202, layout/_navbar.scss */
     #mainMenu > li:nth-child(2) {
       border-left: 3px solid #fcd31c; }
-      /* line 150, layout/_navbar.scss */
+      /* line 182, layout/_navbar.scss */
       #mainMenu > li:nth-child(2) > a:hover {
         color: #fcd31c; }
-    /* line 173, layout/_navbar.scss */
+    /* line 205, layout/_navbar.scss */
     #mainMenu > li:nth-child(3) {
       border-left: 3px solid #f7253e; }
-      /* line 150, layout/_navbar.scss */
+      /* line 182, layout/_navbar.scss */
       #mainMenu > li:nth-child(3) > a:hover {
         color: #f7253e; }
-    /* line 176, layout/_navbar.scss */
+    /* line 208, layout/_navbar.scss */
     #mainMenu > li a {
       color: #2c3034; }
-      /* line 178, layout/_navbar.scss */
+      /* line 212, layout/_navbar.scss */
       #mainMenu > li a:active, #mainMenu > li a:focus, #mainMenu > li a:visited {
         text-decoration: none; }
-      /* line 183, layout/_navbar.scss */
+      /* line 215, layout/_navbar.scss */
       #mainMenu > li a img {
         position: relative;
         left: -62px;
@@ -1013,24 +1046,24 @@
         -ms-transition: .3s all;
         -o-transition: .3s all;
         transition: .3s all; }
-        /* line 191, layout/_navbar.scss */
+        /* line 223, layout/_navbar.scss */
         #mainMenu > li a img:hover {
           left: -50px; }
-  /* line 197, layout/_navbar.scss */
+  /* line 229, layout/_navbar.scss */
   #mainMenu .adminnav {
     color: rgba(44, 48, 52, 0.2); }
-    /* line 199, layout/_navbar.scss */
+    /* line 231, layout/_navbar.scss */
     #mainMenu .adminnav:hover {
       color: #2c3034; }
 
 /*  End Left Nav  */
 /*  Start Up to Top  */
-/* line 209, layout/_navbar.scss */
+/* line 241, layout/_navbar.scss */
 #top {
   position: absolute;
   top: 0; }
 
-/* line 213, layout/_navbar.scss */
+/* line 245, layout/_navbar.scss */
 .upToTop {
   position: fixed;
   right: 2%;
@@ -1040,7 +1073,7 @@
   -ms-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease; }
-  /* line 222, layout/_navbar.scss */
+  /* line 254, layout/_navbar.scss */
   .upToTop:hover {
     bottom: 2%;
     -webkit-transition: all .3s ease;
@@ -1050,7 +1083,7 @@
     transition: all .3s ease; }
 
 /*  End Up to Top  */
-/* line 2, layout/_menuMobile.scss */
+/* line 3, layout/_menuMobile.scss */
 .navbar-header .menuMobile-toggler,
 .navbar-header #close-menuMobile {
   display: none;
@@ -1118,7 +1151,7 @@
       color: White; }
     /* line 64, layout/_menuMobile.scss */
     .navbar-header .menuMobile ul .menuMobile-subHeader {
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans", "Helvetica", sans-serif;
       font-size: 12px;
       font-weight: lighter;
       text-transform: uppercase;
@@ -1141,22 +1174,24 @@
   /*  End Social Icons  */ }
   /* line 7, layout/_footer.scss */
   #footer h4 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-weight: lighter;
     font-size: 20px;
     text-transform: uppercase;
-    color: #3dd861; }
-  /* line 15, layout/_footer.scss */
+    color: #3dd861;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  /* line 17, layout/_footer.scss */
   #footer a {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 14px;
     color: white; }
-    /* line 19, layout/_footer.scss */
+    /* line 21, layout/_footer.scss */
     #footer a:hover {
       color: #3dd861; }
-  /* line 23, layout/_footer.scss */
+  /* line 25, layout/_footer.scss */
   #footer input[type='email'] {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 12px;
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
@@ -1170,67 +1205,67 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
-    /* line 38, layout/_footer.scss */
+    /* line 42, layout/_footer.scss */
     #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
       border: 2px solid #3dd861; }
-  /* line 44, layout/_footer.scss */
+  /* line 46, layout/_footer.scss */
   #footer input[type='email'] {
     width: 300px; }
-    /* line 46, layout/_footer.scss */
+    /* line 50, layout/_footer.scss */
     #footer input[type='email']:hover, #footer input[type='email']:active, #footer input[type='email']:focus {
       border-right: none; }
-    /* line 51, layout/_footer.scss */
+    /* line 54, layout/_footer.scss */
     #footer input[type='email']:visited, #footer input[type='email']:focus {
       background-color: rgba(255, 255, 255, 0.2); }
-  /* line 56, layout/_footer.scss */
+  /* line 58, layout/_footer.scss */
   #footer .btnfooter {
     border-radius: 0;
     background-color: transparent;
     border: 2px solid #3dd861;
     color: #3dd861;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     text-transform: uppercase;
     font-size: 16px;
     height: 40px;
     margin-top: 0;
     padding: .5% 5%;
     box-shadow: none; }
-    /* line 68, layout/_footer.scss */
+    /* line 70, layout/_footer.scss */
     #footer .btnfooter:hover {
       color: #2c3034;
       background: #3dd861; }
-    /* line 72, layout/_footer.scss */
+    /* line 76, layout/_footer.scss */
     #footer .btnfooter:active, #footer .btnfooter:focus, #footer .btnfooter:visited {
       text-decoration: none; }
-  /* line 78, layout/_footer.scss */
+  /* line 80, layout/_footer.scss */
   #footer .btnfooterlrg {
     padding: 1.5% 5%;
     margin: 0 auto; }
-  /* line 82, layout/_footer.scss */
+  /* line 84, layout/_footer.scss */
   #footer .footerFeedback {
     text-align: center; }
-  /* line 85, layout/_footer.scss */
+  /* line 87, layout/_footer.scss */
   #footer address {
     font-size: 10px;
     padding-top: 5%;
     width: 100%;
     text-align: center; }
-  /* line 92, layout/_footer.scss */
+  /* line 94, layout/_footer.scss */
   #footer .footerlogo {
     padding-top: 20%; }
-  /* line 96, layout/_footer.scss */
+  /* line 98, layout/_footer.scss */
   #footer #socialIcons {
     list-style-type: none;
     margin: 0;
     padding: 0;
     text-align: center; }
-    /* line 101, layout/_footer.scss */
+    /* line 103, layout/_footer.scss */
     #footer #socialIcons li {
       display: inline; }
-    /* line 104, layout/_footer.scss */
+    /* line 106, layout/_footer.scss */
     #footer #socialIcons img {
       width: 40px;
-      margin: 20px 0 0 5px;
+      margin: 30px 0 0 5px;
       background: white;
       border-radius: 5px;
       border: 2px solid white;
@@ -1239,7 +1274,7 @@
       -ms-transition: all .2s ease;
       -o-transition: all .2s ease;
       transition: all .2s ease; }
-      /* line 115, layout/_footer.scss */
+      /* line 117, layout/_footer.scss */
       #footer #socialIcons img:hover {
         background: #3dd861;
         border-color: #3dd861; }
@@ -1285,7 +1320,7 @@
   .pageMobileHeader {
     display: inherit; }
 
-  /* line 47, 470px.scss */
+  /* line 49, 470px.scss */
   #indexSummary .howItWorks .concentratesIcon,
   #indexSummary .howItWorks .ediblesIcon,
   #indexSummary .howItWorks .strainsIcon {
@@ -1323,7 +1358,7 @@
 
   /*----ratings.html end----*/
   /*----cards.html start----*/
-  /* line 89, 470px.scss */
+  /* line 90, 470px.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType {
     margin: 30% auto 0 auto; }
@@ -1333,7 +1368,7 @@
       width: 68%;
     }
   }*/
-  /* line 99, 470px.scss */
+  /* line 101, 470px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
@@ -1410,10 +1445,10 @@
   #indexSummary .howItWorks {
     padding: 20px 5%;
     height: 100%; }
-    /* line 48, 767px.scss */
+    /* line 49, 767px.scss */
     #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
       border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-    /* line 52, 767px.scss */
+    /* line 54, 767px.scss */
     #indexSummary .howItWorks .concentratesIcon,
     #indexSummary .howItWorks .ediblesIcon,
     #indexSummary .howItWorks .strainsIcon {
@@ -1483,7 +1518,7 @@
   /*  .cardWrapper {
       margin: 0 25% !important;
     }*/
-  /* line 121, 767px.scss */
+  /* line 123, 767px.scss */
   .featured-edible-true,
   .featured-concentrate-true,
   .featured-strain-true {
@@ -1506,13 +1541,13 @@
     }*/
   /*----cards.html end----*/
   /*----items.html start----*/
-  /* line 145, 767px.scss */
+  /* line 147, 767px.scss */
   #strainGallery,
   #edibleGallery,
   #concentrateGallery {
     display: none; }
 
-  /* line 150, 767px.scss */
+  /* line 152, 767px.scss */
   .strainGalleryMobile,
   .edibleGalleryMobile,
   .concentrateGalleryMobile {
@@ -1522,7 +1557,7 @@
   /*----items.html end----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
-  /* line 160, 767px.scss */
+  /* line 162, 767px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
@@ -1597,7 +1632,7 @@
       padding: 0;
       width: 33%;
       float: left; }
-      /* line 71, 980px.scss */
+      /* line 73, 980px.scss */
       #mainMenu > li:nth-child(1), #mainMenu > li:nth-child(2), #mainMenu > li:nth-child(3) {
         border: none; }
       /* line 76, 980px.scss */
@@ -1654,7 +1689,7 @@
 
   /*----footer end----*/
   /*----cards.html start----*/
-  /* line 139, 980px.scss */
+  /* line 141, 980px.scss */
   .cardWrapper .concentrateImage,
   .cardWrapper .edibleImage,
   .cardWrapper .strainImage {
@@ -1695,7 +1730,7 @@
 /* line 10, _home.scss */
 #indexSummary > .howItWorks {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   color: #2c3034;
   font-size: 11px;
   line-height: 15px;
@@ -1710,7 +1745,7 @@
   /* line 25, _home.scss */
   #indexSummary > .howItWorks:hover .ediblesIcon {
     background-color: #f7253e; }
-  /* line 29, _home.scss */
+  /* line 31, _home.scss */
   #indexSummary > .howItWorks .ediblesIcon,
   #indexSummary > .howItWorks .concentratesIcon,
   #indexSummary > .howItWorks .strainsIcon {
@@ -1730,13 +1765,13 @@
   /* line 46, _home.scss */
   #indexSummary > .howItWorks h3 {
     border: none;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 24px;
     font-weight: 300;
     text-align: center; }
   /* line 53, _home.scss */
   #indexSummary > .howItWorks p {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 11px;
     float: left;
     padding: 0 10%; }
@@ -1760,7 +1795,7 @@
     /* line 75, _home.scss */
     #indexSummary > .howItWorks .arrowRight.green {
       border-left-color: #3dd861; }
-  /* line 80, _home.scss */
+  /* line 81, _home.scss */
   #indexSummary > .howItWorks:nth-child(1), #indexSummary > .howItWorks:nth-child(2) {
     border-right: 1px solid rgba(44, 48, 52, 0.05); }
   /* line 84, _home.scss */
@@ -1817,21 +1852,21 @@
     padding: 0; }
     /* line 15, modals/_login.scss */
     .modal-content .modal-header .modalTitle {
-      font-family: "Bebas Neue", "Khand", sans-serif;
+      font-family: "Open Sans", "Helvetica", sans-serif;
       text-transform: uppercase;
-      font-size: 70px; }
-    /* line 20, modals/_login.scss */
+      font-weight: 300;
+      font-size: 40px; }
+    /* line 21, modals/_login.scss */
     .modal-content .modal-header .modalSubtitle {
-      font-family: "Bebas Neue", "Khand", sans-serif;
-      text-transform: uppercase;
-      font-size: 25px;
+      font-family: "Open Sans", "Helvetica", sans-serif;
+      font-size: 18px;
       color: white;
-      margin-top: -20px; }
+      margin-top: 0px; }
     /* line 27, modals/_login.scss */
     .modal-content .modal-header .close-modal {
       color: rgba(255, 255, 255, 0.2);
       text-decoration: none;
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans", "Helvetica", sans-serif;
       font-size: 20px;
       font-weight: lighter;
       float: right;
@@ -1855,7 +1890,7 @@
       margin-top: -20px; }
     /* line 53, modals/_login.scss */
     .modal-content .modal-body .btn-group {
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans", "Helvetica", sans-serif;
       font-size: 20px;
       text-transform: uppercase;
       color: #fcd31c;
@@ -1877,11 +1912,11 @@
         padding: 10px 0 2px 0;
         border: 2px solid rgba(255, 255, 255, 0.2);
         border-radius: 10px; }
-        /* line 75, modals/_login.scss */
+        /* line 77, modals/_login.scss */
         .modal-content .modal-body .btn-group li:hover, .modal-content .modal-body .btn-group li:focus, .modal-content .modal-body .btn-group li:active {
           border-color: #fcd31c;
           color: #fcd31c; }
-      /* line 82, modals/_login.scss */
+      /* line 84, modals/_login.scss */
       .modal-content .modal-body .btn-group li.facebook,
       .modal-content .modal-body .btn-group li.twitter,
       .modal-content .modal-body .btn-group li.google {
@@ -1889,7 +1924,7 @@
         background-repeat: no-repeat;
         background-position: center;
         padding: 35px 0; }
-    /* line 91, modals/_login.scss */
+    /* line 92, modals/_login.scss */
     .modal-content .modal-body .signUp,
     .modal-content .modal-body .signIn {
       color: #fcd31c;
@@ -1916,7 +1951,7 @@
       padding: 10px 0 2px 0;
       border: 2px solid rgba(255, 255, 255, 0.2);
       border-radius: 10px; }
-      /* line 116, modals/_login.scss */
+      /* line 119, modals/_login.scss */
       .modal-content .modal-footer button:hover, .modal-content .modal-footer button:focus, .modal-content .modal-footer button:active, .modal-content .modal-footer button:visited {
         border-color: #fcd31c;
         color: #fcd31c; }
@@ -1938,7 +1973,7 @@
   .rating .ratingBarWrap {
     position: relative;
     width: 250px; }
-    /* line 9, partials/_rating.scss */
+    /* line 10, partials/_rating.scss */
     .rating .ratingBarWrap svg,
     .rating .ratingBarWrap div.ratingBar {
       position: absolute;
@@ -2007,7 +2042,7 @@
           border-color: #f7253e; }
   /* line 77, partials/_rating.scss */
   .rating .ratingDisplay {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 14px;
     font-weight: normal;
     color: #2c3034;
@@ -2125,7 +2160,7 @@
     top: 0px;
     margin: 10% 10% 0 10%;
     padding: 0; }
-  /* line 23, partials/_cards.scss */
+  /* line 26, partials/_cards.scss */
   .cardWrapper .dispensaryLogo,
   .cardWrapper .strainImage,
   .cardWrapper .concentrateImage,
@@ -2140,7 +2175,7 @@
     .cardWrapper .edibleImage img {
       width: 100%;
       border-radius: 15px; }
-  /* line 35, partials/_cards.scss */
+  /* line 38, partials/_cards.scss */
   .cardWrapper .dispensaryName,
   .cardWrapper .strainName,
   .cardWrapper .concentrateName,
@@ -2158,13 +2193,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
-  /* line 53, partials/_cards.scss */
+  /* line 56, partials/_cards.scss */
   .cardWrapper .dispensaryAddress,
   .cardWrapper .businessName,
   .cardWrapper .producedBy,
   .cardWrapper .processedBy {
     clear: both;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-weight: 400;
     font-size: .85em;
     font-style: normal;
@@ -2173,20 +2208,20 @@
     margin: 0;
     padding: 0;
     overflow: hidden; }
-  /* line 68, partials/_cards.scss */
+  /* line 71, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .businessName.line2,
   .cardWrapper .producedBy.line2,
   .cardWrapper .processedBy.line2 {
     position: relative;
     z-index: 3; }
-  /* line 75, partials/_cards.scss */
+  /* line 77, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line1,
   .cardWrapper .producedBy.line1,
   .cardWrapper .processedBy.line1 {
     height: 18px;
     display: none; }
-  /* line 81, partials/_cards.scss */
+  /* line 83, partials/_cards.scss */
   .cardWrapper .dispensaryAddress.line2,
   .cardWrapper .producedBy.line2,
   .cardWrapper .processedBy.line2 {
@@ -2194,12 +2229,12 @@
   /* line 86, partials/_cards.scss */
   .cardWrapper .businessName.line2 {
     height: 24px; }
-  /* line 89, partials/_cards.scss */
+  /* line 92, partials/_cards.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType,
   .cardWrapper .concentrateType,
   .cardWrapper .edibleType {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-weight: bold;
     font-size: .9em;
     text-transform: uppercase;
@@ -2226,7 +2261,7 @@
 .edibleCard .edibleType {
   color: #f7253e; }
 
-/* line 126, partials/_cards.scss */
+/* line 130, partials/_cards.scss */
 .featured-dispensary-true,
 .featured-strain-true,
 .featured-concentrate-true,
@@ -2329,7 +2364,7 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border: none; }
-    /* line 38, partials/_menu.scss */
+    /* line 41, partials/_menu.scss */
     .menu ul.nav.nav-tabs > li > a:hover, .menu ul.nav.nav-tabs > li > a:active, .menu ul.nav.nav-tabs > li > a:visited, .menu ul.nav.nav-tabs > li > a:focus {
       color: transparent;
       border: none; }
@@ -2350,7 +2385,7 @@
     padding: 4% 4% 0 4%;
     width: 90%;
     float: left;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     background-color: white;
     color: #2c3034;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3); }
@@ -2375,7 +2410,7 @@
       margin-right: 10px;
       width: 30%;
       float: left; }
-    /* line 116, partials/_menu.scss */
+    /* line 117, partials/_menu.scss */
     .menu .menu .menuItem .thcPotency,
     .menu .menu .menuItem .cbdPotency {
       margin: 0px auto 0 auto;
@@ -2431,7 +2466,7 @@ body {
   position: relative;
   top: 100px; }
 
-/* line 38, style.scss */
+/* line 41, style.scss */
 #strainsList,
 #concentratesList,
 #ediblesList,
@@ -2443,11 +2478,33 @@ body {
   padding: 0 2%;
   margin: 0; }
 
-/* line 51, style.scss */
+/* line 53, style.scss */
 a:active, a:hover, a:visited {
   text-decoration: none; }
 
-/* line 58, style.scss */
+/* line 57, style.scss */
+.authenticateButtons {
+  float: left; }
+
+/* line 60, style.scss */
+.button {
+  font-family: "Open Sans", "Helvetica", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+  border: 3px solid #fcd31c;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background: none;
+  float: left; }
+  /* line 71, style.scss */
+  .button:hover {
+    background: #fcd31c;
+    color: white;
+    cursor: pointer; }
+
+/* line 83, style.scss */
 h1,
 h2,
 h3,
@@ -2457,32 +2514,32 @@ h6 {
   font-family: "Bebas Neue", "Khand", sans-serif;
   text-transform: uppercase; }
 
-/* line 68, style.scss */
+/* line 88, style.scss */
 h3 {
   border-bottom: 1px solid rgba(44, 48, 52, 0.05);
   text-align: center;
   font-size: 30px; }
 
-/* line 73, style.scss */
+/* line 93, style.scss */
 h4 {
   font-size: 24px;
   margin-bottom: 0; }
 
-/* line 78, style.scss */
+/* line 98, style.scss */
 p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 12px; }
-  /* line 81, style.scss */
+  /* line 101, style.scss */
   p a {
     font-weight: bold;
     color: #3dd861; }
 
-/* line 87, style.scss */
+/* line 107, style.scss */
 ul {
   list-style: none;
   padding: 0; }
 
-/* line 92, style.scss */
+/* line 112, style.scss */
 .pageTitle {
   margin-top: 0;
   border-bottom: 1px solid rgba(44, 48, 52, 0.05);
@@ -2491,17 +2548,17 @@ ul {
   text-transform: uppercase;
   font-size: 40px; }
 
-/* line 101, style.scss */
+/* line 121, style.scss */
 .viewOnMap {
   text-transform: uppercase;
   font-weight: bold; }
 
-/* line 106, style.scss */
+/* line 126, style.scss */
 form {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 12px;
   color: #2c3034; }
-  /* line 110, style.scss */
+  /* line 130, style.scss */
   form .btn-block {
     font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
@@ -2509,21 +2566,21 @@ form {
     color: white;
     padding: 5px 0 0 0;
     background: #2c3034; }
-    /* line 117, style.scss */
+    /* line 140, style.scss */
     form .btn-block.dispensaryCMS:hover, form .btn-block.dispensaryCMS:active, form .btn-block.dispensaryCMS:focus, form .btn-block.dispensaryCMS:visited {
       background: #f7253e;
       color: white; }
-    /* line 124, style.scss */
+    /* line 147, style.scss */
     form .btn-block.dealCMS:hover, form .btn-block.dealCMS:active, form .btn-block.dealCMS:focus, form .btn-block.dealCMS:visited {
       background: #fcd31c;
       color: white; }
-    /* line 131, style.scss */
+    /* line 154, style.scss */
     form .btn-block.strainCMS:hover, form .btn-block.strainCMS:active, form .btn-block.strainCMS:focus, form .btn-block.strainCMS:visited {
       background: #3dd861;
       color: white; }
-  /* line 139, style.scss */
+  /* line 159, style.scss */
   form .button {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 14px;
     letter-spacing: 1px;
     text-decoration: none;
@@ -2532,66 +2589,66 @@ form {
     border-radius: 20px;
     padding: 10px 20px;
     background: none; }
-    /* line 149, style.scss */
+    /* line 169, style.scss */
     form .button:hover {
       background: #fcd31c;
       color: white;
       cursor: pointer; }
 
-/* line 157, style.scss */
+/* line 177, style.scss */
 .faqQuestion {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
   color: #2c3034;
   margin: 20px 0 5px 0; }
-  /* line 164, style.scss */
+  /* line 184, style.scss */
   .faqQuestion a {
     color: #3dd861; }
 
-/* line 169, style.scss */
+/* line 189, style.scss */
 .brandassets {
   margin-top: -3%;
   list-style: none; }
-  /* line 172, style.scss */
+  /* line 192, style.scss */
   .brandassets li {
     margin-bottom: 20px;
     text-align: center; }
-    /* line 175, style.scss */
+    /* line 195, style.scss */
     .brandassets li h4 {
       font-size: 35px;
       margin-top: 30px;
       border-bottom: 3px solid; }
-    /* line 180, style.scss */
+    /* line 200, style.scss */
     .brandassets li:nth-child(1) {
       color: #3dd861; }
-    /* line 183, style.scss */
+    /* line 203, style.scss */
     .brandassets li:nth-child(2) {
       color: #fcd31c; }
-    /* line 186, style.scss */
+    /* line 206, style.scss */
     .brandassets li:nth-child(3) {
       color: #f7253e; }
-    /* line 189, style.scss */
+    /* line 209, style.scss */
     .brandassets li:nth-child(4) {
       color: #2c3034; }
-    /* line 193, style.scss */
+    /* line 213, style.scss */
     .brandassets li a img {
       width: 100%; }
 
-/* line 200, style.scss */
+/* line 220, style.scss */
 .stateYourLovePageHeader {
   margin-bottom: 20px; }
-  /* line 202, style.scss */
+  /* line 222, style.scss */
   .stateYourLovePageHeader h3 {
     border-bottom: none;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
     text-transform: none; }
 
-/* line 213, style.scss */
+/* line 233, style.scss */
 .stateYourLove li img {
   width: 100%; }
-/* line 216, style.scss */
+/* line 236, style.scss */
 .stateYourLove li label {
   font-family: "Bebas Neue", "Khand", sans-serif;
   color: #2c3034;
@@ -2599,5 +2656,3 @@ form {
   text-align: center;
   margin-bottom: 15px;
   width: 100%; }
-
-/*# sourceMappingURL=style.css.map */

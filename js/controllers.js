@@ -26,6 +26,20 @@ angular.module('Stash.controllers', [])
     // @todo Note that $scope.currentAvatar will always be one step behind the digest cycle if we pass $scope.currentUser to it.
     $scope.currentAvatar = usersService.getAvatarUrl(currentUser);
 
+    $scope.showSignupModal = function() {
+      var signupModalInstance = $modal.open({
+        size: 'md',
+        templateUrl: 'partials/modals/signup/signup.html',
+        controller: 'signupModalCtrl'
+      });
+
+      loginModalInstance.result
+        .then(function(currentUser) {
+          $scope.currentUser = currentUser;
+          usersService.setCurrentUser(currentUser);
+        });
+    };
+
     $scope.showLoginModal = function() {
       var loginModalInstance = $modal.open({
         size: 'md',
@@ -50,6 +64,32 @@ angular.module('Stash.controllers', [])
       $('.userDropdown').toggle();
     };
 
+  }])
+  .controller('signupModalCtrl', ['$scope', '$state', '$modalInstance', 'usersService', function($scope, $state, $modalInstance, usersService) {
+    $scope.credentials = {};
+
+    $scope.signup = function(service, credentials) {
+      usersService.signup(service, credentials)
+        .then(function(currentUser) {
+          location.reload();
+          $modalInstance.close(currentUser);
+          $state.go('root.home');
+        }, function(error) {
+          console.log(error);
+        });
+    };
+
+    $scope.logout = function() {
+      usersService.logout();
+
+      $modalInstance.close(null);
+
+      $state.go('root.home');
+    };
+
+    $scope.close = function() {
+      $modalInstance.dismiss();
+    };
   }])
   .controller('loginModalCtrl', ['$scope', '$state', '$modalInstance', 'usersService', function($scope, $state, $modalInstance, usersService) {
     $scope.credentials = {};

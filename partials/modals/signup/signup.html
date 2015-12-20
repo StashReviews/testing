@@ -1,40 +1,30 @@
 <div class="modal-header">
-	<h1 class="modalTitle">Join Now!</h1>
+	<h1 class="modalTitle">Start Your Stash!</h1>
 	<h2 class="modalSubtitle">Sign up for an account to unlock more features.</h2>
-	<a href="" class="close-modal">X</a>
+	<a ng-click="close()" class="close-modal">X</a>
 </div>
 <div class="modal-body">
 	<form class="form-horizontal">
 		<div class="form-group">
-			<input ng-model="credentials.email" type="text" placeholder="email" class="form-control"/>
+			<input ng-model="credentials.email" type="text" name="email" placeholder="Email" class="form-control col-lg-8 col-md-8 col-sm-8 col-xs-8"/>
 		</div>
 		<div class="form-group">
-			<input ng-model="credentials.password" type="password" placeholder="password" class="form-control"/>
+			<input ng-model="credentials.password" type="password" name="password" placeholder="Password" class="form-control col-lg-8 col-md-8 col-sm-8 col-xs-8"/>
+		</div>
+		<div class="btn-group">
+			<input type="submit" value="Sign Up" ng-click="login('password', credentials)" class="button"></input>
 		</div>
 		<div class="form-group">
 			<div class="btn-group btn-group-justified">
-				<div class="btn-group">
-					<button type="button" ng-click="login('facebook', null)" class="btn">
-						<img src="img/icons/social/facebook_yellow.png" alt="Facebook"/>
-					</button>
-				</div>
-				<div class="btn-group">
-					<button type="button" ng-click="login('twitter', null)" class="btn">
-						<img src="img/icons/social/twitter_yellow.png" alt="Twitter"/>
-					</button>
-				</div>
-				<div class="btn-group">
-					<button type="button" ng-click="login('google', null)" class="btn">
-						<img src="img/icons/social/google_yellow.png" alt="Google"/>
-					</button>
-				</div>
-				<div class="btn-group">
-					<button type="button" ng-click="login('password', credentials)" class="btn">Sign Up</button>
-				</div>
+				<ul class="btn-group">
+					<li type="button" ng-click="login('facebook', null)" class="btn facebook" style="background-image: url('img/icons/social/facebook_yellow.png')"></li>
+					<li type="button" ng-click="login('twitter', null)" class="btn twitter" style="background-image: url('img/icons/social/twitter_yellow.png')"></li>
+					<li type="button" ng-click="login('google', null)" class="btn google" style="background-image: url('img/icons/social/google_yellow.png')"></li>
+				</ul>
 			</div>
 		</div>
 	</form>
-	<a ui-sref="root.home" class="signIn"><span>Already have an account?</span> Sign in!</a>
+	<a href="#" ng-click="showLoginModal()" class="signIn"><span>Already have an account?</span> Sign in!</a>
 </div>
 <div class="modal-footer">
 	<p>By signing up for an account, you are agreeing to our <a ui-sref="root.terms">Terms of Use</a> and our <a ui-sref="root.privacy">Privacy Policy</a>.<br/>Must be 21 years or older.</p>
