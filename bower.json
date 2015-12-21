@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "homepage": "http://www.stash.reviews",
   "author": [
-    "Dakota Berg <support@stash.reviews>"
+    "Dakota Berg <dakota@stash.reviews>"
   ],
-  "description": "Cannabis strain and product reviews",
+  "description": "Home of the Cannaisseur. Crowd-sourced and private cannabis reviews for various branded strains, edibles and concentrates.",
   "license": "All rights reserved.",
   "private": true,
   "dependencies": {

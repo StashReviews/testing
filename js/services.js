@@ -321,7 +321,7 @@ angular.module('Stash.services', [])
        * @returns {FirebaseArray}
        */
       getAll: function(itemType) {
-        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("0") ).$loaded();
+        return $firebaseArray( ( new Firebase(dvUrl + '/' + itemType) ).orderByChild('featured').equalTo("0") );
       },
       /**
        * @param {String} itemType
