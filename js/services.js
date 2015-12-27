@@ -435,4 +435,39 @@ angular.module('Stash.services', [])
       //removed return envelope
       return obj;
   }])
+  .factory('locationService', ['$http', '$q', 'dvUrl', '$firebaseObject', function($http, $q, dvUrl, $firebaseObject) {
+    return {
+      /**
+       * @param {String} address
+       * @returns {google.maps.LatLng} coordinates
+       */
+      getCoordinatesFromAddress: function(address) {
+        $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + address)
+          .then(function(data) {
+            var coords = data.results[0].geometry.location;
+
+            return new google.maps.LatLng(coords.lat, coords.lng);
+          });
+      },
+      getCurrentCity: function() {
+        return '';
+      },
+      /**
+       * @returns {google.maps.LatLng|null} coords
+       */
+      getCurrentLocation: function() {
+        if(typeof navigator !== 'undefined' && typeof navigator.geolocation !== 'undefined') {
+          navigator.geolocation.getCurrentPosition(function(location) {
+            var coords = location.coords;
+
+            return new google.maps.LatLng(coords.lat, coords.lng);
+          }, function(error) {
+            console.log(error);
+          });
+        } else {
+          console.log('Your browser does not support the HTML5 Geolocation API, so this demo will not work.')
+        }
+      }
+    }
+  }])
 ;
