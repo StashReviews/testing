@@ -1,0 +1,94 @@
+/* 
+ * Style used by the label output mode.
+ * Applied to the error labels that get positioned after an input.
+ */
+label.error { 
+    color:rgb(247,37,62);
+    margin-left:2px;
+    background-image:url('arrow.gif');
+    background-position:left center;
+    background-repeat:no-repeat;
+    padding:2px;
+    padding-left:18px;
+    border-radius:4px;
+    position: relative;
+    z-index: 10;
+}
+
+
+/*
+ * Styles used by the modal output mode.
+ * '.validity-modal-msg' is applied to the modal boxes 
+ * and '.validity-modal-msg:hover' is applied to suggest 
+ * to the user that the boxes are clickable.
+ */
+.validity-modal-msg { 
+    position:absolute;
+    z-index:2;
+    background-color:rgb(247,37,62);
+    border:solid 1px rgb(247,37,62);
+    padding:4px;
+    cursor:pointer;
+}
+.validity-modal-msg:hover { 
+    background-color:rgb(247,37,62);
+}
+
+/*
+ * Styles used by the summary output mode.
+ * '.validity-summary-container' is a container on the page that should contain a UL 
+ * which is the actual summary. The container can hold 
+ * an extra bit of text (or anything really) that explains what the summary is.
+ * '.validity-erroneous' is applied to every input that fails.
+ */
+.validity-summary-container { display:none; }
+.validity-summary-output ul { }
+.validity-erroneous { border:solid 2px rgb(247,37,62) !important; }
+
+
+
+.validity-tooltip {
+    z-index:9999;
+    cursor:pointer;
+    padding:3px;
+    width:16em;
+    border:1px solid rgb(247,37,62);
+    color:white;
+    font-family: open sans;
+    font-size: 11px;
+    position: absolute;
+    background-color:rgb(247,37,62);
+    border-radius: 3px;
+}
+
+.validity-tooltip:hover {
+    border-color:rgb(247,37,62);
+}
+
+.validity-tooltip .validity-tooltip-outer, .validity-tooltip .validity-tooltip-inner {
+    position: absolute;
+    width:0;
+    height:0;
+    border-right-width: 0;
+    background:none;
+    bottom:auto;
+}
+
+.validity-tooltip .validity-tooltip-outer {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: rgb(247,37,62);
+    border-width: 15px;
+    margin-top: -15px;
+}
+
+.validity-tooltip .validity-tooltip-inner {
+    display: none;
+}

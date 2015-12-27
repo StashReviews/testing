@@ -1,0 +1,212 @@
+  <head>
+
+    <title>Stash</title>
+    <!-- Meta Information -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
+    <meta property="og:site_name" content="Stash"/>
+    <meta property="og:title" content="Stash: Home of the cannaisseur."/>
+    <meta property="og:description" content="Stash is a free web app for crowd-sourced and private cannabis reviews by recreational connoisseurs. Explore, Review and Stash various branded strains, edibles and concentrates for quick access."/>
+    <meta property="og:image" content="http://www.stash.reviews/img/mockups/stash_mockup3.png">
+    <meta property="og:url" content="http://www.Stash.reviews/">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Stash_Reviews" />
+    <meta name="twitter:title" content="Stash: Home of the cannaisseur." />
+    <meta name="twitter:description" content="Stash is a free web app for crowd-sourced and private cannabis reviews by recreational connoisseurs. Explore, Review and Stash various branded strains, edibles and concentrates for quick access." />
+    <meta name="twitter:image" content="http://stash.reviews/img/mockups/stash_mockup3.png" />
+    <!-- TODO - Add Bebas Neue Font -->
+    <!-- <link href='fonts/bebas_neue/stylesheet.css' rel='stylesheet' type='text/css'> -->
+    <!-- Khand Backup Font -->
+    <link href='http://fonts.googleapis.com/css?family=Khand:600' rel='stylesheet' type='text/css'>
+    <!-- Open Sans Font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- Bootstrap Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Validity Styles -->
+    <link rel="stylesheet" href="../lib/validity/jquery.validity.css" />
+    <!-- Stash Styles -->
+    <link rel="stylesheet" href="../scss/signup_styles.css">
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+    <!-- AngularFire -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <!-- Bootstrap Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Stash Angular Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/controllers.js"></script>
+    <script src="../js/directives.js"></script>
+    <script src="../js/services.js"></script>
+
+  </head>
+
+  <body ng-controller="signupCtrl" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    
+    <header class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <img class="logo" src="../img/stash_logo.png"/> 
+    </header>
+
+    <section class="overview col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<h1>Unlock your stash for <span>FREE</span> today!</h1>
+		<ul>
+			<li class="stashBenefit">
+				<img src="../img/icons/stashIcon.png" class="icon"/>
+        <div>
+  				<h2>Unlock your Stash</h2>
+  				<p>Stash as many of your favorites as you like for quick access later.</p>
+			  </div>
+      </li>
+			<li class="reviewBenefit">
+				<img src="../img/icons/reviewIcon.png" class="icon"/>
+  			<div>
+        	<h2>Review your Sessions</h2>
+  				<p>Leave public or private reviews for all the cannabis products you try.</p>
+        </div>
+			</li>
+			<li class="buddiesBenefit">
+				<img src="../img/icons/buddiesIcon.png" class="icon"/>
+				<div>
+          <h2>Add your buddies</h2>
+				  <p>See your Buddies Stashes, make suggestions and share reviews.</p>
+        </div>
+			</li>
+		</ul>
+	</section>
+
+	<section class="signupForm col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label>Username</label>
+				<input ng-model="credentials.username"  type="text" name="username" placeholder="Username" class="usernameInput form-control col-lg-8 col-md-8 col-sm-8 col-xs-8"></input>
+			</div>
+			<div class="form-group">
+				<label>Email</label>
+				<input ng-model="credentials.email" type="text" name="email" placeholder="Email" class="emailInput form-control col-lg-8 col-md-8 col-sm-8 col-xs-8"/>
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input ng-model="credentials.password" type="password" name="password" placeholder="Password" class="passwordInput form-control col-lg-8 col-md-8 col-sm-8 col-xs-8"/>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Sign Up" ng-click="login('password', credentials)" class="button signupBtn col-lg-12 col-md-12 col-sm-12 col-xs-12"></input>
+			</div>
+			<div class="form-group">
+				<div class="btn-group btn-group-justified">
+					<label class="altLabel">Or Use An Existing One:</label>
+          <ul>
+            <li><img src="../img/icons/social/facebookIcon.png" class="socialMediaBtn" ng-click="login('facebook', null)"></li>
+            <li><img src="../img/icons/social/twitterIcon.png" class="socialMediaBtn" ng-click="login('twitter', null)"></li>
+            <li><img src="../img/icons/social/googleIcon.png" class="socialMediaBtn" ng-click="login('google', null)"></li>
+          </ul>
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Already Have An Account?" ng-click="login('password', credentials)" class="button signinBtn col-lg-12 col-md-12 col-sm-12 col-xs-12"></input>
+			</div>
+		</form>
+	</section>
+
+	<footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<p>By signing up for an account, you are agreeing to our <a ui-sref="root.terms">Terms of Use</a> and our <a ui-sref="root.privacy">Privacy Policy</a>.<br/>Must be 21 years or older.</p>
+	</footer>
+
+    <!-- Reserve Username Modal -->
+    <div class="modal fade" id="reserveUsernameModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></a>
+            <h4 class="modal-title" id="myModalLabel">Don&rsquo;t let your name slip away!</h4>
+          </div>
+          <div class="modal-body">
+            <p>Reserve it today! Enter your information below to reserve your identity and gain early access to all of the awesome features Stash has to offer. Did we mention, it&rsquo;s totally <span data-toggle="tooltip" data-placement="bottom"
+     title="" data-original-title="Really, it's free."
+     class="yellow-tooltip">free</span>?</p>
+            <form id="reserveUsernameForm">
+              <input ng-model="data.username" class="button reserveUsernameInput col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" placeholder="Username" name="username"></input>
+              <input ng-model="data.email" class="button reserveEmailInput col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" placeholder="Email" name="email"></input>
+              <input class="button submitUser" type="submit" value="Check Availability"></input>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reserve Email Taken Modal -->
+    <div class="modal fade" id="reserveEmailTakenModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></a>
+            <h4 class="modal-title" id="myModalLabel">Uh oh, that email seems to be taken.</h4>
+          </div>
+          <div class="modal-body">
+            <p>Please try another.</p>
+            <form id="reserveUsernameTakenForm">
+              <input ng-model="data.username" class="button reserveUsernameInput col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" placeholder="Username" name="username"></input>
+              <input ng-model="data.email" class="button reserveEmailInput col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" placeholder="Email" name="email"></input>
+              <input class="button submitUser" type="submit" value="Check Availability"></input>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reserve Username Taken Modal -->
+    <div class="modal fade" id="reserveUsernameTakenModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></a>
+            <h4 class="modal-title" id="myModalLabel">Whoops, that username seems to be taken.</h4>
+          </div>
+          <div class="modal-body">
+            <p>Please try another.</p>
+            <form id="reserveUsernameTakenForm">
+              <input ng-model="data.username" class="button reserveUsernameInput col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" placeholder="Username" name="username"></input>
+              <input ng-model="data.email" class="button reserveEmailInput col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" placeholder="Email" name="email"></input>
+              <input class="button submitUser" type="submit" value="Check Availability"></input>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reserve Username Success Modal -->
+    <div class="modal fade" id="reserveUsernameSuccessModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></a>
+            <h4 class="modal-title" id="myModalLabel">You're in luck!</h4>
+          </div>
+          <div class="modal-body">
+            <p>Your username has been reserved. When we launch, we will use your email address to provide further directions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Validity -->
+    <script src="../lib/validity/jquery.validity.min.js"></script>
+    <!-- Stash Scripts -->
+    <script src="../js/signup_scripts.js"></script>
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-69789666-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </body>

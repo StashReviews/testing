@@ -36,7 +36,9 @@
 				<img src="img/icons/budIconWhite.png" class="img-responsive pull-right avatar dropdown-toggle" type="button"/>
 				<ul class="userDropdown">
 					<li type="button" ng-click="showLoginModal()">Login</li>
-					<li type="button" ng-click="showLoginModal()">Sign Up</li>
+					<!-- <a class="button signupButton" ng-click="showSignupModal()">Sign Up</a> -->
+					<!-- <a class="button signupButton" ui-sref="root.signup">Sign Up</a> -->
+					<a class="button signupButton" href="../pages/signup.html">Sign Up</a>
 				</ul>
 				<div class="accountInfo">
 					<h1 class="pull-right username btn navbar-btn" ng-click="showLoginModal()" >High, Guest!</h1><br/>
@@ -44,7 +46,9 @@
 				</div>
 				<div class="authenticateButtons">
 					<a class="button loginButton" ng-click="showLoginModal()">Login</a>
-					<a class="button signupButton" ng-click="showSignupModal()">Sign Up</a>
+					<!-- <a class="button signupButton" ng-click="showSignupModal()">Sign Up</a> -->
+					<!-- <a class="button signupButton" ui-sref="root.signup">Sign Up</a> -->
+					<a class="button signupButton" href="pages/signup.html">Sign Up</a>
 				</div>
 			</div>
 		</div>

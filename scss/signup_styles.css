@@ -1,0 +1,149 @@
+body {
+  background: #2c3034;
+  margin: 0 auto;
+  position: relative;
+  font-family: 'Open Sans', 'Helvetica', sans-serif; }
+  body header {
+    position: relative;
+    text-align: center;
+    margin: 40px 0 60px 0; }
+    body header img {
+      width: 150px;
+      margin: 0 auto; }
+  body .overview {
+    padding-left: 10%;
+    padding-right: 40px; }
+    body .overview h1 {
+      font-size: 40px;
+      font-weight: 300;
+      color: #fcd31c;
+      margin-top: 0; }
+      body .overview h1 span {
+        font-weight: 600; }
+    body .overview ul {
+      margin: 0;
+      padding: 0; }
+      body .overview ul li {
+        list-style: none;
+        margin: 10px 0;
+        padding: 0;
+        float: left; }
+        body .overview ul li .icon {
+          width: 18%;
+          float: left;
+          border-radius: 50%;
+          margin-right: 5%; }
+        body .overview ul li div {
+          border-left: 1px solid rgba(255, 255, 255, 0.2);
+          float: left;
+          width: 77%; }
+          body .overview ul li div h2 {
+            padding-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            float: left;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 300;
+            font-size: 12px;
+            color: white; }
+          body .overview ul li div p {
+            padding-left: 20px;
+            float: left;
+            letter-spacing: 2px;
+            color: white;
+            font-size: 12px;
+            font-weight: 300; }
+      body .overview ul .stashBenefit .icon {
+        background: #3dd861; }
+      body .overview ul .stashBenefit h2 {
+        color: #3dd861; }
+      body .overview ul .reviewBenefit .icon {
+        background: #fcd31c; }
+      body .overview ul .reviewBenefit h2 {
+        color: #fcd31c; }
+      body .overview ul .buddiesBenefit .icon {
+        background: #f7253e; }
+      body .overview ul .buddiesBenefit h2 {
+        color: #f7253e; }
+  body .signupForm {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding-right: 10%;
+    padding-left: 40px; }
+    body .signupForm input {
+      padding: 10px;
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      letter-spacing: 2px;
+      font-weight: 300;
+      font-size: 12px;
+      border-radius: 5px; }
+      body .signupForm input:hover, body .signupForm input:focus, body .signupForm input:active {
+        border-color: #3dd861; }
+    body .signupForm label {
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 300;
+      font-size: 12px;
+      float: left; }
+    body .signupForm .altLabel {
+      margin-top: 12px;
+      color: rgba(255, 255, 255, 0.2); }
+    body .signupForm .button {
+      padding: 10px; }
+    body .signupForm .signupBtn {
+      margin-top: 10px;
+      border-color: #3dd861; }
+    body .signupForm .signinBtn {
+      background: rgba(255, 255, 255, 0.2);
+      border: none; }
+      body .signupForm .signinBtn:hover {
+        background: #3dd861; }
+    body .signupForm ul li {
+      list-style: none;
+      width: 100%; }
+      body .signupForm ul li .socialMediaBtn {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+        background: none;
+        float: left;
+        display: inline;
+        cursor: pointer; }
+  body footer {
+    margin-top: 40px; }
+    body footer p {
+      color: rgba(255, 255, 255, 0.2);
+      text-align: center;
+      letter-spacing: 1px;
+      font-weight: 300;
+      font-size: 12px; }
+      body footer p a {
+        font-weight: 600;
+        color: #fcd31c; }
+
+@media screen and (max-width: 992px) {
+  .signupForm {
+    border-left: none !important;
+    padding-left: 10% !important; }
+    .signupForm ul li img {
+      margin: 0 !important; }
+
+  .overview {
+    padding-right: 10% !important;
+    margin-bottom: 30px; }
+    .overview h1 {
+      margin-bottom: 30px;
+      font-size: 35px !important; }
+    .overview ul li img {
+      width: 25% !important; }
+    .overview ul li div {
+      width: 70% !important; }
+      .overview ul li div h2,
+      .overview ul li div p {
+        font-size: 14px !important; }
+
+  footer {
+    margin-bottom: 40px; } }

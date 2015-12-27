@@ -1,0 +1,205 @@
+body {
+	background: rgb(44,48,52);
+	margin: 0 auto;
+	position: relative;
+	font-family: 'Open Sans', 'Helvetica', sans-serif;
+	header {
+		position: relative;
+		text-align: center;
+		margin: 40px 0 60px 0;
+		img {
+			width: 150px;
+			margin: 0 auto;
+		}
+	}
+	.overview {
+		padding-left: 10%;
+		padding-right: 40px;
+		h1 {
+			font-size: 40px;
+			font-weight: 300;
+			color: #fcd31c;
+			margin-top: 0;
+			span {
+				font-weight: 600;
+			}
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				list-style: none;
+				margin: 10px 0;
+				padding: 0;
+				float: left;
+				.icon {
+					width: 18%;
+					float: left;
+					border-radius: 50%;
+					margin-right: 5%;
+				}
+				div {
+					border-left: 1px solid rgba(255,255,255,.2);
+					float: left;
+					width: 77%;
+					h2 {
+						padding-left: 20px;
+						margin-top: 10px;
+						margin-bottom: 5px;
+						float: left;
+						text-transform: uppercase;
+						letter-spacing: 2px;
+						font-weight: 300;
+						font-size: 12px;
+						color: white;
+					}
+					p {
+						padding-left: 20px;
+						float: left;
+						letter-spacing: 2px;
+						color: white;
+						font-size: 12px;
+						font-weight: 300;
+					}
+				}
+			}
+			.stashBenefit {
+				.icon {
+					background: #3dd861;
+				}
+				h2 {
+					color: #3dd861;
+				}
+			}
+			.reviewBenefit {
+				.icon {
+					background: #fcd31c;
+				}
+				h2 {
+					color: #fcd31c;
+				}
+			}
+			.buddiesBenefit {
+				.icon {
+					background: #f7253e;
+				}
+				h2 {
+					color: #f7253e;
+				}
+			}
+		}
+	}
+	.signupForm {
+		border-left: 1px solid rgba(255,255,255,.2);
+		padding-right: 10%;
+		padding-left: 40px;
+		input {
+			padding: 10px;
+			background: none;
+			border: 1px solid rgba(255,255,255,.2);
+			color: white;
+			letter-spacing: 2px;
+			font-weight: 300;
+			font-size: 12px;
+			border-radius: 5px;
+			&:hover,
+			&:focus,
+			&:active {
+				border-color: #3dd861;
+			}
+		}
+		label {
+			color: white;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-weight: 300;
+			font-size: 12px;
+			float: left;
+		}
+		.altLabel {
+			margin-top: 12px;
+			color: rgba(255,255,255,.2);
+		}
+		.button {
+			padding: 10px;
+		}
+		.signupBtn {
+			margin-top: 10px;
+			border-color: #3dd861;
+		}
+		.signinBtn {
+			background: rgba(255,255,255,.2);
+			border: none;
+			&:hover {
+				background: #3dd861;
+			}
+		}
+		ul {
+			li {
+				list-style: none;
+				width: 100%;
+				.socialMediaBtn {
+					width: 40px;
+					height: 40px;
+					margin: 0 5px;
+					background: none;
+					float: left;
+					display: inline;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	footer {
+		margin-top: 40px;
+		p {
+			color: rgba(255,255,255,.2);
+			text-align: center;
+			letter-spacing: 1px;
+			font-weight: 300;
+			font-size: 12px;
+			a {
+				font-weight: 600;
+				color: #fcd31c;
+			}
+		}
+	}
+}
+@media screen and (max-width:992px) {
+	.signupForm {
+		border-left: none !important;
+		padding-left: 10% !important;
+		ul {	
+			li {
+				img {
+					margin: 0 !important;
+				}
+			}
+		}
+	}
+	.overview {
+		padding-right: 10% !important;
+		margin-bottom: 30px;
+		h1 {
+			margin-bottom: 30px;
+			font-size: 35px !important;
+		}
+		ul {
+			li {
+				img {
+					width: 25% !important;
+				}
+				div {
+					width: 70% !important;
+					h2,
+					p {
+						font-size: 14px !important;
+					}
+				}
+			}
+		}
+	}
+	footer {
+		margin-bottom: 40px;
+	}
+}
