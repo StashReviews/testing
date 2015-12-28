@@ -60,6 +60,18 @@ angular.module('Stash', ['Stash.config', 'Stash.services', 'Stash.controllers', 
         templateUrl: 'pages/home.html',
         controller: 'homeCtrl'
       })
+      // signup page
+      .state('root.signup', {
+        url: '/signup',
+        templateUrl: 'pages/signup.html',
+        controller: 'signupCtrl'
+      })
+      // signin page
+      .state('root.signin', {
+        url: '/signin',
+        templateUrl: 'pages/signin.html',
+        controller: 'signinCtrl'
+      })
       // user pages
       .state('root.users', {
         url: '/users',

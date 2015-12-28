@@ -116,6 +116,7 @@ angular.module('Stash.services', [])
        * @returns {String} name
        */
       getName: function(user) {
+
         if(user) {
           var name = '';
 
@@ -128,6 +129,7 @@ angular.module('Stash.services', [])
 
             case 'password':
               name = 'email';
+              // @todo Use username rather than email for 'name'
             break;
           }
 
@@ -243,9 +245,6 @@ angular.module('Stash.services', [])
        */
       isAdmin: function(business) {
         var adminIdList = [
-          'twitter:2199988411', // Dan Siddoway
-          'simplelogin:1',
-          'twitter:318556297',
           'twitter:dberg15',
           'simplelogin:2',
           'google:103075984866184444011',
@@ -434,40 +433,5 @@ angular.module('Stash.services', [])
       }
       //removed return envelope
       return obj;
-  }])
-  .factory('locationService', ['$http', '$q', 'dvUrl', '$firebaseObject', function($http, $q, dvUrl, $firebaseObject) {
-    return {
-      /**
-       * @param {String} address
-       * @returns {google.maps.LatLng} coordinates
-       */
-      getCoordinatesFromAddress: function(address) {
-        $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + address)
-          .then(function(data) {
-            var coords = data.results[0].geometry.location;
-
-            return new google.maps.LatLng(coords.lat, coords.lng);
-          });
-      },
-      getCurrentCity: function() {
-        return '';
-      },
-      /**
-       * @returns {google.maps.LatLng|null} coords
-       */
-      getCurrentLocation: function() {
-        if(typeof navigator !== 'undefined' && typeof navigator.geolocation !== 'undefined') {
-          navigator.geolocation.getCurrentPosition(function(location) {
-            var coords = location.coords;
-
-            return new google.maps.LatLng(coords.lat, coords.lng);
-          }, function(error) {
-            console.log(error);
-          });
-        } else {
-          console.log('Your browser does not support the HTML5 Geolocation API, so this demo will not work.')
-        }
-      }
-    }
   }])
 ;

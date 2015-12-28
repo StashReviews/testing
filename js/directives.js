@@ -1,7 +1,7 @@
 angular.module('Stash.directives', [])
 
   /** <dv-card item-type='' item-id='' /> */
-  .directive('dvCard', ['$firebaseObject', 'dvUrl', 'locationService', function($firebaseObject, dvUrl, locationService) {
+  .directive('dvCard', ['$firebaseObject', 'dvUrl', function($firebaseObject, dvUrl) {
     return {
       restrict: 'E',
       templateUrl: function(element, attr) {
@@ -15,10 +15,10 @@ angular.module('Stash.directives', [])
         // @todo Pluralize programmatically.
         scope[attrs.itemType] = $firebaseObject( new Firebase(dvUrl + '/' + ( attrs.itemType === 'dispensary' ? 'dispensaries' : ( attrs.itemType + 's' ) ) + '/' + attrs.itemId) );
 
-        locationService.getDistanceToDispensary(attrs.itemId)
-          .then(function(distance) {
-            scope.distance = distance;
-          });
+        // locationService.getDistanceToDispensary(attrs.itemId)
+        //   .then(function(distance) {
+        //     scope.distance = distance;
+        //   });
       }
     };
   }])
@@ -71,15 +71,15 @@ angular.module('Stash.directives', [])
   })
 
   /** <dv-distance distance='' /> */
-  .directive('dvDistance', function(distanceService) {
-    return {
+  // .directive('dvDistance', function(distanceService) {
+  //   return {
 
-      link: function(scope, element, attrs) {
+  //     link: function(scope, element, attrs) {
 
-        scope.getUserDistance = ratingsService.getUserDistance;
-      }
-    };
-  })
+  //       scope.getUserDistance = ratingsService.getUserDistance;
+  //     }
+  //   };
+  // })
 
   /** <dv-menu dispensaryId='' /> */
   .directive('dvMenu', ['$firebaseObject', 'dvUrl', function($firebaseObject, dvUrl) {

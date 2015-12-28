@@ -35,20 +35,16 @@
 			<div ng-show="!( currentUser )" class="navbar-text dropdown">
 				<img src="img/icons/budIconWhite.png" class="img-responsive pull-right avatar dropdown-toggle" type="button"/>
 				<ul class="userDropdown">
-					<li type="button" ng-click="showLoginModal()">Login</li>
-					<!-- <a class="button signupButton" ng-click="showSignupModal()">Sign Up</a> -->
-					<!-- <a class="button signupButton" ui-sref="root.signup">Sign Up</a> -->
-					<a class="button signupButton" href="../pages/signup.html">Sign Up</a>
+					<li type="button" ui-sref="root.signin">Sign In</li>
+					<a class="button signupButton" ui-sref="root.signup">Sign Up</a>
 				</ul>
 				<div class="accountInfo">
-					<h1 class="pull-right username btn navbar-btn" ng-click="showLoginModal()" >High, Guest!</h1><br/>
-					<a ng-click="showSignupModal()"><h2 class="pull-right location">Start Your Stash Today</h2></a>
+					<h1 class="pull-right username btn navbar-btn" ui-sref="root.signup" >High, Guest!</h1><br/>
+					<a ui-sref="root.signup"><h2 class="pull-right location">Start Your Stash Today</h2></a>
 				</div>
 				<div class="authenticateButtons">
-					<a class="button loginButton" ng-click="showLoginModal()">Login</a>
-					<!-- <a class="button signupButton" ng-click="showSignupModal()">Sign Up</a> -->
-					<!-- <a class="button signupButton" ui-sref="root.signup">Sign Up</a> -->
-					<a class="button signupButton" href="pages/signup.html">Sign Up</a>
+					<a class="button loginButton" ui-sref="root.signin">Sign In</a>
+					<a class="button signupButton" ui-sref="root.signup">Sign Up</a>
 				</div>
 			</div>
 		</div>

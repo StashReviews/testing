@@ -1,32 +1,32 @@
 
-  <div ng-controller="signupCtrl" class="overlayWrapper">
+  <div ng-controller="signinCtrl" class="overlayWrapper">
     
     <header class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <img  ui-sref="root.home" class="logo" src="img/stash_logo.png"/> 
     </header>
 
     <section class="overview col-lg-6 col-md-6 col-sm-12 col-xs-12">
-		<h1>Unlock your stash for <span>FREE</span> today!</h1>
+		<h1>Sign in to your Stash</h1>
 		<ul>
 			<li class="stashBenefit">
 				<img src="img/icons/stashIcon.png" class="icon"/>
         <div>
-  				<h2>Unlock your Stash</h2>
-  				<p>Stash as many of your favorites as you like for quick access later.</p>
+  				<h2>Access your Stash</h2>
+  				<p>Convenient access to your favorite strains, concentrates and edibles.</p>
 			  </div>
       </li>
 			<li class="reviewBenefit">
 				<img src="img/icons/reviewIcon.png" class="icon"/>
   			<div>
         	<h2>Review your Sessions</h2>
-  				<p>Leave public or private reviews for all the cannabis products you try.</p>
+  				<p>Browse through your reviews for the cannabis products you've tried already.</p>
         </div>
 			</li>
 			<li class="buddiesBenefit">
 				<img src="img/icons/buddiesIcon.png" class="icon"/>
 				<div>
-          <h2>Add your buddies</h2>
-				  <p>See your Buddies Stashes, make suggestions and share reviews.</p>
+          <h2>Share with buddies</h2>
+				  <p>Share reviews with your friends and make suggestions on products they should try.</p>
         </div>
 			</li>
 		</ul>
@@ -34,10 +34,10 @@
 
 	<section class="signupForm col-lg-6 col-md-6 col-sm-12 col-xs-12">
 		<form class="form-horizontal">
-			<div class="form-group">
+			<!-- <div class="form-group">
 				<label>Username</label>
 				<input ng-model="credentials.username"  type="text" name="username" placeholder="Username" class="usernameInput form-control col-lg-8 col-md-8 col-sm-8 col-xs-8"></input>
-			</div>
+			</div> -->
 			<div class="form-group">
 				<label>Email</label>
 				<input ng-model="credentials.email" type="text" name="email" placeholder="Email" class="emailInput form-control col-lg-8 col-md-8 col-sm-8 col-xs-8"/>
@@ -47,7 +47,7 @@
 				<input ng-model="credentials.password" type="password" name="password" placeholder="Password" class="passwordInput form-control col-lg-8 col-md-8 col-sm-8 col-xs-8"/>
 			</div>
 			<div class="form-group">
-        <input type="submit" value="CREATE MY STASH" id="submitUser" class="button signupBtn col-lg-12 col-md-12 col-sm-12 col-xs-12" ></input>
+        <input ng-click="login('password', credentials)" type="submit" value="SIGN IN" class="button signupBtn col-lg-12 col-md-12 col-sm-12 col-xs-12" ></input>
 			</div>              
 
 			<div class="form-group">
@@ -60,16 +60,11 @@
           </ul>
 				</div>
 			</div>
-			<div class="form-group">
-				<input type="submit" value="Already Have An Account?" ui-sref="root.signin" class="button signinBtn col-lg-12 col-md-12 col-sm-12 col-xs-12"></input>
-			</div>
+       <div class="form-group">
+        <input type="submit" value="Don't Have An Account Yet?" ui-sref="root.signup" class="button signinBtn col-lg-12 col-md-12 col-sm-12 col-xs-12"></input>
+      </div>
 		</form>
 	</section>
-
-	<footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<p>By signing up for an account, you are agreeing to our <a ui-sref="root.terms">Terms of Use</a> and our <a ui-sref="root.privacy">Privacy Policy</a>.<br/>Must be 21 years or older.</p>
-	</footer>
-
 
 
     <!-- Validity -->

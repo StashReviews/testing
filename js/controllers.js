@@ -10,7 +10,7 @@ angular.module('Stash.controllers', [])
     $scope.itemDetails = itemsService.get(itemType, $stateParams.itemId);
   }])
   */
-  .controller('StashCtrl', ['$scope', '$state', '$modal', 'dvUrl', 'currentUser', 'usersService', 'locationService', function($scope, $state, $modal, dvUrl, currentUser, usersService, locationService) {
+  .controller('StashCtrl', ['$scope', '$state', '$modal', 'dvUrl', 'currentUser', 'usersService', function($scope, $state, $modal, dvUrl, currentUser, usersService) {
     $scope.isAdmin = usersService.isAdmin;
 
     $scope.getEmailHash = usersService.getEmailHash;
@@ -21,7 +21,7 @@ angular.module('Stash.controllers', [])
     // @todo Note that $scope.currentName will always be one step behind the digest cycle if we pass $scope.currentUser to it.
     $scope.currentName = usersService.getName(currentUser);
 
-    $scope.currentCity = locationService.getCurrentCity();
+    // $scope.currentCity = locationService.getCurrentCity();
 
     // @todo Note that $scope.currentAvatar will always be one step behind the digest cycle if we pass $scope.currentUser to it.
     $scope.currentAvatar = usersService.getAvatarUrl(currentUser);
@@ -163,13 +163,27 @@ angular.module('Stash.controllers', [])
 
 
   }])
-  .controller("signupCtrl", ['$scope', 'usersService', function($scope, usersService) {
+  .controller("signupCtrl", function($scope, $state, $firebaseObject, $firebaseArray, usersService) {
     var ref = new Firebase("https://stashreviews.firebaseio.com");
     var refUsers = new Firebase("https://stashreviews.firebaseio.com/users");
 
+    $scope.credentials = {};
+
+    $scope.login = function(service, credentials) {
+      usersService.login(service, credentials)
+        .then(function(currentUser) {
+          $state.go('root.home');
+          location.reload();
+        }, function(error) {
+          console.log(error);
+          // If email or password was entered incorrectly
+          alert("Email / password combination incorrect. Please try again.");
+        });
+    };
+
     // Allows Usernames to Be Reserved During Development
     // When "Check Availablity" is clicked, run this
-    $('.submitUser').on( "click", function(error, userInfo, userData) {
+    $('#submitUser').on( "click", function(error, userInfo, userData) {
 
       // Get Username and Email From Inputs
       var username = $('.usernameInput').val();
@@ -212,10 +226,13 @@ angular.module('Stash.controllers', [])
       // This is the good stuff
         if (! username) {
             // If nothing was typed into username input, alert.
-            alert("You must enter a username in order to reserve it.");
+            alert("You must enter a username.");
         } else if (! email) {
             // If nothing was typed into username input, alert.
-            alert("You must enter an email address in order to reserve your username.");
+            alert("You must enter an email address.");
+        } else if (! password) {
+            // If nothing was typed into username input, alert.
+            alert("You must enter a password.");
         } else {
 
 
@@ -228,16 +245,11 @@ angular.module('Stash.controllers', [])
           if (error) {
             console.log("Error creating user:", error);
             // Error alert.
-            // alert(error + " Try another!");
-            $('#rebrandingModal').modal('hide');
-            $('#reserveUsernameModal').modal('hide');
-            $('#reserveEmailTakenModal').modal('show');
-            $('#reserveUsernameTakenModal').modal('hide');
-            $('#reserveUsernameSuccessModal').modal('hide');
+            alert(error + " Please try another!");
           } else {
             console.log("Successfully created user account with uid:", userData.uid);
 
-            // Set username, date and email to Firebase.
+            // Set username, date, email and uid to Firebase.
             var userInfo = {
               date: myFormatDate,
               username: username,
@@ -246,13 +258,8 @@ angular.module('Stash.controllers', [])
             }
             refUsers.child(username).set(userInfo, function(error) {
               if (error) {
-              // alert("Whoops! It looks like " + username + " is already taken. Please try another!");
+              alert("Whoops! It looks like " + username + " is already taken. Please try another!");
               console.log("Username is already taken.");
-              $('#rebrandingModal').modal('hide');
-              $('#reserveUsernameModal').modal('hide');
-              $('#reserveEmailTakenModal').modal('hide');
-              $('#reserveUsernameTakenModal').modal('show');
-              $('#reserveUsernameSuccessModal').modal('hide');
 
               // Removes User Auth From Firebase
             ref.removeUser({
@@ -277,12 +284,8 @@ angular.module('Stash.controllers', [])
             });
             } else {
               console.log("Successfully created user by the username:", username);
-              
-              $('#rebrandingModal').modal('hide');
-              $('#reserveUsernameModal').modal('hide');
-              $('#reserveEmailTakenModal').modal('hide');
-              $('#reserveUsernameTakenModal').modal('hide');
-              $('#reserveUsernameSuccessModal').modal('show');
+              // @todo Login user and go to home page.
+
             }
 
             });
@@ -292,8 +295,25 @@ angular.module('Stash.controllers', [])
 
     });
 
+  })
+  .controller("signinCtrl", function($scope, $state, $firebaseObject, $firebaseArray, usersService) {
 
-  }])
+    $scope.credentials = {};
+
+    $scope.login = function(service, credentials) {
+      usersService.login(service, credentials)
+        .then(function(currentUser) {
+          $state.go('root.home');
+          location.reload();
+        }, function(error) {
+          console.log(error);
+          // If email or password was entered incorrectly
+          alert("Email / password combination incorrect. Please try again.");
+        });
+    };
+
+
+  })
   .controller('usersCtrl', ['$scope', 'usersService', 'ratingsService', function($scope, usersService, ratingsService) {
 
   }])
@@ -339,7 +359,7 @@ angular.module('Stash.controllers', [])
         $scope.featuredDispensaries = dispensaryData[1];
       });
   }])
-  .controller('dispensaryDetailsCtrl', ['$scope', '$q', '$filter', '$stateParams', 'itemsService', 'ratingsService', 'reviewsService', 'locationService', function($scope, $q, $filter, $stateParams, itemsService, ratingsService, reviewsService, locationService) {
+  .controller('dispensaryDetailsCtrl', ['$scope', '$q', '$filter', '$stateParams', 'itemsService', 'ratingsService', 'reviewsService', function($scope, $q, $filter, $stateParams, itemsService, ratingsService, reviewsService) {
     
     $scope.today = $filter('date')(new Date(), 'EEEE');
 
