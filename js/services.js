@@ -90,8 +90,6 @@ angular.module('Stash.services', [])
        */
       isAdmin: function(user) {
         var adminIdList = [
-          'twitter:2199988411', // Dan Siddoway
-          'simplelogin:1',
           'twitter:318556297',
           'twitter:dberg15',
           'simplelogin:2',
@@ -221,7 +219,7 @@ angular.module('Stash.services', [])
        * @param {String} businessId
        */
       getProfile: function(businessId) {
-        return $firebaseObject( new Firebase(dvUrl + '/businesses/' + businessId + '/profile') );
+        return $firebaseObject( new Firebase(dvUrl + '/businesses/' + businessId + '/public') );
       },
       /**
        * @param {Object} businessId

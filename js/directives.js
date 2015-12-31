@@ -203,6 +203,86 @@ angular.module('Stash.directives', [])
   })
 
 
+/** Slick Image Slider */
+  .directive('ngImageSlider', function() {
+    return {
+      restrict: 'A',
+      link: function(scope, element, attrs) {
+
+        //Will watch for changes on the attribute
+        attrs.$observe('imageSlider',function(){
+          linkImageSlider();
+          console.log('New Business Image(s) Found');
+        })
+
+        function linkImageSlider() {
+          var native_width = 0;
+          var native_height = 0;
+
+          $('.businessImageSlider').slick({
+            lazyLoad: 'ondemand',  
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+             slidesToScroll: 3,
+            centerMode: true,
+             centerPadding: '60px',
+            variableWidth: true,
+            autoplay: true,
+             autoplaySpeed: 3000,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  centerMode: true,
+                  centerPadding: '60px',
+                  infinite: true,
+                  dots: true,
+                   slidesToShow: 3,
+                  slidesToScroll: 3,
+                }
+              },
+               {
+                breakpoint: 768,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 3,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                 arrows: false,
+                 centerMode: true,
+                 centerPadding: '40px',
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                 arrows: false,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          });
+
+        }
+        
+      }
+    };
+  })
+
+
   /** Donut Charts */
   .directive('ngDonut', function() {
     return {

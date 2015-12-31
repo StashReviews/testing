@@ -48,7 +48,9 @@ window.onload = (function() {
     });
 	// Up To Top Ends Here
 
-
+	// // Maintaining Height of Textarea Starts Here
+	// $("textarea").height( $("textarea")[0].scrollHeight );
+	// // Maintaining Height of Textarea Ends Here
 
 });
 

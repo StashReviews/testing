@@ -101,7 +101,7 @@ angular.module('Stash', ['Stash.config', 'Stash.services', 'Stash.controllers', 
       })
       .state('root.managebusiness', {
         url: '/manage/business',
-        templateUrl: 'pages/manage/business.html',
+        templateUrl: 'pages/manage/businessCMS.html',
         controller: 'businessManageCtrl',
         resolve: {
           currentUser: ['$firebaseAuth', 'dvUrl', function($firebaseAuth, dvUrl) {

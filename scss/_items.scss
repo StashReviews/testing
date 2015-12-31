@@ -88,7 +88,6 @@
   color: $dvRed;
 }
 
-.businessName,
 .strainProducer,
 .edibleProcessor,
 .concentrateProcessor {
@@ -833,6 +832,253 @@
     }
   }
 }
+
+/* Business Dashboard */
+.updateBusinessForm {
+  float: left;
+  color: rgb(44,48,52);
+  font-family: open sans, 'open-sans', serif;
+  fieldset {
+    margin: 0;
+    border: none;
+  }
+  input,
+  textarea{
+    margin: 0px 0 25px 0 !important;
+    float: left;
+    border: none;
+    border-bottom: 1px solid rgba(44,48,52,.2);
+    &:active,
+    &:focus,
+    &:hover {
+      border-color: rgb(44,48,52);
+    }
+  }
+  .username {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .bio {
+    font-size: 14px;
+    line-height: 22px;
+    height: 100%;
+    margin: 0;
+  }
+  .location,
+  .phone,
+  .email,
+  .website {
+    font-size: 16px;
+  }
+  .imageWrap {
+    position: relative;
+    img {
+      margin-bottom: 30px;
+    }
+    .image {
+      margin-top: 10px;
+      width: 100%;
+      &::before {
+        content: "X";
+        background: red;
+        width: 40px;
+        height: 40px;
+        display: inline;
+        position: relative;
+        bottom: 0;
+        right: 0;
+        color: white;
+      }
+    }
+    .deleteImage {
+      cursor: pointer;
+      padding: 5px 2px 0 5px;
+      border-top-left-radius: 50%;
+      position: absolute;
+      bottom: 30px;
+      right: 15px;
+      color: white;
+      background: rgba(44,48,52,.2);
+      &:hover {
+        background: $dvRed;
+      }
+    }
+  }
+  .uploadImage,
+  .uploadLogo {
+    display: none;
+  }
+  .uploadImageBtn,
+  .uploadLogoBtn {
+    text-align: center;
+    span {
+      i {
+        font-size: 52px;
+        line-height: 25px;
+        float: none;
+      }
+    }
+    &:hover {
+      color: rgb(44,48,52);
+      cursor: pointer;
+    }
+  }
+}
+
+/* Business Profile */
+.businessInfo {
+  .businessLogo {
+    float: left;
+    clear: both;
+    width: 100%;
+    max-width: 150px;
+    border: 1px solid $dvGray5;
+  }
+  .businessName {
+    float: left;
+    clear: both;
+    width: 100%;
+    font-size: 24px;
+    font-family: $dvTextFont;
+    text-transform: none;
+    font-weight: 300;
+    margin: 15px 0 0 0;
+  }
+  .businessLocation {
+    float: left;
+    clear: both;
+    width: 100%;
+    color: $dvGray50;
+    font-size: 14px;
+    font-family: $dvTextFont;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 5px 0 10px 0;
+  }
+  .businessBio {
+    float: left;
+    clear: both;
+    width: 100%;
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+.businessContactInfo {
+  ul {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid $dvGray5;
+    a {
+      font-family: $dvTextFont;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-align: right;
+      color: rgb(44,48,52);
+      width: 100%;
+      li {
+        line-height: 25px;
+        margin: 0;
+        padding: 5px 10px 5px 20px;
+        display: block;
+        width: 100%;
+        float: left;
+        border-bottom: 1px solid $dvGray5;
+        cursor: pointer;
+        i {
+          float: left;
+          color: $dvGray20;
+        }
+        &:hover {
+          background: $dvGray5;
+        }
+        label {
+          span {
+            margin-top: -12px;
+            padding: 0;
+            position: absolute;
+            left: 60px;
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+}
+.businessImageSlider {
+  margin-bottom: 40px;
+}
+.slick-slide {
+  height: 220px;
+}
+.slick-dots {
+  bottom: -35px;
+  li {
+    background: rgba(44,48,52,.3);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    color: transparent;
+    &:hover {
+      border: 1px solid rgb(44,48,52);
+    }
+  }
+  .slick-active {
+    background: rgb(44,48,52);
+    border: 1px solid rgb(44,48,52);
+  }
+}
+.slick-arrow {
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  z-index: 2;
+  &:visited {
+    border-color: rgba(255,255,255,.3);
+  }
+  &:hover,
+  &:focus {
+    border-color: rgba(255,255,255,.5);
+  }
+}
+.slick-prev {
+  left: 5px;
+  border-right: 10px solid rgba(255,255,255,.3);; 
+  &:before {
+    content: "";
+  }
+}
+.slick-next {
+  right: 5px;
+  border-left: 10px solid rgba(255,255,255,.3);; 
+  &:before {
+    content: "";
+  }
+}
+.products {
+  margin-top: 40px;
+  font-family: $dvTextFont;
+  .nav-tabs {
+    li {
+      width: 33%;
+      a {
+        color: rgb(44,48,52);
+        text-align: center;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .tab-content {
+    #staticExample {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+}
+
+
 
 
 

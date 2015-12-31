@@ -33,6 +33,7 @@
 body {
   position: relative;
   top: 100px;
+  font-family: $dvTextFont;
 }
 
 #strainsList,
@@ -81,17 +82,17 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $dvHeaderFont;
+  font-family: $dvTextFont;
   text-transform: uppercase;
 }
 
 h3 {
   border-bottom: 1px solid $dvGray5;
   text-align: center;
-  font-size: 30px;
+  font-size: 18px;
 }
 h4 {
-  font-size: 24px;
+  font-size: 16px;
   margin-bottom: 0;
 }
 
@@ -111,11 +112,14 @@ ul {
 
 .pageTitle {
   margin-top: 0;
+  padding: 0 0 10px 0;
   border-bottom: 1px solid $dvGray5;
   text-align: center;
-  font-family: $dvHeaderFont;
+  color: $dvGray20;
+  letter-spacing: 1px;
+  font-family: $dvTextFont;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 24px;
 }
 
 .viewOnMap {
@@ -171,6 +175,22 @@ form {
       color: white;
       cursor: pointer;
     }
+  }
+}
+
+label {
+  color: rgba(44,48,52,.3);
+  margin-bottom: 5px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  i {
+    float: left;
+    margin-left: -15px;
+  }
+  span {
+    float: left;
+    padding-top: 3px;
+    margin-left: 5px;
   }
 }
 

@@ -7,13 +7,10 @@
         <img src="{{ strainDetails.image }}" class="img-responsive strainGalleryMobile"/>
       </div>
       <div class="col-md-3 col-sm-3 col-xs-4 producerLogoWrap">
-        <img ng-src="{{ strainDetails.logo }}" class="producerLogo"/>
+        <a href="pages/businesses/businessProfile.html"><img ng-src="{{ strainDetails.logo }}" class="producerLogo"/></a>
       </div>
       <div class="col-md-9 col-sm-9 col-xs-8 info">
         <h2 class="strainName" id="{{ strainDetails.name }}">{{ strainDetails.name }}</h2>
-        <div class="favorite">
-          <img class="favoriteIcon" src="img/icons/favoriteIcon.png">
-        </div>
         <h4 class="strainChemistry">{{ strainDetails.chemistry }}</h4>
         <h4 class="producedBy">Produced by</h4>
         <h4 class="strainProducer">{{ strainDetails.producer }}</h4>

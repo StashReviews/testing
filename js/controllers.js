@@ -169,17 +169,27 @@ angular.module('Stash.controllers', [])
 
     $scope.credentials = {};
 
-    $scope.login = function(service, credentials) {
-      usersService.login(service, credentials)
-        .then(function(currentUser) {
-          $state.go('root.home');
-          location.reload();
-        }, function(error) {
-          console.log(error);
-          // If email or password was entered incorrectly
-          alert("Email / password combination incorrect. Please try again.");
-        });
-    };
+    // $scope.login = function(service, credentials) {
+    //   usersService.login(service, credentials)
+    //     .then(function(currentUser) {
+    //       $state.go('root.home');
+    //       location.reload();
+    //     }, function(error) {
+    //           if (error) {
+    //             switch (error.code) {
+    //               case "INVALID_USER":
+    //                 console.log("The specified user account does not exist.");
+    //                 break;
+    //               case "INVALID_PASSWORD":
+    //                 console.log("The specified user account password is incorrect.");
+    //                 break;
+    //               default:
+    //             }
+    //           } else {
+    //             console.log("Else Happened.");
+    //           }
+    //     });
+    // };
 
     // Allows Usernames to Be Reserved During Development
     // When "Check Availablity" is clicked, run this
@@ -189,11 +199,9 @@ angular.module('Stash.controllers', [])
       var username = $('.usernameInput').val();
       var email = $('.emailInput').val();
       var password = $('.passwordInput').val();
-
       // Get Firebase references
       var ref = new Firebase("https://stashreviews.firebaseio.com");
       var refUsers = new Firebase("https://stashreviews.firebaseio.com/users");
-
       // Get Todays Date
       var today = new Date();
       // Get The Day
@@ -203,12 +211,8 @@ angular.module('Stash.controllers', [])
       // Get The Year
       var yyyy = today.getFullYear();
       // Add a '0' if One Digit
-      if(dd<10) {
-          dd='0'+dd
-      } 
-      if(mm<10) {
-          mm='0'+mm
-      }
+      if(dd<10) { dd='0'+dd } 
+      if(mm<10) { mm='0'+mm }
       // Name of Months
       var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
       // Format The Date: "January 01, 2015"
@@ -225,68 +229,65 @@ angular.module('Stash.controllers', [])
         
       // This is the good stuff
         if (! username) {
-            // If nothing was typed into username input, alert.
-            alert("You must enter a username.");
+          // If nothing was typed into username input, alert.
+          alert("You must enter a username.");
         } else if (! email) {
-            // If nothing was typed into username input, alert.
-            alert("You must enter an email address.");
+          // If nothing was typed into username input, alert.
+          alert("You must enter an email address.");
         } else if (! password) {
-            // If nothing was typed into username input, alert.
-            alert("You must enter a password.");
+          // If nothing was typed into username input, alert.
+          alert("You must enter a password.");
         } else {
-
-
           // Create A New User Auth on Firebase
           ref.createUser({
-          email    : email,
-          username : username,
-          password : password
-        }, function(error, userData) {
-          if (error) {
-            console.log("Error creating user:", error);
-            // Error alert.
-            alert(error + " Please try another!");
-          } else {
-            console.log("Successfully created user account with uid:", userData.uid);
+            email    : email,
+            username : username,
+            password : password
+          }, function(error, userData) {
+            if (error) {
+              // Why is this firing no matter what?
+              console.log("Error creating user:", error);
+            } else {
+              console.log("Successfully created user account with uid:", userData.uid);
 
-            // Set username, date, email and uid to Firebase.
-            var userInfo = {
-              date: myFormatDate,
-              username: username,
-              email: email,
-              uid: userData.uid
-            }
+              // Set username, date, email and uid to Firebase.
+              var userInfo = {
+                date: myFormatDate,
+                username: username,
+                email: email,
+                uid: userData.uid
+              }
             refUsers.child(username).set(userInfo, function(error) {
               if (error) {
               alert("Whoops! It looks like " + username + " is already taken. Please try another!");
               console.log("Username is already taken.");
 
               // Removes User Auth From Firebase
-            ref.removeUser({
-              email: email,
-              username : username,
+              ref.removeUser({
+                email: email,
+                username : username,
                 password : password
-            }, function(error) {
-              if (error) {
-                switch (error.code) {
-                  case "INVALID_USER":
-                    console.log("The specified user account does not exist.");
-                    break;
-                  case "INVALID_PASSWORD":
-                    console.log("The specified user account password is incorrect.");
-                    break;
-                  default:
-                    console.log("Error removing user:", error);
+              }, function(error) {
+                if (error) {
+                  switch (error.code) {
+                    case "INVALID_USER":
+                      console.log("The specified user account does not exist.");
+                      break;
+                    case "INVALID_PASSWORD":
+                      console.log("The specified user account password is incorrect.");
+                      break;
+                    default:
+                      console.log("Error removing user:", error);
+                  }
+                } else {
+                  console.log("User account deleted successfully!");
                 }
+              });
               } else {
-                console.log("User account deleted successfully!");
+                console.log("Successfully created user by the username:", username);
+                // @todo Login user and go to home page.
+          
               }
-            });
-            } else {
-              console.log("Successfully created user by the username:", username);
-              // @todo Login user and go to home page.
-
-            }
 
             });
             }
@@ -319,10 +320,15 @@ angular.module('Stash.controllers', [])
   }])
   .controller('userProfileCtrl', ['$scope', '$stateParams', 'usersService', function($scope, $stateParams, usersService) {
     
-    $scope.user = usersService.getProfile('users', $stateParams.userId);
+    $scope.userDetails = usersService.getProfile('users', $stateParams.userId);
 
   }])
   .controller('userBuddyCtrl', ['$scope', 'usersService', function($scope, usersService) {
+
+  }])
+  .controller('businessProfileCtrl', ['$scope', '$stateParams', 'businessesService', function($scope, $stateParams, businessesService) {
+    
+    $scope.businessDetails = businessesService.getProfile('businesses', $stateParams.businessId);
 
   }])
   .controller('businessManageCtrl', ['$scope', '$firebaseObject', 'dvUrl', function($scope, $firebaseObject, dvUrl) {
@@ -343,6 +349,11 @@ angular.module('Stash.controllers', [])
     $scope.saveBusiness = function(businessId, business) {
       ( new Firebase(dvUrl + '/businesses/' + businessId) ).set(business);
     };
+
+    // Maintaining Height of Textarea Starts Here
+    $("textarea").height( $("textarea")[0].scrollHeight );
+    // Maintaining Height of Textarea Ends Here
+    
   }])
   .controller('dispensariesCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
     // Wait for both our dispensaries and our featured dispensaries to load.

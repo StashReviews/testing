@@ -1,0 +1,87 @@
+<h2 class="pageTitle" title="business">
+Business Profile</h2>
+<div class="pageId" title="{{ business.$id }}"></div>
+<section class="businessInfo col-lg-6">
+    <div class="businessLogoWrap">
+        <img ng-src="img/logos/louisw_logo.png" class="businessLogo"/>
+    </div>
+    <div class="info">
+        <h2 class="businessName" id="{{ businessDetails.name }}">Louis W.</h2>
+        <h4 class="businessLocation" id="{{ businessDetails.location }}">Spokane, WA</h4>
+        <p class="businessBio" id="{{ businessDetails.bio }}">We are a local, family operated farm that produces many delicious, fun strains such as Kandy Kush, Gigabud, and White Lavender; along with some of the classics such as Sage and Northern Lights.  We're also producing high potency Bubble Hash and Shatter for our concentrate fans!</p>
+    </div>
+</section>
+<section class="businessImages col-lg-6 pull-right">
+	<div class="businessImageSlider">
+	    <img ng-image-slider image-slider="http://www.placecage.com/200/300" src="http://www.placecage.com/200/300">
+	    <img ng-image-slider image-slider="http://www.placecage.com/500/200"  src="http://www.placecage.com/500/200">
+	    <img ng-image-slider image-slider="http://www.placecage.com/640/350"  src="http://www.placecage.com/640/350">
+	    <img ng-image-slider image-slider="http://www.placecage.com/800/300"  src="http://www.placecage.com/800/300">
+	</div>
+</section>
+<section class="businessContactInfo col-lg-6 pull-right">
+	<ul>
+		<a href="tel:509-555-1234"><li>
+			<i class="material-icons">call</i><label><span>Phone</span></label>
+			(509)555-1234
+		</li></a>
+		<a href="mailto:fake@stash.reviews" target="_blank"><li>
+			<i class="material-icons">mail</i><label><span>Email</span></label>
+			fake@stash.reviews
+		</li></a>
+		<a href="http://www.stash.reviews" target="_blank"><li>
+			<i class="material-icons">language</i><label><span>Website</span></label>
+			www.stash.reviews
+		</li></a>
+	</ul>
+</section>
+
+<!-- This is what it should be like -->
+<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  	<tabset class="products">
+		<tab heading="Strains (9)">
+			<ul class="dvCardList">
+				<div><li ng-repeat="strain in strains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ strain.disabled }}">
+					<dv-card item-type="strain" item-id="{{ strain.$id }}"></dv-card>
+				</li></div>
+			</ul>
+		</tab>
+		<tab heading="Concentrates (2)">
+			<ul class="dvCardList">
+				<div><li ng-repeat="concentrate in concentrates" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ concentrate.disabled }}">
+					<dv-card item-type="concentrate" item-id="{{ concentrate.$id }}"></dv-card>
+				</li></div>
+			</ul>
+		</tab>
+		<tab heading="Edibles (0)">
+			<ul class="dvCardList">
+				<div><li ng-repeat="edible in edibles" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ edible.disabled }}">
+					<dv-card item-type="edible" item-id="{{ edible.$id }}"></dv-card>
+				</li></div>
+			</ul>
+		</tab>
+	</tabset>
+</div> -->
+
+<!-- This is a static png -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  	<tabset class="products">
+		<tab heading="Strains (8)">
+			<img id="staticExample" src="img/BusinessProfile_PageCards.jpg"/>
+		</tab>
+		<tab heading="Concentrates (2)">
+			<ul class="dvCardList">
+				<div><li ng-repeat="concentrate in concentrates" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ concentrate.disabled }}">
+					<dv-card item-type="concentrate" item-id="{{ concentrate.$id }}"></dv-card>
+				</li></div>
+			</ul>
+		</tab>
+		<tab heading="Edibles (0)">
+			<ul class="dvCardList">
+				<div><li ng-repeat="edible in edibles" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ edible.disabled }}">
+					<dv-card item-type="edible" item-id="{{ edible.$id }}"></dv-card>
+				</li></div>
+			</ul>
+		</tab>
+	</tabset>
+</div>
