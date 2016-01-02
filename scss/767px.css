@@ -123,7 +123,24 @@
     display: inline;
     margin-bottom: 20px; }
 
-  /*----items.html end----*/ }
+  /*----items.html end----*/
+  /*---- businessCMS.html start ----*/
+  .products .nav-tabs li a {
+    font-size: 10px; }
+
+  /*---- businessCMS.html end ----*/
+  /*---- businessProfile.html start ----*/
+  .businessInfo .businessLogoWrap {
+    text-align: center; }
+  .businessInfo .businessLogo {
+    float: none; }
+  .businessInfo .businessName,
+  .businessInfo .businessLocation,
+  .businessInfo .businessBio {
+    float: none;
+    text-align: center; }
+
+  /*---- businessProfile.html end ----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
   .featured-concentrate-true,

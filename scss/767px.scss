@@ -154,6 +154,33 @@
     margin-bottom: 20px;
   }
   /*----items.html end----*/
+  /*---- businessCMS.html start ----*/
+  .products {
+    .nav-tabs {
+      li {
+        a {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  /*---- businessCMS.html end ----*/
+  /*---- businessProfile.html start ----*/
+  .businessInfo {
+    .businessLogoWrap {
+      text-align: center;
+    }
+    .businessLogo {
+      float: none;
+    }
+    .businessName,
+    .businessLocation,
+    .businessBio {
+      float: none;
+      text-align: center;
+    }
+  }
+  /*---- businessProfile.html end ----*/
 }
 @media screen and (max-width:550px) {
   /*----cards.html start----*/

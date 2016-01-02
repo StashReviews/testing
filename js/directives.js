@@ -216,21 +216,19 @@ angular.module('Stash.directives', [])
         })
 
         function linkImageSlider() {
-          var native_width = 0;
-          var native_height = 0;
 
           $('.businessImageSlider').slick({
-            lazyLoad: 'ondemand',  
+            // lazyLoad: 'ondemand',  
             dots: true,
             infinite: true,
             speed: 300,
             slidesToShow: 3,
-             slidesToScroll: 3,
+            slidesToScroll: 3,
             centerMode: true,
-             centerPadding: '60px',
+            centerPadding: '60px',
             variableWidth: true,
             autoplay: true,
-             autoplaySpeed: 3000,
+            autoplaySpeed: 3000,
             responsive: [
               {
                 breakpoint: 1024,
@@ -274,7 +272,7 @@ angular.module('Stash.directives', [])
                 }
               }
             ]
-          });
+          })
 
         }
         

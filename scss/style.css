@@ -926,8 +926,9 @@
   clear: both;
   width: 100%;
   max-width: 150px;
-  border: 1px solid rgba(44, 48, 52, 0.05); }
-/* line 937, _items.scss */
+  border: 1px solid rgba(44, 48, 52, 0.05);
+  border-radius: 5px; }
+/* line 938, _items.scss */
 .businessInfo .businessName {
   float: left;
   clear: both;
@@ -937,7 +938,7 @@
   text-transform: none;
   font-weight: 300;
   margin: 15px 0 0 0; }
-/* line 947, _items.scss */
+/* line 948, _items.scss */
 .businessInfo .businessLocation {
   float: left;
   clear: both;
@@ -948,7 +949,7 @@
   font-weight: 600;
   text-transform: uppercase;
   margin: 5px 0 10px 0; }
-/* line 958, _items.scss */
+/* line 959, _items.scss */
 .businessInfo .businessBio {
   float: left;
   clear: both;
@@ -956,12 +957,12 @@
   font-size: 12px;
   line-height: 22px; }
 
-/* line 967, _items.scss */
+/* line 968, _items.scss */
 .businessContactInfo ul {
   margin: 0;
   padding: 0;
   border-top: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 971, _items.scss */
+  /* line 972, _items.scss */
   .businessContactInfo ul a {
     font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 12px;
@@ -969,7 +970,7 @@
     text-align: right;
     color: #2c3034;
     width: 100%; }
-    /* line 978, _items.scss */
+    /* line 979, _items.scss */
     .businessContactInfo ul a li {
       line-height: 25px;
       margin: 0;
@@ -979,14 +980,14 @@
       float: left;
       border-bottom: 1px solid rgba(44, 48, 52, 0.05);
       cursor: pointer; }
-      /* line 987, _items.scss */
+      /* line 988, _items.scss */
       .businessContactInfo ul a li i {
         float: left;
         color: rgba(44, 48, 52, 0.2); }
-      /* line 991, _items.scss */
+      /* line 992, _items.scss */
       .businessContactInfo ul a li:hover {
         background: rgba(44, 48, 52, 0.05); }
-      /* line 995, _items.scss */
+      /* line 996, _items.scss */
       .businessContactInfo ul a li label span {
         margin-top: -12px;
         padding: 0;
@@ -994,80 +995,112 @@
         left: 60px;
         pointer-events: none; }
 
-/* line 1007, _items.scss */
+/* line 1008, _items.scss */
 .businessImageSlider {
   margin-bottom: 40px; }
 
-/* line 1010, _items.scss */
+/* line 1011, _items.scss */
 .slick-slide {
   height: 220px; }
 
-/* line 1013, _items.scss */
+/* line 1014, _items.scss */
 .slick-dots {
   bottom: -35px; }
-  /* line 1015, _items.scss */
+  /* line 1016, _items.scss */
   .slick-dots li {
-    background: rgba(44, 48, 52, 0.3);
+    background: rgba(44, 48, 52, 0.2);
     width: 5px;
     height: 5px;
     border-radius: 50%;
     color: transparent; }
-    /* line 1021, _items.scss */
+    /* line 1022, _items.scss */
     .slick-dots li:hover {
       border: 1px solid #2c3034; }
-  /* line 1025, _items.scss */
+  /* line 1026, _items.scss */
   .slick-dots .slick-active {
     background: #2c3034;
     border: 1px solid #2c3034; }
 
-/* line 1030, _items.scss */
+/* line 1031, _items.scss */
 .slick-arrow {
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   z-index: 2; }
-  /* line 1036, _items.scss */
+  /* line 1037, _items.scss */
   .slick-arrow:visited {
-    border-color: rgba(255, 255, 255, 0.3); }
-  /* line 1040, _items.scss */
+    border-color: rgba(44, 48, 52, 0.2); }
+  /* line 1041, _items.scss */
   .slick-arrow:hover, .slick-arrow:focus {
     border-color: rgba(255, 255, 255, 0.5); }
 
-/* line 1044, _items.scss */
+/* line 1045, _items.scss */
 .slick-prev {
   left: 5px;
-  border-right: 10px solid rgba(255, 255, 255, 0.3); }
-  /* line 1047, _items.scss */
+  border-right: 10px solid rgba(44, 48, 52, 0.2); }
+  /* line 1048, _items.scss */
   .slick-prev:before {
     content: ""; }
 
-/* line 1051, _items.scss */
+/* line 1052, _items.scss */
 .slick-next {
   right: 5px;
-  border-left: 10px solid rgba(255, 255, 255, 0.3); }
-  /* line 1054, _items.scss */
+  border-left: 10px solid rgba(44, 48, 52, 0.2); }
+  /* line 1055, _items.scss */
   .slick-next:before {
     content: ""; }
 
-/* line 1058, _items.scss */
+/* line 1059, _items.scss */
 .products {
   margin-top: 40px;
   font-family: "Open Sans", "Helvetica", sans-serif; }
-  /* line 1062, _items.scss */
+  /* line 1063, _items.scss */
   .products .nav-tabs li {
     width: 33%; }
-    /* line 1064, _items.scss */
+    /* line 1065, _items.scss */
     .products .nav-tabs li a {
-      color: #2c3034;
+      color: rgba(44, 48, 52, 0.5);
       text-align: center;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 1px; }
-  /* line 1074, _items.scss */
+      letter-spacing: 1px;
+      font-size: 13px;
+      padding: 10px 0;
+      margin-right: 0; }
+    /* line 1077, _items.scss */
+    .products .nav-tabs li:first-child.active a {
+      color: #3dd861;
+      border: none;
+      border-bottom: 3px solid #3dd861; }
+    /* line 1084, _items.scss */
+    .products .nav-tabs li:nth-child(2).active a {
+      color: #fcd31c;
+      border: none;
+      border-bottom: 3px solid #fcd31c; }
+    /* line 1091, _items.scss */
+    .products .nav-tabs li:nth-child(3).active a {
+      color: #f7253e;
+      border: none;
+      border-bottom: 3px solid #f7253e; }
+  /* line 1100, _items.scss */
   .products .tab-content #staticExample {
     width: 100%;
     margin-top: 15px; }
+  /* line 1104, _items.scss */
+  .products .tab-content .addListingBtn {
+    text-align: center;
+    margin-top: -21%;
+    margin-left: 33%; }
+    /* line 1109, _items.scss */
+    .products .tab-content .addListingBtn span i {
+      font-size: 52px;
+      line-height: 25px;
+      float: none; }
+    /* line 1115, _items.scss */
+    .products .tab-content .addListingBtn:hover {
+      color: #2c3034;
+      cursor: pointer; }
 
 /*  Start Header Bar  */
 /* line 3, layout/_navbar.scss */
@@ -1796,10 +1829,31 @@
     display: inline;
     margin-bottom: 20px; }
 
-  /*----items.html end----*/ }
+  /*----items.html end----*/
+  /*---- businessCMS.html start ----*/
+  /* line 161, 767px.scss */
+  .products .nav-tabs li a {
+    font-size: 10px; }
+
+  /*---- businessCMS.html end ----*/
+  /*---- businessProfile.html start ----*/
+  /* line 170, 767px.scss */
+  .businessInfo .businessLogoWrap {
+    text-align: center; }
+  /* line 173, 767px.scss */
+  .businessInfo .businessLogo {
+    float: none; }
+  /* line 178, 767px.scss */
+  .businessInfo .businessName,
+  .businessInfo .businessLocation,
+  .businessInfo .businessBio {
+    float: none;
+    text-align: center; }
+
+  /*---- businessProfile.html end ----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
-  /* line 162, 767px.scss */
+  /* line 189, 767px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
