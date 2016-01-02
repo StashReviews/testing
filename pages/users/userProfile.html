@@ -1,69 +1,44 @@
-<h2 class="pageTitle" title="user">User Profile</h2>
+<h2 class="pageTitle hidePageTitle" title="user">User Profile</h2>
 <div class="pageId" title="{{ user.$id }}"></div>
 <div class="row ">
   <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 coverImageWrap">
     <img src="img/cover_photo.png" class="coverImage"/>
     <div class="coverOverlay"></div>
   </div> -->
-  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 userInfoLeft">
-	<img src="https://scontent.fsnc1-1.fna.fbcdn.net/hprofile-xta1/v/t1.0-1/p160x160/11329937_10153309738079655_4717332562950568931_n.jpg?oh=8e8d5cb5c69ce6347ab8a15721abaaf6&oe=562A4EEC" class="userAvatar"/>
-	<a href="" class="buddyBtn">ADD BUDDY</a>
-  </div>
-  <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 userInfoMiddle">
+  <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 userInfoLeft">
+	<img src="https://scontent-sea1-1.xx.fbcdn.net/hprofile-xpt1/v/t1.0-1/p160x160/12313962_10153727734099655_1381325244763780252_n.jpg?oh=e52b7b0b7d9cfad7639e2adac5a19737&oe=57038F91" class="userAvatar"/><br>
 	<h1 class="username">Dakota</h1>
-	<h2 class="userJoined">Joined: <span>1/1/2015</span></h4>
-    <h2 class="userLocation">Location: <span>Spokane, WA</span></h2>
-    <h2 class="userAccountType">Account Type: <span>Admin</span></h2>
-    <h3 class="userHeadline">Founder and CEO of DeViine LLC</h3> 
-    <p class="userDescription">Proud Cannaisseur, Entrepreneur, Graphic Designer, Student and Golfer. Proud Cannaisseur, Entrepreneur, Graphic Designer, Student and Golfer. Proud Cannaisseur, Entrepreneur, Graphic Designer, Student and Golfer. Proud Cannaisseur, Entrepreneur, Graphic Designer, Student and Golfer.</p>
+	<p class="userBio">Welcome! I am the Founder &amp; CEO of Stash. I’m an Entrepreneur, Graphic Designer and an EWU Senior, but above all else, I am a proud cannaisseur! I love all things cannabis.</p><br>
+	<a href="" class="buddyBtn"><i class="material-icons">person_add</i></a>
+	<ul class="rhastaBars">
+		<li class="rhastaGreen col-lg-4 col-md-4 col-sm-4 col-xs-4"></li>
+		<li class="rhastaYellow col-lg-4 col-md-4 col-sm-4 col-xs-4"></li>
+		<li class="rhastaRed col-lg-4 col-md-4 col-sm-4 col-xs-4"></li>
+	</ul>
   </div>
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 userInfoRight pull-right">
+  <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 userOverview pull-right">
+  	<h3>OVERVIEW</h3>
   	<ul>
-  		<li ui-sref="root.userBuddies({ userId: user.$id })" class="col-lg-4 col-md-4 col-sm-4 col-xs-2"><img src="img/icons/buddyIcon.png"/>23<br>Buddies</li>
-  		<li class="col-lg-4 col-md-4 col-sm-4 col-xs-2"><img src="img/icons/budCoinIcon.png"/>7<br>Bud Coins</li>
-  		<li class="col-lg-4 col-md-4 col-sm-4 col-xs-2"><img src="img/icons/settingsIcon.png"/>Account<br>Settings</li>
+  		<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="img/icons/adminAccountIcon.png"/>ACCOUNT TYPE <br><span>ADMIN</span></li>
+  		<li ui-sref="root.userBuddies({ userId: user.$id })" class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="img/icons/addBuddyIcon.png" class="overviewBtn"/>BUDDIES <br><span>23</span></li>
+  		<li ui-sref="root.userReviews({ userId: user.$id })" class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="img/icons/writeReviewIcon.png" class="overviewBtn"/>REVIEWS <br><span>48</span></li>
+   		<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="img/icons/stashCheckIcon.png" class="overviewBtn"/>STASH <br><span>34</span></li>
   	</ul>
   </div>
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 achievements">
-	  <h3>ACHIEVEMENTS</h3>
-	  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 progressWrap">
-	  	<div class="progressBackground"></div>
-	  	<div class="progressBar"></div>
-	  	<h4>75% Completed</h4>
-	  </div>
-	  <ul class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/buddyIcon.png"/></li>
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/budCoinIcon.png"/></li>
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/settingsIcon.png"/></li>
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/buddyIcon.png"/></li>
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/budCoinIcon.png"/></li>
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/settingsIcon.png"/></li>
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/buddyIcon.png"/></li>
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/budCoinIcon.png"/></li>
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/settingsIcon.png"/></li>
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/buddyIcon.png"/></li>
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/budCoinIcon.png"/></li>
-	  	<li class="col-lg-1 col-md-1 col-sm-1 col-xs-2"><img src="img/icons/settingsIcon.png"/></li>
-	  </ul>
-  </div>
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-  	<h3>FAVORITES</h3>
-  	<tabset class="userFavorites">
-		<tab heading="strains" style="background-image: url('../testing/img/icons/strainsIcon.png');">
-			<ul class="dvCardList">
-				<div><li ng-repeat="strain in strains" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ strain.disabled }}">
-					<dv-card item-type="strain" item-id="{{ strain.$id }}"></dv-card>
-				</li></div>
-			</ul>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="userStash">
+  	<h3>STASH</h3>
+  	<tabset class="products">
+		<tab heading="Strains (8)">
+			<img id="staticExample" src="img/UserStash_PageCards.jpg"/>
 		</tab>
-		<tab heading="concentrates" style="background-image: url('../testing/img/icons/concentratesIcon.png');">
+		<tab heading="Concentrates (2)">
 			<ul class="dvCardList">
 				<div><li ng-repeat="concentrate in concentrates" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ concentrate.disabled }}">
 					<dv-card item-type="concentrate" item-id="{{ concentrate.$id }}"></dv-card>
 				</li></div>
 			</ul>
 		</tab>
-		<tab heading="edibles" style="background-image: url('../testing/img/icons/ediblesIcon.png');">
+		<tab heading="Edibles (0)">
 			<ul class="dvCardList">
 				<div><li ng-repeat="edible in edibles" class="col-lg-2 col-md-3 col-sm-3 col-xs-8 {{ edible.disabled }}">
 					<dv-card item-type="edible" item-id="{{ edible.$id }}"></dv-card>

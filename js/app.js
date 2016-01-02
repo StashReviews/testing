@@ -86,7 +86,12 @@ angular.module('Stash', ['Stash.config', 'Stash.services', 'Stash.controllers', 
       .state('root.userBuddies', {
         url: '/users/:userId/buddies',
         templateUrl: 'pages/users/userBuddies.html',
-        controller: 'userBuddyCtrl'
+        controller: 'userBuddiesCtrl'
+      })
+      .state('root.userReviews', {
+        url: '/users/:userId/reviews',
+        templateUrl: 'pages/users/userReviews.html',
+        controller: 'userReviewsCtrl'
       })
       // business pages
       .state('root.businesses', {

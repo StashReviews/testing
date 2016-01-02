@@ -2,34 +2,62 @@
   /*----style.scss.html start----*/
   body {
     top: 70px;
-    width: 99%; }
+    width: 100%; }
+
+  h3 {
+    background: #2c3034;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    border: none;
+    width: 100%;
+    float: left; }
+
+  .noGutter {
+    padding-left: 0;
+    padding-right: 0; }
+
+  .noGutterRight {
+    padding-right: 0; }
+
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0; }
 
   /*----style.scss.html end----*/
   /*----userProfile.html start----*/
   .userInfoLeft {
-    margin: 0 auto;
+    margin: -15px auto 0 auto;
+    padding-bottom: 10px;
     position: relative;
     width: 100%; }
     .userInfoLeft .userAvatar {
       width: 20%;
-      margin: -70px 40% 0 40%; }
+      margin: 0px 40% 0 40%; }
+    .userInfoLeft .userBio {
+      padding: 0 20px; }
     .userInfoLeft .buddyBtn {
       width: 20%;
       margin: 10px 40% 0 40%;
       line-height: 30px; }
 
-  .userInfoMiddle .username {
-    color: #2c3034; }
+  .userOverview {
+    padding-right: 0; }
+    .userOverview ul li {
+      font-size: 10px;
+      padding: 5px 12px; }
+      .userOverview ul li span {
+        font-size: 11px; }
 
-  .achievements .progressWrap {
-    margin-top: 10%; }
-
-  .userFavorites ul li a {
-    padding-top: 68%; }
+  #userStash {
+    padding-right: 0; }
 
   /*----userProfile.html end----*/
   /*----home.html start----*/
   #indexSummary .howItWorks {
+    margin-left: 15px;
     padding: 20px 5%;
     height: 100%; }
     #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
@@ -44,7 +72,8 @@
       font-size: 18px;
       margin: 0;
       padding: 3% 0 0 0;
-      text-align: left; }
+      text-align: left;
+      width: 50%; }
     #indexSummary .howItWorks p {
       padding: 0;
       margin: 0;
@@ -95,6 +124,10 @@
   .featured-concentrate-true,
   .featured-strain-true {
     left: -4%; }
+
+  .dvCardList {
+    margin-left: 5%;
+    margin-right: 5%; }
 
   /*----cards.html end----*/
   /*----ratings.html start----*/

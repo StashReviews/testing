@@ -570,33 +570,34 @@
   }
 }*/
 .userInfoLeft {
-  /*margin-top: -75px;*/
+  background: $dvGray;
+  padding: 30px;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  color: white;
+  font-family: $dvTextFont;
   .userAvatar {
     width: 100%;
+    max-width: 100px;
     border-radius: 50%;
-    border: 3px solid white;
-    margin: 0 15px;
-    float: left;
+    margin: 0 auto;
+  }
+  .username {
+    font-weight: 300;
+    font-size: 22px;
+    text-transform: none;
+  }
+  .userBio {
+    font-weight: 300;
+    font-size: 12;
+    line-height: 18px;
   }
   .buddyBtn {
-    float: left;
-    clear: left;
-    background-color: transparent;
-    border: 2px solid $dvGreen;
-    color: $dvGreen;
-    font-family: $dvTextFont;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 35px;
+    color: white;
     text-align: center;
-    width: 95%;
-    height: 40px;
-    margin: 10px 20px 0 20px;
-    padding: .5% 0;
     box-shadow: none;
-    &:hover {
-      color: white;
-      background: $dvGreen;
+    i {
+      font-size: 26px;
     }
     &:active,
     &:focus,
@@ -605,230 +606,59 @@
     }
   }
 }
-.userInfoMiddle {
- /* margin-top: -25px;*/
-  h1 {
-    font-family: $dvHeaderFont;
-    font-size: 40px;
-    /*color: white;*/
-    color: $dvGray;
-    border: none;
-    padding: 0;
-    margin: 0;
-    /*margin: -7px 0 0 0;*/
-  } 
-  h2 {
-    font-family: $dvTextFont;
-    font-size: 12px;
-    line-height: 16px;
-    color: $dvGray50;
-    letter-spacing: 1px;
-    padding: 0;
-    margin: 0;
-    span {
-      color: $dvGray;
-    }
-  }
-  h3 {
-    font-family: $dvTextFont;
-    font-weight: lighter;
-    font-size: 16px;
-    line-height: 18px;
-    text-align: left;
-    text-transform: none;
-    color: $dvGray;
-    border: none;
-    border-top: 1px solid $dvGray5;
-    padding: 5px 0 0 0;
-    margin: 5px 0 0 0;
-  }
-  p {
-    font-family: $dvTextFont;
-    font-size: 12px;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    color: $dvGray50;
-  }
-}
-.userInfoRight {
+.userOverview {
   ul {
-    margin: 15px 0;
+    margin: 30px 0 15px 0;
     li {
       display: inline;
       font-family: $dvTextFont;
-      font-size: 10px;
-      padding: 0;
+      color: $dvGray50;
       text-align: center;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+      padding: 10px 0;
+      margin-right: 0;
+      border-right: 1px solid $dvGray5;
+      &:last-child {
+        border-right: none;
+      }
+      span {
+        font-size: 16px;
+        color: $dvGray;
+      }
       img {
-        width: 80%;
-        margin: 0 10% 5px 10%;
+        width: 60%;
+        margin: 0 10% 10px 10%;
         background: $dvGray20;
-        border-radius: 50%;
+        border-radius: 100px;
         position: relative;
         clear: right;
+      }
+      .overviewBtn {
         cursor: pointer;
       }
       &:nth-child(1) {
         img {
-          border: 2px solid $dvGreen;
-          &:hover {
-            background: $dvGreen;
-          }
+          background: $dvGray;
         }
       }
       &:nth-child(2) {
         img {
-          border: 2px solid $dvYellow;
-          &:hover {
-            background: $dvYellow;
-          }
+          background: $dvRed;
         }
       }
       &:nth-child(3) {
         img {
-          border: 2px solid $dvRed;
-          &:hover {
-            background: $dvRed;
-          }
+          background: $dvYellow;
         }
       }
-    }
-  }
-}
-.achievements {
-  .progressWrap {
-    margin-top: 20px;
-    .progressBackground {
-      border: 2px solid $dvGray20;
-      width: 100%;
-      height: 30px;
-    }
-    .progressBar {
-      background: $dvGreen;
-      width: 75%;
-      height: 27px;
-      margin: -28px 0 0 2px;
-    }
-    h4 {
-      font-family: $dvTextFont;
-      font-size: 12px;
-      color: $dvGray;
-      text-align: center;
-    }
-  }
-  ul {
-    margin: 15px 0;
-    li {
-      display: inline;
-      font-family: $dvTextFont;
-      font-size: 10px;
-      padding: 0;
-      text-align: center;
-      img {
-        width: 80%;
-        margin: 10px 10%;
-        background: $dvGray20;
-        border-radius: 50%;
-        border: 2px solid $dvGray20;
-        position: relative;
-        clear: right;
-      }
-    }
-  }
-}
-.userStats {
-  padding: 0;
-  li {
-    display: inline;
-    width: 15%;
-    margin-right: 10px;
-    float: left;
-    img {
-      width: 100%;
-      border-radius: 50%;
-      padding: 2px;
-      background: $dvGray20;
-    }
-  }
-  li.active:nth-child(1) {
-    img {
-      background: $dvGreen;
-    }
-  }
-  li.active:nth-child(2) {
-    img {
-      background: $dvYellow;
-    }
-  }
-  li.active:nth-child(3) {
-    img {
-      background: $dvRed;
-    }
-  }
-}
-
-/* User Favorites */
-.userFavorites {
-  ul {
-    height: 100%;
-    div {
-      border-bottom: 1px solid $dvGray5;
-    }
-    li {
-      background: $dvGray20;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 50%;
-      border: 3px solid;
-      width: 150px;
-      height: 150px;
-      margin: 2.5%;
-      position: relative;
-      a {
-        background-size: 100%;
-        background-repeat: no-repeat;
-        color: transparent;
-        padding-top: 80%;
-        border: none;
-        text-align: center;
-        &:active {
-          color: $dvGray;
-        }
-        &:hover {
-          background: none;
-          border: none;
+      &:nth-child(4) {
+        img {
+          background: $dvGreen;
         }
       }
-    }
-  }
-  li.active>a,
-  li.active>a:hover,
-  li.active>a:focus,
-  li.active>a:active {
-    background: none;
-    border: none;
-  }
-  li:nth-child(1) {
-    border-color: $dvGreen;
-    &:hover,
-    &.active {
-      background-color: $dvGreen;
-    }
-  }
-  li:nth-child(2) {
-    border-color: $dvYellow;
-    &:hover,
-    &.active {
-      background-color: $dvYellow;
-    }
-  }
-  li:nth-child(3) {
-    border-color: $dvRed;
-    &:hover,
-    &.active {
-      background-color: $dvRed;
     }
   }
 }
@@ -1072,7 +902,6 @@
         padding: 10px 0;
         margin-right: 0;
       }
-
       &:first-child.active {
         a {
           color: $dvGreen;

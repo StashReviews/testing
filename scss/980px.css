@@ -69,8 +69,10 @@
 
   /*----page.html end----*/
   /*----userProfile.html start----*/
-  .userInfoLeft .buddyBtn {
-    font-size: 11px; }
+  .userInfoLeft {
+    margin: 30px 20% 0 20%;
+    position: relative;
+    width: 60%; }
 
   /*----userProfile.html end----*/
   /*----home start----*/
@@ -118,5 +120,3 @@
     top: -60px; }
 
   /*----rating.html start----*/ }
-
-/*# sourceMappingURL=980px.css.map */

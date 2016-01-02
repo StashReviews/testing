@@ -88,8 +88,11 @@ h6 {
 
 h3 {
   border-bottom: 1px solid $dvGray5;
+  padding-bottom: 10px;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 h4 {
   font-size: 16px;
@@ -121,10 +124,8 @@ ul {
   text-transform: uppercase;
   font-size: 24px;
 }
-
-.viewOnMap {
-  text-transform: uppercase;
-  font-weight: bold;
+.hidePageTitle {
+  display: none;
 }
 
 form {
@@ -175,6 +176,31 @@ form {
       color: white;
       cursor: pointer;
     }
+  }
+}
+
+.rhastaBars {
+  margin: 0;
+  padding: 0;
+  float: left;
+  position: relative;
+  height: 10px;
+  li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    height: 10px;
+    float: left;
+    position: relative;
+  }
+  .rhastaGreen {
+    background: $dvGreen;
+  } 
+  .rhastaYellow {
+    background: $dvYellow;
+  }
+  .rhastaRed {
+    background: $dvRed;
   }
 }
 

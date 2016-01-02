@@ -26,19 +26,19 @@ angular.module('Stash.controllers', [])
     // @todo Note that $scope.currentAvatar will always be one step behind the digest cycle if we pass $scope.currentUser to it.
     $scope.currentAvatar = usersService.getAvatarUrl(currentUser);
 
-    $scope.showLoginModal = function() {
-      var loginModalInstance = $modal.open({
-        size: 'md',
-        templateUrl: 'partials/modals/' + ( $scope.currentUser ? 'logout' : 'login' ) + '.html',
-        controller: 'loginModalCtrl'
-      });
+    // $scope.showLoginModal = function() {
+    //   var loginModalInstance = $modal.open({
+    //     size: 'md',
+    //     templateUrl: 'partials/modals/' + ( $scope.currentUser ? 'logout' : 'login' ) + '.html',
+    //     controller: 'loginModalCtrl'
+    //   });
 
-      loginModalInstance.result
-        .then(function(currentUser) {
-          $scope.currentUser = currentUser;
-          usersService.setCurrentUser(currentUser);
-        });
-    };
+    //   loginModalInstance.result
+    //     .then(function(currentUser) {
+    //       $scope.currentUser = currentUser;
+    //       usersService.setCurrentUser(currentUser);
+    //     });
+    // };
 
     $scope.logout = function() {
       usersService.logout();
@@ -51,39 +51,39 @@ angular.module('Stash.controllers', [])
     };
 
   }])
-  .controller('loginModalCtrl', ['$scope', '$state', '$modalInstance', 'usersService', function($scope, $state, $modalInstance, usersService) {
-    $scope.credentials = {};
+  // .controller('loginModalCtrl', ['$scope', '$state', '$modalInstance', 'usersService', function($scope, $state, $modalInstance, usersService) {
+  //   $scope.credentials = {};
 
-    $scope.login = function(service, credentials) {
-      usersService.login(service, credentials)
-        .then(function(currentUser) {
-          location.reload();
-          $modalInstance.close(currentUser);
-          $state.go('root.home');
-        }, function(error) {
-          console.log(error);
-        });
-    };
+  //   $scope.login = function(service, credentials) {
+  //     usersService.login(service, credentials)
+  //       .then(function(currentUser) {
+  //         location.reload();
+  //         $modalInstance.close(currentUser);
+  //         $state.go('root.home');
+  //       }, function(error) {
+  //         console.log(error);
+  //       });
+  //   };
 
-    $scope.logout = function() {
-      usersService.logout();
+  //   $scope.logout = function() {
+  //     usersService.logout();
 
-      $modalInstance.close(null);
+  //     $modalInstance.close(null);
 
-      $state.go('root.home');
-    };
+  //     $state.go('root.home');
+  //   };
 
-    $scope.close = function() {
-      $modalInstance.dismiss();
-    };
-  }])
-  .controller('ratingChangeModalCtrl', ['$scope', '$state', '$modalInstance', 'usersService', function($scope, $state, $modalInstance, usersService) {
+  //   $scope.close = function() {
+  //     $modalInstance.dismiss();
+  //   };
+  // }])
+  // .controller('ratingChangeModalCtrl', ['$scope', '$state', '$modalInstance', 'usersService', function($scope, $state, $modalInstance, usersService) {
 
 
-    $scope.close = function() {
-      $modalInstance.dismiss();
-    };
-  }])
+  //   $scope.close = function() {
+  //     $modalInstance.dismiss();
+  //   };
+  // }])
   .controller('homeCtrl', ['$scope', '$q', 'itemsService', 'ratingsService', function($scope, $q, itemsService, ratingsService) {
     // $scope.featuredDispensaries = itemsService.getFeatured('dispensaries');
 
@@ -169,30 +169,6 @@ angular.module('Stash.controllers', [])
 
     $scope.credentials = {};
 
-    // $scope.login = function(service, credentials) {
-    //   usersService.login(service, credentials)
-    //     .then(function(currentUser) {
-    //       $state.go('root.home');
-    //       location.reload();
-    //     }, function(error) {
-    //           if (error) {
-    //             switch (error.code) {
-    //               case "INVALID_USER":
-    //                 console.log("The specified user account does not exist.");
-    //                 break;
-    //               case "INVALID_PASSWORD":
-    //                 console.log("The specified user account password is incorrect.");
-    //                 break;
-    //               default:
-    //             }
-    //           } else {
-    //             console.log("Else Happened.");
-    //           }
-    //     });
-    // };
-
-    // Allows Usernames to Be Reserved During Development
-    // When "Check Availablity" is clicked, run this
     $('#submitUser').on( "click", function(error, userInfo, userData) {
 
       // Get Username and Email From Inputs
@@ -323,7 +299,10 @@ angular.module('Stash.controllers', [])
     $scope.userDetails = usersService.getProfile('users', $stateParams.userId);
 
   }])
-  .controller('userBuddyCtrl', ['$scope', 'usersService', function($scope, usersService) {
+  .controller('userBuddiesCtrl', ['$scope', 'usersService', function($scope, usersService) {
+
+  }])
+  .controller('userReviewsCtrl', ['$scope', 'usersService', function($scope, usersService) {
 
   }])
   .controller('businessProfileCtrl', ['$scope', '$stateParams', 'businessesService', function($scope, $stateParams, businessesService) {

@@ -583,299 +583,137 @@
 }*/
 /* line 572, _items.scss */
 .userInfoLeft {
-  /*margin-top: -75px;*/ }
-  /* line 574, _items.scss */
+  background: #2c3034;
+  padding: 30px;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  color: white;
+  font-family: "Open Sans", "Helvetica", sans-serif; }
+  /* line 579, _items.scss */
   .userInfoLeft .userAvatar {
     width: 100%;
+    max-width: 100px;
     border-radius: 50%;
-    border: 3px solid white;
-    margin: 0 15px;
-    float: left; }
-  /* line 581, _items.scss */
+    margin: 0 auto; }
+  /* line 585, _items.scss */
+  .userInfoLeft .username {
+    font-weight: 300;
+    font-size: 22px;
+    text-transform: none; }
+  /* line 590, _items.scss */
+  .userInfoLeft .userBio {
+    font-weight: 300;
+    font-size: 12;
+    line-height: 18px; }
+  /* line 595, _items.scss */
   .userInfoLeft .buddyBtn {
-    float: left;
-    clear: left;
-    background-color: transparent;
-    border: 2px solid #3dd861;
-    color: #3dd861;
-    font-family: "Open Sans", "Helvetica", sans-serif;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 35px;
+    color: white;
     text-align: center;
-    width: 95%;
-    height: 40px;
-    margin: 10px 20px 0 20px;
-    padding: .5% 0;
     box-shadow: none; }
-    /* line 597, _items.scss */
-    .userInfoLeft .buddyBtn:hover {
-      color: white;
-      background: #3dd861; }
-    /* line 603, _items.scss */
+    /* line 599, _items.scss */
+    .userInfoLeft .buddyBtn i {
+      font-size: 26px; }
+    /* line 604, _items.scss */
     .userInfoLeft .buddyBtn:active, .userInfoLeft .buddyBtn:focus, .userInfoLeft .buddyBtn:visited {
       text-decoration: none; }
 
-/* line 608, _items.scss */
-.userInfoMiddle {
-  /* margin-top: -25px;*/ }
-  /* line 610, _items.scss */
-  .userInfoMiddle h1 {
-    font-family: "Bebas Neue", "Khand", sans-serif;
-    font-size: 40px;
-    /*color: white;*/
-    color: #2c3034;
-    border: none;
-    padding: 0;
-    margin: 0;
-    /*margin: -7px 0 0 0;*/ }
-  /* line 620, _items.scss */
-  .userInfoMiddle h2 {
+/* line 610, _items.scss */
+.userOverview ul {
+  margin: 30px 0 15px 0; }
+  /* line 612, _items.scss */
+  .userOverview ul li {
+    display: inline;
     font-family: "Open Sans", "Helvetica", sans-serif;
-    font-size: 12px;
-    line-height: 16px;
     color: rgba(44, 48, 52, 0.5);
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 0;
-    margin: 0; }
-    /* line 628, _items.scss */
-    .userInfoMiddle h2 span {
+    font-size: 13px;
+    padding: 10px 0;
+    margin-right: 0;
+    border-right: 1px solid rgba(44, 48, 52, 0.05); }
+    /* line 624, _items.scss */
+    .userOverview ul li:last-child {
+      border-right: none; }
+    /* line 627, _items.scss */
+    .userOverview ul li span {
+      font-size: 16px;
       color: #2c3034; }
-  /* line 632, _items.scss */
-  .userInfoMiddle h3 {
-    font-family: "Open Sans", "Helvetica", sans-serif;
-    font-weight: lighter;
-    font-size: 16px;
-    line-height: 18px;
-    text-align: left;
-    text-transform: none;
-    color: #2c3034;
-    border: none;
-    border-top: 1px solid rgba(44, 48, 52, 0.05);
-    padding: 5px 0 0 0;
-    margin: 5px 0 0 0; }
-  /* line 645, _items.scss */
-  .userInfoMiddle p {
-    font-family: "Open Sans", "Helvetica", sans-serif;
-    font-size: 12px;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    color: rgba(44, 48, 52, 0.5); }
-
-/* line 655, _items.scss */
-.userInfoRight ul {
-  margin: 15px 0; }
-  /* line 657, _items.scss */
-  .userInfoRight ul li {
-    display: inline;
-    font-family: "Open Sans", "Helvetica", sans-serif;
-    font-size: 10px;
-    padding: 0;
-    text-align: center; }
-    /* line 663, _items.scss */
-    .userInfoRight ul li img {
-      width: 80%;
-      margin: 0 10% 5px 10%;
+    /* line 631, _items.scss */
+    .userOverview ul li img {
+      width: 60%;
+      margin: 0 10% 10px 10%;
       background: rgba(44, 48, 52, 0.2);
-      border-radius: 50%;
-      position: relative;
-      clear: right;
-      cursor: pointer; }
-    /* line 673, _items.scss */
-    .userInfoRight ul li:nth-child(1) img {
-      border: 2px solid #3dd861; }
-      /* line 675, _items.scss */
-      .userInfoRight ul li:nth-child(1) img:hover {
-        background: #3dd861; }
-    /* line 681, _items.scss */
-    .userInfoRight ul li:nth-child(2) img {
-      border: 2px solid #fcd31c; }
-      /* line 683, _items.scss */
-      .userInfoRight ul li:nth-child(2) img:hover {
-        background: #fcd31c; }
-    /* line 689, _items.scss */
-    .userInfoRight ul li:nth-child(3) img {
-      border: 2px solid #f7253e; }
-      /* line 691, _items.scss */
-      .userInfoRight ul li:nth-child(3) img:hover {
-        background: #f7253e; }
-
-/* line 700, _items.scss */
-.achievements .progressWrap {
-  margin-top: 20px; }
-  /* line 702, _items.scss */
-  .achievements .progressWrap .progressBackground {
-    border: 2px solid rgba(44, 48, 52, 0.2);
-    width: 100%;
-    height: 30px; }
-  /* line 707, _items.scss */
-  .achievements .progressWrap .progressBar {
-    background: #3dd861;
-    width: 75%;
-    height: 27px;
-    margin: -28px 0 0 2px; }
-  /* line 713, _items.scss */
-  .achievements .progressWrap h4 {
-    font-family: "Open Sans", "Helvetica", sans-serif;
-    font-size: 12px;
-    color: #2c3034;
-    text-align: center; }
-/* line 720, _items.scss */
-.achievements ul {
-  margin: 15px 0; }
-  /* line 722, _items.scss */
-  .achievements ul li {
-    display: inline;
-    font-family: "Open Sans", "Helvetica", sans-serif;
-    font-size: 10px;
-    padding: 0;
-    text-align: center; }
-    /* line 728, _items.scss */
-    .achievements ul li img {
-      width: 80%;
-      margin: 10px 10%;
-      background: rgba(44, 48, 52, 0.2);
-      border-radius: 50%;
-      border: 2px solid rgba(44, 48, 52, 0.2);
+      border-radius: 100px;
       position: relative;
       clear: right; }
-
-/* line 740, _items.scss */
-.userStats {
-  padding: 0; }
-  /* line 742, _items.scss */
-  .userStats li {
-    display: inline;
-    width: 15%;
-    margin-right: 10px;
-    float: left; }
-    /* line 747, _items.scss */
-    .userStats li img {
-      width: 100%;
-      border-radius: 50%;
-      padding: 2px;
-      background: rgba(44, 48, 52, 0.2); }
-  /* line 755, _items.scss */
-  .userStats li.active:nth-child(1) img {
-    background: #3dd861; }
-  /* line 760, _items.scss */
-  .userStats li.active:nth-child(2) img {
-    background: #fcd31c; }
-  /* line 765, _items.scss */
-  .userStats li.active:nth-child(3) img {
-    background: #f7253e; }
-
-/* User Favorites */
-/* line 773, _items.scss */
-.userFavorites ul {
-  height: 100%; }
-  /* line 775, _items.scss */
-  .userFavorites ul div {
-    border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 778, _items.scss */
-  .userFavorites ul li {
-    background: rgba(44, 48, 52, 0.2);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    border: 3px solid;
-    width: 150px;
-    height: 150px;
-    margin: 2.5%;
-    position: relative; }
-    /* line 789, _items.scss */
-    .userFavorites ul li a {
-      background-size: 100%;
-      background-repeat: no-repeat;
-      color: transparent;
-      padding-top: 80%;
-      border: none;
-      text-align: center; }
-      /* line 796, _items.scss */
-      .userFavorites ul li a:active {
-        color: #2c3034; }
-      /* line 799, _items.scss */
-      .userFavorites ul li a:hover {
-        background: none;
-        border: none; }
-/* line 809, _items.scss */
-.userFavorites li.active > a,
-.userFavorites li.active > a:hover,
-.userFavorites li.active > a:focus,
-.userFavorites li.active > a:active {
-  background: none;
-  border: none; }
-/* line 813, _items.scss */
-.userFavorites li:nth-child(1) {
-  border-color: #3dd861; }
-  /* line 816, _items.scss */
-  .userFavorites li:nth-child(1):hover, .userFavorites li:nth-child(1).active {
-    background-color: #3dd861; }
-/* line 820, _items.scss */
-.userFavorites li:nth-child(2) {
-  border-color: #fcd31c; }
-  /* line 823, _items.scss */
-  .userFavorites li:nth-child(2):hover, .userFavorites li:nth-child(2).active {
-    background-color: #fcd31c; }
-/* line 827, _items.scss */
-.userFavorites li:nth-child(3) {
-  border-color: #f7253e; }
-  /* line 830, _items.scss */
-  .userFavorites li:nth-child(3):hover, .userFavorites li:nth-child(3).active {
-    background-color: #f7253e; }
+    /* line 639, _items.scss */
+    .userOverview ul li .overviewBtn {
+      cursor: pointer; }
+    /* line 643, _items.scss */
+    .userOverview ul li:nth-child(1) img {
+      background: #2c3034; }
+    /* line 648, _items.scss */
+    .userOverview ul li:nth-child(2) img {
+      background: #f7253e; }
+    /* line 653, _items.scss */
+    .userOverview ul li:nth-child(3) img {
+      background: #fcd31c; }
+    /* line 658, _items.scss */
+    .userOverview ul li:nth-child(4) img {
+      background: #3dd861; }
 
 /* Business Dashboard */
-/* line 837, _items.scss */
+/* line 667, _items.scss */
 .updateBusinessForm {
   float: left;
   color: #2c3034;
   font-family: open sans, 'open-sans', serif; }
-  /* line 841, _items.scss */
+  /* line 671, _items.scss */
   .updateBusinessForm fieldset {
     margin: 0;
     border: none; }
-  /* line 846, _items.scss */
+  /* line 676, _items.scss */
   .updateBusinessForm input,
   .updateBusinessForm textarea {
     margin: 0px 0 25px 0 !important;
     float: left;
     border: none;
     border-bottom: 1px solid rgba(44, 48, 52, 0.2); }
-    /* line 853, _items.scss */
+    /* line 683, _items.scss */
     .updateBusinessForm input:active, .updateBusinessForm input:focus, .updateBusinessForm input:hover,
     .updateBusinessForm textarea:active,
     .updateBusinessForm textarea:focus,
     .updateBusinessForm textarea:hover {
       border-color: #2c3034; }
-  /* line 857, _items.scss */
+  /* line 687, _items.scss */
   .updateBusinessForm .username {
     font-size: 24px;
     font-weight: 300; }
-  /* line 861, _items.scss */
+  /* line 691, _items.scss */
   .updateBusinessForm .bio {
     font-size: 14px;
     line-height: 22px;
     height: 100%;
     margin: 0; }
-  /* line 870, _items.scss */
+  /* line 700, _items.scss */
   .updateBusinessForm .location,
   .updateBusinessForm .phone,
   .updateBusinessForm .email,
   .updateBusinessForm .website {
     font-size: 16px; }
-  /* line 873, _items.scss */
+  /* line 703, _items.scss */
   .updateBusinessForm .imageWrap {
     position: relative; }
-    /* line 875, _items.scss */
+    /* line 705, _items.scss */
     .updateBusinessForm .imageWrap img {
       margin-bottom: 30px; }
-    /* line 878, _items.scss */
+    /* line 708, _items.scss */
     .updateBusinessForm .imageWrap .image {
       margin-top: 10px;
       width: 100%; }
-      /* line 881, _items.scss */
+      /* line 711, _items.scss */
       .updateBusinessForm .imageWrap .image::before {
         content: "X";
         background: red;
@@ -886,7 +724,7 @@
         bottom: 0;
         right: 0;
         color: white; }
-    /* line 893, _items.scss */
+    /* line 723, _items.scss */
     .updateBusinessForm .imageWrap .deleteImage {
       cursor: pointer;
       padding: 5px 2px 0 5px;
@@ -896,31 +734,31 @@
       right: 15px;
       color: white;
       background: rgba(44, 48, 52, 0.2); }
-      /* line 902, _items.scss */
+      /* line 732, _items.scss */
       .updateBusinessForm .imageWrap .deleteImage:hover {
         background: #f7253e; }
-  /* line 908, _items.scss */
+  /* line 738, _items.scss */
   .updateBusinessForm .uploadImage,
   .updateBusinessForm .uploadLogo {
     display: none; }
-  /* line 912, _items.scss */
+  /* line 742, _items.scss */
   .updateBusinessForm .uploadImageBtn,
   .updateBusinessForm .uploadLogoBtn {
     text-align: center; }
-    /* line 915, _items.scss */
+    /* line 745, _items.scss */
     .updateBusinessForm .uploadImageBtn span i,
     .updateBusinessForm .uploadLogoBtn span i {
       font-size: 52px;
       line-height: 25px;
       float: none; }
-    /* line 921, _items.scss */
+    /* line 751, _items.scss */
     .updateBusinessForm .uploadImageBtn:hover,
     .updateBusinessForm .uploadLogoBtn:hover {
       color: #2c3034;
       cursor: pointer; }
 
 /* Business Profile */
-/* line 930, _items.scss */
+/* line 760, _items.scss */
 .businessInfo .businessLogo {
   float: left;
   clear: both;
@@ -928,7 +766,7 @@
   max-width: 150px;
   border: 1px solid rgba(44, 48, 52, 0.05);
   border-radius: 5px; }
-/* line 938, _items.scss */
+/* line 768, _items.scss */
 .businessInfo .businessName {
   float: left;
   clear: both;
@@ -938,7 +776,7 @@
   text-transform: none;
   font-weight: 300;
   margin: 15px 0 0 0; }
-/* line 948, _items.scss */
+/* line 778, _items.scss */
 .businessInfo .businessLocation {
   float: left;
   clear: both;
@@ -949,7 +787,7 @@
   font-weight: 600;
   text-transform: uppercase;
   margin: 5px 0 10px 0; }
-/* line 959, _items.scss */
+/* line 789, _items.scss */
 .businessInfo .businessBio {
   float: left;
   clear: both;
@@ -957,12 +795,12 @@
   font-size: 12px;
   line-height: 22px; }
 
-/* line 968, _items.scss */
+/* line 798, _items.scss */
 .businessContactInfo ul {
   margin: 0;
   padding: 0;
   border-top: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 972, _items.scss */
+  /* line 802, _items.scss */
   .businessContactInfo ul a {
     font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 12px;
@@ -970,7 +808,7 @@
     text-align: right;
     color: #2c3034;
     width: 100%; }
-    /* line 979, _items.scss */
+    /* line 809, _items.scss */
     .businessContactInfo ul a li {
       line-height: 25px;
       margin: 0;
@@ -980,14 +818,14 @@
       float: left;
       border-bottom: 1px solid rgba(44, 48, 52, 0.05);
       cursor: pointer; }
-      /* line 988, _items.scss */
+      /* line 818, _items.scss */
       .businessContactInfo ul a li i {
         float: left;
         color: rgba(44, 48, 52, 0.2); }
-      /* line 992, _items.scss */
+      /* line 822, _items.scss */
       .businessContactInfo ul a li:hover {
         background: rgba(44, 48, 52, 0.05); }
-      /* line 996, _items.scss */
+      /* line 826, _items.scss */
       .businessContactInfo ul a li label span {
         margin-top: -12px;
         padding: 0;
@@ -995,70 +833,70 @@
         left: 60px;
         pointer-events: none; }
 
-/* line 1008, _items.scss */
+/* line 838, _items.scss */
 .businessImageSlider {
   margin-bottom: 40px; }
 
-/* line 1011, _items.scss */
+/* line 841, _items.scss */
 .slick-slide {
   height: 220px; }
 
-/* line 1014, _items.scss */
+/* line 844, _items.scss */
 .slick-dots {
   bottom: -35px; }
-  /* line 1016, _items.scss */
+  /* line 846, _items.scss */
   .slick-dots li {
     background: rgba(44, 48, 52, 0.2);
     width: 5px;
     height: 5px;
     border-radius: 50%;
     color: transparent; }
-    /* line 1022, _items.scss */
+    /* line 852, _items.scss */
     .slick-dots li:hover {
       border: 1px solid #2c3034; }
-  /* line 1026, _items.scss */
+  /* line 856, _items.scss */
   .slick-dots .slick-active {
     background: #2c3034;
     border: 1px solid #2c3034; }
 
-/* line 1031, _items.scss */
+/* line 861, _items.scss */
 .slick-arrow {
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   z-index: 2; }
-  /* line 1037, _items.scss */
+  /* line 867, _items.scss */
   .slick-arrow:visited {
     border-color: rgba(44, 48, 52, 0.2); }
-  /* line 1041, _items.scss */
+  /* line 871, _items.scss */
   .slick-arrow:hover, .slick-arrow:focus {
     border-color: rgba(255, 255, 255, 0.5); }
 
-/* line 1045, _items.scss */
+/* line 875, _items.scss */
 .slick-prev {
   left: 5px;
   border-right: 10px solid rgba(44, 48, 52, 0.2); }
-  /* line 1048, _items.scss */
+  /* line 878, _items.scss */
   .slick-prev:before {
     content: ""; }
 
-/* line 1052, _items.scss */
+/* line 882, _items.scss */
 .slick-next {
   right: 5px;
   border-left: 10px solid rgba(44, 48, 52, 0.2); }
-  /* line 1055, _items.scss */
+  /* line 885, _items.scss */
   .slick-next:before {
     content: ""; }
 
-/* line 1059, _items.scss */
+/* line 889, _items.scss */
 .products {
   margin-top: 40px;
   font-family: "Open Sans", "Helvetica", sans-serif; }
-  /* line 1063, _items.scss */
+  /* line 893, _items.scss */
   .products .nav-tabs li {
     width: 33%; }
-    /* line 1065, _items.scss */
+    /* line 895, _items.scss */
     .products .nav-tabs li a {
       color: rgba(44, 48, 52, 0.5);
       text-align: center;
@@ -1068,36 +906,36 @@
       font-size: 13px;
       padding: 10px 0;
       margin-right: 0; }
-    /* line 1077, _items.scss */
+    /* line 906, _items.scss */
     .products .nav-tabs li:first-child.active a {
       color: #3dd861;
       border: none;
       border-bottom: 3px solid #3dd861; }
-    /* line 1084, _items.scss */
+    /* line 913, _items.scss */
     .products .nav-tabs li:nth-child(2).active a {
       color: #fcd31c;
       border: none;
       border-bottom: 3px solid #fcd31c; }
-    /* line 1091, _items.scss */
+    /* line 920, _items.scss */
     .products .nav-tabs li:nth-child(3).active a {
       color: #f7253e;
       border: none;
       border-bottom: 3px solid #f7253e; }
-  /* line 1100, _items.scss */
+  /* line 929, _items.scss */
   .products .tab-content #staticExample {
     width: 100%;
     margin-top: 15px; }
-  /* line 1104, _items.scss */
+  /* line 933, _items.scss */
   .products .tab-content .addListingBtn {
     text-align: center;
     margin-top: -21%;
     margin-left: 33%; }
-    /* line 1109, _items.scss */
+    /* line 938, _items.scss */
     .products .tab-content .addListingBtn span i {
       font-size: 52px;
       line-height: 25px;
       float: none; }
-    /* line 1115, _items.scss */
+    /* line 944, _items.scss */
     .products .tab-content .addListingBtn:hover {
       color: #2c3034;
       cursor: pointer; }
@@ -1341,6 +1179,7 @@
 /* line 245, layout/_navbar.scss */
 .upToTop {
   position: fixed;
+  z-index: 2;
   right: 2%;
   bottom: 0;
   -webkit-transition: all .5s ease;
@@ -1348,7 +1187,7 @@
   -ms-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease; }
-  /* line 254, layout/_navbar.scss */
+  /* line 255, layout/_navbar.scss */
   .upToTop:hover {
     bottom: 2%;
     -webkit-transition: all .3s ease;
@@ -1563,47 +1402,31 @@
 
   /*----style.scss.html end----*/
   /*----userProfile.html start----*/
-  /* line 10, 470px.scss */
-  .userInfoLeft .userAvatar {
-    width: 30%;
-    margin: -70px 35% 0 35%; }
-  /* line 14, 470px.scss */
-  .userInfoLeft .buddyBtn {
-    width: 30%;
-    margin: 10px 35% 0 35%;
-    line-height: 30px; }
-
-  /* line 20, 470px.scss */
-  .userInfoMiddle {
-    margin-top: 20px; }
-
-  /* line 24, 470px.scss */
-  .achievements .progressWrap {
-    margin-top: 0; }
-
-  /* line 31, 470px.scss */
-  .userFavorites ul li a {
-    padding-top: 55%; }
+  /* line 9, 470px.scss */
+  .userInfoLeft {
+    margin-top: -15px;
+    padding: 25px 10% 10px 10%; }
+    /* line 12, 470px.scss */
+    .userInfoLeft .userAvatar {
+      width: 30%;
+      margin: 0px 35% 0 35%; }
+    /* line 16, 470px.scss */
+    .userInfoLeft .buddyBtn {
+      width: 30%;
+      margin: 10px 35% 0 35%;
+      line-height: 30px; }
 
   /*----userProfile.html end----*/
   /*----home.html start----*/
-  /* line 39, 470px.scss */
-  .pageHeader {
-    display: none; }
-
-  /* line 42, 470px.scss */
-  .pageMobileHeader {
-    display: inherit; }
-
-  /* line 49, 470px.scss */
+  /* line 28, 470px.scss */
   #indexSummary .howItWorks .concentratesIcon,
   #indexSummary .howItWorks .ediblesIcon,
   #indexSummary .howItWorks .strainsIcon {
     width: 30%; }
-  /* line 52, 470px.scss */
+  /* line 31, 470px.scss */
   #indexSummary .howItWorks h3 {
     padding-top: 1%; }
-  /* line 55, 470px.scss */
+  /* line 34, 470px.scss */
   #indexSummary .howItWorks p {
     font-size: 9px;
     line-height: 12px;
@@ -1611,21 +1434,21 @@
 
   /*----home.html end----*/
   /*----footer.html start----*/
-  /* line 65, 470px.scss */
+  /* line 44, 470px.scss */
   #footer input[type='email'] {
     width: 60%;
     margin-left: 5%; }
-  /* line 69, 470px.scss */
+  /* line 48, 470px.scss */
   #footer .btnfooter {
     width: 30%;
     margin-right: 5%; }
-  /* line 73, 470px.scss */
+  /* line 52, 470px.scss */
   #footer .btnfooterlrg {
     margin-right: 0; }
 
   /*----footer.html end----*/
   /*----ratings.html start----*/
-  /* line 82, 470px.scss */
+  /* line 61, 470px.scss */
   .dispensaryCard .rating,
   .dealCard .rating,
   .strainCard .rating {
@@ -1633,7 +1456,7 @@
 
   /*----ratings.html end----*/
   /*----cards.html start----*/
-  /* line 90, 470px.scss */
+  /* line 69, 470px.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType {
     margin: 30% auto 0 auto; }
@@ -1643,7 +1466,7 @@
       width: 68%;
     }
   }*/
-  /* line 101, 470px.scss */
+  /* line 80, 470px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
@@ -1651,29 +1474,29 @@
 
   /*----cards.html end----*/
   /*----signin.html end----*/
-  /* line 106, 470px.scss */
+  /* line 85, 470px.scss */
   .close-modal {
     top: 5px;
     right: 10px; }
 
   /*----signin.html end----*/
   /*----footer start----*/
-  /* line 113, 470px.scss */
+  /* line 92, 470px.scss */
   #footer h4 {
     font-size: 14px; }
 
   /*----footer end----*/
   /*----modal start----*/
-  /* line 121, 470px.scss */
+  /* line 100, 470px.scss */
   .modal-content .modal-header .modalTitle {
     font-size: 50px; }
-  /* line 124, 470px.scss */
+  /* line 103, 470px.scss */
   .modal-content .modal-header .modalSubtitle {
     font-size: 20px; }
-  /* line 129, 470px.scss */
+  /* line 108, 470px.scss */
   .modal-content .modal-footer p {
     font-size: 12px; }
-    /* line 131, 470px.scss */
+    /* line 110, 470px.scss */
     .modal-content .modal-footer p span {
       color: white; }
 
@@ -1683,60 +1506,95 @@
   /* line 3, 767px.scss */
   body {
     top: 70px;
-    width: 99%; }
+    width: 100%; }
+
+  /* line 7, 767px.scss */
+  h3 {
+    background: #2c3034;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    border: none;
+    width: 100%;
+    float: left; }
+
+  /* line 18, 767px.scss */
+  .noGutter {
+    padding-left: 0;
+    padding-right: 0; }
+
+  /* line 22, 767px.scss */
+  .noGutterRight {
+    padding-right: 0; }
+
+  /* line 25, 767px.scss */
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0; }
 
   /*----style.scss.html end----*/
   /*----userProfile.html start----*/
-  /* line 9, 767px.scss */
+  /* line 31, 767px.scss */
   .userInfoLeft {
-    margin: 0 auto;
+    margin: -15px auto 0 auto;
+    padding-bottom: 10px;
     position: relative;
     width: 100%; }
-    /* line 13, 767px.scss */
+    /* line 36, 767px.scss */
     .userInfoLeft .userAvatar {
       width: 20%;
-      margin: -70px 40% 0 40%; }
-    /* line 17, 767px.scss */
+      margin: 0px 40% 0 40%; }
+    /* line 40, 767px.scss */
+    .userInfoLeft .userBio {
+      padding: 0 20px; }
+    /* line 43, 767px.scss */
     .userInfoLeft .buddyBtn {
       width: 20%;
       margin: 10px 40% 0 40%;
       line-height: 30px; }
 
-  /* line 24, 767px.scss */
-  .userInfoMiddle .username {
-    color: #2c3034; }
+  /* line 49, 767px.scss */
+  .userOverview {
+    padding-right: 0; }
+    /* line 52, 767px.scss */
+    .userOverview ul li {
+      font-size: 10px;
+      padding: 5px 12px; }
+      /* line 55, 767px.scss */
+      .userOverview ul li span {
+        font-size: 11px; }
 
-  /* line 29, 767px.scss */
-  .achievements .progressWrap {
-    margin-top: 10%; }
-
-  /* line 36, 767px.scss */
-  .userFavorites ul li a {
-    padding-top: 68%; }
+  /* line 61, 767px.scss */
+  #userStash {
+    padding-right: 0; }
 
   /*----userProfile.html end----*/
   /*----home.html start----*/
-  /* line 45, 767px.scss */
+  /* line 67, 767px.scss */
   #indexSummary .howItWorks {
+    margin-left: 15px;
     padding: 20px 5%;
     height: 100%; }
-    /* line 49, 767px.scss */
+    /* line 72, 767px.scss */
     #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
       border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-    /* line 54, 767px.scss */
+    /* line 77, 767px.scss */
     #indexSummary .howItWorks .concentratesIcon,
     #indexSummary .howItWorks .ediblesIcon,
     #indexSummary .howItWorks .strainsIcon {
       width: 22%;
       float: left;
       margin-right: 20px; }
-    /* line 59, 767px.scss */
+    /* line 82, 767px.scss */
     #indexSummary .howItWorks h3 {
       font-size: 18px;
       margin: 0;
       padding: 3% 0 0 0;
-      text-align: left; }
-    /* line 65, 767px.scss */
+      text-align: left;
+      width: 50%; }
+    /* line 89, 767px.scss */
     #indexSummary .howItWorks p {
       padding: 0;
       margin: 0;
@@ -1744,45 +1602,45 @@
       font-size: 10px;
       line-height: 14px;
       width: 62%; }
-    /* line 73, 767px.scss */
+    /* line 97, 767px.scss */
     #indexSummary .howItWorks .arrowRight {
       display: inline;
       margin-left: 20px; }
 
-  /* line 79, 767px.scss */
+  /* line 103, 767px.scss */
   .featuredBanner {
     margin-left: 25%; }
 
   /*----home.html end----*/
   /*----footer.html start----*/
-  /* line 84, 767px.scss */
+  /* line 108, 767px.scss */
   #footer {
     margin: 30px auto 0 auto;
     text-align: center; }
-    /* line 87, 767px.scss */
+    /* line 111, 767px.scss */
     #footer h4 {
       text-align: center; }
-    /* line 90, 767px.scss */
+    /* line 114, 767px.scss */
     #footer a {
       font-size: 10px;
       margin: 0 auto;
       text-align: center; }
-    /* line 95, 767px.scss */
+    /* line 119, 767px.scss */
     #footer p {
       font-size: 10px; }
-    /* line 98, 767px.scss */
+    /* line 122, 767px.scss */
     #footer input[type='email'] {
       width: 45%;
       margin-left: 15%; }
-    /* line 102, 767px.scss */
+    /* line 126, 767px.scss */
     #footer .btnfooter {
       width: 25%;
       margin-top: 0;
       margin-right: 15%; }
-    /* line 107, 767px.scss */
+    /* line 131, 767px.scss */
     #footer .btnfooterlrg {
       margin-right: 0; }
-    /* line 110, 767px.scss */
+    /* line 134, 767px.scss */
     #footer address {
       padding-top: 6%;
       float: right;
@@ -1793,15 +1651,20 @@
   /*  .cardWrapper {
       margin: 0 25% !important;
     }*/
-  /* line 123, 767px.scss */
+  /* line 147, 767px.scss */
   .featured-edible-true,
   .featured-concentrate-true,
   .featured-strain-true {
     left: -4%; }
 
+  /* line 150, 767px.scss */
+  .dvCardList {
+    margin-left: 5%;
+    margin-right: 5%; }
+
   /*----cards.html end----*/
   /*----ratings.html start----*/
-  /* line 131, 767px.scss */
+  /* line 159, 767px.scss */
   .edibleCard .rating,
   .concentrateCard .rating,
   .strainCard .rating {
@@ -1816,13 +1679,13 @@
     }*/
   /*----cards.html end----*/
   /*----items.html start----*/
-  /* line 147, 767px.scss */
+  /* line 175, 767px.scss */
   #strainGallery,
   #edibleGallery,
   #concentrateGallery {
     display: none; }
 
-  /* line 152, 767px.scss */
+  /* line 180, 767px.scss */
   .strainGalleryMobile,
   .edibleGalleryMobile,
   .concentrateGalleryMobile {
@@ -1831,19 +1694,19 @@
 
   /*----items.html end----*/
   /*---- businessCMS.html start ----*/
-  /* line 161, 767px.scss */
+  /* line 189, 767px.scss */
   .products .nav-tabs li a {
     font-size: 10px; }
 
   /*---- businessCMS.html end ----*/
   /*---- businessProfile.html start ----*/
-  /* line 170, 767px.scss */
+  /* line 198, 767px.scss */
   .businessInfo .businessLogoWrap {
     text-align: center; }
-  /* line 173, 767px.scss */
+  /* line 201, 767px.scss */
   .businessInfo .businessLogo {
     float: none; }
-  /* line 178, 767px.scss */
+  /* line 206, 767px.scss */
   .businessInfo .businessName,
   .businessInfo .businessLocation,
   .businessInfo .businessBio {
@@ -1853,7 +1716,7 @@
   /*---- businessProfile.html end ----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
-  /* line 189, 767px.scss */
+  /* line 217, 767px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
@@ -1951,9 +1814,11 @@
 
   /*----page.html end----*/
   /*----userProfile.html start----*/
-  /* line 97, 980px.scss */
-  .userInfoLeft .buddyBtn {
-    font-size: 11px; }
+  /* line 96, 980px.scss */
+  .userInfoLeft {
+    margin: 30px 20% 0 20%;
+    position: relative;
+    width: 60%; }
 
   /*----userProfile.html end----*/
   /*----home start----*/
@@ -2064,17 +1929,18 @@
     font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 24px;
     font-weight: 300;
-    text-align: center; }
-  /* line 53, _home.scss */
+    text-align: center;
+    background: none; }
+  /* line 54, _home.scss */
   #indexSummary > .howItWorks p {
     font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 11px;
     float: left;
     padding: 0 10%; }
-    /* line 58, _home.scss */
+    /* line 59, _home.scss */
     #indexSummary > .howItWorks p strong {
       display: none; }
-  /* line 62, _home.scss */
+  /* line 63, _home.scss */
   #indexSummary > .howItWorks .arrowRight {
     display: none;
     float: left;
@@ -2082,50 +1948,50 @@
     border-right: 0px solid transparent;
     border-bottom: 20px solid transparent;
     border-left: 20px solid transparent; }
-    /* line 69, _home.scss */
+    /* line 70, _home.scss */
     #indexSummary > .howItWorks .arrowRight.red {
       border-left-color: #f7253e; }
-    /* line 72, _home.scss */
+    /* line 73, _home.scss */
     #indexSummary > .howItWorks .arrowRight.yellow {
       border-left-color: #fcd31c; }
-    /* line 75, _home.scss */
+    /* line 76, _home.scss */
     #indexSummary > .howItWorks .arrowRight.green {
       border-left-color: #3dd861; }
-  /* line 81, _home.scss */
+  /* line 82, _home.scss */
   #indexSummary > .howItWorks:nth-child(1), #indexSummary > .howItWorks:nth-child(2) {
     border-right: 1px solid rgba(44, 48, 52, 0.05); }
-  /* line 84, _home.scss */
+  /* line 85, _home.scss */
   #indexSummary > .howItWorks:nth-child(1) > h3 {
     color: #3dd861; }
-  /* line 87, _home.scss */
+  /* line 88, _home.scss */
   #indexSummary > .howItWorks:nth-child(2) > h3 {
     color: #fcd31c; }
-  /* line 90, _home.scss */
+  /* line 91, _home.scss */
   #indexSummary > .howItWorks:nth-child(3) > h3 {
     color: #f7253e; }
 
-/* line 95, _home.scss */
+/* line 96, _home.scss */
 .sponsors {
   margin: 0;
   padding: 0; }
-  /* line 99, _home.scss */
+  /* line 100, _home.scss */
   .sponsors div ul {
     margin: 0;
     padding: 0;
     height: 100%;
     list-style: none;
     opacity: .4; }
-    /* line 105, _home.scss */
+    /* line 106, _home.scss */
     .sponsors div ul:hover {
       opacity: 1; }
-    /* line 108, _home.scss */
+    /* line 109, _home.scss */
     .sponsors div ul li {
       display: inline;
       overflow: hidden; }
-      /* line 111, _home.scss */
+      /* line 112, _home.scss */
       .sponsors div ul li:last-child {
         border: none; }
-      /* line 114, _home.scss */
+      /* line 115, _home.scss */
       .sponsors div ul li img {
         max-width: 100%; }
 
@@ -2814,29 +2680,32 @@ h6 {
 /* line 89, style.scss */
 h3 {
   border-bottom: 1px solid rgba(44, 48, 52, 0.05);
+  padding-bottom: 10px;
   text-align: center;
-  font-size: 18px; }
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 2px; }
 
-/* line 94, style.scss */
+/* line 97, style.scss */
 h4 {
   font-size: 16px;
   margin-bottom: 0; }
 
-/* line 99, style.scss */
+/* line 102, style.scss */
 p {
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 12px; }
-  /* line 102, style.scss */
+  /* line 105, style.scss */
   p a {
     font-weight: bold;
     color: #3dd861; }
 
-/* line 108, style.scss */
+/* line 111, style.scss */
 ul {
   list-style: none;
   padding: 0; }
 
-/* line 113, style.scss */
+/* line 116, style.scss */
 .pageTitle {
   margin-top: 0;
   padding: 0 0 10px 0;
@@ -2848,17 +2717,16 @@ ul {
   text-transform: uppercase;
   font-size: 24px; }
 
-/* line 125, style.scss */
-.viewOnMap {
-  text-transform: uppercase;
-  font-weight: bold; }
+/* line 127, style.scss */
+.hidePageTitle {
+  display: none; }
 
-/* line 130, style.scss */
+/* line 131, style.scss */
 form {
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 12px;
   color: #2c3034; }
-  /* line 134, style.scss */
+  /* line 135, style.scss */
   form .btn-block {
     font-family: "Bebas Neue", "Khand", sans-serif;
     text-transform: uppercase;
@@ -2866,19 +2734,19 @@ form {
     color: white;
     padding: 5px 0 0 0;
     background: #2c3034; }
-    /* line 144, style.scss */
+    /* line 145, style.scss */
     form .btn-block.dispensaryCMS:hover, form .btn-block.dispensaryCMS:active, form .btn-block.dispensaryCMS:focus, form .btn-block.dispensaryCMS:visited {
       background: #f7253e;
       color: white; }
-    /* line 151, style.scss */
+    /* line 152, style.scss */
     form .btn-block.dealCMS:hover, form .btn-block.dealCMS:active, form .btn-block.dealCMS:focus, form .btn-block.dealCMS:visited {
       background: #fcd31c;
       color: white; }
-    /* line 158, style.scss */
+    /* line 159, style.scss */
     form .btn-block.strainCMS:hover, form .btn-block.strainCMS:active, form .btn-block.strainCMS:focus, form .btn-block.strainCMS:visited {
       background: #3dd861;
       color: white; }
-  /* line 163, style.scss */
+  /* line 164, style.scss */
   form .button {
     font-family: "Open Sans", "Helvetica", sans-serif;
     font-size: 14px;
@@ -2889,29 +2757,54 @@ form {
     border-radius: 20px;
     padding: 10px 20px;
     background: none; }
-    /* line 173, style.scss */
+    /* line 174, style.scss */
     form .button:hover {
       background: #fcd31c;
       color: white;
       cursor: pointer; }
 
-/* line 181, style.scss */
+/* line 182, style.scss */
+.rhastaBars {
+  margin: 0;
+  padding: 0;
+  float: left;
+  position: relative;
+  height: 10px; }
+  /* line 188, style.scss */
+  .rhastaBars li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    height: 10px;
+    float: left;
+    position: relative; }
+  /* line 196, style.scss */
+  .rhastaBars .rhastaGreen {
+    background: #3dd861; }
+  /* line 199, style.scss */
+  .rhastaBars .rhastaYellow {
+    background: #fcd31c; }
+  /* line 202, style.scss */
+  .rhastaBars .rhastaRed {
+    background: #f7253e; }
+
+/* line 207, style.scss */
 label {
   color: rgba(44, 48, 52, 0.3);
   margin-bottom: 5px;
   padding-bottom: 0;
   text-transform: uppercase; }
-  /* line 186, style.scss */
+  /* line 212, style.scss */
   label i {
     float: left;
     margin-left: -15px; }
-  /* line 190, style.scss */
+  /* line 216, style.scss */
   label span {
     float: left;
     padding-top: 3px;
     margin-left: 5px; }
 
-/* line 197, style.scss */
+/* line 223, style.scss */
 .faqQuestion {
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 16px;
@@ -2919,52 +2812,52 @@ label {
   letter-spacing: 1px;
   color: #2c3034;
   margin: 20px 0 5px 0; }
-  /* line 204, style.scss */
+  /* line 230, style.scss */
   .faqQuestion a {
     color: #3dd861; }
 
-/* line 209, style.scss */
+/* line 235, style.scss */
 .brandassets {
   margin-top: -3%;
   list-style: none; }
-  /* line 212, style.scss */
+  /* line 238, style.scss */
   .brandassets li {
     margin-bottom: 20px;
     text-align: center; }
-    /* line 215, style.scss */
+    /* line 241, style.scss */
     .brandassets li h4 {
       font-size: 35px;
       margin-top: 30px;
       border-bottom: 3px solid; }
-    /* line 220, style.scss */
+    /* line 246, style.scss */
     .brandassets li:nth-child(1) {
       color: #3dd861; }
-    /* line 223, style.scss */
+    /* line 249, style.scss */
     .brandassets li:nth-child(2) {
       color: #fcd31c; }
-    /* line 226, style.scss */
+    /* line 252, style.scss */
     .brandassets li:nth-child(3) {
       color: #f7253e; }
-    /* line 229, style.scss */
+    /* line 255, style.scss */
     .brandassets li:nth-child(4) {
       color: #2c3034; }
-    /* line 233, style.scss */
+    /* line 259, style.scss */
     .brandassets li a img {
       width: 100%; }
 
-/* line 240, style.scss */
+/* line 266, style.scss */
 .stateYourLovePageHeader {
   margin-bottom: 20px; }
-  /* line 242, style.scss */
+  /* line 268, style.scss */
   .stateYourLovePageHeader h3 {
     border-bottom: none;
     font-family: "Open Sans", "Helvetica", sans-serif;
     text-transform: none; }
 
-/* line 253, style.scss */
+/* line 279, style.scss */
 .stateYourLove li img {
   width: 100%; }
-/* line 256, style.scss */
+/* line 282, style.scss */
 .stateYourLove li label {
   font-family: "Bebas Neue", "Khand", sans-serif;
   color: #2c3034;

@@ -244,6 +244,7 @@
 }
 .upToTop {
   position: fixed;
+  z-index: 2;
   right: 2%;
   bottom: 0;
   -webkit-transition: all .5s ease;

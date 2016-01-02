@@ -7,9 +7,11 @@
   /*----style.scss.html end----*/
   /*----userProfile.html start----*/
   .userInfoLeft {
+    margin-top: -15px;
+    padding: 25px 10% 10px 10%;
     .userAvatar {
       width: 30%;
-      margin: -70px 35% 0 35%;
+      margin: 0px 35% 0 35%;
     }
     .buddyBtn {
       width: 30%;
@@ -17,31 +19,8 @@
       line-height: 30px;
     }
   }
-  .userInfoMiddle {
-    margin-top: 20px;
-  }
-  .achievements {
-    .progressWrap {
-      margin-top: 0;
-    }
-  }
-  .userFavorites {
-    ul {
-      li {
-        a {
-          padding-top: 55%;
-        }
-      }
-    }
-  }
   /*----userProfile.html end----*/
   /*----home.html start----*/
-  .pageHeader {
-    display: none;
-  }
-  .pageMobileHeader {
-    display: inherit;
-  }
   #indexSummary {
     .howItWorks {
       .concentratesIcon,
