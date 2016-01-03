@@ -30,26 +30,34 @@
   /*----userProfile.html start----*/
   .userInfoLeft {
     margin: -15px auto 0 auto;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     position: relative;
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
     .userInfoLeft .userAvatar {
       width: 20%;
       margin: 0px 40% 0 40%; }
     .userInfoLeft .userBio {
-      padding: 0 20px; }
+      padding: 30px 30px 10px 30px;
+      margin-bottom: 0;
+      background: white;
+      font-weight: 500;
+      color: #2c3034; }
     .userInfoLeft .buddyBtn {
       width: 20%;
-      margin: 10px 40% 0 40%;
-      line-height: 30px; }
+      position: absolute;
+      right: 0;
+      top: 130px; }
 
   .userOverview {
     padding-right: 0; }
-    .userOverview ul li {
-      font-size: 10px;
-      padding: 5px 12px; }
-      .userOverview ul li span {
-        font-size: 11px; }
+    .userOverview ul {
+      margin: 0 15px; }
+      .userOverview ul li {
+        font-size: 10px;
+        padding: 5px 5px; }
+        .userOverview ul li span {
+          font-size: 11px; }
 
   #userStash {
     padding-right: 0; }

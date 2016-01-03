@@ -611,8 +611,8 @@
     text-align: center;
     box-shadow: none; }
     /* line 599, _items.scss */
-    .userInfoLeft .buddyBtn i {
-      font-size: 26px; }
+    .userInfoLeft .buddyBtn img {
+      width: 50px; }
     /* line 604, _items.scss */
     .userInfoLeft .buddyBtn:active, .userInfoLeft .buddyBtn:focus, .userInfoLeft .buddyBtn:visited {
       text-decoration: none; }
@@ -1441,28 +1441,26 @@
   /* line 9, 470px.scss */
   .userInfoLeft {
     margin-top: -15px;
-    padding: 25px 10% 10px 10%; }
+    padding: 25px 0 0 0; }
     /* line 12, 470px.scss */
     .userInfoLeft .userAvatar {
       width: 30%;
       margin: 0px 35% 0 35%; }
     /* line 16, 470px.scss */
-    .userInfoLeft .buddyBtn {
-      width: 30%;
-      margin: 10px 35% 0 35%;
-      line-height: 30px; }
+    .userInfoLeft .userbio {
+      margin: 0; }
 
   /*----userProfile.html end----*/
   /*----home.html start----*/
-  /* line 28, 470px.scss */
+  /* line 26, 470px.scss */
   #indexSummary .howItWorks .concentratesIcon,
   #indexSummary .howItWorks .ediblesIcon,
   #indexSummary .howItWorks .strainsIcon {
     width: 30%; }
-  /* line 31, 470px.scss */
+  /* line 29, 470px.scss */
   #indexSummary .howItWorks h3 {
     padding-top: 1%; }
-  /* line 34, 470px.scss */
+  /* line 32, 470px.scss */
   #indexSummary .howItWorks p {
     font-size: 9px;
     line-height: 12px;
@@ -1470,21 +1468,21 @@
 
   /*----home.html end----*/
   /*----footer.html start----*/
-  /* line 44, 470px.scss */
+  /* line 42, 470px.scss */
   #footer input[type='email'] {
     width: 60%;
     margin-left: 5%; }
-  /* line 48, 470px.scss */
+  /* line 46, 470px.scss */
   #footer .btnfooter {
     width: 30%;
     margin-right: 5%; }
-  /* line 52, 470px.scss */
+  /* line 50, 470px.scss */
   #footer .btnfooterlrg {
     margin-right: 0; }
 
   /*----footer.html end----*/
   /*----ratings.html start----*/
-  /* line 61, 470px.scss */
+  /* line 59, 470px.scss */
   .dispensaryCard .rating,
   .dealCard .rating,
   .strainCard .rating {
@@ -1492,7 +1490,7 @@
 
   /*----ratings.html end----*/
   /*----cards.html start----*/
-  /* line 69, 470px.scss */
+  /* line 67, 470px.scss */
   .cardWrapper .distanceAway,
   .cardWrapper .strainType {
     margin: 30% auto 0 auto; }
@@ -1502,7 +1500,7 @@
       width: 68%;
     }
   }*/
-  /* line 80, 470px.scss */
+  /* line 78, 470px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
@@ -1510,35 +1508,35 @@
 
   /*----cards.html end----*/
   /*----signin.html end----*/
-  /* line 85, 470px.scss */
+  /* line 83, 470px.scss */
   .close-modal {
     top: 5px;
     right: 10px; }
 
   /*----signin.html end----*/
   /*----footer start----*/
-  /* line 92, 470px.scss */
+  /* line 90, 470px.scss */
   #footer h4 {
     font-size: 14px; }
 
   /*----footer end----*/
   /*----modal start----*/
-  /* line 100, 470px.scss */
+  /* line 98, 470px.scss */
   .modal-content .modal-header .modalTitle {
     font-size: 50px; }
-  /* line 103, 470px.scss */
+  /* line 101, 470px.scss */
   .modal-content .modal-header .modalSubtitle {
     font-size: 20px; }
-  /* line 108, 470px.scss */
+  /* line 106, 470px.scss */
   .modal-content .modal-footer p {
     font-size: 12px; }
-    /* line 110, 470px.scss */
+    /* line 108, 470px.scss */
     .modal-content .modal-footer p span {
       color: white; }
 
   /*----modal end----*/
   /*---- search start ----*/
-  /* line 122, 470px.scss */
+  /* line 120, 470px.scss */
   .searchWrapper .searchResults ul li img {
     width: 20%; }
 
@@ -1581,62 +1579,71 @@
   /* line 31, 767px.scss */
   .userInfoLeft {
     margin: -15px auto 0 auto;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     position: relative;
-    width: 100%; }
-    /* line 36, 767px.scss */
+    width: 100%;
+    height: 100%; }
+    /* line 37, 767px.scss */
     .userInfoLeft .userAvatar {
       width: 20%;
       margin: 0px 40% 0 40%; }
-    /* line 40, 767px.scss */
+    /* line 41, 767px.scss */
     .userInfoLeft .userBio {
-      padding: 0 20px; }
-    /* line 43, 767px.scss */
+      padding: 30px 30px 10px 30px;
+      margin-bottom: 0;
+      background: white;
+      font-weight: 500;
+      color: #2c3034; }
+    /* line 48, 767px.scss */
     .userInfoLeft .buddyBtn {
       width: 20%;
-      margin: 10px 40% 0 40%;
-      line-height: 30px; }
+      position: absolute;
+      right: 0;
+      top: 130px; }
 
-  /* line 49, 767px.scss */
+  /* line 55, 767px.scss */
   .userOverview {
     padding-right: 0; }
-    /* line 52, 767px.scss */
-    .userOverview ul li {
-      font-size: 10px;
-      padding: 5px 12px; }
-      /* line 55, 767px.scss */
-      .userOverview ul li span {
-        font-size: 11px; }
+    /* line 57, 767px.scss */
+    .userOverview ul {
+      margin: 0 15px; }
+      /* line 59, 767px.scss */
+      .userOverview ul li {
+        font-size: 10px;
+        padding: 5px 5px; }
+        /* line 62, 767px.scss */
+        .userOverview ul li span {
+          font-size: 11px; }
 
-  /* line 61, 767px.scss */
+  /* line 68, 767px.scss */
   #userStash {
     padding-right: 0; }
 
   /*----userProfile.html end----*/
   /*----home.html start----*/
-  /* line 67, 767px.scss */
+  /* line 74, 767px.scss */
   #indexSummary .howItWorks {
     margin-left: 15px;
     padding: 20px 5%;
     height: 100%; }
-    /* line 72, 767px.scss */
+    /* line 79, 767px.scss */
     #indexSummary .howItWorks:nth-child(1), #indexSummary .howItWorks:nth-child(2) {
       border-bottom: 1px solid rgba(44, 48, 52, 0.05); }
-    /* line 77, 767px.scss */
+    /* line 84, 767px.scss */
     #indexSummary .howItWorks .concentratesIcon,
     #indexSummary .howItWorks .ediblesIcon,
     #indexSummary .howItWorks .strainsIcon {
       width: 22%;
       float: left;
       margin-right: 20px; }
-    /* line 82, 767px.scss */
+    /* line 89, 767px.scss */
     #indexSummary .howItWorks h3 {
       font-size: 18px;
       margin: 0;
       padding: 3% 0 0 0;
       text-align: left;
       width: 50%; }
-    /* line 89, 767px.scss */
+    /* line 96, 767px.scss */
     #indexSummary .howItWorks p {
       padding: 0;
       margin: 0;
@@ -1644,45 +1651,45 @@
       font-size: 10px;
       line-height: 14px;
       width: 62%; }
-    /* line 97, 767px.scss */
+    /* line 104, 767px.scss */
     #indexSummary .howItWorks .arrowRight {
       display: inline;
       margin-left: 20px; }
 
-  /* line 103, 767px.scss */
+  /* line 110, 767px.scss */
   .featuredBanner {
     margin-left: 25%; }
 
   /*----home.html end----*/
   /*----footer.html start----*/
-  /* line 108, 767px.scss */
+  /* line 115, 767px.scss */
   #footer {
     margin: 30px auto 0 auto;
     text-align: center; }
-    /* line 111, 767px.scss */
+    /* line 118, 767px.scss */
     #footer h4 {
       text-align: center; }
-    /* line 114, 767px.scss */
+    /* line 121, 767px.scss */
     #footer a {
       font-size: 10px;
       margin: 0 auto;
       text-align: center; }
-    /* line 119, 767px.scss */
+    /* line 126, 767px.scss */
     #footer p {
       font-size: 10px; }
-    /* line 122, 767px.scss */
+    /* line 129, 767px.scss */
     #footer input[type='email'] {
       width: 45%;
       margin-left: 15%; }
-    /* line 126, 767px.scss */
+    /* line 133, 767px.scss */
     #footer .btnfooter {
       width: 25%;
       margin-top: 0;
       margin-right: 15%; }
-    /* line 131, 767px.scss */
+    /* line 138, 767px.scss */
     #footer .btnfooterlrg {
       margin-right: 0; }
-    /* line 134, 767px.scss */
+    /* line 141, 767px.scss */
     #footer address {
       padding-top: 6%;
       float: right;
@@ -1693,20 +1700,20 @@
   /*  .cardWrapper {
       margin: 0 25% !important;
     }*/
-  /* line 147, 767px.scss */
+  /* line 154, 767px.scss */
   .featured-edible-true,
   .featured-concentrate-true,
   .featured-strain-true {
     left: -4%; }
 
-  /* line 150, 767px.scss */
+  /* line 157, 767px.scss */
   .dvCardList {
     margin-left: 5%;
     margin-right: 5%; }
 
   /*----cards.html end----*/
   /*----ratings.html start----*/
-  /* line 159, 767px.scss */
+  /* line 166, 767px.scss */
   .edibleCard .rating,
   .concentrateCard .rating,
   .strainCard .rating {
@@ -1721,13 +1728,13 @@
     }*/
   /*----cards.html end----*/
   /*----items.html start----*/
-  /* line 175, 767px.scss */
+  /* line 182, 767px.scss */
   #strainGallery,
   #edibleGallery,
   #concentrateGallery {
     display: none; }
 
-  /* line 180, 767px.scss */
+  /* line 187, 767px.scss */
   .strainGalleryMobile,
   .edibleGalleryMobile,
   .concentrateGalleryMobile {
@@ -1736,19 +1743,19 @@
 
   /*----items.html end----*/
   /*---- businessCMS.html start ----*/
-  /* line 189, 767px.scss */
+  /* line 196, 767px.scss */
   .products .nav-tabs li a {
     font-size: 10px; }
 
   /*---- businessCMS.html end ----*/
   /*---- businessProfile.html start ----*/
-  /* line 198, 767px.scss */
+  /* line 205, 767px.scss */
   .businessInfo .businessLogoWrap {
     text-align: center; }
-  /* line 201, 767px.scss */
+  /* line 208, 767px.scss */
   .businessInfo .businessLogo {
     float: none; }
-  /* line 206, 767px.scss */
+  /* line 213, 767px.scss */
   .businessInfo .businessName,
   .businessInfo .businessLocation,
   .businessInfo .businessBio {
@@ -1757,34 +1764,34 @@
 
   /*---- businessProfile.html end ----*/
   /*---- search start ----*/
-  /* line 214, 767px.scss */
+  /* line 221, 767px.scss */
   .searchWrapper input {
     margin: 10px 30px 20px 30px;
     width: 90%; }
-  /* line 219, 767px.scss */
+  /* line 226, 767px.scss */
   .searchWrapper .searchResults ul {
     padding: 0 30px;
     width: inherit; }
-    /* line 223, 767px.scss */
+    /* line 230, 767px.scss */
     .searchWrapper .searchResults ul li img {
       width: 15%; }
-    /* line 226, 767px.scss */
+    /* line 233, 767px.scss */
     .searchWrapper .searchResults ul li h6 {
       font-size: 16px; }
-    /* line 229, 767px.scss */
+    /* line 236, 767px.scss */
     .searchWrapper .searchResults ul li p {
       font-size: 16px; }
 
   /*---- search end ----*/
   /*---- page.html start ----*/
-  /* line 238, 767px.scss */
+  /* line 245, 767px.scss */
   .authenticateButtons {
     display: none; }
 
   /*---- page.html start ----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
-  /* line 247, 767px.scss */
+  /* line 254, 767px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
@@ -2839,7 +2846,7 @@ form {
   margin: 0;
   padding: 0;
   float: left;
-  position: relative;
+  position: absolute;
   height: 10px; }
   /* line 188, style.scss */
   .rhastaBars li {

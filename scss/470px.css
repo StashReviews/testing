@@ -8,14 +8,12 @@
   /*----userProfile.html start----*/
   .userInfoLeft {
     margin-top: -15px;
-    padding: 25px 10% 10px 10%; }
+    padding: 25px 0 0 0; }
     .userInfoLeft .userAvatar {
       width: 30%;
       margin: 0px 35% 0 35%; }
-    .userInfoLeft .buddyBtn {
-      width: 30%;
-      margin: 10px 35% 0 35%;
-      line-height: 30px; }
+    .userInfoLeft .userbio {
+      margin: 0; }
 
   /*----userProfile.html end----*/
   /*----home.html start----*/
