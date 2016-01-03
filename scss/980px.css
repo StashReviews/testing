@@ -119,4 +119,6 @@
   .rating .ratingDisplay {
     top: -60px; }
 
-  /*----rating.html start----*/ }
+  /*----rating.html start----*/
+  .searchIcon img {
+    width: 40px !important; } }

@@ -967,9 +967,45 @@
   margin: 0;
   padding: 0; }
   /* line 31, layout/_navbar.scss */
+  .navbar-right .searchIcon {
+    float: right;
+    margin: 0 10px; }
+    /* line 34, layout/_navbar.scss */
+    .navbar-right .searchIcon #searchInput {
+      display: none;
+      background: none;
+      border: none;
+      box-shadow: none;
+      border-bottom: 1px solid #fcd31c;
+      font-size: 26px;
+      font-weight: 300;
+      padding: 0 0px 10px 0px;
+      color: white; }
+      /* line 44, layout/_navbar.scss */
+      .navbar-right .searchIcon #searchInput::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.3); }
+      /* line 47, layout/_navbar.scss */
+      .navbar-right .searchIcon #searchInput:-moz-placeholder {
+        color: rgba(255, 255, 255, 0.3); }
+      /* line 50, layout/_navbar.scss */
+      .navbar-right .searchIcon #searchInput::-moz-placeholder {
+        color: rgba(255, 255, 255, 0.3); }
+      /* line 53, layout/_navbar.scss */
+      .navbar-right .searchIcon #searchInput:-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.3); }
+    /* line 57, layout/_navbar.scss */
+    .navbar-right .searchIcon img {
+      width: 50px;
+      float: left;
+      opacity: .4;
+      cursor: pointer; }
+      /* line 62, layout/_navbar.scss */
+      .navbar-right .searchIcon img:hover {
+        opacity: 1; }
+  /* line 67, layout/_navbar.scss */
   .navbar-right .authenticateButtons {
-    float: left; }
-    /* line 33, layout/_navbar.scss */
+    float: right; }
+    /* line 69, layout/_navbar.scss */
     .navbar-right .authenticateButtons .button {
       font-size: 12px;
       text-transform: uppercase;
@@ -983,11 +1019,11 @@
       -ms-transition: all .2s ease;
       -o-transition: all .2s ease;
       transition: all .2s ease; }
-      /* line 46, layout/_navbar.scss */
+      /* line 82, layout/_navbar.scss */
       .navbar-right .authenticateButtons .button:hover {
         background: none;
         color: #fcd31c; }
-    /* line 51, layout/_navbar.scss */
+    /* line 87, layout/_navbar.scss */
     .navbar-right .authenticateButtons .loginButton {
       border-left: 1px solid rgba(255, 255, 255, 0.1);
       -webkit-transition: all .2s ease;
@@ -995,15 +1031,15 @@
       -ms-transition: all .2s ease;
       -o-transition: all .2s ease;
       transition: all .2s ease; }
-    /* line 59, layout/_navbar.scss */
+    /* line 95, layout/_navbar.scss */
     .navbar-right .authenticateButtons .signupButton {
       margin-right: 25px; }
-  /* line 63, layout/_navbar.scss */
+  /* line 99, layout/_navbar.scss */
   .navbar-right .accountInfo {
     text-align: right;
     margin: 5px 0 0 0;
     float: right; }
-    /* line 67, layout/_navbar.scss */
+    /* line 103, layout/_navbar.scss */
     .navbar-right .accountInfo .username {
       font-family: "Open Sans", "Helvetica", sans-serif;
       color: white;
@@ -1013,17 +1049,17 @@
       padding: 0;
       margin: 0;
       text-transform: none; }
-      /* line 76, layout/_navbar.scss */
+      /* line 112, layout/_navbar.scss */
       .navbar-right .accountInfo .username:hover {
         color: #fcd31c; }
-    /* line 80, layout/_navbar.scss */
+    /* line 116, layout/_navbar.scss */
     .navbar-right .accountInfo .location {
       color: #fcd31c;
       font-family: "Open Sans", "Helvetica", sans-serif;
       font-size: 12px;
       padding: 0;
       margin: 0; }
-  /* line 88, layout/_navbar.scss */
+  /* line 124, layout/_navbar.scss */
   .navbar-right .userDropdown {
     position: absolute;
     right: 0;
@@ -1032,7 +1068,7 @@
     width: 100%;
     padding: 0 12px;
     display: none; }
-    /* line 96, layout/_navbar.scss */
+    /* line 132, layout/_navbar.scss */
     .navbar-right .userDropdown li {
       font-family: "Open Sans", "Helvetica", sans-serif;
       font-size: 16px;
@@ -1044,16 +1080,16 @@
       cursor: pointer;
       padding: 12px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-      /* line 107, layout/_navbar.scss */
+      /* line 143, layout/_navbar.scss */
       .navbar-right .userDropdown li:last-child {
         border-bottom: none; }
-      /* line 110, layout/_navbar.scss */
+      /* line 146, layout/_navbar.scss */
       .navbar-right .userDropdown li:hover {
         color: #fcd31c; }
-    /* line 114, layout/_navbar.scss */
+    /* line 150, layout/_navbar.scss */
     .navbar-right .userDropdown .dropdownLogout {
       color: rgba(255, 255, 255, 0.2); }
-  /* line 118, layout/_navbar.scss */
+  /* line 154, layout/_navbar.scss */
   .navbar-right .userDropdown:after, .navbar-right .userDropdown:before {
     bottom: 100%;
     right: 15px;
@@ -1063,12 +1099,12 @@
     width: 0;
     position: absolute;
     pointer-events: none; }
-  /* line 128, layout/_navbar.scss */
+  /* line 164, layout/_navbar.scss */
   .navbar-right .userDropdown:after {
     border-bottom-color: #2c3034;
     border-width: 10px;
     margin-left: -10px; }
-  /* line 133, layout/_navbar.scss */
+  /* line 169, layout/_navbar.scss */
   .navbar-right .avatarDefault {
     opacity: .1;
     -webkit-transition: all .2s ease;
@@ -1076,10 +1112,10 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
-    /* line 140, layout/_navbar.scss */
+    /* line 176, layout/_navbar.scss */
     .navbar-right .avatarDefault:hover {
       opacity: 1; }
-  /* line 144, layout/_navbar.scss */
+  /* line 180, layout/_navbar.scss */
   .navbar-right .avatar {
     height: 50px;
     width: 50px;
@@ -1093,26 +1129,26 @@
     -ms-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease; }
-    /* line 157, layout/_navbar.scss */
+    /* line 193, layout/_navbar.scss */
     .navbar-right .avatar:hover {
       border: 2px solid #fcd31c; }
-  /* line 161, layout/_navbar.scss */
+  /* line 197, layout/_navbar.scss */
   .navbar-right .navbar-text {
     margin: 15px 0; }
-  /* line 164, layout/_navbar.scss */
+  /* line 200, layout/_navbar.scss */
   .navbar-right .navbar-text .btn {
     margin-top: -1%;
     color: white; }
-    /* line 167, layout/_navbar.scss */
+    /* line 203, layout/_navbar.scss */
     .navbar-right .navbar-text .btn span {
       color: rgba(255, 255, 255, 0.2); }
-    /* line 170, layout/_navbar.scss */
+    /* line 206, layout/_navbar.scss */
     .navbar-right .navbar-text .btn:hover {
       color: #fcd31c; }
 
 /*  End Header Bar  */
 /*  Start Left Nav  */
-/* line 187, layout/_navbar.scss */
+/* line 223, layout/_navbar.scss */
 #mainMenu {
   list-style-type: none;
   padding-left: 0;
@@ -1121,36 +1157,36 @@
   font-size: 30px;
   position: fixed;
   top: 100px; }
-  /* line 195, layout/_navbar.scss */
+  /* line 231, layout/_navbar.scss */
   #mainMenu > li {
     padding-left: 10px;
     padding-top: 8px;
     margin: 5px 0; }
-    /* line 199, layout/_navbar.scss */
+    /* line 235, layout/_navbar.scss */
     #mainMenu > li:nth-child(1) {
       border-left: 3px solid #3dd861; }
-      /* line 182, layout/_navbar.scss */
+      /* line 218, layout/_navbar.scss */
       #mainMenu > li:nth-child(1) > a:hover {
         color: #3dd861; }
-    /* line 202, layout/_navbar.scss */
+    /* line 238, layout/_navbar.scss */
     #mainMenu > li:nth-child(2) {
       border-left: 3px solid #fcd31c; }
-      /* line 182, layout/_navbar.scss */
+      /* line 218, layout/_navbar.scss */
       #mainMenu > li:nth-child(2) > a:hover {
         color: #fcd31c; }
-    /* line 205, layout/_navbar.scss */
+    /* line 241, layout/_navbar.scss */
     #mainMenu > li:nth-child(3) {
       border-left: 3px solid #f7253e; }
-      /* line 182, layout/_navbar.scss */
+      /* line 218, layout/_navbar.scss */
       #mainMenu > li:nth-child(3) > a:hover {
         color: #f7253e; }
-    /* line 208, layout/_navbar.scss */
+    /* line 244, layout/_navbar.scss */
     #mainMenu > li a {
       color: #2c3034; }
-      /* line 212, layout/_navbar.scss */
+      /* line 248, layout/_navbar.scss */
       #mainMenu > li a:active, #mainMenu > li a:focus, #mainMenu > li a:visited {
         text-decoration: none; }
-      /* line 215, layout/_navbar.scss */
+      /* line 251, layout/_navbar.scss */
       #mainMenu > li a img {
         position: relative;
         left: -62px;
@@ -1159,24 +1195,24 @@
         -ms-transition: .3s all;
         -o-transition: .3s all;
         transition: .3s all; }
-        /* line 223, layout/_navbar.scss */
+        /* line 259, layout/_navbar.scss */
         #mainMenu > li a img:hover {
           left: -50px; }
-  /* line 229, layout/_navbar.scss */
+  /* line 265, layout/_navbar.scss */
   #mainMenu .adminnav {
     color: rgba(44, 48, 52, 0.2); }
-    /* line 231, layout/_navbar.scss */
+    /* line 267, layout/_navbar.scss */
     #mainMenu .adminnav:hover {
       color: #2c3034; }
 
 /*  End Left Nav  */
 /*  Start Up to Top  */
-/* line 241, layout/_navbar.scss */
+/* line 277, layout/_navbar.scss */
 #top {
   position: absolute;
   top: 0; }
 
-/* line 245, layout/_navbar.scss */
+/* line 281, layout/_navbar.scss */
 .upToTop {
   position: fixed;
   z-index: 2;
@@ -1187,7 +1223,7 @@
   -ms-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease; }
-  /* line 255, layout/_navbar.scss */
+  /* line 291, layout/_navbar.scss */
   .upToTop:hover {
     bottom: 2%;
     -webkit-transition: all .3s ease;
@@ -1500,7 +1536,13 @@
     .modal-content .modal-footer p span {
       color: white; }
 
-  /*----modal end----*/ }
+  /*----modal end----*/
+  /*---- search start ----*/
+  /* line 122, 470px.scss */
+  .searchWrapper .searchResults ul li img {
+    width: 20%; }
+
+  /*---- search end ----*/ }
 @media screen and (max-width: 767px) {
   /*----style.scss.html start----*/
   /* line 3, 767px.scss */
@@ -1713,10 +1755,36 @@
     float: none;
     text-align: center; }
 
-  /*---- businessProfile.html end ----*/ }
+  /*---- businessProfile.html end ----*/
+  /*---- search start ----*/
+  /* line 214, 767px.scss */
+  .searchWrapper input {
+    margin: 10px 30px 20px 30px;
+    width: 90%; }
+  /* line 219, 767px.scss */
+  .searchWrapper .searchResults ul {
+    padding: 0 30px;
+    width: inherit; }
+    /* line 223, 767px.scss */
+    .searchWrapper .searchResults ul li img {
+      width: 15%; }
+    /* line 226, 767px.scss */
+    .searchWrapper .searchResults ul li h6 {
+      font-size: 16px; }
+    /* line 229, 767px.scss */
+    .searchWrapper .searchResults ul li p {
+      font-size: 16px; }
+
+  /*---- search end ----*/
+  /*---- page.html start ----*/
+  /* line 238, 767px.scss */
+  .authenticateButtons {
+    display: none; }
+
+  /*---- page.html start ----*/ }
 @media screen and (max-width: 550px) {
   /*----cards.html start----*/
-  /* line 217, 767px.scss */
+  /* line 247, 767px.scss */
   .featured-concentrate-true,
   .featured-edible-true,
   .featured-strain-true {
@@ -1877,7 +1945,10 @@
   .rating .ratingDisplay {
     top: -60px; }
 
-  /*----rating.html start----*/ }
+  /*----rating.html start----*/
+  /* line 174, 980px.scss */
+  .searchIcon img {
+    width: 40px !important; } }
 /* line 1, _home.scss */
 .pageHeader {
   display: none;
@@ -2805,6 +2876,63 @@ label {
     margin-left: 5px; }
 
 /* line 223, style.scss */
+.searchWrapper {
+  float: left;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  /* line 230, style.scss */
+  .searchWrapper input {
+    border: none;
+    border-bottom: 1px solid #2c3034;
+    font-size: 34px;
+    font-weight: 300;
+    margin: 10px 0 15px 0; }
+  /* line 237, style.scss */
+  .searchWrapper .searchResults {
+    color: white;
+    font-family: "Open Sans", "Helvetica", sans-serif; }
+    /* line 240, style.scss */
+    .searchWrapper .searchResults h5 {
+      color: rgba(44, 48, 52, 0.2);
+      letter-spacing: 1px;
+      font-size: 15px; }
+    /* line 245, style.scss */
+    .searchWrapper .searchResults ul {
+      width: 20%;
+      padding: 5px; }
+      /* line 248, style.scss */
+      .searchWrapper .searchResults ul li {
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        float: left;
+        margin: 5px 0; }
+        /* line 254, style.scss */
+        .searchWrapper .searchResults ul li:hover {
+          background: rgba(44, 48, 52, 0.05); }
+        /* line 257, style.scss */
+        .searchWrapper .searchResults ul li img {
+          width: 26%;
+          margin-right: 4%;
+          float: left; }
+        /* line 262, style.scss */
+        .searchWrapper .searchResults ul li h6 {
+          width: 65%;
+          color: #2c3034;
+          font-size: 11px;
+          margin: 3px 0 0 0;
+          float: left; }
+        /* line 269, style.scss */
+        .searchWrapper .searchResults ul li p {
+          width: 65%;
+          color: rgba(44, 48, 52, 0.3);
+          font-size: 11px;
+          float: left; }
+
+/* line 280, style.scss */
 .faqQuestion {
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 16px;
@@ -2812,52 +2940,52 @@ label {
   letter-spacing: 1px;
   color: #2c3034;
   margin: 20px 0 5px 0; }
-  /* line 230, style.scss */
+  /* line 287, style.scss */
   .faqQuestion a {
     color: #3dd861; }
 
-/* line 235, style.scss */
+/* line 292, style.scss */
 .brandassets {
   margin-top: -3%;
   list-style: none; }
-  /* line 238, style.scss */
+  /* line 295, style.scss */
   .brandassets li {
     margin-bottom: 20px;
     text-align: center; }
-    /* line 241, style.scss */
+    /* line 298, style.scss */
     .brandassets li h4 {
       font-size: 35px;
       margin-top: 30px;
       border-bottom: 3px solid; }
-    /* line 246, style.scss */
+    /* line 303, style.scss */
     .brandassets li:nth-child(1) {
       color: #3dd861; }
-    /* line 249, style.scss */
+    /* line 306, style.scss */
     .brandassets li:nth-child(2) {
       color: #fcd31c; }
-    /* line 252, style.scss */
+    /* line 309, style.scss */
     .brandassets li:nth-child(3) {
       color: #f7253e; }
-    /* line 255, style.scss */
+    /* line 312, style.scss */
     .brandassets li:nth-child(4) {
       color: #2c3034; }
-    /* line 259, style.scss */
+    /* line 316, style.scss */
     .brandassets li a img {
       width: 100%; }
 
-/* line 266, style.scss */
+/* line 323, style.scss */
 .stateYourLovePageHeader {
   margin-bottom: 20px; }
-  /* line 268, style.scss */
+  /* line 325, style.scss */
   .stateYourLovePageHeader h3 {
     border-bottom: none;
     font-family: "Open Sans", "Helvetica", sans-serif;
     text-transform: none; }
 
-/* line 279, style.scss */
+/* line 336, style.scss */
 .stateYourLove li img {
   width: 100%; }
-/* line 282, style.scss */
+/* line 339, style.scss */
 .stateYourLove li label {
   font-family: "Bebas Neue", "Khand", sans-serif;
   color: #2c3034;

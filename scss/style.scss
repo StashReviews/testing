@@ -220,6 +220,63 @@ label {
   }
 }
 
+.searchWrapper {
+  float: left;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  input {
+    border: none;
+    border-bottom: 1px solid $dvGray;
+    font-size: 34px;
+    font-weight: 300;
+    margin: 10px 0 15px 0;
+  }
+  .searchResults {
+    color: white;
+    font-family: $dvTextFont;
+    h5 {
+      color: $dvGray20;
+      letter-spacing: 1px;
+      font-size: 15px;
+    }
+    ul {
+      width: 20%;
+      padding: 5px;
+      li {
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        float: left;
+        margin: 5px 0;
+        &:hover {
+          background: $dvGray5;
+        }
+        img {
+          width: 26%;
+          margin-right: 4%;
+          float: left;
+        }
+        h6 {
+          width: 65%;
+          color: $dvGray;
+          font-size: 11px;
+          margin: 3px 0 0 0;
+          float: left;
+        }
+        p {
+          width: 65%;
+          color: $dvGray30;
+          font-size: 11px;
+          float: left;
+        }
+      }
+    }
+  }
+}
+
 .faqQuestion {
   font-family: $dvTextFont;
   font-size: 16px;

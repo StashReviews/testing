@@ -28,8 +28,44 @@
 .navbar-right {
   margin: 0;
   padding: 0;
+  .searchIcon {
+    float: right;
+    margin: 0 10px;
+    #searchInput {
+      display: none;
+      background: none;
+      border: none;
+      box-shadow: none;
+      border-bottom: 1px solid $dvYellow;
+      font-size: 26px;
+      font-weight: 300;
+      padding: 0 0px 10px 0px;
+      color: white;
+      &::-webkit-input-placeholder {
+          color: $dvWhite30;
+      }
+      &:-moz-placeholder {
+          color: $dvWhite30;
+      }
+      &::-moz-placeholder {
+          color: $dvWhite30;
+      }
+      &:-ms-input-placeholder {
+          color: $dvWhite30;
+      }
+    }
+    img {
+      width: 50px;
+      float: left;
+      opacity: .4;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
   .authenticateButtons {
-    float: left;
+    float: right;
     .button {
       font-size: 12px;
       text-transform: uppercase;

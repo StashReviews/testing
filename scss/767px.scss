@@ -209,6 +209,36 @@
     }
   }
   /*---- businessProfile.html end ----*/
+  /*---- search start ----*/
+  .searchWrapper {
+    input {
+      margin: 10px 30px 20px 30px;
+      width: 90%;
+    }
+    .searchResults {
+      ul {
+        padding: 0 30px;
+        width: inherit;
+        li {
+          img {
+            width: 15%;
+          }
+          h6 {
+            font-size: 16px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  /*---- search end ----*/
+  /*---- page.html start ----*/
+  .authenticateButtons { 
+    display: none;
+  }
+  /*---- page.html start ----*/
 }
 @media screen and (max-width:550px) {
   /*----cards.html start----*/

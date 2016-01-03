@@ -26,19 +26,19 @@ angular.module('Stash.controllers', [])
     // @todo Note that $scope.currentAvatar will always be one step behind the digest cycle if we pass $scope.currentUser to it.
     $scope.currentAvatar = usersService.getAvatarUrl(currentUser);
 
-    // $scope.showLoginModal = function() {
-    //   var loginModalInstance = $modal.open({
-    //     size: 'md',
-    //     templateUrl: 'partials/modals/' + ( $scope.currentUser ? 'logout' : 'login' ) + '.html',
-    //     controller: 'loginModalCtrl'
-    //   });
+    $scope.showLoginModal = function() {
+      var loginModalInstance = $modal.open({
+        size: 'md',
+        templateUrl: 'partials/modals/' + ( $scope.currentUser ? 'logout' : 'login' ) + '.html',
+        controller: 'loginModalCtrl'
+      });
 
-    //   loginModalInstance.result
-    //     .then(function(currentUser) {
-    //       $scope.currentUser = currentUser;
-    //       usersService.setCurrentUser(currentUser);
-    //     });
-    // };
+      loginModalInstance.result
+        .then(function(currentUser) {
+          $scope.currentUser = currentUser;
+          usersService.setCurrentUser(currentUser);
+        });
+    };
 
     $scope.logout = function() {
       usersService.logout();
@@ -51,32 +51,32 @@ angular.module('Stash.controllers', [])
     };
 
   }])
-  // .controller('loginModalCtrl', ['$scope', '$state', '$modalInstance', 'usersService', function($scope, $state, $modalInstance, usersService) {
-  //   $scope.credentials = {};
+  .controller('loginModalCtrl', ['$scope', '$state', '$modalInstance', 'usersService', function($scope, $state, $modalInstance, usersService) {
+    $scope.credentials = {};
 
-  //   $scope.login = function(service, credentials) {
-  //     usersService.login(service, credentials)
-  //       .then(function(currentUser) {
-  //         location.reload();
-  //         $modalInstance.close(currentUser);
-  //         $state.go('root.home');
-  //       }, function(error) {
-  //         console.log(error);
-  //       });
-  //   };
+    $scope.login = function(service, credentials) {
+      usersService.login(service, credentials)
+        .then(function(currentUser) {
+          location.reload();
+          $modalInstance.close(currentUser);
+          $state.go('root.home');
+        }, function(error) {
+          console.log(error);
+        });
+    };
 
-  //   $scope.logout = function() {
-  //     usersService.logout();
+    $scope.logout = function() {
+      usersService.logout();
 
-  //     $modalInstance.close(null);
+      $modalInstance.close(null);
 
-  //     $state.go('root.home');
-  //   };
+      $state.go('root.home');
+    };
 
-  //   $scope.close = function() {
-  //     $modalInstance.dismiss();
-  //   };
-  // }])
+    $scope.close = function() {
+      $modalInstance.dismiss();
+    };
+  }])
   // .controller('ratingChangeModalCtrl', ['$scope', '$state', '$modalInstance', 'usersService', function($scope, $state, $modalInstance, usersService) {
 
 
@@ -161,6 +161,9 @@ angular.module('Stash.controllers', [])
       $scope.featuredDispensaries = dispensaryData[1];
     });
 
+
+  }])
+  .controller('searchCtrl', ['$scope', 'usersService', 'businessesService', 'ratingsService', function($scope, usersService, businessesService, ratingsService) {
 
   }])
   .controller("signupCtrl", function($scope, $state, $firebaseObject, $firebaseArray, usersService) {

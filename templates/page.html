@@ -31,12 +31,15 @@
 					<a ui-sref="root.userProfile({ userId: user.$id })"><h1 class="pull-right username" title="{{ currentName }}">{{ currentName }}</h1></a><br/>
 					<a ui-sref="root.userProfile({ userId: user.$id })"><h2 class="pull-right location">MY STASH</h2></a>
 				</div>
+				<div class="searchIcon">
+					<img ui-sref="root.search" src="img/icons/searchIcon.png"/>
+				</div>
 			</div>
 			<div ng-show="!( currentUser )" class="navbar-text dropdown">
-				<img src="img/icons/budIconWhite.png" class="img-responsive pull-right avatar dropdown-toggle" type="button"/>
+				<img src="img/icons/regularAccountIcon.png" class="img-responsive pull-right avatar dropdown-toggle" type="button"/>
 				<ul class="userDropdown">
 					<li type="button" ui-sref="root.signin">Sign In</li>
-					<a class="button signupButton" ui-sref="root.signup">Sign Up</a>
+					<li type="button" class="signupButton" ui-sref="root.signup">Sign Up</li>
 				</ul>
 				<div class="accountInfo">
 					<h1 class="pull-right username btn navbar-btn" ui-sref="root.signup" >High, Guest!</h1><br/>
@@ -45,6 +48,9 @@
 				<div class="authenticateButtons">
 					<a class="button loginButton" ui-sref="root.signin">Sign In</a>
 					<a class="button signupButton" ui-sref="root.signup">Sign Up</a>
+				</div>
+				<div class="searchIcon">
+					<img ui-sref="root.search" src="img/icons/searchIcon.png"/>
 				</div>
 			</div>
 		</div>
