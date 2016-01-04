@@ -48,6 +48,10 @@
       position: absolute;
       right: 0;
       top: 130px; }
+    .userInfoLeft .rhastaBarsBottom {
+      display: none; }
+    .userInfoLeft .rhastaBarsTop {
+      display: inherit; }
 
   .userOverview {
     padding-right: 0; }

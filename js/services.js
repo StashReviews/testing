@@ -90,17 +90,22 @@ angular.module('Stash.services', [])
        */
       isAdmin: function(user) {
         var adminIdList = [
-          'twitter:318556297',
-          'twitter:dberg15',
-          'simplelogin:2',
-          'google:103075984866184444011',
-          'google:dakotaberg',
-          'simplelogin:3',
-          'twitter:154732114',
-          'twitter:justinvinge',
-          'simplelogin:4',
-          'google:108704110120989212163',
-          'google:justinvinge'      
+          // 'twitter:318556297',
+          // 'twitter:dberg15',
+          // 'simplelogin:2',
+          // 'google:103075984866184444011',
+          // 'google:dakotaberg',
+          // 'simplelogin:3',
+          // 'twitter:154732114',
+          // 'twitter:justinvinge',
+          // 'simplelogin:4',
+          // 'google:108704110120989212163',
+          // 'google:justinvinge' 
+
+          'google:107380321711805415350', // Dakota Berg (dakota@stash.reviews)
+          'google:108657712263151670834', // Trent Petersen
+          'google:106581138148924469031' // Jon Townsend
+
         ];
 
         return ( user && user.uid )

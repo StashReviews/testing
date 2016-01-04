@@ -183,13 +183,12 @@ form {
   margin: 0;
   padding: 0;
   float: left;
-  position: absolute;
-  height: 10px;
+  width: 100%;
   li {
     display: inline;
     margin: 0;
     padding: 0;
-    height: 10px;
+    height: 6px;
     float: left;
     position: relative;
   }
