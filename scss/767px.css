@@ -67,6 +67,11 @@
     padding-right: 0; }
 
   /*----userProfile.html end----*/
+  /*----userBuddies.html start----*/
+  .userBuddyList {
+    margin: 0 50px; }
+
+  /*----userBuddies.html end----*/
   /*----home.html start----*/
   #indexSummary .howItWorks {
     margin-left: 15px;

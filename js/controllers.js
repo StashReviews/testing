@@ -297,7 +297,7 @@ angular.module('Stash.controllers', [])
   .controller('usersCtrl', ['$scope', 'usersService', 'ratingsService', function($scope, usersService, ratingsService) {
 
   }])
-  .controller('userProfileCtrl', ['$scope', '$stateParams', 'usersService', function($scope, $stateParams, usersService) {
+  .controller('userProfileCtrl', ['$scope', '$stateParams', 'usersService', 'ratingsService', function($scope, $stateParams, usersService, ratingsService) {
     
     $scope.userDetails = usersService.getProfile('users', $stateParams.userId);
 
@@ -305,10 +305,10 @@ angular.module('Stash.controllers', [])
   .controller('userBuddiesCtrl', ['$scope', 'usersService', function($scope, usersService) {
 
   }])
-  .controller('userReviewsCtrl', ['$scope', 'usersService', function($scope, usersService) {
+  .controller('userReviewsCtrl', ['$scope', 'usersService', 'ratingsService', function($scope, usersService, ratingsService) {
 
   }])
-  .controller('businessProfileCtrl', ['$scope', '$stateParams', 'businessesService', function($scope, $stateParams, businessesService) {
+  .controller('businessProfileCtrl', ['$scope', '$stateParams', 'businessesService', 'ratingsService', function($scope, $stateParams, businessesService, ratingsService) {
     
     $scope.businessDetails = businessesService.getProfile('businesses', $stateParams.businessId);
 

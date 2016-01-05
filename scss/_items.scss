@@ -553,22 +553,7 @@
   }
 }
 
-/* User Information */
-/*.coverImageWrap {
-  img {
-    width: 100%;
-  }
-  .coverOverlay {
-    background: url('../img/coverPhotoFade.png') bottom left repeat-x;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 15px;
-    opacity: .5;
-  }
-}*/
+/* User Profile */
 .userInfoLeft {
   background: $dvGray;
   padding: 30px 0 0 0;
@@ -665,6 +650,108 @@
         }
       }
     }
+  }
+}
+
+/* User Buddies */
+.userBuddyList {
+  li {
+    padding: 10px 5px;
+    cursor: pointer;
+    border-bottom: 1px solid $dvGray5;
+    &:hover {
+      background: $dvGray5;
+    }
+    img {
+      max-width: 100px;
+      width: 25%;
+      float: left;
+      margin-right: 5%;
+      border-radius: 50%;
+    }
+    h4 {
+      width: 70%;
+      text-transform: none;
+      margin: 0;
+      padding: 0;
+      padding-top: 2%;
+      float: left;
+    }
+    p {
+      width: 70%;
+      margin: 0;
+      padding: 0;
+      float: left;
+    }
+  }
+}
+
+/* User Reviews */
+.userReviewList {
+  li {
+    padding: 0px 15px;
+    cursor: pointer;
+    .reviewLeft {
+      float: left;
+      width: 35%;
+      margin-right: 5%;
+      img {
+        width: 100%;
+        float: left;
+      }
+      .ratingWrap {
+        background: $dvGray;
+        float: left;
+        width: 100%;
+        height: 30px;
+      }
+      h6 {
+        width: 100%;
+        float: left;
+        font-size: 32px;
+        font-weight: 300;
+        color: $dvGray50;
+        text-align: center;
+      }
+    }
+    .reviewRight {
+      float: left;
+      width: 60%;
+      h4 {
+        font-size: 15px;
+        font-weight: 300;
+        color: $dvGray;
+        text-transform: none;
+        margin: 0;
+        padding: 0;
+        padding-top: 2%;
+        float: left;
+      }
+      h5 {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $dvGray50;
+        margin: 5px 0 10px 0;
+        float: left;
+        clear: left;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        float: left;
+      }
+    }
+/*    &.strains {
+      border: 2px solid $dvGreen;
+    }
+    &.concentrates {
+      border: 2px solid $dvYellow;
+    }
+    &.edibles {
+      border: 2px solid $dvRed;
+    }*/
   }
 }
 

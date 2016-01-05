@@ -89,7 +89,10 @@
     }
   }
   .upToTop {
-    display: none;
+    display: none !important;
+  }
+  .mobileFeedback {
+    display: inherit;
   }
   /*----page.html end----*/
   /*----userProfile.html start----*/
