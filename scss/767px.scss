@@ -28,28 +28,31 @@
   }
   /*----style.scss.html end----*/
   /*----userProfile.html start----*/
-  .userInfoLeft {
+  .userInfoLeft,
+  .businessInfoLeft {
     margin: -15px auto 0 auto;
     padding-bottom: 0px;
     position: relative;
     width: 100%;
     height: 100%;
-    .userAvatar {
+    .userAvatar,
+    .businessLogo {
       width: 20%;
       margin: 0px 40% 0 40%;
     }
-    .userBio {
+    .userBio,
+    .businessBio {
       padding: 30px 30px 10px 30px;
       margin-bottom: 0;
       background: white;
       font-weight: 500;
       color: rgb(44,48,52);
     }
-    .buddyBtn {
-      width: 20%;
+    .userActionButton,
+    .businessActionButton {
       position: absolute;
-      right: 0;
-      top: 130px;
+      right: 40px;
+      top: 140px;
     }
     .rhastaBarsBottom {
       display: none;

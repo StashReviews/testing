@@ -118,6 +118,34 @@ angular.module('Stash.directives', [])
     };
   })
 
+  /** MaxLength of Textarea */
+  .directive('ngMaxLength', function() {
+    return {
+      restrict: 'A',
+      link: function(scope, element, attrs) {
+
+        //Will watch for changes on the attribute
+        attrs.$observe('id',function(){
+          maxLength();
+          console.log('New Page Id Found');
+        })
+
+        // MaxLength Starts Here
+        function maxLength(el) {    
+            if (!('maxLength' in el)) {
+                var max = el.attributes.maxLength.value;
+                el.onkeypress = function () {
+                    if (this.value.length >= max) return false;
+                };
+            }
+        }
+        maxLength(document.getElementById("textarea"));
+        // MaxLength Ends Here
+
+      }
+    };
+  })
+
   /** Custom Strain Zoom */
   .directive('ngStrainZoom', function() {
     return {
@@ -203,7 +231,7 @@ angular.module('Stash.directives', [])
   })
 
 
-/** Slick Image Slider */
+  /** Slick Image Slider */
   .directive('ngImageSlider', function() {
     return {
       restrict: 'A',
@@ -380,22 +408,6 @@ angular.module('Stash.directives', [])
       }
     };
   })
-
-
-  // .directive('dvReview', ['$firebaseObject', 'dvUrl', function($firebaseObject, dvUrl) {
-  //   return {
-  //     restrict: 'E',
-  //     templateUrl: function(element, attr) {
-  //       return 'partials/review.html';
-  //     }
-  //     /*
-  //       scope: {
-  //         itemType: '@',
-  //         itemId: '='
-  //       },
-  //     */
-  //   };
-  // }])
 
 
    /** Reviews Refresh */

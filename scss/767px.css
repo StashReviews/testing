@@ -28,29 +28,40 @@
 
   /*----style.scss.html end----*/
   /*----userProfile.html start----*/
-  .userInfoLeft {
+  .userInfoLeft,
+  .businessInfoLeft {
     margin: -15px auto 0 auto;
     padding-bottom: 0px;
     position: relative;
     width: 100%;
     height: 100%; }
-    .userInfoLeft .userAvatar {
+    .userInfoLeft .userAvatar,
+    .userInfoLeft .businessLogo,
+    .businessInfoLeft .userAvatar,
+    .businessInfoLeft .businessLogo {
       width: 20%;
       margin: 0px 40% 0 40%; }
-    .userInfoLeft .userBio {
+    .userInfoLeft .userBio,
+    .userInfoLeft .businessBio,
+    .businessInfoLeft .userBio,
+    .businessInfoLeft .businessBio {
       padding: 30px 30px 10px 30px;
       margin-bottom: 0;
       background: white;
       font-weight: 500;
       color: #2c3034; }
-    .userInfoLeft .buddyBtn {
-      width: 20%;
+    .userInfoLeft .userActionButton,
+    .userInfoLeft .businessActionButton,
+    .businessInfoLeft .userActionButton,
+    .businessInfoLeft .businessActionButton {
       position: absolute;
-      right: 0;
-      top: 130px; }
-    .userInfoLeft .rhastaBarsBottom {
+      right: 40px;
+      top: 140px; }
+    .userInfoLeft .rhastaBarsBottom,
+    .businessInfoLeft .rhastaBarsBottom {
       display: none; }
-    .userInfoLeft .rhastaBarsTop {
+    .userInfoLeft .rhastaBarsTop,
+    .businessInfoLeft .rhastaBarsTop {
       display: inherit; }
 
   .userOverview {

@@ -72,10 +72,14 @@
 
   /*----page.html end----*/
   /*----userProfile.html start----*/
-  .userInfoLeft {
+  .userInfoLeft,
+  .businessInfoLeft {
     margin: 30px 20% 0 20%;
     position: relative;
     width: 60%; }
+
+  .businessImages .businessImageSlider {
+    margin-top: 15px !important; }
 
   /*----userProfile.html end----*/
   /*----home start----*/

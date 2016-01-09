@@ -554,14 +554,19 @@
 }
 
 /* User Profile / Manage User */
-.userInfoLeft {
+.userInfoLeft,
+.businessInfoLeft {
   background: $dvGray;
   padding: 30px 0 0 0;
   border-radius: 5px 5px 0 0;
   text-align: center;
+  position: relative;
   color: white;
   font-family: $dvTextFont;
-  .updateUserIcon {
+  .updateUserIcon,
+  .saveUserIcon,
+  .updateBusinessIcon,
+  .saveBusinessIcon {
     width: 15px;
     position: absolute;
     right: 20px;
@@ -571,20 +576,63 @@
       color: $dvYellow;
     }
   }
-  .userAvatar {
+  .userAvatar,
+  .businessLogo {
     width: 100%;
     max-width: 100px;
-    border-radius: 50%;
+    border-radius: 100%;
     margin: 0 auto;
+    clear: both;
+    float: none;
   }
-  .username {
+  .updateUserAvatar,
+  .updateBusinessLogo {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    clear: both;
+    border-radius: 100%;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    span {
+      background: $dvGray50;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      i {
+        font-size: 35px;
+        color: rgba(255,255,255,.8);
+        margin: 30%;
+        position: relative;
+      }
+      &:hover {
+        i {
+          color: $dvYellow;
+        }
+      }
+    }
+    input {
+      display: none;
+    }
+  }
+  .info {
+    clear: both;
+  }
+  .username,
+  .businessName {
     font-weight: 300;
     font-size: 22px;
     text-transform: none;
+    margin-bottom: 10px;
   }
-  .updateUsername {
-    margin: 10px 0;
+  .updateUsername,
+  .updateBusinessName {
+    margin: 5px 0 10px 0;
     padding: 5px 0;
+    clear: both;
     background: none;
     border: none;
     border-bottom: 1px solid $dvWhite20;
@@ -594,35 +642,62 @@
     &:hover,
     &:active,
     &:focus {
+      outline: none;
       border-color: $dvYellow;
     }
   }
-  .userBio {
+  .joinDate,
+  .businessLocation {
+    font-family: $dvTextFont;
+    font-size: 10px;
+    color: $dvWhite30;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .userBio,
+  .businessBio {
     font-weight: 300;
-    font-size: 12;
+    font-size: 12px;
     line-height: 18px;
     padding: 0 30px;
   }
-  .updateUserBio {
+  .updateUserBio,
+  .updateBusinessBio {
     font-weight: 300;
-    font-size: 12;
+    font-size: 12px;
     line-height: 18px;
+    height: 100px;
     padding: 10px 10px 0 10px;
+    margin-bottom: 15px;
     width: 90%;
     background: none;
     border: none;
     border-bottom: 1px solid $dvWhite20;  
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      border-color: $dvYellow;
+    }
   }
-  .buddyBtn {
+  .userActionButton,
+  .businessActionButton {
     color: white;
     text-align: center;
     box-shadow: none;
-    img {
-      width: 50px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid $dvWhite20;
+    border-radius: 100%;
+    &:hover {
+      border-color: $dvYellow;
     }
+    &:hover,
     &:active,
     &:focus,
     &:visited {
+      outline: none;
       text-decoration: none;
     }
   }
@@ -950,6 +1025,25 @@
     width: 100%;
     font-size: 12px;
     line-height: 22px;
+  }
+  .businessActionButton {
+    color: white;
+    text-align: center;
+    box-shadow: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid $dvWhite20;
+    border-radius: 100%;
+    &:hover {
+      border-color: $dvYellow;
+    }
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+      text-decoration: none;
+    }
   }
 }
 .businessContactInfo {

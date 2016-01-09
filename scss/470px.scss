@@ -6,14 +6,17 @@
   }
   /*----style.scss.html end----*/
   /*----userProfile.html start----*/
-  .userInfoLeft {
+  .userInfoLeft,
+  .businessInfoLeft {
     margin-top: -15px;
     padding: 25px 0 0 0;
-    .userAvatar {
+    .userAvatar,
+    .businessLogo {
       width: 30%;
       margin: 0px 35% 0 35%;
     }
-    .userbio {
+    .userBio,
+    .businessBio {
       margin: 0;
     }
   }
