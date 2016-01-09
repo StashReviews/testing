@@ -89,6 +89,16 @@ angular.module('Stash', ['Stash.config', 'Stash.services', 'Stash.controllers', 
         templateUrl: 'pages/users/userProfile.html',
         controller: 'userProfileCtrl'
       })
+      .state('root.manageUser', {
+        url: '/manage/user',
+        templateUrl: 'pages/manage/userProfile.html',
+        controller: 'userManageCtrl',
+        resolve: {
+          currentUser: ['$firebaseAuth', 'dvUrl', function($firebaseAuth, dvUrl) {
+            return $firebaseAuth( new Firebase(dvUrl) ).$requireAuth();
+          }]
+        }
+      })
       .state('root.userBuddies', {
         url: '/users/:userId/buddies',
         templateUrl: 'pages/users/userBuddies.html',
@@ -110,7 +120,7 @@ angular.module('Stash', ['Stash.config', 'Stash.services', 'Stash.controllers', 
         templateUrl: 'pages/businesses/businessProfile.html',
         controller: 'businessProfileCtrl'
       })
-      .state('root.managebusiness', {
+      .state('root.manageBusiness', {
         url: '/manage/business',
         templateUrl: 'pages/manage/businessCMS.html',
         controller: 'businessManageCtrl',

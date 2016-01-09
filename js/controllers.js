@@ -302,6 +302,25 @@ angular.module('Stash.controllers', [])
     $scope.userDetails = usersService.getProfile('users', $stateParams.userId);
 
   }])
+  .controller('userManageCtrl', ['$scope', '$firebaseObject', 'dvUrl', function($scope, $firebaseObject, dvUrl) {
+    $firebaseObject( new Firebase(dvUrl + '/users') ).$loaded()
+      .then(function(users) {
+        $scope.users = users;
+      });
+
+    $scope.loadUser = function(businessId) {
+      $scope.user = $scope.users[userId];
+    };
+
+    $scope.saveUser = function(userId, user) {
+      ( new Firebase(dvUrl + '/users/' + userId) ).set(user);
+    };
+
+    // Maintaining Height of Textarea Starts Here
+    $("textarea").height( $("textarea")[0].scrollHeight );
+    // Maintaining Height of Textarea Ends Here
+    
+  }])
   .controller('userBuddiesCtrl', ['$scope', 'usersService', function($scope, usersService) {
 
   }])
@@ -318,11 +337,6 @@ angular.module('Stash.controllers', [])
       .then(function(businesses) {
         $scope.businesses = businesses;
       });
-
-    $scope.newBusiness = function() {
-      $scope.businessId = '';
-      $scope.business = {};
-    };
 
     $scope.loadBusiness = function(businessId) {
       $scope.business = $scope.businesses[businessId];

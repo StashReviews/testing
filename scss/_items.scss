@@ -553,7 +553,7 @@
   }
 }
 
-/* User Profile */
+/* User Profile / Manage User */
 .userInfoLeft {
   background: $dvGray;
   padding: 30px 0 0 0;
@@ -561,6 +561,16 @@
   text-align: center;
   color: white;
   font-family: $dvTextFont;
+  .updateUserIcon {
+    width: 15px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    &:hover {
+      color: $dvYellow;
+    }
+  }
   .userAvatar {
     width: 100%;
     max-width: 100px;
@@ -572,11 +582,36 @@
     font-size: 22px;
     text-transform: none;
   }
+  .updateUsername {
+    margin: 10px 0;
+    padding: 5px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $dvWhite20;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 300;
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $dvYellow;
+    }
+  }
   .userBio {
     font-weight: 300;
     font-size: 12;
     line-height: 18px;
     padding: 0 30px;
+  }
+  .updateUserBio {
+    font-weight: 300;
+    font-size: 12;
+    line-height: 18px;
+    padding: 10px 10px 0 10px;
+    width: 90%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $dvWhite20;  
   }
   .buddyBtn {
     color: white;
