@@ -104,7 +104,7 @@ angular.module('Stash.services', [])
 
           'google:107380321711805415350', // Dakota Berg (dakota@stash.reviews)
           'google:108657712263151670834', // Trent Petersen
-          'google:106581138148924469031' // Jon Townsend
+          'google:103223392658598198832' // Mark Simonds
 
         ];
 

@@ -653,8 +653,9 @@
   }
 }
 
-/* User Buddies */
-.userBuddyList {
+/* User Buddies / All Users */
+.userBuddyList,
+.allUsersList {
   li {
     padding: 10px 5px;
     cursor: pointer;
@@ -664,24 +665,54 @@
     }
     img {
       max-width: 100px;
-      width: 25%;
+      width: 20%;
       float: left;
       margin-right: 5%;
       border-radius: 50%;
     }
     h4 {
-      width: 70%;
+      width: 75%;
       text-transform: none;
-      margin: 0;
+      margin: 5px 0;
       padding: 0;
       padding-top: 2%;
       float: left;
     }
-    p {
-      width: 70%;
+    ul {
+      width: 75%;
       margin: 0;
       padding: 0;
       float: left;
+      li {
+        border: none;
+        width: 25%;
+        margin: 0;
+        padding: 0;
+        float: left;
+        &:hover {
+          background: none;
+        }
+        span {
+          color: $dvGray30;
+          text-align: center;   
+          font-size: 11px;  
+          margin: 0 0 0 5px; 
+          padding-top: 5px;
+          float: left;
+        }
+        img {
+          min-width: 25px;
+          opacity: .3;
+          float: left;
+          margin: 0;
+        }
+        &:nth-child(4) {
+          img {
+            background: $dvGray50;
+            border-radius: 100px;
+          }
+        }
+      }
     }
   }
 }
